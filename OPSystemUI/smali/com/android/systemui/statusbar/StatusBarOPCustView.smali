@@ -450,3 +450,17 @@
     :cond_0
     return-void
 .end method
+
+.method public updateViews(F)V
+	.locals 1
+	
+	return-void
+.end method
+
+.method public getLockscreenIconColors()I
+    .locals 2
+    
+    const v0, 0x1
+    
+    return v0
+.end method
