@@ -16,6 +16,8 @@
 
 
 # instance fields
+.field public mClockPosition:I
+
 .field private mDarkIconColor:I
 
 .field private mClockColor:I
@@ -32,9 +34,9 @@
 
 .field private mClockFormatString:Ljava/lang/String;
 
-.field private mClockVisibleByPolicy:Z
+.field public mClockVisibleByPolicy:Z
 
-.field private mClockVisibleByUser:Z
+.field public mClockVisibleByUser:Z
 
 .field private mContentDescriptionFormat:Ljava/text/SimpleDateFormat;
 
@@ -634,8 +636,16 @@
     return v0
 .end method
 
-.method private updateClockVisibility()V
+.method public updateClockVisibility()V
     .locals 4
+    
+    invoke-virtual {p0}, Lcom/android/systemui/statusbar/policy/Clock;->readRenovateMods()V
+    
+    iget v0, p0, Lcom/android/systemui/statusbar/policy/Clock;->mClockPosition:I
+    
+    const/4 v1, 0x0
+    
+    if-nez v0, :cond_0
 
     iget-boolean v0, p0, Lcom/android/systemui/statusbar/policy/Clock;->mClockVisibleByPolicy:Z
 
@@ -1104,6 +1114,10 @@
     int-to-float v0, v0
 
     invoke-virtual {p0, v0}, Lcom/android/systemui/statusbar/policy/Clock;->updateViews(F)V
+    
+    invoke-virtual {p0}, Lcom/android/systemui/statusbar/policy/Clock;->updateClockVisibility()V
+    
+    invoke-virtual {p0}, Lcom/android/systemui/statusbar/policy/Clock;->setTag()V
 
     const-class v0, Lcom/android/systemui/statusbar/phone/HighlightHintController;
 
@@ -1319,11 +1333,9 @@
 
     :goto_0
     iput-boolean v1, p0, Lcom/android/systemui/statusbar/policy/Clock;->mShowSeconds:Z
-
+    
     invoke-direct {p0}, Lcom/android/systemui/statusbar/policy/Clock;->updateShowSeconds()V
-
-    goto :goto_1
-
+	
     :cond_1
     invoke-static {p2}, Lcom/android/systemui/statusbar/phone/StatusBarIconController;->getIconBlacklist(Ljava/lang/String;)Landroid/util/ArraySet;
 
@@ -1339,7 +1351,7 @@
 
     invoke-virtual {p0, v0}, Lcom/android/systemui/statusbar/policy/Clock;->setClockVisibleByUser(Z)V
 
-    invoke-direct {p0}, Lcom/android/systemui/statusbar/policy/Clock;->updateClockVisibility()V
+    invoke-virtual {p0}, Lcom/android/systemui/statusbar/policy/Clock;->updateClockVisibility()V
 
     const v0, 0x7f0a00d7
 
@@ -1360,7 +1372,7 @@
 
     iput-boolean p1, p0, Lcom/android/systemui/statusbar/policy/Clock;->mClockVisibleByPolicy:Z
 
-    invoke-direct {p0}, Lcom/android/systemui/statusbar/policy/Clock;->updateClockVisibility()V
+    invoke-virtual {p0}, Lcom/android/systemui/statusbar/policy/Clock;->updateClockVisibility()V
 
     return-void
 .end method
@@ -1370,7 +1382,7 @@
 
     iput-boolean p1, p0, Lcom/android/systemui/statusbar/policy/Clock;->mClockVisibleByUser:Z
 
-    invoke-direct {p0}, Lcom/android/systemui/statusbar/policy/Clock;->updateClockVisibility()V
+    invoke-virtual {p0}, Lcom/android/systemui/statusbar/policy/Clock;->updateClockVisibility()V
 
     return-void
 .end method
@@ -1483,5 +1495,41 @@
 	
 	iput v0, p0, Lcom/android/systemui/statusbar/policy/Clock;->mDarkIconColor:I
 	
+	sget v0, Lcom/android/mwilky/Renovate;->mClockPosition:I
+	
+	iput v0, p0, Lcom/android/systemui/statusbar/policy/Clock;->mClockPosition:I
+	
+    return-void
+.end method
+
+.method public setTag()V
+	.locals 3
+	
+	const-string v0, "clock_visible_tag"
+
+    const-string v1, "id"
+
+    invoke-static {v0, v1}, Lcom/android/wubydax/GearUtils;->getIdentifier(Ljava/lang/String;Ljava/lang/String;)I
+
+    move-result v0
+	
+	iget v2, p0, Lcom/android/systemui/statusbar/policy/Clock;->mClockPosition:I
+	
+	iget-boolean v1, p0, Lcom/android/systemui/statusbar/policy/Clock;->mClockVisibleByUser:Z
+	
+	if-nez v2, :cond_mw
+
+  	goto :goto_mw
+  
+    :cond_mw
+    const/4 v1, 0x0
+
+    :goto_mw
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v1
+
+    invoke-virtual {p0, v0, v1}, Lcom/android/systemui/statusbar/policy/Clock;->setTag(ILjava/lang/Object;)V
+    
     return-void
 .end method
