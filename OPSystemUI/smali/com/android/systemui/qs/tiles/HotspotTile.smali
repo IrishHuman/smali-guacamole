@@ -707,6 +707,8 @@
 
 .method protected handleClick()V
     .locals 5
+    
+    invoke-virtual {p0}, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->setVibrateTweak()V
 
     invoke-static {}, Lcom/android/systemui/util/OPUtils;->isUSS()Z
 
