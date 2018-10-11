@@ -18,7 +18,7 @@
 # static fields
 .field private static final SCREENSHOTS_DIR_NAME:Ljava/lang/String; = "Screenshots"
 
-.field private static final SCREENSHOT_FILE_NAME_TEMPLATE:Ljava/lang/String; = "Screenshot_%s.jpg"
+.field private static final SCREENSHOT_FILE_NAME_TEMPLATE:Ljava/lang/String; = "Screenshot_%s.png"
 
 .field private static final SCREENSHOT_SHARE_SUBJECT_TEMPLATE:Ljava/lang/String; = "Screenshot (%s)"
 
@@ -117,7 +117,7 @@
 
     move-result-object v12
 
-    const-string v1, "Screenshot_%s.jpg"
+    const-string v1, "Screenshot_%s.png"
 
     const/4 v13, 0x1
 
@@ -701,7 +701,7 @@
 
     move-object v9, v0
 
-    sget-object v0, Landroid/graphics/Bitmap$CompressFormat;->JPEG:Landroid/graphics/Bitmap$CompressFormat;
+    sget-object v0, Landroid/graphics/Bitmap$CompressFormat;->PNG:Landroid/graphics/Bitmap$CompressFormat;
 
     const/16 v10, 0x64
 
@@ -1390,7 +1390,7 @@
 
     iget-object v3, v3, Lcom/oneplus/screenshot/SaveImageInBackgroundData;->imageUri:Landroid/net/Uri;
 
-    const-string v4, "image/jpeg"
+    const-string v4, "image/png"
 
     invoke-virtual {v2, v3, v4}, Landroid/content/Intent;->setDataAndType(Landroid/net/Uri;Ljava/lang/String;)Landroid/content/Intent;
 
