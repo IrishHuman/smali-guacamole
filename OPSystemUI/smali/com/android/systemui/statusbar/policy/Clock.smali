@@ -607,7 +607,7 @@
 .method private showSeconds()Z
     .locals 1
 
-    iget-boolean v0, p0, Lcom/android/systemui/statusbar/policy/Clock;->mShowSeconds:Z
+    sget-boolean v0, Lcom/android/mwilky/Renovate;->mClockSeconds:Z
 
     if-eqz v0, :cond_0
 
