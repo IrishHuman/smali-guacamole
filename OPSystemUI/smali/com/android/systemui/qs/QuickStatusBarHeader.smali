@@ -7,6 +7,13 @@
 .implements Lcom/android/systemui/statusbar/policy/NextAlarmController$NextAlarmChangeCallback;
 .implements Lcom/android/systemui/statusbar/policy/ZenModeController$Callback;
 
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/android/systemui/qs/QuickStatusBarHeader$10;
+    }
+.end annotation
+
 
 # static fields
 .field private static final PKG_OP_DESKCLOCK:[Ljava/lang/String;
@@ -153,6 +160,14 @@
     iput v0, p0, Lcom/android/systemui/qs/QuickStatusBarHeader;->mShownCount:I
 
     return-void
+.end method
+
+.method static synthetic access$001(Lcom/android/systemui/qs/QuickStatusBarHeader;)Lcom/android/systemui/qs/QSPanel;
+    .locals 1
+
+    iget-object v0, p0, Lcom/android/systemui/qs/QuickStatusBarHeader;->mQsPanel:Lcom/android/systemui/qs/QSPanel;
+
+    return-object v0
 .end method
 
 .method static synthetic access$002(Lcom/android/systemui/qs/QuickStatusBarHeader;I)I
@@ -1777,6 +1792,8 @@
     invoke-virtual {v0, p1}, Lcom/android/systemui/qs/QuickQSPanel;->setExpanded(Z)V
 
     invoke-virtual {p0}, Lcom/android/systemui/qs/QuickStatusBarHeader;->updateEverything()V
+    
+    invoke-virtual {p0}, Lcom/android/systemui/qs/QuickStatusBarHeader;->setSwipeTileAnimation()V
 
     return-void
 .end method
@@ -2177,5 +2194,19 @@
     invoke-virtual {v0}, Lcom/android/systemui/BatteryMeterViewLeft;->batteryPosition()V
     
     :cond_exit
+    return-void
+.end method
+
+.method public setSwipeTileAnimation()V
+    .locals 2
+
+    iget-object v0, p0, Lcom/android/systemui/qs/QuickStatusBarHeader;->mHandler:Landroid/os/Handler;
+
+    new-instance v1, Lcom/android/systemui/qs/QuickStatusBarHeader$10;
+
+    invoke-direct {v1, p0}, Lcom/android/systemui/qs/QuickStatusBarHeader$10;-><init>(Lcom/android/systemui/qs/QuickStatusBarHeader;)V
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
     return-void
 .end method
