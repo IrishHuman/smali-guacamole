@@ -533,13 +533,13 @@
 
     iget-object v14, v0, Lcom/oneplus/settings/navigationbargestures/OPButtonCustomSettings;->mMenuLongPressAction:Landroid/support/v7/preference/ListPreference;
 
-    const v15, 0x7f030070
+    const v15, 0x7f0300ff
 
     invoke-virtual {v14, v15}, Landroid/support/v7/preference/ListPreference;->setEntries(I)V
 
     iget-object v14, v0, Lcom/oneplus/settings/navigationbargestures/OPButtonCustomSettings;->mMenuLongPressAction:Landroid/support/v7/preference/ListPreference;
 
-    const v15, 0x7f030074
+    const v15, 0x7f030100
 
     invoke-virtual {v14, v15}, Landroid/support/v7/preference/ListPreference;->setEntryValues(I)V
 
@@ -550,13 +550,13 @@
 
     iget-object v14, v0, Lcom/oneplus/settings/navigationbargestures/OPButtonCustomSettings;->mMenuDoubleTapAction:Landroid/support/v7/preference/ListPreference;
 
-    const v15, 0x7f030070
+    const v15, 0x7f0300ff
 
     invoke-virtual {v14, v15}, Landroid/support/v7/preference/ListPreference;->setEntries(I)V
 
     iget-object v14, v0, Lcom/oneplus/settings/navigationbargestures/OPButtonCustomSettings;->mMenuDoubleTapAction:Landroid/support/v7/preference/ListPreference;
 
-    const v15, 0x7f030074
+    const v15, 0x7f030100
 
     invoke-virtual {v14, v15}, Landroid/support/v7/preference/ListPreference;->setEntryValues(I)V
 
