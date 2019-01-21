@@ -24518,6 +24518,8 @@
     
     invoke-virtual {v0}, Lcom/android/systemui/BatteryMeterViewLeft;->batteryPosition()V
     
+    invoke-virtual {v0}, Lcom/android/systemui/BatteryMeterViewLeft;->setTag()V
+    
     :cond_exit
     const-string v0, "header"
 
