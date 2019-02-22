@@ -973,6 +973,8 @@
     sget-boolean v1, Landroid/os/Build;->DEBUG_ONEPLUS:Z
 
     sput-boolean v1, Lcom/android/server/policy/PhoneWindowManager;->DEBUG_ONEPLUS:Z
+    
+    sput-boolean v0, Lcom/android/server/policy/PhoneWindowManager;->DEBUG_WAKEUP:Z
 
     sput-boolean v0, Lcom/android/server/policy/PhoneWindowManager;->localLOGV:Z
 
@@ -985,8 +987,6 @@
     sput-boolean v0, Lcom/android/server/policy/PhoneWindowManager;->DEBUG_SPLASH_SCREEN:Z
 
     const/4 v1, 0x1
-
-    sput-boolean v1, Lcom/android/server/policy/PhoneWindowManager;->DEBUG_WAKEUP:Z
 
     sput-boolean v1, Lcom/android/server/policy/PhoneWindowManager;->SHOW_SPLASH_SCREENS:Z
 
