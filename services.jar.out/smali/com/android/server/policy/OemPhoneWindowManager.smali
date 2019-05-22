@@ -6510,7 +6510,6 @@
 
     invoke-direct {v0, v3, v7, v7}, Lcom/android/server/policy/OemPhoneWindowManager;->performKeyAction(ILandroid/view/KeyEvent;Z)V
 
-
     return-wide v27
 
     :cond_40
@@ -7794,18 +7793,6 @@
 
     if-eqz v6, :cond_37
 
-    invoke-virtual {v0}, Lcom/android/server/policy/PhoneWindowManager;->isScreenOn()Z
-    
-    move-result v0
-    
-    if-eqz v0, :cond_2a
-    
-    move-object/from16 v0, p0
-    
-    const v3, 0x1
-
-    invoke-direct {v0, v5, v1, v3}, Lcom/android/server/policy/OemPhoneWindowManager;->performKeyAction(ILandroid/view/KeyEvent;Z)V
-    
     const-string v6, "OemPhoneWindowManager"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -8126,7 +8113,7 @@
 
     const v3, 0x0
     
-    invoke-direct {v1, v6, v1, v3}, Lcom/android/server/policy/OemPhoneWindowManager;->performKeyAction(ILandroid/view/KeyEvent;Z)V
+    invoke-direct {v1, v6, v2, v3}, Lcom/android/server/policy/OemPhoneWindowManager;->performKeyAction(ILandroid/view/KeyEvent;Z)V
 
     :cond_48
     const/4 v6, 0x0
