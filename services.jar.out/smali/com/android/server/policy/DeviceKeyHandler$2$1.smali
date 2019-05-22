@@ -111,6 +111,10 @@
     const/16 v1, 0x32
 
     invoke-static {v0, v1}, Lcom/android/server/policy/FileUtils;->writeIntLine(Ljava/lang/String;I)Z
+    
+    const/4 v0, 0x1
+    
+    sput-boolean v0, Lcom/android/server/policy/PhoneWindowManager;->mSensorCovered:Z
 
     goto :goto_0
 
@@ -126,6 +130,10 @@
     const/16 v1, 0x31
 
     invoke-static {v0, v1}, Lcom/android/server/policy/FileUtils;->writeIntLine(Ljava/lang/String;I)Z
+    
+    const/4 v0, 0x0
+    
+    sput-boolean v0, Lcom/android/server/policy/PhoneWindowManager;->mSensorCovered:Z
 
     :goto_0
     return-void
