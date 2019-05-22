@@ -22,6 +22,10 @@
 
 
 # static fields
+.field public static mSensorCovered:Z
+
+.field public static mTorchPowerScreenOff:Z
+
 .field public static mAllowCustomNavBarHeight:Z
 
 .field public static mCustomNavBarHeight:I
@@ -124,6 +128,8 @@
 
 .field static final LONG_PRESS_POWER_SHUT_OFF_NO_CONFIRM:I = 0x3
 
+.field static final LONG_PRESS_POWER_TORCH:I = 0x6
+
 .field private static final MSG_ACCESSIBILITY_SHORTCUT:I = 0x14
 
 .field private static final MSG_ACCESSIBILITY_TV:I = 0x16
@@ -183,6 +189,8 @@
 .field private static final MSG_REQUEST_TRANSIENT_BARS_ARG_STATUS:I = 0x0
 
 .field private static final MSG_RINGER_TOGGLE_CHORD:I = 0x1e
+
+.field private static final MSG_TOGGLE_TORCH:I = 0x1f
 
 .field private static final MSG_SHOW_PICTURE_IN_PICTURE_MENU:I = 0x11
 
@@ -342,6 +350,8 @@
 
 
 # instance fields
+.field private mDeviceKeyHandler:Lcom/android/server/policy/DeviceKeyHandler;
+
 .field private mA11yShortcutChordVolumeUpKeyConsumed:Z
 
 .field private mA11yShortcutChordVolumeUpKeyTime:J
@@ -875,6 +885,8 @@
 .field mSupportAutoRotation:Z
 
 .field private mSupportLongPressPowerWhenNonInteractive:Z
+
+.field private mResolvedLongPressOnPowerBehavior:I
 
 .field mSystemBooted:Z
 
@@ -2570,7 +2582,7 @@
 .end method
 
 .method private cancelPendingPowerKeyAction()V
-    .locals 2
+    .locals 4
 
     iget-boolean v0, p0, Lcom/android/server/policy/PhoneWindowManager;->mPowerKeyHandled:Z
 
@@ -2598,6 +2610,24 @@
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/policy/PhoneWindowManager;->mPowerKeyTempFunction:I
+    
+    iget v0, p0, Lcom/android/server/policy/PhoneWindowManager;->mResolvedLongPressOnPowerBehavior:I
+
+    const/4 v1, 0x6
+
+    if-ne v0, v1, :cond_1
+    
+    invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManager;->skipWake()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+    
+    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
+
+    move-result-wide v0
+
+    invoke-direct {p0, v0, v1}, Lcom/android/server/policy/PhoneWindowManager;->wakeUpFromPowerKey(J)V
 
     :cond_1
     invoke-direct {p0}, Lcom/android/server/policy/PhoneWindowManager;->hasVeryLongPressOnPowerBehavior()Z
@@ -4145,6 +4175,21 @@
     return v0
 
     :cond_0
+    sget-boolean v0, Lcom/android/server/policy/PhoneWindowManager;->mTorchPowerScreenOff:Z
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManager;->skipWake()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    const/4 v0, 0x6
+
+    return v0
+
+    :cond_1
     iget v0, p0, Lcom/android/server/policy/PhoneWindowManager;->mLongPressOnPowerBehavior:I
 
     return v0
@@ -6008,6 +6053,12 @@
     goto/16 :goto_7
 
     :cond_a
+    invoke-direct {p0}, Lcom/android/server/policy/PhoneWindowManager;->getResolvedLongPressOnPowerBehavior()I
+
+    move-result v9
+
+    iput v9, p0, Lcom/android/server/policy/PhoneWindowManager;->mResolvedLongPressOnPowerBehavior:I
+    
     iget-object v9, p0, Lcom/android/server/policy/PhoneWindowManager;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v9, v8}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
@@ -6125,21 +6176,21 @@
     goto/16 :goto_7
 
     :cond_f
-    invoke-virtual {p1}, Landroid/view/KeyEvent;->getDownTime()J
-
-    move-result-wide v9
-
-    invoke-direct {p0, v9, v10}, Lcom/android/server/policy/PhoneWindowManager;->wakeUpFromPowerKey(J)V
-
     iget-boolean v6, p0, Lcom/android/server/policy/PhoneWindowManager;->mSupportLongPressPowerWhenNonInteractive:Z
 
-    if-eqz v6, :cond_12
-
-    invoke-direct {p0}, Lcom/android/server/policy/PhoneWindowManager;->hasLongPressOnPowerBehavior()Z
+    if-eqz v6, :cond_11
+    
+    invoke-direct {p0}, Lcom/android/server/policy/PhoneWindowManager;->getResolvedLongPressOnPowerBehavior()I
 
     move-result v6
 
-    if-eqz v6, :cond_12
+    iput v6, p0, Lcom/android/server/policy/PhoneWindowManager;->mResolvedLongPressOnPowerBehavior:I
+
+    iget v6, p0, Lcom/android/server/policy/PhoneWindowManager;->mResolvedLongPressOnPowerBehavior:I
+
+    const/4 v3, 0x6
+
+    if-ne v6, v3, :cond_12
 
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getFlags()I
 
@@ -6154,6 +6205,25 @@
     goto :goto_6
 
     :cond_10
+    invoke-direct {p0}, Lcom/android/server/policy/PhoneWindowManager;->getResolvedLongPressOnPowerBehavior()I
+
+    move-result v6
+
+    iput v6, p0, Lcom/android/server/policy/PhoneWindowManager;->mResolvedLongPressOnPowerBehavior:I
+
+    iget v6, p0, Lcom/android/server/policy/PhoneWindowManager;->mResolvedLongPressOnPowerBehavior:I
+
+    const/4 v3, 0x6
+
+    if-eq v6, v3, :cond_mw2
+
+    invoke-virtual {p1}, Landroid/view/KeyEvent;->getDownTime()J
+
+    move-result-wide v4
+
+    invoke-direct {p0, v4, v5}, Lcom/android/server/policy/PhoneWindowManager;->wakeUpFromPowerKey(J)V
+
+    :cond_mw2
     iget-object v6, p0, Lcom/android/server/policy/PhoneWindowManager;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v6, v8}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
@@ -6205,6 +6275,14 @@
     goto :goto_7
 
     :cond_12
+    const v5, 0x6
+    
+    invoke-virtual {p1}, Landroid/view/KeyEvent;->getDownTime()J
+
+    move-result-wide v4
+
+    invoke-direct {p0, v4, v5}, Lcom/android/server/policy/PhoneWindowManager;->wakeUpFromPowerKey(J)V
+
     iget-boolean v6, p0, Lcom/android/server/policy/PhoneWindowManager;->mPowerKeyAssistantEnable:Z
 
     if-eqz v6, :cond_13
@@ -8883,6 +8961,14 @@
 
 .method private powerLongPressWithAssistant()V
     .locals 5
+    
+    invoke-direct {p0}, Lcom/android/server/policy/PhoneWindowManager;->getResolvedLongPressOnPowerBehavior()I
+
+    move-result v0
+    
+    const/4 v1, 0x6
+
+    if-eq v0, v1, :cond_torch
 
     iget-boolean v0, p0, Lcom/android/server/policy/PhoneWindowManager;->mPowerKeyAssistantEnable:Z
 
@@ -9204,6 +9290,29 @@
     :cond_f
     :goto_4
     return-void
+    
+    :cond_torch
+    const v3, 0x1
+    
+    iput-boolean v3, p0, Lcom/android/server/policy/PhoneWindowManager;->mPowerKeyHandled:Z
+
+    iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager;->mHandler:Landroid/os/Handler;
+
+    const/16 v1, 0x1F
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
+
+    iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager;->mHandler:Landroid/os/Handler;
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v3}, Landroid/os/Message;->setAsynchronous(Z)V
+
+    invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
+    
+    goto :goto_4
 .end method
 
 .method private powerMultiPressAction(JZI)V
@@ -19963,6 +20072,14 @@
     move-object/from16 v9, p1
 
     iput-object v9, v1, Lcom/android/server/policy/PhoneWindowManager;->mContext:Landroid/content/Context;
+    
+     new-instance v0, Lcom/android/server/policy/DeviceKeyHandler;
+
+    iget-object v2, v1, Lcom/android/server/policy/PhoneWindowManager;->mContext:Landroid/content/Context;
+
+    invoke-direct {v0, v2}, Lcom/android/server/policy/DeviceKeyHandler;-><init>(Landroid/content/Context;)V
+
+    iput-object v0, v1, Lcom/android/server/policy/PhoneWindowManager;->mDeviceKeyHandler:Lcom/android/server/policy/DeviceKeyHandler;
 
     move-object/from16 v10, p2
 
@@ -20698,6 +20815,8 @@
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getBoolean(I)Z
 
     move-result v0
+    
+    const/4 v0, 0x1
 
     iput-boolean v0, v1, Lcom/android/server/policy/PhoneWindowManager;->mSupportLongPressPowerWhenNonInteractive:Z
 
@@ -33099,6 +33218,8 @@
 .method public updateSettings()V
     .locals 14
     
+    invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManager;->setTorchPower()V
+    
     invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManager;->allowNavBarHeightTweak()V
     
     invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManager;->getNavBarHeightTweak()V
@@ -34066,4 +34187,127 @@
     sput-boolean v0, Lcom/android/server/policy/PhoneWindowManager;->mBlockPowerMenuKeyguard:Z
     
     return-void   
+.end method
+
+.method public setTorchPower()V
+    .locals 2
+
+    iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManager;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v1
+
+    const-string/jumbo p0, "tweaks_torch_power"
+
+    const/4 v0, 0x0
+
+    invoke-static {v1, p0, v0}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+
+    move-result v0
+    
+    sput-boolean v0, Lcom/android/server/policy/PhoneWindowManager;->mTorchPowerScreenOff:Z
+
+    return-void
+.end method
+
+.method public toggleFlashlight()V
+    .locals 2
+    
+    sget-boolean v0, Lcom/android/server/policy/PhoneWindowManager;->mSensorCovered:Z
+    
+    if-nez v0, :cond_exit
+
+	iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager;->mDeviceKeyHandler:Lcom/android/server/policy/DeviceKeyHandler;
+	
+	iget-boolean v1, v0, Lcom/android/server/policy/DeviceKeyHandler;->mFlashlightEnabled:Z
+	
+	if-eqz v1, :cond_enable # check if torch is already enabled
+	
+	const/4 v1, 0x0 # disable torch
+	
+	goto :goto_set
+	
+	:cond_enable
+	const/4 v1, 0x1 # enable torch
+	
+	:goto_set
+	invoke-virtual {v0, v1}, Lcom/android/server/policy/DeviceKeyHandler;->setFlashlight(Z)Z
+	
+	const/4 v0, 0x0
+
+    invoke-virtual {p0, v0, v0, v0}, Lcom/android/server/policy/PhoneWindowManager;->performHapticFeedbackLw(Lcom/android/server/policy/WindowManagerPolicy$WindowState;IZ)Z
+	
+    :cond_exit
+    return-void
+.end method
+
+.method public isDozeMode()Z
+    .locals 2
+
+    invoke-static {}, Lcom/android/server/policy/PhoneWindowManager;->getDreamManager()Landroid/service/dreams/IDreamManager;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    :try_start_0
+    invoke-interface {v0}, Landroid/service/dreams/IDreamManager;->isDreaming()Z
+
+    move-result v0
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :catch_0
+    move-exception v0
+
+    return v1
+
+    :cond_0
+    nop
+
+    return v1
+.end method
+
+.method public skipWake()Z
+    .registers 2
+
+    .line 655
+    invoke-virtual {p0}, Lcom/android/server/policy/OemPhoneWindowManager;->isScreenOn()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_f
+
+    invoke-virtual {p0}, Lcom/android/server/policy/OemPhoneWindowManager;->isDozeMode()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_d
+
+    goto :goto_f
+
+    .line 658
+    :cond_d
+    const/4 v0, 0x1
+
+    return v0
+
+    .line 655
+    :cond_f
+    :goto_f
+    nop
+
+    .line 656
+    const/4 v0, 0x0
+
+    return v0
 .end method
