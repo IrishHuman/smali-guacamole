@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/layout_container_finger_anim_item" android:paddingTop="@dimen/oneplus_contorl_layout_margin_top2" android:layout_width="137.0dip" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/img_anim_choose_item" android:layout_width="133.0dip" android:layout_height="133.0dip" android:layout_margin="2.0dip" />
+    <View android:id="@id/view_anim_border" android:background="@drawable/op_custom_fingerprint_anim_item_unselected_border" android:layout_width="133.0dip" android:layout_height="133.0dip" android:layout_margin="2.0dip" android:translationZ="@dimen/oneplus_contorl_shadow_z2" />
+    <View android:id="@id/view_anim_shadow" android:background="@drawable/op_custom_fingerprint_anim_item_selected_shadow" android:visibility="invisible" android:layout_width="137.0dip" android:layout_height="137.0dip" android:translationZ="@dimen/oneplus_contorl_shadow_z4" />
+    <TextView android:gravity="center" android:id="@id/tv_anim_name" android:layout_width="137.0dip" android:layout_height="wrap_content" android:layout_marginTop="@dimen/oneplus_contorl_layout_margin_top1" android:layout_below="@id/img_anim_choose_item" style="@style/oneplus_contorl_text_style_body1" />
+</RelativeLayout>
