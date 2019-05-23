@@ -26,8 +26,6 @@
 
 .field private mBatteryMeterView:Lcom/android/systemui/BatteryMeterView;
 
-.field private mLeftBatteryMeterView:Lcom/android/systemui/BatteryMeterViewLeft;
-
 .field private mClockView:Lcom/android/systemui/statusbar/policy/Clock;
 
 .field private mRightClockView:Lcom/android/systemui/statusbar/policy/ClockRight;
@@ -1343,27 +1341,6 @@
     invoke-interface {v0, v2, v1}, Lcom/android/systemui/plugins/ActivityStarter;->postStartActivityDismissingKeyguard(Landroid/content/Intent;I)V
 
     :cond_1
-    iget-object v0, p0, Lcom/android/systemui/qs/QuickStatusBarHeader;->mLeftBatteryMeterView:Lcom/android/systemui/BatteryMeterViewLeft;
-
-    if-ne p1, v0, :cond_mw2
-
-    const-class v0, Lcom/android/systemui/plugins/ActivityStarter;
-
-    invoke-static {v0}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/android/systemui/plugins/ActivityStarter;
-
-    new-instance v2, Landroid/content/Intent;
-
-    const-string v3, "android.intent.action.POWER_USAGE_SUMMARY"
-
-    invoke-direct {v2, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
-
-    invoke-interface {v0, v2, v1}, Lcom/android/systemui/plugins/ActivityStarter;->postStartActivityDismissingKeyguard(Landroid/content/Intent;I)V
-
-    :cond_mw2
     :goto_0
     return-void
 .end method
@@ -1648,35 +1625,6 @@
     check-cast v4, Lcom/android/systemui/BatteryMeterView;
 
     iput-object v4, p0, Lcom/android/systemui/qs/QuickStatusBarHeader;->mBatteryMeterView:Lcom/android/systemui/BatteryMeterView;
-    
-    const-string v0, "battery_left"
-
-    const-string v1, "id"
-
-    invoke-static {v0, v1}, Lcom/android/wubydax/GearUtils;->getIdentifier(Ljava/lang/String;Ljava/lang/String;)I
-
-    move-result v4
-    
-    invoke-virtual {p0, v4}, Lcom/android/systemui/qs/QuickStatusBarHeader;->findViewById(I)Landroid/view/View;
-
-    move-result-object v4
-
-    check-cast v4, Lcom/android/systemui/BatteryMeterViewLeft;
-
-    iput-object v4, p0, Lcom/android/systemui/qs/QuickStatusBarHeader;->mLeftBatteryMeterView:Lcom/android/systemui/BatteryMeterViewLeft;
-    
-    iget-object v4, p0, Lcom/android/systemui/qs/QuickStatusBarHeader;->mLeftBatteryMeterView:Lcom/android/systemui/BatteryMeterViewLeft;
-    
-    if-eqz v4, :cond_mw
-    
-    invoke-virtual {v4, p0}, Lcom/android/systemui/statusbar/policy/Clock;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    const/4 v5, 0x1
-
-    invoke-virtual {v4, v5}, Lcom/android/systemui/BatteryMeterView;->setForceShowPercent(Z)V
-    
-    :cond_mw
-    invoke-virtual {p0}, Lcom/android/systemui/qs/QuickStatusBarHeader;->setBatteryPosition()V
 
     iget-object v4, p0, Lcom/android/systemui/qs/QuickStatusBarHeader;->mBatteryMeterView:Lcom/android/systemui/BatteryMeterView;
 
@@ -2145,15 +2093,8 @@
     if-eqz v0, :cond_exit2
     
     invoke-virtual {v0}, Lcom/android/systemui/BatteryMeterView;->setExpandedColors()V
-
+    
     :cond_exit2
-    iget-object v0, p0, Lcom/android/systemui/qs/QuickStatusBarHeader;->mLeftBatteryMeterView:Lcom/android/systemui/BatteryMeterViewLeft;
-    
-    if-eqz v0, :cond_exit3
-    
-    invoke-virtual {v0}, Lcom/android/systemui/BatteryMeterView;->setExpandedColors()V
-
-    :cond_exit3
     return-void
 .end method
 
@@ -2172,26 +2113,6 @@
     if-eqz v0, :cond_exit
     
     invoke-virtual {v0}, Lcom/android/systemui/statusbar/policy/ClockRight;->updateClockVisibility()V
-    
-    :cond_exit
-    return-void
-.end method
-
-.method public setBatteryPosition()V
-    .locals 2
-
-    iget-object v0, p0, Lcom/android/systemui/qs/QuickStatusBarHeader;->mBatteryMeterView:Lcom/android/systemui/BatteryMeterView;
-    
-    if-eqz v0, :cond_left
-    
-    invoke-virtual {v0}, Lcom/android/systemui/BatteryMeterView;->batteryPosition()V
-    
-    :cond_left
-    iget-object v0, p0, Lcom/android/systemui/qs/QuickStatusBarHeader;->mLeftBatteryMeterView:Lcom/android/systemui/BatteryMeterViewLeft;
-    
-    if-eqz v0, :cond_exit
-    
-    invoke-virtual {v0}, Lcom/android/systemui/BatteryMeterViewLeft;->batteryPosition()V
     
     :cond_exit
     return-void

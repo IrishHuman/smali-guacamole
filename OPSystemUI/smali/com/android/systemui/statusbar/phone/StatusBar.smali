@@ -23338,30 +23338,9 @@
     
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/StatusBar;->updateClockView()V
     
-    invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/StatusBar;->updateBatteryView()V
-    
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/StatusBar;->updateLockscreenStatusbarViews()V
 
     :cond_clockpos
-    const-string v0, "tweaks_swap_battery_position"
-    
-    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_swapbat
-
-    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/StatusBar;->mContext:Landroid/content/Context;
-    
-    invoke-static {v0}, Lcom/android/mwilky/Renovate;->setStatusbarViews(Landroid/content/Context;)V
-    
-    invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/StatusBar;->updateClockView()V
-    
-    invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/StatusBar;->updateBatteryView()V
-    
-    invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/StatusBar;->updateLockscreenStatusbarViews()V
-
-    :cond_swapbat
     const-string v0, "tweaks_clock_onclick"
     
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -24245,10 +24224,6 @@
 
     invoke-virtual {v3, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
     
-    const-string v4, "tweaks_swap_battery_position"
-
-    invoke-virtual {v3, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-    
     const-string v4, "tweaks_scramble_pin"
 
     invoke-virtual {v3, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -24585,7 +24560,6 @@
     return-void
 .end method
 
-
 .method updateLockscreenStatusbarViews()V
 	.locals 1
 	
@@ -24596,8 +24570,6 @@
 	invoke-virtual {v0}, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->updateVisibilities()V
 	
 	invoke-virtual {v0}, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->setClockPosition()V
-	
-	invoke-virtual {v0}, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->setBatteryPosition()V
     
     return-void
 .end method
@@ -24664,7 +24636,7 @@
     invoke-virtual {v0}, Lcom/android/systemui/statusbar/policy/Clock;->setTag()V
     
     :cond_center
-    const-string v0, "clock_center"
+    const-string v0, "clock_center_header"
 
     const-string v1, "id"
 
@@ -24680,9 +24652,9 @@
     
     if-eqz v0, :cond_right
 
-    check-cast v0, Lcom/android/systemui/statusbar/policy/ClockCenter;
+    check-cast v0, Lcom/android/systemui/statusbar/policy/ClockCenterHeader;
     
-    invoke-virtual {v0}, Lcom/android/systemui/statusbar/policy/ClockCenter;->updateCenterClock()V
+    invoke-virtual {v0}, Lcom/android/systemui/statusbar/policy/ClockCenterHeader;->updateCenterClock()V
     
     invoke-virtual {v0}, Lcom/android/systemui/statusbar/policy/Clock;->updateShowSeconds()V
     
@@ -24701,11 +24673,34 @@
 
     move-result-object v0
     
-    if-eqz v0, :cond_exit
+    if-eqz v0, :cond_center2
 
     check-cast v0, Lcom/android/systemui/statusbar/policy/ClockRight;
     
     invoke-virtual {v0}, Lcom/android/systemui/statusbar/policy/ClockRight;->updateClockVisibility()V
+    
+    invoke-virtual {v0}, Lcom/android/systemui/statusbar/policy/Clock;->updateShowSeconds()V
+    
+    :cond_center2
+    const-string v0, "clock_center"
+
+    const-string v1, "id"
+
+    invoke-static {v0, v1}, Lcom/android/wubydax/GearUtils;->getIdentifier(Ljava/lang/String;Ljava/lang/String;)I
+
+    move-result v1
+    
+    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/StatusBar;->mStatusBarWindow:Lcom/android/systemui/statusbar/phone/StatusBarWindowView;
+
+    invoke-virtual {v0, v1}, Lcom/android/systemui/statusbar/phone/StatusBarWindowView;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+    
+    if-eqz v0, :cond_exit
+
+    check-cast v0, Lcom/android/systemui/statusbar/policy/ClockCenter;
+    
+    invoke-virtual {v0}, Lcom/android/systemui/statusbar/policy/ClockCenter;->updateClockVisibility()V
     
     invoke-virtual {v0}, Lcom/android/systemui/statusbar/policy/Clock;->updateShowSeconds()V
     
@@ -24727,74 +24722,6 @@
     check-cast v0, Lcom/android/systemui/qs/QuickStatusBarHeader;
     
     invoke-virtual {v0}, Lcom/android/systemui/qs/QuickStatusBarHeader;->setClockPosition()V
-    
-    return-void
-.end method
-
-.method updateBatteryView()V
-    .locals 2
-    
-    const-string v0, "battery"
-
-    const-string v1, "id"
-
-    invoke-static {v0, v1}, Lcom/android/wubydax/GearUtils;->getIdentifier(Ljava/lang/String;Ljava/lang/String;)I
-
-    move-result v1
-    
-    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/StatusBar;->mStatusBarWindow:Lcom/android/systemui/statusbar/phone/StatusBarWindowView;
-
-    invoke-virtual {v0, v1}, Lcom/android/systemui/statusbar/phone/StatusBarWindowView;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-    
-    if-eqz v0, :cond_left
-
-    check-cast v0, Lcom/android/systemui/BatteryMeterView;
-    
-    invoke-virtual {v0}, Lcom/android/systemui/BatteryMeterView;->batteryPosition()V
-    
-    :cond_left
-    const-string v0, "battery_left"
-
-    const-string v1, "id"
-
-    invoke-static {v0, v1}, Lcom/android/wubydax/GearUtils;->getIdentifier(Ljava/lang/String;Ljava/lang/String;)I
-
-    move-result v1
-    
-    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/StatusBar;->mStatusBarWindow:Lcom/android/systemui/statusbar/phone/StatusBarWindowView;
-
-    invoke-virtual {v0, v1}, Lcom/android/systemui/statusbar/phone/StatusBarWindowView;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-    
-    if-eqz v0, :cond_exit
-
-    check-cast v0, Lcom/android/systemui/BatteryMeterViewLeft;
-    
-    invoke-virtual {v0}, Lcom/android/systemui/BatteryMeterViewLeft;->batteryPosition()V
-    
-    invoke-virtual {v0}, Lcom/android/systemui/BatteryMeterViewLeft;->setTag()V
-    
-    :cond_exit
-    const-string v0, "header"
-
-    const-string v1, "id"
-
-    invoke-static {v0, v1}, Lcom/android/wubydax/GearUtils;->getIdentifier(Ljava/lang/String;Ljava/lang/String;)I
-
-    move-result v1
-    
-    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/StatusBar;->mStatusBarWindow:Lcom/android/systemui/statusbar/phone/StatusBarWindowView;
-
-    invoke-virtual {v0, v1}, Lcom/android/systemui/statusbar/phone/StatusBarWindowView;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/android/systemui/qs/QuickStatusBarHeader;
-    
-    invoke-virtual {v0}, Lcom/android/systemui/qs/QuickStatusBarHeader;->setBatteryPosition()V
     
     return-void
 .end method
