@@ -998,8 +998,6 @@
     check-cast v0, Lcom/android/systemui/BatteryMeterView;
 
     iput-object v0, p0, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->mBatteryView:Lcom/android/systemui/BatteryMeterView;
-    
-    invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->setBatteryPosition()V
 
     const v0, 0x7f0a00fd
 

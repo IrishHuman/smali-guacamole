@@ -34,80 +34,26 @@
 
 
 # virtual methods
-.method protected onAttachedToWindow()V
-    .locals 0
-
-    invoke-super {p0}, Landroid/widget/TextView;->onAttachedToWindow()V
-    
-    invoke-virtual {p0}, Lcom/android/systemui/statusbar/policy/ClockCenter;->updateCenterClock()V
-
-    return-void
-.end method
-
-.method protected onDetachedFromWindow()V
-    .locals 0
-
-    invoke-super {p0}, Landroid/widget/TextView;->onDetachedFromWindow()V
-    
-    return-void
-.end method
-
-.method public setTextColor()V
-    .locals 1
-    
-    sget v0, Lcom/android/systemui/util/ThemeColorUtils;->QS_PRIMARY_TEXT:I
-    
-    invoke-static {v0}, Lcom/android/systemui/util/ThemeColorUtils;->getColor(I)I
-
-    move-result v0
-    
-    invoke-virtual {p0, v0}, Lcom/android/systemui/statusbar/policy/ClockCenter;->setTextColor(I)V
-
-    return-void
-.end method
-
 .method public updateClockVisibility()V
-    .locals 1
+    .locals 4
     
-    sget-boolean v0, Lcom/android/mwilky/Renovate;->mCenterClock:Z
+    invoke-virtual {p0}, Lcom/android/systemui/statusbar/policy/Clock;->readRenovateMods()V
     
-    if-nez v0, :cond_center
+    iget v0, p0, Lcom/android/systemui/statusbar/policy/Clock;->mClockPosition:I
     
-    const v0, 0x4
-   
-    goto :goto_vis
-    
-    :cond_center
-    const/4 v0, 0x0
-    
-    :goto_vis
-    invoke-virtual {p0, v0}, Lcom/android/systemui/statusbar/policy/ClockCenter;->setVisibility(I)V
+    const v1, 0x3
 
-    return-void
-.end method
+    if-ne v0, v1, :cond_1
     
-.method public updateCenterClock()V
-    .locals 1
+    const/16 v0, 0x0 #visible
     
-    invoke-virtual {p0}, Lcom/android/systemui/statusbar/policy/ClockCenter;->updateClockVisibility()V
-
-    invoke-virtual {p0}, Lcom/android/systemui/statusbar/policy/ClockCenter;->setTextColor()V
+    goto :goto_mw
     
-    return-void
-.end method
-
-.method public updateViews(F)V
-    .locals 1
+    :cond_1
+    const/16 v0, 0x8 #hidden
     
-    invoke-virtual {p0}, Lcom/android/systemui/statusbar/policy/ClockCenter;->updateCenterClock()V
-
-    return-void
-.end method
-
-.method public onDarkChanged(Landroid/graphics/Rect;FI)V
-    .locals 1
-    
-    invoke-virtual {p0}, Lcom/android/systemui/statusbar/policy/ClockCenter;->setTextColor()V
+    :goto_mw
+    invoke-virtual {p0, v0}, Lcom/android/systemui/statusbar/policy/Clock;->setVisibility(I)V
 
     return-void
 .end method

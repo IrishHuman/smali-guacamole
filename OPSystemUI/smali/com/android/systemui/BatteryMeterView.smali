@@ -18,10 +18,6 @@
 
 
 # instance fields
-.field mSwapBatteryPosition:Z
-
-.field mClockPosition:I
-
 .field private mDarkIconColor:I
 
 .field private mBatteryPercentColor:I
@@ -799,8 +795,6 @@
     invoke-direct {p0}, Lcom/android/systemui/BatteryMeterView;->scaleBatteryMeterViews()V
 
     invoke-direct {p0}, Lcom/android/systemui/BatteryMeterView;->updateBatteryMeterVisibility()V
-    
-    invoke-virtual {p0}, Lcom/android/systemui/BatteryMeterView;->batteryPosition()V
 
     return-void
 .end method
@@ -1202,8 +1196,6 @@
     invoke-direct {p0}, Lcom/android/systemui/BatteryMeterView;->updateBatteryMeterVisibility()V
 
     invoke-direct {p0}, Lcom/android/systemui/BatteryMeterView;->updateShowPercent()V
-    
-    invoke-virtual {p0}, Lcom/android/systemui/BatteryMeterView;->batteryPosition()V
 
     return-void
 .end method
@@ -1443,14 +1435,6 @@
     
 	iput v0, p0, Lcom/android/systemui/BatteryMeterView;->mDarkIconColor:I
 	
-	sget v0, Lcom/android/mwilky/Renovate;->mClockPosition:I
-	
-	iput v0, p0, Lcom/android/systemui/BatteryMeterView;->mClockPosition:I
-	
-	sget-boolean v0, Lcom/android/mwilky/Renovate;->mSwapBatteryPosition:Z
-	
-	iput-boolean v0, p0, Lcom/android/systemui/BatteryMeterView;->mSwapBatteryPosition:Z
-	
     return-void
 .end method
 
@@ -1572,40 +1556,5 @@
     invoke-virtual {v2, v1}, Lcom/android/systemui/BatteryDashChargeView;->setIconTint(I)V
     
     :cond_exitdash
-    return-void
-.end method
-
-.method public batteryPosition()V
-    .registers 3
-
-    .line 19
-    invoke-virtual {p0}, Lcom/android/systemui/BatteryMeterView;->readRenovateMods()V
-
-    .line 20
-    iget v0, p0, Lcom/android/systemui/BatteryMeterView;->mClockPosition:I
-
-    const/4 v1, 0x1
-
-    if-ne v0, v1, :cond_12
-
-    iget-boolean v0, p0, Lcom/android/systemui/BatteryMeterView;->mSwapBatteryPosition:Z
-
-    if-eqz v0, :cond_12
-
-    .line 21
-    const/16 v0, 0x8
-
-    invoke-virtual {p0, v0}, Lcom/android/systemui/BatteryMeterView;->setVisibility(I)V
-
-    goto :goto_16
-
-    .line 23
-    :cond_12
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, v0}, Lcom/android/systemui/BatteryMeterView;->setVisibility(I)V
-
-    .line 25
-    :goto_16
     return-void
 .end method
