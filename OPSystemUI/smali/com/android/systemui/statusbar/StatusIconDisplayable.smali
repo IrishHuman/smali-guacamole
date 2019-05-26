@@ -35,3 +35,6 @@
 
 .method public abstract updateLockscreenColors()V
 .end method
+
+.method public abstract getQsIconColors()I
+.end method

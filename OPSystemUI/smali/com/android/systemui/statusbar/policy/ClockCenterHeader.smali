@@ -55,11 +55,7 @@
 .method public setTextColor()V
     .locals 1
     
-    sget v0, Lcom/android/systemui/util/ThemeColorUtils;->QS_PRIMARY_TEXT:I
-    
-    invoke-static {v0}, Lcom/android/systemui/util/ThemeColorUtils;->getColor(I)I
-
-    move-result v0
+    sget v0, Lcom/android/mwilky/Renovate;->mQsClockColorOP:I
     
     invoke-virtual {p0, v0}, Lcom/android/systemui/statusbar/policy/ClockCenterHeader;->setTextColor(I)V
 
@@ -67,20 +63,22 @@
 .end method
 
 .method public updateClockVisibility()V
-    .locals 1
+    .locals 2
     
-    sget-boolean v0, Lcom/android/mwilky/Renovate;->mCenterClock:Z
+    sget v0, Lcom/android/mwilky/Renovate;->mClockPosition:I
     
-    if-nez v0, :cond_center
+    const v1, 0x3
+    
+    if-eq v0, v1, :cond_center
     
     const v0, 0x4
    
-    goto :goto_vis
+    goto :goto_invis
     
     :cond_center
     const/4 v0, 0x0
     
-    :goto_vis
+    :goto_invis
     invoke-virtual {p0, v0}, Lcom/android/systemui/statusbar/policy/ClockCenterHeader;->setVisibility(I)V
 
     return-void
