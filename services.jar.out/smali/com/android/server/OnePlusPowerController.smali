@@ -1911,7 +1911,7 @@
 
     iget-object v2, p0, Lcom/android/server/OnePlusPowerController;->mContext:Landroid/content/Context;
 
-    const v3, 0x50d006d
+    const v3, 0x50d006e
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -1919,7 +1919,7 @@
 
     iget-object v3, p0, Lcom/android/server/OnePlusPowerController;->mContext:Landroid/content/Context;
 
-    const v4, 0x50d006c
+    const v4, 0x50d006d
 
     invoke-virtual {v3, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

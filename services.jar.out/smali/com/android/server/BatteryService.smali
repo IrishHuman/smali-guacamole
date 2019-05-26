@@ -1491,7 +1491,7 @@
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v7, "getFastChargeType NumberFormatException:"
+    const-string/jumbo v7, "getFastChargeType NumberFormatException:"
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

@@ -7809,6 +7809,64 @@
     throw v0
 .end method
 
+.method private notifyColorBalanceToSurfaceFlinger(DDD)V
+    .locals 5
+
+    :try_start_0
+    iget-object v0, p0, Lcom/android/server/oneplus/display/ColorBalanceService;->flinger:Landroid/os/IBinder;
+
+    if-nez v0, :cond_0
+
+    const-string v0, "ColorBalanceService"
+
+    const-string/jumbo v1, "notifyColorBalanceToSurfaceFlinger: handle of surfaceflinger is null."
+
+    invoke-static {v0, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
+
+    :cond_0
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    const-string v1, "android.ui.ISurfaceComposer"
+
+    invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1, p2}, Landroid/os/Parcel;->writeDouble(D)V
+
+    invoke-virtual {v0, p3, p4}, Landroid/os/Parcel;->writeDouble(D)V
+
+    invoke-virtual {v0, p5, p6}, Landroid/os/Parcel;->writeDouble(D)V
+
+    iget-object v1, p0, Lcom/android/server/oneplus/display/ColorBalanceService;->flinger:Landroid/os/IBinder;
+
+    const/16 v2, 0x8a4
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    invoke-interface {v1, v2, v0, v3, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    const-string v1, "ColorBalanceService"
+
+    const-string v2, "Failed to set color balance to surfaceflinger."
+
+    invoke-static {v1, v2}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    :goto_0
+    return-void
+.end method
+
 .method private onUserChanged(I)V
     .locals 5
 
@@ -7900,40 +7958,40 @@
 .end method
 
 .method private oneplusSetColorBalance(II)V
-    .locals 71
+    .locals 44
 
-    move-object/from16 v1, p0
+    move-object/from16 v8, p0
 
-    move/from16 v2, p1
+    move/from16 v9, p1
 
-    move/from16 v3, p2
+    move/from16 v10, p2
 
     const-wide/high16 v11, 0x3ff0000000000000L    # 1.0
 
-    const-wide/16 v4, 0x0
+    const-wide/16 v1, 0x0
 
-    const-wide/16 v6, 0x0
+    const-wide/16 v3, 0x0
 
-    int-to-double v13, v2
+    int-to-double v13, v9
 
-    int-to-double v9, v3
+    int-to-double v6, v10
 
     const-wide/high16 v15, 0x3ff0000000000000L    # 1.0
 
-    iget-object v8, v1, Lcom/android/server/oneplus/display/ColorBalanceService;->mLock:Ljava/lang/Object;
+    iget-object v5, v8, Lcom/android/server/oneplus/display/ColorBalanceService;->mLock:Ljava/lang/Object;
 
-    monitor-enter v8
+    monitor-enter v5
 
     :try_start_0
-    iget-object v0, v1, Lcom/android/server/oneplus/display/ColorBalanceService;->mIsSupportReadingMode:Ljava/lang/Boolean;
+    iget-object v0, v8, Lcom/android/server/oneplus/display/ColorBalanceService;->mIsSupportReadingMode:Ljava/lang/Boolean;
 
     invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v0
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_16
+    .catchall {:try_start_0 .. :try_end_0} :catchall_b
 
-    move-wide/from16 v17, v4
+    move-wide/from16 v17, v1
 
     const-wide v21, 0x3fc999999999999aL    # 0.2
 
@@ -7941,123 +7999,156 @@
 
     const-wide v27, 0x4045800000000000L    # 43.0
 
-    const/4 v5, 0x0
+    const/4 v2, 0x0
 
-    if-eqz v0, :cond_15
+    if-eqz v0, :cond_14
 
     :try_start_1
     sget v0, Lcom/android/server/oneplus/display/ColorBalanceService;->SENSOR_TYPE_RGB:I
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_5
 
-    const v4, 0x1fa264c
+    const v1, 0x1fa264c
 
-    if-eq v0, v4, :cond_0
+    if-eq v0, v1, :cond_1
 
+    :try_start_2
     sget v0, Lcom/android/server/oneplus/display/ColorBalanceService;->SENSOR_TYPE_RGB:I
 
-    const v4, 0x1fa2639
+    const v1, 0x1fa2639
 
-    if-ne v0, v4, :cond_15
+    if-ne v0, v1, :cond_0
+
+    goto :goto_1
 
     :cond_0
+    move-object/from16 v29, v5
+
+    move-wide/from16 v30, v6
+
+    goto/16 :goto_13
+
+    :catchall_0
+    move-exception v0
+
+    move-object/from16 v29, v5
+
+    move-wide/from16 v30, v6
+
+    :goto_0
+    move-wide/from16 v1, v17
+
+    goto/16 :goto_23
+
+    :cond_1
+    :goto_1
     const/16 v0, 0x64
 
-    if-le v2, v0, :cond_1
+    if-le v9, v0, :cond_2
 
     const/16 v0, -0x64
 
-    if-ge v2, v0, :cond_1
+    if-ge v9, v0, :cond_2
 
     const-string v0, "ColorBalanceService"
 
-    new-instance v4, Ljava/lang/StringBuilder;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "oneplusSetColorBalance ERROR:"
+    const-string/jumbo v2, "oneplusSetColorBalance ERROR:"
 
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v9}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v1
 
-    invoke-static {v0, v4}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    monitor-exit v8
+    monitor-exit v5
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     return-void
 
-    :cond_1
-    const/4 v4, 0x1
+    :cond_2
+    const/4 v1, 0x1
 
-    new-array v0, v4, [I
+    :try_start_3
+    new-array v0, v1, [I
 
     const/16 v19, 0x80
 
-    aput v19, v0, v5
+    aput v19, v0, v2
 
     invoke-static {v0}, Landroid/util/OpFeatures;->isSupport([I)Z
 
     move-result v0
 
-    if-eqz v0, :cond_6
+    if-eqz v0, :cond_7
 
     double-to-int v0, v13
 
-    iput v0, v1, Lcom/android/server/oneplus/display/ColorBalanceService;->mCurrentColorBalance:I
+    iput v0, v8, Lcom/android/server/oneplus/display/ColorBalanceService;->mCurrentColorBalance:I
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_5
 
-    const-wide v4, 0x4053c00000000000L    # 79.0
+    const-wide v0, 0x4053c00000000000L    # 79.0
 
-    cmpg-double v0, v13, v4
+    cmpg-double v2, v13, v0
 
     const-wide v19, 0x4041800000000000L    # 35.0
 
-    if-ltz v0, :cond_3
+    if-ltz v2, :cond_4
 
-    cmpl-double v0, v13, v27
+    cmpl-double v2, v13, v27
 
-    if-nez v0, :cond_2
+    if-nez v2, :cond_3
 
-    goto :goto_0
+    goto :goto_2
 
-    :cond_2
+    :cond_3
     sub-double v13, v13, v19
 
+    :try_start_4
     const-string v0, "ColorBalanceService"
 
-    new-instance v4, Ljava/lang/StringBuilder;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v5, "colorbalance is set by line two setColorBalance:"
+    const-string v2, "colorbalance is set by line two setColorBalance:"
 
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v4, v13, v14}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v13, v14}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v1
 
-    invoke-static {v0, v4}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    const-wide v4, 0x3ef4f8b580000000L    # 1.9999999494757503E-5
+    const-wide v0, 0x3ef4f8b580000000L    # 1.9999999494757503E-5
 
-    mul-double/2addr v4, v13
+    mul-double/2addr v0, v13
 
-    mul-double/2addr v4, v13
+    mul-double/2addr v0, v13
 
     const-wide v19, -0x408cbfb14c000000L    # -0.004700000223238021
 
     mul-double v19, v19, v13
 
-    add-double v4, v4, v19
+    add-double v0, v0, v19
 
     const-wide v19, 0x3ff2a5e353f7ced9L    # 1.1655
 
-    add-double v4, v4, v19
+    add-double v0, v0, v19
 
     mul-double v25, v25, v13
 
@@ -8073,50 +8164,57 @@
 
     add-double v25, v25, v11
 
-    const-wide/high16 v6, 0x3ff0000000000000L    # 1.0
+    const-wide/high16 v2, 0x3ff0000000000000L    # 1.0
 
-    move-wide/from16 v17, v6
+    move-wide v11, v0
 
-    move-wide/from16 v11, v25
+    move-wide/from16 v17, v2
 
-    goto :goto_1
+    move-wide/from16 v42, v13
 
-    :cond_3
-    :goto_0
-    cmpg-double v0, v13, v4
+    move-wide/from16 v13, v25
 
-    if-gez v0, :cond_4
+    move-wide/from16 v26, v42
 
-    const-wide/high16 v4, 0x4046000000000000L    # 44.0
+    goto :goto_3
 
-    cmpl-double v0, v13, v4
+    :cond_4
+    :goto_2
+    cmpg-double v0, v13, v0
 
-    if-ltz v0, :cond_4
+    if-gez v0, :cond_5
+
+    const-wide/high16 v0, 0x4046000000000000L    # 44.0
+
+    cmpl-double v0, v13, v0
+
+    if-ltz v0, :cond_5
 
     sub-double v13, v13, v19
 
-    :cond_4
+    :cond_5
+    :try_start_5
     const-string v0, "ColorBalanceService"
 
-    new-instance v4, Ljava/lang/StringBuilder;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v5, "colorbalance is set by line one  setColorBalance:"
+    const-string v2, "colorbalance is set by line one  setColorBalance:"
 
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v4, v13, v14}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v13, v14}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v1
 
-    invoke-static {v0, v4}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_c
+    invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_5
 
-    const-wide/high16 v4, 0x3ff0000000000000L    # 1.0
+    const-wide/high16 v0, 0x3ff0000000000000L    # 1.0
 
     const-wide v11, -0x41008aefc0000000L    # -2.9999999242136255E-5
 
@@ -8150,229 +8248,116 @@
 
     add-double v17, v17, v19
 
-    :goto_1
-    :try_start_2
-    iget-object v0, v1, Lcom/android/server/oneplus/display/ColorBalanceService;->mSDM:Lcom/oneplus/display/SDManager;
+    move-wide/from16 v26, v13
 
-    if-eqz v0, :cond_5
+    move-wide v13, v11
 
-    iget-object v0, v1, Lcom/android/server/oneplus/display/ColorBalanceService;->mSDM:Lcom/oneplus/display/SDManager;
+    move-wide v11, v0
+
+    :goto_3
+    move-object v1, v8
+
+    move-wide v2, v11
+
+    move-object/from16 v29, v5
+
+    move-wide v4, v13
+
+    move-wide/from16 v30, v6
+
+    move-wide/from16 v6, v17
+
+    :try_start_6
+    invoke-direct/range {v1 .. v7}, Lcom/android/server/oneplus/display/ColorBalanceService;->notifyColorBalanceToSurfaceFlinger(DDD)V
+
+    iget-object v0, v8, Lcom/android/server/oneplus/display/ColorBalanceService;->mSDM:Lcom/oneplus/display/SDManager;
+
+    if-eqz v0, :cond_6
+
+    iget-object v0, v8, Lcom/android/server/oneplus/display/ColorBalanceService;->mSDM:Lcom/oneplus/display/SDManager;
 
     move-object/from16 v19, v0
 
-    move-wide/from16 v20, v4
+    move-wide/from16 v20, v11
 
-    move-wide/from16 v22, v11
+    move-wide/from16 v22, v13
 
     move-wide/from16 v24, v17
 
     invoke-virtual/range {v19 .. v25}, Lcom/oneplus/display/SDManager;->SetUsrColorBalanceConfig(DDD)V
-    :try_end_2
-    .catch Ljava/lang/NullPointerException; {:try_start_2 .. :try_end_2} :catch_0
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+    :try_end_6
+    .catch Ljava/lang/NullPointerException; {:try_start_6 .. :try_end_6} :catch_0
+    .catchall {:try_start_6 .. :try_end_6} :catchall_1
 
-    :cond_5
-    goto :goto_2
+    :cond_6
+    goto :goto_4
 
-    :catchall_0
+    :catchall_1
     move-exception v0
 
-    move-object/from16 v27, v8
+    move-wide v1, v13
 
-    move-wide/from16 v31, v9
+    move-wide/from16 v3, v17
 
-    move-wide/from16 v6, v17
+    move-wide/from16 v13, v26
 
-    move-wide/from16 v69, v4
-
-    goto/16 :goto_16
+    goto/16 :goto_23
 
     :catch_0
     move-exception v0
 
-    :try_start_3
-    const-string v6, "ColorBalanceService"
+    :try_start_7
+    const-string v1, "ColorBalanceService"
 
-    const-string/jumbo v7, "mSDM.SetUsrColorBalanceConfig error!"
+    const-string/jumbo v2, "mSDM.SetUsrColorBalanceConfig error!"
 
-    invoke-static {v6, v7}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v2}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    :goto_2
-    monitor-exit v8
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+    :goto_4
+    monitor-exit v29
+    :try_end_7
+    .catchall {:try_start_7 .. :try_end_7} :catchall_1
 
     return-void
 
-    :cond_6
+    :cond_7
+    move-object/from16 v29, v5
+
+    move-wide/from16 v30, v6
+
     cmpg-double v0, v13, v27
 
     if-ltz v0, :cond_e
 
     cmpl-double v0, v13, v27
 
-    if-nez v0, :cond_7
+    if-nez v0, :cond_8
 
-    goto/16 :goto_d
+    goto/16 :goto_e
 
-    :cond_7
-    const-wide v25, 0x3eb315b4cbbda110L    # 1.1375421271279822E-6
+    :cond_8
+    const-wide v5, 0x3eb315b4cbbda110L    # 1.1375421271279822E-6
 
-    if-nez v3, :cond_a
+    if-nez v10, :cond_b
 
-    :try_start_4
-    iput v2, v1, Lcom/android/server/oneplus/display/ColorBalanceService;->mCurrentColorBalance:I
+    :try_start_8
+    iput v9, v8, Lcom/android/server/oneplus/display/ColorBalanceService;->mCurrentColorBalance:I
+    :try_end_8
+    .catchall {:try_start_8 .. :try_end_8} :catchall_6
 
-    mul-double v25, v25, v13
+    mul-double/2addr v5, v13
 
-    mul-double v25, v25, v13
+    mul-double/2addr v5, v13
 
     const-wide v20, -0x40b292b87d9c6930L    # -8.980368773136797E-4
 
     mul-double v20, v20, v13
 
-    add-double v25, v25, v20
+    add-double v5, v5, v20
 
     const-wide v20, 0x3ff0958debe66d88L    # 1.0365123
 
-    add-double v11, v25, v20
-
-    const-wide v20, -0x41554c77250726f2L    # -7.9576095929934E-7
-
-    mul-double v20, v20, v13
-
-    mul-double v20, v20, v13
-
-    const-wide v22, -0x40c1bac3ee4437c5L    # -4.6189037833166733E-4
-
-    mul-double v22, v22, v13
-
-    add-double v20, v20, v22
-
-    const-wide v22, 0x3ff04461f9f01b86L    # 1.016695
-
-    add-double v17, v20, v22
-
-    new-array v0, v4, [I
-
-    aput v19, v0, v5
-
-    invoke-static {v0}, Landroid/util/OpFeatures;->isSupport([I)Z
-
-    move-result v0
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_c
-
-    if-eqz v0, :cond_8
-
-    const-wide v4, 0x3f658ed2307ef0a5L    # 0.0026315789473
-
-    mul-double/2addr v4, v13
-
-    const-wide v19, 0x3fef9435e50d73b5L    # 0.986842105263
-
-    add-double v4, v4, v19
-
-    :goto_3
-    goto :goto_4
-
-    :cond_8
-    const-wide/high16 v4, 0x3ff0000000000000L    # 1.0
-
-    goto :goto_3
-
-    :goto_4
-    :try_start_5
-    iget-object v0, v1, Lcom/android/server/oneplus/display/ColorBalanceService;->mSDM:Lcom/oneplus/display/SDManager;
-
-    if-eqz v0, :cond_9
-
-    iget-object v0, v1, Lcom/android/server/oneplus/display/ColorBalanceService;->mSDM:Lcom/oneplus/display/SDManager;
-
-    move-object/from16 v27, v0
-
-    move-wide/from16 v28, v11
-
-    move-wide/from16 v30, v17
-
-    move-wide/from16 v32, v4
-
-    invoke-virtual/range {v27 .. v33}, Lcom/oneplus/display/SDManager;->SetUsrColorBalanceConfig(DDD)V
-    :try_end_5
-    .catch Ljava/lang/NullPointerException; {:try_start_5 .. :try_end_5} :catch_1
-    .catchall {:try_start_5 .. :try_end_5} :catchall_1
-
-    :cond_9
-    :goto_5
-    goto :goto_6
-
-    :catchall_1
-    move-exception v0
-
-    move-wide v6, v4
-
-    goto/16 :goto_13
-
-    :catch_1
-    move-exception v0
-
-    :try_start_6
-    const-string v6, "ColorBalanceService"
-
-    const-string/jumbo v7, "mSDM.SetUsrColorBalanceConfig error!"
-
-    invoke-static {v6, v7}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
-    :try_end_6
-    .catchall {:try_start_6 .. :try_end_6} :catchall_1
-
-    goto :goto_5
-
-    :goto_6
-    move-wide v6, v4
-
-    move-object/from16 v27, v8
-
-    move-wide/from16 v31, v9
-
-    move-wide/from16 v4, v17
-
-    goto/16 :goto_22
-
-    :cond_a
-    move v0, v5
-
-    :goto_7
-    move/from16 v34, v0
-
-    move/from16 v5, v34
-
-    const/4 v4, 0x5
-
-    if-ge v5, v4, :cond_d
-
-    sub-double v15, v15, v21
-
-    move-wide/from16 v37, v6
-
-    int-to-double v6, v2
-
-    mul-double v27, v9, v15
-
-    sub-double v13, v6, v27
-
-    mul-double v6, v25, v13
-
-    mul-double/2addr v6, v13
-
-    const-wide v27, -0x40b292b87d9c6930L    # -8.980368773136797E-4
-
-    mul-double v27, v27, v13
-
-    add-double v6, v6, v27
-
-    const-wide v27, 0x3ff0958debe66d88L    # 1.0365123
-
-    add-double v6, v6, v27
+    add-double v5, v5, v20
 
     const-wide v11, -0x41554c77250726f2L    # -7.9576095929934E-7
 
@@ -8380,409 +8365,433 @@
 
     mul-double/2addr v11, v13
 
-    const-wide v27, -0x40c1bac3ee4437c5L    # -4.6189037833166733E-4
+    const-wide v20, -0x40c1bac3ee4437c5L    # -4.6189037833166733E-4
 
-    mul-double v27, v27, v13
+    mul-double v20, v20, v13
 
-    add-double v11, v11, v27
+    add-double v11, v11, v20
 
-    const-wide v27, 0x3ff04461f9f01b86L    # 1.016695
+    const-wide v20, 0x3ff04461f9f01b86L    # 1.016695
 
-    add-double v11, v11, v27
+    add-double v11, v11, v20
 
-    const/4 v4, 0x1
+    :try_start_9
+    new-array v0, v1, [I
 
-    :try_start_7
-    new-array v0, v4, [I
-
-    const/4 v4, 0x0
-
-    aput v19, v0, v4
+    aput v19, v0, v2
 
     invoke-static {v0}, Landroid/util/OpFeatures;->isSupport([I)Z
 
     move-result v0
-    :try_end_7
-    .catchall {:try_start_7 .. :try_end_7} :catchall_5
+    :try_end_9
+    .catchall {:try_start_9 .. :try_end_9} :catchall_3
 
-    if-eqz v0, :cond_b
+    if-eqz v0, :cond_9
 
-    const-wide v17, 0x3f658ed2307ef0a5L    # 0.0026315789473
+    const-wide v0, 0x3f658ed2307ef0a5L    # 0.0026315789473
 
-    mul-double v17, v17, v13
+    mul-double/2addr v0, v13
 
-    const-wide v27, 0x3fef9435e50d73b5L    # 0.986842105263
+    const-wide v17, 0x3fef9435e50d73b5L    # 0.986842105263
 
-    add-double v17, v17, v27
+    add-double v0, v0, v17
 
-    :goto_8
-    goto :goto_9
+    :goto_5
+    move-wide v1, v0
 
-    :cond_b
-    const-wide/high16 v17, 0x3ff0000000000000L    # 1.0
+    goto :goto_6
 
+    :cond_9
+    const-wide/high16 v0, 0x3ff0000000000000L    # 1.0
+
+    goto :goto_5
+
+    :goto_6
+    :try_start_a
+    iget-object v0, v8, Lcom/android/server/oneplus/display/ColorBalanceService;->mSDM:Lcom/oneplus/display/SDManager;
+
+    if-eqz v0, :cond_a
+
+    iget-object v0, v8, Lcom/android/server/oneplus/display/ColorBalanceService;->mSDM:Lcom/oneplus/display/SDManager;
+
+    move-object/from16 v22, v0
+
+    move-wide/from16 v23, v5
+
+    move-wide/from16 v25, v11
+
+    move-wide/from16 v27, v1
+
+    invoke-virtual/range {v22 .. v28}, Lcom/oneplus/display/SDManager;->SetUsrColorBalanceConfig(DDD)V
+    :try_end_a
+    .catch Ljava/lang/NullPointerException; {:try_start_a .. :try_end_a} :catch_1
+    .catchall {:try_start_a .. :try_end_a} :catchall_2
+
+    :cond_a
+    :goto_7
     goto :goto_8
-
-    :goto_9
-    :try_start_8
-    iget-object v0, v1, Lcom/android/server/oneplus/display/ColorBalanceService;->mSDM:Lcom/oneplus/display/SDManager;
-
-    if-eqz v0, :cond_c
-
-    iget-object v0, v1, Lcom/android/server/oneplus/display/ColorBalanceService;->mSDM:Lcom/oneplus/display/SDManager;
-
-    move-object/from16 v39, v0
-
-    move-wide/from16 v40, v6
-
-    move-wide/from16 v42, v11
-
-    move-wide/from16 v44, v17
-
-    invoke-virtual/range {v39 .. v45}, Lcom/oneplus/display/SDManager;->SetUsrColorBalanceConfig(DDD)V
-    :try_end_8
-    .catch Ljava/lang/NullPointerException; {:try_start_8 .. :try_end_8} :catch_2
-    .catchall {:try_start_8 .. :try_end_8} :catchall_2
-
-    :cond_c
-    goto :goto_a
 
     :catchall_2
     move-exception v0
 
-    move-object/from16 v27, v8
+    move-wide v3, v1
 
-    move-wide/from16 v31, v9
+    goto :goto_9
 
-    move-wide v4, v11
-
-    move-wide v11, v6
-
-    goto/16 :goto_10
-
-    :catch_2
+    :catch_1
     move-exception v0
 
-    :try_start_9
-    const-string v4, "ColorBalanceService"
+    :try_start_b
+    const-string v3, "ColorBalanceService"
 
-    move-object/from16 v46, v0
+    const-string/jumbo v4, "mSDM.SetUsrColorBalanceConfig error!"
 
-    const-string/jumbo v0, "mSDM.SetUsrColorBalanceConfig error!"
+    invoke-static {v3, v4}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
+    :try_end_b
+    .catchall {:try_start_b .. :try_end_b} :catchall_2
 
-    invoke-static {v4, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
-    :try_end_9
-    .catchall {:try_start_9 .. :try_end_9} :catchall_4
+    goto :goto_7
 
-    :goto_a
-    move-wide/from16 v47, v6
+    :goto_8
+    move-wide v3, v1
 
-    const-wide/16 v6, 0xf
+    move-wide v1, v11
 
-    :try_start_a
-    invoke-static {v6, v7}, Ljava/lang/Thread;->sleep(J)V
-    :try_end_a
-    .catch Ljava/lang/InterruptedException; {:try_start_a .. :try_end_a} :catch_3
-    .catchall {:try_start_a .. :try_end_a} :catchall_3
-
-    goto :goto_b
+    goto/16 :goto_16
 
     :catchall_3
     move-exception v0
 
-    move-object/from16 v27, v8
+    :goto_9
+    move-wide v1, v11
 
-    move-wide/from16 v31, v9
+    goto/16 :goto_15
 
-    move-wide v4, v11
+    :cond_b
+    move v0, v2
 
-    move-wide/from16 v6, v17
+    :goto_a
+    move v7, v0
 
-    move-wide/from16 v11, v47
+    const/4 v2, 0x5
 
-    goto/16 :goto_23
+    if-ge v7, v2, :cond_1a
 
-    :catch_3
-    move-exception v0
+    sub-double v15, v15, v21
 
-    move-object v4, v0
+    int-to-double v1, v9
 
-    :try_start_b
-    invoke-virtual {v0}, Ljava/lang/InterruptedException;->printStackTrace()V
-    :try_end_b
-    .catchall {:try_start_b .. :try_end_b} :catchall_3
+    mul-double v25, v30, v15
 
-    :goto_b
-    add-int/lit8 v0, v5, 0x1
+    sub-double v13, v1, v25
 
-    move-wide/from16 v6, v17
+    mul-double v0, v5, v13
 
-    const/4 v4, 0x1
+    mul-double/2addr v0, v13
+
+    const-wide v25, -0x40b292b87d9c6930L    # -8.980368773136797E-4
+
+    mul-double v25, v25, v13
+
+    add-double v0, v0, v25
+
+    const-wide v25, 0x3ff0958debe66d88L    # 1.0365123
+
+    add-double v1, v0, v25
+
+    const-wide v11, -0x41554c77250726f2L    # -7.9576095929934E-7
+
+    mul-double/2addr v11, v13
+
+    mul-double/2addr v11, v13
+
+    const-wide v25, -0x40c1bac3ee4437c5L    # -4.6189037833166733E-4
+
+    mul-double v25, v25, v13
+
+    add-double v11, v11, v25
+
+    const-wide v25, 0x3ff04461f9f01b86L    # 1.016695
+
+    add-double v11, v11, v25
+
+    const/4 v5, 0x1
+
+    :try_start_c
+    new-array v0, v5, [I
 
     const/4 v5, 0x0
 
-    move-wide/from16 v17, v11
-
-    move-wide/from16 v11, v47
-
-    goto/16 :goto_7
-
-    :catchall_4
-    move-exception v0
-
-    move-wide/from16 v47, v6
-
-    move-object/from16 v27, v8
-
-    move-wide/from16 v31, v9
-
-    move-wide v4, v11
-
-    move-wide/from16 v6, v17
-
-    goto :goto_c
-
-    :catchall_5
-    move-exception v0
-
-    move-wide/from16 v47, v6
-
-    move-object/from16 v27, v8
-
-    move-wide/from16 v31, v9
-
-    move-wide v4, v11
-
-    move-wide/from16 v6, v37
-
-    :goto_c
-    move-wide/from16 v11, v47
-
-    goto/16 :goto_23
-
-    :cond_d
-    move-wide/from16 v37, v6
-
-    move-object/from16 v27, v8
-
-    move-wide/from16 v31, v9
-
-    move-wide/from16 v4, v17
-
-    goto/16 :goto_22
-
-    :cond_e
-    :goto_d
-    if-nez v3, :cond_11
-
-    :try_start_c
-    iput v2, v1, Lcom/android/server/oneplus/display/ColorBalanceService;->mCurrentColorBalance:I
-
-    const/4 v4, 0x1
-
-    new-array v0, v4, [I
-
-    const/4 v4, 0x0
-
-    aput v19, v0, v4
+    aput v19, v0, v5
 
     invoke-static {v0}, Landroid/util/OpFeatures;->isSupport([I)Z
 
     move-result v0
     :try_end_c
-    .catchall {:try_start_c .. :try_end_c} :catchall_c
+    .catchall {:try_start_c .. :try_end_c} :catchall_4
+
+    if-eqz v0, :cond_c
+
+    const-wide v5, 0x3f658ed2307ef0a5L    # 0.0026315789473
+
+    mul-double/2addr v5, v13
+
+    const-wide v17, 0x3fef9435e50d73b5L    # 0.986842105263
+
+    add-double v5, v5, v17
+
+    move-wide v3, v5
+
+    goto :goto_b
+
+    :cond_c
+    const-wide/high16 v3, 0x3ff0000000000000L    # 1.0
+
+    :goto_b
+    :try_start_d
+    iget-object v0, v8, Lcom/android/server/oneplus/display/ColorBalanceService;->mSDM:Lcom/oneplus/display/SDManager;
+
+    if-eqz v0, :cond_d
+
+    iget-object v0, v8, Lcom/android/server/oneplus/display/ColorBalanceService;->mSDM:Lcom/oneplus/display/SDManager;
+
+    move-object/from16 v34, v0
+
+    move-wide/from16 v35, v1
+
+    move-wide/from16 v37, v11
+
+    move-wide/from16 v39, v3
+
+    invoke-virtual/range {v34 .. v40}, Lcom/oneplus/display/SDManager;->SetUsrColorBalanceConfig(DDD)V
+    :try_end_d
+    .catch Ljava/lang/NullPointerException; {:try_start_d .. :try_end_d} :catch_2
+    .catchall {:try_start_d .. :try_end_d} :catchall_4
+
+    :cond_d
+    goto :goto_c
+
+    :catch_2
+    move-exception v0
+
+    :try_start_e
+    const-string v5, "ColorBalanceService"
+
+    const-string/jumbo v6, "mSDM.SetUsrColorBalanceConfig error!"
+
+    invoke-static {v5, v6}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
+    :try_end_e
+    .catchall {:try_start_e .. :try_end_e} :catchall_4
+
+    :goto_c
+    const-wide/16 v5, 0xf
+
+    :try_start_f
+    invoke-static {v5, v6}, Ljava/lang/Thread;->sleep(J)V
+    :try_end_f
+    .catch Ljava/lang/InterruptedException; {:try_start_f .. :try_end_f} :catch_3
+    .catchall {:try_start_f .. :try_end_f} :catchall_4
+
+    goto :goto_d
+
+    :catch_3
+    move-exception v0
+
+    move-object v5, v0
+
+    :try_start_10
+    invoke-virtual {v0}, Ljava/lang/InterruptedException;->printStackTrace()V
+    :try_end_10
+    .catchall {:try_start_10 .. :try_end_10} :catchall_4
+
+    :goto_d
+    add-int/lit8 v0, v7, 0x1
+
+    move-wide/from16 v17, v11
+
+    const-wide v5, 0x3eb315b4cbbda110L    # 1.1375421271279822E-6
+
+    move-wide v11, v1
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    goto/16 :goto_a
+
+    :catchall_4
+    move-exception v0
+
+    move-wide/from16 v42, v1
+
+    move-wide v1, v11
+
+    move-wide/from16 v11, v42
+
+    goto/16 :goto_23
+
+    :cond_e
+    :goto_e
+    if-nez v10, :cond_11
+
+    :try_start_11
+    iput v9, v8, Lcom/android/server/oneplus/display/ColorBalanceService;->mCurrentColorBalance:I
+
+    const/4 v1, 0x1
+
+    new-array v0, v1, [I
+
+    const/4 v1, 0x0
+
+    aput v19, v0, v1
+
+    invoke-static {v0}, Landroid/util/OpFeatures;->isSupport([I)Z
+
+    move-result v0
+    :try_end_11
+    .catchall {:try_start_11 .. :try_end_11} :catchall_6
 
     if-eqz v0, :cond_f
 
-    const-wide v4, 0x3f527a6b04fc135dL    # 0.0011278195488
+    const-wide v0, 0x3f527a6b04fc135dL    # 0.0011278195488
 
-    mul-double/2addr v4, v13
+    mul-double/2addr v0, v13
 
-    const-wide v19, 0x3fee72b8031455b6L    # 0.951503759398
+    const-wide v5, 0x3fee72b8031455b6L    # 0.951503759398
 
-    add-double v11, v4, v19
+    add-double v11, v0, v5
 
     :cond_f
-    const-wide v4, -0x410fdff91c3781e2L    # -1.5378098611516543E-5
+    const-wide v0, -0x410fdff91c3781e2L    # -1.5378098611516543E-5
 
-    mul-double/2addr v4, v13
+    mul-double/2addr v0, v13
 
-    mul-double/2addr v4, v13
+    mul-double/2addr v0, v13
 
-    const-wide v19, 0x3f56bea8aee1b08aL    # 0.001388230065937387
+    const-wide v5, 0x3f56bea8aee1b08aL    # 0.001388230065937387
 
-    mul-double v19, v19, v13
+    mul-double/2addr v5, v13
 
-    add-double v4, v4, v19
+    add-double/2addr v0, v5
 
-    const-wide v19, 0x3feec8d01dba252aL    # 0.9620133
+    const-wide v5, 0x3feec8d01dba252aL    # 0.9620133
 
-    add-double v4, v4, v19
+    add-double v1, v0, v5
 
-    const-wide v17, -0x4104f970a5924d0aL    # -2.577364434890296E-5
+    const-wide v5, -0x4104f970a5924d0aL    # -2.577364434890296E-5
+
+    mul-double/2addr v5, v13
+
+    mul-double/2addr v5, v13
+
+    const-wide v17, 0x3f68eb30a5a8effeL    # 0.0030418348444793955
 
     mul-double v17, v17, v13
 
-    mul-double v17, v17, v13
+    add-double v5, v5, v17
 
-    const-wide v19, 0x3f68eb30a5a8effeL    # 0.0030418348444793955
+    const-wide v17, 0x3feca2ef9e88eca3L    # 0.89488965
 
-    mul-double v19, v19, v13
+    add-double v3, v5, v17
 
-    add-double v17, v17, v19
-
-    const-wide v19, 0x3feca2ef9e88eca3L    # 0.89488965
-
-    add-double v6, v17, v19
-
-    :try_start_d
-    iget-object v0, v1, Lcom/android/server/oneplus/display/ColorBalanceService;->mSDM:Lcom/oneplus/display/SDManager;
+    :try_start_12
+    iget-object v0, v8, Lcom/android/server/oneplus/display/ColorBalanceService;->mSDM:Lcom/oneplus/display/SDManager;
 
     if-eqz v0, :cond_10
 
-    iget-object v0, v1, Lcom/android/server/oneplus/display/ColorBalanceService;->mSDM:Lcom/oneplus/display/SDManager;
+    iget-object v0, v8, Lcom/android/server/oneplus/display/ColorBalanceService;->mSDM:Lcom/oneplus/display/SDManager;
 
     move-object/from16 v19, v0
 
     move-wide/from16 v20, v11
 
-    move-wide/from16 v22, v4
+    move-wide/from16 v22, v1
 
-    move-wide/from16 v24, v6
+    move-wide/from16 v24, v3
 
     invoke-virtual/range {v19 .. v25}, Lcom/oneplus/display/SDManager;->SetUsrColorBalanceConfig(DDD)V
-    :try_end_d
-    .catch Ljava/lang/NullPointerException; {:try_start_d .. :try_end_d} :catch_4
-    .catchall {:try_start_d .. :try_end_d} :catchall_d
+    :try_end_12
+    .catch Ljava/lang/NullPointerException; {:try_start_12 .. :try_end_12} :catch_4
+    .catchall {:try_start_12 .. :try_end_12} :catchall_c
 
     :cond_10
-    nop
-
-    move-wide/from16 v50, v4
-
-    goto :goto_e
+    :goto_f
+    goto/16 :goto_22
 
     :catch_4
     move-exception v0
 
-    move-object/from16 v49, v0
+    :try_start_13
+    const-string v5, "ColorBalanceService"
 
-    :try_start_e
-    const-string v0, "ColorBalanceService"
-    :try_end_e
-    .catchall {:try_start_e .. :try_end_e} :catchall_7
+    const-string/jumbo v6, "mSDM.SetUsrColorBalanceConfig error!"
 
-    move-wide/from16 v50, v4
+    invoke-static {v5, v6}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    :try_start_f
-    const-string/jumbo v4, "mSDM.SetUsrColorBalanceConfig error!"
-
-    invoke-static {v0, v4}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
-    :try_end_f
-    .catchall {:try_start_f .. :try_end_f} :catchall_6
-
-    nop
-
-    :goto_e
-    move-object/from16 v27, v8
-
-    move-wide/from16 v31, v9
-
-    move-wide/from16 v4, v50
-
-    goto/16 :goto_22
-
-    :catchall_6
-    move-exception v0
-
-    move-object/from16 v27, v8
-
-    move-wide/from16 v31, v9
-
-    move-wide/from16 v4, v50
-
-    goto/16 :goto_23
-
-    :catchall_7
-    move-exception v0
-
-    move-wide/from16 v50, v4
-
-    move-object/from16 v27, v8
-
-    move-wide/from16 v31, v9
-
-    goto/16 :goto_23
+    goto :goto_f
 
     :cond_11
-    move-wide/from16 v4, v17
+    move-wide/from16 v1, v17
 
     const/4 v0, 0x0
 
-    :goto_f
-    move/from16 v52, v0
+    :goto_10
+    move v5, v0
 
-    move-wide/from16 v53, v4
+    const/4 v6, 0x5
 
-    move/from16 v4, v52
-
-    const/4 v5, 0x5
-
-    if-ge v4, v5, :cond_14
+    if-ge v5, v6, :cond_1f
 
     sub-double v15, v15, v21
 
-    move-wide/from16 v55, v6
+    int-to-double v6, v9
 
-    int-to-double v5, v2
+    mul-double v17, v30, v15
 
-    mul-double v17, v9, v15
+    sub-double v13, v6, v17
 
-    sub-double v13, v5, v17
+    const/4 v6, 0x1
 
-    const/4 v5, 0x1
+    new-array v0, v6, [I
 
-    :try_start_10
-    new-array v0, v5, [I
+    const/4 v7, 0x0
 
-    const/16 v30, 0x0
-
-    aput v19, v0, v30
+    aput v19, v0, v7
 
     invoke-static {v0}, Landroid/util/OpFeatures;->isSupport([I)Z
 
     move-result v0
-    :try_end_10
-    .catchall {:try_start_10 .. :try_end_10} :catchall_b
+    :try_end_13
+    .catchall {:try_start_13 .. :try_end_13} :catchall_c
 
     if-eqz v0, :cond_12
 
-    const-wide v6, 0x3f527a6b04fc135dL    # 0.0011278195488
-
-    mul-double/2addr v6, v13
-
-    const-wide v17, 0x3fee72b8031455b6L    # 0.951503759398
-
-    add-double v6, v6, v17
-
-    move-wide v11, v6
-
-    :cond_12
-    const-wide v6, -0x410fdff91c3781e2L    # -1.5378098611516543E-5
-
-    mul-double/2addr v6, v13
-
-    mul-double/2addr v6, v13
-
-    const-wide v17, 0x3f56bea8aee1b08aL    # 0.001388230065937387
+    const-wide v17, 0x3f527a6b04fc135dL    # 0.0011278195488
 
     mul-double v17, v17, v13
 
-    add-double v6, v6, v17
+    const-wide v25, 0x3fee72b8031455b6L    # 0.951503759398
 
-    const-wide v17, 0x3feec8d01dba252aL    # 0.9620133
+    add-double v17, v17, v25
 
-    add-double v6, v6, v17
+    move-wide/from16 v11, v17
+
+    :cond_12
+    const-wide v17, -0x410fdff91c3781e2L    # -1.5378098611516543E-5
+
+    mul-double v17, v17, v13
+
+    mul-double v17, v17, v13
+
+    const-wide v25, 0x3f56bea8aee1b08aL    # 0.001388230065937387
+
+    mul-double v25, v25, v13
+
+    add-double v17, v17, v25
+
+    const-wide v25, 0x3feec8d01dba252aL    # 0.9620133
+
+    add-double v1, v17, v25
 
     const-wide v17, -0x4104f970a5924d0aL    # -2.577364434890296E-5
 
@@ -8798,386 +8807,141 @@
 
     const-wide v25, 0x3feca2ef9e88eca3L    # 0.89488965
 
-    add-double v17, v17, v25
+    add-double v3, v17, v25
 
-    :try_start_11
-    iget-object v0, v1, Lcom/android/server/oneplus/display/ColorBalanceService;->mSDM:Lcom/oneplus/display/SDManager;
+    :try_start_14
+    iget-object v0, v8, Lcom/android/server/oneplus/display/ColorBalanceService;->mSDM:Lcom/oneplus/display/SDManager;
 
     if-eqz v0, :cond_13
 
-    iget-object v0, v1, Lcom/android/server/oneplus/display/ColorBalanceService;->mSDM:Lcom/oneplus/display/SDManager;
+    iget-object v0, v8, Lcom/android/server/oneplus/display/ColorBalanceService;->mSDM:Lcom/oneplus/display/SDManager;
 
-    move-object/from16 v31, v0
+    move-object/from16 v32, v0
 
-    move-wide/from16 v32, v11
+    move-wide/from16 v33, v11
 
-    move-wide/from16 v34, v6
+    move-wide/from16 v35, v1
 
-    move-wide/from16 v36, v17
+    move-wide/from16 v37, v3
 
-    invoke-virtual/range {v31 .. v37}, Lcom/oneplus/display/SDManager;->SetUsrColorBalanceConfig(DDD)V
-    :try_end_11
-    .catch Ljava/lang/NullPointerException; {:try_start_11 .. :try_end_11} :catch_5
-    .catchall {:try_start_11 .. :try_end_11} :catchall_8
+    invoke-virtual/range {v32 .. v38}, Lcom/oneplus/display/SDManager;->SetUsrColorBalanceConfig(DDD)V
+    :try_end_14
+    .catch Ljava/lang/NullPointerException; {:try_start_14 .. :try_end_14} :catch_5
+    .catchall {:try_start_14 .. :try_end_14} :catchall_c
 
     :cond_13
     goto :goto_11
 
-    :catchall_8
-    move-exception v0
-
-    move-wide v4, v6
-
-    move-object/from16 v27, v8
-
-    move-wide/from16 v31, v9
-
-    :goto_10
-    move-wide/from16 v6, v17
-
-    goto/16 :goto_23
-
     :catch_5
     move-exception v0
 
-    :try_start_12
-    const-string v5, "ColorBalanceService"
+    :try_start_15
+    const-string v6, "ColorBalanceService"
 
-    move-object/from16 v57, v0
+    const-string/jumbo v7, "mSDM.SetUsrColorBalanceConfig error!"
 
-    const-string/jumbo v0, "mSDM.SetUsrColorBalanceConfig error!"
-
-    invoke-static {v5, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
-    :try_end_12
-    .catchall {:try_start_12 .. :try_end_12} :catchall_a
+    invoke-static {v6, v7}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
+    :try_end_15
+    .catchall {:try_start_15 .. :try_end_15} :catchall_c
 
     :goto_11
-    move-wide/from16 v58, v6
+    const-wide/16 v6, 0xf
 
-    const-wide/16 v5, 0xf
-
-    :try_start_13
-    invoke-static {v5, v6}, Ljava/lang/Thread;->sleep(J)V
-    :try_end_13
-    .catch Ljava/lang/InterruptedException; {:try_start_13 .. :try_end_13} :catch_6
-    .catchall {:try_start_13 .. :try_end_13} :catchall_9
+    :try_start_16
+    invoke-static {v6, v7}, Ljava/lang/Thread;->sleep(J)V
+    :try_end_16
+    .catch Ljava/lang/InterruptedException; {:try_start_16 .. :try_end_16} :catch_6
+    .catchall {:try_start_16 .. :try_end_16} :catchall_c
 
     goto :goto_12
-
-    :catchall_9
-    move-exception v0
-
-    move-object/from16 v27, v8
-
-    move-wide/from16 v31, v9
-
-    move-wide/from16 v6, v17
-
-    move-wide/from16 v4, v58
-
-    goto/16 :goto_23
 
     :catch_6
     move-exception v0
 
-    move-object v5, v0
+    move-object v6, v0
 
-    :try_start_14
+    :try_start_17
     invoke-virtual {v0}, Ljava/lang/InterruptedException;->printStackTrace()V
-    :try_end_14
-    .catchall {:try_start_14 .. :try_end_14} :catchall_9
+    :try_end_17
+    .catchall {:try_start_17 .. :try_end_17} :catchall_c
 
     :goto_12
-    add-int/lit8 v0, v4, 0x1
+    add-int/lit8 v0, v5, 0x1
 
-    move-wide/from16 v6, v17
+    goto/16 :goto_10
 
-    move-wide/from16 v4, v58
-
-    goto/16 :goto_f
-
-    :catchall_a
+    :catchall_5
     move-exception v0
 
-    move-wide/from16 v58, v6
+    move-object/from16 v29, v5
 
-    move-object/from16 v27, v8
+    move-wide/from16 v30, v6
 
-    move-wide/from16 v31, v9
-
-    move-wide/from16 v6, v17
-
-    move-wide/from16 v4, v58
-
-    goto/16 :goto_23
-
-    :catchall_b
-    move-exception v0
-
-    move-object/from16 v27, v8
-
-    move-wide/from16 v31, v9
-
-    move-wide/from16 v4, v53
-
-    move-wide/from16 v6, v55
+    move-wide/from16 v1, v17
 
     goto/16 :goto_23
 
     :cond_14
-    move-wide/from16 v55, v6
+    move-object/from16 v29, v5
 
-    move-object/from16 v27, v8
-
-    move-wide/from16 v31, v9
-
-    move-wide/from16 v4, v53
-
-    goto/16 :goto_22
-
-    :catchall_c
-    move-exception v0
+    move-wide/from16 v30, v6
 
     :goto_13
-    move-object/from16 v27, v8
-
-    move-wide/from16 v31, v9
-
-    move-wide/from16 v4, v17
-
-    goto/16 :goto_23
-
-    :cond_15
-    move/from16 v30, v5
-
     const/16 v0, 0x64
 
-    if-le v2, v0, :cond_16
+    if-le v9, v0, :cond_15
 
     const/16 v0, -0x64
 
-    if-ge v2, v0, :cond_16
+    if-ge v9, v0, :cond_15
 
-    :try_start_15
+    :try_start_18
     const-string v0, "ColorBalanceService"
 
-    new-instance v4, Ljava/lang/StringBuilder;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "oneplusSetColorBalance ERROR:"
+    const-string/jumbo v2, "oneplusSetColorBalance ERROR:"
 
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v9}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v1
 
-    invoke-static {v0, v4}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    monitor-exit v8
-    :try_end_15
-    .catchall {:try_start_15 .. :try_end_15} :catchall_c
+    monitor-exit v29
+    :try_end_18
+    .catchall {:try_start_18 .. :try_end_18} :catchall_6
 
     return-void
 
-    :cond_16
+    :catchall_6
+    move-exception v0
+
+    goto/16 :goto_0
+
+    :cond_15
     cmpg-double v0, v13, v27
 
     const-wide v19, 0x3e7ad7f2a0000000L    # 1.0000000116860974E-7
 
-    if-ltz v0, :cond_1c
+    if-ltz v0, :cond_1b
 
     cmpl-double v0, v13, v27
 
-    if-nez v0, :cond_17
+    if-nez v0, :cond_16
 
-    move-wide/from16 v23, v6
+    goto/16 :goto_1a
 
-    const-wide/16 v5, 0xf
+    :cond_16
+    const-wide v1, 0x3f1a36e2e0000000L    # 9.999999747378752E-5
 
-    goto/16 :goto_19
-
-    :cond_17
-    const-wide v4, 0x3f1a36e2e0000000L    # 9.999999747378752E-5
-
-    if-nez v3, :cond_19
-
-    const-wide v21, -0x3ff6978d4fdf3b64L    # -3.176
-
-    mul-double v21, v21, v13
-
-    mul-double v21, v21, v13
-
-    mul-double v21, v21, v13
-
-    mul-double v21, v21, v19
-
-    const-wide v19, 0x3ff02d0e56041893L    # 1.011
-
-    mul-double v19, v19, v13
-
-    mul-double v19, v19, v13
-
-    mul-double v19, v19, v4
-
-    add-double v21, v21, v19
-
-    const-wide v19, -0x4075bea0ba1f4b1fL    # -0.01282
-
-    mul-double v19, v19, v13
-
-    add-double v21, v21, v19
-
-    const-wide v19, 0x3ff63126e978d4feL    # 1.387
-
-    add-double v11, v21, v19
-
-    const-wide v19, 0x3ff553f7ced91687L    # 1.333
-
-    mul-double v19, v19, v13
-
-    mul-double v19, v19, v13
-
-    mul-double v19, v19, v13
-
-    const-wide v21, 0x3eb0c6f7a0000000L    # 9.999999974752427E-7
-
-    mul-double v19, v19, v21
-
-    const-wide v21, -0x3fffeb851eb851ecL    # -2.01
-
-    mul-double v21, v21, v13
-
-    mul-double v21, v21, v13
-
-    mul-double v21, v21, v4
-
-    add-double v19, v19, v21
-
-    const-wide v4, 0x3f7c0767d34df04eL    # 0.006843
-
-    mul-double/2addr v4, v13
-
-    add-double v19, v19, v4
-
-    const-wide v4, 0x3feef765fd8adabaL    # 0.9677
-
-    add-double v4, v19, v4
-
-    const-wide/high16 v6, 0x3ff0000000000000L    # 1.0
-
-    :try_start_16
-    iget-object v0, v1, Lcom/android/server/oneplus/display/ColorBalanceService;->mSDM:Lcom/oneplus/display/SDManager;
-
-    if-eqz v0, :cond_18
-
-    iget-object v0, v1, Lcom/android/server/oneplus/display/ColorBalanceService;->mSDM:Lcom/oneplus/display/SDManager;
-
-    move-object/from16 v23, v0
-
-    move-wide/from16 v24, v11
-
-    move-wide/from16 v26, v4
-
-    move-wide/from16 v28, v6
-
-    invoke-virtual/range {v23 .. v29}, Lcom/oneplus/display/SDManager;->SetUsrColorBalanceConfig(DDD)V
-    :try_end_16
-    .catch Ljava/lang/NullPointerException; {:try_start_16 .. :try_end_16} :catch_7
-    .catchall {:try_start_16 .. :try_end_16} :catchall_d
-
-    :cond_18
-    nop
-
-    move-wide/from16 v61, v4
-
-    goto :goto_14
-
-    :catchall_d
-    move-exception v0
-
-    move-object/from16 v27, v8
-
-    move-wide/from16 v31, v9
-
-    goto/16 :goto_23
-
-    :catch_7
-    move-exception v0
-
-    move-object/from16 v60, v0
-
-    :try_start_17
-    const-string v0, "ColorBalanceService"
-    :try_end_17
-    .catchall {:try_start_17 .. :try_end_17} :catchall_f
-
-    move-wide/from16 v61, v4
-
-    :try_start_18
-    const-string/jumbo v4, "mSDM.SetUsrColorBalanceConfig error!"
-
-    invoke-static {v0, v4}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
-    :try_end_18
-    .catchall {:try_start_18 .. :try_end_18} :catchall_e
-
-    nop
-
-    :goto_14
-    move-object/from16 v27, v8
-
-    move-wide/from16 v31, v9
-
-    move-wide/from16 v4, v61
-
-    goto/16 :goto_22
-
-    :catchall_e
-    move-exception v0
-
-    move-object/from16 v27, v8
-
-    move-wide/from16 v31, v9
-
-    move-wide/from16 v4, v61
-
-    goto/16 :goto_23
-
-    :catchall_f
-    move-exception v0
-
-    move-wide/from16 v61, v4
-
-    move-object/from16 v27, v8
-
-    move-wide/from16 v31, v9
-
-    goto/16 :goto_23
-
-    :cond_19
-    nop
-
-    :goto_15
-    move/from16 v63, v30
-
-    move/from16 v4, v63
-
-    const/4 v5, 0x5
-
-    if-ge v4, v5, :cond_1b
-
-    sub-double v15, v15, v21
-
-    move-wide/from16 v64, v6
-
-    int-to-double v5, v2
-
-    mul-double v25, v9, v15
-
-    sub-double v13, v5, v25
+    if-nez v10, :cond_18
 
     const-wide v5, -0x3ff6978d4fdf3b64L    # -3.176
 
@@ -9189,27 +8953,158 @@
 
     mul-double v5, v5, v19
 
+    const-wide v19, 0x3ff02d0e56041893L    # 1.011
+
+    mul-double v19, v19, v13
+
+    mul-double v19, v19, v13
+
+    mul-double v19, v19, v1
+
+    add-double v5, v5, v19
+
+    const-wide v19, -0x4075bea0ba1f4b1fL    # -0.01282
+
+    mul-double v19, v19, v13
+
+    add-double v5, v5, v19
+
+    const-wide v19, 0x3ff63126e978d4feL    # 1.387
+
+    add-double v5, v5, v19
+
+    const-wide v11, 0x3ff553f7ced91687L    # 1.333
+
+    mul-double/2addr v11, v13
+
+    mul-double/2addr v11, v13
+
+    mul-double/2addr v11, v13
+
+    const-wide v19, 0x3eb0c6f7a0000000L    # 9.999999974752427E-7
+
+    mul-double v11, v11, v19
+
+    const-wide v19, -0x3fffeb851eb851ecL    # -2.01
+
+    mul-double v19, v19, v13
+
+    mul-double v19, v19, v13
+
+    mul-double v19, v19, v1
+
+    add-double v11, v11, v19
+
+    const-wide v0, 0x3f7c0767d34df04eL    # 0.006843
+
+    mul-double/2addr v0, v13
+
+    add-double/2addr v11, v0
+
+    const-wide v0, 0x3feef765fd8adabaL    # 0.9677
+
+    add-double v1, v11, v0
+
+    const-wide/high16 v3, 0x3ff0000000000000L    # 1.0
+
+    :try_start_19
+    iget-object v0, v8, Lcom/android/server/oneplus/display/ColorBalanceService;->mSDM:Lcom/oneplus/display/SDManager;
+
+    if-eqz v0, :cond_17
+
+    iget-object v0, v8, Lcom/android/server/oneplus/display/ColorBalanceService;->mSDM:Lcom/oneplus/display/SDManager;
+
+    move-object/from16 v21, v0
+
+    move-wide/from16 v22, v5
+
+    move-wide/from16 v24, v1
+
+    move-wide/from16 v26, v3
+
+    invoke-virtual/range {v21 .. v27}, Lcom/oneplus/display/SDManager;->SetUsrColorBalanceConfig(DDD)V
+    :try_end_19
+    .catch Ljava/lang/NullPointerException; {:try_start_19 .. :try_end_19} :catch_7
+    .catchall {:try_start_19 .. :try_end_19} :catchall_7
+
+    :cond_17
+    :goto_14
+    goto :goto_16
+
+    :catchall_7
+    move-exception v0
+
+    :goto_15
+    move-wide v11, v5
+
+    goto/16 :goto_23
+
+    :catch_7
+    move-exception v0
+
+    :try_start_1a
+    const-string v7, "ColorBalanceService"
+
+    const-string/jumbo v11, "mSDM.SetUsrColorBalanceConfig error!"
+
+    invoke-static {v7, v11}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
+    :try_end_1a
+    .catchall {:try_start_1a .. :try_end_1a} :catchall_7
+
+    goto :goto_14
+
+    :goto_16
+    move-wide v11, v5
+
+    goto/16 :goto_22
+
+    :cond_18
+    const/16 v41, 0x0
+
+    :goto_17
+    move/from16 v5, v41
+
+    const/4 v6, 0x5
+
+    if-ge v5, v6, :cond_1a
+
+    sub-double v15, v15, v21
+
+    int-to-double v6, v9
+
+    mul-double v25, v30, v15
+
+    sub-double v13, v6, v25
+
+    const-wide v6, -0x3ff6978d4fdf3b64L    # -3.176
+
+    mul-double/2addr v6, v13
+
+    mul-double/2addr v6, v13
+
+    mul-double/2addr v6, v13
+
+    mul-double v6, v6, v19
+
     const-wide v25, 0x3ff02d0e56041893L    # 1.011
 
     mul-double v25, v25, v13
 
     mul-double v25, v25, v13
 
-    const-wide v27, 0x3f1a36e2e0000000L    # 9.999999747378752E-5
+    mul-double v25, v25, v1
 
-    mul-double v25, v25, v27
-
-    add-double v5, v5, v25
+    add-double v6, v6, v25
 
     const-wide v25, -0x4075bea0ba1f4b1fL    # -0.01282
 
     mul-double v25, v25, v13
 
-    add-double v5, v5, v25
+    add-double v6, v6, v25
 
     const-wide v25, 0x3ff63126e978d4feL    # 1.387
 
-    add-double v5, v5, v25
+    add-double v6, v6, v25
 
     const-wide v11, 0x3ff553f7ced91687L    # 1.333
 
@@ -9229,9 +9124,7 @@
 
     mul-double v25, v25, v13
 
-    const-wide v27, 0x3f1a36e2e0000000L    # 9.999999747378752E-5
-
-    mul-double v25, v25, v27
+    mul-double v25, v25, v1
 
     add-double v11, v11, v25
 
@@ -9245,516 +9138,416 @@
 
     add-double v11, v11, v25
 
-    const-wide/high16 v17, 0x3ff0000000000000L    # 1.0
+    const-wide/high16 v3, 0x3ff0000000000000L    # 1.0
 
-    :try_start_19
-    iget-object v0, v1, Lcom/android/server/oneplus/display/ColorBalanceService;->mSDM:Lcom/oneplus/display/SDManager;
+    :try_start_1b
+    iget-object v0, v8, Lcom/android/server/oneplus/display/ColorBalanceService;->mSDM:Lcom/oneplus/display/SDManager;
 
-    if-eqz v0, :cond_1a
+    if-eqz v0, :cond_19
 
-    iget-object v0, v1, Lcom/android/server/oneplus/display/ColorBalanceService;->mSDM:Lcom/oneplus/display/SDManager;
+    iget-object v0, v8, Lcom/android/server/oneplus/display/ColorBalanceService;->mSDM:Lcom/oneplus/display/SDManager;
 
-    move-object/from16 v30, v0
+    move-object/from16 v32, v0
 
-    move-wide/from16 v31, v5
+    move-wide/from16 v33, v6
 
-    move-wide/from16 v33, v11
+    move-wide/from16 v35, v11
 
-    move-wide/from16 v35, v17
+    move-wide/from16 v37, v3
 
-    invoke-virtual/range {v30 .. v36}, Lcom/oneplus/display/SDManager;->SetUsrColorBalanceConfig(DDD)V
-    :try_end_19
-    .catch Ljava/lang/NullPointerException; {:try_start_19 .. :try_end_19} :catch_8
-    .catchall {:try_start_19 .. :try_end_19} :catchall_10
+    invoke-virtual/range {v32 .. v38}, Lcom/oneplus/display/SDManager;->SetUsrColorBalanceConfig(DDD)V
+    :try_end_1b
+    .catch Ljava/lang/NullPointerException; {:try_start_1b .. :try_end_1b} :catch_8
+    .catchall {:try_start_1b .. :try_end_1b} :catchall_8
 
-    :cond_1a
-    goto :goto_17
+    :cond_19
+    goto :goto_18
 
-    :catchall_10
+    :catchall_8
     move-exception v0
 
-    move-object/from16 v27, v8
+    move-wide v1, v11
 
-    move-wide/from16 v31, v9
-
-    move-wide/from16 v69, v5
-
-    move-wide/from16 v6, v17
-
-    :goto_16
-    move-wide v4, v11
-
-    move-wide/from16 v11, v69
+    move-wide v11, v6
 
     goto/16 :goto_23
 
     :catch_8
     move-exception v0
 
-    :try_start_1a
-    const-string v7, "ColorBalanceService"
+    :try_start_1c
+    const-string v1, "ColorBalanceService"
 
-    move-object/from16 v66, v0
+    const-string/jumbo v2, "mSDM.SetUsrColorBalanceConfig error!"
 
-    const-string/jumbo v0, "mSDM.SetUsrColorBalanceConfig error!"
+    invoke-static {v1, v2}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
+    :try_end_1c
+    .catchall {:try_start_1c .. :try_end_1c} :catchall_8
 
-    invoke-static {v7, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
-    :try_end_1a
-    .catchall {:try_start_1a .. :try_end_1a} :catchall_12
+    :goto_18
+    const-wide/16 v1, 0xf
 
-    :goto_17
-    move-wide/from16 v67, v5
+    :try_start_1d
+    invoke-static {v1, v2}, Ljava/lang/Thread;->sleep(J)V
+    :try_end_1d
+    .catch Ljava/lang/InterruptedException; {:try_start_1d .. :try_end_1d} :catch_9
+    .catchall {:try_start_1d .. :try_end_1d} :catchall_8
 
-    const-wide/16 v5, 0xf
-
-    :try_start_1b
-    invoke-static {v5, v6}, Ljava/lang/Thread;->sleep(J)V
-    :try_end_1b
-    .catch Ljava/lang/InterruptedException; {:try_start_1b .. :try_end_1b} :catch_9
-    .catchall {:try_start_1b .. :try_end_1b} :catchall_11
-
-    goto :goto_18
-
-    :catchall_11
-    move-exception v0
-
-    move-object/from16 v27, v8
-
-    move-wide/from16 v31, v9
-
-    move-wide v4, v11
-
-    move-wide/from16 v6, v17
-
-    move-wide/from16 v11, v67
-
-    goto/16 :goto_23
+    goto :goto_19
 
     :catch_9
     move-exception v0
 
-    move-object v7, v0
+    move-object/from16 v17, v0
 
-    :try_start_1c
+    :try_start_1e
     invoke-virtual {v0}, Ljava/lang/InterruptedException;->printStackTrace()V
-    :try_end_1c
-    .catchall {:try_start_1c .. :try_end_1c} :catchall_11
+    :try_end_1e
+    .catchall {:try_start_1e .. :try_end_1e} :catchall_8
 
-    :goto_18
-    add-int/lit8 v30, v4, 0x1
-
-    move-wide/from16 v6, v17
-
-    move-wide/from16 v4, v27
+    :goto_19
+    add-int/lit8 v41, v5, 0x1
 
     move-wide/from16 v17, v11
 
-    move-wide/from16 v11, v67
+    const-wide v1, 0x3f1a36e2e0000000L    # 9.999999747378752E-5
 
-    goto/16 :goto_15
+    move-wide v11, v6
 
-    :catchall_12
-    move-exception v0
+    goto/16 :goto_17
 
-    move-wide/from16 v67, v5
-
-    move-object/from16 v27, v8
-
-    move-wide/from16 v31, v9
-
-    move-wide v4, v11
-
-    move-wide/from16 v6, v17
-
-    move-wide/from16 v11, v67
-
-    goto/16 :goto_23
-
-    :cond_1b
-    move-wide/from16 v64, v6
-
-    move-object/from16 v27, v8
-
-    move-wide/from16 v31, v9
-
-    move-wide/from16 v4, v17
+    :cond_1a
+    move-wide/from16 v1, v17
 
     goto/16 :goto_22
 
+    :cond_1b
+    :goto_1a
+    const-wide/16 v1, 0xf
+
+    if-nez v10, :cond_1d
+
+    const-wide v0, 0x3ff072b020c49ba6L    # 1.028
+
+    mul-double/2addr v0, v13
+
+    mul-double/2addr v0, v13
+
+    mul-double/2addr v0, v13
+
+    mul-double v0, v0, v19
+
+    const-wide v5, -0x400522d0e5604189L    # -1.679
+
+    mul-double/2addr v5, v13
+
+    mul-double/2addr v5, v13
+
+    mul-double v5, v5, v25
+
+    add-double/2addr v0, v5
+
+    const-wide v5, 0x3f66feb4a66559f7L    # 0.002807
+
+    mul-double/2addr v5, v13
+
+    add-double/2addr v0, v5
+
+    const-wide v5, 0x3fecb6ae7d566cf4L    # 0.8973
+
+    add-double v17, v0, v5
+
+    const-wide v0, -0x4009b22d0e560419L    # -1.394
+
+    mul-double/2addr v0, v13
+
+    mul-double/2addr v0, v13
+
+    mul-double/2addr v0, v13
+
+    mul-double v0, v0, v19
+
+    const-wide v5, -0x3fff9db22d0e5604L    # -2.048
+
+    mul-double/2addr v5, v13
+
+    mul-double/2addr v5, v13
+
+    mul-double v5, v5, v25
+
+    add-double/2addr v0, v5
+
+    const-wide v5, 0x3f7a5fc7e6b3fea0L    # 0.006439
+
+    mul-double/2addr v5, v13
+
+    add-double/2addr v0, v5
+
+    const-wide v5, 0x3fe81a36e2eb1c43L    # 0.7532
+
+    add-double v19, v0, v5
+
+    :try_start_1f
+    iget-object v0, v8, Lcom/android/server/oneplus/display/ColorBalanceService;->mSDM:Lcom/oneplus/display/SDManager;
+
+    if-eqz v0, :cond_1c
+
+    iget-object v1, v8, Lcom/android/server/oneplus/display/ColorBalanceService;->mSDM:Lcom/oneplus/display/SDManager;
+
+    move-wide v2, v11
+
+    move-wide/from16 v4, v17
+
+    move-wide/from16 v6, v19
+
+    invoke-virtual/range {v1 .. v7}, Lcom/oneplus/display/SDManager;->SetUsrColorBalanceConfig(DDD)V
+    :try_end_1f
+    .catch Ljava/lang/NullPointerException; {:try_start_1f .. :try_end_1f} :catch_a
+    .catchall {:try_start_1f .. :try_end_1f} :catchall_9
+
     :cond_1c
-    move-wide/from16 v23, v6
+    :goto_1b
+    goto :goto_1c
 
-    const-wide/16 v5, 0xf
+    :catchall_9
+    move-exception v0
 
-    :goto_19
-    if-nez v3, :cond_1e
+    move-wide/from16 v1, v17
 
-    const-wide v4, 0x3ff072b020c49ba6L    # 1.028
+    move-wide/from16 v3, v19
 
-    mul-double/2addr v4, v13
-
-    mul-double/2addr v4, v13
-
-    mul-double/2addr v4, v13
-
-    mul-double v4, v4, v19
-
-    const-wide v6, -0x400522d0e5604189L    # -1.679
-
-    mul-double/2addr v6, v13
-
-    mul-double/2addr v6, v13
-
-    mul-double v6, v6, v25
-
-    add-double/2addr v4, v6
-
-    const-wide v6, 0x3f66feb4a66559f7L    # 0.002807
-
-    mul-double/2addr v6, v13
-
-    add-double/2addr v4, v6
-
-    const-wide v6, 0x3fecb6ae7d566cf4L    # 0.8973
-
-    add-double v17, v4, v6
-
-    const-wide v4, -0x4009b22d0e560419L    # -1.394
-
-    mul-double/2addr v4, v13
-
-    mul-double/2addr v4, v13
-
-    mul-double/2addr v4, v13
-
-    mul-double v4, v4, v19
-
-    const-wide v6, -0x3fff9db22d0e5604L    # -2.048
-
-    mul-double/2addr v6, v13
-
-    mul-double/2addr v6, v13
-
-    mul-double v6, v6, v25
-
-    add-double/2addr v4, v6
-
-    const-wide v6, 0x3f7a5fc7e6b3fea0L    # 0.006439
-
-    mul-double/2addr v6, v13
-
-    add-double/2addr v4, v6
-
-    const-wide v6, 0x3fe81a36e2eb1c43L    # 0.7532
-
-    add-double v19, v4, v6
-
-    :try_start_1d
-    iget-object v0, v1, Lcom/android/server/oneplus/display/ColorBalanceService;->mSDM:Lcom/oneplus/display/SDManager;
-
-    if-eqz v0, :cond_1d
-
-    iget-object v4, v1, Lcom/android/server/oneplus/display/ColorBalanceService;->mSDM:Lcom/oneplus/display/SDManager;
-    :try_end_1d
-    .catch Ljava/lang/NullPointerException; {:try_start_1d .. :try_end_1d} :catch_b
-    .catchall {:try_start_1d .. :try_end_1d} :catchall_13
-
-    move-wide v5, v11
-
-    move-object/from16 v27, v8
-
-    move-wide/from16 v7, v17
-
-    move-wide/from16 v31, v9
-
-    move-wide/from16 v9, v19
-
-    :try_start_1e
-    invoke-virtual/range {v4 .. v10}, Lcom/oneplus/display/SDManager;->SetUsrColorBalanceConfig(DDD)V
-    :try_end_1e
-    .catch Ljava/lang/NullPointerException; {:try_start_1e .. :try_end_1e} :catch_a
-    .catchall {:try_start_1e .. :try_end_1e} :catchall_14
-
-    goto :goto_1a
+    goto/16 :goto_23
 
     :catch_a
     move-exception v0
 
+    :try_start_20
+    const-string v1, "ColorBalanceService"
+
+    const-string/jumbo v2, "mSDM.SetUsrColorBalanceConfig error!"
+
+    invoke-static {v1, v2}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
+    :try_end_20
+    .catchall {:try_start_20 .. :try_end_20} :catchall_9
+
     goto :goto_1b
 
+    :goto_1c
+    move-wide/from16 v1, v17
+
+    move-wide/from16 v3, v19
+
+    goto/16 :goto_22
+
     :cond_1d
-    move-object/from16 v27, v8
+    const/16 v41, 0x0
 
-    move-wide/from16 v31, v9
+    :goto_1d
+    move/from16 v6, v41
 
-    :goto_1a
-    goto :goto_1c
+    const/4 v5, 0x5
 
-    :catchall_13
-    move-exception v0
+    if-ge v6, v5, :cond_1a
 
-    move-object/from16 v27, v8
+    sub-double v15, v15, v21
 
-    move-wide/from16 v31, v9
+    int-to-double v1, v9
+
+    mul-double v23, v30, v15
+
+    sub-double v13, v1, v23
+
+    const-wide v0, 0x3ff072b020c49ba6L    # 1.028
+
+    mul-double/2addr v0, v13
+
+    mul-double/2addr v0, v13
+
+    mul-double/2addr v0, v13
+
+    mul-double v0, v0, v19
+
+    const-wide v23, -0x400522d0e5604189L    # -1.679
+
+    mul-double v23, v23, v13
+
+    mul-double v23, v23, v13
+
+    mul-double v23, v23, v25
+
+    add-double v0, v0, v23
+
+    const-wide v23, 0x3f66feb4a66559f7L    # 0.002807
+
+    mul-double v23, v23, v13
+
+    add-double v0, v0, v23
+
+    const-wide v23, 0x3fecb6ae7d566cf4L    # 0.8973
+
+    add-double v17, v0, v23
+
+    const-wide v0, -0x4009b22d0e560419L    # -1.394
+
+    mul-double/2addr v0, v13
+
+    mul-double/2addr v0, v13
+
+    mul-double/2addr v0, v13
+
+    mul-double v0, v0, v19
+
+    const-wide v23, -0x3fff9db22d0e5604L    # -2.048
+
+    mul-double v23, v23, v13
+
+    mul-double v23, v23, v13
+
+    mul-double v23, v23, v25
+
+    add-double v0, v0, v23
+
+    const-wide v23, 0x3f7a5fc7e6b3fea0L    # 0.006439
+
+    mul-double v23, v23, v13
+
+    add-double v0, v0, v23
+
+    const-wide v23, 0x3fe81a36e2eb1c43L    # 0.7532
+
+    add-double v23, v0, v23
+
+    :try_start_21
+    iget-object v0, v8, Lcom/android/server/oneplus/display/ColorBalanceService;->mSDM:Lcom/oneplus/display/SDManager;
+
+    if-eqz v0, :cond_1e
+
+    iget-object v1, v8, Lcom/android/server/oneplus/display/ColorBalanceService;->mSDM:Lcom/oneplus/display/SDManager;
+    :try_end_21
+    .catch Ljava/lang/NullPointerException; {:try_start_21 .. :try_end_21} :catch_c
+    .catchall {:try_start_21 .. :try_end_21} :catchall_a
+
+    move/from16 v27, v5
+
+    const-wide/16 v4, 0xf
+
+    move-wide v2, v11
+
+    move-wide v8, v4
 
     move-wide/from16 v4, v17
 
-    move-wide/from16 v6, v19
+    move/from16 v28, v6
 
-    goto/16 :goto_23
+    move-wide/from16 v6, v23
+
+    :try_start_22
+    invoke-virtual/range {v1 .. v7}, Lcom/oneplus/display/SDManager;->SetUsrColorBalanceConfig(DDD)V
+    :try_end_22
+    .catch Ljava/lang/NullPointerException; {:try_start_22 .. :try_end_22} :catch_b
+    .catchall {:try_start_22 .. :try_end_22} :catchall_a
+
+    goto :goto_1e
 
     :catch_b
     move-exception v0
 
-    move-object/from16 v27, v8
-
-    move-wide/from16 v31, v9
-
-    :goto_1b
-    :try_start_1f
-    const-string v4, "ColorBalanceService"
-
-    const-string/jumbo v5, "mSDM.SetUsrColorBalanceConfig error!"
-
-    invoke-static {v4, v5}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
-    :try_end_1f
-    .catchall {:try_start_1f .. :try_end_1f} :catchall_14
-
-    goto :goto_1a
-
-    :goto_1c
-    move-wide/from16 v4, v17
-
-    move-wide/from16 v6, v19
-
-    goto/16 :goto_22
-
-    :catchall_14
-    move-exception v0
-
-    move-wide/from16 v4, v17
-
-    move-wide/from16 v6, v19
-
-    goto/16 :goto_23
-
-    :cond_1e
-    move-object/from16 v27, v8
-
-    move-wide/from16 v31, v9
-
-    :goto_1d
-    move/from16 v9, v30
-
-    const/4 v4, 0x5
-
-    if-ge v9, v4, :cond_20
-
-    sub-double v15, v15, v21
-
-    int-to-double v7, v2
-
-    mul-double v28, v31, v15
-
-    sub-double v13, v7, v28
-
-    const-wide v7, 0x3ff072b020c49ba6L    # 1.028
-
-    mul-double/2addr v7, v13
-
-    mul-double/2addr v7, v13
-
-    mul-double/2addr v7, v13
-
-    mul-double v7, v7, v19
-
-    const-wide v28, -0x400522d0e5604189L    # -1.679
-
-    mul-double v28, v28, v13
-
-    mul-double v28, v28, v13
-
-    mul-double v28, v28, v25
-
-    add-double v7, v7, v28
-
-    const-wide v28, 0x3f66feb4a66559f7L    # 0.002807
-
-    mul-double v28, v28, v13
-
-    add-double v7, v7, v28
-
-    const-wide v28, 0x3fecb6ae7d566cf4L    # 0.8973
-
-    add-double v17, v7, v28
-
-    const-wide v7, -0x4009b22d0e560419L    # -1.394
-
-    mul-double/2addr v7, v13
-
-    mul-double/2addr v7, v13
-
-    mul-double/2addr v7, v13
-
-    mul-double v7, v7, v19
-
-    const-wide v28, -0x3fff9db22d0e5604L    # -2.048
-
-    mul-double v28, v28, v13
-
-    mul-double v28, v28, v13
-
-    mul-double v28, v28, v25
-
-    add-double v7, v7, v28
-
-    const-wide v28, 0x3f7a5fc7e6b3fea0L    # 0.006439
-
-    mul-double v28, v28, v13
-
-    add-double v7, v7, v28
-
-    const-wide v28, 0x3fe81a36e2eb1c43L    # 0.7532
-
-    add-double v23, v7, v28
-
-    :try_start_20
-    iget-object v0, v1, Lcom/android/server/oneplus/display/ColorBalanceService;->mSDM:Lcom/oneplus/display/SDManager;
-
-    if-eqz v0, :cond_1f
-
-    iget-object v0, v1, Lcom/android/server/oneplus/display/ColorBalanceService;->mSDM:Lcom/oneplus/display/SDManager;
-    :try_end_20
-    .catch Ljava/lang/NullPointerException; {:try_start_20 .. :try_end_20} :catch_d
-    .catchall {:try_start_20 .. :try_end_20} :catchall_15
-
-    move/from16 v28, v4
-
-    move-wide v7, v5
-
-    move-object v4, v0
-
-    move-wide v5, v11
-
-    move-wide v1, v7
-
-    move-wide/from16 v7, v17
-
-    move/from16 v29, v9
-
-    move-wide/from16 v9, v23
-
-    :try_start_21
-    invoke-virtual/range {v4 .. v10}, Lcom/oneplus/display/SDManager;->SetUsrColorBalanceConfig(DDD)V
-    :try_end_21
-    .catch Ljava/lang/NullPointerException; {:try_start_21 .. :try_end_21} :catch_c
-    .catchall {:try_start_21 .. :try_end_21} :catchall_15
-
-    goto :goto_1e
-
-    :catch_c
-    move-exception v0
-
     goto :goto_1f
 
-    :cond_1f
-    move/from16 v28, v4
+    :cond_1e
+    move/from16 v27, v5
 
-    move-wide v1, v5
+    move/from16 v28, v6
 
-    move/from16 v29, v9
+    const-wide/16 v8, 0xf
 
     :goto_1e
     goto :goto_20
 
-    :catchall_15
+    :catchall_a
     move-exception v0
 
-    move-wide/from16 v4, v17
+    move-wide/from16 v1, v17
 
-    move-wide/from16 v6, v23
+    move-wide/from16 v3, v23
 
     goto :goto_23
+
+    :catch_c
+    move-exception v0
+
+    move/from16 v27, v5
+
+    move/from16 v28, v6
+
+    const-wide/16 v8, 0xf
+
+    :goto_1f
+    :try_start_23
+    const-string v1, "ColorBalanceService"
+
+    const-string/jumbo v2, "mSDM.SetUsrColorBalanceConfig error!"
+
+    invoke-static {v1, v2}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
+    :try_end_23
+    .catchall {:try_start_23 .. :try_end_23} :catchall_a
+
+    :goto_20
+    :try_start_24
+    invoke-static {v8, v9}, Ljava/lang/Thread;->sleep(J)V
+    :try_end_24
+    .catch Ljava/lang/InterruptedException; {:try_start_24 .. :try_end_24} :catch_d
+    .catchall {:try_start_24 .. :try_end_24} :catchall_a
+
+    goto :goto_21
 
     :catch_d
     move-exception v0
 
-    move/from16 v28, v4
+    move-object v1, v0
 
-    move-wide v1, v5
-
-    move/from16 v29, v9
-
-    :goto_1f
-    :try_start_22
-    const-string v4, "ColorBalanceService"
-
-    const-string/jumbo v5, "mSDM.SetUsrColorBalanceConfig error!"
-
-    invoke-static {v4, v5}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
-    :try_end_22
-    .catchall {:try_start_22 .. :try_end_22} :catchall_15
-
-    :goto_20
-    :try_start_23
-    invoke-static {v1, v2}, Ljava/lang/Thread;->sleep(J)V
-    :try_end_23
-    .catch Ljava/lang/InterruptedException; {:try_start_23 .. :try_end_23} :catch_e
-    .catchall {:try_start_23 .. :try_end_23} :catchall_15
-
-    goto :goto_21
-
-    :catch_e
-    move-exception v0
-
-    move-object v4, v0
-
-    :try_start_24
+    :try_start_25
     invoke-virtual {v0}, Ljava/lang/InterruptedException;->printStackTrace()V
-    :try_end_24
-    .catchall {:try_start_24 .. :try_end_24} :catchall_15
+    :try_end_25
+    .catchall {:try_start_25 .. :try_end_25} :catchall_a
 
     :goto_21
-    add-int/lit8 v30, v29, 0x1
+    add-int/lit8 v41, v28, 0x1
 
-    move-wide v5, v1
+    move-wide v1, v8
 
-    move-object/from16 v1, p0
+    move-wide/from16 v3, v23
 
-    move/from16 v2, p1
+    move-object/from16 v8, p0
+
+    move/from16 v9, p1
 
     goto/16 :goto_1d
 
-    :cond_20
-    move-wide/from16 v4, v17
-
-    move-wide/from16 v6, v23
-
+    :cond_1f
     :goto_22
-    :try_start_25
-    monitor-exit v27
+    :try_start_26
+    monitor-exit v29
 
     return-void
 
-    :catchall_16
+    :catchall_b
     move-exception v0
 
-    move-wide/from16 v17, v4
+    move-wide/from16 v17, v1
 
-    move-wide/from16 v23, v6
+    move-object/from16 v29, v5
 
-    move-object/from16 v27, v8
-
-    move-wide/from16 v31, v9
+    move-wide/from16 v30, v6
 
     :goto_23
-    monitor-exit v27
-    :try_end_25
-    .catchall {:try_start_25 .. :try_end_25} :catchall_17
+    monitor-exit v29
+    :try_end_26
+    .catchall {:try_start_26 .. :try_end_26} :catchall_c
 
     throw v0
 
-    :catchall_17
+    :catchall_c
     move-exception v0
 
     goto :goto_23
@@ -13765,7 +13558,7 @@
 .end method
 
 .method private revertStatus()V
-    .locals 9
+    .locals 15
 
     const/high16 v0, 0x3f800000    # 1.0f
 
@@ -14133,6 +13926,16 @@
 
     iput v7, p0, Lcom/android/server/oneplus/display/ColorBalanceService;->mCurrentColorBalance:I
 
+    const-wide/high16 v9, 0x3ff0000000000000L    # 1.0
+
+    const-wide/high16 v11, 0x3ff0000000000000L    # 1.0
+
+    const-wide/high16 v13, 0x3ff0000000000000L    # 1.0
+
+    move-object v8, p0
+
+    invoke-direct/range {v8 .. v14}, Lcom/android/server/oneplus/display/ColorBalanceService;->notifyColorBalanceToSurfaceFlinger(DDD)V
+
     goto/16 :goto_1
 
     :cond_5
@@ -14158,7 +13961,7 @@
 
     invoke-direct {p0, v5}, Lcom/android/server/oneplus/display/ColorBalanceService;->opSetActiveModesId(I)V
 
-    goto :goto_1
+    goto/16 :goto_1
 
     :cond_6
     new-array v2, v3, [I
@@ -14257,11 +14060,19 @@
 
     iput v7, p0, Lcom/android/server/oneplus/display/ColorBalanceService;->mCurrentColorBalance:I
 
+    const-wide/high16 v9, 0x3ff0000000000000L    # 1.0
+
+    const-wide/high16 v11, 0x3ff0000000000000L    # 1.0
+
+    const-wide/high16 v13, 0x3ff0000000000000L    # 1.0
+
+    move-object v8, p0
+
+    invoke-direct/range {v8 .. v14}, Lcom/android/server/oneplus/display/ColorBalanceService;->notifyColorBalanceToSurfaceFlinger(DDD)V
+
     :cond_9
     :goto_1
     return-void
-
-    nop
 
     :pswitch_data_0
     .packed-switch 0x0

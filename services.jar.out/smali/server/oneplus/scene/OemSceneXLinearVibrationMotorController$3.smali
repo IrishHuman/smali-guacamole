@@ -32,7 +32,7 @@
 
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
-    .locals 3
+    .locals 5
 
     iget-object v0, p0, Lserver/oneplus/scene/OemSceneXLinearVibrationMotorController$3;->this$0:Lserver/oneplus/scene/OemSceneXLinearVibrationMotorController;
 
@@ -94,7 +94,30 @@
 
     invoke-static {v1}, Lserver/oneplus/scene/OemSceneXLinearVibrationMotorController;->access$300(Lserver/oneplus/scene/OemSceneXLinearVibrationMotorController;)V
 
+    goto :goto_0
+
     :cond_4
+    const-string v1, "android.media.action.HDMI_AUDIO_PLUG"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_5
+
+    invoke-static {}, Lcom/android/internal/os/BackgroundThread;->getHandler()Landroid/os/Handler;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lserver/oneplus/scene/OemSceneXLinearVibrationMotorController$3;->this$0:Lserver/oneplus/scene/OemSceneXLinearVibrationMotorController;
+
+    iget-object v2, v2, Lserver/oneplus/scene/OemSceneXLinearVibrationMotorController;->updateVolumeRunnable:Ljava/lang/Runnable;
+
+    const-wide/16 v3, 0x9c4
+
+    invoke-virtual {v1, v2, v3, v4}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+
+    :cond_5
     :goto_0
     return-void
 .end method

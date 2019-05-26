@@ -173,7 +173,7 @@
 
     if-eqz v4, :cond_2
 
-    const v4, 0x50d0096
+    const v4, 0x50d0097
 
     goto :goto_1
 

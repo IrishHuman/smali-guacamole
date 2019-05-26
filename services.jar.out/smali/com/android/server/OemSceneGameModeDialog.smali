@@ -418,7 +418,7 @@
 
     const v6, 0x506004a
 
-    const v7, 0x50d002a
+    const v7, 0x50d002b
 
     move-object v2, v0
 
@@ -436,7 +436,7 @@
 
     const v12, 0x506004d
 
-    const v13, 0x50d002c
+    const v13, 0x50d002d
 
     move-object v8, v0
 
@@ -454,7 +454,7 @@
 
     const v5, 0x506004e
 
-    const v6, 0x50d002d
+    const v6, 0x50d002e
 
     move-object v1, v0
 
@@ -472,7 +472,7 @@
 
     const v11, 0x5060044
 
-    const v12, 0x50d0049
+    const v12, 0x50d004a
 
     move-object v7, v0
 
@@ -490,7 +490,7 @@
 
     const v5, 0x5060042
 
-    const v6, 0x50d004a
+    const v6, 0x50d004b
 
     move-object v1, v0
 
@@ -506,7 +506,7 @@
 
     const v11, 0x5060040
 
-    const v12, 0x50d004b
+    const v12, 0x50d004c
 
     move-object v7, v0
 
@@ -531,7 +531,7 @@
 
     const v6, 0x506004a
 
-    const v7, 0x50d002a
+    const v7, 0x50d002b
 
     move-object v2, v0
 
@@ -549,7 +549,7 @@
 
     const v12, 0x506004d
 
-    const v13, 0x50d002c
+    const v13, 0x50d002d
 
     move-object v8, v0
 
@@ -567,7 +567,7 @@
 
     const v5, 0x506004e
 
-    const v6, 0x50d002d
+    const v6, 0x50d002e
 
     move-object v1, v0
 
@@ -585,7 +585,7 @@
 
     const v11, 0x506004a
 
-    const v12, 0x50d002a
+    const v12, 0x50d002b
 
     move-object v7, v0
 
@@ -603,7 +603,7 @@
 
     const v5, 0x506004d
 
-    const v6, 0x50d002c
+    const v6, 0x50d002d
 
     move-object v1, v0
 
@@ -619,7 +619,7 @@
 
     const v11, 0x506004e
 
-    const v12, 0x50d002d
+    const v12, 0x50d002e
 
     move-object v7, v0
 
@@ -635,7 +635,7 @@
 
     const v5, 0x5060044
 
-    const v6, 0x50d0049
+    const v6, 0x50d004a
 
     move-object v1, v0
 
@@ -651,7 +651,7 @@
 
     const v11, 0x5060042
 
-    const v12, 0x50d004a
+    const v12, 0x50d004b
 
     move-object v7, v0
 
@@ -667,7 +667,7 @@
 
     const v5, 0x5060040
 
-    const v6, 0x50d004b
+    const v6, 0x50d004c
 
     move-object v1, v0
 
@@ -2878,7 +2878,7 @@
 
     iget-object v1, p0, Lcom/android/server/OemSceneGameModeDialog;->mNotifyStyleDetail:Landroid/widget/TextView;
 
-    const v2, 0x50d0031
+    const v2, 0x50d0032
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(I)V
 
@@ -2891,7 +2891,7 @@
 
     iget-object v1, p0, Lcom/android/server/OemSceneGameModeDialog;->mNotifyStyleDetail:Landroid/widget/TextView;
 
-    const v2, 0x50d0030
+    const v2, 0x50d0031
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(I)V
 
@@ -2904,7 +2904,7 @@
 
     iget-object v1, p0, Lcom/android/server/OemSceneGameModeDialog;->mNotifyStyleDetail:Landroid/widget/TextView;
 
-    const v2, 0x50d0032
+    const v2, 0x50d0033
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(I)V
 
@@ -3409,39 +3409,19 @@
 
     move-result-object v9
 
-    const-string v0, "OnePlus7"
-
-    invoke-virtual {v9, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    move-result v0
-
     const/4 v10, 0x1
+
+    new-array v0, v10, [I
 
     const/4 v11, 0x0
 
-    if-nez v0, :cond_1
+    const/16 v1, 0x90
 
-    const-string v0, "SS88"
+    aput v1, v0, v11
 
-    invoke-virtual {v9, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+    invoke-static {v0}, Landroid/util/OpFeatures;->isSupport([I)Z
 
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    move v0, v11
-
-    goto :goto_1
-
-    :cond_1
-    :goto_0
-    move v0, v10
-
-    :goto_1
-    move v12, v0
+    move-result v12
 
     new-array v0, v10, [I
 
@@ -3475,7 +3455,7 @@
 
     sget-boolean v1, Lcom/android/server/OemSceneGameModeDialog;->DBG:Z
 
-    if-eqz v1, :cond_2
+    if-eqz v1, :cond_0
 
     const-string v1, "OemSceneGameModeDialog"
 
@@ -3501,16 +3481,16 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_2
-    if-eqz v12, :cond_3
+    :cond_0
+    if-eqz v12, :cond_1
 
-    if-eqz v15, :cond_3
+    if-eqz v15, :cond_1
 
-    if-nez v14, :cond_3
+    if-nez v14, :cond_1
 
     const/4 v0, 0x1
 
-    :cond_3
+    :cond_1
     move/from16 v16, v0
 
     iget-object v1, v8, Lcom/android/server/OemSceneGameModeDialog;->mViewRoot:Landroid/widget/RelativeLayout;
@@ -3521,7 +3501,7 @@
 
     const v4, 0x5070027
 
-    const v5, 0x50d003c
+    const v5, 0x50d003d
 
     const-string/jumbo v6, "op_game_mode_vibrate_feedback"
 
@@ -3539,7 +3519,7 @@
 
     const v4, 0x5070022
 
-    const v5, 0x50d0039
+    const v5, 0x50d003a
 
     const-string/jumbo v6, "op_game_mode_ad_enable"
 
@@ -3555,7 +3535,7 @@
 
     const v4, 0x507001e
 
-    const v5, 0x50d0028
+    const v5, 0x50d0029
 
     const-string v6, "game_mode_answer_no_incallui"
 
@@ -3571,7 +3551,7 @@
 
     const v4, 0x5070020
 
-    const v5, 0x50d0029
+    const v5, 0x50d002a
 
     const-string v6, "game_mode_notifications_3rd_calls"
 
@@ -3591,27 +3571,27 @@
 
     move-result v0
 
-    if-ne v0, v10, :cond_4
+    if-ne v0, v10, :cond_2
 
-    goto :goto_2
+    goto :goto_0
 
-    :cond_4
+    :cond_2
     move v10, v11
 
-    :goto_2
+    :goto_0
     move v0, v10
 
-    if-eqz v16, :cond_5
+    if-eqz v16, :cond_3
 
-    if-nez v0, :cond_5
+    if-nez v0, :cond_3
 
     sget-boolean v1, Lcom/android/server/OemSceneGameModeDialog;->sHapticFeedbackEverPrompted:Z
 
-    if-nez v1, :cond_5
+    if-nez v1, :cond_3
 
     invoke-direct/range {p0 .. p0}, Lcom/android/server/OemSceneGameModeDialog;->promptHapticFeedbackOption()V
 
-    :cond_5
+    :cond_3
     return-void
 .end method
 
@@ -3712,7 +3692,7 @@
 
     iget-object v1, p0, Lcom/android/server/OemSceneGameModeDialog;->mFnaticModeTitle:Landroid/widget/TextView;
 
-    const v2, 0x50d004f
+    const v2, 0x50d0050
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(I)V
 
@@ -3779,7 +3759,7 @@
 
     iget-object v1, p0, Lcom/android/server/OemSceneGameModeDialog;->mFnaticModeTitle:Landroid/widget/TextView;
 
-    const v4, 0x50d0051
+    const v4, 0x50d0052
 
     invoke-virtual {v1, v4}, Landroid/widget/TextView;->setText(I)V
 

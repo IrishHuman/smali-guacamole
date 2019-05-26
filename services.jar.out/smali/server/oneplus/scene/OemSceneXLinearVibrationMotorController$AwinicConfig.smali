@@ -39,6 +39,30 @@
 
 
 # virtual methods
+.method public getAwinicMode()I
+    .locals 1
+
+    iget v0, p0, Lserver/oneplus/scene/OemSceneXLinearVibrationMotorController$AwinicConfig;->mAwinicMode:I
+
+    return v0
+.end method
+
+.method public getFlag()I
+    .locals 1
+
+    iget v0, p0, Lserver/oneplus/scene/OemSceneXLinearVibrationMotorController$AwinicConfig;->mFlag:I
+
+    return v0
+.end method
+
+.method public getPkgName()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lserver/oneplus/scene/OemSceneXLinearVibrationMotorController$AwinicConfig;->mPkgName:Ljava/lang/String;
+
+    return-object v0
+.end method
+
 .method public toString()Ljava/lang/String;
     .locals 2
 

@@ -80,7 +80,7 @@
 
     if-eqz v1, :cond_6
 
-    const v12, 0x50d000c
+    const v12, 0x50d000d
 
     iget-object v1, v0, Lcom/android/server/OemExService$6;->this$0:Lcom/android/server/OemExService;
 

@@ -888,12 +888,12 @@
     return-void
 .end method
 
-.method static synthetic access$4900(Lcom/android/server/display/DisplayManagerService;II)V
-    .locals 0
+.method static synthetic access$4900(Lcom/android/server/display/DisplayManagerService;)Landroid/util/SparseArray;
+    .locals 1
 
-    invoke-direct {p0, p1, p2}, Lcom/android/server/display/DisplayManagerService;->requestGlobalDisplayStateInternal(II)V
+    iget-object v0, p0, Lcom/android/server/display/DisplayManagerService;->mLogicalDisplays:Landroid/util/SparseArray;
 
-    return-void
+    return-object v0
 .end method
 
 .method static synthetic access$500(Lcom/android/server/display/DisplayManagerService;)Lcom/android/server/wm/WindowManagerInternal;
@@ -904,7 +904,15 @@
     return-object v0
 .end method
 
-.method static synthetic access$5000(Lcom/android/server/display/DisplayManagerService;)Lcom/android/server/display/DisplayManagerService$DisplayManagerHandler;
+.method static synthetic access$5000(Lcom/android/server/display/DisplayManagerService;II)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Lcom/android/server/display/DisplayManagerService;->requestGlobalDisplayStateInternal(II)V
+
+    return-void
+.end method
+
+.method static synthetic access$5100(Lcom/android/server/display/DisplayManagerService;)Lcom/android/server/display/DisplayManagerService$DisplayManagerHandler;
     .locals 1
 
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService;->mHandler:Lcom/android/server/display/DisplayManagerService$DisplayManagerHandler;
@@ -912,7 +920,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$5100(Lcom/android/server/display/DisplayManagerService;Landroid/hardware/display/DisplayManagerInternal$DisplayTransactionListener;)V
+.method static synthetic access$5200(Lcom/android/server/display/DisplayManagerService;Landroid/hardware/display/DisplayManagerInternal$DisplayTransactionListener;)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/android/server/display/DisplayManagerService;->registerDisplayTransactionListenerInternal(Landroid/hardware/display/DisplayManagerInternal$DisplayTransactionListener;)V
@@ -920,7 +928,7 @@
     return-void
 .end method
 
-.method static synthetic access$5200(Lcom/android/server/display/DisplayManagerService;Landroid/hardware/display/DisplayManagerInternal$DisplayTransactionListener;)V
+.method static synthetic access$5300(Lcom/android/server/display/DisplayManagerService;Landroid/hardware/display/DisplayManagerInternal$DisplayTransactionListener;)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/android/server/display/DisplayManagerService;->unregisterDisplayTransactionListenerInternal(Landroid/hardware/display/DisplayManagerInternal$DisplayTransactionListener;)V
@@ -928,7 +936,7 @@
     return-void
 .end method
 
-.method static synthetic access$5300(Lcom/android/server/display/DisplayManagerService;ILandroid/view/DisplayInfo;)V
+.method static synthetic access$5400(Lcom/android/server/display/DisplayManagerService;ILandroid/view/DisplayInfo;)V
     .locals 0
 
     invoke-direct {p0, p1, p2}, Lcom/android/server/display/DisplayManagerService;->setDisplayInfoOverrideFromWindowManagerInternal(ILandroid/view/DisplayInfo;)V
@@ -936,7 +944,7 @@
     return-void
 .end method
 
-.method static synthetic access$5400(Lcom/android/server/display/DisplayManagerService;ILandroid/view/DisplayInfo;)V
+.method static synthetic access$5500(Lcom/android/server/display/DisplayManagerService;ILandroid/view/DisplayInfo;)V
     .locals 0
 
     invoke-direct {p0, p1, p2}, Lcom/android/server/display/DisplayManagerService;->getNonOverrideDisplayInfoInternal(ILandroid/view/DisplayInfo;)V
@@ -944,7 +952,7 @@
     return-void
 .end method
 
-.method static synthetic access$5500(Lcom/android/server/display/DisplayManagerService;IZFIZ)V
+.method static synthetic access$5600(Lcom/android/server/display/DisplayManagerService;IZFIZ)V
     .locals 0
 
     invoke-direct/range {p0 .. p5}, Lcom/android/server/display/DisplayManagerService;->setDisplayPropertiesInternal(IZFIZ)V
@@ -952,7 +960,7 @@
     return-void
 .end method
 
-.method static synthetic access$5600(Lcom/android/server/display/DisplayManagerService;III)V
+.method static synthetic access$5700(Lcom/android/server/display/DisplayManagerService;III)V
     .locals 0
 
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/display/DisplayManagerService;->setDisplayOffsetsInternal(III)V
@@ -960,7 +968,7 @@
     return-void
 .end method
 
-.method static synthetic access$5700(Lcom/android/server/display/DisplayManagerService;Landroid/util/SparseArray;)V
+.method static synthetic access$5800(Lcom/android/server/display/DisplayManagerService;Landroid/util/SparseArray;)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/android/server/display/DisplayManagerService;->setDisplayAccessUIDsInternal(Landroid/util/SparseArray;)V
@@ -968,7 +976,7 @@
     return-void
 .end method
 
-.method static synthetic access$5800(Lcom/android/server/display/DisplayManagerService;II)Z
+.method static synthetic access$5900(Lcom/android/server/display/DisplayManagerService;II)Z
     .locals 1
 
     invoke-direct {p0, p1, p2}, Lcom/android/server/display/DisplayManagerService;->isUidPresentOnDisplayInternal(II)Z
@@ -978,18 +986,18 @@
     return v0
 .end method
 
-.method static synthetic access$5900(Lcom/android/server/display/DisplayManagerService;)Ljava/util/ArrayList;
-    .locals 1
-
-    iget-object v0, p0, Lcom/android/server/display/DisplayManagerService;->mDisplayDevices:Ljava/util/ArrayList;
-
-    return-object v0
-.end method
-
 .method static synthetic access$600(Lcom/android/server/display/DisplayManagerService;)Lcom/android/server/display/DisplayManagerService$SyncRoot;
     .locals 1
 
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService;->mSyncRoot:Lcom/android/server/display/DisplayManagerService$SyncRoot;
+
+    return-object v0
+.end method
+
+.method static synthetic access$6000(Lcom/android/server/display/DisplayManagerService;)Ljava/util/ArrayList;
+    .locals 1
+
+    iget-object v0, p0, Lcom/android/server/display/DisplayManagerService;->mDisplayDevices:Ljava/util/ArrayList;
 
     return-object v0
 .end method

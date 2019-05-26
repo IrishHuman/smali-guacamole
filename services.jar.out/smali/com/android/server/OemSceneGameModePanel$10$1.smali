@@ -35,8 +35,9 @@
 
 # virtual methods
 .method public run()V
-    .locals 1
+    .locals 3
 
+    :try_start_0
     iget-object v0, p0, Lcom/android/server/OemSceneGameModePanel$10$1;->this$1:Lcom/android/server/OemSceneGameModePanel$10;
 
     iget-object v0, v0, Lcom/android/server/OemSceneGameModePanel$10;->this$0:Lcom/android/server/OemSceneGameModePanel;
@@ -46,6 +47,22 @@
     move-result-object v0
 
     invoke-virtual {v0}, Lcom/android/server/OemSceneGameModeView;->updateViewOptions()V
+    :try_end_0
+    .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
 
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    const-string v1, "OemSceneGameModePanel"
+
+    invoke-virtual {v0}, Ljava/lang/NullPointerException;->getMessage()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    :goto_0
     return-void
 .end method

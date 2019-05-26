@@ -269,13 +269,13 @@
 
     iget-object v2, p0, Lcom/android/server/OemSceneGameModeMessage;->mTitle:Landroid/widget/TextView;
 
-    const v3, 0x50d004f
+    const v3, 0x50d0050
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(I)V
 
     iget-object v2, p0, Lcom/android/server/OemSceneGameModeMessage;->mEsportTriggerBtn:Landroid/widget/TextView;
 
-    const v3, 0x50d0033
+    const v3, 0x50d0034
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(I)V
 
@@ -322,13 +322,13 @@
 
     iget-object v2, p0, Lcom/android/server/OemSceneGameModeMessage;->mTitle:Landroid/widget/TextView;
 
-    const v3, 0x50d0051
+    const v3, 0x50d0052
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(I)V
 
     iget-object v2, p0, Lcom/android/server/OemSceneGameModeMessage;->mEsportTriggerBtn:Landroid/widget/TextView;
 
-    const v3, 0x50d0037
+    const v3, 0x50d0038
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(I)V
 

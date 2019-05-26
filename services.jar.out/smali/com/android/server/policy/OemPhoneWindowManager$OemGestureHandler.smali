@@ -68,7 +68,7 @@
 
     iget-object v1, v1, Lcom/android/server/policy/OemPhoneWindowManager;->mContext:Landroid/content/Context;
 
-    invoke-static {}, Lcom/android/server/policy/OemPhoneWindowManager;->access$2100()Ljava/lang/String;
+    invoke-static {}, Lcom/android/server/policy/OemPhoneWindowManager;->access$2300()Ljava/lang/String;
 
     move-result-object v2
 
@@ -80,14 +80,14 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/android/server/policy/OemPhoneWindowManager;->access$2200(Lcom/android/server/policy/OemPhoneWindowManager;Lorg/json/JSONArray;)V
+    invoke-static {v1, v2}, Lcom/android/server/policy/OemPhoneWindowManager;->access$2400(Lcom/android/server/policy/OemPhoneWindowManager;Lorg/json/JSONArray;)V
 
     goto/16 :goto_2
 
     :pswitch_2
     iget-object v0, p0, Lcom/android/server/policy/OemPhoneWindowManager$OemGestureHandler;->this$0:Lcom/android/server/policy/OemPhoneWindowManager;
 
-    invoke-static {v0}, Lcom/android/server/policy/OemPhoneWindowManager;->access$2000(Lcom/android/server/policy/OemPhoneWindowManager;)V
+    invoke-static {v0}, Lcom/android/server/policy/OemPhoneWindowManager;->access$2200(Lcom/android/server/policy/OemPhoneWindowManager;)V
 
     goto/16 :goto_2
 
@@ -134,7 +134,7 @@
     :goto_0
     iget-object v1, p0, Lcom/android/server/policy/OemPhoneWindowManager$OemGestureHandler;->this$0:Lcom/android/server/policy/OemPhoneWindowManager;
 
-    invoke-static {v1}, Lcom/android/server/policy/OemPhoneWindowManager;->access$1900(Lcom/android/server/policy/OemPhoneWindowManager;)V
+    invoke-static {v1}, Lcom/android/server/policy/OemPhoneWindowManager;->access$2100(Lcom/android/server/policy/OemPhoneWindowManager;)V
 
     goto/16 :goto_2
 
@@ -155,7 +155,7 @@
     move v2, v1
 
     :goto_1
-    invoke-static {v0, v3, v2, v1}, Lcom/android/server/policy/OemPhoneWindowManager;->access$1800(Lcom/android/server/policy/OemPhoneWindowManager;IZZ)V
+    invoke-static {v0, v3, v2, v1}, Lcom/android/server/policy/OemPhoneWindowManager;->access$2000(Lcom/android/server/policy/OemPhoneWindowManager;IZZ)V
 
     goto :goto_2
 
@@ -168,7 +168,7 @@
 
     iget-object v0, p0, Lcom/android/server/policy/OemPhoneWindowManager$OemGestureHandler;->this$0:Lcom/android/server/policy/OemPhoneWindowManager;
 
-    invoke-static {v0}, Lcom/android/server/policy/OemPhoneWindowManager;->access$1700(Lcom/android/server/policy/OemPhoneWindowManager;)Lcom/android/server/policy/OemPhoneWindowManager$PolicyHandler;
+    invoke-static {v0}, Lcom/android/server/policy/OemPhoneWindowManager;->access$1900(Lcom/android/server/policy/OemPhoneWindowManager;)Lcom/android/server/policy/OemPhoneWindowManager$PolicyHandler;
 
     move-result-object v0
 
@@ -183,7 +183,7 @@
     :pswitch_6
     iget-object v0, p0, Lcom/android/server/policy/OemPhoneWindowManager$OemGestureHandler;->this$0:Lcom/android/server/policy/OemPhoneWindowManager;
 
-    invoke-static {v0}, Lcom/android/server/policy/OemPhoneWindowManager;->access$1500(Lcom/android/server/policy/OemPhoneWindowManager;)Lcom/android/server/policy/OemThreePointersGesturesListener;
+    invoke-static {v0}, Lcom/android/server/policy/OemPhoneWindowManager;->access$1700(Lcom/android/server/policy/OemPhoneWindowManager;)Lcom/android/server/policy/OemThreePointersGesturesListener;
 
     move-result-object v0
 
@@ -191,7 +191,7 @@
 
     iget-object v0, p0, Lcom/android/server/policy/OemPhoneWindowManager$OemGestureHandler;->this$0:Lcom/android/server/policy/OemPhoneWindowManager;
 
-    invoke-static {v0}, Lcom/android/server/policy/OemPhoneWindowManager;->access$1500(Lcom/android/server/policy/OemPhoneWindowManager;)Lcom/android/server/policy/OemThreePointersGesturesListener;
+    invoke-static {v0}, Lcom/android/server/policy/OemPhoneWindowManager;->access$1700(Lcom/android/server/policy/OemPhoneWindowManager;)Lcom/android/server/policy/OemThreePointersGesturesListener;
 
     move-result-object v0
 
@@ -199,7 +199,7 @@
 
     iget-object v0, p0, Lcom/android/server/policy/OemPhoneWindowManager$OemGestureHandler;->this$0:Lcom/android/server/policy/OemPhoneWindowManager;
 
-    invoke-static {v0}, Lcom/android/server/policy/OemPhoneWindowManager;->access$1600(Lcom/android/server/policy/OemPhoneWindowManager;)Z
+    invoke-static {v0}, Lcom/android/server/policy/OemPhoneWindowManager;->access$1800(Lcom/android/server/policy/OemPhoneWindowManager;)Z
 
     move-result v0
 
@@ -211,7 +211,7 @@
 
     iget-object v2, p0, Lcom/android/server/policy/OemPhoneWindowManager$OemGestureHandler;->this$0:Lcom/android/server/policy/OemPhoneWindowManager;
 
-    invoke-static {v2}, Lcom/android/server/policy/OemPhoneWindowManager;->access$1500(Lcom/android/server/policy/OemPhoneWindowManager;)Lcom/android/server/policy/OemThreePointersGesturesListener;
+    invoke-static {v2}, Lcom/android/server/policy/OemPhoneWindowManager;->access$1700(Lcom/android/server/policy/OemPhoneWindowManager;)Lcom/android/server/policy/OemThreePointersGesturesListener;
 
     move-result-object v2
 
@@ -219,14 +219,14 @@
 
     iget-object v0, p0, Lcom/android/server/policy/OemPhoneWindowManager$OemGestureHandler;->this$0:Lcom/android/server/policy/OemPhoneWindowManager;
 
-    invoke-static {v0, v1}, Lcom/android/server/policy/OemPhoneWindowManager;->access$1602(Lcom/android/server/policy/OemPhoneWindowManager;Z)Z
+    invoke-static {v0, v1}, Lcom/android/server/policy/OemPhoneWindowManager;->access$1802(Lcom/android/server/policy/OemPhoneWindowManager;Z)Z
 
     goto :goto_2
 
     :pswitch_7
     iget-object v0, p0, Lcom/android/server/policy/OemPhoneWindowManager$OemGestureHandler;->this$0:Lcom/android/server/policy/OemPhoneWindowManager;
 
-    invoke-static {v0}, Lcom/android/server/policy/OemPhoneWindowManager;->access$1500(Lcom/android/server/policy/OemPhoneWindowManager;)Lcom/android/server/policy/OemThreePointersGesturesListener;
+    invoke-static {v0}, Lcom/android/server/policy/OemPhoneWindowManager;->access$1700(Lcom/android/server/policy/OemPhoneWindowManager;)Lcom/android/server/policy/OemThreePointersGesturesListener;
 
     move-result-object v0
 
@@ -234,7 +234,7 @@
 
     iget-object v0, p0, Lcom/android/server/policy/OemPhoneWindowManager$OemGestureHandler;->this$0:Lcom/android/server/policy/OemPhoneWindowManager;
 
-    invoke-static {v0}, Lcom/android/server/policy/OemPhoneWindowManager;->access$1600(Lcom/android/server/policy/OemPhoneWindowManager;)Z
+    invoke-static {v0}, Lcom/android/server/policy/OemPhoneWindowManager;->access$1800(Lcom/android/server/policy/OemPhoneWindowManager;)Z
 
     move-result v0
 
@@ -246,7 +246,7 @@
 
     iget-object v1, p0, Lcom/android/server/policy/OemPhoneWindowManager$OemGestureHandler;->this$0:Lcom/android/server/policy/OemPhoneWindowManager;
 
-    invoke-static {v1}, Lcom/android/server/policy/OemPhoneWindowManager;->access$1500(Lcom/android/server/policy/OemPhoneWindowManager;)Lcom/android/server/policy/OemThreePointersGesturesListener;
+    invoke-static {v1}, Lcom/android/server/policy/OemPhoneWindowManager;->access$1700(Lcom/android/server/policy/OemPhoneWindowManager;)Lcom/android/server/policy/OemThreePointersGesturesListener;
 
     move-result-object v1
 
@@ -254,12 +254,12 @@
 
     iget-object v0, p0, Lcom/android/server/policy/OemPhoneWindowManager$OemGestureHandler;->this$0:Lcom/android/server/policy/OemPhoneWindowManager;
 
-    invoke-static {v0, v2}, Lcom/android/server/policy/OemPhoneWindowManager;->access$1602(Lcom/android/server/policy/OemPhoneWindowManager;Z)Z
+    invoke-static {v0, v2}, Lcom/android/server/policy/OemPhoneWindowManager;->access$1802(Lcom/android/server/policy/OemPhoneWindowManager;Z)Z
 
     :cond_2
     iget-object v0, p0, Lcom/android/server/policy/OemPhoneWindowManager$OemGestureHandler;->this$0:Lcom/android/server/policy/OemPhoneWindowManager;
 
-    invoke-static {v0}, Lcom/android/server/policy/OemPhoneWindowManager;->access$1500(Lcom/android/server/policy/OemPhoneWindowManager;)Lcom/android/server/policy/OemThreePointersGesturesListener;
+    invoke-static {v0}, Lcom/android/server/policy/OemPhoneWindowManager;->access$1700(Lcom/android/server/policy/OemPhoneWindowManager;)Lcom/android/server/policy/OemThreePointersGesturesListener;
 
     move-result-object v0
 

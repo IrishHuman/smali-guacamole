@@ -656,7 +656,7 @@
 .end method
 
 .method public final vibrateSuccess()V
-    .locals 3
+    .locals 4
 
     iget-object v0, p0, Lcom/android/server/fingerprint/ClientMonitor;->mContext:Landroid/content/Context;
 
@@ -671,6 +671,22 @@
     sget-boolean v1, Lcom/android/server/fingerprint/ClientMonitor;->IS_SUPPORT_VIBRATION_INTENSITY:Z
 
     if-eqz v1, :cond_0
+
+    const/4 v1, 0x1
+
+    new-array v1, v1, [I
+
+    const/4 v2, 0x0
+
+    const/16 v3, 0x8d
+
+    aput v3, v1, v2
+
+    invoke-static {v1}, Landroid/util/OpFeatures;->isSupport([I)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
 
     sget-object v1, Lcom/android/server/fingerprint/ClientMonitor;->FP_SUCCESS_VIBRATE_PATTERN_INTENSITY:[J
 

@@ -21,7 +21,7 @@
 
 .field private static final MESSAGE_ANIMATION_DURATION:J = 0x1f4L
 
-.field private static final SHORT_DURATION_TIMEOUT:J = 0x9c4L
+.field private static final SHORT_DURATION_TIMEOUT:J = 0x5dcL
 
 .field private static final TAG:Ljava/lang/String; = "OemSceneGameModePanel"
 
@@ -1174,7 +1174,7 @@
 
     iget-object v0, p0, Lcom/android/server/OemSceneGameModePanel;->mHideAnimator:Landroid/animation/ValueAnimator;
 
-    const-wide/16 v1, 0xbb8
+    const-wide/16 v1, 0x7d0
 
     invoke-virtual {v0, v1, v2}, Landroid/animation/ValueAnimator;->setStartDelay(J)V
 

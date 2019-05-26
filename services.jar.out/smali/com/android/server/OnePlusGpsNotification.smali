@@ -583,13 +583,13 @@
     :goto_4
     const-string v0, ""
 
-    const v2, 0x50d003e
+    const v2, 0x50d003f
 
     if-eqz v1, :cond_6
 
     iget-object v3, p0, Lcom/android/server/OnePlusGpsNotification;->mContext:Landroid/content/Context;
 
-    const v7, 0x50d003f
+    const v7, 0x50d0040
 
     invoke-virtual {v3, v7}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 

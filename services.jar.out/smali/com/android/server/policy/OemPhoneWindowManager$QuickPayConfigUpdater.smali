@@ -39,7 +39,7 @@
 
     iget-object v0, p0, Lcom/android/server/policy/OemPhoneWindowManager$QuickPayConfigUpdater;->this$0:Lcom/android/server/policy/OemPhoneWindowManager;
 
-    invoke-static {v0, p1}, Lcom/android/server/policy/OemPhoneWindowManager;->access$2200(Lcom/android/server/policy/OemPhoneWindowManager;Lorg/json/JSONArray;)V
+    invoke-static {v0, p1}, Lcom/android/server/policy/OemPhoneWindowManager;->access$2400(Lcom/android/server/policy/OemPhoneWindowManager;Lorg/json/JSONArray;)V
 
     return-void
 .end method

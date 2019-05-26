@@ -626,7 +626,7 @@
 
     move-result-object v0
 
-    const v1, 0x50d000c
+    const v1, 0x50d000d
 
     invoke-virtual {p1, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -710,7 +710,7 @@
 
     move-result-object v0
 
-    const v1, 0x50d000c
+    const v1, 0x50d000d
 
     invoke-virtual {p1, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -1833,6 +1833,31 @@
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
+    const-string/jumbo v1, "guacamoleb"
+
+    invoke-static {}, Landroid/util/OpFeatures;->getProductName()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    const-string v1, "android.substName"
+
+    const v2, 0x50d000c
+
+    invoke-virtual {p1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_0
+
+    :cond_0
     const-string v1, "android.substName"
 
     const v2, 0x50d000b
@@ -1843,6 +1868,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
+    :goto_0
     invoke-virtual {p2, v0}, Landroid/app/Notification$Builder;->addExtras(Landroid/os/Bundle;)Landroid/app/Notification$Builder;
 
     return-void

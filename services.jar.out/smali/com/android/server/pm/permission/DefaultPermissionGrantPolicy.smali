@@ -73,6 +73,16 @@
     .end annotation
 .end field
 
+.field private static final CARRIER_2_VVM_PERMISSIONS:Ljava/util/Set;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Set<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
+
 .field private static final COARSE_LOCATION_PERMISSIONS:Ljava/util/Set;
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -527,6 +537,42 @@
     sget-object v0, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy;->CARRIER_1_RSU_PERMISSIONS:Ljava/util/Set;
 
     const-string v1, "android.permission.READ_PHONE_STATE"
+
+    invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    new-instance v0, Landroid/util/ArraySet;
+
+    invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
+
+    sput-object v0, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy;->CARRIER_2_VVM_PERMISSIONS:Ljava/util/Set;
+
+    sget-object v0, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy;->CARRIER_2_VVM_PERMISSIONS:Ljava/util/Set;
+
+    const-string v1, "android.permission.READ_PHONE_STATE"
+
+    invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    sget-object v0, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy;->CARRIER_2_VVM_PERMISSIONS:Ljava/util/Set;
+
+    const-string v1, "android.permission.CALL_PHONE"
+
+    invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    sget-object v0, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy;->CARRIER_2_VVM_PERMISSIONS:Ljava/util/Set;
+
+    const-string v1, "android.permission.READ_SMS"
+
+    invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    sget-object v0, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy;->CARRIER_2_VVM_PERMISSIONS:Ljava/util/Set;
+
+    const-string v1, "android.permission.SEND_SMS"
+
+    invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    sget-object v0, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy;->CARRIER_2_VVM_PERMISSIONS:Ljava/util/Set;
+
+    const-string v1, "android.permission.RECEIVE_SMS"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
@@ -5440,6 +5486,203 @@
     goto :goto_0
 
     :cond_2
+    return-void
+.end method
+
+.method public grantDefaultPermissionsToUssVVM(I)V
+    .locals 13
+
+    const-string v0, "com.sprint.vvm"
+
+    const-string v1, "F8:60:14:53:9F:48:97:A8:1F:26:4F:41:1C:EA:45:EE:ED:D9:85:94"
+
+    const-string v2, ""
+
+    const/4 v3, 0x0
+
+    :try_start_0
+    iget-object v4, p0, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v4}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object v4
+
+    const/16 v5, 0x40
+
+    invoke-virtual {v4, v0, v5}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
+
+    move-result-object v4
+
+    if-eqz v4, :cond_2
+
+    iget-object v5, v4, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
+
+    if-eqz v5, :cond_2
+
+    iget-object v5, v4, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
+
+    array-length v5, v5
+
+    if-lez v5, :cond_2
+
+    iget-object v5, v4, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
+
+    aget-object v5, v5, v3
+
+    invoke-virtual {v5}, Landroid/content/pm/Signature;->toByteArray()[B
+
+    move-result-object v5
+
+    const-string v6, "SHA1"
+
+    invoke-static {v6}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
+
+    move-result-object v6
+
+    invoke-virtual {v6, v5}, Ljava/security/MessageDigest;->digest([B)[B
+
+    move-result-object v7
+
+    new-instance v8, Ljava/lang/StringBuffer;
+
+    invoke-direct {v8}, Ljava/lang/StringBuffer;-><init>()V
+
+    move v9, v3
+
+    :goto_0
+    array-length v10, v7
+
+    const/4 v11, 0x1
+
+    if-ge v9, v10, :cond_1
+
+    const/16 v10, 0xff
+
+    aget-byte v12, v7, v9
+
+    and-int/2addr v10, v12
+
+    invoke-static {v10}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
+
+    move-result-object v10
+
+    invoke-virtual {v10}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
+
+    move-result-object v10
+
+    invoke-virtual {v10}, Ljava/lang/String;->length()I
+
+    move-result v12
+
+    if-ne v12, v11, :cond_0
+
+    const-string v11, "0"
+
+    invoke-virtual {v8, v11}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    :cond_0
+    invoke-virtual {v8, v10}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    const-string v11, ":"
+
+    invoke-virtual {v8, v11}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    add-int/lit8 v9, v9, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {v8}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
+
+    move-result-object v9
+
+    invoke-virtual {v9}, Ljava/lang/String;->length()I
+
+    move-result v10
+
+    sub-int/2addr v10, v11
+
+    invoke-virtual {v9, v3, v10}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object v10
+    :try_end_0
+    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/security/NoSuchAlgorithmException; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-object v2, v10
+
+    :cond_2
+    :goto_1
+    goto :goto_2
+
+    :catch_0
+    move-exception v4
+
+    invoke-virtual {v4}, Ljava/security/NoSuchAlgorithmException;->printStackTrace()V
+
+    goto :goto_2
+
+    :catch_1
+    move-exception v4
+
+    const-string v5, "DefaultPermGrantPolicy"
+
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v7, "grantDefaultPermissionsToUssVVM, not found package: "
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-static {v5, v6}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-virtual {v4}, Landroid/content/pm/PackageManager$NameNotFoundException;->printStackTrace()V
+
+    goto :goto_1
+
+    :goto_2
+    const-string v4, "DefaultPermGrantPolicy"
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v6, "grantDefaultPermissionsToUssVVM, realVVMSHA1 = "
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v4, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-direct {p0, v0}, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy;->getPackage(Ljava/lang/String;)Landroid/content/pm/PackageParser$Package;
+
+    move-result-object v4
+
+    if-eqz v4, :cond_3
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_3
+
+    sget-object v5, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy;->CARRIER_2_VVM_PERMISSIONS:Ljava/util/Set;
+
+    invoke-direct {p0, v4, v5, v3, p1}, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy;->grantRuntimePermissions(Landroid/content/pm/PackageParser$Package;Ljava/util/Set;ZI)V
+
+    :cond_3
     return-void
 .end method
 

@@ -2700,7 +2700,7 @@
 
     iget-object v5, p0, Lcom/android/server/OemSceneModeController;->mContext:Landroid/content/Context;
 
-    const v6, 0x50d0054
+    const v6, 0x50d0055
 
     invoke-virtual {v5, v6}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -2776,7 +2776,7 @@
 
     iget-object v8, p0, Lcom/android/server/OemSceneModeController;->mContext:Landroid/content/Context;
 
-    const v9, 0x50d0033
+    const v9, 0x50d0034
 
     invoke-virtual {v8, v9}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -2787,7 +2787,7 @@
     :cond_0
     iget-object v8, p0, Lcom/android/server/OemSceneModeController;->mContext:Landroid/content/Context;
 
-    const v9, 0x50d0037
+    const v9, 0x50d0038
 
     invoke-virtual {v8, v9}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -2806,7 +2806,7 @@
 
     iget-object v10, p0, Lcom/android/server/OemSceneModeController;->mContext:Landroid/content/Context;
 
-    const v11, 0x50d003a
+    const v11, 0x50d003b
 
     invoke-virtual {v10, v11}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -2844,7 +2844,7 @@
 
     iget-object v6, p0, Lcom/android/server/OemSceneModeController;->mContext:Landroid/content/Context;
 
-    const v10, 0x50d004f
+    const v10, 0x50d0050
 
     invoke-virtual {v6, v10}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -2896,7 +2896,7 @@
 
     move-result-object v6
 
-    const v9, 0x50d003b
+    const v9, 0x50d003c
 
     if-eqz v2, :cond_3
 

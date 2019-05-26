@@ -45,13 +45,13 @@
 
     iget-object v2, p0, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl$1;->this$0:Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl;
 
-    const v3, 0x50d0075
+    const v3, 0x50d0076
 
-    const v4, 0x50d0074
+    const v4, 0x50d0075
 
-    const v5, 0x50d0073
+    const v5, 0x50d0074
 
-    const v6, 0x50d006e
+    const v6, 0x50d006f
 
     new-instance v7, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl$1$1;
 
@@ -70,13 +70,13 @@
 
     iget-object v2, p0, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl$1;->this$0:Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl;
 
-    const v3, 0x50d0071
+    const v3, 0x50d0072
 
-    const v4, 0x50d006f
+    const v4, 0x50d0070
 
-    const v5, 0x50d0070
+    const v5, 0x50d0071
 
-    const v6, 0x50d006e
+    const v6, 0x50d006f
 
     new-instance v7, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl$1$2;
 

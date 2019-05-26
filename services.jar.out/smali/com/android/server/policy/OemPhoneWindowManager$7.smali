@@ -39,7 +39,7 @@
 
     iget-object v0, p0, Lcom/android/server/policy/OemPhoneWindowManager$7;->this$0:Lcom/android/server/policy/OemPhoneWindowManager;
 
-    invoke-static {v0}, Lcom/android/server/policy/OemPhoneWindowManager;->access$2300(Lcom/android/server/policy/OemPhoneWindowManager;)Z
+    invoke-static {v0}, Lcom/android/server/policy/OemPhoneWindowManager;->access$2500(Lcom/android/server/policy/OemPhoneWindowManager;)Z
 
     move-result v0
 
@@ -57,7 +57,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcom/android/server/policy/OemPhoneWindowManager;->access$2302(Lcom/android/server/policy/OemPhoneWindowManager;Z)Z
+    invoke-static {v0, v1}, Lcom/android/server/policy/OemPhoneWindowManager;->access$2502(Lcom/android/server/policy/OemPhoneWindowManager;Z)Z
 
     iget-object v0, p0, Lcom/android/server/policy/OemPhoneWindowManager$7;->this$0:Lcom/android/server/policy/OemPhoneWindowManager;
 
@@ -65,7 +65,7 @@
 
     const/4 v2, 0x0
 
-    invoke-static {v0, v1, v2}, Lcom/android/server/policy/OemPhoneWindowManager;->access$2400(Lcom/android/server/policy/OemPhoneWindowManager;ILandroid/view/KeyEvent;)V
+    invoke-static {v0, v1, v2}, Lcom/android/server/policy/OemPhoneWindowManager;->access$2600(Lcom/android/server/policy/OemPhoneWindowManager;ILandroid/view/KeyEvent;)V
 
     :cond_0
     return-void

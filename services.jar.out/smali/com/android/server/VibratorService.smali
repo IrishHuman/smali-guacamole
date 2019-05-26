@@ -1822,7 +1822,9 @@
 
     move-result v0
 
-    xor-int/lit8 v0, v0, 0x1
+    const/4 v2, 0x1
+
+    xor-int/2addr v0, v2
 
     monitor-exit v1
     :try_end_1
@@ -1830,58 +1832,108 @@
 
     const-wide/16 v14, 0x0
 
-    if-nez v0, :cond_1
+    if-nez v0, :cond_3
 
     :try_start_2
     const-string/jumbo v1, "guacamoleb"
 
     invoke-static {}, Landroid/util/OpFeatures;->getProductName()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v13}, Landroid/os/VibrationEffect$Prebaked;->getId()I
+    invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
-    int-to-long v1, v1
+    if-eqz v1, :cond_2
 
-    iget v3, v9, Lcom/android/server/VibratorService;->mVibrateOnTouchIntensity:I
+    iget v1, v9, Lcom/android/server/VibratorService;->mVibrateOnTouchIntensity:I
 
-    int-to-long v3, v3
+    new-array v2, v2, [I
 
-    invoke-static {v1, v2, v3, v4}, Lcom/android/server/VibratorService;->vibratorPerformEffect(JJ)J
+    const/4 v3, 0x0
 
-    move-result-wide v1
+    const/16 v4, 0x8d
 
-    const-string v3, "VibratorService"
+    aput v4, v2, v3
 
-    new-instance v4, Ljava/lang/StringBuilder;
+    invoke-static {v2}, Landroid/util/OpFeatures;->isSupport([I)Z
 
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+    move-result v2
 
-    const-string/jumbo v5, "guacamoleb mVibrateOnTouchIntensity:"
+    if-eqz v2, :cond_0
 
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/16 v2, 0xb
 
-    iget v5, v9, Lcom/android/server/VibratorService;->mVibrateOnTouchIntensity:I
+    iget v3, v10, Lcom/android/server/VibratorService$Vibration;->usageHint:I
 
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    if-ne v2, v3, :cond_0
 
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const/16 v2, 0x71
 
-    move-result-object v4
+    invoke-static {v2}, Lcom/android/server/VibratorService;->vibratorSetAmplitude(I)V
 
-    invoke-static {v3, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-virtual {v13}, Landroid/os/VibrationEffect$Prebaked;->getEffectStrength()I
 
-    goto :goto_0
+    move-result v2
+
+    move v1, v2
 
     :cond_0
+    invoke-virtual {v13}, Landroid/os/VibrationEffect$Prebaked;->getId()I
+
+    move-result v2
+
+    int-to-long v2, v2
+
+    int-to-long v4, v1
+
+    invoke-static {v2, v3, v4, v5}, Lcom/android/server/VibratorService;->vibratorPerformEffect(JJ)J
+
+    move-result-wide v2
+
+    sget-boolean v4, Lcom/android/server/VibratorService;->DEBUG_ONEPLUS:Z
+
+    if-eqz v4, :cond_1
+
+    const-string v4, "VibratorService"
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v6, "guacamoleb: mVibrateOnTouchIntensity = "
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v6, v9, Lcom/android/server/VibratorService;->mVibrateOnTouchIntensity:I
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v6, ", vibStrength = "
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v6, ", mVibrateOnTouchIntensity = "
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v6, v9, Lcom/android/server/VibratorService;->mVibrateOnTouchIntensity:I
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v4, v5}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_1
+    goto :goto_0
+
+    :cond_2
     invoke-virtual {v13}, Landroid/os/VibrationEffect$Prebaked;->getId()I
 
     move-result v1
@@ -1896,12 +1948,14 @@
 
     invoke-static {v1, v2, v3, v4}, Lcom/android/server/VibratorService;->vibratorPerformEffect(JJ)J
 
-    move-result-wide v1
+    move-result-wide v2
 
     :goto_0
+    move-wide v1, v2
+
     cmp-long v3, v1, v14
 
-    if-lez v3, :cond_1
+    if-lez v3, :cond_3
 
     iget v3, v10, Lcom/android/server/VibratorService$Vibration;->uid:I
 
@@ -1915,7 +1969,7 @@
 
     return-wide v1
 
-    :cond_1
+    :cond_3
     :try_start_3
     invoke-virtual {v13}, Landroid/os/VibrationEffect$Prebaked;->shouldFallback()Z
 
@@ -1923,7 +1977,7 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    if-nez v1, :cond_2
+    if-nez v1, :cond_4
 
     nop
 
@@ -1931,7 +1985,7 @@
 
     return-wide v14
 
-    :cond_2
+    :cond_4
     :try_start_4
     invoke-virtual {v13}, Landroid/os/VibrationEffect$Prebaked;->getId()I
 
@@ -1943,7 +1997,7 @@
 
     move-object/from16 v16, v1
 
-    if-nez v16, :cond_3
+    if-nez v16, :cond_5
 
     const-string v1, "VibratorService"
 
@@ -1959,7 +2013,7 @@
 
     return-wide v14
 
-    :cond_3
+    :cond_5
     :try_start_5
     new-instance v17, Lcom/android/server/VibratorService$Vibration;
 

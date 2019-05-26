@@ -230,6 +230,10 @@
 
     invoke-virtual {v2, v3}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
+    const-string v3, "android.media.action.HDMI_AUDIO_PLUG"
+
+    invoke-virtual {v2, v3}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+
     const-string v3, "android.intent.action.HEADSET_PLUG"
 
     invoke-virtual {v2, v3}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
@@ -772,7 +776,11 @@
 
     invoke-direct {p0}, Lserver/oneplus/scene/OemSceneXLinearVibrationMotorController;->updateVolume()V
 
-    sget-object v5, Lcom/android/server/oneplus/gamevibrate/OPGameVibrateManager;->supportedGame:[Ljava/lang/String;
+    iget-object v5, p0, Lserver/oneplus/scene/OemSceneXLinearVibrationMotorController;->mGameVibrateManager:Lcom/android/server/oneplus/gamevibrate/OPGameVibrateManager;
+
+    invoke-virtual {v5}, Lcom/android/server/oneplus/gamevibrate/OPGameVibrateManager;->getSupportedGame()[Ljava/lang/String;
+
+    move-result-object v5
 
     invoke-static {v5}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 

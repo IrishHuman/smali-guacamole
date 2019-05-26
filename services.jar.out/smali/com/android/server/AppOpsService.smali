@@ -4665,7 +4665,7 @@
 
     if-eqz v0, :cond_16
 
-    const-string/jumbo v0, "op_display_size_compat_fhd_config"
+    const-string/jumbo v0, "op_display_size_compat_fhd_config_mp1"
 
     const-string/jumbo v1, "name"
 

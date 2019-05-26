@@ -25546,7 +25546,7 @@
     :cond_1
     sget-object v0, Lcom/android/server/am/OnePlusHighPowerDetector;->mContext:Landroid/content/Context;
 
-    const v10, 0x50d009c    # 6.6299E-36f
+    const v10, 0x50d009d
 
     invoke-virtual {v0, v10}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
@@ -25558,7 +25558,7 @@
 
     sget-object v0, Lcom/android/server/am/OnePlusHighPowerDetector;->mContext:Landroid/content/Context;
 
-    const v11, 0x50d009b
+    const v11, 0x50d009c    # 6.6299E-36f
 
     invoke-virtual {v0, v11}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
@@ -25578,7 +25578,7 @@
 
     invoke-direct {v12}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v13, "Notification # content:84738203 "
+    const-string v13, "Notification # content:84738204 "
 
     invoke-virtual {v12, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -25918,7 +25918,7 @@
 
     move-object/from16 v24, v3
 
-    const v3, 0x50d0085
+    const v3, 0x50d0086
 
     invoke-virtual {v8, v3}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
@@ -25938,7 +25938,7 @@
 
     move-object/from16 v25, v4
 
-    const v4, 0x50d0088
+    const v4, 0x50d0089
 
     invoke-virtual {v8, v4}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 

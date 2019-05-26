@@ -2650,7 +2650,7 @@
     monitor-enter v0
 
     :try_start_0
-    const-string v1, "getFCAlgorithms()"
+    const-string/jumbo v1, "getFCAlgorithms()"
 
     invoke-direct {p0, v1, p1}, Lcom/android/server/autofill/AutofillManagerServiceImpl;->isCalledByServiceLocked(Ljava/lang/String;I)Z
 

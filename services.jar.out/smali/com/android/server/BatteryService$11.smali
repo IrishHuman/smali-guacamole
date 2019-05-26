@@ -35,7 +35,7 @@
 
 # virtual methods
 .method public run()V
-    .locals 3
+    .locals 4
 
     iget-object v0, p0, Lcom/android/server/BatteryService$11;->this$0:Lcom/android/server/BatteryService;
 
@@ -63,11 +63,54 @@
 
     move-result v1
 
-    if-nez v1, :cond_0
+    if-nez v1, :cond_1
 
-    const/4 v1, 0x4
+    const/4 v1, 0x1
 
-    new-array v1, v1, [J
+    new-array v1, v1, [I
+
+    const/16 v2, 0x8d
+
+    const/4 v3, 0x0
+
+    aput v2, v1, v3
+
+    invoke-static {v1}, Landroid/util/OpFeatures;->isSupport([I)Z
+
+    move-result v1
+
+    const/4 v2, 0x4
+
+    if-eqz v1, :cond_0
+
+    new-instance v1, Landroid/media/AudioAttributes$Builder;
+
+    invoke-direct {v1}, Landroid/media/AudioAttributes$Builder;-><init>()V
+
+    invoke-virtual {v1, v2}, Landroid/media/AudioAttributes$Builder;->setContentType(I)Landroid/media/AudioAttributes$Builder;
+
+    move-result-object v1
+
+    const/16 v2, 0xb
+
+    invoke-virtual {v1, v2}, Landroid/media/AudioAttributes$Builder;->setUsage(I)Landroid/media/AudioAttributes$Builder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/media/AudioAttributes$Builder;->build()Landroid/media/AudioAttributes;
+
+    move-result-object v1
+
+    invoke-static {v3}, Landroid/os/VibrationEffect;->get(I)Landroid/os/VibrationEffect;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2, v1}, Landroid/os/Vibrator;->vibrate(Landroid/os/VibrationEffect;Landroid/media/AudioAttributes;)V
+
+    goto :goto_0
+
+    :cond_0
+    new-array v1, v2, [J
 
     fill-array-data v1, :array_0
 
@@ -75,10 +118,9 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Vibrator;->vibrate([JI)V
 
-    :cond_0
+    :cond_1
+    :goto_0
     return-void
-
-    nop
 
     nop
 

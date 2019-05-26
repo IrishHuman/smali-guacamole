@@ -33,8 +33,6 @@
 
 .field private static sGameStartFlag:Z
 
-.field public static final supportedGame:[Ljava/lang/String;
-
 
 # instance fields
 .field private count:I
@@ -70,14 +68,6 @@
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
-
-    const-string v0, "com.tencent.ig"
-
-    filled-new-array {v0}, [Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lcom/android/server/oneplus/gamevibrate/OPGameVibrateManager;->supportedGame:[Ljava/lang/String;
 
     const/4 v0, 0x0
 
@@ -539,6 +529,77 @@
     sget-boolean v0, Lcom/android/server/oneplus/gamevibrate/OPGameVibrateManager;->sGameStartFlag:Z
 
     return v0
+.end method
+
+.method public getSupportedGame()[Ljava/lang/String;
+    .locals 8
+
+    const/4 v0, 0x0
+
+    iget-object v1, p0, Lcom/android/server/oneplus/gamevibrate/OPGameVibrateManager;->mContext:Landroid/content/Context;
+
+    invoke-static {v1}, Lserver/oneplus/scene/OemSceneXLinearVibrationMotorController;->getInstance(Landroid/content/Context;)Lserver/oneplus/scene/OemSceneXLinearVibrationMotorController;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lserver/oneplus/scene/OemSceneXLinearVibrationMotorController;->getSupportList()Ljava/util/HashMap;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/util/HashMap;->size()I
+
+    move-result v2
+
+    new-array v2, v2, [Ljava/lang/String;
+
+    invoke-virtual {v1}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
+
+    move-result-object v3
+
+    invoke-interface {v3}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v3
+
+    :goto_0
+    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_1
+
+    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Ljava/lang/String;
+
+    invoke-virtual {v1, v4}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Lserver/oneplus/scene/OemSceneXLinearVibrationMotorController$AwinicConfig;
+
+    invoke-virtual {v5}, Lserver/oneplus/scene/OemSceneXLinearVibrationMotorController$AwinicConfig;->getFlag()I
+
+    move-result v6
+
+    const/4 v7, 0x1
+
+    if-ne v6, v7, :cond_0
+
+    invoke-virtual {v5}, Lserver/oneplus/scene/OemSceneXLinearVibrationMotorController$AwinicConfig;->getPkgName()Ljava/lang/String;
+
+    move-result-object v6
+
+    aput-object v6, v2, v0
+
+    add-int/lit8 v0, v0, 0x1
+
+    :cond_0
+    goto :goto_0
+
+    :cond_1
+    return-object v2
 .end method
 
 .method public getZoneInfo()[I

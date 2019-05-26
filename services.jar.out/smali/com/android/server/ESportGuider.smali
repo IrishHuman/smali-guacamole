@@ -619,11 +619,11 @@
 
     invoke-virtual {v3, v9}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    const v9, 0x50d004c
+    const v9, 0x50d004d
 
     invoke-virtual {v7, v9}, Landroid/widget/TextView;->setText(I)V
 
-    const v9, 0x50d004d
+    const v9, 0x50d004e
 
     invoke-virtual {v8, v9}, Landroid/widget/TextView;->setText(I)V
 
@@ -643,14 +643,14 @@
 
     if-eqz v9, :cond_0
 
-    const v9, 0x50d004e
+    const v9, 0x50d004f
 
     invoke-virtual {v6, v9}, Landroid/widget/TextView;->setText(I)V
 
     goto :goto_0
 
     :cond_0
-    const v9, 0x50d0048
+    const v9, 0x50d0049
 
     invoke-virtual {v6, v9}, Landroid/widget/TextView;->setText(I)V
 

@@ -126,7 +126,7 @@
 
     iget-object v0, v8, Lcom/android/server/policy/OemPhoneWindowManager$10;->this$0:Lcom/android/server/policy/OemPhoneWindowManager;
 
-    invoke-static {v0}, Lcom/android/server/policy/OemPhoneWindowManager;->access$2900(Lcom/android/server/policy/OemPhoneWindowManager;)Landroid/view/WindowManager;
+    invoke-static {v0}, Lcom/android/server/policy/OemPhoneWindowManager;->access$3100(Lcom/android/server/policy/OemPhoneWindowManager;)Landroid/view/WindowManager;
 
     move-result-object v0
 
@@ -323,13 +323,13 @@
 
     move-object v6, v1
 
-    const v0, 0x50d0099
+    const v0, 0x50d009a
 
     invoke-virtual {v6, v0}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
 
     iget-object v0, v8, Lcom/android/server/policy/OemPhoneWindowManager$10;->this$0:Lcom/android/server/policy/OemPhoneWindowManager;
 
-    invoke-static {v0}, Lcom/android/server/policy/OemPhoneWindowManager;->access$2800(Lcom/android/server/policy/OemPhoneWindowManager;)Ljava/util/ArrayList;
+    invoke-static {v0}, Lcom/android/server/policy/OemPhoneWindowManager;->access$3000(Lcom/android/server/policy/OemPhoneWindowManager;)Ljava/util/ArrayList;
 
     move-result-object v5
 

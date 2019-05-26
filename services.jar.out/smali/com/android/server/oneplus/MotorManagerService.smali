@@ -4020,7 +4020,7 @@
 
     iget-object v1, p0, Lcom/android/server/oneplus/MotorManagerService;->mContext:Landroid/content/Context;
 
-    const v2, 0x50d0083
+    const v2, 0x50d0084
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -4034,7 +4034,7 @@
 
     iget-object v2, p0, Lcom/android/server/oneplus/MotorManagerService;->mContext:Landroid/content/Context;
 
-    const v3, 0x50d006a
+    const v3, 0x50d006b
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -4052,7 +4052,7 @@
 
     iget-object v2, p0, Lcom/android/server/oneplus/MotorManagerService;->mContext:Landroid/content/Context;
 
-    const v3, 0x50d000d
+    const v3, 0x50d000e
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -4765,7 +4765,7 @@
 
     iget-object v3, p0, Lcom/android/server/oneplus/MotorManagerService;->mContext:Landroid/content/Context;
 
-    const v4, 0x50d0052
+    const v4, 0x50d0053
 
     new-array v5, v1, [Ljava/lang/Object;
 
@@ -4802,7 +4802,7 @@
 
     iget-object v3, p0, Lcom/android/server/oneplus/MotorManagerService;->mContext:Landroid/content/Context;
 
-    const v4, 0x50d0055
+    const v4, 0x50d0056
 
     invoke-virtual {v3, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -4820,7 +4820,7 @@
 
     iget-object v3, p0, Lcom/android/server/oneplus/MotorManagerService;->mContext:Landroid/content/Context;
 
-    const v4, 0x50d0025
+    const v4, 0x50d0026
 
     invoke-virtual {v3, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -4865,7 +4865,7 @@
 
     iget-object v1, p0, Lcom/android/server/oneplus/MotorManagerService;->mContext:Landroid/content/Context;
 
-    const v2, 0x50d0034
+    const v2, 0x50d0035
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -4879,7 +4879,7 @@
 
     iget-object v2, p0, Lcom/android/server/oneplus/MotorManagerService;->mContext:Landroid/content/Context;
 
-    const v3, 0x50d0086
+    const v3, 0x50d0087
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -4934,7 +4934,7 @@
 
     iget-object v2, p0, Lcom/android/server/oneplus/MotorManagerService;->mContext:Landroid/content/Context;
 
-    const v3, 0x50d0086
+    const v3, 0x50d0087
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -4989,7 +4989,7 @@
 
     iget-object v2, p0, Lcom/android/server/oneplus/MotorManagerService;->mContext:Landroid/content/Context;
 
-    const v3, 0x50d0069
+    const v3, 0x50d006a
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -5007,7 +5007,7 @@
 
     iget-object v2, p0, Lcom/android/server/oneplus/MotorManagerService;->mContext:Landroid/content/Context;
 
-    const v3, 0x50d000d
+    const v3, 0x50d000e
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -5062,7 +5062,7 @@
 
     iget-object v2, p0, Lcom/android/server/oneplus/MotorManagerService;->mContext:Landroid/content/Context;
 
-    const v3, 0x50d0086
+    const v3, 0x50d0087
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -5103,7 +5103,7 @@
 
     iget-object v1, p0, Lcom/android/server/oneplus/MotorManagerService;->mContext:Landroid/content/Context;
 
-    const v2, 0x50d0082
+    const v2, 0x50d0083
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -5115,7 +5115,7 @@
 
     iget-object v1, p0, Lcom/android/server/oneplus/MotorManagerService;->mContext:Landroid/content/Context;
 
-    const v2, 0x50d0086
+    const v2, 0x50d0087
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
