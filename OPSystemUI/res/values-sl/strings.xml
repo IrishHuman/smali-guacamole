@@ -1025,7 +1025,7 @@ Povezani ste tudi z omrežjem VPN, ki lahko nadzira vašo omrežno dejavnost."</
     <string name="op_earphone_connected_success">Seznanjeno. Tapnite za več nastavitev.</string>
     <string name="op_earphone_device">TAPNITE ZA SEZNANJANJE</string>
     <string name="op_earphone_title">Brezžične slušalke OnePlus Bullets</string>
-    <string name="op_emergency_indicator_hint_text">Povlecite navzdol</string>
+    <string name="op_emergency_indicator_hint_text">Za službe za nujne primere podrsajte navzdol</string>
     <string name="op_quick_settings_night_display_label">Nočni način</string>
     <string name="op_quick_settings_night_display_summary_off">Izključen nočni način, tapnite za vklop</string>
     <string name="op_quick_settings_night_display_summary_on">Vključen nočni način, tapnite za izklop</string>
@@ -1048,11 +1048,11 @@ Povezani ste tudi z omrežjem VPN, ki lahko nadzira vašo omrežno dejavnost."</
     <string name="overheat_dialog_purple_button">Izklopi zdaj</string>
     <string name="overheat_dialog_purple_message">Telefon se bo po 5 sekundah izklopil</string>
     <string name="overheat_dialog_red_message">Za znižanje temperature bodo počiščeni vsi procesi aplikacij</string>
-    <string name="overheat_dialog_title">Temperatura telefona je visoka</string>
-    <string name="overheat_notification_alert">Temperatura telefona je previsoka, funkcija z visoko porabo energije pa je izključena</string>
+    <string name="overheat_dialog_title">Temperatura telefona je previsoka</string>
+    <string name="overheat_notification_alert">Temperatura telefona je previsoka. Funkcije, ki porabljajo veliko energije, so izklopljene, da se temperatura zniža</string>
     <string name="overheat_notification_resume">Temperatura telefona je obnovljena in telefon lahko normalno uporabljate</string>
     <string name="overheat_notification_title_resume">Temperatura telefona je bila obnovljena</string>
-    <string name="overheat_toast_content">Temperatura telefon je previsoka, uporaba te funkcije ni priporočljiva</string>
+    <string name="overheat_toast_content">Vaš telefon je v stanju visoke temperature, uporaba te funkcije ni priporočljiva</string>
     <string name="overlay_display_devices_title">Simul. sekund. prikazov.</string>
     <string name="overview">Pregled</string>
     <string name="phone_hint">Povlecite z ikone za telefon</string>

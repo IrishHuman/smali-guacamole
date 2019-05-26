@@ -170,13 +170,13 @@
 
     cmp-long v5, v10, v12
 
-    const v10, 0x7f1104e9
+    const v10, 0x7f1104ef
 
-    const v11, 0x7f1104eb
+    const v11, 0x7f1104f1
 
     if-gtz v5, :cond_1
 
-    const v5, 0x7f1104ee
+    const v5, 0x7f1104f4
 
     iget-wide v12, v1, Lcom/android/settingslib/net/DataUsageController$DataUsageInfo;->limitLevel:J
 
@@ -215,7 +215,7 @@
     goto :goto_1
 
     :cond_1
-    const v5, 0x7f1104ed
+    const v5, 0x7f1104f3
 
     iget-wide v6, v1, Lcom/android/settingslib/net/DataUsageController$DataUsageInfo;->usageLevel:J
 
@@ -263,11 +263,11 @@
 
     :cond_2
     :goto_0
-    const v5, 0x7f1104ea
+    const v5, 0x7f1104f0
 
     iget-wide v12, v1, Lcom/android/settingslib/net/DataUsageController$DataUsageInfo;->usageLevel:J
 
-    const v6, 0x7f1104ec
+    const v6, 0x7f1104f2
 
     new-array v7, v8, [Ljava/lang/Object;
 

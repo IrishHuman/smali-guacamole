@@ -159,7 +159,7 @@
 
     invoke-direct {v4, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const v5, 0x7f1105d3
+    const v5, 0x7f1105d9
 
     const/4 v6, 0x2
 
@@ -185,13 +185,13 @@
 
     move-result-object v4
 
-    const v5, 0x7f1105d0
+    const v5, 0x7f1105d6
 
     invoke-virtual {v4, v5, p0}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     move-result-object v4
 
-    const v5, 0x7f1105ce
+    const v5, 0x7f1105d4
 
     invoke-virtual {v4, v5, p0}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -231,7 +231,7 @@
 
     check-cast v5, Landroid/widget/TextView;
 
-    const v6, 0x7f1105d1
+    const v6, 0x7f1105d7
 
     new-array v8, v7, [Ljava/lang/Object;
 
@@ -259,7 +259,7 @@
 
     check-cast v6, Landroid/widget/TextView;
 
-    const v8, 0x7f1105d2
+    const v8, 0x7f1105d8
 
     new-array v9, v7, [Ljava/lang/Object;
 
@@ -291,7 +291,7 @@
 
     iget-object v8, p0, Lcom/android/systemui/SlicePermissionActivity;->mAllCheckbox:Landroid/widget/CheckBox;
 
-    const v9, 0x7f1105cf
+    const v9, 0x7f1105d5
 
     new-array v7, v7, [Ljava/lang/Object;
 

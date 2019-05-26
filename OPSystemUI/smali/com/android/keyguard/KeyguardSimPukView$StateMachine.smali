@@ -88,12 +88,12 @@
 
     iput v2, p0, Lcom/android/keyguard/KeyguardSimPukView$StateMachine;->state:I
 
-    const v0, 0x7f110362
+    const v0, 0x7f110368
 
     goto :goto_0
 
     :cond_0
-    const v0, 0x7f11034d
+    const v0, 0x7f110353
 
     goto :goto_0
 
@@ -114,12 +114,12 @@
 
     iput v3, p0, Lcom/android/keyguard/KeyguardSimPukView$StateMachine;->state:I
 
-    const v0, 0x7f11033c
+    const v0, 0x7f110342
 
     goto :goto_0
 
     :cond_2
-    const v0, 0x7f11034c
+    const v0, 0x7f110352
 
     goto :goto_0
 
@@ -140,7 +140,7 @@
 
     iput v1, p0, Lcom/android/keyguard/KeyguardSimPukView$StateMachine;->state:I
 
-    const v0, 0x7f110337
+    const v0, 0x7f11033d
 
     iget-object v1, p0, Lcom/android/keyguard/KeyguardSimPukView$StateMachine;->this$0:Lcom/android/keyguard/KeyguardSimPukView;
 
@@ -151,7 +151,7 @@
     :cond_4
     iput v2, p0, Lcom/android/keyguard/KeyguardSimPukView$StateMachine;->state:I
 
-    const v0, 0x7f11034a
+    const v0, 0x7f110350
 
     :cond_5
     :goto_0
@@ -278,7 +278,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f11036b
+    const v4, 0x7f110371
 
     const/4 v5, 0x1
 
@@ -340,7 +340,7 @@
 
     if-ge v4, v8, :cond_0
 
-    const v8, 0x7f110363
+    const v8, 0x7f110369
 
     invoke-virtual {v6, v8}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -373,7 +373,7 @@
     const-string v9, ""
 
     :goto_0
-    const v10, 0x7f110364
+    const v10, 0x7f11036a
 
     new-array v11, v5, [Ljava/lang/Object;
 

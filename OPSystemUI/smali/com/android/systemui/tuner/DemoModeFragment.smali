@@ -471,7 +471,7 @@
 
     iget-object v1, p0, Lcom/android/systemui/tuner/DemoModeFragment;->mOnSwitch:Landroid/support/v14/preference/SwitchPreference;
 
-    const v2, 0x7f1105bf
+    const v2, 0x7f1105c5
 
     invoke-virtual {v1, v2}, Landroid/support/v14/preference/SwitchPreference;->setTitle(I)V
 

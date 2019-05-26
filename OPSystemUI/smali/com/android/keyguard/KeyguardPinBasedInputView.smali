@@ -176,19 +176,19 @@
 .method protected getPromptReasonStringRes(I)I
     .locals 1
 
-    const v0, 0x7f110360
+    const v0, 0x7f110366
 
     packed-switch p1, :pswitch_data_0
 
     return v0
 
     :pswitch_0
-    const v0, 0x7f110361
+    const v0, 0x7f110367
 
     return v0
 
     :pswitch_1
-    const v0, 0x7f110357
+    const v0, 0x7f11035d
 
     return v0
 
@@ -196,7 +196,7 @@
     return v0
 
     :pswitch_3
-    const v0, 0x7f11035a
+    const v0, 0x7f110360
 
     return v0
 

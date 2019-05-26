@@ -1027,7 +1027,7 @@
     <string name="op_earphone_connected_success">Пристрої об’єднано в пару. Торкніться, щоб переглянути додаткові налаштування.</string>
     <string name="op_earphone_device">ТОРКНІТЬСЯ, ЩОБ ОБ’ЄДНАТИ В ПАРУ</string>
     <string name="op_earphone_title">OnePlus Bullets Wireless</string>
-    <string name="op_emergency_indicator_hint_text">Змахування вниз</string>
+    <string name="op_emergency_indicator_hint_text">Проведіть пальцем униз, щоб перейти до екстрених служб</string>
     <string name="op_quick_settings_night_display_label">Нічний режим</string>
     <string name="op_quick_settings_night_display_summary_off">Нічний режим вимкнено. Торкніться, щоб увімкнути</string>
     <string name="op_quick_settings_night_display_summary_on">Нічний режим увімкнено. Торкніться, щоб вимкнути</string>
@@ -1043,18 +1043,18 @@
     <string name="output_service_wifi">Wi-Fi</string>
     <string name="output_title">Вивід медіа-вмісту</string>
     <string name="overheat_dialog_orange_button">Виконати зараз</string>
-    <string name="overheat_dialog_orange_message">"Щоб знизити температуру, буде виконано такі дії:
-1.Зменшення яскравості
-2.Вимкнення точки доступу
-3.Вимкнення ліхтарика"</string>
+    <string name="overheat_dialog_orange_message">"Щоб знизити температуру, буде виконано перелічені нижче дії.
+1. Зменшення яскравості
+2. Вимкнення точки доступу
+3. Вимкнення ліхтарика"</string>
     <string name="overheat_dialog_purple_button">Вимкнути живлення зараз</string>
     <string name="overheat_dialog_purple_message">Живлення телефону буде вимкнено через 5 секунд</string>
     <string name="overheat_dialog_red_message">Щоб знизити температуру, усі процеси додатків буде закрито</string>
-    <string name="overheat_dialog_title">Температура телефону висока</string>
-    <string name="overheat_notification_alert">Температура телефону зависока. Функцію з інтенсивним енергоспоживанням вимкнено.</string>
+    <string name="overheat_dialog_title">Температура телефону зависока</string>
+    <string name="overheat_notification_alert">Температура телефону занадто висока. Функції з високим енергоспоживанням вимкнено, щоб знизити температуру</string>
     <string name="overheat_notification_resume">Температуру телефону нормалізовано. Тепер пристрій можна використовувати як зазвичай.</string>
     <string name="overheat_notification_title_resume">Температуру телефону нормалізовано</string>
-    <string name="overheat_toast_content">Температура телефону зависока. Не рекомендуємо використовувати цю функцію.</string>
+    <string name="overheat_toast_content">Температура телефону дуже висока. Не рекомендуємо використовувати цю функцію</string>
     <string name="overlay_display_devices_title">Імітувати додаткові екрани</string>
     <string name="overview">Огляд</string>
     <string name="phone_hint">Телефон: проведіть пальцем від значка</string>

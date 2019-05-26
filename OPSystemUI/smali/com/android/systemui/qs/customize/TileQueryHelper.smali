@@ -151,9 +151,9 @@
 
     iget-object v0, p0, Lcom/android/systemui/qs/customize/TileQueryHelper;->mContext:Landroid/content/Context;
 
-    const v1, 0x7f110547
+    const v1, 0x7f11054d
 
-    invoke-virtual {p0, v0, v1}, Lcom/android/systemui/qs/customize/TileQueryHelper;->getStringWithCheckTile(Landroid/content/Context;I)Ljava/lang/String;
+    invoke-direct {p0, v0, v1}, Lcom/android/systemui/qs/customize/TileQueryHelper;->getStringWithCheckTile(Landroid/content/Context;I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -422,6 +422,78 @@
     return-object v0
 .end method
 
+.method private getStringWithCheckTile(Landroid/content/Context;I)Ljava/lang/String;
+    .locals 5
+
+    iget-object v0, p0, Lcom/android/systemui/qs/customize/TileQueryHelper;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v0
+
+    const-string v1, "oneplus_carmode_switch"
+
+    const/4 v2, 0x0
+
+    invoke-static {v0, v1, v2}, Landroid/provider/Settings$Secure;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+
+    move-result v0
+
+    invoke-virtual {p1, p2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    const/4 v2, 0x1
+
+    if-ne v0, v2, :cond_0
+
+    const-string v2, "dnd"
+
+    const-string v3, "opdndcarmode"
+
+    invoke-virtual {v1, v2, v3}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
+
+    move-result-object v1
+
+    goto :goto_0
+
+    :cond_0
+    const-string v2, "opdndcarmode"
+
+    const-string v3, "dnd"
+
+    invoke-virtual {v1, v2, v3}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
+
+    move-result-object v1
+
+    :goto_0
+    const-string v2, "TileQueryHelper"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "getStringWithCheckTile / carModeStatus: "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v4, " tileString:"
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-object v1
+.end method
+
 .method public static synthetic lambda$addPackageTiles$1(Lcom/android/systemui/qs/customize/TileQueryHelper;Lcom/android/systemui/qs/QSTileHost;)V
     .locals 16
 
@@ -455,9 +527,9 @@
 
     iget-object v4, v0, Lcom/android/systemui/qs/customize/TileQueryHelper;->mContext:Landroid/content/Context;
 
-    const v6, 0x7f110547
+    const v6, 0x7f11054d
 
-    invoke-virtual {v0, v4, v6}, Lcom/android/systemui/qs/customize/TileQueryHelper;->getStringWithCheckTile(Landroid/content/Context;I)Ljava/lang/String;
+    invoke-direct {v0, v4, v6}, Lcom/android/systemui/qs/customize/TileQueryHelper;->getStringWithCheckTile(Landroid/content/Context;I)Ljava/lang/String;
 
     move-result-object v4
 
@@ -753,78 +825,6 @@
 
     :cond_1
     return-void
-.end method
-
-.method public getStringWithCheckTile(Landroid/content/Context;I)Ljava/lang/String;
-    .locals 5
-
-    iget-object v0, p0, Lcom/android/systemui/qs/customize/TileQueryHelper;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object v0
-
-    const-string v1, "oneplus_carmode_switch"
-
-    const/4 v2, 0x0
-
-    invoke-static {v0, v1, v2}, Landroid/provider/Settings$Secure;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
-
-    move-result v0
-
-    invoke-virtual {p1, p2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    const/4 v2, 0x1
-
-    if-ne v0, v2, :cond_0
-
-    const-string v2, "dnd"
-
-    const-string v3, "opdndcarmode"
-
-    invoke-virtual {v1, v2, v3}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
-
-    move-result-object v1
-
-    goto :goto_0
-
-    :cond_0
-    const-string v2, "opdndcarmode"
-
-    const-string v3, "dnd"
-
-    invoke-virtual {v1, v2, v3}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
-
-    move-result-object v1
-
-    :goto_0
-    const-string v2, "TileQueryHelper"
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "getStringWithCheckTile / carModeStatus:"
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string/jumbo v4, "tileString:"
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    return-object v1
 .end method
 
 .method public isFinished()Z

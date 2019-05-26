@@ -1044,18 +1044,18 @@ You're also connected to a VPN, which can monitor your network activity."</strin
     <string name="output_service_wifi">Wi-Fi</string>
     <string name="output_title">Media output</string>
     <string name="overheat_dialog_orange_button">Execute now</string>
-    <string name="overheat_dialog_orange_message">"These actions will be taken to lower the temperature
-1.Reduce the brightness
-2.Turn off the hotspot
-3.Turn off the flashlight"</string>
+    <string name="overheat_dialog_orange_message">"The following operations will be performed to lower the temperature
+1.Reducing the brightness
+2.Turning off the hotspot
+3.Turning off the flashlight"</string>
     <string name="overheat_dialog_purple_button">Power off now</string>
     <string name="overheat_dialog_purple_message">The phone will be powered off after 5 seconds</string>
     <string name="overheat_dialog_red_message">All application processes will be cleared to lower the temperature</string>
-    <string name="overheat_dialog_title">The temperature of the phone is high</string>
-    <string name="overheat_notification_alert">The temperature of the phone is too high and the high power consumption function is turned off</string>
+    <string name="overheat_dialog_title">The temperature of your phone is too high</string>
+    <string name="overheat_notification_alert">The temperature of your phone is too high. High power consumption functions have been turned off to lower the temperature</string>
     <string name="overheat_notification_resume">"The phone's temperature has been restored and the phone can be used normally"</string>
     <string name="overheat_notification_title_resume">"The phone's temperature has been restored"</string>
-    <string name="overheat_toast_content">The temperature of the phone is too high. It is not recommended to use this feature</string>
+    <string name="overheat_toast_content">The phone is in a high temperature state. It is not recommended to use this feature</string>
     <string name="overlay_display_devices_title">Simulate secondary displays</string>
     <string name="overview">Overview</string>
     <string name="phone_hint">Swipe from icon for phone</string>

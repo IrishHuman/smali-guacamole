@@ -1025,7 +1025,7 @@
     <string name="op_earphone_connected_success">Сопряжено. Нажмите для настройки.</string>
     <string name="op_earphone_device">НАЖМИТЕ ДЛЯ СОПРЯЖЕНИЯ</string>
     <string name="op_earphone_title">OnePlus Bullets Wireless</string>
-    <string name="op_emergency_indicator_hint_text">Проведите вниз</string>
+    <string name="op_emergency_indicator_hint_text">Проведите пальцем вниз для экстренных служб</string>
     <string name="op_quick_settings_night_display_label">Ночной режим</string>
     <string name="op_quick_settings_night_display_summary_off">Ночной режим выключен, коснитесь для включения</string>
     <string name="op_quick_settings_night_display_summary_on">Ночной режим включен, коснитесь для выключения</string>
@@ -1048,11 +1048,11 @@
     <string name="overheat_dialog_purple_button">Выключить сейчас</string>
     <string name="overheat_dialog_purple_message">Телефон будет выключен через 5 секунд</string>
     <string name="overheat_dialog_red_message">Чтобы снизить температуру телефона, процессы приложений будут закрыты</string>
-    <string name="overheat_dialog_title">Температура телефона высока</string>
-    <string name="overheat_notification_alert">Температура телефона слишком высока, и функция с высоким энергопотреблением отключена</string>
+    <string name="overheat_dialog_title">Температура телефона слишком высока</string>
+    <string name="overheat_notification_alert">Температура телефона слишком высока. Функции с высоким энергопотреблением будут отключены для снижения температуры</string>
     <string name="overheat_notification_resume">Температура телефона была восстановлена, и его можно использовать как обычно</string>
     <string name="overheat_notification_title_resume">Температура телефона была восстановлена</string>
-    <string name="overheat_toast_content">Температура телефона слишком высока, и не рекомендуется использовать эту функцию</string>
+    <string name="overheat_toast_content">Телефон слишком сильно нагрет. Использование данной функции не рекомендуется</string>
     <string name="overlay_display_devices_title">Эмуляция доп. экранов</string>
     <string name="overview">Обзор</string>
     <string name="phone_hint">Телефон: проведите от значка</string>

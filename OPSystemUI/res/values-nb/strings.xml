@@ -1028,7 +1028,7 @@ Du er også tilkoblet en VPN som kan overvåke nettverksaktiviteten din."</strin
     <string name="op_earphone_connected_success">Paret. Trykk for å angi flere.</string>
     <string name="op_earphone_device">TRYKK FOR Å PARRE</string>
     <string name="op_earphone_title">OnePlus kuler trådløs</string>
-    <string name="op_emergency_indicator_hint_text">Sveip ned</string>
+    <string name="op_emergency_indicator_hint_text">Sveip ned for nødstjenester</string>
     <string name="op_quick_settings_night_display_label">Nattmodus</string>
     <string name="op_quick_settings_night_display_summary_off">Nattmodus er av, trykk for å slå på</string>
     <string name="op_quick_settings_night_display_summary_on">Nattmodus er på, trykk for å slå av</string>
@@ -1044,18 +1044,18 @@ Du er også tilkoblet en VPN som kan overvåke nettverksaktiviteten din."</strin
     <string name="output_service_wifi">Wi-Fi</string>
     <string name="output_title">Medieutdata</string>
     <string name="overheat_dialog_orange_button">Kjør nå</string>
-    <string name="overheat_dialog_orange_message">"Tar disse handlingene for å senken temperaturen
+    <string name="overheat_dialog_orange_message">"Følgende handlinger utføres for å senke temperaturen
 1. Reduser lysstyrken
 2. Slå av hotspot
 3. Slå av lommelykten"</string>
     <string name="overheat_dialog_purple_button">Slå av nå</string>
     <string name="overheat_dialog_purple_message">Telefonen vil slås av etter 5 sekunder</string>
     <string name="overheat_dialog_red_message">Fjerner alle programprosesser for å senke temperaturen</string>
-    <string name="overheat_dialog_title">Temperaturen i telefonen er høy</string>
-    <string name="overheat_notification_alert">Temperaturen i telefonen er for høy, og stort strømforbrukfunksjonen er slått av</string>
+    <string name="overheat_dialog_title">Temperaturen i telefonen er for høy</string>
+    <string name="overheat_notification_alert">Temperaturen i telefonen er for høy og funksjonen med høy strømforbruk slås av for å senke temperaturen</string>
     <string name="overheat_notification_resume">Telefonens temperatur har blitt gjenopprettet, og telefonen kan brukes normalt</string>
     <string name="overheat_notification_title_resume">Telefonens temperatur er gjenopprettet</string>
-    <string name="overheat_toast_content">Temperaturen på telefonen er for høy, anbefales at denne funksjonen ikke brukes</string>
+    <string name="overheat_toast_content">Telefonen er i høy temperatur tilstand, anbefales ikke å bruke denne funksjonen</string>
     <string name="overlay_display_devices_title">Simulering av sekundærskjermer</string>
     <string name="overview">Oversikt</string>
     <string name="phone_hint">Sveip ikonet for å åpne telefon</string>

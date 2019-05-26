@@ -42,7 +42,7 @@
 
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
-    .locals 4
+    .locals 5
 
     const-string/jumbo v0, "wifi_state"
 
@@ -52,51 +52,86 @@
 
     move-result v0
 
-    invoke-static {}, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->access$200()Z
+    const-string/jumbo v1, "wifi_ap_caller_pkg"
 
-    move-result v1
+    invoke-virtual {p2, v1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
-    if-eqz v1, :cond_0
+    move-result-object v1
 
-    const-string v1, "HotspotController"
+    invoke-static {}, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->access$500()Z
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    move-result v2
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+    if-nez v2, :cond_0
 
-    const-string v3, "onReceive "
+    invoke-static {}, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->access$800()Z
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result v2
 
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    if-eqz v2, :cond_1
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    :cond_0
+    const-string v2, "HotspotController"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "EXTRA_WIFI_AP / onReceive "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v4, " / callerPkg:"
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_1
+    iget-object v2, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl$WifiStateReceiver;->this$0:Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;
+
+    invoke-static {v2, v1}, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->access$902(Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;Ljava/lang/String;)Ljava/lang/String;
+
+    iget-object v2, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl$WifiStateReceiver;->this$0:Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;
+
+    invoke-static {v2}, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->access$900(Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    if-eqz v2, :cond_2
 
-    :cond_0
-    iget-object v1, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl$WifiStateReceiver;->this$0:Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;
+    iget-object v2, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl$WifiStateReceiver;->this$0:Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;
 
-    invoke-static {v1, v0}, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->access$602(Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;I)I
+    invoke-static {v2}, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->access$200(Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;)Landroid/content/Context;
 
-    iget-object v1, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl$WifiStateReceiver;->this$0:Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;
+    move-result-object v2
 
-    invoke-virtual {v1}, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->isHotspotEnabled()Z
+    invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
-    move-result v1
+    move-result-object v2
 
-    if-nez v1, :cond_1
+    const-string/jumbo v3, "uss_open_hotspot"
 
-    iget-object v1, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl$WifiStateReceiver;->this$0:Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;
+    iget-object v4, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl$WifiStateReceiver;->this$0:Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;
 
-    const/4 v2, 0x0
+    invoke-static {v4}, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->access$900(Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;)Ljava/lang/String;
 
-    invoke-static {v1, v2}, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->access$702(Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;I)I
+    move-result-object v4
 
-    :cond_1
-    iget-object v1, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl$WifiStateReceiver;->this$0:Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;
+    invoke-static {v2, v3, v4}, Landroid/provider/Settings$Global;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
+
+    :cond_2
+    iget-object v2, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl$WifiStateReceiver;->this$0:Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;
+
+    invoke-static {v2, v0}, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->access$1002(Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;I)I
 
     iget-object v2, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl$WifiStateReceiver;->this$0:Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;
 
@@ -104,7 +139,24 @@
 
     move-result v2
 
-    invoke-static {v1, v2}, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->access$400(Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;Z)V
+    if-nez v2, :cond_3
+
+    iget-object v2, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl$WifiStateReceiver;->this$0:Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;
+
+    const/4 v3, 0x0
+
+    invoke-static {v2, v3}, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->access$1102(Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;I)I
+
+    :cond_3
+    iget-object v2, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl$WifiStateReceiver;->this$0:Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;
+
+    iget-object v3, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl$WifiStateReceiver;->this$0:Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;
+
+    invoke-virtual {v3}, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->isHotspotEnabled()Z
+
+    move-result v3
+
+    invoke-static {v2, v3}, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->access$700(Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;Z)V
 
     return-void
 .end method
@@ -118,7 +170,7 @@
 
     if-nez v0, :cond_1
 
-    invoke-static {}, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->access$200()Z
+    invoke-static {}, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->access$500()Z
 
     move-result v0
 
@@ -141,7 +193,7 @@
 
     iget-object v1, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl$WifiStateReceiver;->this$0:Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;
 
-    invoke-static {v1}, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->access$500(Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;)Landroid/content/Context;
+    invoke-static {v1}, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->access$200(Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;)Landroid/content/Context;
 
     move-result-object v1
 
@@ -160,7 +212,7 @@
 
     if-eqz v0, :cond_3
 
-    invoke-static {}, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->access$200()Z
+    invoke-static {}, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->access$500()Z
 
     move-result v0
 
@@ -175,7 +227,7 @@
     :cond_2
     iget-object v0, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl$WifiStateReceiver;->this$0:Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;
 
-    invoke-static {v0}, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->access$500(Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;)Landroid/content/Context;
+    invoke-static {v0}, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->access$200(Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;)Landroid/content/Context;
 
     move-result-object v0
 

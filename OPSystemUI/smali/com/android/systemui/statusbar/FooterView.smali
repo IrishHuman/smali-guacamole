@@ -187,7 +187,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/FooterView;->mManageButton:Lcom/android/systemui/statusbar/FooterViewButton;
 
-    const v1, 0x7f1103bb
+    const v1, 0x7f1103c1
 
     invoke-virtual {v0, v1}, Lcom/android/systemui/statusbar/FooterViewButton;->setText(I)V
 

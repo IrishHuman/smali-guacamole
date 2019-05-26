@@ -927,9 +927,51 @@
 
     check-cast v0, Landroid/os/Vibrator;
 
-    iget v1, p0, Lcom/android/systemui/fingerprint/QLRecyclerView;->mVibTime:I
+    invoke-static {}, Lcom/android/systemui/util/OPUtils;->isSupportLinearVibration()Z
+
+    move-result v1
 
     if-eqz v1, :cond_0
+
+    iget-object v1, p0, Lcom/android/systemui/fingerprint/QLRecyclerView;->mContext:Landroid/content/Context;
+
+    const/16 v2, 0x3f3
+
+    invoke-static {v1, v0, v2}, Lcom/oneplus/util/VibratorSceneUtils;->doVibrateWithSceneIfNeeded(Landroid/content/Context;Landroid/os/Vibrator;I)Z
+
+    goto :goto_1
+
+    :cond_0
+    const/4 v1, 0x1
+
+    new-array v1, v1, [I
+
+    const/16 v2, 0x8d
+
+    const/4 v3, 0x0
+
+    aput v2, v1, v3
+
+    invoke-static {v1}, Landroid/util/OpFeatures;->isSupport([I)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    invoke-static {v3}, Landroid/os/VibrationEffect;->get(I)Landroid/os/VibrationEffect;
+
+    move-result-object v1
+
+    sget-object v2, Lcom/android/systemui/fingerprint/QLRecyclerView;->VIBRATION_ATTRIBUTES:Landroid/media/AudioAttributes;
+
+    invoke-virtual {v0, v1, v2}, Landroid/os/Vibrator;->vibrate(Landroid/os/VibrationEffect;Landroid/media/AudioAttributes;)V
+
+    goto :goto_1
+
+    :cond_1
+    iget v1, p0, Lcom/android/systemui/fingerprint/QLRecyclerView;->mVibTime:I
+
+    if-eqz v1, :cond_2
 
     iget v1, p0, Lcom/android/systemui/fingerprint/QLRecyclerView;->mVibTime:I
 
@@ -937,7 +979,7 @@
 
     goto :goto_0
 
-    :cond_0
+    :cond_2
     const-wide/16 v1, 0x14
 
     :goto_0
@@ -947,21 +989,6 @@
 
     move-result-object v1
 
-    invoke-static {}, Lcom/android/systemui/util/OPUtils;->isSupportLinearVibration()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    iget-object v2, p0, Lcom/android/systemui/fingerprint/QLRecyclerView;->mContext:Landroid/content/Context;
-
-    const/16 v3, 0x3f3
-
-    invoke-static {v2, v0, v3}, Lcom/oneplus/util/VibratorSceneUtils;->doVibrateWithSceneIfNeeded(Landroid/content/Context;Landroid/os/Vibrator;I)Z
-
-    goto :goto_1
-
-    :cond_1
     sget-object v2, Lcom/android/systemui/fingerprint/QLRecyclerView;->VIBRATION_ATTRIBUTES:Landroid/media/AudioAttributes;
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Vibrator;->vibrate(Landroid/os/VibrationEffect;Landroid/media/AudioAttributes;)V

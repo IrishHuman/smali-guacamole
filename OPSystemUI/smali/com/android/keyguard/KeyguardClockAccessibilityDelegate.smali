@@ -13,7 +13,7 @@
 
     invoke-direct {p0}, Landroid/view/View$AccessibilityDelegate;-><init>()V
 
-    const v0, 0x7f110314
+    const v0, 0x7f11031a
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -27,7 +27,7 @@
 .method public static isNeeded(Landroid/content/Context;)Z
     .locals 1
 
-    const v0, 0x7f110314
+    const v0, 0x7f11031a
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

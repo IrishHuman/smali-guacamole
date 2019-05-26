@@ -286,6 +286,43 @@
     return-void
 .end method
 
+.method public onFingerprintError(ILjava/lang/String;)V
+    .locals 2
+
+    invoke-super {p0, p1, p2}, Lcom/android/keyguard/KeyguardUpdateMonitorCallback;->onFingerprintError(ILjava/lang/String;)V
+
+    invoke-static {}, Lcom/android/systemui/util/OPUtils;->isCustomFingerprint()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/16 v0, 0x9
+
+    if-ne p1, v0, :cond_0
+
+    iget-object v0, p0, Lcom/android/systemui/fingerprint/FingerprintDialogView$8;->this$0:Lcom/android/systemui/fingerprint/FingerprintDialogView;
+
+    invoke-static {v0}, Lcom/android/systemui/fingerprint/FingerprintDialogView;->access$1200(Lcom/android/systemui/fingerprint/FingerprintDialogView;)Lcom/android/systemui/fingerprint/FingerprintDialogImpl;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/android/systemui/fingerprint/FingerprintDialogView$8;->this$0:Lcom/android/systemui/fingerprint/FingerprintDialogView;
+
+    invoke-static {v0}, Lcom/android/systemui/fingerprint/FingerprintDialogView;->access$1200(Lcom/android/systemui/fingerprint/FingerprintDialogView;)Lcom/android/systemui/fingerprint/FingerprintDialogImpl;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Lcom/android/systemui/fingerprint/FingerprintDialogImpl;->updateTransparentIconLayoutParams(Z)V
+
+    :cond_0
+    return-void
+.end method
+
 .method public onFingerprintHelp(ILjava/lang/String;)V
     .locals 3
 

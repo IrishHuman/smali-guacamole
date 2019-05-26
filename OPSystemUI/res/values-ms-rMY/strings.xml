@@ -76,24 +76,24 @@
     <string name="op_earphone_connected_success">Berpasangan. Ketik untuk menyediakan lagi.</string>
     <string name="op_earphone_device">KETIK UNTUK BERPASANGAN</string>
     <string name="op_earphone_title">OnePlus Bullets Wireless</string>
-    <string name="op_emergency_indicator_hint_text">Leret ke Bawah</string>
+    <string name="op_emergency_indicator_hint_text">Leret ke bawah untuk perkhidmatan kecemasan</string>
     <string name="op_quick_settings_night_display_label">Mod malam</string>
     <string name="op_quick_settings_night_display_summary_off">Mod Malam dipadam, ketik untuk menghidupkan</string>
     <string name="op_quick_settings_night_display_summary_on">Mod malam dihidupkan, ketik untuk memadamkan</string>
     <string name="output_chooser_empty_hint">Tiada peranti disambung</string>
     <string name="overheat_dialog_orange_button">Laksanakan sekarang</string>
-    <string name="overheat_dialog_orange_message">"Tindakan berikut akan diambil untuk menurunkan suhu
+    <string name="overheat_dialog_orange_message">"Operasi berikut akan dilakukan untuk mengurangkan suhu
 1.Kurangkan kecerahan
 2.Matikan hotspot
 3.Matikan lampu suluh"</string>
     <string name="overheat_dialog_purple_button">Matikan sekarang</string>
     <string name="overheat_dialog_purple_message">Telefon akan dimatikan selepas 5 saat</string>
     <string name="overheat_dialog_red_message">Semua proses aplikasi akan dikosongkan untuk menurunkan suhu</string>
-    <string name="overheat_dialog_title">Suhu telefon tinggi</string>
-    <string name="overheat_notification_alert">Suhu telefon terlalu tinggi dan fungsi penggunaan kuasa tinggi dimatikan</string>
+    <string name="overheat_dialog_title">Suhu telefon anda terlalu tinggi</string>
+    <string name="overheat_notification_alert">Suhu telefon anda terlalu tinggi dan fungsi yang menggunakan kuasa yang tinggi akan dimatikan untuk mengurangkan suhu</string>
     <string name="overheat_notification_resume">Suhu telefon telah dipulihkan dan telefon boleh digunakan secara normal</string>
     <string name="overheat_notification_title_resume">Suhu telefon telah dipulihkan</string>
-    <string name="overheat_toast_content">Suhu telefon terlalu tinggi, oleh itu tidak disyorkan untuk menggunakan ciri ini</string>
+    <string name="overheat_toast_content">Telefon dalam keadaan suhu yang tinggi, tidak digalakkan untuk menggunakan ciri ini</string>
     <string name="prevent_view_title">Mod poket dihidupkan</string>
     <string name="prevent_view_title_cancel">Untuk mengaktifkan telefon anda:</string>
     <string name="prevent_view_top_tag_cancel">Sila tidak tutup kawasan biru telefon anda, dan membersihkan apa-apa kotoran atau habuk di kawasan biru.</string>

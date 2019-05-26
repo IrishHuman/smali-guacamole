@@ -165,7 +165,7 @@
 
     if-eqz v0, :cond_1
 
-    const v0, 0x7f110438
+    const v0, 0x7f11043e
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -173,7 +173,7 @@
 
     iput-object v0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarInflaterView;->NAVBAR_CONFIG:Ljava/lang/String;
 
-    const v0, 0x7f11043b
+    const v0, 0x7f110441
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -181,7 +181,7 @@
 
     iput-object v0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarInflaterView;->NAVBAR_CONFIG_RTL:Ljava/lang/String;
 
-    const v0, 0x7f110439
+    const v0, 0x7f11043f
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -189,7 +189,7 @@
 
     iput-object v0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarInflaterView;->NAVBAR_SWIPE_UP_CONFIG:Ljava/lang/String;
 
-    const v0, 0x7f11043a
+    const v0, 0x7f110440
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

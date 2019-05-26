@@ -31,8 +31,6 @@
 
 .field private mSystemIconArea:Landroid/widget/LinearLayout;
 
-.field private mSystemIconArea2:Landroid/widget/LinearLayout;
-
 
 # direct methods
 .method public constructor <init>()V
@@ -116,16 +114,6 @@
     .locals 1
 
     const/4 v0, 0x4
-
-    invoke-direct {p0, p1, v0, p2}, Lcom/android/systemui/statusbar/phone/CollapsedStatusBarFragment;->animateHiddenState(Landroid/view/View;IZ)V
-
-    return-void
-.end method
-
-.method private animateGone(Landroid/view/View;Z)V
-    .locals 1
-
-    const v0, 0x8
 
     invoke-direct {p0, p1, v0, p2}, Lcom/android/systemui/statusbar/phone/CollapsedStatusBarFragment;->animateHiddenState(Landroid/view/View;IZ)V
 
@@ -505,8 +493,6 @@
     if-eqz v2, :cond_0
 
     invoke-virtual {p0, p3}, Lcom/android/systemui/statusbar/phone/CollapsedStatusBarFragment;->hideSystemIconArea(Z)V
-    
-    invoke-virtual {p0, p3}, Lcom/android/systemui/statusbar/phone/CollapsedStatusBarFragment;->hideSystemIconArea2(Z)V
 
     invoke-virtual {p0, p3}, Lcom/android/systemui/statusbar/phone/CollapsedStatusBarFragment;->hideOperatorName(Z)V
 
@@ -514,8 +500,6 @@
 
     :cond_0
     invoke-virtual {p0, p3}, Lcom/android/systemui/statusbar/phone/CollapsedStatusBarFragment;->showSystemIconArea(Z)V
-    
-    invoke-virtual {p0, p3}, Lcom/android/systemui/statusbar/phone/CollapsedStatusBarFragment;->showSystemIconArea2(Z)V
 
     invoke-virtual {p0, p3}, Lcom/android/systemui/statusbar/phone/CollapsedStatusBarFragment;->showOperatorName(Z)V
 
@@ -650,16 +634,6 @@
     .locals 1
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/CollapsedStatusBarFragment;->mSystemIconArea:Landroid/widget/LinearLayout;
-
-    invoke-direct {p0, v0, p1}, Lcom/android/systemui/statusbar/phone/CollapsedStatusBarFragment;->animateHide(Landroid/view/View;Z)V
-
-    return-void
-.end method
-
-.method public hideSystemIconArea2(Z)V
-    .locals 1
-
-    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/CollapsedStatusBarFragment;->mSystemIconArea2:Landroid/widget/LinearLayout;
 
     invoke-direct {p0, v0, p1}, Lcom/android/systemui/statusbar/phone/CollapsedStatusBarFragment;->animateHide(Landroid/view/View;Z)V
 
@@ -977,51 +951,6 @@
     invoke-virtual {v2, v0}, Landroid/widget/LinearLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     :cond_1
-    const-string v0, "system_icon_area2"
-
-    const-string v2, "id"
-
-    invoke-static {v0, v2}, Lcom/android/wubydax/GearUtils;->getIdentifier(Ljava/lang/String;Ljava/lang/String;)I
-
-    move-result v0
-
-    iget-object v2, p0, Lcom/android/systemui/statusbar/phone/CollapsedStatusBarFragment;->mStatusBar:Lcom/android/systemui/statusbar/phone/PhoneStatusBarView;
-
-    invoke-virtual {v2, v0}, Lcom/android/systemui/statusbar/phone/PhoneStatusBarView;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/LinearLayout;
-
-    iput-object v0, p0, Lcom/android/systemui/statusbar/phone/CollapsedStatusBarFragment;->mSystemIconArea2:Landroid/widget/LinearLayout;
-    
-    invoke-static {}, Lcom/android/systemui/util/OPUtils;->isSupportCustomStatusBar()Z
-
-    move-result v0
-
-    if-nez v0, :cond_mw
-
-    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/CollapsedStatusBarFragment;->mSystemIconArea:Landroid/widget/LinearLayout;
-
-    invoke-virtual {v0}, Landroid/widget/LinearLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/LinearLayout$LayoutParams;
-
-    const/4 v2, -0x2
-
-    iput v2, v0, Landroid/widget/LinearLayout$LayoutParams;->width:I
-
-    const/4 v2, 0x0
-
-    iput v2, v0, Landroid/widget/LinearLayout$LayoutParams;->weight:F
-
-    iget-object v2, p0, Lcom/android/systemui/statusbar/phone/CollapsedStatusBarFragment;->mSystemIconArea:Landroid/widget/LinearLayout;
-
-    invoke-virtual {v2, v0}, Landroid/widget/LinearLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    :cond_mw    
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/CollapsedStatusBarFragment;->mStatusBar:Lcom/android/systemui/statusbar/phone/PhoneStatusBarView;
 
     const v2, 0x7f0a00d4
@@ -1035,8 +964,6 @@
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lcom/android/systemui/statusbar/phone/CollapsedStatusBarFragment;->showSystemIconArea(Z)V
-    
-    invoke-virtual {p0, v0}, Lcom/android/systemui/statusbar/phone/CollapsedStatusBarFragment;->showSystemIconArea2(Z)V
 
     invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -1129,16 +1056,6 @@
     .locals 1
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/CollapsedStatusBarFragment;->mSystemIconArea:Landroid/widget/LinearLayout;
-
-    invoke-direct {p0, v0, p1}, Lcom/android/systemui/statusbar/phone/CollapsedStatusBarFragment;->animateShow(Landroid/view/View;Z)V
-
-    return-void
-.end method
-
-.method public showSystemIconArea2(Z)V
-    .locals 1
-
-    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/CollapsedStatusBarFragment;->mSystemIconArea2:Landroid/widget/LinearLayout;
 
     invoke-direct {p0, v0, p1}, Lcom/android/systemui/statusbar/phone/CollapsedStatusBarFragment;->animateShow(Landroid/view/View;Z)V
 

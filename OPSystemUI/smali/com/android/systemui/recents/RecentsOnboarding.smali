@@ -713,7 +713,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f110573
+    const v2, 0x7f110579
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1383,7 +1383,7 @@
 
     invoke-virtual {v1, v3}, Landroid/view/View;->setSystemUiVisibility(I)V
 
-    const v1, 0x7f110573
+    const v1, 0x7f110579
 
     if-ne p1, v1, :cond_1
 

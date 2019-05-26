@@ -273,7 +273,7 @@
 
     iget-object v2, p0, Lcom/android/systemui/qs/tiles/UserDetailView$Adapter;->mContext:Landroid/content/Context;
 
-    const v3, 0x7f110541
+    const v3, 0x7f110547
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

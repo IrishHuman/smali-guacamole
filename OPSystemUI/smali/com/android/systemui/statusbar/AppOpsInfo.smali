@@ -568,7 +568,7 @@
 
     iget-object v3, p0, Lcom/android/systemui/statusbar/AppOpsInfo;->mContext:Landroid/content/Context;
 
-    const v4, 0x7f11041a
+    const v4, 0x7f110420
 
     new-array v2, v2, [Ljava/lang/Object;
 
@@ -591,7 +591,7 @@
 
     iget-object v3, p0, Lcom/android/systemui/statusbar/AppOpsInfo;->mContext:Landroid/content/Context;
 
-    const v4, 0x7f110419
+    const v4, 0x7f11041f
 
     new-array v2, v2, [Ljava/lang/Object;
 

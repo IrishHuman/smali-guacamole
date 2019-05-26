@@ -47,7 +47,7 @@
 
     move-result-object v0
 
-    const-string v1, "seen_tuner_warning"
+    const-string/jumbo v1, "seen_tuner_warning"
 
     const/4 v2, 0x1
 

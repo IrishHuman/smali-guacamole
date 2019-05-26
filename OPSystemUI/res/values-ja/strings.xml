@@ -1027,7 +1027,7 @@
     <string name="op_earphone_connected_success">ペア設定が完了しました。さらにペア設定を行うにはタップしてください。</string>
     <string name="op_earphone_device">ペア設定するにはタップしてください</string>
     <string name="op_earphone_title">OnePlus Bullets Wireless</string>
-    <string name="op_emergency_indicator_hint_text">下にスワイプ</string>
+    <string name="op_emergency_indicator_hint_text">緊急電話サービスを利用するには、下にスワイプしてください</string>
     <string name="op_quick_settings_night_display_label">おやすみモード</string>
     <string name="op_quick_settings_night_display_summary_off">おやすみモードがオフになっています。タップしてオンにします。</string>
     <string name="op_quick_settings_night_display_summary_on">おやすみモードがオンになっています。タップしてオフにします。</string>
@@ -1046,15 +1046,15 @@
     <string name="overheat_dialog_orange_message">"温度を下げるために、次の処理が実行されます。
 1.画面を暗くする
 2.ホットスポットをオフにする
-3.フラッシュをオンにする"</string>
+3.フラッシュをオフにする"</string>
     <string name="overheat_dialog_purple_button">今すぐ電源を切る</string>
     <string name="overheat_dialog_purple_message">5 秒後に携帯電話の電源が切れます</string>
     <string name="overheat_dialog_red_message">温度を下げるため、すべてのアプリケーションプロセスがクリアされます</string>
-    <string name="overheat_dialog_title">携帯電話の温度が高くなっています</string>
-    <string name="overheat_notification_alert">携帯電話の温度が高すぎます。バッテリー消費量の多い機能がオフにされました</string>
+    <string name="overheat_dialog_title">携帯電話の温度が高すぎます</string>
+    <string name="overheat_notification_alert">携帯電話の温度が高すぎます。温度を下げるため、バッテリー消費量の多い機能がオフになります</string>
     <string name="overheat_notification_resume">携帯電話の温度が通常に戻りました。携帯電話を通常どおり使用できます</string>
     <string name="overheat_notification_title_resume">携帯電話の温度が通常に戻りました</string>
-    <string name="overheat_toast_content">携帯電話の温度が高すぎます。この機能を使用することは推奨されません</string>
+    <string name="overheat_toast_content">携帯電話の温度が高くなっています。この機能を使用することは推奨されません</string>
     <string name="overlay_display_devices_title">2次画面シミュレート</string>
     <string name="overview">最近</string>
     <string name="phone_hint">右にスワイプして通話</string>

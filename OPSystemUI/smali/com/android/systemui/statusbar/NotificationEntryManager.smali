@@ -22,6 +22,17 @@
 # instance fields
 .field protected mBarService:Lcom/android/internal/statusbar/IStatusBarService;
 
+.field protected final mCachedNotifications:Ljava/util/HashMap;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/HashMap<",
+            "Ljava/lang/String;",
+            "Lcom/android/systemui/statusbar/NotificationData$Entry;",
+            ">;"
+        }
+    .end annotation
+.end field
+
 .field protected mCallback:Lcom/android/systemui/statusbar/NotificationEntryManager$Callback;
 
 .field protected final mContext:Landroid/content/Context;
@@ -279,6 +290,12 @@
     check-cast v0, Lcom/oneplus/notification/OPNotificationController;
 
     iput-object v0, p0, Lcom/android/systemui/statusbar/NotificationEntryManager;->mOPNotifController:Lcom/oneplus/notification/OPNotificationController;
+
+    new-instance v0, Ljava/util/HashMap;
+
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    iput-object v0, p0, Lcom/android/systemui/statusbar/NotificationEntryManager;->mCachedNotifications:Ljava/util/HashMap;
 
     new-instance v0, Lcom/android/systemui/statusbar/NotificationEntryManager$1;
 
@@ -792,11 +809,11 @@
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_3
-    if-nez v0, :cond_10
+    if-nez v0, :cond_11
 
     iget-object v3, v2, Landroid/app/Notification;->fullScreenIntent:Landroid/app/PendingIntent;
 
-    if-eqz v3, :cond_10
+    if-eqz v3, :cond_11
 
     iget-object v3, p1, Lcom/android/systemui/statusbar/NotificationData$Entry;->notification:Landroid/service/notification/StatusBarNotification;
 
@@ -1075,6 +1092,19 @@
 
     invoke-virtual {p1}, Lcom/android/systemui/statusbar/NotificationData$Entry;->notifyFullScreenIntentLaunched()V
 
+    iget-object v4, p0, Lcom/android/systemui/statusbar/NotificationEntryManager;->mCachedNotifications:Ljava/util/HashMap;
+
+    invoke-virtual {v4, v3}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-nez v4, :cond_10
+
+    iget-object v4, p0, Lcom/android/systemui/statusbar/NotificationEntryManager;->mCachedNotifications:Ljava/util/HashMap;
+
+    invoke-virtual {v4, v3, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_10
     iget-object v4, p0, Lcom/android/systemui/statusbar/NotificationEntryManager;->mMetricsLogger:Lcom/android/internal/logging/MetricsLogger;
 
     const-string v5, "note_fullscreen"
@@ -1088,7 +1118,7 @@
     :catch_0
     move-exception v1
 
-    :cond_10
+    :cond_11
     :goto_7
     return-void
 .end method
@@ -1914,6 +1944,62 @@
 .method public onAsyncInflationFinished(Lcom/android/systemui/statusbar/NotificationData$Entry;)V
     .locals 3
 
+    iget-object v0, p0, Lcom/android/systemui/statusbar/NotificationEntryManager;->mCachedNotifications:Ljava/util/HashMap;
+
+    iget-object v1, p1, Lcom/android/systemui/statusbar/NotificationData$Entry;->key:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/android/systemui/statusbar/NotificationEntryManager;->mCachedNotifications:Ljava/util/HashMap;
+
+    iget-object v1, p1, Lcom/android/systemui/statusbar/NotificationData$Entry;->key:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/android/systemui/statusbar/NotificationData$Entry;
+
+    invoke-virtual {v0}, Lcom/android/systemui/statusbar/NotificationData$Entry;->hasJustLaunchedFullScreenIntent()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p1}, Lcom/android/systemui/statusbar/NotificationData$Entry;->notifyFullScreenIntentLaunched()V
+
+    const-string v0, "NotificationEntryMgr"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "onAsyncInflationFinished, update lastFullScreenIntentLaunchTime from cached entry, key: "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v2, p1, Lcom/android/systemui/statusbar/NotificationData$Entry;->key:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    iget-object v0, p0, Lcom/android/systemui/statusbar/NotificationEntryManager;->mCachedNotifications:Ljava/util/HashMap;
+
+    iget-object v1, p1, Lcom/android/systemui/statusbar/NotificationData$Entry;->key:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_1
     iget-object v0, p0, Lcom/android/systemui/statusbar/NotificationEntryManager;->mPendingNotifications:Ljava/util/HashMap;
 
     iget-object v1, p1, Lcom/android/systemui/statusbar/NotificationData$Entry;->key:Ljava/lang/String;
@@ -1930,17 +2016,17 @@
 
     const/4 v1, 0x0
 
-    if-nez v0, :cond_0
+    if-nez v0, :cond_2
 
     const/4 v0, 0x1
 
     goto :goto_0
 
-    :cond_0
+    :cond_2
     move v0, v1
 
     :goto_0
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_3
 
     iget-object v2, p1, Lcom/android/systemui/statusbar/NotificationData$Entry;->row:Lcom/android/systemui/statusbar/ExpandableNotificationRow;
 
@@ -1948,14 +2034,14 @@
 
     move-result v2
 
-    if-nez v2, :cond_1
+    if-nez v2, :cond_3
 
     invoke-direct {p0, p1}, Lcom/android/systemui/statusbar/NotificationEntryManager;->addEntry(Lcom/android/systemui/statusbar/NotificationData$Entry;)V
 
     goto :goto_1
 
-    :cond_1
-    if-nez v0, :cond_2
+    :cond_3
+    if-nez v0, :cond_4
 
     iget-object v2, p1, Lcom/android/systemui/statusbar/NotificationData$Entry;->row:Lcom/android/systemui/statusbar/ExpandableNotificationRow;
 
@@ -1963,7 +2049,7 @@
 
     move-result v2
 
-    if-eqz v2, :cond_2
+    if-eqz v2, :cond_4
 
     iget-object v2, p0, Lcom/android/systemui/statusbar/NotificationEntryManager;->mVisualStabilityManager:Lcom/android/systemui/statusbar/notification/VisualStabilityManager;
 
@@ -1973,7 +2059,7 @@
 
     invoke-interface {v2}, Lcom/android/systemui/statusbar/NotificationPresenter;->updateNotificationViews()V
 
-    :cond_2
+    :cond_4
     :goto_1
     iget-object v2, p1, Lcom/android/systemui/statusbar/NotificationData$Entry;->row:Lcom/android/systemui/statusbar/ExpandableNotificationRow;
 
@@ -2406,6 +2492,19 @@
 
     invoke-direct {p0, p1}, Lcom/android/systemui/statusbar/NotificationEntryManager;->abortExistingInflation(Ljava/lang/String;)V
 
+    iget-object v1, p0, Lcom/android/systemui/statusbar/NotificationEntryManager;->mCachedNotifications:Ljava/util/HashMap;
+
+    invoke-virtual {v1, p1}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    iget-object v1, p0, Lcom/android/systemui/statusbar/NotificationEntryManager;->mCachedNotifications:Ljava/util/HashMap;
+
+    invoke-virtual {v1, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_0
     iget-object v1, p0, Lcom/android/systemui/statusbar/NotificationEntryManager;->mHeadsUpManager:Lcom/android/systemui/statusbar/policy/HeadsUpManager;
 
     invoke-virtual {v1, p1}, Lcom/android/systemui/statusbar/policy/HeadsUpManager;->isHeadsUp(Ljava/lang/String;)Z
@@ -2414,7 +2513,7 @@
 
     const/4 v2, 0x0
 
-    if-eqz v1, :cond_3
+    if-eqz v1, :cond_4
 
     iget-object v1, p0, Lcom/android/systemui/statusbar/NotificationEntryManager;->mRemoteInputManager:Lcom/android/systemui/statusbar/NotificationRemoteInputManager;
 
@@ -2428,27 +2527,27 @@
 
     const/4 v3, 0x1
 
-    if-eqz v1, :cond_0
+    if-eqz v1, :cond_1
 
     sget-boolean v1, Lcom/android/systemui/statusbar/NotificationRemoteInputManager;->FORCE_REMOTE_INPUT_HISTORY:Z
 
-    if-eqz v1, :cond_1
+    if-eqz v1, :cond_2
 
-    :cond_0
+    :cond_1
     iget-object v1, p0, Lcom/android/systemui/statusbar/NotificationEntryManager;->mVisualStabilityManager:Lcom/android/systemui/statusbar/notification/VisualStabilityManager;
 
     invoke-virtual {v1}, Lcom/android/systemui/statusbar/notification/VisualStabilityManager;->isReorderingAllowed()Z
 
     move-result v1
 
-    if-nez v1, :cond_2
+    if-nez v1, :cond_3
 
-    :cond_1
+    :cond_2
     move v1, v3
 
     goto :goto_0
 
-    :cond_2
+    :cond_3
     move v1, v2
 
     :goto_0
@@ -2462,7 +2561,7 @@
 
     move v0, v3
 
-    :cond_3
+    :cond_4
     iget-object v1, p0, Lcom/android/systemui/statusbar/NotificationEntryManager;->mMediaManager:Lcom/android/systemui/statusbar/NotificationMediaManager;
 
     invoke-virtual {v1, p1}, Lcom/android/systemui/statusbar/NotificationMediaManager;->onNotificationRemoved(Ljava/lang/String;)V
@@ -2473,7 +2572,7 @@
 
     move-result-object v1
 
-    if-eqz v1, :cond_4
+    if-eqz v1, :cond_5
 
     iget-object v1, p0, Lcom/android/systemui/statusbar/NotificationEntryManager;->mSimpleHeadsUpController:Lcom/oneplus/util/notification/SimpleHeadsUpController;
 
@@ -2485,13 +2584,13 @@
 
     move-result v1
 
-    if-eqz v1, :cond_4
+    if-eqz v1, :cond_5
 
     iget-object v1, p0, Lcom/android/systemui/statusbar/NotificationEntryManager;->mSimpleHeadsUpController:Lcom/oneplus/util/notification/SimpleHeadsUpController;
 
     invoke-virtual {v1}, Lcom/oneplus/util/notification/SimpleHeadsUpController;->hide()V
 
-    :cond_4
+    :cond_5
     iget-object v1, p0, Lcom/android/systemui/statusbar/NotificationEntryManager;->mNotificationData:Lcom/android/systemui/statusbar/NotificationData;
 
     invoke-virtual {v1, p1}, Lcom/android/systemui/statusbar/NotificationData;->get(Ljava/lang/String;)Lcom/android/systemui/statusbar/NotificationData$Entry;
@@ -2502,17 +2601,17 @@
 
     const/4 v4, 0x0
 
-    if-eqz v3, :cond_6
+    if-eqz v3, :cond_7
 
     invoke-direct {p0, v1}, Lcom/android/systemui/statusbar/NotificationEntryManager;->shouldKeepForRemoteInput(Lcom/android/systemui/statusbar/NotificationData$Entry;)Z
 
     move-result v3
 
-    if-eqz v3, :cond_6
+    if-eqz v3, :cond_7
 
     iget-object v3, v1, Lcom/android/systemui/statusbar/NotificationData$Entry;->row:Lcom/android/systemui/statusbar/ExpandableNotificationRow;
 
-    if-eqz v3, :cond_6
+    if-eqz v3, :cond_7
 
     iget-object v3, v1, Lcom/android/systemui/statusbar/NotificationData$Entry;->row:Lcom/android/systemui/statusbar/ExpandableNotificationRow;
 
@@ -2520,7 +2619,7 @@
 
     move-result v3
 
-    if-nez v3, :cond_6
+    if-nez v3, :cond_7
 
     iget-object v3, v1, Lcom/android/systemui/statusbar/NotificationData$Entry;->remoteInputText:Ljava/lang/CharSequence;
 
@@ -2528,11 +2627,11 @@
 
     move-result v5
 
-    if-eqz v5, :cond_5
+    if-eqz v5, :cond_6
 
     iget-object v3, v1, Lcom/android/systemui/statusbar/NotificationData$Entry;->remoteInputTextWhenReset:Ljava/lang/CharSequence;
 
-    :cond_5
+    :cond_6
     invoke-virtual {p0, v1, v3, v2}, Lcom/android/systemui/statusbar/NotificationEntryManager;->rebuildNotificationWithRemoteInput(Lcom/android/systemui/statusbar/NotificationData$Entry;Ljava/lang/CharSequence;Z)Landroid/service/notification/StatusBarNotification;
 
     move-result-object v5
@@ -2556,7 +2655,7 @@
     const/4 v0, 0x0
 
     :goto_1
-    if-eqz v6, :cond_6
+    if-eqz v6, :cond_7
 
     const-string v2, "NotificationEntryMgr"
 
@@ -2584,20 +2683,20 @@
 
     return-void
 
-    :cond_6
+    :cond_7
     sget-boolean v3, Lcom/android/systemui/statusbar/NotificationRemoteInputManager;->FORCE_REMOTE_INPUT_HISTORY:Z
 
-    if-eqz v3, :cond_7
+    if-eqz v3, :cond_8
 
     invoke-direct {p0, v1}, Lcom/android/systemui/statusbar/NotificationEntryManager;->shouldKeepForSmartReply(Lcom/android/systemui/statusbar/NotificationData$Entry;)Z
 
     move-result v3
 
-    if-eqz v3, :cond_7
+    if-eqz v3, :cond_8
 
     iget-object v3, v1, Lcom/android/systemui/statusbar/NotificationData$Entry;->row:Lcom/android/systemui/statusbar/ExpandableNotificationRow;
 
-    if-eqz v3, :cond_7
+    if-eqz v3, :cond_8
 
     iget-object v3, v1, Lcom/android/systemui/statusbar/NotificationData$Entry;->row:Lcom/android/systemui/statusbar/ExpandableNotificationRow;
 
@@ -2605,7 +2704,7 @@
 
     move-result v3
 
-    if-nez v3, :cond_7
+    if-nez v3, :cond_8
 
     invoke-virtual {p0, v1}, Lcom/android/systemui/statusbar/NotificationEntryManager;->rebuildNotificationForCanceledSmartReplies(Lcom/android/systemui/statusbar/NotificationData$Entry;)Landroid/service/notification/StatusBarNotification;
 
@@ -2630,7 +2729,7 @@
 
     invoke-virtual {v4, v1}, Lcom/android/systemui/statusbar/SmartReplyController;->stopSending(Lcom/android/systemui/statusbar/NotificationData$Entry;)V
 
-    if-eqz v2, :cond_7
+    if-eqz v2, :cond_8
 
     const-string v4, "NotificationEntryMgr"
 
@@ -2658,12 +2757,12 @@
 
     return-void
 
-    :cond_7
+    :cond_8
     iget-object v2, p0, Lcom/android/systemui/statusbar/NotificationEntryManager;->mSmartReplyController:Lcom/android/systemui/statusbar/SmartReplyController;
 
     invoke-virtual {v2, v1}, Lcom/android/systemui/statusbar/SmartReplyController;->stopSending(Lcom/android/systemui/statusbar/NotificationData$Entry;)V
 
-    if-eqz v0, :cond_8
+    if-eqz v0, :cond_9
 
     iput-object p2, p0, Lcom/android/systemui/statusbar/NotificationEntryManager;->mLatestRankingMap:Landroid/service/notification/NotificationListenerService$RankingMap;
 
@@ -2679,21 +2778,21 @@
 
     return-void
 
-    :cond_8
+    :cond_9
     iget-object v2, p0, Lcom/android/systemui/statusbar/NotificationEntryManager;->mRemoteInputManager:Lcom/android/systemui/statusbar/NotificationRemoteInputManager;
 
     invoke-virtual {v2, v1}, Lcom/android/systemui/statusbar/NotificationRemoteInputManager;->onRemoveNotification(Lcom/android/systemui/statusbar/NotificationData$Entry;)Z
 
     move-result v2
 
-    if-eqz v2, :cond_9
+    if-eqz v2, :cond_a
 
     iput-object p2, p0, Lcom/android/systemui/statusbar/NotificationEntryManager;->mLatestRankingMap:Landroid/service/notification/NotificationListenerService$RankingMap;
 
     return-void
 
-    :cond_9
-    if-eqz v1, :cond_a
+    :cond_a
+    if-eqz v1, :cond_b
 
     iget-object v2, p0, Lcom/android/systemui/statusbar/NotificationEntryManager;->mGutsManager:Lcom/android/systemui/statusbar/NotificationGutsManager;
 
@@ -2701,7 +2800,7 @@
 
     move-result-object v2
 
-    if-eqz v2, :cond_a
+    if-eqz v2, :cond_b
 
     iget-object v2, p0, Lcom/android/systemui/statusbar/NotificationEntryManager;->mGutsManager:Lcom/android/systemui/statusbar/NotificationGutsManager;
 
@@ -2715,7 +2814,7 @@
 
     move-result-object v3
 
-    if-ne v2, v3, :cond_a
+    if-ne v2, v3, :cond_b
 
     iget-object v2, v1, Lcom/android/systemui/statusbar/NotificationData$Entry;->row:Lcom/android/systemui/statusbar/ExpandableNotificationRow;
 
@@ -2723,7 +2822,7 @@
 
     move-result-object v2
 
-    if-eqz v2, :cond_a
+    if-eqz v2, :cond_b
 
     iget-object v2, v1, Lcom/android/systemui/statusbar/NotificationData$Entry;->row:Lcom/android/systemui/statusbar/ExpandableNotificationRow;
 
@@ -2735,7 +2834,7 @@
 
     move-result v2
 
-    if-nez v2, :cond_a
+    if-nez v2, :cond_b
 
     const-string v2, "NotificationEntryMgr"
 
@@ -2763,8 +2862,8 @@
 
     return-void
 
-    :cond_a
-    if-eqz v1, :cond_b
+    :cond_b
+    if-eqz v1, :cond_c
 
     iget-object v2, p0, Lcom/android/systemui/statusbar/NotificationEntryManager;->mForegroundServiceController:Lcom/android/systemui/ForegroundServiceController;
 
@@ -2772,12 +2871,12 @@
 
     invoke-interface {v2, v3}, Lcom/android/systemui/ForegroundServiceController;->removeNotification(Landroid/service/notification/StatusBarNotification;)Z
 
-    :cond_b
-    if-eqz v1, :cond_c
+    :cond_c
+    if-eqz v1, :cond_d
 
     iget-object v2, v1, Lcom/android/systemui/statusbar/NotificationData$Entry;->row:Lcom/android/systemui/statusbar/ExpandableNotificationRow;
 
-    if-eqz v2, :cond_c
+    if-eqz v2, :cond_d
 
     iget-object v2, v1, Lcom/android/systemui/statusbar/NotificationData$Entry;->row:Lcom/android/systemui/statusbar/ExpandableNotificationRow;
 
@@ -2789,7 +2888,7 @@
 
     invoke-interface {v2, v3}, Lcom/android/systemui/statusbar/NotificationListContainer;->cleanUpViewState(Landroid/view/View;)V
 
-    :cond_c
+    :cond_d
     invoke-direct {p0, p1}, Lcom/android/systemui/statusbar/NotificationEntryManager;->handleGroupSummaryRemoved(Ljava/lang/String;)V
 
     invoke-direct {p0, p1, p2}, Lcom/android/systemui/statusbar/NotificationEntryManager;->removeNotificationViews(Ljava/lang/String;Landroid/service/notification/NotificationListenerService$RankingMap;)Landroid/service/notification/StatusBarNotification;
@@ -2975,308 +3074,91 @@
 .end method
 
 .method public shouldPeek(Lcom/android/systemui/statusbar/NotificationData$Entry;Landroid/service/notification/StatusBarNotification;)I
-    .locals 6
-
-    iget-boolean v0, p0, Lcom/android/systemui/statusbar/NotificationEntryManager;->mUseHeadsUp:Z
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_c
-
-    iget-object v0, p0, Lcom/android/systemui/statusbar/NotificationEntryManager;->mPresenter:Lcom/android/systemui/statusbar/NotificationPresenter;
-
-    invoke-interface {v0}, Lcom/android/systemui/statusbar/NotificationPresenter;->isDeviceInVrMode()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    goto/16 :goto_2
-
-    :cond_0
-    iget-object v0, p0, Lcom/android/systemui/statusbar/NotificationEntryManager;->mNotificationData:Lcom/android/systemui/statusbar/NotificationData;
-
-    invoke-virtual {v0, p1}, Lcom/android/systemui/statusbar/NotificationData;->shouldFilterOut(Lcom/android/systemui/statusbar/NotificationData$Entry;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    const-string v0, "NotificationEntryMgr"
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "No peeking: filtered notification: "
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .locals 7
 
     invoke-virtual {p2}, Landroid/service/notification/StatusBarNotification;->getKey()Ljava/lang/String;
 
+    move-result-object v0
+
+    iget-boolean v1, p0, Lcom/android/systemui/statusbar/NotificationEntryManager;->mUseHeadsUp:Z
+
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_d
+
+    iget-object v1, p0, Lcom/android/systemui/statusbar/NotificationEntryManager;->mPresenter:Lcom/android/systemui/statusbar/NotificationPresenter;
+
+    invoke-interface {v1}, Lcom/android/systemui/statusbar/NotificationPresenter;->isDeviceInVrMode()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    goto/16 :goto_3
+
+    :cond_0
+    iget-object v1, p0, Lcom/android/systemui/statusbar/NotificationEntryManager;->mNotificationData:Lcom/android/systemui/statusbar/NotificationData;
+
+    invoke-virtual {v1, p1}, Lcom/android/systemui/statusbar/NotificationData;->shouldFilterOut(Lcom/android/systemui/statusbar/NotificationData$Entry;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    const-string v1, "NotificationEntryMgr"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "No peeking: filtered notification: "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
     move-result-object v3
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v1, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    return v1
+    return v2
 
     :cond_1
-    iget-object v0, p0, Lcom/android/systemui/statusbar/NotificationEntryManager;->mPowerManager:Landroid/os/PowerManager;
+    iget-object v1, p0, Lcom/android/systemui/statusbar/NotificationEntryManager;->mPowerManager:Landroid/os/PowerManager;
 
-    invoke-virtual {v0}, Landroid/os/PowerManager;->isScreenOn()Z
+    invoke-virtual {v1}, Landroid/os/PowerManager;->isScreenOn()Z
 
-    move-result v0
+    move-result v1
 
-    if-eqz v0, :cond_2
+    if-eqz v1, :cond_2
 
-    iget-object v0, p0, Lcom/android/systemui/statusbar/NotificationEntryManager;->mSystemServicesProxy:Lcom/android/systemui/recents/misc/SystemServicesProxy;
+    iget-object v1, p0, Lcom/android/systemui/statusbar/NotificationEntryManager;->mSystemServicesProxy:Lcom/android/systemui/recents/misc/SystemServicesProxy;
 
-    invoke-virtual {v0}, Lcom/android/systemui/recents/misc/SystemServicesProxy;->isDreaming()Z
+    invoke-virtual {v1}, Lcom/android/systemui/recents/misc/SystemServicesProxy;->isDreaming()Z
 
-    move-result v0
+    move-result v1
 
-    if-nez v0, :cond_2
+    if-nez v1, :cond_2
 
-    const/4 v0, 0x1
+    const/4 v1, 0x1
 
     goto :goto_0
 
     :cond_2
-    move v0, v1
+    move v1, v2
 
     :goto_0
-    if-nez v0, :cond_3
+    if-nez v1, :cond_3
 
-    iget-object v2, p0, Lcom/android/systemui/statusbar/NotificationEntryManager;->mPresenter:Lcom/android/systemui/statusbar/NotificationPresenter;
+    iget-object v3, p0, Lcom/android/systemui/statusbar/NotificationEntryManager;->mPresenter:Lcom/android/systemui/statusbar/NotificationPresenter;
 
-    invoke-interface {v2}, Lcom/android/systemui/statusbar/NotificationPresenter;->isCustomDozing()Z
-
-    move-result v2
-
-    if-nez v2, :cond_3
-
-    const-string v2, "NotificationEntryMgr"
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "No peeking: not in use: "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2}, Landroid/service/notification/StatusBarNotification;->getKey()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    return v1
-
-    :cond_3
-    iget-object v2, p0, Lcom/android/systemui/statusbar/NotificationEntryManager;->mPresenter:Lcom/android/systemui/statusbar/NotificationPresenter;
-
-    invoke-interface {v2}, Lcom/android/systemui/statusbar/NotificationPresenter;->isCustomDozing()Z
-
-    move-result v2
-
-    if-nez v2, :cond_4
-
-    iget-object v2, p0, Lcom/android/systemui/statusbar/NotificationEntryManager;->mNotificationData:Lcom/android/systemui/statusbar/NotificationData;
-
-    invoke-virtual {v2, p1}, Lcom/android/systemui/statusbar/NotificationData;->shouldSuppressPeek(Lcom/android/systemui/statusbar/NotificationData$Entry;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_4
-
-    const-string v2, "NotificationEntryMgr"
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "No peeking: suppressed by DND: "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2}, Landroid/service/notification/StatusBarNotification;->getKey()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    return v1
-
-    :cond_4
-    iget-object v2, p0, Lcom/android/systemui/statusbar/NotificationEntryManager;->mPresenter:Lcom/android/systemui/statusbar/NotificationPresenter;
-
-    invoke-interface {v2}, Lcom/android/systemui/statusbar/NotificationPresenter;->isCustomDozing()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_5
-
-    iget-object v2, p0, Lcom/android/systemui/statusbar/NotificationEntryManager;->mNotificationData:Lcom/android/systemui/statusbar/NotificationData;
-
-    invoke-virtual {v2, p1}, Lcom/android/systemui/statusbar/NotificationData;->shouldSuppressAmbient(Lcom/android/systemui/statusbar/NotificationData$Entry;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_5
-
-    const-string v2, "NotificationEntryMgr"
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "No peeking: suppressed by DND: "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2}, Landroid/service/notification/StatusBarNotification;->getKey()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    return v1
-
-    :cond_5
-    invoke-virtual {p1}, Lcom/android/systemui/statusbar/NotificationData$Entry;->hasJustLaunchedFullScreenIntent()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_6
-
-    const-string v2, "NotificationEntryMgr"
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "No peeking: recent fullscreen: "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2}, Landroid/service/notification/StatusBarNotification;->getKey()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    return v1
-
-    :cond_6
-    invoke-virtual {p0, p2}, Lcom/android/systemui/statusbar/NotificationEntryManager;->isSnoozedPackage(Landroid/service/notification/StatusBarNotification;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_7
-
-    iget-object v2, p0, Lcom/android/systemui/statusbar/NotificationEntryManager;->mOPNotifController:Lcom/oneplus/notification/OPNotificationController;
-
-    invoke-virtual {v2, p2}, Lcom/oneplus/notification/OPNotificationController;->shouldPeekSnoozedNotification(Landroid/service/notification/StatusBarNotification;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_7
-
-    const-string v2, "NotificationEntryMgr"
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "No peeking: snoozed package: "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2}, Landroid/service/notification/StatusBarNotification;->getKey()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    return v1
-
-    :cond_7
-    iget-object v2, p0, Lcom/android/systemui/statusbar/NotificationEntryManager;->mPresenter:Lcom/android/systemui/statusbar/NotificationPresenter;
-
-    invoke-interface {v2}, Lcom/android/systemui/statusbar/NotificationPresenter;->isCustomDozing()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_8
-
-    iget-object v2, p0, Lcom/android/systemui/statusbar/NotificationEntryManager;->mOPNotifController:Lcom/oneplus/notification/OPNotificationController;
-
-    invoke-virtual {p2}, Landroid/service/notification/StatusBarNotification;->getPackageName()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Lcom/oneplus/notification/OPNotificationController;->isCallStateOffHook(Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_8
-
-    const/4 v2, 0x3
-
-    goto :goto_1
-
-    :cond_8
-    const/4 v2, 0x4
-
-    :goto_1
-    iget-object v3, p0, Lcom/android/systemui/statusbar/NotificationEntryManager;->mNotificationData:Lcom/android/systemui/statusbar/NotificationData;
-
-    invoke-virtual {p2}, Landroid/service/notification/StatusBarNotification;->getKey()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v4}, Lcom/android/systemui/statusbar/NotificationData;->getImportance(Ljava/lang/String;)I
+    invoke-interface {v3}, Lcom/android/systemui/statusbar/NotificationPresenter;->isCustomDozing()Z
 
     move-result v3
 
-    if-ge v3, v2, :cond_9
+    if-nez v3, :cond_3
 
     const-string v3, "NotificationEntryMgr"
 
@@ -3284,15 +3166,11 @@
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v5, "No peeking: unimportant notification: "
+    const-string v5, "No peeking: not in use: "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p2}, Landroid/service/notification/StatusBarNotification;->getKey()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -3300,68 +3178,291 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    return v1
+    return v2
+
+    :cond_3
+    iget-object v3, p0, Lcom/android/systemui/statusbar/NotificationEntryManager;->mPresenter:Lcom/android/systemui/statusbar/NotificationPresenter;
+
+    invoke-interface {v3}, Lcom/android/systemui/statusbar/NotificationPresenter;->isCustomDozing()Z
+
+    move-result v3
+
+    if-nez v3, :cond_4
+
+    iget-object v3, p0, Lcom/android/systemui/statusbar/NotificationEntryManager;->mNotificationData:Lcom/android/systemui/statusbar/NotificationData;
+
+    invoke-virtual {v3, p1}, Lcom/android/systemui/statusbar/NotificationData;->shouldSuppressPeek(Lcom/android/systemui/statusbar/NotificationData$Entry;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_4
+
+    const-string v3, "NotificationEntryMgr"
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v5, "No peeking: suppressed by DND: "
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    return v2
+
+    :cond_4
+    iget-object v3, p0, Lcom/android/systemui/statusbar/NotificationEntryManager;->mPresenter:Lcom/android/systemui/statusbar/NotificationPresenter;
+
+    invoke-interface {v3}, Lcom/android/systemui/statusbar/NotificationPresenter;->isCustomDozing()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_5
+
+    iget-object v3, p0, Lcom/android/systemui/statusbar/NotificationEntryManager;->mNotificationData:Lcom/android/systemui/statusbar/NotificationData;
+
+    invoke-virtual {v3, p1}, Lcom/android/systemui/statusbar/NotificationData;->shouldSuppressAmbient(Lcom/android/systemui/statusbar/NotificationData$Entry;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_5
+
+    const-string v3, "NotificationEntryMgr"
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v5, "No peeking: suppressed by DND: "
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    return v2
+
+    :cond_5
+    invoke-virtual {p1}, Lcom/android/systemui/statusbar/NotificationData$Entry;->hasJustLaunchedFullScreenIntent()Z
+
+    move-result v3
+
+    if-nez v3, :cond_c
+
+    iget-object v3, p0, Lcom/android/systemui/statusbar/NotificationEntryManager;->mCachedNotifications:Ljava/util/HashMap;
+
+    invoke-virtual {v3, v0}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_6
+
+    iget-object v3, p0, Lcom/android/systemui/statusbar/NotificationEntryManager;->mCachedNotifications:Ljava/util/HashMap;
+
+    invoke-virtual {v3, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lcom/android/systemui/statusbar/NotificationData$Entry;
+
+    invoke-virtual {v3}, Lcom/android/systemui/statusbar/NotificationData$Entry;->hasJustLaunchedFullScreenIntent()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_6
+
+    goto/16 :goto_2
+
+    :cond_6
+    invoke-virtual {p0, p2}, Lcom/android/systemui/statusbar/NotificationEntryManager;->isSnoozedPackage(Landroid/service/notification/StatusBarNotification;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_7
+
+    iget-object v3, p0, Lcom/android/systemui/statusbar/NotificationEntryManager;->mOPNotifController:Lcom/oneplus/notification/OPNotificationController;
+
+    invoke-virtual {v3, p2}, Lcom/oneplus/notification/OPNotificationController;->shouldPeekSnoozedNotification(Landroid/service/notification/StatusBarNotification;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_7
+
+    const-string v3, "NotificationEntryMgr"
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v5, "No peeking: snoozed package: "
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    return v2
+
+    :cond_7
+    iget-object v3, p0, Lcom/android/systemui/statusbar/NotificationEntryManager;->mPresenter:Lcom/android/systemui/statusbar/NotificationPresenter;
+
+    invoke-interface {v3}, Lcom/android/systemui/statusbar/NotificationPresenter;->isCustomDozing()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_8
+
+    iget-object v3, p0, Lcom/android/systemui/statusbar/NotificationEntryManager;->mOPNotifController:Lcom/oneplus/notification/OPNotificationController;
+
+    invoke-virtual {p2}, Landroid/service/notification/StatusBarNotification;->getPackageName()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Lcom/oneplus/notification/OPNotificationController;->isCallStateOffHook(Ljava/lang/String;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_8
+
+    const/4 v3, 0x3
+
+    goto :goto_1
+
+    :cond_8
+    const/4 v3, 0x4
+
+    :goto_1
+    iget-object v4, p0, Lcom/android/systemui/statusbar/NotificationEntryManager;->mNotificationData:Lcom/android/systemui/statusbar/NotificationData;
+
+    invoke-virtual {p2}, Landroid/service/notification/StatusBarNotification;->getKey()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v4, v5}, Lcom/android/systemui/statusbar/NotificationData;->getImportance(Ljava/lang/String;)I
+
+    move-result v4
+
+    if-ge v4, v3, :cond_9
+
+    const-string v4, "NotificationEntryMgr"
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v6, "No peeking: unimportant notification: "
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    return v2
 
     :cond_9
     invoke-virtual {p2}, Landroid/service/notification/StatusBarNotification;->isGroup()Z
 
-    move-result v3
+    move-result v4
 
-    if-eqz v3, :cond_a
+    if-eqz v4, :cond_a
 
     invoke-virtual {p2}, Landroid/service/notification/StatusBarNotification;->getNotification()Landroid/app/Notification;
 
-    move-result-object v3
+    move-result-object v4
 
-    invoke-virtual {v3}, Landroid/app/Notification;->suppressAlertingDueToGrouping()Z
+    invoke-virtual {v4}, Landroid/app/Notification;->suppressAlertingDueToGrouping()Z
 
-    move-result v3
+    move-result v4
 
-    if-eqz v3, :cond_a
+    if-eqz v4, :cond_a
 
-    const-string v3, "NotificationEntryMgr"
+    const-string v4, "NotificationEntryMgr"
 
-    const-string v4, "No peeking: suppressed due to group alert behavior"
+    const-string v5, "No peeking: suppressed due to group alert behavior"
 
-    invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    return v1
+    return v2
 
     :cond_a
-    iget-object v3, p0, Lcom/android/systemui/statusbar/NotificationEntryManager;->mCallback:Lcom/android/systemui/statusbar/NotificationEntryManager$Callback;
+    iget-object v4, p0, Lcom/android/systemui/statusbar/NotificationEntryManager;->mCallback:Lcom/android/systemui/statusbar/NotificationEntryManager$Callback;
 
-    invoke-interface {v3, p1, p2}, Lcom/android/systemui/statusbar/NotificationEntryManager$Callback;->shouldPeek(Lcom/android/systemui/statusbar/NotificationData$Entry;Landroid/service/notification/StatusBarNotification;)Z
+    invoke-interface {v4, p1, p2}, Lcom/android/systemui/statusbar/NotificationEntryManager$Callback;->shouldPeek(Lcom/android/systemui/statusbar/NotificationData$Entry;Landroid/service/notification/StatusBarNotification;)Z
 
-    move-result v3
+    move-result v4
 
-    if-nez v3, :cond_b
+    if-nez v4, :cond_b
 
-    const-string v3, "NotificationEntryMgr"
+    const-string v4, "NotificationEntryMgr"
 
-    const-string v4, "No peeking: callback"
+    const-string v5, "No peeking: callback"
 
-    invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    return v1
+    return v2
 
     :cond_b
-    iget-object v1, p0, Lcom/android/systemui/statusbar/NotificationEntryManager;->mOPNotifController:Lcom/oneplus/notification/OPNotificationController;
+    iget-object v2, p0, Lcom/android/systemui/statusbar/NotificationEntryManager;->mOPNotifController:Lcom/oneplus/notification/OPNotificationController;
 
-    invoke-virtual {v1, p2}, Lcom/oneplus/notification/OPNotificationController;->shouldPeek(Landroid/service/notification/StatusBarNotification;)I
+    invoke-virtual {v2, p2}, Lcom/oneplus/notification/OPNotificationController;->shouldPeek(Landroid/service/notification/StatusBarNotification;)I
 
-    move-result v1
+    move-result v2
 
-    return v1
+    return v2
 
     :cond_c
     :goto_2
-    const-string v0, "NotificationEntryMgr"
+    const-string v3, "NotificationEntryMgr"
 
-    const-string v2, "No peeking: no huns or vr mode"
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    return v1
+    const-string v5, "No peeking: recent fullscreen: "
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    return v2
+
+    :cond_d
+    :goto_3
+    const-string v1, "NotificationEntryMgr"
+
+    const-string v3, "No peeking: no huns or vr mode"
+
+    invoke-static {v1, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    return v2
 .end method
 
 .method protected tagForeground(Landroid/service/notification/StatusBarNotification;)V

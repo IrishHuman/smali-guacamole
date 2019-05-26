@@ -608,7 +608,7 @@
 
     iget-object v15, v0, Lcom/android/systemui/volume/OutputChooserDialog;->mContext:Landroid/content/Context;
 
-    const v8, 0x7f1104f2
+    const v8, 0x7f1104f8
 
     new-array v11, v12, [Ljava/lang/Object;
 
@@ -631,7 +631,7 @@
     :cond_2
     iget-object v8, v0, Lcom/android/systemui/volume/OutputChooserDialog;->mContext:Landroid/content/Context;
 
-    const v11, 0x7f1104f1
+    const v11, 0x7f1104f7
 
     invoke-virtual {v8, v11}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -708,7 +708,7 @@
 
     iget-object v8, v0, Lcom/android/systemui/volume/OutputChooserDialog;->mContext:Landroid/content/Context;
 
-    const v11, 0x7f1104f3
+    const v11, 0x7f1104f9
 
     invoke-virtual {v8, v11}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -869,7 +869,7 @@
 
     iget-object v2, p0, Lcom/android/systemui/volume/OutputChooserDialog;->mContext:Landroid/content/Context;
 
-    const v3, 0x7f110473
+    const v3, 0x7f110479
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -882,7 +882,7 @@
 
     iget-object v2, p0, Lcom/android/systemui/volume/OutputChooserDialog;->mContext:Landroid/content/Context;
 
-    const v3, 0x7f110474
+    const v3, 0x7f11047a
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -893,7 +893,7 @@
     :cond_1
     iget-object v2, p0, Lcom/android/systemui/volume/OutputChooserDialog;->mContext:Landroid/content/Context;
 
-    const v3, 0x7f110472
+    const v3, 0x7f110478
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -904,7 +904,7 @@
 
     aput-object v2, v1, v3
 
-    const v2, 0x7f110471
+    const v2, 0x7f110477
 
     invoke-virtual {v0, v2, v1}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -1310,7 +1310,7 @@
 
     iget-object v3, p0, Lcom/android/systemui/volume/OutputChooserDialog;->mContext:Landroid/content/Context;
 
-    const v4, 0x7f110470
+    const v4, 0x7f110476
 
     invoke-virtual {v3, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -1359,7 +1359,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/volume/OutputChooserDialog;->mView:Lcom/android/systemui/volume/OutputChooserLayout;
 
-    const v1, 0x7f11046e
+    const v1, 0x7f110474
 
     invoke-virtual {v0, v1}, Lcom/android/systemui/volume/OutputChooserLayout;->setTitle(I)V
 
@@ -1368,7 +1368,7 @@
     :cond_0
     iget-object v0, p0, Lcom/android/systemui/volume/OutputChooserDialog;->mView:Lcom/android/systemui/volume/OutputChooserLayout;
 
-    const v1, 0x7f110475
+    const v1, 0x7f11047b
 
     invoke-virtual {v0, v1}, Lcom/android/systemui/volume/OutputChooserLayout;->setTitle(I)V
 
@@ -1867,7 +1867,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f11050d
+    const v2, 0x7f110513
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1881,7 +1881,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f11050f
+    const v2, 0x7f110515
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 

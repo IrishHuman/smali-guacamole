@@ -92,10 +92,6 @@
 
 .method private getSecondaryLabel(Z)Ljava/lang/String;
     .locals 8
-    
-    sget-boolean v0, Lcom/android/mwilky/Renovate;->mHideQsLabels:Z
-    
-    if-nez v0, :cond_hide
 
     iget-object v0, p0, Lcom/android/systemui/qs/tiles/NightDisplayTile;->mController:Lcom/android/internal/app/ColorDisplayController;
 
@@ -105,7 +101,6 @@
 
     packed-switch v0, :pswitch_data_0
 
-    :cond_hide
     const/4 v0, 0x0
 
     return-object v0
@@ -115,7 +110,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/qs/tiles/NightDisplayTile;->mContext:Landroid/content/Context;
 
-    const v1, 0x7f11052c
+    const v1, 0x7f110532
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -126,7 +121,7 @@
     :cond_0
     iget-object v0, p0, Lcom/android/systemui/qs/tiles/NightDisplayTile;->mContext:Landroid/content/Context;
 
-    const v1, 0x7f11052b
+    const v1, 0x7f110531
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -144,7 +139,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f11053f
+    const v1, 0x7f110545
 
     goto :goto_1
 
@@ -155,7 +150,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f11052a
+    const v1, 0x7f110530
 
     :goto_1
     iget-object v2, p0, Lcom/android/systemui/qs/tiles/NightDisplayTile;->mContext:Landroid/content/Context;
@@ -309,7 +304,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/qs/tiles/NightDisplayTile;->mContext:Landroid/content/Context;
 
-    const v1, 0x7f110468
+    const v1, 0x7f11046e
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -320,8 +315,6 @@
 
 .method protected handleClick()V
     .locals 3
-    
-    invoke-virtual {p0}, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->setVibrateTweak()V
 
     invoke-direct {p0}, Lcom/android/systemui/qs/tiles/NightDisplayTile;->isColorCalibrationAvailable()Z
 
@@ -483,7 +476,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/qs/tiles/NightDisplayTile;->mContext:Landroid/content/Context;
 
-    const v1, 0x7f110468
+    const v1, 0x7f11046e
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

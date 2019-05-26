@@ -1028,7 +1028,7 @@ Povezani ste i s VPN-om koji može nadzirati vašu mrežnu aktivnost."</string>
     <string name="op_earphone_connected_success">Upareno. Dodirnite za više postavki.</string>
     <string name="op_earphone_device">DODIRNITE ZA UPARIVANJE</string>
     <string name="op_earphone_title">OnePlus Bullets Wireless</string>
-    <string name="op_emergency_indicator_hint_text">Prstom prijeđite dolje</string>
+    <string name="op_emergency_indicator_hint_text">Prevucite nadolje za žurne službe</string>
     <string name="op_quick_settings_night_display_label">Noćni način rada</string>
     <string name="op_quick_settings_night_display_summary_off">Noćni način rada isključen, dodirnite kako biste ga uključili</string>
     <string name="op_quick_settings_night_display_summary_on">Noćni način rada uključen, dodirnite kako biste ga isključili</string>
@@ -1044,18 +1044,18 @@ Povezani ste i s VPN-om koji može nadzirati vašu mrežnu aktivnost."</string>
     <string name="output_service_wifi">Wi-Fi</string>
     <string name="output_title">Medijski izlaz</string>
     <string name="overheat_dialog_orange_button">Izvrši sad</string>
-    <string name="overheat_dialog_orange_message">"Sljedeće radnje smanjit će temperaturu:
-1.Smanjite svjetlinu
-2.Isključite žarišnu točku
-3.Isključite svjetiljku"</string>
+    <string name="overheat_dialog_orange_message">"Sljedeće će se radnje provesti kako bi se smanjila temperatura:
+1.Smanjenje svjetline
+2.Isključivanje žarišne točke
+3.Isključivanje svjetiljke"</string>
     <string name="overheat_dialog_purple_button">Isključite sad</string>
     <string name="overheat_dialog_purple_message">Telefon se mora isključiti nakon 5 sekundi</string>
     <string name="overheat_dialog_red_message">Obrisat će sve procese aplikacija kako bi se smanjila temperatura</string>
-    <string name="overheat_dialog_title">Temperatura telefon je visoka</string>
-    <string name="overheat_notification_alert">Temperatura telefona je previsoka i isključena je funkcija s velikom potrošnjom energije</string>
+    <string name="overheat_dialog_title">Temperatura telefona je previsoka</string>
+    <string name="overheat_notification_alert">Temperatura telefona je previsoka, zbog čega se isključuju funkcije s velikom potrošnjom energije kako bi se snizila temperatura</string>
     <string name="overheat_notification_resume">Temperatura telefona je snižena i telefon se može normalno upotrebljavati</string>
     <string name="overheat_notification_title_resume">Temperatura telefona je snižena</string>
-    <string name="overheat_toast_content">Temperatura telefona je previsoka i ne preporučuje se upotreba te značajke</string>
+    <string name="overheat_toast_content">Previsoka je temperatura telefona te se ne preporučuje upotreba te značajke</string>
     <string name="overlay_display_devices_title">Simuliraj sekund. zaslone</string>
     <string name="overview">Pregled</string>
     <string name="phone_hint">Prijeđite prstom od ikone za telefon</string>

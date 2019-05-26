@@ -179,7 +179,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f110371
+    const v3, 0x7f110377
 
     invoke-virtual {v2, v3}, Lcom/android/keyguard/KeyguardMessageArea;->setMessage(I)V
 
@@ -198,7 +198,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f110372
+    const v3, 0x7f110378
 
     invoke-virtual {v2, v3}, Lcom/android/keyguard/KeyguardMessageArea;->setMessage(I)V
 
@@ -213,7 +213,7 @@
 
     iget-object v3, p0, Lcom/android/keyguard/KeyguardPatternView$UnlockPatternListener;->this$0:Lcom/android/keyguard/KeyguardPatternView;
 
-    const v4, 0x7f110370
+    const v4, 0x7f110376
 
     invoke-static {v3, v4}, Lcom/android/keyguard/KeyguardPatternView;->access$2200(Lcom/android/keyguard/KeyguardPatternView;I)Ljava/lang/String;
 
@@ -390,7 +390,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f11033b
+    const v3, 0x7f110341
 
     invoke-virtual {v2, v3}, Lcom/android/keyguard/KeyguardMessageArea;->setMessage(I)V
 

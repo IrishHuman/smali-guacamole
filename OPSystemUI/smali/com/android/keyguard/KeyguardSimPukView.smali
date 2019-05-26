@@ -346,7 +346,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f110353
+    const v3, 0x7f110359
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -392,12 +392,12 @@
     :cond_2
     if-eqz p2, :cond_3
 
-    const v2, 0x7f110363
+    const v2, 0x7f110369
 
     goto :goto_1
 
     :cond_3
-    const v2, 0x7f110351
+    const v2, 0x7f110357
 
     :goto_1
     invoke-virtual {p0}, Lcom/android/keyguard/KeyguardSimPukView;->getContext()Landroid/content/Context;
@@ -423,7 +423,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f110367
+    const v4, 0x7f11036d
 
     new-array v1, v1, [Ljava/lang/Object;
 
@@ -484,7 +484,7 @@
 
     invoke-virtual {v2, v0}, Landroid/app/AlertDialog$Builder;->setCancelable(Z)Landroid/app/AlertDialog$Builder;
 
-    const v0, 0x7f110436
+    const v0, 0x7f11043c
 
     const/4 v3, 0x0
 
@@ -538,7 +538,7 @@
 
     iget-object v1, p0, Lcom/android/keyguard/KeyguardSimPukView;->mContext:Landroid/content/Context;
 
-    const v2, 0x7f11036a
+    const v2, 0x7f110370
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

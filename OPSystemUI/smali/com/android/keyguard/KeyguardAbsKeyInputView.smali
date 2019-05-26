@@ -702,7 +702,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f110365
+    const v4, 0x7f11036b
 
     const/4 v5, 0x1
 
@@ -742,7 +742,7 @@
 .method protected getWrongPasswordStringId()I
     .locals 1
 
-    const v0, 0x7f11036f
+    const v0, 0x7f110375
 
     return v0
 .end method
@@ -1276,7 +1276,7 @@
 
     iget-object v0, p0, Lcom/android/keyguard/KeyguardAbsKeyInputView;->mSecurityMessageDisplay:Lcom/android/keyguard/SecurityMessageDisplay;
 
-    const v1, 0x7f110348
+    const v1, 0x7f11034e
 
     invoke-interface {v0, v1}, Lcom/android/keyguard/SecurityMessageDisplay;->setMessage(I)V
 

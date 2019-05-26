@@ -572,7 +572,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->mIndicationController:Lcom/android/systemui/statusbar/KeyguardIndicationController;
 
-    const v1, 0x7f11031a
+    const v1, 0x7f110320
 
     invoke-virtual {v0, v1}, Lcom/android/systemui/statusbar/KeyguardIndicationController;->showTransientIndication(I)V
 
@@ -1110,19 +1110,6 @@
     return-void
 
     :cond_0
-    sget-boolean v1, Lcom/android/mwilky/Renovate;->mHideLockscreenShortcuts:Z
-    
-    if-eqz v1, :cond_stock
-    
-    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->mRightAffordanceView:Lcom/android/systemui/statusbar/KeyguardAffordanceView;
-    
-    const/16 v0, 0x8
-	
-    invoke-virtual {v1, v0}, Lcom/android/systemui/statusbar/KeyguardAffordanceView;->setVisibility(I)V
-    
-    return-void
-    
-    :cond_stock
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->mRightAffordanceView:Lcom/android/systemui/statusbar/KeyguardAffordanceView;
 
     iget-boolean v1, p0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->mDozing:Z
@@ -1170,19 +1157,6 @@
 .method private updateLeftAffordanceIcon()V
     .locals 11
 
-    sget-boolean v1, Lcom/android/mwilky/Renovate;->mHideLockscreenShortcuts:Z
-    
-    if-eqz v1, :cond_stock
-    
-    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->mLeftAffordanceView:Lcom/android/systemui/statusbar/KeyguardAffordanceView;
-    
-    const/16 v0, 0x8
-	
-    invoke-virtual {v1, v0}, Lcom/android/systemui/statusbar/KeyguardAffordanceView;->setVisibility(I)V
-    
-    return-void
-    
-    :cond_stock
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->mLeftButton:Lcom/android/systemui/plugins/IntentButtonProvider$IntentButton;
 
     invoke-interface {v0}, Lcom/android/systemui/plugins/IntentButtonProvider$IntentButton;->getIcon()Lcom/android/systemui/plugins/IntentButtonProvider$IntentButton$IconState;
@@ -1458,19 +1432,6 @@
 .method private updateRightAffordanceIcon()V
     .locals 11
 
-    sget-boolean v1, Lcom/android/mwilky/Renovate;->mHideLockscreenShortcuts:Z
-    
-    if-eqz v1, :cond_stock
-    
-    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->mRightAffordanceView:Lcom/android/systemui/statusbar/KeyguardAffordanceView;
-    
-    const/16 v0, 0x8
-	
-    invoke-virtual {v1, v0}, Lcom/android/systemui/statusbar/KeyguardAffordanceView;->setVisibility(I)V
-    
-    return-void
-    
-    :cond_stock
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->mRightButton:Lcom/android/systemui/plugins/IntentButtonProvider$IntentButton;
 
     invoke-interface {v0}, Lcom/android/systemui/plugins/IntentButtonProvider$IntentButton;->getIcon()Lcom/android/systemui/plugins/IntentButtonProvider$IntentButton$IconState;

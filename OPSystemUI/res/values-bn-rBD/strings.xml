@@ -76,24 +76,24 @@
     <string name="op_earphone_connected_success">জোড়া বাঁধা হয়েছে। আরও সেট করতে আলতো চাপুন।</string>
     <string name="op_earphone_device">জোড়া বাঁধতে আলতো চাপুন</string>
     <string name="op_earphone_title">OnePlus Bullets Wireless</string>
-    <string name="op_emergency_indicator_hint_text">নিচের দিকে সোয়াইপ করুন</string>
+    <string name="op_emergency_indicator_hint_text">জরুরি পরিষেবাগুলি থেকে নীচে সোয়াইপ করুন</string>
     <string name="op_quick_settings_night_display_label">রাত্রি মোড</string>
     <string name="op_quick_settings_night_display_summary_off">নাইট মোড বন্ধ, চালু করতে আলতো চাপুন</string>
     <string name="op_quick_settings_night_display_summary_on">নাইট মোড চালু, বন্ধ করতে আলতো চাপুন</string>
     <string name="output_chooser_empty_hint">কোনো সংযুক্ত ডিভাইস নেই</string>
     <string name="overheat_dialog_orange_button">এখন করুন</string>
-    <string name="overheat_dialog_orange_message">"তাপমাত্রা কমাতে এইগুলি করা হবে
+    <string name="overheat_dialog_orange_message">"তাপমাত্রা কমাতে নিম্নোক্ত কার্যকলাপ সম্পন্ন করা হবে
 1.উজ্জ্বলতা কমানো
-2.হটস্পট বন্ধ করা
-3.ফ্ল্যাশলাইট বন্ধ করা"</string>
+2.হটস্পট বন্ধ
+3.ফ্ল্যাশলাইট বন্ধ"</string>
     <string name="overheat_dialog_purple_button">এখন পাওয়ার অফ করুন</string>
     <string name="overheat_dialog_purple_message">ফোনটি 5 সেকেন্ড পরে পাওয়াফ অফ হবে</string>
     <string name="overheat_dialog_red_message">তাপমাত্রা কমাতে সকল অ্যাপ্লিকেশন প্রক্রিয়া সাফ করা হবে</string>
-    <string name="overheat_dialog_title">ফোন গরম হয়ে গেছে</string>
-    <string name="overheat_notification_alert">ফোন খুব বেশি গরম হয়ে গেছে এবং বেশি ব্যাটারি খরচের বৈশিষ্ট্যটি বন্ধ করা হয়েছে</string>
+    <string name="overheat_dialog_title">আপনার ফোন খুব গরম হয়ে গেছে</string>
+    <string name="overheat_notification_alert">আপনার ফোন খুব গরম হয়ে গেছে এবং তাপমাত্রা কমাতে বেশি ব্যাটারী খরচকারী ফাংশনগুলি বন্ধ করা হয়েছে</string>
     <string name="overheat_notification_resume">ফোন স্বাভাবিক তাপমাত্রায় ফিরে এসেছে এবং ফোনটি এখন স্বাভাবিক ভাবে ব্যবহার করা যাবে</string>
     <string name="overheat_notification_title_resume">ফোনকে স্বাভাবিক তাপমাত্রায় ফিরিয়ে আনা হয়েছে</string>
-    <string name="overheat_toast_content">ফোন খুব বেশি গরম হয়ে গেছে, এই বৈশিষ্ট্যটি ব্যবহার না করাই ভালো</string>
+    <string name="overheat_toast_content">ফোন খুব গরম হয়ে গেছে, এই ফিচারটি ব্যবহারের সুপারিশ করা হয় না</string>
     <string name="prevent_view_title">পকেট মোড চালু রয়েছে।</string>
     <string name="prevent_view_title_cancel">আপনার ফোন সক্রিয় করতে:</string>
     <string name="prevent_view_top_tag_cancel">অনুগ্রহ করে আপনার ফোনের নীল এলাকা ঢাকবেন না এবং নীল এলাকায় লেগে থাকা ময়লা বা ধুলো পরিষ্কার করুন।</string>

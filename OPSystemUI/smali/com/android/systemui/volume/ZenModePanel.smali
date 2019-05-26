@@ -467,7 +467,7 @@
     :pswitch_0
     iget-object v2, p0, Lcom/android/systemui/volume/ZenModePanel;->mContext:Landroid/content/Context;
 
-    const v3, 0x7f1102ce
+    const v3, 0x7f1102d4
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -478,7 +478,7 @@
     :pswitch_1
     iget-object v2, p0, Lcom/android/systemui/volume/ZenModePanel;->mContext:Landroid/content/Context;
 
-    const v3, 0x7f1102d3
+    const v3, 0x7f1102d9
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -489,7 +489,7 @@
     :pswitch_2
     iget-object v2, p0, Lcom/android/systemui/volume/ZenModePanel;->mContext:Landroid/content/Context;
 
-    const v3, 0x7f1102d6
+    const v3, 0x7f1102dc
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -502,7 +502,7 @@
 
     iget-object v3, p0, Lcom/android/systemui/volume/ZenModePanel;->mContext:Landroid/content/Context;
 
-    const v4, 0x7f110710
+    const v4, 0x7f110716
 
     const/4 v5, 0x2
 
@@ -1321,13 +1321,13 @@
 
     if-gez v9, :cond_4
 
-    const v6, 0x7f11070a
+    const v6, 0x7f110710
 
     goto :goto_1
 
     :cond_3
     :goto_0
-    const v6, 0x7f11070b
+    const v6, 0x7f110711
 
     :cond_4
     :goto_1
@@ -2429,7 +2429,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "select "
+    const-string/jumbo v2, "select "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2839,14 +2839,14 @@
 
     if-eqz v3, :cond_a
 
-    const v6, 0x7f110718
+    const v6, 0x7f11071e
 
     goto :goto_6
 
     :cond_a
     if-eqz v5, :cond_b
 
-    const v6, 0x7f11070c
+    const v6, 0x7f110712
 
     goto :goto_6
 
@@ -2855,12 +2855,12 @@
 
     if-eqz v6, :cond_c
 
-    const v6, 0x7f11071a
+    const v6, 0x7f110720
 
     goto :goto_6
 
     :cond_c
-    const v6, 0x7f110719
+    const v6, 0x7f11071f
 
     :goto_6
     iget-object v7, p0, Lcom/android/systemui/volume/ZenModePanel;->mConfigurableTexts:Lcom/android/systemui/volume/ConfigurableTexts;
@@ -2986,9 +2986,9 @@
 
     move-result-object v1
 
-    const v2, 0x7f1102d4
+    const v2, 0x7f1102da
 
-    const v3, 0x7f1102d5
+    const v3, 0x7f1102db
 
     invoke-virtual {v0, v2, v3, v1}, Lcom/android/systemui/volume/SegmentedButtons;->addButton(IILjava/lang/Object;)V
 
@@ -3000,9 +3000,9 @@
 
     move-result-object v1
 
-    const v2, 0x7f1102cf
+    const v2, 0x7f1102d5
 
-    const v3, 0x7f1102ce
+    const v3, 0x7f1102d4
 
     invoke-virtual {v0, v2, v3, v1}, Lcom/android/systemui/volume/SegmentedButtons;->addButton(IILjava/lang/Object;)V
 
@@ -3014,9 +3014,9 @@
 
     move-result-object v1
 
-    const v2, 0x7f1102d7
+    const v2, 0x7f1102dd
 
-    const v3, 0x7f1102d6
+    const v3, 0x7f1102dc
 
     invoke-virtual {v0, v2, v3, v1}, Lcom/android/systemui/volume/SegmentedButtons;->addButton(IILjava/lang/Object;)V
 
@@ -3479,7 +3479,7 @@
 
     iget-object v1, p0, Lcom/android/systemui/volume/ZenModePanel;->mZenIntroductionCustomize:Landroid/widget/TextView;
 
-    const v2, 0x7f110717
+    const v2, 0x7f11071d
 
     invoke-virtual {v0, v1, v2}, Lcom/android/systemui/volume/ConfigurableTexts;->add(Landroid/widget/TextView;I)I
 

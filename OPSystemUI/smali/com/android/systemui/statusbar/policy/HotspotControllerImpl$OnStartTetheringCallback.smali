@@ -42,7 +42,7 @@
 .method public onTetheringFailed()V
     .locals 2
 
-    invoke-static {}, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->access$200()Z
+    invoke-static {}, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->access$500()Z
 
     move-result v0
 
@@ -59,7 +59,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->access$302(Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;Z)Z
+    invoke-static {v0, v1}, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->access$602(Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;Z)Z
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl$OnStartTetheringCallback;->this$0:Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;
 
@@ -69,7 +69,7 @@
 
     move-result v1
 
-    invoke-static {v0, v1}, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->access$400(Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;Z)V
+    invoke-static {v0, v1}, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->access$700(Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;Z)V
 
     return-void
 .end method
@@ -77,7 +77,7 @@
 .method public onTetheringStarted()V
     .locals 2
 
-    invoke-static {}, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->access$200()Z
+    invoke-static {}, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->access$500()Z
 
     move-result v0
 
@@ -94,7 +94,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->access$302(Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;Z)Z
+    invoke-static {v0, v1}, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->access$602(Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;Z)Z
 
     return-void
 .end method

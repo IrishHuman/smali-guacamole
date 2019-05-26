@@ -166,7 +166,7 @@
 
     check-cast v3, Landroidx/slice/SliceItem;
 
-    const-string v4, "see_more"
+    const-string/jumbo v4, "see_more"
 
     const/4 v5, 0x0
 
@@ -190,7 +190,7 @@
 
     const-string/jumbo v6, "shortcut"
 
-    const-string v7, "see_more"
+    const-string/jumbo v7, "see_more"
 
     const-string v8, "keywords"
 
@@ -430,7 +430,7 @@
     iput-object v0, p0, Landroidx/slice/widget/GridContent;->mLayoutDirItem:Landroidx/slice/SliceItem;
 
     :cond_2
-    const-string v0, "see_more"
+    const-string/jumbo v0, "see_more"
 
     invoke-static {p1, v1, v0, v1}, Landroidx/slice/core/SliceQuery;->find(Landroidx/slice/SliceItem;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroidx/slice/SliceItem;
 

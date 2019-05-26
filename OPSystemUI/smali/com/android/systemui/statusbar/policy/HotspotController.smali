@@ -38,5 +38,13 @@
 .method public abstract isHotspotTransient()Z
 .end method
 
+.method public isOperatorHotspotDisable()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
 .method public abstract setHotspotEnabled(Z)V
 .end method

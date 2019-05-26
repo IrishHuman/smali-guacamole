@@ -1028,7 +1028,7 @@ Nakakonekta ka rin sa isang VPN, na may kakayahang subaybayan ang iyong aktibida
     <string name="op_earphone_connected_success">Napares na. I-tap upang magtakda pa.</string>
     <string name="op_earphone_device">I-TAP PARA IPARES</string>
     <string name="op_earphone_title">OnePlus Bullets Wireless</string>
-    <string name="op_emergency_indicator_hint_text">I-swipe Pababa</string>
+    <string name="op_emergency_indicator_hint_text">Mag-swipe pababa para sa emergency service</string>
     <string name="op_quick_settings_night_display_label">Pamamaraan sa gabi</string>
     <string name="op_quick_settings_night_display_summary_off">Ang Mode sa Gabi ay hindi gumagana, i-tap upang buksan ito</string>
     <string name="op_quick_settings_night_display_summary_on">Ang Mode sa Gabi ay gumagana, i-tap upang patayin ito</string>
@@ -1044,18 +1044,18 @@ Nakakonekta ka rin sa isang VPN, na may kakayahang subaybayan ang iyong aktibida
     <string name="output_service_wifi">Wi-Fi</string>
     <string name="output_title">Output ng media</string>
     <string name="overheat_dialog_orange_button">I-execute ngayon</string>
-    <string name="overheat_dialog_orange_message">"Gagawin ang mga pagkilos na ito upang pababain ang temperatura
-1.Babawasan ang liwanag
-2.Io-off ang hotspot
-3.Io-off ang flashlight"</string>
+    <string name="overheat_dialog_orange_message">"Isasagawa ang mga sumusunod na operasyon para bumaba ang temperatura
+1.Bawasan ang liwanag
+2.I-off ang hotspot
+3.I-off ang flashlight"</string>
     <string name="overheat_dialog_purple_button">I-off ngayon</string>
     <string name="overheat_dialog_purple_message">Io-off ang telepono pagkalipas ng 5 segundo</string>
     <string name="overheat_dialog_red_message">Iki-clear ang lahat ng proseso ng application upang mapababa ang temperatura</string>
-    <string name="overheat_dialog_title">Mataas ang temperatura ng telepono</string>
-    <string name="overheat_notification_alert">Masyadong mataas ang temperatura ng telepono, at in-off ang function na malakas na paggamit ng baterya</string>
+    <string name="overheat_dialog_title">Napakataas ng temperatura ng telepono mo</string>
+    <string name="overheat_notification_alert">Napakataas ng temperatura ng telepono mo, at ini-off ang mga function na malakas kumain ng baterya para mapababa ang temperatura</string>
     <string name="overheat_notification_resume">Naibalik ang temperatura ng telepono at magagamit nang normal ang telepono</string>
     <string name="overheat_notification_title_resume">Naibalik ang temperatura ng telepono</string>
-    <string name="overheat_toast_content">Masyadong mataas ang temperatura ng telepono, hindi inirerekomenda na gamitin ang feature na ito</string>
+    <string name="overheat_toast_content">Mataas ang temperatura ng telepono, hindi inirerekomendang gamitin ang feature na ito</string>
     <string name="overlay_display_devices_title">I-simulate, ika-2 display</string>
     <string name="overview">Pangkalahatang-ideya</string>
     <string name="phone_hint">Mag-swipe mula sa icon para sa telepono</string>

@@ -382,7 +382,7 @@
 
     iput-object v4, v6, Lcom/android/systemui/statusbar/policy/MobileSignalController;->mFiveGState:Lcom/android/systemui/statusbar/policy/FiveGServiceClient$FiveGServiceState;
 
-    const v4, 0x7f1105ea
+    const v4, 0x7f1105f0
 
     invoke-virtual {v6, v4}, Lcom/android/systemui/statusbar/policy/MobileSignalController;->getStringIfExists(I)Ljava/lang/String;
 

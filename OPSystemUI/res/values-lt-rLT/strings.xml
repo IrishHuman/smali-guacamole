@@ -76,24 +76,24 @@
     <string name="op_earphone_connected_success">Susieta. Bakstelėkite, kad nustatytumėte daugiau.</string>
     <string name="op_earphone_device">BAKSTELĖKITE, KAD SUSIETUMĖTE</string>
     <string name="op_earphone_title">OnePlus Bullets Wireless</string>
-    <string name="op_emergency_indicator_hint_text">Perbraukti žemyn</string>
+    <string name="op_emergency_indicator_hint_text">Braukdami žemyn susisiekite su pagalbos tarnybomis</string>
     <string name="op_quick_settings_night_display_label">Nakties režimas</string>
     <string name="op_quick_settings_night_display_summary_off">Nakties režimas išjungtas, bakstelėkite, kad įjungtumėte</string>
     <string name="op_quick_settings_night_display_summary_on">Nakties režimas įjungtas, bakstelėkite, kad išjungtumėte</string>
     <string name="output_chooser_empty_hint">Nėra prijungto įrenginio</string>
     <string name="overheat_dialog_orange_button">Vykdyti dabar</string>
-    <string name="overheat_dialog_orange_message">"Imkitės šių veiksmų, kad temperatūra sumažėtų. 
-1.Sumažinkite ryškumą
-2.Išjunkite aktyviąją sritį
-3.Išjunkite žibintuvėlį"</string>
+    <string name="overheat_dialog_orange_message">"Temperatūrai sumažinti bus atlikti toliau nurodyti veiksmai
+1. Sumažinti ryškumą
+2. Išjungti interneto prieigos tašką
+3. Išjungti blykstę"</string>
     <string name="overheat_dialog_purple_button">Išjungti dabar</string>
     <string name="overheat_dialog_purple_message">Po 5 sek. telefonas bus išjungtas</string>
     <string name="overheat_dialog_red_message">Kad temperatūra sumažėtų, bus išjungti visi programėlių procesai</string>
-    <string name="overheat_dialog_title">Aukšta telefono temperatūra</string>
-    <string name="overheat_notification_alert">Per aukšta telefono temperatūra ir išjungta didelio energijos suvartojimo funkcija</string>
+    <string name="overheat_dialog_title">Jūsų telefono temperatūra per aukšta</string>
+    <string name="overheat_notification_alert">Jūsų telefono temperatūra per aukšta, todėl temperatūrai sumažinti išjungtos daug energijos vartojančios funkcijos</string>
     <string name="overheat_notification_resume">Telefono temperatūra atstatyta ir telefoną dabar galima naudoti įprastai</string>
     <string name="overheat_notification_title_resume">Telefono temperatūra atstatyta</string>
-    <string name="overheat_toast_content">Per aukšta telefono temperatūra, šios funkcijos naudoti nerekomenduojama</string>
+    <string name="overheat_toast_content">Jūsų telefono temperatūra aukšta, šia funkcija nerekomenduojama naudotis</string>
     <string name="prevent_view_title">Įjungtas kišeninis režimas</string>
     <string name="prevent_view_title_cancel">Kad suaktyvintumėte savo telefoną:</string>
     <string name="prevent_view_top_tag_cancel">Neuždenkite mėlynos spalvos savo telefono srities ir nuo jos nuvalykite visus nešvarumus ar dulkes.</string>

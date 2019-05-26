@@ -329,7 +329,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f11042a
+    const v1, 0x7f110430
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -607,7 +607,7 @@
 
     check-cast v1, Lcom/android/systemui/statusbar/NotificationSnooze;
 
-    const v2, 0x7f11042c
+    const v2, 0x7f110432
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -2175,7 +2175,7 @@
 
     check-cast v4, Lcom/android/systemui/plugins/statusbar/NotificationMenuRowPlugin$MenuItem;
 
-    const v5, 0x7f110429
+    const v5, 0x7f11042f
 
     invoke-virtual {v0, v5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 

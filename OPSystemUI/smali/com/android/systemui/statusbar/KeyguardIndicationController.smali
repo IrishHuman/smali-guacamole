@@ -891,7 +891,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f110310
+    const v1, 0x7f110316
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -953,29 +953,29 @@
 
     if-eqz v0, :cond_2
 
-    const v5, 0x7f110316
+    const v5, 0x7f11031c
 
     goto :goto_4
 
     :cond_2
-    const v5, 0x7f11032f
+    const v5, 0x7f110335
 
     goto :goto_4
 
     :pswitch_0
-    const v5, 0x7f110332
+    const v5, 0x7f110338
 
     goto :goto_4
 
     :pswitch_1
     if-eqz v0, :cond_3
 
-    const v5, 0x7f110317
+    const v5, 0x7f11031d
 
     goto :goto_2
 
     :cond_3
-    const v5, 0x7f110330
+    const v5, 0x7f110336
 
     :goto_2
     goto :goto_4
@@ -983,12 +983,12 @@
     :cond_4
     if-eqz v0, :cond_5
 
-    const v5, 0x7f110319
+    const v5, 0x7f11031f
 
     goto :goto_3
 
     :cond_5
-    const v5, 0x7f110331
+    const v5, 0x7f110337
 
     :goto_3
     nop
@@ -2679,32 +2679,7 @@
     iget-object v5, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mChargingInfo:Landroid/widget/TextView;
 
     invoke-virtual {v5, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-    
-    invoke-virtual {p0}, Lcom/android/systemui/statusbar/KeyguardIndicationController;->setViewsVisibility()V
 
     :cond_7
-    return-void
-.end method
-
-.method public setViewsVisibility()V
-    .locals 4
-
-    .prologue    
-    sget-boolean v0, Lcom/android/mwilky/Renovate;->mHideLockscreenClock:Z
-    
-    iget-object v1, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mChargingInfo:Landroid/widget/TextView;
-    
-    if-nez v0, :cond_hide
-    
-    const v2, 0x0
-    
-    goto :goto_vis    
-    
-    :cond_hide
-    const v2, 0x8
-    
-    :goto_vis
-    invoke-virtual {v1, v2}, Landroid/widget/TextView;->setVisibility(I)V
-    
     return-void
 .end method

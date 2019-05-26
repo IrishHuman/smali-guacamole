@@ -4990,15 +4990,8 @@
 .end method
 
 .method public isUserExpanded()Z
-    .locals 2
-    
-    sget-boolean v1, Lcom/android/mwilky/Renovate;->mExpandedNotifications:Z
-    
-    if-eqz v1, :cond_stock
-    
-    return v1
-    
-    :cond_stock
+    .locals 1
+
     iget-boolean v0, p0, Lcom/android/systemui/statusbar/ExpandableNotificationRow;->mUserExpanded:Z
 
     return v0
@@ -5683,7 +5676,7 @@
 
     move-result-object v6
 
-    const v7, 0x7f11042b
+    const v7, 0x7f110431
 
     invoke-virtual {v6, v7}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 

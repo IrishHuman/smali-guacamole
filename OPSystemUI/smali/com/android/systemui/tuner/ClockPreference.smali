@@ -48,7 +48,7 @@
 
     new-array v0, v0, [Ljava/lang/CharSequence;
 
-    const-string v1, "seconds"
+    const-string/jumbo v1, "seconds"
 
     const/4 v2, 0x0
 
@@ -205,7 +205,7 @@
 
     if-eqz v0, :cond_3
 
-    const-string v0, "seconds"
+    const-string/jumbo v0, "seconds"
 
     invoke-virtual {p0, v0}, Lcom/android/systemui/tuner/ClockPreference;->setValue(Ljava/lang/String;)V
 
@@ -245,7 +245,7 @@
 
     const-string v1, "clock_seconds"
 
-    const-string v2, "seconds"
+    const-string/jumbo v2, "seconds"
 
     invoke-virtual {v2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 

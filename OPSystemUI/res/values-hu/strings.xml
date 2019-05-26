@@ -1028,7 +1028,7 @@ VPN-hez is kapcsolódik, amely szintén figyelheti hálózati tevékenységét."
     <string name="op_earphone_connected_success">Párosítva. Koppintson a további beállításokért.</string>
     <string name="op_earphone_device">KOPPINTSON A PÁROSÍTÁSHOZ</string>
     <string name="op_earphone_title">OnePlus Bullets Wireless</string>
-    <string name="op_emergency_indicator_hint_text">Legyintsen lefelé</string>
+    <string name="op_emergency_indicator_hint_text">Lapozzon le a vészhelyzeti szolgáltatásokhoz</string>
     <string name="op_quick_settings_night_display_label">Éjszakai mód</string>
     <string name="op_quick_settings_night_display_summary_off">Éjszakai mód nem aktív, koppintásra bekapcsol</string>
     <string name="op_quick_settings_night_display_summary_on">Éjszakai mód aktív, koppintásra kikapcsol</string>
@@ -1044,18 +1044,18 @@ VPN-hez is kapcsolódik, amely szintén figyelheti hálózati tevékenységét."
     <string name="output_service_wifi">Wi-Fi</string>
     <string name="output_title">Médiakimenet</string>
     <string name="overheat_dialog_orange_button">Végrehajtás most</string>
-    <string name="overheat_dialog_orange_message">"Megteszi a következő lépéseket a hőmérséklet csökkentése érdekében
-1.Csökkenti a fényerőt
-2.Kikapcsolja a hotspotot
-3.Kikapcsolja a zseblámpát"</string>
+    <string name="overheat_dialog_orange_message">"A következő műveletek lesznek elvégezve a hőmérséklet csökkentése érdekében
+1.Fényerő csökkentése
+2.Hotspot kikapcsolása
+3. Zseblámpa kikapcsolása"</string>
     <string name="overheat_dialog_purple_button">Kikapcsolás most</string>
     <string name="overheat_dialog_purple_message">A telefon kikapcsol 5 másodperc múlva</string>
     <string name="overheat_dialog_red_message">Töröl minden alkalmazásfolyamatot, hogy csökkentse a hőmérsékletet</string>
-    <string name="overheat_dialog_title">A telefon hőmérséklete túl magas</string>
-    <string name="overheat_notification_alert">A telefon hőmérséklete túl magas, ezért a sok energiát fogyasztó funkció kikapcsol</string>
+    <string name="overheat_dialog_title">A telefonjának hőmérséklete túl magas</string>
+    <string name="overheat_notification_alert">A telefonja hőmérséklete túl magas, ezért a nagy energiaigényű alkalmazások ki lettek kapcsolva a hőmérséklet csökkentése érdekében</string>
     <string name="overheat_notification_resume">A telefon hőmérséklete helyreállt és a telefon normálisan használható</string>
     <string name="overheat_notification_title_resume">A telefon hőmérséklete helyreállt</string>
-    <string name="overheat_toast_content">A telefon hőmérséklete túl magas, nem javasolt használni ezt a funkciót</string>
+    <string name="overheat_toast_content">A telefon hőmérsékleti állapota túl magas, ezért nem javasolt ennek a funkciónak a használata</string>
     <string name="overlay_display_devices_title">Másodlagos kijelzők szimulálása</string>
     <string name="overview">Áttekintés</string>
     <string name="phone_hint">A telefonhoz csúsztasson az ikonról</string>

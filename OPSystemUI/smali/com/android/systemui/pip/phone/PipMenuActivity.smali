@@ -1854,7 +1854,7 @@
 
     invoke-direct {p0, v0}, Lcom/android/systemui/pip/phone/PipMenuActivity;->updateFromIntent(Landroid/content/Intent;)V
 
-    const v0, 0x7f11048e
+    const v0, 0x7f110494
 
     invoke-virtual {p0, v0}, Lcom/android/systemui/pip/phone/PipMenuActivity;->setTitle(I)V
 

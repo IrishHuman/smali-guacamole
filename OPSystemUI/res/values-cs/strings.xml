@@ -1035,7 +1035,7 @@ Jste také připojeni k síti VPN, která může sledovat vaši aktivitu v sí
     <string name="op_earphone_connected_success">Spárováno. Klepnutím nastavte další.</string>
     <string name="op_earphone_device">KLEPNUTÍM SPÁRUJTE</string>
     <string name="op_earphone_title">OnePlus Bullets Wireless</string>
-    <string name="op_emergency_indicator_hint_text">Přejeďte dolů</string>
+    <string name="op_emergency_indicator_hint_text">Potáhněte prstem dolů pro tísňové služby</string>
     <string name="op_quick_settings_night_display_label">Noční režim</string>
     <string name="op_quick_settings_night_display_summary_off">Noční režim vypnut, klepnutím zapnete</string>
     <string name="op_quick_settings_night_display_summary_on">Noční režim zapnut, klepnutím vypnete</string>
@@ -1051,18 +1051,18 @@ Jste také připojeni k síti VPN, která může sledovat vaši aktivitu v sí
     <string name="output_service_wifi">Wi-Fi</string>
     <string name="output_title">Výstup médií</string>
     <string name="overheat_dialog_orange_button">Spustit nyní</string>
-    <string name="overheat_dialog_orange_message">"Ke snížení teploty provedeme tyto akce
-1.Snížení jasu
-2.Vypnutí hotspotu
-3.Vypnutí svítilny"</string>
+    <string name="overheat_dialog_orange_message">"Ke snížení teploty provedeme tyto operace:
+1. Snížení jasu
+2. Vypnutí hotspotu
+3. Vypnutí svítilny"</string>
     <string name="overheat_dialog_purple_button">Vypnout nyní</string>
     <string name="overheat_dialog_purple_message">Telefon se po 5 sekundách vypne</string>
     <string name="overheat_dialog_red_message">Ke snížení teploty ukončíme procesy všech aplikací</string>
-    <string name="overheat_dialog_title">Teplota telefonu je vysoká</string>
-    <string name="overheat_notification_alert">Teplota telefonu je příliš vysoká a funkce s vysokou spotřebou energie je vypnuta</string>
+    <string name="overheat_dialog_title">Teplota telefonu je příliš vysoká</string>
+    <string name="overheat_notification_alert">Teplota telefonu je příliš vysoká. Ke snížení teploty vypneme funkce s vysokou spotřebou energie</string>
     <string name="overheat_notification_resume">Teplota telefonu byla obnovena a telefon můžete normálně používat</string>
     <string name="overheat_notification_title_resume">Teplota telefonu byla obnovena</string>
-    <string name="overheat_toast_content">Teplota telefonu je příliš vysoká, a proto nedoporučujeme používat tuto funkci</string>
+    <string name="overheat_toast_content">Telefonu je ve stavu s příliš vysokou teplotou. Nedoporučujeme používat tuto funkci</string>
     <string name="overlay_display_devices_title">Simulovat sekundární obrazovky</string>
     <string name="overview">Přehled</string>
     <string name="phone_hint">Telefon otevřete přejetím prstem od ikony</string>

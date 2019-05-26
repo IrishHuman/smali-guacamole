@@ -7,13 +7,6 @@
 .implements Lcom/android/systemui/statusbar/policy/NextAlarmController$NextAlarmChangeCallback;
 .implements Lcom/android/systemui/statusbar/policy/ZenModeController$Callback;
 
-# annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Lcom/android/systemui/qs/QuickStatusBarHeader$10;
-    }
-.end annotation
-
 
 # static fields
 .field private static final PKG_OP_DESKCLOCK:[Ljava/lang/String;
@@ -28,15 +21,13 @@
 
 .field private mClockView:Lcom/android/systemui/statusbar/policy/Clock;
 
-.field private mRightClockView:Lcom/android/systemui/statusbar/policy/ClockRight;
-
 .field private mDateView:Lcom/android/systemui/statusbar/policy/DateView;
 
 .field private mExpanded:Z
 
 .field private final mHandler:Landroid/os/Handler;
 
-.field public mHeaderQsPanel:Lcom/android/systemui/qs/QuickQSPanel;
+.field protected mHeaderQsPanel:Lcom/android/systemui/qs/QuickQSPanel;
 
 .field private mHeaderTextContainerAlphaAnimator:Lcom/android/systemui/qs/TouchAnimator;
 
@@ -158,14 +149,6 @@
     iput v0, p0, Lcom/android/systemui/qs/QuickStatusBarHeader;->mShownCount:I
 
     return-void
-.end method
-
-.method static synthetic access$001(Lcom/android/systemui/qs/QuickStatusBarHeader;)Lcom/android/systemui/qs/QSPanel;
-    .locals 1
-
-    iget-object v0, p0, Lcom/android/systemui/qs/QuickStatusBarHeader;->mQsPanel:Lcom/android/systemui/qs/QSPanel;
-
-    return-object v0
 .end method
 
 .method static synthetic access$002(Lcom/android/systemui/qs/QuickStatusBarHeader;I)I
@@ -853,7 +836,7 @@
 
     iget-object v5, p0, Lcom/android/systemui/qs/QuickStatusBarHeader;->mRingerModeTextView:Landroid/widget/TextView;
 
-    const v6, 0x7f1104d2
+    const v6, 0x7f1104d8
 
     invoke-virtual {v5, v6}, Landroid/widget/TextView;->setText(I)V
 
@@ -874,7 +857,7 @@
 
     iget-object v5, p0, Lcom/android/systemui/qs/QuickStatusBarHeader;->mRingerModeTextView:Landroid/widget/TextView;
 
-    const v6, 0x7f1104d1
+    const v6, 0x7f1104d7
 
     invoke-virtual {v5, v6}, Landroid/widget/TextView;->setText(I)V
 
@@ -1124,7 +1107,7 @@
 
     iget-object v4, p0, Lcom/android/systemui/qs/QuickStatusBarHeader;->mIconManager:Lcom/android/systemui/statusbar/phone/StatusBarIconController$TintedIconManager;
 
-    invoke-virtual {v4, v2}, Lcom/android/systemui/statusbar/phone/StatusBarIconController$TintedIconManager;->setQsTint(I)V
+    invoke-virtual {v4, v2}, Lcom/android/systemui/statusbar/phone/StatusBarIconController$TintedIconManager;->setTint(I)V
 
     return-void
 .end method
@@ -1295,31 +1278,6 @@
     goto :goto_0
 
     :cond_0
-    iget-object v0, p0, Lcom/android/systemui/qs/QuickStatusBarHeader;->mRightClockView:Lcom/android/systemui/statusbar/policy/ClockRight;
-
-    const/4 v1, 0x0
-
-    if-ne p1, v0, :cond_mw
-
-    const-class v0, Lcom/android/systemui/plugins/ActivityStarter;
-
-    invoke-static {v0}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/android/systemui/plugins/ActivityStarter;
-
-    new-instance v2, Landroid/content/Intent;
-
-    const-string v3, "android.intent.action.SHOW_ALARMS"
-
-    invoke-direct {v2, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
-
-    invoke-interface {v0, v2, v1}, Lcom/android/systemui/plugins/ActivityStarter;->postStartActivityDismissingKeyguard(Landroid/content/Intent;I)V
-
-    goto :goto_0
-
-    :cond_mw
     iget-object v0, p0, Lcom/android/systemui/qs/QuickStatusBarHeader;->mBatteryMeterView:Lcom/android/systemui/BatteryMeterView;
 
     if-ne p1, v0, :cond_1
@@ -1643,26 +1601,6 @@
     check-cast v3, Lcom/android/systemui/statusbar/policy/Clock;
 
     iput-object v3, p0, Lcom/android/systemui/qs/QuickStatusBarHeader;->mClockView:Lcom/android/systemui/statusbar/policy/Clock;
-    
-    const-string v0, "clock_right"
-
-    const-string v1, "id"
-
-    invoke-static {v0, v1}, Lcom/android/wubydax/GearUtils;->getIdentifier(Ljava/lang/String;Ljava/lang/String;)I
-
-    move-result v1
-    
-    invoke-virtual {p0, v1}, Lcom/android/systemui/qs/QuickStatusBarHeader;->findViewById(I)Landroid/view/View;
-
-    move-result-object v3
-
-    check-cast v3, Lcom/android/systemui/statusbar/policy/ClockRight;
-
-    iput-object v3, p0, Lcom/android/systemui/qs/QuickStatusBarHeader;->mRightClockView:Lcom/android/systemui/statusbar/policy/ClockRight;
-    
-    invoke-virtual {v3, p0}, Lcom/android/systemui/statusbar/policy/Clock;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-    
-    invoke-virtual {p0}, Lcom/android/systemui/qs/QuickStatusBarHeader;->setClockPosition()V
 
     iget-object v3, p0, Lcom/android/systemui/qs/QuickStatusBarHeader;->mClockView:Lcom/android/systemui/statusbar/policy/Clock;
 
@@ -1679,8 +1617,6 @@
     iput-object v3, p0, Lcom/android/systemui/qs/QuickStatusBarHeader;->mDateView:Lcom/android/systemui/statusbar/policy/DateView;
 
     invoke-direct {p0}, Lcom/android/systemui/qs/QuickStatusBarHeader;->updateThemeColor()V
-    
-    invoke-virtual {p0}, Lcom/android/systemui/qs/QuickStatusBarHeader;->setIconColors()V
 
     return-void
 .end method
@@ -1740,8 +1676,6 @@
     invoke-virtual {v0, p1}, Lcom/android/systemui/qs/QuickQSPanel;->setExpanded(Z)V
 
     invoke-virtual {p0}, Lcom/android/systemui/qs/QuickStatusBarHeader;->updateEverything()V
-    
-    invoke-virtual {p0}, Lcom/android/systemui/qs/QuickStatusBarHeader;->setSwipeTileAnimation()V
 
     return-void
 .end method
@@ -2063,87 +1997,6 @@
     invoke-direct {v0, p0}, Lcom/android/systemui/qs/-$$Lambda$QuickStatusBarHeader$94nU_9dHjWxAQAVsvLqnp7oGOsY;-><init>(Lcom/android/systemui/qs/QuickStatusBarHeader;)V
 
     invoke-virtual {p0, v0}, Lcom/android/systemui/qs/QuickStatusBarHeader;->post(Ljava/lang/Runnable;)Z
-
-    return-void
-.end method
-
-.method public setIconColors()V
-    .locals 2
-    
-    iget-object v0, p0, Lcom/android/systemui/qs/QuickStatusBarHeader;->mContext:Landroid/content/Context;
-    
-    invoke-static {v0}, Lcom/android/mwilky/Renovate;->setQsIconColors(Landroid/content/Context;)V
-
-    iget-object v0, p0, Lcom/android/systemui/qs/QuickStatusBarHeader;->mClockView:Lcom/android/systemui/statusbar/policy/Clock;
-    
-    if-eqz v0, :cond_exit
-    
-    sget v1, Lcom/android/mwilky/Renovate;->mClockColorOP:I
-    
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
-
-    :cond_exit
-    iget-object v0, p0, Lcom/android/systemui/qs/QuickStatusBarHeader;->mRightClockView:Lcom/android/systemui/statusbar/policy/ClockRight;
-    
-    if-eqz v0, :cond_exit4
-    
-    sget v1, Lcom/android/mwilky/Renovate;->mClockColorOP:I
-    
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
-
-    :cond_exit4
-    iget-object v0, p0, Lcom/android/systemui/qs/QuickStatusBarHeader;->mBatteryMeterView:Lcom/android/systemui/BatteryMeterView;
-    
-    if-eqz v0, :cond_exit2
-    
-    invoke-virtual {v0}, Lcom/android/systemui/BatteryMeterView;->setExpandedColors()V
-    
-    :cond_exit2
-    const v1, 0x0
-    
-    iget-object v0, p0, Lcom/android/systemui/qs/QuickStatusBarHeader;->mIconManager:Lcom/android/systemui/statusbar/phone/StatusBarIconController$TintedIconManager;
-
-    invoke-virtual {v0, v1}, Lcom/android/systemui/statusbar/phone/StatusBarIconController$TintedIconManager;->setQsTint(I)V
-    
-    sget v1, Lcom/android/mwilky/Renovate;->mQsDateColor:I
-    
-    iget-object v0, p0, Lcom/android/systemui/qs/QuickStatusBarHeader;->mDateView:Lcom/android/systemui/statusbar/policy/DateView;
-
-    invoke-virtual {v0, v1}, Lcom/android/systemui/statusbar/policy/DateView;->setTextColor(I)V
-    
-    return-void
-.end method
-
-.method public setClockPosition()V
-    .locals 2
-
-    iget-object v0, p0, Lcom/android/systemui/qs/QuickStatusBarHeader;->mClockView:Lcom/android/systemui/statusbar/policy/Clock;
-    
-    if-eqz v0, :cond_right
-    
-    invoke-virtual {v0}, Lcom/android/systemui/statusbar/policy/Clock;->updateClockVisibility()V
-    
-    :cond_right
-    iget-object v0, p0, Lcom/android/systemui/qs/QuickStatusBarHeader;->mRightClockView:Lcom/android/systemui/statusbar/policy/ClockRight;
-    
-    if-eqz v0, :cond_exit
-    
-    invoke-virtual {v0}, Lcom/android/systemui/statusbar/policy/ClockRight;->updateClockVisibility()V
-    
-    :cond_exit
-    return-void
-.end method
-
-.method public setSwipeTileAnimation()V
-    .locals 2
-
-    iget-object v0, p0, Lcom/android/systemui/qs/QuickStatusBarHeader;->mHandler:Landroid/os/Handler;
-
-    new-instance v1, Lcom/android/systemui/qs/QuickStatusBarHeader$10;
-
-    invoke-direct {v1, p0}, Lcom/android/systemui/qs/QuickStatusBarHeader$10;-><init>(Lcom/android/systemui/qs/QuickStatusBarHeader;)V
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     return-void
 .end method

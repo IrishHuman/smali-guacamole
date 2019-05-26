@@ -81,86 +81,86 @@
 
 .field public static final failed_to_open_app_settings_toast:I = 0x7f110282
 
-.field public static final ime_security_warning:I = 0x7f1102ba
+.field public static final ime_security_warning:I = 0x7f1102c0
 
-.field public static final power_discharge_by:I = 0x7f1104a1
+.field public static final power_discharge_by:I = 0x7f1104a7
 
-.field public static final power_discharge_by_enhanced:I = 0x7f1104a2
+.field public static final power_discharge_by_enhanced:I = 0x7f1104a8
 
-.field public static final power_discharge_by_only:I = 0x7f1104a3
+.field public static final power_discharge_by_only:I = 0x7f1104a9
 
-.field public static final power_discharge_by_only_enhanced:I = 0x7f1104a4
+.field public static final power_discharge_by_only_enhanced:I = 0x7f1104aa
 
-.field public static final power_discharging_duration:I = 0x7f1104a5
+.field public static final power_discharging_duration:I = 0x7f1104ab
 
-.field public static final power_discharging_duration_enhanced:I = 0x7f1104a6
+.field public static final power_discharging_duration_enhanced:I = 0x7f1104ac
 
-.field public static final power_remaining_duration_only:I = 0x7f1104a9
+.field public static final power_remaining_duration_only:I = 0x7f1104af
 
-.field public static final power_remaining_duration_only_enhanced:I = 0x7f1104aa
+.field public static final power_remaining_duration_only_enhanced:I = 0x7f1104b0
 
-.field public static final power_remaining_duration_only_shutdown_imminent:I = 0x7f1104ac
+.field public static final power_remaining_duration_only_shutdown_imminent:I = 0x7f1104b2
 
-.field public static final power_remaining_duration_shutdown_imminent:I = 0x7f1104ad
+.field public static final power_remaining_duration_shutdown_imminent:I = 0x7f1104b3
 
-.field public static final power_remaining_less_than_duration:I = 0x7f1104ae
+.field public static final power_remaining_less_than_duration:I = 0x7f1104b4
 
-.field public static final power_remaining_less_than_duration_only:I = 0x7f1104af
+.field public static final power_remaining_less_than_duration_only:I = 0x7f1104b5
 
-.field public static final power_remaining_more_than_subtext:I = 0x7f1104b0
+.field public static final power_remaining_more_than_subtext:I = 0x7f1104b6
 
-.field public static final power_remaining_only_more_than_subtext:I = 0x7f1104b1
+.field public static final power_remaining_only_more_than_subtext:I = 0x7f1104b7
 
-.field public static final preference_summary_default_combination:I = 0x7f1104b3
+.field public static final preference_summary_default_combination:I = 0x7f1104b9
 
-.field public static final speed_label_fast:I = 0x7f1105d8
+.field public static final speed_label_fast:I = 0x7f1105de
 
-.field public static final speed_label_okay:I = 0x7f1105da
+.field public static final speed_label_okay:I = 0x7f1105e0
 
-.field public static final speed_label_slow:I = 0x7f1105db
+.field public static final speed_label_slow:I = 0x7f1105e1
 
-.field public static final speed_label_very_fast:I = 0x7f1105dc
+.field public static final speed_label_very_fast:I = 0x7f1105e2
 
-.field public static final wifi_ap_unable_to_handle_new_sta:I = 0x7f1106c3
+.field public static final wifi_ap_unable_to_handle_new_sta:I = 0x7f1106c9
 
-.field public static final wifi_auth_password_wrong:I = 0x7f1106c4
+.field public static final wifi_auth_password_wrong:I = 0x7f1106ca
 
-.field public static final wifi_check_password_try_again:I = 0x7f1106c8
+.field public static final wifi_check_password_try_again:I = 0x7f1106ce
 
-.field public static final wifi_connected_no_internet:I = 0x7f1106cb
+.field public static final wifi_connected_no_internet:I = 0x7f1106d1
 
-.field public static final wifi_disabled_by_recommendation_provider:I = 0x7f1106ce
+.field public static final wifi_disabled_by_recommendation_provider:I = 0x7f1106d4
 
-.field public static final wifi_disabled_generic:I = 0x7f1106cf
+.field public static final wifi_disabled_generic:I = 0x7f1106d5
 
-.field public static final wifi_disabled_network_failure:I = 0x7f1106d0
+.field public static final wifi_disabled_network_failure:I = 0x7f1106d6
 
-.field public static final wifi_disabled_password_failure:I = 0x7f1106d1
+.field public static final wifi_disabled_password_failure:I = 0x7f1106d7
 
-.field public static final wifi_fail_to_scan:I = 0x7f1106d7
+.field public static final wifi_fail_to_scan:I = 0x7f1106dd
 
-.field public static final wifi_metered_label:I = 0x7f1106dc
+.field public static final wifi_metered_label:I = 0x7f1106e2
 
-.field public static final wifi_no_internet:I = 0x7f1106de
+.field public static final wifi_no_internet:I = 0x7f1106e4
 
-.field public static final wifi_no_internet_no_reconnect:I = 0x7f1106df
+.field public static final wifi_no_internet_no_reconnect:I = 0x7f1106e5
 
-.field public static final wifi_not_in_range:I = 0x7f1106e0
+.field public static final wifi_not_in_range:I = 0x7f1106e6
 
-.field public static final wifi_remembered:I = 0x7f1106e1
+.field public static final wifi_remembered:I = 0x7f1106e7
 
-.field public static final wifi_status_no_internet:I = 0x7f1106fd
+.field public static final wifi_status_no_internet:I = 0x7f110703
 
-.field public static final wifi_status_sign_in_required:I = 0x7f1106fe
+.field public static final wifi_status_sign_in_required:I = 0x7f110704
 
-.field public static final wifi_unmetered_label:I = 0x7f1106ff
+.field public static final wifi_unmetered_label:I = 0x7f110705
 
-.field public static final zen_alarm_warning:I = 0x7f11070a
+.field public static final zen_alarm_warning:I = 0x7f110710
 
-.field public static final zen_alarm_warning_indef:I = 0x7f11070b
+.field public static final zen_alarm_warning_indef:I = 0x7f110711
 
-.field public static final zen_mode_duration_always_prompt_title:I = 0x7f110711
+.field public static final zen_mode_duration_always_prompt_title:I = 0x7f110717
 
-.field public static final zen_mode_enable_dialog_turn_on:I = 0x7f110713
+.field public static final zen_mode_enable_dialog_turn_on:I = 0x7f110719
 
-.field public static final zen_mode_settings_turn_on_dialog_title:I = 0x7f110715
+.field public static final zen_mode_settings_turn_on_dialog_title:I = 0x7f11071b

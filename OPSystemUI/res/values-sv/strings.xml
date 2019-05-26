@@ -1028,7 +1028,7 @@ Du är även ansluten till ett VPN som kan övervaka nätverksaktivitet."</strin
     <string name="op_earphone_connected_success">Ihopparad. Tryck för att ställa in fler.</string>
     <string name="op_earphone_device">TRYCK FÖR ATT PARA IHOP</string>
     <string name="op_earphone_title">OnePlus Bullets trådlösa</string>
-    <string name="op_emergency_indicator_hint_text">Svep nedåt</string>
+    <string name="op_emergency_indicator_hint_text">Svep nedåt för nödfallstjänster</string>
     <string name="op_quick_settings_night_display_label">Nattläge</string>
     <string name="op_quick_settings_night_display_summary_off">Nattläge är av. Tryck för att sätta på</string>
     <string name="op_quick_settings_night_display_summary_on">Nattläge är på. Tryck för att stänga av</string>
@@ -1051,11 +1051,11 @@ Du är även ansluten till ett VPN som kan övervaka nätverksaktivitet."</strin
     <string name="overheat_dialog_purple_button">Stäng av nu</string>
     <string name="overheat_dialog_purple_message">Telefonen kommer att stängas av efter 5 sekunder</string>
     <string name="overheat_dialog_red_message">Kommer att rensa alla programprocesser för att sänka temperaturen</string>
-    <string name="overheat_dialog_title">Telefonens temperatur är hög</string>
-    <string name="overheat_notification_alert">Telefonens temperatur är för hög och funktionen med hög energiförbrukning är avstängd</string>
+    <string name="overheat_dialog_title">Telefonens temperatur är för hög</string>
+    <string name="overheat_notification_alert">Telefonens temperatur är för hög och funktioner med hög energiförbrukning har stängts av för att sänka temperaturen</string>
     <string name="overheat_notification_resume">Telefonens temperatur har återställts och telefonen kan användas normalt</string>
     <string name="overheat_notification_title_resume">Telefonens temperatur har återställts</string>
-    <string name="overheat_toast_content">Telefonens temperatur är för hög, vi rekommenderar att den här funktionen inte används</string>
+    <string name="overheat_toast_content">Telefonen är i ett tillstånd med hög temperatur. Vi rekommenderar att den här funktionen inte används</string>
     <string name="overlay_display_devices_title">Simulera sekundär skärm</string>
     <string name="overview">Översikt</string>
     <string name="phone_hint">Svep från ikonen och öppna telefonen</string>

@@ -623,6 +623,12 @@
     <string name="high_temp_notif_message">手机降温时，部分功能的使用会受限制</string>
     <string name="high_temp_title">手机温度上升中</string>
     <string name="home">设置主屏幕</string>
+    <string name="hotspot_operator_dialog_nosim_button">@string/notification_appops_ok</string>
+    <string name="hotspot_operator_dialog_nosim_msg">插入 SIM 卡以使用 WLAN 热点和其他网络共享选项</string>
+    <string name="hotspot_operator_dialog_nosim_title">无 SIM 卡</string>
+    <string name="hotspot_operator_dialog_othererror_button">@string/notification_appops_ok</string>
+    <string name="hotspot_operator_dialog_othererror_msg">未成功开启 Wifi 网络共享</string>
+    <string name="hotspot_operator_dialog_othererror_title">Wifi 网络共享错误</string>
     <string name="ime_security_warning">此输入法可能会收集您输入的所有内容，包括密码和信用卡号等个人数据。它来自“%1$s”应用。要使用此输入法吗？</string>
     <string name="immediately_destroy_activities">不保留活动</string>
     <string name="immediately_destroy_activities_summary">用户离开后即销毁每个活动</string>

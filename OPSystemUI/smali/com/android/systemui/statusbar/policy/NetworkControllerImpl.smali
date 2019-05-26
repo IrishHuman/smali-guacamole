@@ -142,6 +142,8 @@
 
 .field private final mSubscriptionManager:Landroid/telephony/SubscriptionManager;
 
+.field private mTetherErrorIntent:Landroid/content/Intent;
+
 .field private mUserSetup:Z
 
 .field private final mUserTracker:Lcom/android/systemui/settings/CurrentUserTracker;
@@ -1454,6 +1456,45 @@
     return v1
 .end method
 
+.method private hasSimReady()Z
+    .locals 5
+
+    iget-object v0, p0, Lcom/android/systemui/statusbar/policy/NetworkControllerImpl;->mPhone:Landroid/telephony/TelephonyManager;
+
+    invoke-virtual {v0}, Landroid/telephony/TelephonyManager;->getSimCount()I
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    move v2, v1
+
+    :goto_0
+    if-ge v2, v0, :cond_1
+
+    iget-object v3, p0, Lcom/android/systemui/statusbar/policy/NetworkControllerImpl;->mPhone:Landroid/telephony/TelephonyManager;
+
+    invoke-virtual {v3, v2}, Landroid/telephony/TelephonyManager;->getSimState(I)I
+
+    move-result v3
+
+    const/4 v4, 0x5
+
+    if-ne v3, v4, :cond_0
+
+    const/4 v1, 0x1
+
+    return v1
+
+    :cond_0
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    return v1
+.end method
+
 .method private initProvistionState()V
     .locals 5
 
@@ -2042,6 +2083,10 @@
 
     invoke-virtual {v1, v3}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
+    const-string v3, "android.intent.action.setupDataError_tether"
+
+    invoke-virtual {v1, v3}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v3
@@ -2455,6 +2500,16 @@
     iget-object v0, p0, Lcom/android/systemui/statusbar/policy/NetworkControllerImpl;->softSimState:[I
 
     invoke-interface {p1, v0}, Lcom/android/systemui/statusbar/policy/NetworkController$SignalCallback;->setVirtualSimstate([I)V
+
+    invoke-direct {p0}, Lcom/android/systemui/statusbar/policy/NetworkControllerImpl;->hasSimReady()Z
+
+    move-result v0
+
+    invoke-interface {p1, v0}, Lcom/android/systemui/statusbar/policy/NetworkController$SignalCallback;->setHasAnySimReady(Z)V
+
+    iget-object v0, p0, Lcom/android/systemui/statusbar/policy/NetworkControllerImpl;->mTetherErrorIntent:Landroid/content/Intent;
+
+    invoke-interface {p1, v0}, Lcom/android/systemui/statusbar/policy/NetworkController$SignalCallback;->setTetherError(Landroid/content/Intent;)V
 
     return-void
 .end method
@@ -5289,7 +5344,7 @@
 
     sparse-switch v1, :sswitch_data_0
 
-    goto :goto_0
+    goto/16 :goto_0
 
     :sswitch_0
     const-string v1, "org.codeaurora.intent.action.ACTION_UICC_MANUAL_PROVISION_STATUS_CHANGED"
@@ -5305,6 +5360,19 @@
     goto :goto_1
 
     :sswitch_1
+    const-string v1, "android.intent.action.setupDataError_tether"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    const/16 v1, 0x9
+
+    goto :goto_1
+
+    :sswitch_2
     const-string v1, "android.net.conn.INET_CONDITION_ACTION"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -5317,7 +5385,7 @@
 
     goto :goto_1
 
-    :sswitch_2
+    :sswitch_3
     const-string v1, "android.intent.action.ACTION_DEFAULT_DATA_SUBSCRIPTION_CHANGED"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -5330,7 +5398,7 @@
 
     goto :goto_1
 
-    :sswitch_3
+    :sswitch_4
     const-string v1, "android.intent.action.SIM_STATE_CHANGED"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -5343,7 +5411,7 @@
 
     goto :goto_1
 
-    :sswitch_4
+    :sswitch_5
     const-string v1, "android.intent.action.AIRPLANE_MODE"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -5356,7 +5424,7 @@
 
     goto :goto_1
 
-    :sswitch_5
+    :sswitch_6
     const-string v1, "android.telephony.action.CARRIER_CONFIG_CHANGED"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -5369,7 +5437,7 @@
 
     goto :goto_1
 
-    :sswitch_6
+    :sswitch_7
     const-string v1, "android.net.conn.CONNECTIVITY_CHANGE"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -5382,7 +5450,7 @@
 
     goto :goto_1
 
-    :sswitch_7
+    :sswitch_8
     const-string v1, "android.intent.action.ACTION_DEFAULT_VOICE_SUBSCRIPTION_CHANGED"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -5395,7 +5463,7 @@
 
     goto :goto_1
 
-    :sswitch_8
+    :sswitch_9
     const-string v1, "android.intent.action.SERVICE_STATE"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -5448,6 +5516,17 @@
     goto/16 :goto_3
 
     :pswitch_0
+    iput-object p2, p0, Lcom/android/systemui/statusbar/policy/NetworkControllerImpl;->mTetherErrorIntent:Landroid/content/Intent;
+
+    iget-object v1, p0, Lcom/android/systemui/statusbar/policy/NetworkControllerImpl;->mCallbackHandler:Lcom/android/systemui/statusbar/policy/CallbackHandler;
+
+    iget-object v2, p0, Lcom/android/systemui/statusbar/policy/NetworkControllerImpl;->mTetherErrorIntent:Landroid/content/Intent;
+
+    invoke-virtual {v1, v2}, Lcom/android/systemui/statusbar/policy/CallbackHandler;->setTetherError(Landroid/content/Intent;)V
+
+    goto/16 :goto_3
+
+    :pswitch_1
     const-string v1, "phone"
 
     invoke-virtual {p2, v1, v2}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
@@ -5488,7 +5567,7 @@
 
     goto/16 :goto_3
 
-    :pswitch_1
+    :pswitch_2
     iget-object v1, p0, Lcom/android/systemui/statusbar/policy/NetworkControllerImpl;->mContext:Landroid/content/Context;
 
     invoke-static {v1}, Lcom/android/systemui/statusbar/policy/NetworkControllerImpl$Config;->readConfig(Landroid/content/Context;)Lcom/android/systemui/statusbar/policy/NetworkControllerImpl$Config;
@@ -5507,7 +5586,7 @@
 
     goto/16 :goto_3
 
-    :pswitch_2
+    :pswitch_3
     invoke-virtual {p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v1
@@ -5530,7 +5609,7 @@
 
     goto :goto_3
 
-    :pswitch_3
+    :pswitch_4
     const-string v1, "rebroadcastOnUnlock"
 
     invoke-virtual {p2, v1, v3}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
@@ -5572,9 +5651,17 @@
     :cond_4
     invoke-direct {p0}, Lcom/android/systemui/statusbar/policy/NetworkControllerImpl;->checkVirtualSimcard()V
 
+    iget-object v2, p0, Lcom/android/systemui/statusbar/policy/NetworkControllerImpl;->mCallbackHandler:Lcom/android/systemui/statusbar/policy/CallbackHandler;
+
+    invoke-direct {p0}, Lcom/android/systemui/statusbar/policy/NetworkControllerImpl;->hasSimReady()Z
+
+    move-result v3
+
+    invoke-virtual {v2, v3}, Lcom/android/systemui/statusbar/policy/CallbackHandler;->setHasAnySimReady(Z)V
+
     goto :goto_3
 
-    :pswitch_4
+    :pswitch_5
     nop
 
     :goto_2
@@ -5605,19 +5692,19 @@
     :cond_5
     goto :goto_3
 
-    :pswitch_5
+    :pswitch_6
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/policy/NetworkControllerImpl;->recalculateEmergency()V
 
     goto :goto_3
 
-    :pswitch_6
+    :pswitch_7
     invoke-direct {p0}, Lcom/android/systemui/statusbar/policy/NetworkControllerImpl;->refreshLocale()V
 
     invoke-direct {p0, v3}, Lcom/android/systemui/statusbar/policy/NetworkControllerImpl;->updateAirplaneMode(Z)V
 
     goto :goto_3
 
-    :pswitch_7
+    :pswitch_8
     invoke-direct {p0}, Lcom/android/systemui/statusbar/policy/NetworkControllerImpl;->updateConnectivity()V
 
     goto :goto_3
@@ -5638,20 +5725,22 @@
 
     :sswitch_data_0
     .sparse-switch
-        -0x7d6de25e -> :sswitch_8
-        -0x5753691f -> :sswitch_7
-        -0x45e5283a -> :sswitch_6
-        -0x43dd7a3f -> :sswitch_5
-        -0x402b4235 -> :sswitch_4
-        -0xdb21ee7 -> :sswitch_3
-        -0x18365bb -> :sswitch_2
-        0x2524f753 -> :sswitch_1
+        -0x7d6de25e -> :sswitch_9
+        -0x5753691f -> :sswitch_8
+        -0x45e5283a -> :sswitch_7
+        -0x43dd7a3f -> :sswitch_6
+        -0x402b4235 -> :sswitch_5
+        -0xdb21ee7 -> :sswitch_4
+        -0x18365bb -> :sswitch_3
+        0x2524f753 -> :sswitch_2
+        0x4b871beb -> :sswitch_1
         0x7a525f0b -> :sswitch_0
     .end sparse-switch
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_7
+        :pswitch_8
+        :pswitch_8
         :pswitch_7
         :pswitch_6
         :pswitch_5

@@ -1028,7 +1028,7 @@
     <string name="op_earphone_connected_success">ಜೋಡಿ ಮಾಡಲಾಗಿದೆ. ಇನ್ನಷ್ಟು ಸೆಟ್ ಮಾಡಲು ಟ್ಯಾಪ್ ಮಾಡಿ.</string>
     <string name="op_earphone_device">ಜೋಡಿ ಮಾಡಲು ಟ್ಯಾಪ್ ಮಾಡಿ</string>
     <string name="op_earphone_title">OnePlus Bullets Wireless</string>
-    <string name="op_emergency_indicator_hint_text">ಕೆಳಕ್ಕೆ ಸ್ವೈಪ್ ಮಾಡಿ</string>
+    <string name="op_emergency_indicator_hint_text">ತುರ್ತು ಸೇವೆಗಳಿಗಾಗಿ ಕೆಳಮುಖವಾಗಿ ಸ್ವೈಪ್ ಮಾಡಿ</string>
     <string name="op_quick_settings_night_display_label">ನೈಟ್ ಮೋಡ್</string>
     <string name="op_quick_settings_night_display_summary_off">ನೈಟ್ ಮೋಡ್ ಆಫ್ ಆಗಿದೆ. ಟರ್ನ್ ಆನ್ ಮಾಡಲು ಟ್ಯಾಪ್ ಮಾಡಿ</string>
     <string name="op_quick_settings_night_display_summary_on">ನೈಟ್ ಮೋಡ್ ಆನ್ ಆಗಿದೆ. ಟರ್ನ್ ಆಫ್ ಮಾಡಲು ಟ್ಯಾಪ್ ಮಾಡಿ</string>
@@ -1044,18 +1044,18 @@
     <string name="output_service_wifi">ವೈ-ಫೈ</string>
     <string name="output_title">ಮೀಡಿಯಾ ಔಟ್‌ಪುಟ್</string>
     <string name="overheat_dialog_orange_button">ಈಗಲೇ ಕಾರ್ಯಗತಗೊಳಿಸಿ</string>
-    <string name="overheat_dialog_orange_message">"ತಾಪಮಾನವನ್ನು ಕಡಿಮೆ ಮಾಡಲು ಈ ಕಾರ್ಯಗಳನ್ನು ಕೈಗೊಳ್ಳಲಾಗುತ್ತದೆ
-1.ಪ್ರಕಾಶಮಾನತೆಯನ್ನು ತಗ್ಗಿಸುವುದು
-2.ಹಾಟ್‌ಸ್ಪಾಟ್ ಆಫ್ ಮಾಡುವುದು
-3.ಫ್ಲಾಶ್‌ಲೈಟ್ ಆಫ್ ಮಾಡುವುದು"</string>
+    <string name="overheat_dialog_orange_message">"ಉಷ್ಣತೆಯನ್ನು ಕಡಿಮೆ ಮಾಡಲು ಈ ಕೆಳಗಿನ ಕಾರ್ಯಗಳನ್ನು ಮಾಡಲಾಗುತ್ತದೆ.
+1 ಪ್ರಕಾಶಮಾನತೆಯನ್ನು ತಗ್ಗಿಸುವುದು.
+2ಹಾಟ್‌ಸ್ಪಾಟ್ ಆಫ್ ಮಾಡುವುದು.
+3 ಫ್ಲಾಶ್‌ಲೈಟ್ ಆಫ್ ಮಾಡುವುದು"</string>
     <string name="overheat_dialog_purple_button">ಈಗ ಪವರ್ ಆಫ್ ಮಾಡಿ</string>
     <string name="overheat_dialog_purple_message">ಫೋನ್ 5 ಸೆಕೆಂಡುಗಳ ನಂತರ ಪವರ್ ಆಫ್ ಆಗುತ್ತದೆ</string>
     <string name="overheat_dialog_red_message">ತಾಪಮಾನವನ್ನು ಕಡಿಮೆ ಮಾಡಲು ಎಲ್ಲಾ ಅಪ್ಲಿಕೇಶನ್ ಪ್ರಕ್ರಿಯೆಗಳನ್ನು ತೆರವುಗೊಳಿಸಲಾಗುತ್ತದೆ</string>
-    <string name="overheat_dialog_title">ಫೋನ್‌ನ ತಾಪಮಾನ ಅಧಿಕವಾಗಿದೆ</string>
-    <string name="overheat_notification_alert">ಫೋನ್‌ನ ತಾಪಮಾನ ತುಂಬಾ ಅಧಿಕವಾಗಿದೆ ಮತ್ತು ಅಧಿಕ ಪವರ್ ಬಳಕೆಯ ಕಾರ್ಯವಿಧಾನವು ಆಫ್ ಮಾಡಲಾಗಿದೆ</string>
+    <string name="overheat_dialog_title">ನಿಮ್ಮ ಫೋನ್‌ನ ಉಷ್ಣತೆಯು ತುಂಬಾ ಹೆಚ್ಚಾಗಿದೆ</string>
+    <string name="overheat_notification_alert">ನಿಮ್ಮ ಫೋನ್ ಉಷ್ಣತೆ ತುಂಬಾ ಹೆಚ್ಚಾಗಿದೆ, ಹಾಗೂ ಉಷ್ಣತೆಯನ್ನು ಕಡಿಮೆ ಮಾಡಲು ಪವರ್ ಬಳಕೆಯ ವೈಶಿಷ್ಟ್ಯಗಳನ್ನು ಆಫ್ ಮಾಡಲಾಗುತ್ತದೆ</string>
     <string name="overheat_notification_resume">ಫೋನ್‌ನ ತಾಪಮಾನವನ್ನು ಪುನರ್ ಸ್ಥಾಪಿಸಲಾಗಿದೆ ಮತ್ತು ಫೋನ್ ಅನ್ನು ಸಾಮಾನ್ಯವಾಗಿ ಬಳಸಬಹುದಾಗಿದೆ</string>
     <string name="overheat_notification_title_resume">ಫೋನ್‌ನ ತಾಪಮಾನವನ್ನು ಪುನರ್ ಸ್ಥಾಪಿಸಲಾಗಿದೆ</string>
-    <string name="overheat_toast_content">ಫೋನ್‌ನ ತಾಪಮಾನವು ತುಂಬಾ ಅಧಿಕವಾಗಿದೆ, ಈ ವೈಶಿಷ್ಟ್ಯವನ್ನು ಬಳಸಲು ಇದನ್ನು ಶಿಫಾರಸು ಮಾಡಲಾಗಿಲ್ಲ</string>
+    <string name="overheat_toast_content">ಫೋನ್ ಉಷ್ಣತೆಯು ತುಂಬಾ ಹೆಚ್ಚಾಗಿದೆ, ಈ ವೈಶಿಷ್ಟ್ಯವನ್ನು ಬಳಸುವುದನ್ನು ಶಿಫಾರಸು ಮಾಡುವುದಿಲ್ಲ</string>
     <string name="overlay_display_devices_title">ಮಾಧ್ಯಮಿಕ ಡಿಸ್‌ಪ್ಲೇ ಸಿಮ್ಯುಲೇಟ್‌</string>
     <string name="overview">ಸಮಗ್ರ ನೋಟ</string>
     <string name="phone_hint">ಫೋನ್‌ಗಾಗಿ ಐಕಾನ್‌ನಿಂದ ಸ್ವೈಪ್ ಮಾಡಿ</string>

@@ -37,17 +37,6 @@
 .method public onCheckPasswordAndUnlock()V
     .locals 1
 
-    invoke-static {}, Lcom/android/systemui/util/OPUtils;->isSupportLinearVibration()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lcom/android/keyguard/KeyguardPinBasedInputViewForPin$1;->this$0:Lcom/android/keyguard/KeyguardPinBasedInputViewForPin;
-
-    invoke-virtual {v0}, Lcom/android/keyguard/KeyguardPinBasedInputViewForPin;->doHapticKeyClick()V
-
-    :cond_0
     iget-object v0, p0, Lcom/android/keyguard/KeyguardPinBasedInputViewForPin$1;->this$0:Lcom/android/keyguard/KeyguardPinBasedInputViewForPin;
 
     iget-object v0, v0, Lcom/android/keyguard/KeyguardPinBasedInputViewForPin;->mPasswordEntry:Lcom/android/keyguard/PasswordTextViewForPin;
@@ -56,13 +45,13 @@
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_0
 
     iget-object v0, p0, Lcom/android/keyguard/KeyguardPinBasedInputViewForPin$1;->this$0:Lcom/android/keyguard/KeyguardPinBasedInputViewForPin;
 
     invoke-virtual {v0}, Lcom/android/keyguard/KeyguardPinBasedInputViewForPin;->verifyPasswordAndUnlock()V
 
-    :cond_1
+    :cond_0
     return-void
 .end method
 

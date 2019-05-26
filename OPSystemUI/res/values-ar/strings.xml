@@ -1028,7 +1028,7 @@
     <string name="op_earphone_connected_success">مقترن. اضغط لتعيين المزيد.</string>
     <string name="op_earphone_device">اضغط للاقتران</string>
     <string name="op_earphone_title">OnePlus Bullets اللاسلكية</string>
-    <string name="op_emergency_indicator_hint_text">امسح لأسفل</string>
+    <string name="op_emergency_indicator_hint_text">مرر لأسفل للحصول على خدمات الطوارئ</string>
     <string name="op_quick_settings_night_display_label">الوضع الليلي</string>
     <string name="op_quick_settings_night_display_summary_off">الوضع الليلي قيد إيقاف التشغيل، المس للتشغيل</string>
     <string name="op_quick_settings_night_display_summary_on">الوضع الليلي قيد التشغيل، المس لإيقاف التشغيل</string>
@@ -1044,18 +1044,18 @@
     <string name="output_service_wifi">Wi-Fi</string>
     <string name="output_title">إخراج الوسائط</string>
     <string name="overheat_dialog_orange_button">تنفيذ الآن</string>
-    <string name="overheat_dialog_orange_message">"ستتخذ هذه الإجراءات لتقليل درجة الحرارة
-1. تقليل الإضاءة
-2. إيقاف تشغيل النقطة الفعالة
-3. إيقاف تشغيل المصباح"</string>
+    <string name="overheat_dialog_orange_message">"سيتم تنفيذ العمليات التالية لخفض درجة الحرارة
+1.تقليل السطوع
+2.إيقاف تشغيل نقطة الاتصال 
+3.إيقاف تشغيل المصباح"</string>
     <string name="overheat_dialog_purple_button">إيقاف الآن</string>
     <string name="overheat_dialog_purple_message">سيتم إيقاف الهاتف بعد 5 ثوانٍ</string>
     <string name="overheat_dialog_red_message">ستمسح كافة عمليات التطبيقات لتقليل درجة الحرارة</string>
-    <string name="overheat_dialog_title">درجة حرارة الهاتف مرتفعة</string>
-    <string name="overheat_notification_alert">درجة حرارة الهاتف مرتفعة جدًا، ووظيفة الاستهلاك العالي للطاقة متوقفة</string>
+    <string name="overheat_dialog_title">درجة حرارة هاتفك مرتفعة للغاية</string>
+    <string name="overheat_notification_alert">درجة حرارة هاتفك مرتفعة للغاية، وقد تم إيقاف تشغيل الوظائف مرتفعة الاستهلاك للطاقة لخفض درجة الحرارة</string>
     <string name="overheat_notification_resume">تمت استعادة درجة حرارة الهاتف ويمكن استخدامه الآن بشكل طبيعي</string>
     <string name="overheat_notification_title_resume">تمت استعادة درجة حرارة الهاتف</string>
-    <string name="overheat_toast_content">درجة حرارة الهاتف مرتفعة جدًا، ولا يوصى باستخدام هذه الميزة</string>
+    <string name="overheat_toast_content">الهاتف في حالة درجة حرارة مرتفعة، لا يُنصح باستخدام هذه الميزة</string>
     <string name="overlay_display_devices_title">محاكاة الشاشات الثانوية</string>
     <string name="overview">نظرة عامة</string>
     <string name="phone_hint">يمكنك التمرير سريعًا من الرمز لتشغيل الهاتف</string>

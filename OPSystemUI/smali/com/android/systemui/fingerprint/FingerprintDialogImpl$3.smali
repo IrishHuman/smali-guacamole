@@ -105,7 +105,13 @@
 
     move-result v1
 
+    const/4 v3, 0x0
+
     if-eqz v1, :cond_2
+
+    iget-object v1, p0, Lcom/android/systemui/fingerprint/FingerprintDialogImpl$3;->this$0:Lcom/android/systemui/fingerprint/FingerprintDialogImpl;
+
+    invoke-virtual {v1, v3}, Lcom/android/systemui/fingerprint/FingerprintDialogImpl;->updateTransparentIconLayoutParams(Z)V
 
     return v2
 
@@ -156,8 +162,6 @@
     if-ne v0, v2, :cond_5
 
     iget-object v1, p0, Lcom/android/systemui/fingerprint/FingerprintDialogImpl$3;->this$0:Lcom/android/systemui/fingerprint/FingerprintDialogImpl;
-
-    const/4 v3, 0x0
 
     invoke-static {v1, v3}, Lcom/android/systemui/fingerprint/FingerprintDialogImpl;->access$2102(Lcom/android/systemui/fingerprint/FingerprintDialogImpl;Z)Z
 

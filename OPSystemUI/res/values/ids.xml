@@ -1113,9 +1113,4 @@
     <item type="id" name="zzz_global_action_panel" />
     <item type="id" name="zzz_global_action_view" />
     <item type="id" name="zzz_global_action_view_bg" />
-    <item type="id" name="clock_right">false</item>
-    <item type="id" name="clock_center_header">false</item>
-    <item type="id" name="clock_center">false</item>
-    <item type="id" name="system_icon_area2">false</item>
-    <item type="id" name="system_icon_area3">false</item>
 </resources>

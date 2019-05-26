@@ -1028,7 +1028,7 @@ Je bent ook verbonden met een VPN, waarmee je netwerkactiviteit kan worden gecon
     <string name="op_earphone_connected_success">Gekoppeld, tik voor meer instellingen.</string>
     <string name="op_earphone_device">TIK OM TE KOPPELEN</string>
     <string name="op_earphone_title">OnePlus Bullets Wireless</string>
-    <string name="op_emergency_indicator_hint_text">Veeg Omlaag</string>
+    <string name="op_emergency_indicator_hint_text">Veeg omlaag voor hulpdiensten</string>
     <string name="op_quick_settings_night_display_label">Nachtmodus</string>
     <string name="op_quick_settings_night_display_summary_off">Nachtmodus uit, tap om in te schakelen</string>
     <string name="op_quick_settings_night_display_summary_on">Nachtmodus aan, tap om uit te schakelen</string>
@@ -1044,18 +1044,18 @@ Je bent ook verbonden met een VPN, waarmee je netwerkactiviteit kan worden gecon
     <string name="output_service_wifi">Wifi</string>
     <string name="output_title">Media-uitvoer</string>
     <string name="overheat_dialog_orange_button">Nu uitvoeren</string>
-    <string name="overheat_dialog_orange_message">"Deze acties worden uitgevoerd om de temperatuur te verlagen
-1.De helderheid verlagen
-2.De hotspot uitschakelen
-3.De zaklamp uitschakelen"</string>
+    <string name="overheat_dialog_orange_message">"De volgende handelingen worden uitgevoerd om de temperatuur te verlagen
+1.De helderheid wordt verlaagd
+2.De hotspot wordt uitgeschakeld
+3.De zaklamp wordt uitgeschakeld"</string>
     <string name="overheat_dialog_purple_button">Nu uitschakelen</string>
     <string name="overheat_dialog_purple_message">De telefoon wordt na 5 seconden uitgeschakeld</string>
     <string name="overheat_dialog_red_message">Alle toepassingsprocessen worden uitgeschakeld om de temperatuur te verlagen</string>
-    <string name="overheat_dialog_title">De temperatuur van de telefoon is hoog</string>
-    <string name="overheat_notification_alert">De temperatuur van de telefoon is te hoog, en de functie voor hoog energieverbruik is uitgeschakeld</string>
+    <string name="overheat_dialog_title">De temperatuur van uw telefoon is te hoog</string>
+    <string name="overheat_notification_alert">De temperatuur van uw telefoon is te hoog en functies met een hoog energieverbruik zijn uitgeschakeld om de temperatuur te verlagen</string>
     <string name="overheat_notification_resume">De temperatuur van de telefoon is hersteld en de telefoon kan normaal worden gebruikt</string>
     <string name="overheat_notification_title_resume">De temperatuur van de telefoon is hersteld</string>
-    <string name="overheat_toast_content">De temperatuur van de telefoon is te hoog; het wordt aanbevolen deze functie niet te gebruiken</string>
+    <string name="overheat_toast_content">De temperatuur van de telefoon is hoog, het wordt afgeraden om deze functie te gebruiken</string>
     <string name="overlay_display_devices_title">Secundaire displays simuleren</string>
     <string name="overview">Overzicht</string>
     <string name="phone_hint">Vegen voor telefoon</string>

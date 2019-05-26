@@ -603,7 +603,7 @@
 
     invoke-direct {v2, p0, v3}, Landroid/app/Notification$Builder;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
-    const v3, 0x7f11059b
+    const v3, 0x7f1105a1
 
     invoke-virtual {v0, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -801,7 +801,7 @@
 
     iget-object v1, p0, Lcom/android/systemui/screenshot/GlobalScreenshot;->mContext:Landroid/content/Context;
 
-    const v3, 0x7f1105a0
+    const v3, 0x7f1105a6
 
     invoke-static {v1, v3, v2}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
 
@@ -928,7 +928,7 @@
 
     iget-object v4, p0, Lcom/android/systemui/screenshot/GlobalScreenshot;->mNotificationManager:Landroid/app/NotificationManager;
 
-    const v5, 0x7f11059c
+    const v5, 0x7f1105a2
 
     invoke-static {v3, v4, v5}, Lcom/android/systemui/screenshot/GlobalScreenshot;->notifyScreenshotError(Landroid/content/Context;Landroid/app/NotificationManager;I)V
 

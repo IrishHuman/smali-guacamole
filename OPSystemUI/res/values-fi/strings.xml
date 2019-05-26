@@ -1028,7 +1028,7 @@ Olet myös yhteydessä VPN:ään, joka voi valvoa toimintaasi verkossa."</string
     <string name="op_earphone_connected_success">Laitepari muodostettu. Määritä enemmän napauttamalla.</string>
     <string name="op_earphone_device">MUODOSTA LAITEPARI NAPAUTTAMALLA</string>
     <string name="op_earphone_title">OnePlus Bullets Wireless</string>
-    <string name="op_emergency_indicator_hint_text">Pyyhkäise alas</string>
+    <string name="op_emergency_indicator_hint_text">Pyyhkäise alas siirtyäksesi hätäpalveluihin</string>
     <string name="op_quick_settings_night_display_label">Yötila</string>
     <string name="op_quick_settings_night_display_summary_off">Yötila on pois käytöstä, ota käyttöön napauttamalla</string>
     <string name="op_quick_settings_night_display_summary_on">Yötila on käytössä, poista käytöstä napauttamalla</string>
@@ -1044,18 +1044,18 @@ Olet myös yhteydessä VPN:ään, joka voi valvoa toimintaasi verkossa."</string
     <string name="output_service_wifi">Wi-Fi</string>
     <string name="output_title">Median äänentoisto</string>
     <string name="overheat_dialog_orange_button">Suorita nyt</string>
-    <string name="overheat_dialog_orange_message">"Suoritetaan seuraavat toimenpiteet lämpötilan vähentämiseksi
+    <string name="overheat_dialog_orange_message">"Lämpötilan vähentämiseksi suoritetaan seuraavat toimenpiteet
 1.Vähennä kirkkautta
 2.Poista hotspot käytöstä
 3.Sammuta taskulamppu"</string>
     <string name="overheat_dialog_purple_button">Sammuta nyt</string>
     <string name="overheat_dialog_purple_message">Puhelin sammutetaan 5 sekunnin kuluttua</string>
     <string name="overheat_dialog_red_message">Tyhjentää kaikki sovellusprosessit lämpötilan alentamiseksi</string>
-    <string name="overheat_dialog_title">Puhelin on kuuma</string>
-    <string name="overheat_notification_alert">Puhelimen lämpötila on liian korkea, ja suuren virrankulutuksen toiminto sammutetaan</string>
+    <string name="overheat_dialog_title">Puhelin on liian kuuma</string>
+    <string name="overheat_notification_alert">Puhelin on liian kuuma, ja paljon virtaa käyttävät toiminnot on poistettu käytöstä lämpötilan laskemiseksi</string>
     <string name="overheat_notification_resume">Puhelimen lämpötila on palautettu, ja puhelinta voi käyttää normaalisti</string>
     <string name="overheat_notification_title_resume">Puhelimen lämpötila on palautettu</string>
-    <string name="overheat_toast_content">Puhelimen lämpötila on liian korkea, tämän toiminnon käyttöä ei suositella</string>
+    <string name="overheat_toast_content">Puhelin on kuuma; tämän ominaisuuden käyttöä ei suositella</string>
     <string name="overlay_display_devices_title">Simuloi toissijaiset näytöt</string>
     <string name="overview">Yleiskatsaus</string>
     <string name="phone_hint">Avaa puhelu pyyhkäisemällä.</string>

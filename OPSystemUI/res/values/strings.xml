@@ -710,6 +710,12 @@ Once your phone has cooled down, it will run normally."</string>
     <string name="high_temp_title">Phone is getting warm</string>
     <string name="home">Settings Home</string>
     <string name="hotspot_apm_message">Unable to connect to mobile networks while Airplane mode is enabled. Disable Airplane mode and try again.</string>
+    <string name="hotspot_operator_dialog_nosim_button">@string/notification_appops_ok</string>
+    <string name="hotspot_operator_dialog_nosim_msg">Insert a SIM card to use Mobile Hotspot and other tethering options</string>
+    <string name="hotspot_operator_dialog_nosim_title">No SIM card</string>
+    <string name="hotspot_operator_dialog_othererror_button">@string/notification_appops_ok</string>
+    <string name="hotspot_operator_dialog_othererror_msg">You are not subscribed to Wifi tethering</string>
+    <string name="hotspot_operator_dialog_othererror_title">Wifi tethering error</string>
     <string name="ime_security_warning">This input method may be able to collect all the text you type, including personal data like passwords and credit card numbers. It comes from the app %1$s. Use this input method?</string>
     <string name="immediately_destroy_activities">Don’t keep activities</string>
     <string name="immediately_destroy_activities_summary">Destroy every activity as soon as the user leaves it</string>
@@ -1895,14 +1901,14 @@ Credential storage might not enable"</string>
     <string name="zen_priority_introduction">"You won't be disturbed by sounds and vibrations, except from alarms, reminders, events, and callers you specify. You'll still hear anything you choose to play including music, videos, and games."</string>
     <string name="zen_silence_introduction">This blocks ALL sounds and vibrations, including from alarms, music, videos, and games.</string>
     <string name="zen_silence_introduction_voice">"This blocks ALL sounds and vibrations, including from alarms, music, videos, and games. You'll still be able to make phone calls."</string>
-    <item type="string" name="APKTOOL_DUMMY_307">false</item>
-    <item type="string" name="APKTOOL_DUMMY_344">false</item>
-    <item type="string" name="APKTOOL_DUMMY_345">false</item>
-    <item type="string" name="APKTOOL_DUMMY_346">false</item>
-    <item type="string" name="APKTOOL_DUMMY_347">false</item>
-    <item type="string" name="APKTOOL_DUMMY_366">false</item>
-    <item type="string" name="APKTOOL_DUMMY_3b8">false</item>
-    <item type="string" name="APKTOOL_DUMMY_5e6">false</item>
-    <item type="string" name="APKTOOL_DUMMY_698">false</item>
-    <item type="string" name="APKTOOL_DUMMY_69f">false</item>
+    <item type="string" name="APKTOOL_DUMMY_30d">false</item>
+    <item type="string" name="APKTOOL_DUMMY_34a">false</item>
+    <item type="string" name="APKTOOL_DUMMY_34b">false</item>
+    <item type="string" name="APKTOOL_DUMMY_34c">false</item>
+    <item type="string" name="APKTOOL_DUMMY_34d">false</item>
+    <item type="string" name="APKTOOL_DUMMY_36c">false</item>
+    <item type="string" name="APKTOOL_DUMMY_3be">false</item>
+    <item type="string" name="APKTOOL_DUMMY_5ec">false</item>
+    <item type="string" name="APKTOOL_DUMMY_69e">false</item>
+    <item type="string" name="APKTOOL_DUMMY_6a5">false</item>
 </resources>

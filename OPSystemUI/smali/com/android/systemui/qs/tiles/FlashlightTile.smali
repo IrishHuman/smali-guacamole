@@ -124,7 +124,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/qs/tiles/FlashlightTile;->mContext:Landroid/content/Context;
 
-    const v1, 0x7f11050c
+    const v1, 0x7f110512
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -135,8 +135,6 @@
 
 .method protected handleClick()V
     .locals 5
-    
-    invoke-virtual {p0}, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->setVibrateTweak()V
 
     invoke-static {}, Landroid/app/ActivityManager;->isUserAMonkey()Z
 
@@ -179,7 +177,7 @@
 
     iget-object v3, p0, Lcom/android/systemui/qs/tiles/FlashlightTile;->mContext:Landroid/content/Context;
 
-    const v4, 0x7f11047f
+    const v4, 0x7f110485
 
     invoke-virtual {v3, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -269,7 +267,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f11050c
+    const v1, 0x7f110512
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

@@ -21,6 +21,12 @@
     return-void
 .end method
 
+.method public setHasAnySimReady(Z)V
+    .locals 0
+
+    return-void
+.end method
+
 .method public setIsAirplaneMode(Lcom/android/systemui/statusbar/policy/NetworkController$IconState;)V
     .locals 0
 
@@ -67,6 +73,12 @@
             ">;)V"
         }
     .end annotation
+
+    return-void
+.end method
+
+.method public setTetherError(Landroid/content/Intent;)V
+    .locals 0
 
     return-void
 .end method

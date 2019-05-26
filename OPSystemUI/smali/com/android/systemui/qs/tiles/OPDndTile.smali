@@ -176,7 +176,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/qs/tiles/OPDndTile;->mContext:Landroid/content/Context;
 
-    const v1, 0x7f110508
+    const v1, 0x7f11050e
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -187,8 +187,6 @@
 
 .method protected handleClick()V
     .locals 3
-    
-    invoke-virtual {p0}, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->setVibrateTweak()V
 
     iget-object v0, p0, Lcom/android/systemui/qs/tiles/OPDndTile;->TAG:Ljava/lang/String;
 

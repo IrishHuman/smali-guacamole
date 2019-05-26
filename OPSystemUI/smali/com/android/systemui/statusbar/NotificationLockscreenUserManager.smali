@@ -378,7 +378,7 @@
 
     const/4 v1, 0x0
 
-    const v2, 0x7f1103bc
+    const v2, 0x7f1103c2
 
     invoke-static {v0, v2, v1}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
 

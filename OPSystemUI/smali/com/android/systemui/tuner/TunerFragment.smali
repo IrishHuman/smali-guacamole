@@ -107,7 +107,7 @@
 
     const/4 v1, 0x2
 
-    const v2, 0x7f110576
+    const v2, 0x7f11057c
 
     invoke-interface {p1, v0, v1, v0, v2}, Landroid/view/Menu;->add(IIII)Landroid/view/MenuItem;
 
@@ -208,7 +208,7 @@
 
     move-result-object v0
 
-    const-string v2, "seen_tuner_warning"
+    const-string/jumbo v2, "seen_tuner_warning"
 
     invoke-static {v0, v2, v1}, Landroid/provider/Settings$Secure;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
@@ -317,7 +317,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f11060f
+    const v1, 0x7f110615
 
     invoke-virtual {v0, v1}, Landroid/app/Activity;->setTitle(I)V
 

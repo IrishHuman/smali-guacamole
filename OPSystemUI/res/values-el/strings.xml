@@ -1028,7 +1028,7 @@
     <string name="op_earphone_connected_success">Επιτυχής αντιστοίχιση. Πατήστε για περισσότερες ρυθμίσεις.</string>
     <string name="op_earphone_device">ΠΑΤΗΣΤΕ ΓΙΑ ΑΝΤΙΣΤΟΙΧΙΣΗ.</string>
     <string name="op_earphone_title">Ασύρματα OnePlus Bullets</string>
-    <string name="op_emergency_indicator_hint_text">Σύρετε προς τα κάτω</string>
+    <string name="op_emergency_indicator_hint_text">Σύρετε το δάχτυλό σας προς τα κάτω για υπηρεσίες έκτακτης ανάγκης.</string>
     <string name="op_quick_settings_night_display_label">Νυχτερινή λειτουργία</string>
     <string name="op_quick_settings_night_display_summary_off">Η νυχτερινή λειτουργία είναι απενεργοποιημένη, πατήστε για να την ενεργοποιήσετε</string>
     <string name="op_quick_settings_night_display_summary_on">Η νυχτερινή λειτουργία είναι ενεργοποιημένη, πατήστε για να την απενεργοποιήσετε</string>
@@ -1051,11 +1051,11 @@
     <string name="overheat_dialog_purple_button">Διακοπή λειτουργίας τώρα</string>
     <string name="overheat_dialog_purple_message">Η λειτουργία του τηλεφώνου θα διακοπεί ύστερα από 5 δευτερόλεπτα.</string>
     <string name="overheat_dialog_red_message">Θα τερματιστούν οι διεργασίες όλων των εφαρμογών για να μειωθεί η θερμοκρασία.</string>
-    <string name="overheat_dialog_title">Η θερμοκρασία του τηλεφώνου είναι υψηλή.</string>
-    <string name="overheat_notification_alert">Η θερμοκρασία του τηλεφώνου είναι υπερβολικά υψηλή και η λειτουργία υψηλής κατανάλωσης ενέργειας έχει απενεργοποιηθεί.</string>
+    <string name="overheat_dialog_title">Η θερμοκρασία του τηλεφώνου σας είναι υπερβολικά υψηλή.</string>
+    <string name="overheat_notification_alert">Η θερμοκρασία του τηλεφώνου σας είναι υπερβολικά υψηλή και για να μειωθεί έχουν απενεργοποιηθεί οι λειτουργίες με υψηλή κατανάλωση ενέργειας.</string>
     <string name="overheat_notification_resume">Η θερμοκρασία του τηλεφώνου έχει επανέλθει στην κανονική της τιμή και μπορείτε να χρησιμοποιήσετε το τηλέφωνο κανονικά.</string>
     <string name="overheat_notification_title_resume">Η θερμοκρασία του τηλεφώνου έχει επανέλθει στην κανονική της τιμή.</string>
-    <string name="overheat_toast_content">Η θερμοκρασία του τηλεφώνου είναι υπερβολικά υψηλή. Συνιστούμε να μη χρησιμοποιήσετε τη δυνατότητα αυτή.</string>
+    <string name="overheat_toast_content">Η θερμοκρασία του τηλεφώνου είναι υψηλή. Συνιστούμε να μη χρησιμοποιήσετε τη δυνατότητα αυτή.</string>
     <string name="overlay_display_devices_title">Προσομ. δευτερ. προβολών</string>
     <string name="overview">Επισκόπηση</string>
     <string name="phone_hint">Σύρετε προς τα έξω για τηλέφωνο</string>

@@ -57,7 +57,7 @@
     <string name="nav_bar_guide_positive">புரிந்தது</string>
     <string name="nav_bar_guide_title">நேவிகேஷன் பட்டியைக் காண கீழிருந்து மேலே ஸ்வைப் செய்யவும். நீங்கள் நேவிகேஷன் மறைப்பதை நிறுத்த விரும்பினால், தயவுசெய்து டேப் செய்யவும்</string>
     <string name="non_op_earphone_notification_content">உங்கள் ஹெட்செட்டிற்கான சில புதிய அம்சங்களை OnePlus வழங்குகிறது. அதை முயற்சித்துப் பார்க்க, அறிவிப்பு மீது கிளிக் செய்யவும்.</string>
-    <string name="non_op_earphone_notification_title">உதவிக்குறிப்புகள்</string>
+    <string name="non_op_earphone_notification_title">குறிப்புகள்</string>
     <string name="notification_content_disable_button">அவற்றை ஆஃப் செய்ய தொடவும்</string>
     <string name="notification_content_disable_button_in_nav">HW பொத்தான்கள் பூட்டப்பட்டிருக்கும்போது நேவிகேஷன் பட்டி முடக்கப்பட்டிருக்கும்</string>
     <string name="notification_title_disable_button">HW பொத்தான்கள் பூட்டப்பட்டுள்ளன</string>
@@ -76,24 +76,24 @@
     <string name="op_earphone_connected_success">இணைக்கப்பட்டது. மேலும் அமைப்பதற்குத் தட்டவும்.</string>
     <string name="op_earphone_device">இணைக்கத் தட்டவும்</string>
     <string name="op_earphone_title">OnePlus Bullets Wireless</string>
-    <string name="op_emergency_indicator_hint_text">கீழே ஸ்வைப் செய்யவும்</string>
+    <string name="op_emergency_indicator_hint_text">அவசரகாலச் சேவைகளுக்கு கீழ்நோக்கி ஸ்வைப் செய்யவும்</string>
     <string name="op_quick_settings_night_display_label">இரவு பயன்முறை</string>
     <string name="op_quick_settings_night_display_summary_off">இரவு பயன்முறை ஆஃப் ஆக உள்ளது, ஆன் செய்ய டேப் செய்யவும்</string>
     <string name="op_quick_settings_night_display_summary_on">இரவு பயன்முறை ஆன் ஆக உள்ளது, ஆஃப் செய்ய டேப் செய்யவும்</string>
     <string name="output_chooser_empty_hint">இணைக்கப்பட்ட சாதனம் ஏதமில்லை</string>
     <string name="overheat_dialog_orange_button">இப்போதே செயல்படுத்து</string>
     <string name="overheat_dialog_orange_message">"இந்த நடவடிக்கைகளை மேற்கொண்டால் வெப்பநிலை குறையும்
-1.பிரகாசத்தைக் குறைக்கவும்
+1.திரைப் பிரகாசத்தைக் குறைக்கவும்
 2.ஹாட்ஸ்பாட்டை ஆஃப் செய்யவும்
 3.ஃபிளாஷ்லைட்டை ஆஃப் செய்யவும்"</string>
     <string name="overheat_dialog_purple_button">இப்போதே பவர் ஆஃப் செய்</string>
     <string name="overheat_dialog_purple_message">5 வினாடிகளுக்குப் பிறகு ஃபோன் பவர் ஆஃப் செய்யப்படும்</string>
     <string name="overheat_dialog_red_message">வெப்பநிலையைக் குறைக்க அனைத்து பயன்பாடு செயல்முறைகளையும் அழிக்கும்</string>
-    <string name="overheat_dialog_title">ஃபோனின் வெப்பநிலை அதிகமாக உள்ளது</string>
-    <string name="overheat_notification_alert">ஃபோனின் வெப்பநிலை அதிகமாக உள்ளது, அதிக பவர் நுகர்வு செயல்பாடு ஆஃப் செய்யப்பட்டுள்ளது</string>
+    <string name="overheat_dialog_title">உங்கள் ஃபோனின் வெப்பநிலை மிக அதிகமாக உள்ளது</string>
+    <string name="overheat_notification_alert">உங்கள் ஃபோனின் வெப்பநிலை மிக அதிகமாக உள்ளது. அதைக் குறைக்க, மின்சக்தியை அதிகம் பயன்படுத்தும் செயல்பாடுகள் முடக்கப்படுகின்றன</string>
     <string name="overheat_notification_resume">தொலைபேசியின் வெப்பநிலை மீண்டும் இயல்புக்கு மீட்கப்பட்டது, இப்போது வழக்கம்போல் தொலைபேசியைப் பயன்படுத்தலாம்</string>
     <string name="overheat_notification_title_resume">தொலைபேசியின் வெப்பநிலை மீண்டும் இயல்புக்கு மீட்கப்பட்டது</string>
-    <string name="overheat_toast_content">தொலைபேசியின் வெப்பநிலை மிக அதிகமாக உள்ளது, இந்த அம்சத்தைப் பயன்படுத்தாமல் இருப்பது நல்லது</string>
+    <string name="overheat_toast_content">ஃபோனின் வெப்பநிலை அதிகமாக உள்ளதால் இந்த அம்சத்தைப் பயன்படுத்துவது பரிந்துரைக்கப்படவில்லை</string>
     <string name="prevent_view_title">பாக்கெட் பயன்முறை ஆன் ஆக உள்ளது</string>
     <string name="prevent_view_title_cancel">உங்கள் ஃபோனை செயல்படுத்த:</string>
     <string name="prevent_view_top_tag_cancel">உங்கள் ஃபோனின் நீலப் பகுதியை மூடவேண்டாம், மேலும் நீலப் பகுதியில் உள்ள தூசை சுத்தம் செய்யவேண்டாம்.</string>

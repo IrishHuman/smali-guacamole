@@ -753,7 +753,7 @@
 
     iget-object v2, p0, Lcom/android/systemui/recents/views/RecentsView;->mContext:Landroid/content/Context;
 
-    const v3, 0x7f110567
+    const v3, 0x7f11056d
 
     new-array v1, v1, [Ljava/lang/Object;
 
@@ -1969,7 +1969,7 @@
 .method public final onBusEvent(Lcom/android/systemui/recents/events/activity/ShowEmptyViewEvent;)V
     .locals 1
 
-    const v0, 0x7f110562
+    const v0, 0x7f110568
 
     invoke-virtual {p0, v0}, Lcom/android/systemui/recents/views/RecentsView;->showEmptyView(I)V
 
@@ -3313,7 +3313,7 @@
     goto :goto_0
 
     :cond_1
-    const v0, 0x7f110562
+    const v0, 0x7f110568
 
     invoke-virtual {p0, v0}, Lcom/android/systemui/recents/views/RecentsView;->showEmptyView(I)V
 

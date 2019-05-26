@@ -1028,7 +1028,7 @@
     <string name="op_earphone_connected_success">జత చేయబడింది. మరిన్ని సెట్ చేయడానికి ట్యాప్ చేయండి.</string>
     <string name="op_earphone_device">జత చేయడానికి ట్యాప్ చేయండి</string>
     <string name="op_earphone_title">OnePlus Bullets Wireless</string>
-    <string name="op_emergency_indicator_hint_text">కిందకు స్వైప్ చేయండి</string>
+    <string name="op_emergency_indicator_hint_text">అత్యవసర సేవలు కోసం కిందికి స్వైప్ చేయండి</string>
     <string name="op_quick_settings_night_display_label">నైట్ మోడ్</string>
     <string name="op_quick_settings_night_display_summary_off">నైట్ మోడ్ ఆఫ్ చేయబడింది, ఆన్ చేయడం కొరకు తట్టండి</string>
     <string name="op_quick_settings_night_display_summary_on">నైట్ మోడ్ ఆన్ చేయబడింది, ఆఫ్ చేయడం కొరకు తట్టండి</string>
@@ -1044,18 +1044,18 @@
     <string name="output_service_wifi">Wi-Fi</string>
     <string name="output_title">మీడియా అవుట్‌పుట్</string>
     <string name="overheat_dialog_orange_button">ఇప్పుడే అమలు చేయి</string>
-    <string name="overheat_dialog_orange_message">"ఈ చర్యల వలన ఉష్ణోగ్రత తగ్గుతుంది
-1.ప్రకాశాన్ని తగ్గించండి
-2.హాట్‌స్పాట్ ఆఫ్ చేయండి
-3.ఫ్లాష్‌లైట్ ఆఫ్ చేయండి"</string>
+    <string name="overheat_dialog_orange_message">"ఉష్ణోగ్రత తగ్గించడానికి కింది ఆపరేషన్‌లు అమలు చేయబడతాయి
+1.ప్రకాశాన్ని తగ్గిస్తుంది
+2.హాట్‌స్పాట్ ఆఫ్ చేస్తుంది
+3.ఫ్లాష్‌లైట్ ఆఫ్ చేస్తుంది"</string>
     <string name="overheat_dialog_purple_button">ఇప్పుడు పవర్ ఆఫ్ చేయి</string>
     <string name="overheat_dialog_purple_message">ఫోన్ 5 సెకన్ల తర్వాత పవర్ ఆఫ్ చేయబడుతుంది</string>
     <string name="overheat_dialog_red_message">ఉష్ణోగ్రత తగ్గించడానికి అన్ని అప్లికేషన్ ప్రాసెస్‌లు క్లియర్ చేయబడతాయి</string>
-    <string name="overheat_dialog_title">ఫోన్ యొక్క ఉష్ణోగ్రత ఎక్కువగా ఉంది</string>
-    <string name="overheat_notification_alert">ఫోన్ యొక్క ఉష్ణోగ్రత చాలా ఎక్కువగా ఉంది మరియు అధిక పవర్ వినియోగం ఫంక్షన్ ఆఫ్ చేయబడింది</string>
+    <string name="overheat_dialog_title">మీ ఫోన్ ఉష్ణోగ్రత చాలా ఎక్కువగా ఉంది</string>
+    <string name="overheat_notification_alert">మీ ఫోన్ యొక్క ఉష్ణోగ్రత చాలా ఎక్కువగా ఉంది మరియు ఉష్ణోగ్రత తగ్గించడానికి అత్యధిక పవర్ వాడకం ఫంక్షన్‌లు ఆఫ్ చేయబడతాయి</string>
     <string name="overheat_notification_resume">ఫోన్ యొక్క ఉష్ణోగ్రత పునరుద్ధరించబడింది మరియు ఫోన్‌ను సాధారణంగా ఉపయోగించవచ్చు</string>
     <string name="overheat_notification_title_resume">ఫోన్ ఉష్ణోగ్రత పునరుద్ధరించబడింది</string>
-    <string name="overheat_toast_content">ఫోన్ యొక్క ఉష్ణోగ్రత చాలా ఎక్కువగా ఉంది, ఈ ఫీచర్ ఉపయోగించడానికి సిఫార్సు చేయబడలేదు</string>
+    <string name="overheat_toast_content">ఫోన్ అత్యధిక ఉష్ణోగ్రత స్థితిలో ఉంది, ఇది ఈ ఫీచర్ ఉపయోగించడానికి సిఫార్సు చేయబడలేదు</string>
     <string name="overlay_display_devices_title">ప్రత్యామ్నాయ ప్రదర్శనలను అనుకరించండి</string>
     <string name="overview">స్థూలదృష్టి</string>
     <string name="phone_hint">ఫోన్ కోసం చిహ్నాన్ని స్వైప్ చేయండి</string>

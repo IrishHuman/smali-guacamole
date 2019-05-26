@@ -1385,7 +1385,7 @@
 
     aget-object v3, v3, v5
 
-    const v9, 0x7f110696
+    const v9, 0x7f11069c
 
     invoke-virtual {v1, v9}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1397,7 +1397,7 @@
 
     aget-object v3, v3, v6
 
-    const v9, 0x7f1106ac
+    const v9, 0x7f1106b2
 
     invoke-virtual {v1, v9}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1409,7 +1409,7 @@
 
     aget-object v3, v3, v7
 
-    const v9, 0x7f110695
+    const v9, 0x7f11069b
 
     invoke-virtual {v1, v9}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 

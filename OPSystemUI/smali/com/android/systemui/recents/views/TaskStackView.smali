@@ -5902,12 +5902,12 @@
 
     if-eqz p5, :cond_4
 
-    const v3, 0x7f110562
+    const v3, 0x7f110568
 
     goto :goto_0
 
     :cond_4
-    const v3, 0x7f110563
+    const v3, 0x7f110569
 
     :goto_0
     invoke-direct {v2, v3}, Lcom/android/systemui/recents/events/ui/AllTaskViewsDismissedEvent;-><init>(I)V
@@ -5985,7 +5985,7 @@
 
     new-instance v2, Lcom/android/systemui/recents/events/ui/AllTaskViewsDismissedEvent;
 
-    const v3, 0x7f110563
+    const v3, 0x7f110569
 
     invoke-direct {v2, v3}, Lcom/android/systemui/recents/events/ui/AllTaskViewsDismissedEvent;-><init>(I)V
 

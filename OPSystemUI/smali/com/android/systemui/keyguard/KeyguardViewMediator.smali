@@ -5980,7 +5980,32 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    sget p2, Lcom/android/systemui/keyguard/KeyguardViewMediator;->AUTHENTICATE_IGNORE:I
+
     :cond_2
+    invoke-static {}, Lcom/android/systemui/util/OPUtils;->isCustomFingerprint()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    iget-object v0, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator;->mUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;
+
+    invoke-virtual {v0}, Lcom/android/keyguard/KeyguardUpdateMonitor;->isKeyguardDone()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    const-string v0, "KeyguardViewMediator"
+
+    const-string v1, "not handle another Authenticate since keyguard already done"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    sget p2, Lcom/android/systemui/keyguard/KeyguardViewMediator;->AUTHENTICATE_IGNORE:I
+
+    :cond_3
     sget v0, Lcom/android/systemui/keyguard/KeyguardViewMediator;->AUTHENTICATE_IGNORE:I
 
     iput v0, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator;->mAuthenticatingType:I
@@ -5997,7 +6022,7 @@
     :goto_1
     const/4 v2, 0x0
 
-    if-ltz v1, :cond_4
+    if-ltz v1, :cond_5
 
     :try_start_0
     iget-object v3, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator;->mKeyguardStateCallbacks:Ljava/util/ArrayList;
@@ -6025,24 +6050,24 @@
 
     instance-of v3, v2, Landroid/os/DeadObjectException;
 
-    if-eqz v3, :cond_3
+    if-eqz v3, :cond_4
 
     iget-object v3, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator;->mKeyguardStateCallbacks:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v1}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    :cond_3
+    :cond_4
     :goto_2
     add-int/lit8 v1, v1, -0x1
 
     goto :goto_1
 
-    :cond_4
+    :cond_5
     invoke-static {}, Lcom/android/systemui/util/OPUtils;->isCustomFingerprint()Z
 
     move-result v1
 
-    if-eqz v1, :cond_5
+    if-eqz v1, :cond_6
 
     iget-object v1, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator;->mContext:Landroid/content/Context;
 
@@ -6052,7 +6077,7 @@
 
     invoke-virtual {v1, p1, p2, p3, v2}, Lcom/android/keyguard/KeyguardUpdateMonitor;->dispatchAuthenticateChanged(ZIII)V
 
-    :cond_5
+    :cond_6
     return-void
 .end method
 

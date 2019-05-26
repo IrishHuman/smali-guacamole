@@ -63,7 +63,7 @@
 
     move-result-object v0
 
-    const-string v2, "seen_tuner_warning"
+    const-string/jumbo v2, "seen_tuner_warning"
 
     invoke-static {v0, v2, v1}, Landroid/provider/Settings$Secure;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 

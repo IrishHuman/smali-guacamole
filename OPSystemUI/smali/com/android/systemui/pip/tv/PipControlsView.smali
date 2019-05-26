@@ -550,7 +550,7 @@
 
     iget-object v3, p0, Lcom/android/systemui/pip/tv/PipControlsView;->mPlayPauseButtonView:Lcom/android/systemui/pip/tv/PipControlButtonView;
 
-    const v4, 0x7f110492
+    const v4, 0x7f110498
 
     invoke-virtual {v3, v4}, Lcom/android/systemui/pip/tv/PipControlButtonView;->setText(I)V
 
@@ -565,7 +565,7 @@
 
     iget-object v3, p0, Lcom/android/systemui/pip/tv/PipControlsView;->mPlayPauseButtonView:Lcom/android/systemui/pip/tv/PipControlButtonView;
 
-    const v4, 0x7f110498
+    const v4, 0x7f11049e
 
     invoke-virtual {v3, v4}, Lcom/android/systemui/pip/tv/PipControlButtonView;->setText(I)V
 

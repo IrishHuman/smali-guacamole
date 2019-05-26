@@ -18,6 +18,10 @@
 .end annotation
 
 
+# static fields
+.field private static TAG:Ljava/lang/String;
+
+
 # instance fields
 .field private mActionsContainer:Landroid/view/View;
 
@@ -81,6 +85,16 @@
 
 
 # direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    const-string v0, "QSFooterImpl"
+
+    sput-object v0, Lcom/android/systemui/qs/QSFooterImpl;->TAG:Ljava/lang/String;
+
+    return-void
+.end method
+
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 2
 
@@ -391,12 +405,30 @@
 .end method
 
 .method public static synthetic lambda$onFinishInflate$0(Lcom/android/systemui/qs/QSFooterImpl;Landroid/view/View;)V
-    .locals 1
+    .locals 2
+
+    iget-object v0, p0, Lcom/android/systemui/qs/QSFooterImpl;->mQsPanel:Lcom/android/systemui/qs/QSPanel;
+
+    invoke-virtual {v0}, Lcom/android/systemui/qs/QSPanel;->getVisibility()I
+
+    move-result v0
+
+    if-nez v0, :cond_0
 
     iget-object v0, p0, Lcom/android/systemui/qs/QSFooterImpl;->mQsPanel:Lcom/android/systemui/qs/QSPanel;
 
     invoke-virtual {v0, p1}, Lcom/android/systemui/qs/QSPanel;->showEdit(Landroid/view/View;)V
 
+    goto :goto_0
+
+    :cond_0
+    sget-object v0, Lcom/android/systemui/qs/QSFooterImpl;->TAG:Ljava/lang/String;
+
+    const-string v1, "Don\'t show Editor when mQsPanel hide"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    :goto_0
     return-void
 .end method
 
@@ -466,6 +498,132 @@
     invoke-virtual {p0, v0}, Lcom/android/systemui/qs/QSFooterImpl;->setClickable(Z)V
 
     return-void
+.end method
+
+.method private showUserSwitcher(Z)Z
+    .locals 6
+
+    iget-boolean v0, p0, Lcom/android/systemui/qs/QSFooterImpl;->mExpanded:Z
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_0
+
+    invoke-static {}, Lcom/android/systemui/plugin/LSState;->getInstance()Lcom/android/systemui/plugin/LSState;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/android/systemui/plugin/LSState;->getPhoneStatusBar()Lcom/android/systemui/statusbar/phone/StatusBar;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-static {}, Lcom/android/systemui/plugin/LSState;->getInstance()Lcom/android/systemui/plugin/LSState;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/android/systemui/plugin/LSState;->getPhoneStatusBar()Lcom/android/systemui/statusbar/phone/StatusBar;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/android/systemui/statusbar/phone/StatusBar;->isKeyguardShowing()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    return v1
+
+    :cond_0
+    iget-boolean v0, p0, Lcom/android/systemui/qs/QSFooterImpl;->mExpanded:Z
+
+    const/4 v2, 0x0
+
+    if-eqz v0, :cond_5
+
+    if-nez p1, :cond_5
+
+    invoke-static {}, Landroid/os/UserManager;->supportsMultipleUsers()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    iget-object v0, p0, Lcom/android/systemui/qs/QSFooterImpl;->mContext:Landroid/content/Context;
+
+    invoke-static {v0}, Landroid/os/UserManager;->get(Landroid/content/Context;)Landroid/os/UserManager;
+
+    move-result-object v0
+
+    const-string v3, "no_user_switch"
+
+    invoke-virtual {v0, v3}, Landroid/os/UserManager;->hasUserRestriction(Ljava/lang/String;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_2
+
+    return v2
+
+    :cond_2
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/os/UserManager;->getUsers(Z)Ljava/util/List;
+
+    move-result-object v3
+
+    invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v3
+
+    :goto_0
+    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_4
+
+    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Landroid/content/pm/UserInfo;
+
+    invoke-virtual {v4}, Landroid/content/pm/UserInfo;->supportsSwitchToByUser()Z
+
+    move-result v5
+
+    if-eqz v5, :cond_3
+
+    add-int/lit8 v2, v2, 0x1
+
+    if-le v2, v1, :cond_3
+
+    return v1
+
+    :cond_3
+    goto :goto_0
+
+    :cond_4
+    invoke-virtual {p0}, Lcom/android/systemui/qs/QSFooterImpl;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    const v3, 0x7f050056
+
+    invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getBoolean(I)Z
+
+    move-result v1
+
+    return v1
+
+    :cond_5
+    :goto_1
+    return v2
 .end method
 
 .method private startSettingsActivity()V
@@ -716,7 +874,9 @@
 
     iget-object v1, p0, Lcom/android/systemui/qs/QSFooterImpl;->mMultiUserSwitch:Lcom/android/systemui/statusbar/phone/MultiUserSwitch;
 
-    iget-boolean v4, p0, Lcom/android/systemui/qs/QSFooterImpl;->mExpanded:Z
+    invoke-direct {p0, v0}, Lcom/android/systemui/qs/QSFooterImpl;->showUserSwitcher(Z)Z
+
+    move-result v4
 
     const/4 v5, 0x4
 

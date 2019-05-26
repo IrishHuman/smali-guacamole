@@ -21,12 +21,12 @@
 
 .field public static final date_picker_month_typeface:I = 0x7f110223
 
-.field public static final op_character_counter_pattern:I = 0x7f11045b
+.field public static final op_character_counter_pattern:I = 0x7f110461
 
-.field public static final select_day:I = 0x7f1105aa
+.field public static final select_day:I = 0x7f1105b0
 
-.field public static final select_hours:I = 0x7f1105ab
+.field public static final select_hours:I = 0x7f1105b1
 
-.field public static final select_minutes:I = 0x7f1105b0
+.field public static final select_minutes:I = 0x7f1105b6
 
-.field public static final select_year:I = 0x7f1105b8
+.field public static final select_year:I = 0x7f1105be

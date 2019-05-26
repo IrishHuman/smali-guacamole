@@ -18,7 +18,7 @@
 
 .field private final mHeadsUpManager:Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone;
 
-.field public final mHeadsUpStatusBarView:Lcom/android/systemui/statusbar/HeadsUpStatusBarView;
+.field private final mHeadsUpStatusBarView:Lcom/android/systemui/statusbar/HeadsUpStatusBarView;
 
 .field private mIsExpanded:Z
 
@@ -62,7 +62,7 @@
 
 # direct methods
 .method public constructor <init>(Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone;Landroid/view/View;)V
-    .locals 9
+    .locals 8
 
     nop
 
@@ -299,6 +299,7 @@
     .locals 2
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/HeadsUpAppearanceController;->mClockView:Landroid/view/View;
+
     const/4 v1, 0x4
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
@@ -855,10 +856,4 @@
 
     :cond_4
     return-void
-.end method
-
-.method public updateViews(F)V
-	.locals 0
-	
-	return-void
 .end method

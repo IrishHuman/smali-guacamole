@@ -132,7 +132,7 @@
 .method private setSummary(Landroid/support/v7/preference/Preference;Ljava/lang/String;)V
     .locals 3
 
-    const v0, 0x7f1103b5
+    const v0, 0x7f1103bb
 
     if-nez p2, :cond_0
 

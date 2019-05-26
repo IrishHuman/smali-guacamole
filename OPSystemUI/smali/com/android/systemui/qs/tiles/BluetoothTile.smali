@@ -194,16 +194,12 @@
 
 .method private getSecondaryLabel(ZZZZ)Ljava/lang/String;
     .locals 8
-    
-    sget-boolean v0, Lcom/android/mwilky/Renovate;->mHideQsLabels:Z
-    
-    if-nez v0, :cond_6
 
     if-eqz p2, :cond_0
 
     iget-object v0, p0, Lcom/android/systemui/qs/tiles/BluetoothTile;->mContext:Landroid/content/Context;
 
-    const v1, 0x7f1104f3
+    const v1, 0x7f1104f9
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -216,7 +212,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/qs/tiles/BluetoothTile;->mContext:Landroid/content/Context;
 
-    const v1, 0x7f1104df
+    const v1, 0x7f1104e5
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -298,7 +294,7 @@
 
     iget-object v5, p0, Lcom/android/systemui/qs/tiles/BluetoothTile;->mContext:Landroid/content/Context;
 
-    const v6, 0x7f1104dc
+    const v6, 0x7f1104e2
 
     new-array v3, v3, [Ljava/lang/Object;
 
@@ -329,7 +325,7 @@
 
     iget-object v2, p0, Lcom/android/systemui/qs/tiles/BluetoothTile;->mContext:Landroid/content/Context;
 
-    const v3, 0x7f1104db
+    const v3, 0x7f1104e1
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -346,7 +342,7 @@
 
     iget-object v2, p0, Lcom/android/systemui/qs/tiles/BluetoothTile;->mContext:Landroid/content/Context;
 
-    const v3, 0x7f1104dd
+    const v3, 0x7f1104e3
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -365,7 +361,7 @@
 
     iget-object v2, p0, Lcom/android/systemui/qs/tiles/BluetoothTile;->mContext:Landroid/content/Context;
 
-    const v3, 0x7f1104de
+    const v3, 0x7f1104e4
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -457,7 +453,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/qs/tiles/BluetoothTile;->mContext:Landroid/content/Context;
 
-    const v1, 0x7f1104d8
+    const v1, 0x7f1104de
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -468,8 +464,6 @@
 
 .method protected handleClick()V
     .locals 3
-    
-    invoke-virtual {p0}, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->setVibrateTweak()V
 
     iget-object v0, p0, Lcom/android/systemui/qs/tiles/BluetoothTile;->mState:Lcom/android/systemui/plugins/qs/QSTile$State;
 
@@ -699,7 +693,7 @@
 
     iget-object v6, p0, Lcom/android/systemui/qs/tiles/BluetoothTile;->mContext:Landroid/content/Context;
 
-    const v7, 0x7f1104d8
+    const v7, 0x7f1104de
 
     invoke-virtual {v6, v7}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

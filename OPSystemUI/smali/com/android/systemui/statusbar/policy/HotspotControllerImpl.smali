@@ -19,6 +19,8 @@
 # static fields
 .field private static final DEBUG:Z
 
+.field private static final DEBUG_ONEPLUS:Z
+
 
 # instance fields
 .field private final mCallbacks:Ljava/util/ArrayList;
@@ -35,9 +37,15 @@
 
 .field private final mContext:Landroid/content/Context;
 
+.field private mDisableByOperator:Z
+
+.field private mHotspotCallerPkg:Ljava/lang/String;
+
 .field private mHotspotState:I
 
 .field private mNumConnectedDevices:I
+
+.field private mTetheredData:Lcom/android/systemui/qs/GlobalSetting;
 
 .field private mWaitingForCallback:Z
 
@@ -60,11 +68,15 @@
 
     sput-boolean v0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->DEBUG:Z
 
+    sget-boolean v0, Landroid/os/Build;->DEBUG_ONEPLUS:Z
+
+    sput-boolean v0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->DEBUG_ONEPLUS:Z
+
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;)V
-    .locals 2
+    .locals 5
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -82,64 +94,82 @@
 
     iput-object v0, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->mWifiStateReceiver:Lcom/android/systemui/statusbar/policy/HotspotControllerImpl$WifiStateReceiver;
 
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->mDisableByOperator:Z
+
     iput-object p1, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->mContext:Landroid/content/Context;
 
-    const-string v0, "connectivity"
+    const-string v2, "connectivity"
 
-    invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p1, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object v2
 
-    check-cast v0, Landroid/net/ConnectivityManager;
+    check-cast v2, Landroid/net/ConnectivityManager;
 
-    iput-object v0, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->mConnectivityManager:Landroid/net/ConnectivityManager;
+    iput-object v2, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->mConnectivityManager:Landroid/net/ConnectivityManager;
 
-    const-string/jumbo v0, "wifi"
+    const-string/jumbo v2, "wifi"
 
-    invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p1, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object v2
 
-    check-cast v0, Landroid/net/wifi/WifiManager;
+    check-cast v2, Landroid/net/wifi/WifiManager;
 
-    iput-object v0, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->mWifiManager:Landroid/net/wifi/WifiManager;
+    iput-object v2, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->mWifiManager:Landroid/net/wifi/WifiManager;
 
+    invoke-static {}, Lcom/android/systemui/util/OPUtils;->isUSS()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    new-instance v2, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl$1;
+
+    iget-object v3, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->mContext:Landroid/content/Context;
+
+    const-string v4, "TetheredData"
+
+    invoke-direct {v2, p0, v3, v1, v4}, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl$1;-><init>(Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;Landroid/content/Context;Landroid/os/Handler;Ljava/lang/String;)V
+
+    iput-object v2, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->mTetheredData:Lcom/android/systemui/qs/GlobalSetting;
+
+    iget-object v1, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->mTetheredData:Lcom/android/systemui/qs/GlobalSetting;
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v1, v2}, Lcom/android/systemui/qs/GlobalSetting;->setListening(Z)V
+
+    iget-object v1, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->mTetheredData:Lcom/android/systemui/qs/GlobalSetting;
+
+    invoke-virtual {v1}, Lcom/android/systemui/qs/GlobalSetting;->getValue()I
+
+    move-result v1
+
+    if-ne v1, v2, :cond_0
+
+    move v0, v2
+
+    nop
+
+    :cond_0
+    iput-boolean v0, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->mDisableByOperator:Z
+
+    :cond_1
     return-void
 .end method
 
-.method static synthetic access$200()Z
+.method static synthetic access$100(Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;)Z
     .locals 1
 
-    sget-boolean v0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->DEBUG:Z
+    iget-boolean v0, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->mDisableByOperator:Z
 
     return v0
 .end method
 
-.method static synthetic access$302(Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;Z)Z
-    .locals 0
-
-    iput-boolean p1, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->mWaitingForCallback:Z
-
-    return p1
-.end method
-
-.method static synthetic access$400(Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;Z)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->fireHotspotChangedCallback(Z)V
-
-    return-void
-.end method
-
-.method static synthetic access$500(Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;)Landroid/content/Context;
-    .locals 1
-
-    iget-object v0, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->mContext:Landroid/content/Context;
-
-    return-object v0
-.end method
-
-.method static synthetic access$602(Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;I)I
+.method static synthetic access$1002(Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;I)I
     .locals 0
 
     iput p1, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->mHotspotState:I
@@ -147,12 +177,84 @@
     return p1
 .end method
 
-.method static synthetic access$702(Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;I)I
+.method static synthetic access$102(Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;Z)Z
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->mDisableByOperator:Z
+
+    return p1
+.end method
+
+.method static synthetic access$1102(Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;I)I
     .locals 0
 
     iput p1, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->mNumConnectedDevices:I
 
     return p1
+.end method
+
+.method static synthetic access$200(Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;)Landroid/content/Context;
+    .locals 1
+
+    iget-object v0, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->mContext:Landroid/content/Context;
+
+    return-object v0
+.end method
+
+.method static synthetic access$300(Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;Z)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->fireOperatorChangedCallback(Z)V
+
+    return-void
+.end method
+
+.method static synthetic access$500()Z
+    .locals 1
+
+    sget-boolean v0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->DEBUG:Z
+
+    return v0
+.end method
+
+.method static synthetic access$602(Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;Z)Z
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->mWaitingForCallback:Z
+
+    return p1
+.end method
+
+.method static synthetic access$700(Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;Z)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->fireHotspotChangedCallback(Z)V
+
+    return-void
+.end method
+
+.method static synthetic access$800()Z
+    .locals 1
+
+    sget-boolean v0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->DEBUG_ONEPLUS:Z
+
+    return v0
+.end method
+
+.method static synthetic access$900(Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;)Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->mHotspotCallerPkg:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method static synthetic access$902(Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;Ljava/lang/String;)Ljava/lang/String;
+    .locals 0
+
+    iput-object p1, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->mHotspotCallerPkg:Ljava/lang/String;
+
+    return-object p1
 .end method
 
 .method private fireHotspotChangedCallback(Z)V
@@ -197,6 +299,89 @@
     goto :goto_0
 
     :cond_0
+    monitor-exit v0
+
+    return-void
+
+    :catchall_0
+    move-exception v1
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
+.end method
+
+.method private fireOperatorChangedCallback(Z)V
+    .locals 3
+
+    sget-boolean v0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->DEBUG_ONEPLUS:Z
+
+    if-eqz v0, :cond_0
+
+    const-string v0, "HotspotController"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "fireOperatorChangedCallback / enabled:"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v2, " / codeStack:"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    new-instance v2, Ljava/lang/Throwable;
+
+    invoke-direct {v2}, Ljava/lang/Throwable;-><init>()V
+
+    invoke-static {v2}, Landroid/util/Log;->getStackTraceString(Ljava/lang/Throwable;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    iget-object v0, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->mCallbacks:Ljava/util/ArrayList;
+
+    monitor-enter v0
+
+    :try_start_0
+    iget-object v1, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->mCallbacks:Ljava/util/ArrayList;
+
+    invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lcom/android/systemui/statusbar/policy/HotspotController$Callback;
+
+    invoke-interface {v2, p1}, Lcom/android/systemui/statusbar/policy/HotspotController$Callback;->onOperatorHotspotChanged(Z)V
+
+    goto :goto_0
+
+    :cond_1
     monitor-exit v0
 
     return-void
@@ -301,7 +486,7 @@
 
     monitor-enter v0
 
-    if-eqz p1, :cond_2
+    if-eqz p1, :cond_3
 
     :try_start_0
     iget-object v1, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->mCallbacks:Ljava/util/ArrayList;
@@ -352,6 +537,19 @@
 
     invoke-direct {p0, v1}, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->updateWifiStateListeners(Z)V
 
+    invoke-static {}, Lcom/android/systemui/util/OPUtils;->isUSS()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    invoke-virtual {p0}, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->isOperatorHotspotDisable()Z
+
+    move-result v1
+
+    invoke-interface {p1, v1}, Lcom/android/systemui/statusbar/policy/HotspotController$Callback;->onOperatorHotspotChanged(Z)V
+
+    :cond_2
     monitor-exit v0
 
     return-void
@@ -361,7 +559,7 @@
 
     goto :goto_1
 
-    :cond_2
+    :cond_3
     :goto_0
     monitor-exit v0
 
@@ -508,6 +706,25 @@
     const/4 v0, 0x1
 
     :goto_1
+    return v0
+.end method
+
+.method public isOperatorHotspotDisable()Z
+    .locals 1
+
+    invoke-static {}, Lcom/android/systemui/util/OPUtils;->isUSS()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-boolean v0, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->mDisableByOperator:Z
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
     return v0
 .end method
 

@@ -1028,7 +1028,7 @@ Bạn cũng được kết nối với VPN. Dịch vụ này có thể giám sá
     <string name="op_earphone_connected_success">Đã ghép nối. Chạm để cài đặt thêm.</string>
     <string name="op_earphone_device">CHẠM ĐỂ GHÉP NỐI</string>
     <string name="op_earphone_title">OnePlus Bullets Wireless</string>
-    <string name="op_emergency_indicator_hint_text">Vuốt xuống</string>
+    <string name="op_emergency_indicator_hint_text">Vuốt xuống để sử dụng các dịch vụ khẩn cấp</string>
     <string name="op_quick_settings_night_display_label">Chế độ ban đêm</string>
     <string name="op_quick_settings_night_display_summary_off">Chế độ Ban đêm đang tắt, chạm để bật</string>
     <string name="op_quick_settings_night_display_summary_on">Chế độ Ban đêm đang bật, chạm để tắt</string>
@@ -1044,18 +1044,18 @@ Bạn cũng được kết nối với VPN. Dịch vụ này có thể giám sá
     <string name="output_service_wifi">Wi-Fi</string>
     <string name="output_title">Đầu ra phương tiện</string>
     <string name="overheat_dialog_orange_button">Thực hiện ngay</string>
-    <string name="overheat_dialog_orange_message">"Sẽ thực hiện những hành động này để giảm bớt nhiệt độ
+    <string name="overheat_dialog_orange_message">"Những hành động sau đây sẽ được thực hiện để giảm bớt nhiệt độ
 1.Giảm độ sáng
 2.Tắt điểm truy cập
 3.Tắt đèn pin"</string>
     <string name="overheat_dialog_purple_button">Tắt nguồn ngay</string>
     <string name="overheat_dialog_purple_message">Điện thoại sẽ tắt nguồn sau 5 giây</string>
     <string name="overheat_dialog_red_message">Sẽ xóa tất cả các quy trình ứng dụng để giảm bớt nhiệt độ</string>
-    <string name="overheat_dialog_title">Nhiệt độ của điện thoại cao</string>
-    <string name="overheat_notification_alert">Nhiệt độ của điện thoại quá cao và chức năng tiêu tốn nhiều pin sẽ được tắt</string>
+    <string name="overheat_dialog_title">Nhiệt độ của điện thoại quá cao</string>
+    <string name="overheat_notification_alert">Nhiệt độ của điện thoại quá cao và các chức năng tiêu tốn nhiều pin sẽ được tắt để giảm bớt nhiệt độ</string>
     <string name="overheat_notification_resume">Nhiệt độ của điện thoại đã được phục hồi và điện thoại có thể được sử dụng bình thường</string>
     <string name="overheat_notification_title_resume">Nhiệt độ của điện thoại đã được phục hồi</string>
-    <string name="overheat_toast_content">Nhiệt độ của điện thoại quá cao, chúng tôi khuyến nghị không sử dụng tính năng này</string>
+    <string name="overheat_toast_content">Nhiệt độ của điện thoại cao, chúng tôi khuyến nghị không nên dùng tính năng này</string>
     <string name="overlay_display_devices_title">Mô phỏng màn hình phụ</string>
     <string name="overview">Tổng quan</string>
     <string name="phone_hint">Vuốt từ biểu tượng để mở điện thoại</string>

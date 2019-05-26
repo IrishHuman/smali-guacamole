@@ -844,7 +844,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f110499
+    const v1, 0x7f11049f
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -856,7 +856,7 @@
 
     iput-object v1, p0, Lcom/android/systemui/pip/tv/PipManager;->mSettingsPipBounds:Landroid/graphics/Rect;
 
-    const v1, 0x7f11048d
+    const v1, 0x7f110493
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 

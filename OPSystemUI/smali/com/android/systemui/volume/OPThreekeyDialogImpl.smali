@@ -765,21 +765,21 @@
     :pswitch_0
     const v1, 0x7f08075e
 
-    const v2, 0x7f110695
+    const v2, 0x7f11069b
 
     goto :goto_0
 
     :pswitch_1
     const v1, 0x7f080761
 
-    const v2, 0x7f1106ac
+    const v2, 0x7f1106b2
 
     goto :goto_0
 
     :pswitch_2
     const v1, 0x7f080760
 
-    const v2, 0x7f110696
+    const v2, 0x7f11069c
 
     nop
 

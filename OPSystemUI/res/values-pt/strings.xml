@@ -1027,7 +1027,7 @@ Você também está conectado a uma VPN, que pode monitorar sua atividade de red
     <string name="op_earphone_connected_success">Emparelhado. Tocar para conf. mais.</string>
     <string name="op_earphone_device">TOCAR P/ EMP.</string>
     <string name="op_earphone_title">OnePlus Bullets Wireless</string>
-    <string name="op_emergency_indicator_hint_text">Deslizar para baixo</string>
+    <string name="op_emergency_indicator_hint_text">Deslizar para baixo para obter serviços de emergência</string>
     <string name="op_quick_settings_night_display_label">Modo noturno</string>
     <string name="op_quick_settings_night_display_summary_off">Modo noturno desativado, toque para ativar</string>
     <string name="op_quick_settings_night_display_summary_on">Modo noturno ativado, toque para desativar</string>
@@ -1043,18 +1043,18 @@ Você também está conectado a uma VPN, que pode monitorar sua atividade de red
     <string name="output_service_wifi">Wi-Fi</string>
     <string name="output_title">Saída de mídia</string>
     <string name="overheat_dialog_orange_button">Executar agora</string>
-    <string name="overheat_dialog_orange_message">"Irá efetuar estas ações para baixar a temperatura.
-1.Redução do brilho
+    <string name="overheat_dialog_orange_message">"As seguintes operações serão efetuadas para baixar a temperatura
+1.Redução da luminosidade
 2.Desativação do ponto de acesso
 3.Desativação da lanterna"</string>
     <string name="overheat_dialog_purple_button">Desligar agora</string>
     <string name="overheat_dialog_purple_message">O telefone será desligado após 5 segundos</string>
     <string name="overheat_dialog_red_message">Irá limpar todos os processos de aplicações para baixar a temperatura</string>
-    <string name="overheat_dialog_title">A temperatura do telefone está elevada</string>
-    <string name="overheat_notification_alert">A temperatura do telefone está demasiado elevada e a função de alto consumo de energia está desativada</string>
+    <string name="overheat_dialog_title">A temperatura do telefone está demasiado elevada</string>
+    <string name="overheat_notification_alert">A temperatura do telefone está demasiado elevada e as funções que consomem bastante energia foram desligadas para baixar a temperatura</string>
     <string name="overheat_notification_resume">A temperatura do telefone foi reposta e o telefone pode ser utilizado normalmente</string>
     <string name="overheat_notification_title_resume">A temperatura do telefone foi reposta</string>
-    <string name="overheat_toast_content">A temperatura do telefone está demasiado elevada, não se recomenda a utilização desta funcionalidade</string>
+    <string name="overheat_toast_content">O telefone encontra-se num estado de elevada temperatura. Não é recomendada a utilização desta funcionalidade</string>
     <string name="overlay_display_devices_title">Simular telas secundárias</string>
     <string name="overview">Visão geral</string>
     <string name="phone_hint">Deslize a partir do ícone do telefone</string>

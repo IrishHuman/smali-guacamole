@@ -1027,7 +1027,7 @@ También estás conectado a una red VPN, que puede supervisar tu actividad de re
     <string name="op_earphone_connected_success">Emparejado. Toca para establecer más ajustes.</string>
     <string name="op_earphone_device">TOCAR PARA EMPAREJAR</string>
     <string name="op_earphone_title">OnePlus Bullets Wireless</string>
-    <string name="op_emergency_indicator_hint_text">Deslizar hacia abajo</string>
+    <string name="op_emergency_indicator_hint_text">Desliza hacia abajo para acceder a los servicios de emergencia</string>
     <string name="op_quick_settings_night_display_label">Modo nocturno</string>
     <string name="op_quick_settings_night_display_summary_off">Modo nocturno desactivado. Tocar para activar</string>
     <string name="op_quick_settings_night_display_summary_on">Modo nocturno activado. Tocar para desactivar</string>
@@ -1043,18 +1043,18 @@ También estás conectado a una red VPN, que puede supervisar tu actividad de re
     <string name="output_service_wifi">Wi‑Fi</string>
     <string name="output_title">Salida multimedia</string>
     <string name="overheat_dialog_orange_button">Ejecutar ahora</string>
-    <string name="overheat_dialog_orange_message">"Se pueden tomar estas medidas para reducir la temperatura:
+    <string name="overheat_dialog_orange_message">"Se aplicarán las siguientes acciones para reducir la temperatura:
 1. Reducir el brillo
 2. Desactivar el punto de acceso
 3. Apagar la linterna"</string>
     <string name="overheat_dialog_purple_button">Apagar ahora</string>
     <string name="overheat_dialog_purple_message">El teléfono se apagará en 5 segundos</string>
     <string name="overheat_dialog_red_message">Se interrumpirán todos los procesos de aplicaciones para reducir la temperatura</string>
-    <string name="overheat_dialog_title">La temperatura del teléfono es elevada</string>
-    <string name="overheat_notification_alert">La temperatura del teléfono es demasiado elevada y la función de alto consumo de energía se ha desactivado</string>
+    <string name="overheat_dialog_title">La temperatura del teléfono es demasiado elevada</string>
+    <string name="overheat_notification_alert">La temperatura del teléfono es demasiado elevada. Se han desactivado las funciones con un alto consumo de energía para reducir la temperatura.</string>
     <string name="overheat_notification_resume">La temperatura del teléfono se ha restaurado y el teléfono se puede utilizar con normalidad</string>
     <string name="overheat_notification_title_resume">La temperatura del teléfono se ha restaurado</string>
-    <string name="overheat_toast_content">La temperatura del teléfono es demasiado elevada. No se recomienda utilizar esta función</string>
+    <string name="overheat_toast_content">El teléfono se encuentra en un estado de temperatura elevada, no es recomendable utilizar esta función.</string>
     <string name="overlay_display_devices_title">Simular pantallas secundarias</string>
     <string name="overview">Aplicaciones recientes</string>
     <string name="phone_hint">Desliza desde el icono para abrir el teléfono</string>

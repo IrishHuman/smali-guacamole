@@ -261,25 +261,25 @@
 
     iget-object v0, p0, Lcom/android/systemui/plugin/PreventModeView;->mTitle:Landroid/widget/TextView;
 
-    const v1, 0x7f1104b4
+    const v1, 0x7f1104ba
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
     iget-object v0, p0, Lcom/android/systemui/plugin/PreventModeView;->mTitleCancel:Landroid/widget/TextView;
 
-    const v1, 0x7f1104b5
+    const v1, 0x7f1104bb
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
     iget-object v0, p0, Lcom/android/systemui/plugin/PreventModeView;->mTag:Landroid/widget/TextView;
 
-    const v1, 0x7f1104b6
+    const v1, 0x7f1104bc
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
     iget-object v0, p0, Lcom/android/systemui/plugin/PreventModeView;->mTag2:Landroid/widget/TextView;
 
-    const v1, 0x7f1104b7
+    const v1, 0x7f1104bd
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 

@@ -3282,7 +3282,7 @@
 .end method
 
 .method private handleScreenTurnedOn()V
-    .locals 4
+    .locals 6
 
     iget-object v0, p0, Lcom/android/keyguard/KeyguardUpdateMonitor;->mCallbacks:Ljava/util/ArrayList;
 
@@ -3297,6 +3297,7 @@
     :goto_0
     if-ge v2, v0, :cond_1
 
+    :try_start_0
     iget-object v3, p0, Lcom/android/keyguard/KeyguardUpdateMonitor;->mCallbacks:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -3314,13 +3315,41 @@
     if-eqz v3, :cond_0
 
     invoke-virtual {v3}, Lcom/android/keyguard/KeyguardUpdateMonitorCallback;->onScreenTurnedOn()V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     :cond_0
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
+    :catch_0
+    move-exception v2
+
+    const-string v3, "KeyguardUpdateMonitor"
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v5, "handleScreenTurnedOn error : "
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_1
+
     :cond_1
+    nop
+
+    :goto_1
     invoke-static {}, Lcom/android/systemui/util/OPUtils;->isCustomFingerprint()Z
 
     move-result v2
@@ -3331,7 +3360,7 @@
 
     invoke-direct {p0, v1}, Lcom/android/keyguard/KeyguardUpdateMonitor;->setPocketSensorEnabled(Z)V
 
-    goto :goto_1
+    goto :goto_2
 
     :cond_2
     iget-boolean v1, p0, Lcom/android/keyguard/KeyguardUpdateMonitor;->mDeviceInteractive:Z
@@ -3341,7 +3370,7 @@
     invoke-direct {p0, v3}, Lcom/android/keyguard/KeyguardUpdateMonitor;->setPocketSensorEnabled(Z)V
 
     :cond_3
-    :goto_1
+    :goto_2
     invoke-static {}, Lcom/android/systemui/util/OPUtils;->isCustomFingerprint()Z
 
     move-result v1

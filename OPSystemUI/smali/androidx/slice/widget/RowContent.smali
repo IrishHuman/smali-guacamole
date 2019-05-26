@@ -443,7 +443,7 @@
 
     move-result-object v1
 
-    const-string v2, "see_more"
+    const-string/jumbo v2, "see_more"
 
     invoke-virtual {p0, v2}, Landroidx/slice/SliceItem;->hasHint(Ljava/lang/String;)Z
 
@@ -1435,7 +1435,7 @@
 
     move-result-object v0
 
-    const-string v1, "see_more"
+    const-string/jumbo v1, "see_more"
 
     invoke-virtual {v0, v1}, Landroidx/slice/Slice;->hasHint(Ljava/lang/String;)Z
 

@@ -76,24 +76,24 @@
     <string name="op_earphone_connected_success">ਜੋੜਿਆ ਗਿਆ। ਹੋਰ ਸੈੱਟ ਕਰਨ ਲਈ ਟੈਪ ਕਰੋ।</string>
     <string name="op_earphone_device">ਜੋੜੇ ਦੇ ਲਈ ਟੈਪ ਕਰੋ</string>
     <string name="op_earphone_title">OnePlus Bullets Wireless</string>
-    <string name="op_emergency_indicator_hint_text">ਹੇਠਾਂ ਵੱਲ ਸਵਾਈਪ ਕਰੋ</string>
+    <string name="op_emergency_indicator_hint_text">ਐਮਰਜੈਂਸੀ ਸੇਵਾਵਾਂ ਲਈ ਹੇਠਾਂ ਵੱਲ ਸਵਾਈਪ ਕਰੋ</string>
     <string name="op_quick_settings_night_display_label">ਰਾਤਰੀ ਮੋਡ</string>
     <string name="op_quick_settings_night_display_summary_off">ਰਾਤਰੀ ਮੋਡ ਬੰਦ ਹੈ, ਚਾਲੂ ਕਰਨ ਲਈ ਟੈਪ ਕਰੋ</string>
     <string name="op_quick_settings_night_display_summary_on">ਰਾਤਰੀ ਮੋਡ ਚਾਲੂ ਹੈ, ਬੰਦ ਕਰਨ ਲਈ ਟੈਪ ਕਰੋ</string>
     <string name="output_chooser_empty_hint">ਕੋਈ ਕਨੈਕਟ ਕੀਤੀ ਡਿਵਾਈਸ ਨਹੀਂ</string>
     <string name="overheat_dialog_orange_button">"ਹੁਣੇ ਅਮਲ 'ਚ ਲਿਆਓ"</string>
-    <string name="overheat_dialog_orange_message">"ਤਾਪਮਾਨ ਨੂੰ ਘੱਟ ਕਰਨ ਲਈ ਇਹ ਕਾਰਵਾਈਆਂ ਕੀਤੀਆਂ ਜਾਣਗੀਆਂ
-1.ਚਮਕ ਨੂੰ ਘਟਾਓ
-2.ਹੌਟਸਪੌਟ ਨੂੰ ਬੰਦ ਕਰੋ
-3.ਫਲੈਸ਼ਲਾਈਟ ਨੂੰ ਬੰਦ ਕਰੋ"</string>
+    <string name="overheat_dialog_orange_message">"ਤਾਪਮਾਨ ਨੂੰ ਘੱਟ ਕਰਨ ਲਈ ਇਹ ਕੰਮ ਕਰਨੇ ਪੈਣਗੇ
+1. ਚਮਕ ਨੂੰ ਘੱਟ ਕਰੋ
+2. ਹਾੱਟ ਸਪਾੱਟ ਨੂੰ ਬੰਦ ਕਰੋ
+3. ਫਲੈਸ਼ ਲਾਈਟ ਨੂੰ ਬੰਦ ਕਰੋ"</string>
     <string name="overheat_dialog_purple_button">ਹੁਣੇ ਪਾਵਰ ਬੰਦ ਕਰੋ</string>
     <string name="overheat_dialog_purple_message">ਫ਼ੋਨ ਦੀ ਪਾਵਰ 5 ਸਕਿੰਟਾਂ ਬਾਅਦ ਬੰਦ ਹੋ ਜਾਵੇਗੀ</string>
     <string name="overheat_dialog_red_message">ਤਾਪਮਾਨ ਨੂੰ ਘੱਟ ਕਰਨ ਲਈ ਸਾਰੀਆਂ ਐਪਲੀਕੇਸ਼ਨ ਪ੍ਰਕਿਰਿਆਵਾਂ ਨੂੰ ਹਟਾ ਦਿੱਤਾ ਜਾਵੇਗਾ</string>
-    <string name="overheat_dialog_title">ਫ਼ੋਨ ਦਾ ਤਾਪਮਾਨ ਜ਼ਿਆਦਾ ਹੈ</string>
-    <string name="overheat_notification_alert">ਫ਼ੋਨ ਦਾ ਤਾਪਮਾਨ ਬਹੁਤ ਜ਼ਿਆਦਾ ਹੈ, ਅਤੇ ਉੱਚ ਪਾਵਰ ਖਪਤ ਫੰਕਸ਼ਨ ਬੰਦ ਕੀਤਾ ਹੋਇਆ ਹੈ</string>
+    <string name="overheat_dialog_title">ਤੁਹਾਡੇ ਫੋਨ ਦਾ ਤਾਪਮਾਨ ਬਹੁਤ ਜ਼ਿਆਦਾ ਹੈ</string>
+    <string name="overheat_notification_alert">ਤੁਹਾਡੇ ਫੋਨ ਦਾ ਤਾਪਮਾਨ ਬਹੁਤ ਜ਼ਿਆਦਾ ਹੈ, ਅਤੇ ਤਾਪਮਾਨ ਨੂੰ ਘੱਟ ਕਰਨ ਲਈ ਜ਼ਿਆਦਾ ਬਿਜਲੀ ਦੀ ਖਪਤ ਕਰਨ ਵਾਲੇ ਸਾਰੇ ਫੰਕਸ਼ਨ ਬੰਦ ਕਰ ਦਿਤੇ ਹਨ।</string>
     <string name="overheat_notification_resume">ਫ਼ੋਨ ਦੇ ਤਾਪਮਾਨ ਨੂੰ ਮੁੜ-ਬਹਾਲ ਕੀਤਾ ਗਿਆ ਹੈ ਅਤੇ ਫ਼ੋਨ ਨੂੰ ਸਧਾਰਨ ਰੂਪ ਵਿੱਚ ਵਰਤਿਆ ਜਾ ਸਕਦਾ ਹੈ</string>
     <string name="overheat_notification_title_resume">ਫ਼ੋਨ ਦੇ ਤਾਪਮਾਨ ਨੂੰ ਮੁੜ-ਬਹਾਲ ਕੀਤਾ ਗਿਆ ਹੈ</string>
-    <string name="overheat_toast_content">ਫ਼ੋਨ ਦਾ ਤਾਪਮਾਨ ਬਹੁਤ ਜ਼ਿਆਦਾ ਹੈ, ਇਸ ਵਿਸ਼ੇਸ਼ਤਾ ਨੂੰ ਵਰਤਣ ਦੀ ਸਿਫ਼ਾਰਸ਼ ਨਹੀਂ ਕੀਤੀ ਜਾਂਦੀ ਹੈ</string>
+    <string name="overheat_toast_content">ਫੋਨ ਉੱਚ ਤਾਪਮਾਨ ਦੀ ਸਥਿਤੀ ਵਿੱਚ ਹੈ, ਇਸ ਫੰਕਸ਼ਨ ਦਾ ਉਪਯੋਗ ਕਰਨ ਦੀ ਸਲਾਹ ਨਹੀਂ ਦਿੱਤੀ ਜਾਂਦੀ</string>
     <string name="prevent_view_title">ਜੇਬ ਮੋਡ ਚਾਲੂ ਹੈ</string>
     <string name="prevent_view_title_cancel">ਆਪਣਾ ਫ਼ੋਨ ਕਿਰਿਆਸ਼ੀਲ ਕਰਨ ਲਈ:</string>
     <string name="prevent_view_top_tag_cancel">"ਕਿਰਪਾ ਕਰਕੇ ਆਪਣੇ ਫ਼ੋਨ ਦੇ ਨੀਲੇ ਖੇਤਰ ਨੂੰ ਨਾ ਢਕੋ ਅਤੇ ਨੀਲੇ ਖੇਤਰ 'ਤੇ ਲੱਗੀ ਗੰਦਗੀ ਜਾਂ ਮਿੱਟੀ-ਘੱਟੇ ਨੂੰ ਸਾਫ਼ ਕਰ ਦਿਓ।"</string>

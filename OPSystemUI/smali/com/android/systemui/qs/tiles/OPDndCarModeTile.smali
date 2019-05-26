@@ -204,7 +204,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/qs/tiles/OPDndCarModeTile;->mContext:Landroid/content/Context;
 
-    const v1, 0x7f11052e
+    const v1, 0x7f110534
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -335,7 +335,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/qs/tiles/OPDndCarModeTile;->mContext:Landroid/content/Context;
 
-    const v1, 0x7f11052e
+    const v1, 0x7f110534
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -357,12 +357,12 @@
 
     if-eqz v1, :cond_1
 
-    const v1, 0x7f110530
+    const v1, 0x7f110536
 
     goto :goto_0
 
     :cond_1
-    const v1, 0x7f11052f
+    const v1, 0x7f110535
 
     :goto_0
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;

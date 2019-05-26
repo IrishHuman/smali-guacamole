@@ -1028,7 +1028,7 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="op_earphone_connected_success">ജോടിയാക്കി. കൂടുതൽ സജ്ജമാക്കാൻ ടാപ്പുചെയ്യുക.</string>
     <string name="op_earphone_device">ജോടിയാക്കാൻ ടാപ്പുചെയ്യുക</string>
     <string name="op_earphone_title">OnePlus Bullets Wireless</string>
-    <string name="op_emergency_indicator_hint_text">താഴേക്ക് സ്വൈപ്പ് ചെയ്യുക</string>
+    <string name="op_emergency_indicator_hint_text">എമർജൻസി സേവനങ്ങൾക്കായി താഴേയ്ക്ക് സ്വൈപ്പ് ചെയ്യുക</string>
     <string name="op_quick_settings_night_display_label">നൈറ്റ് മോഡ്</string>
     <string name="op_quick_settings_night_display_summary_off">നൈറ്റ് മോഡ് ഓഫാണ്, ഓണ്‍ ചെയ്യാന്‍ ടാപ് ചെയ്യുക</string>
     <string name="op_quick_settings_night_display_summary_on">നൈറ്റ് മോഡ് ഓണാണ്, ഓഫ് ചെയ്യാന്‍ ടാപ് ചെയ്യുക</string>
@@ -1044,18 +1044,18 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="output_service_wifi">വൈഫൈ</string>
     <string name="output_title">മീഡിയ ഔട്ട്പുട്ട്</string>
     <string name="overheat_dialog_orange_button">ഇപ്പോൾ നടപ്പാക്കുക</string>
-    <string name="overheat_dialog_orange_message">"ഈ പ്രവർത്തനങ്ങൾ താപനില കുറയ്ക്കും
-1.ബ്രൈറ്റ്‌നസ് കുറയ്ക്കുക
+    <string name="overheat_dialog_orange_message">"താപനില കുറയ്ക്കുന്നതിനായി താഴെപ്പറയുന്ന പ്രവർത്തനങ്ങൾ നടത്തപ്പെടും
+1.തെളിച്ചം കുറയ്ക്കുക
 2.ഹോട്ട്സ്പോട്ട് ഓഫാക്കുക
 3.ഫ്ലാഷ്‌ലൈറ്റ് ഓഫാക്കുക"</string>
     <string name="overheat_dialog_purple_button">ഇപ്പോൾ ഓഫ് ചെയ്യുക</string>
     <string name="overheat_dialog_purple_message">5 നിമിഷങ്ങൾക്ക് ശേഷം ഫോൺ ഓഫ് ചെയ്യും</string>
     <string name="overheat_dialog_red_message">താപനില കുറയ്ക്കാൻ എല്ലാ ആപ്ലിക്കേഷൻ പ്രോസസ്സുകളും മായ്ക്കും</string>
-    <string name="overheat_dialog_title">ഫോണിൻ്റെ താപനില ഉയർന്നതാണ്</string>
-    <string name="overheat_notification_alert">ഫോണിൻ്റെ താപനില വളരെ ഉയർന്നതാണ്, ഉയർന്ന പവർ ഉപയോഗ ഫംഗ്ഷൻ ഓഫ് ചെയ്തു</string>
+    <string name="overheat_dialog_title">നിങ്ങളുടെ ഫോണിൻ്റെ താപനില വളരെ ഉയർന്നതാണ്</string>
+    <string name="overheat_notification_alert">നിങ്ങളുടെ ഫോണിന്റെ താപനില വളരെ ഉയർന്നതാണ്, താപനില കുറയ്ക്കുന്നതിനായി പവർ കൂടുതൽ ഉപയോഗിക്കുന്ന പ്രവർത്തനങ്ങൾ ഓഫാക്കിയിരിക്കുന്നു</string>
     <string name="overheat_notification_resume">ഫോണിൻ്റെ താപനില പുനഃസ്ഥാപിക്കപ്പെട്ടു, ഫോൺ സാധാരണരീതിയിൽ ഉപയോഗിക്കാം</string>
     <string name="overheat_notification_title_resume">ഫോണിൻ്റെ താപനില പുനഃസ്ഥാപിക്കപ്പെട്ടു</string>
-    <string name="overheat_toast_content">ഫോണിൻ്റെ താപനില വളരെ ഉയർന്നതാണ്, ഈ ഫീച്ചർ ഉപയോഗിക്കാൻ ശുപാർശ ചെയ്യുന്നില്ല</string>
+    <string name="overheat_toast_content">ഫോൺ ഉയർന്ന താപനിലയുള്ള അവസ്ഥയിലാണ്, ഈ സവിശേഷത ഉപയോഗിക്കുന്നതിന് ശുപാർശ ചെയ്തിട്ടില്ല</string>
     <string name="overlay_display_devices_title">രണ്ടാം ഡിസ്‌പ്ലേകൾ പ്രവർത്തിപ്പിക്കുക</string>
     <string name="overview">ചുരുക്കവിവരണം</string>
     <string name="phone_hint">ഫോൺ ഐക്കണിൽ നിന്ന് സ്വൈപ്പുചെയ്യുക</string>

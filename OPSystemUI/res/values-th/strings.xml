@@ -1028,7 +1028,7 @@
     <string name="op_earphone_connected_success">จับคู่แล้ว แตะการตั้งค่าเพิ่มเติม</string>
     <string name="op_earphone_device">แตะเพื่อจับคู่</string>
     <string name="op_earphone_title">OnePlus Bullets Wireless</string>
-    <string name="op_emergency_indicator_hint_text">ปัดนิ้วลงมา</string>
+    <string name="op_emergency_indicator_hint_text">ปัดนิ้วลงเพื่อใช้บริการฉุกเฉิน</string>
     <string name="op_quick_settings_night_display_label">โหมดกลางคืน</string>
     <string name="op_quick_settings_night_display_summary_off">โหมดกลางคืนปิด แตะเพื่อเปิด</string>
     <string name="op_quick_settings_night_display_summary_on">โหมดกลางคืนเปิด แตะเพื่อปิด</string>
@@ -1051,11 +1051,11 @@
     <string name="overheat_dialog_purple_button">ปิดเครื่องทันที</string>
     <string name="overheat_dialog_purple_message">โทรศัพท์จะปิดเครื่องหลังจากผ่านไป 5 วินาที</string>
     <string name="overheat_dialog_red_message">จะมีการล้างการประมวลผลแอปพลิเคชันเพื่อลดอุณหภูมิ</string>
-    <string name="overheat_dialog_title">โทรศัพท์มีอุณหภูมิสูง</string>
-    <string name="overheat_notification_alert">โทรศัพท์มีอุณหภูมิสูง ฟังก์ชันที่มีการใช้พลังงานสูงจะถูกปิด</string>
+    <string name="overheat_dialog_title">โทรศัพท์ของคุณมีอุณหภูมิสูงมาก</string>
+    <string name="overheat_notification_alert">โทรศัพท์ของคุณมีอุณหภูมิสูงมาก และฟังก์ชันต่างๆ ที่ใช้พลังงานสูงจะถูกปิดเพื่อลดอุณหภูมิ</string>
     <string name="overheat_notification_resume">อุณหภูมิของโทรศัพท์กลับสู่สถานะปกติและสามารถใช้โทรศัพท์ได้ตามปกติแล้ว</string>
     <string name="overheat_notification_title_resume">อุณหภูมิของโทรศัพท์กลับสู่สถานะปกติ</string>
-    <string name="overheat_toast_content">โทรศัพท์มีอุณหภูมิสูงเกินไป ขอแนะนำไม่ให้ใช้ฟีเจอร์นี้</string>
+    <string name="overheat_toast_content">โทรศัพท์อยู่ในสถานะที่มีอุณหภูมิสูง ไม่แนะนำให้ใช้ฟีเจอร์นี้</string>
     <string name="overlay_display_devices_title">จำลองจอแสดงผลที่สอง</string>
     <string name="overview">ภาพรวม</string>
     <string name="phone_hint">เลื่อนไอคอนโทรศัพท์</string>

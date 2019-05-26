@@ -9,6 +9,12 @@
 
 
 # annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/android/systemui/qs/QSTileHost$OperatorCustom;
+    }
+.end annotation
+
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
@@ -24,12 +30,10 @@
 # static fields
 .field private static final DEBUG:Z
 
-.field private static mTiles:Ljava/lang/String;
+.field private static final DEBUG_ONEPLUS:Z
 
 
 # instance fields
-.field private mReloadTiles:Z
-
 .field private final mAutoTiles:Lcom/android/systemui/statusbar/phone/AutoTileManager;
 
 .field private final mCallbacks:Ljava/util/List;
@@ -47,6 +51,8 @@
 .field private mCurrentUser:I
 
 .field private final mIconController:Lcom/android/systemui/statusbar/phone/StatusBarIconController;
+
+.field private final mOperatorCustom:Lcom/android/systemui/qs/QSTileHost$OperatorCustom;
 
 .field private final mQsFactories:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
@@ -98,6 +104,10 @@
 
     sput-boolean v0, Lcom/android/systemui/qs/QSTileHost;->DEBUG:Z
 
+    sget-boolean v0, Landroid/os/Build;->DEBUG_ONEPLUS:Z
+
+    sput-boolean v0, Lcom/android/systemui/qs/QSTileHost;->DEBUG_ONEPLUS:Z
+
     return-void
 .end method
 
@@ -105,10 +115,6 @@
     .locals 3
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-    
-    const/4 v0, 0x0
-    
-    iput-boolean v0, p0, Lcom/android/systemui/qs/QSTileHost;->mReloadTiles:Z
 
     new-instance v0, Ljava/util/LinkedHashMap;
 
@@ -198,7 +204,33 @@
 
     iput-object v0, p0, Lcom/android/systemui/qs/QSTileHost;->mAutoTiles:Lcom/android/systemui/statusbar/phone/AutoTileManager;
 
+    new-instance v0, Lcom/android/systemui/qs/QSTileHost$OperatorCustom;
+
+    invoke-direct {v0, p0}, Lcom/android/systemui/qs/QSTileHost$OperatorCustom;-><init>(Lcom/android/systemui/qs/QSTileHost;)V
+
+    iput-object v0, p0, Lcom/android/systemui/qs/QSTileHost;->mOperatorCustom:Lcom/android/systemui/qs/QSTileHost$OperatorCustom;
+
+    iget-object v0, p0, Lcom/android/systemui/qs/QSTileHost;->mOperatorCustom:Lcom/android/systemui/qs/QSTileHost$OperatorCustom;
+
+    invoke-virtual {v0}, Lcom/android/systemui/qs/QSTileHost$OperatorCustom;->init()V
+
     return-void
+.end method
+
+.method static synthetic access$000()Z
+    .locals 1
+
+    sget-boolean v0, Lcom/android/systemui/qs/QSTileHost;->DEBUG_ONEPLUS:Z
+
+    return v0
+.end method
+
+.method static synthetic access$500(Lcom/android/systemui/qs/QSTileHost;)Landroid/content/Context;
+    .locals 1
+
+    iget-object v0, p0, Lcom/android/systemui/qs/QSTileHost;->mContext:Landroid/content/Context;
+
+    return-object v0
 .end method
 
 .method static synthetic lambda$onTuningChanged$1(Ljava/util/List;Ljava/util/Map$Entry;)Z
@@ -750,7 +782,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f110544
+    const v1, 0x7f11054a
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -766,7 +798,7 @@
 
     if-eqz v2, :cond_0
 
-    const v2, 0x7f110545
+    const v2, 0x7f11054b
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -799,7 +831,7 @@
     :cond_0
     if-nez p2, :cond_1
 
-    const v2, 0x7f110543
+    const v2, 0x7f110549
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1073,7 +1105,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f110546
+    const v1, 0x7f11054c
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1097,10 +1129,6 @@
     move-result v2
 
     if-eqz v2, :cond_3
-    
-    iget-boolean v1, p0, Lcom/android/systemui/qs/QSTileHost;->mReloadTiles:Z
-    
-    if-nez v1, :cond_3
 
     iget v2, p0, Lcom/android/systemui/qs/QSTileHost;->mCurrentUser:I
 
@@ -1595,58 +1623,6 @@
 
 .method public warn(Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 0
-
-    return-void
-.end method
-
-.method public reloadTiles()V
-    .locals 3
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lcom/android/systemui/qs/QSTileHost;->mReloadTiles:Z
-    
-    invoke-virtual {p0}, Lcom/android/systemui/qs/QSTileHost;->saveTiles()V
-
-    iget-object v1, p0, Lcom/android/systemui/qs/QSTileHost;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object v2
-
-    const-string v1, "sysui_qs_tiles"
-
-    const-string v2, ""
-
-    invoke-virtual {p0, v1, v2}, Lcom/android/systemui/qs/QSTileHost;->onTuningChanged(Ljava/lang/String;Ljava/lang/String;)V
-    
-    sget-object v2, Lcom/android/systemui/qs/QSTileHost;->mTiles:Ljava/lang/String;
-
-    invoke-virtual {p0, v1, v2}, Lcom/android/systemui/qs/QSTileHost;->onTuningChanged(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lcom/android/systemui/qs/QSTileHost;->mReloadTiles:Z
-
-    return-void
-.end method
-
-.method public saveTiles()V
-    .locals 3
-
-    iget-object v1, p0, Lcom/android/systemui/qs/QSTileHost;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object v2
-
-    const-string v1, "sysui_qs_tiles"
-
-    invoke-static {v2, v1}, Landroid/provider/Settings$Secure;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    sput-object v2, Lcom/android/systemui/qs/QSTileHost;->mTiles:Ljava/lang/String;
 
     return-void
 .end method

@@ -163,7 +163,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f1103b6
+    const v1, 0x7f1103bc
 
     invoke-virtual {v0, v1}, Landroid/app/Activity;->setTitle(I)V
 
@@ -174,7 +174,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f1103b7
+    const v1, 0x7f1103bd
 
     invoke-virtual {v0, v1}, Landroid/app/Activity;->setTitle(I)V
 
@@ -209,7 +209,7 @@
 
     invoke-direct {v3, v0}, Landroid/support/v7/preference/PreferenceCategory;-><init>(Landroid/content/Context;)V
 
-    const v4, 0x7f11065f
+    const v4, 0x7f110665
 
     invoke-virtual {v3, v4}, Landroid/support/v7/preference/PreferenceCategory;->setTitle(I)V
 
@@ -227,7 +227,7 @@
 
     iget-object v4, p0, Lcom/android/systemui/tuner/ShortcutPicker;->mNonePreference:Lcom/android/systemui/tuner/SelectablePreference;
 
-    const v5, 0x7f1103b5
+    const v5, 0x7f1103bb
 
     invoke-virtual {v4, v5}, Lcom/android/systemui/tuner/SelectablePreference;->setTitle(I)V
 

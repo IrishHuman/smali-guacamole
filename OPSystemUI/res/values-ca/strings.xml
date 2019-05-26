@@ -1028,7 +1028,7 @@ A més, estàs connectat a una VPN, que també pot supervisar la teva activitat 
     <string name="op_earphone_connected_success">"S'han aparellat. Toqueu per seguir configurant."</string>
     <string name="op_earphone_device">TOQUEU PER APARELLAR</string>
     <string name="op_earphone_title">OnePlus Bullets Wireless</string>
-    <string name="op_emergency_indicator_hint_text">Feu lliscar el dit cap avall</string>
+    <string name="op_emergency_indicator_hint_text">"Llisqueu cap avall per veure els serveis d'emergència"</string>
     <string name="op_quick_settings_night_display_label">Mode nocturn</string>
     <string name="op_quick_settings_night_display_summary_off">Mode nocturn desactivat. Toqueu per activar</string>
     <string name="op_quick_settings_night_display_summary_on">Mode nocturn activat. Toqueu per desactivar</string>
@@ -1044,18 +1044,18 @@ A més, estàs connectat a una VPN, que també pot supervisar la teva activitat 
     <string name="output_service_wifi">Wi-Fi</string>
     <string name="output_title">Sortida de contingut multimèdia</string>
     <string name="overheat_dialog_orange_button">Executa ara</string>
-    <string name="overheat_dialog_orange_message">"Realitzarà aquestes accions per reduir la temperatura
-1.Redueix la brillantor
-2.Desactiva el punt de connexió
-3.Apaga la llanterna"</string>
+    <string name="overheat_dialog_orange_message">"Es realitzaran aquestes accions per reduir la temperatura
+1. Redueix la brillantor
+2. Desactiva el punt de connexió
+3. Apaga la llanterna"</string>
     <string name="overheat_dialog_purple_button">Apaga ara</string>
     <string name="overheat_dialog_purple_message">"El telèfon s'apagarà després de 5 segons"</string>
     <string name="overheat_dialog_red_message">"Esborrarà tots els processos d'aplicacions per reduir la temperatura"</string>
-    <string name="overheat_dialog_title">La temperatura del telèfon és alta</string>
-    <string name="overheat_notification_alert">La temperatura del telèfon és massa alta i la funció de consum de energia alt està desactivat</string>
+    <string name="overheat_dialog_title">La temperatura del vostre telèfon és massa alta</string>
+    <string name="overheat_notification_alert">"La temperatura del vostre telèfon és massa alta, i s'han desactivat les funcions de consum d'energia alt per reduir la temperatura"</string>
     <string name="overheat_notification_resume">"La temperatura del telèfon s'ha restaurat i el telèfon es pot utilitzar amb normalitat"</string>
     <string name="overheat_notification_title_resume">"La temperatura del telèfon s'ha restaurat"</string>
-    <string name="overheat_toast_content">La temperatura del telèfon és massa alta, no es recomana utilitzar aquesta funció</string>
+    <string name="overheat_toast_content">El telèfon està en un estat de temperatura alta, no es recomana utilitzar aquesta funció</string>
     <string name="overlay_display_devices_title">Simula pantalles secundàries</string>
     <string name="overview">Aplicacions recents</string>
     <string name="phone_hint">Llisca des de la icona per obrir el telèfon</string>

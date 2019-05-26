@@ -597,7 +597,7 @@
 .method private static getSeeMoreItem(Landroidx/slice/Slice;)Landroidx/slice/SliceItem;
     .locals 5
 
-    const-string v0, "see_more"
+    const-string/jumbo v0, "see_more"
 
     filled-new-array {v0}, [Ljava/lang/String;
 
@@ -697,7 +697,7 @@
 
     const-string v3, "keywords"
 
-    const-string v4, "see_more"
+    const-string/jumbo v4, "see_more"
 
     filled-new-array {v0, v2, v3, v4}, [Ljava/lang/String;
 
@@ -846,7 +846,7 @@
 
     const-string v5, "actions"
 
-    const-string v6, "see_more"
+    const-string/jumbo v6, "see_more"
 
     const-string v7, "keywords"
 

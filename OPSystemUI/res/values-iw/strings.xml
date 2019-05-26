@@ -1028,7 +1028,7 @@
     <string name="op_earphone_connected_success">השיוך בוצע. הקש כדי להגדיר עוד.</string>
     <string name="op_earphone_device">הקש כדי לשייך</string>
     <string name="op_earphone_title">OnePlus Bullets Wireless</string>
-    <string name="op_emergency_indicator_hint_text">החלק למטה</string>
+    <string name="op_emergency_indicator_hint_text">החלק מטה לקבלת נתונים של שירותי חירום</string>
     <string name="op_quick_settings_night_display_label">מצב לילה</string>
     <string name="op_quick_settings_night_display_summary_off">מצב לילה כבוי, לחץ כדי להפעיל</string>
     <string name="op_quick_settings_night_display_summary_on">מצב לילה פועל, לחץ כדי להפסיק</string>
@@ -1044,18 +1044,18 @@
     <string name="output_service_wifi">Wi-Fi</string>
     <string name="output_title">פלט מדיה</string>
     <string name="overheat_dialog_orange_button">בצע עכשיו</string>
-    <string name="overheat_dialog_orange_message">"יעשה את הפעולות המפורטות בהמשך כדי להוריד את הטמפרטורה
-‏1.יפחית את בהירות המסך
-‏2.יכבה את הנקודה החמה
-‏3.יכבה את הפנס"</string>
+    <string name="overheat_dialog_orange_message">"הפעולות הבאות יבוצעו לצורך הורדת הטמפרטורה
+1.הקטנת הבהירות
+2.כיבוי הנקודה החמה
+3.כיבוי הפנס"</string>
     <string name="overheat_dialog_purple_button">כבה עכשיו</string>
     <string name="overheat_dialog_purple_message">הטלפון ייכבה לאחר 5 שניות</string>
     <string name="overheat_dialog_red_message">ינקה את כל תהליכי האפליקציות כדי להוריד את הטמפרטורה</string>
-    <string name="overheat_dialog_title">הטמפרטורה של הטלפון גבוהה</string>
-    <string name="overheat_notification_alert">הטמפרטורה של הטלפון גבוהה מדי, והפונקציה שצריכת החשמל שלה גבוהה מכובה</string>
+    <string name="overheat_dialog_title">טמפרטורת הטלפון שלך גבוהה מדי</string>
+    <string name="overheat_notification_alert">טמפרטורת הטלפון שלך גבוהה מדי, ופונקציות הצורכות מתח גבוה ייכבו כדי להוריד את הטמפרטורה</string>
     <string name="overheat_notification_resume">הטמפרטורה של הטלפון חזרה למצב תקין ואפשר להשתמש בו כרגיל</string>
     <string name="overheat_notification_title_resume">הטמפרטורה של הטלפון הוחזרה למצב תקין</string>
-    <string name="overheat_toast_content">הטמפרטורה של הטלפון גבוהה מדי, השימוש בתכונה זאת אינו מומלץ</string>
+    <string name="overheat_toast_content">הטלפון במצב של טמפרטורה גבוהה, לא מומלץ להשתמש בתכונה זו</string>
     <string name="overlay_display_devices_title">צור הדמיית תצוגות משניות</string>
     <string name="overview">סקירה</string>
     <string name="phone_hint">החלק מהסמל כדי להפעיל את הטלפון</string>

@@ -1028,7 +1028,7 @@
     <string name="op_earphone_connected_success">جفت شد. برای تنظیم بیشتر، ضربه بزنید.</string>
     <string name="op_earphone_device">برای جفت‌سازی، ضربه بزنید</string>
     <string name="op_earphone_title">OnePlus Bullets Wireless</string>
-    <string name="op_emergency_indicator_hint_text">جاروب به سمت پایین</string>
+    <string name="op_emergency_indicator_hint_text">برای خدمات اضطراری، انگشتتان را به پایین بکشید</string>
     <string name="op_quick_settings_night_display_label">حالت شب</string>
     <string name="op_quick_settings_night_display_summary_off">حالت شب خاموش است؛ برای روشن کردن، ضربه بزنید</string>
     <string name="op_quick_settings_night_display_summary_on">حالت شب روشن است؛ برای خاموش کردن، ضربه بزنید</string>
@@ -1044,18 +1044,18 @@
     <string name="output_service_wifi">Wi-Fi</string>
     <string name="output_title">خروجی رسانه</string>
     <string name="overheat_dialog_orange_button">الآن اجرا شود</string>
-    <string name="overheat_dialog_orange_message">"این اقدامات برای کاهش دما انجام خواهد شد
-1. کاهش روشنایی
-2. خاموش کردن نقطۀ اتصال
-3. خاموش کردن چراغ‌قوه"</string>
+    <string name="overheat_dialog_orange_message">"عملیات زیر برای کاهش دما انجام خواهند شد
+1.کاهش روشنایی
+2.خاموش کردن نقطۀ اتصال
+3.خاموش کردن چراغ‌قوه"</string>
     <string name="overheat_dialog_purple_button">الآن خاموش شود</string>
     <string name="overheat_dialog_purple_message">تلفن پس از 5 ثانیه خاموش خواهد شد</string>
     <string name="overheat_dialog_red_message">برای کاهش دما، تمام فرآیندهای برنامه‌ها پاک خواهد شد</string>
-    <string name="overheat_dialog_title">دمای تلفن بالاست</string>
-    <string name="overheat_notification_alert">دمای تلفن بیش از حد بالاست و عملکرد مصرف نیروی بالا خاموش است</string>
+    <string name="overheat_dialog_title">دمای تلفن شما بیش از حد بالاست</string>
+    <string name="overheat_notification_alert">دمای تلفن شما بیش از حد بالاست و عملکردهایی که مصرف نیروی زیادی دارند خاموش می‌شوند تا دما کاهش یابد</string>
     <string name="overheat_notification_resume">دمای تلفن به حالت عادی برگشته و تلفن به صورت عادی قابل استفاده است</string>
     <string name="overheat_notification_title_resume">دمای تلفن به حالت عادی برگشته است</string>
-    <string name="overheat_toast_content">دمای تلفن بیش از حد بالاست؛ استفاده از این قابلیت توصیه نمی‌شود</string>
+    <string name="overheat_toast_content">دمای تلفن بالاست و توصیه می‌شود از این قابلیت استفاده نکنید</string>
     <string name="overlay_display_devices_title">شبیه‌سازی نمایشگر ثانویه</string>
     <string name="overview">نمای کلی</string>
     <string name="phone_hint">انگشتتان را از نماد تلفن تند بکشید</string>

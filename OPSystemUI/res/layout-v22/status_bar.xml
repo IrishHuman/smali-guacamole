@@ -22,7 +22,4 @@
     <ViewStub android:id="@id/emergency_cryptkeeper_text" android:layout="@layout/emergency_cryptkeeper_text" android:layout_width="wrap_content" android:layout_height="fill_parent" />
     <include android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/carmode_highlight_hint_view" />
     <View android:id="@id/traceview" android:layout_width="wrap_content" android:layout_height="fill_parent" />
-    <com.android.keyguard.AlphaOptimizedLinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/system_icon_area2" android:layout_width="fill_parent" android:layout_height="fill_parent">
-         <com.android.systemui.statusbar.policy.ClockCenter android:textAppearance="@style/TextAppearance.StatusBar.Clock" android:gravity="start|center" android:id="@id/clock_center" android:layout_width="wrap_content" android:layout_height="fill_parent" android:singleLine="true" android:paddingEnd="@dimen/status_bar_left_clock_end_padding" />
-    </com.android.keyguard.AlphaOptimizedLinearLayout>
 </com.android.systemui.statusbar.phone.PhoneStatusBarView>

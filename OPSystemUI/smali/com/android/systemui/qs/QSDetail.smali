@@ -399,13 +399,13 @@
 
     iget-object v0, p0, Lcom/android/systemui/qs/QSDetail;->mDetailDoneButton:Landroid/widget/TextView;
 
-    const v1, 0x7f11050b
+    const v1, 0x7f110511
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
     iget-object v0, p0, Lcom/android/systemui/qs/QSDetail;->mDetailSettingsButton:Landroid/widget/TextView;
 
-    const v1, 0x7f110524
+    const v1, 0x7f11052a
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 

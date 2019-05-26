@@ -619,6 +619,12 @@
     <string name="high_temp_notif_message">手機降溫時，部分功能會受限制</string>
     <string name="high_temp_title">手機溫度正在上升</string>
     <string name="home">主設定畫面</string>
+    <string name="hotspot_operator_dialog_nosim_button">@string/notification_appops_ok</string>
+    <string name="hotspot_operator_dialog_nosim_msg">插入 SIM 卡以使用 WLAN 熱點和其他網絡共享選項</string>
+    <string name="hotspot_operator_dialog_nosim_title">無 SIM 卡</string>
+    <string name="hotspot_operator_dialog_othererror_button">@string/notification_appops_ok</string>
+    <string name="hotspot_operator_dialog_othererror_msg">未成功開啟 Wifi 網絡共享</string>
+    <string name="hotspot_operator_dialog_othererror_title">Wifi 網絡共享錯誤</string>
     <string name="ime_security_warning">這個輸入法可能會收集您輸入的所有文字，包括密碼和信用卡號碼等個人資料。這個輸入法由 %1$s 應用程式提供，您要使用嗎？</string>
     <string name="immediately_destroy_activities">不要保留活動</string>
     <string name="immediately_destroy_activities_summary">使用者離開活動後隨即銷毀活動</string>

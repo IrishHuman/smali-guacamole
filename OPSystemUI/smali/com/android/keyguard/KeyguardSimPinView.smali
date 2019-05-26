@@ -193,7 +193,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f110352
+    const v3, 0x7f110358
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -297,12 +297,12 @@
     :cond_4
     if-eqz p2, :cond_5
 
-    const v2, 0x7f110368
+    const v2, 0x7f11036e
 
     goto :goto_3
 
     :cond_5
-    const v2, 0x7f110350
+    const v2, 0x7f110356
 
     :goto_3
     invoke-virtual {p0}, Lcom/android/keyguard/KeyguardSimPinView;->getContext()Landroid/content/Context;
@@ -328,7 +328,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f110367
+    const v4, 0x7f11036d
 
     new-array v1, v1, [Ljava/lang/Object;
 
@@ -389,7 +389,7 @@
 
     invoke-virtual {v2, v0}, Landroid/app/AlertDialog$Builder;->setCancelable(Z)Landroid/app/AlertDialog$Builder;
 
-    const v0, 0x7f110436
+    const v0, 0x7f11043c
 
     const/4 v3, 0x0
 
@@ -443,7 +443,7 @@
 
     iget-object v1, p0, Lcom/android/keyguard/KeyguardSimPinView;->mContext:Landroid/content/Context;
 
-    const v2, 0x7f11036a
+    const v2, 0x7f110370
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -537,328 +537,341 @@
 .end method
 
 .method private showDefaultMessage(Z)V
-    .locals 14
+    .locals 17
 
-    iget-object v0, p0, Lcom/android/keyguard/KeyguardSimPinView;->mContext:Landroid/content/Context;
+    move-object/from16 v0, p0
 
-    invoke-static {v0}, Lcom/android/keyguard/KeyguardUpdateMonitor;->getInstance(Landroid/content/Context;)Lcom/android/keyguard/KeyguardUpdateMonitor;
+    iget-object v1, v0, Lcom/android/keyguard/KeyguardSimPinView;->mContext:Landroid/content/Context;
 
-    move-result-object v0
+    invoke-static {v1}, Lcom/android/keyguard/KeyguardUpdateMonitor;->getInstance(Landroid/content/Context;)Lcom/android/keyguard/KeyguardUpdateMonitor;
 
-    invoke-virtual {v0}, Lcom/android/keyguard/KeyguardUpdateMonitor;->isSimPinSecure()Z
+    move-result-object v1
 
-    move-result v1
+    invoke-virtual {v1}, Lcom/android/keyguard/KeyguardUpdateMonitor;->isSimPinSecure()Z
 
-    if-nez v1, :cond_0
+    move-result v2
 
-    const-string v1, "KeyguardSimPinView"
+    if-nez v2, :cond_0
 
-    const-string v2, "return when no simpin"
+    const-string v2, "KeyguardSimPinView"
 
-    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    const-string v3, "return when no simpin"
+
+    invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
     :cond_0
-    sget-object v1, Lcom/android/internal/telephony/IccCardConstants$State;->PIN_REQUIRED:Lcom/android/internal/telephony/IccCardConstants$State;
+    sget-object v2, Lcom/android/internal/telephony/IccCardConstants$State;->PIN_REQUIRED:Lcom/android/internal/telephony/IccCardConstants$State;
 
-    invoke-virtual {v0, v1}, Lcom/android/keyguard/KeyguardUpdateMonitor;->getNextSubIdForState(Lcom/android/internal/telephony/IccCardConstants$State;)I
-
-    move-result v1
-
-    iget v2, p0, Lcom/android/keyguard/KeyguardSimPinView;->mSubId:I
-
-    if-eq v2, v1, :cond_1
-
-    invoke-static {v1}, Landroid/telephony/SubscriptionManager;->isValidSubscriptionId(I)Z
+    invoke-virtual {v1, v2}, Lcom/android/keyguard/KeyguardUpdateMonitor;->getNextSubIdForState(Lcom/android/internal/telephony/IccCardConstants$State;)I
 
     move-result v2
 
-    if-eqz v2, :cond_1
+    iget v3, v0, Lcom/android/keyguard/KeyguardSimPinView;->mSubId:I
 
-    const/4 p1, 0x1
+    if-eq v3, v2, :cond_1
 
-    iput v1, p0, Lcom/android/keyguard/KeyguardSimPinView;->mSubId:I
-
-    const-string v2, "KeyguardSimPinView"
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "change subId to "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_1
-    const v2, 0x7f0a03f6
-
-    invoke-virtual {p0, v2}, Lcom/android/keyguard/KeyguardSimPinView;->findViewById(I)Landroid/view/View;
-
-    move-result-object v2
-
-    check-cast v2, Landroid/widget/TextView;
-
-    iget v3, p0, Lcom/android/keyguard/KeyguardSimPinView;->mSubId:I
-
-    invoke-static {v3}, Landroid/telephony/SubscriptionManager;->isValidSubscriptionId(I)Z
+    invoke-static {v2}, Landroid/telephony/SubscriptionManager;->isValidSubscriptionId(I)Z
 
     move-result v3
 
-    if-nez v3, :cond_2
+    if-eqz v3, :cond_1
+
+    const/4 v3, 0x1
+
+    iput v2, v0, Lcom/android/keyguard/KeyguardSimPinView;->mSubId:I
+
+    const-string v4, "KeyguardSimPinView"
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v6, "change subId to "
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_0
+
+    :cond_1
+    move/from16 v3, p1
+
+    :goto_0
+    const v4, 0x7f0a03f6
+
+    invoke-virtual {v0, v4}, Lcom/android/keyguard/KeyguardSimPinView;->findViewById(I)Landroid/view/View;
+
+    move-result-object v4
+
+    check-cast v4, Landroid/widget/TextView;
+
+    iget v5, v0, Lcom/android/keyguard/KeyguardSimPinView;->mSubId:I
+
+    invoke-static {v5}, Landroid/telephony/SubscriptionManager;->isValidSubscriptionId(I)Z
+
+    move-result v5
+
+    if-nez v5, :cond_2
 
     return-void
 
     :cond_2
-    iget v3, p0, Lcom/android/keyguard/KeyguardSimPinView;->mRemainingAttempts:I
+    iget v5, v0, Lcom/android/keyguard/KeyguardSimPinView;->mRemainingAttempts:I
 
-    const/4 v4, 0x1
+    const/4 v6, 0x1
 
-    if-ltz v3, :cond_3
+    if-ltz v5, :cond_3
 
-    if-nez p1, :cond_3
+    if-nez v3, :cond_3
 
-    iget-object v3, p0, Lcom/android/keyguard/KeyguardSimPinView;->mSecurityMessageDisplay:Lcom/android/keyguard/SecurityMessageDisplay;
+    iget-object v5, v0, Lcom/android/keyguard/KeyguardSimPinView;->mSecurityMessageDisplay:Lcom/android/keyguard/SecurityMessageDisplay;
 
-    iget v5, p0, Lcom/android/keyguard/KeyguardSimPinView;->mRemainingAttempts:I
+    iget v7, v0, Lcom/android/keyguard/KeyguardSimPinView;->mRemainingAttempts:I
 
-    invoke-direct {p0, v5, v4}, Lcom/android/keyguard/KeyguardSimPinView;->getPinPasswordErrorMessage(IZ)Ljava/lang/String;
+    invoke-direct {v0, v7, v6}, Lcom/android/keyguard/KeyguardSimPinView;->getPinPasswordErrorMessage(IZ)Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v6
 
-    invoke-interface {v3, v4}, Lcom/android/keyguard/SecurityMessageDisplay;->setMessage(Ljava/lang/CharSequence;)V
+    invoke-interface {v5, v6}, Lcom/android/keyguard/SecurityMessageDisplay;->setMessage(Ljava/lang/CharSequence;)V
 
     return-void
 
     :cond_3
-    iget v3, p0, Lcom/android/keyguard/KeyguardSimPinView;->mSubId:I
+    iget v5, v0, Lcom/android/keyguard/KeyguardSimPinView;->mSubId:I
 
-    invoke-static {v3}, Landroid/telephony/SubscriptionManager;->getSlotIndex(I)I
-
-    move-result v3
-
-    iput v3, p0, Lcom/android/keyguard/KeyguardSimPinView;->mSlotId:I
-
-    iget v3, p0, Lcom/android/keyguard/KeyguardSimPinView;->mSlotId:I
-
-    const/4 v5, -0x1
-
-    if-ne v3, v5, :cond_4
-
-    const-string v3, "KeyguardSimPinView"
-
-    const-string v5, "get invalid slot index"
-
-    invoke-static {v3, v5}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    iget-object v3, p0, Lcom/android/keyguard/KeyguardSimPinView;->mContext:Landroid/content/Context;
-
-    invoke-static {v3}, Lcom/android/keyguard/KeyguardUpdateMonitor;->getInstance(Landroid/content/Context;)Lcom/android/keyguard/KeyguardUpdateMonitor;
-
-    move-result-object v3
-
-    iget v5, p0, Lcom/android/keyguard/KeyguardSimPinView;->mSubId:I
-
-    invoke-virtual {v3, v5}, Lcom/android/keyguard/KeyguardUpdateMonitor;->getSimSlotId(I)I
-
-    move-result v3
-
-    iput v3, p0, Lcom/android/keyguard/KeyguardSimPinView;->mSlotId:I
-
-    :cond_4
-    iget-object v3, p0, Lcom/android/keyguard/KeyguardSimPinView;->mContext:Landroid/content/Context;
-
-    iget v5, p0, Lcom/android/keyguard/KeyguardSimPinView;->mSubId:I
-
-    invoke-static {v3, v5}, Lcom/android/keyguard/KeyguardEsimArea;->isEsimLocked(Landroid/content/Context;I)Z
-
-    move-result v3
-
-    invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Landroid/telephony/TelephonyManager;->getSimCount()I
+    invoke-static {v5}, Landroid/telephony/SubscriptionManager;->getSlotIndex(I)I
 
     move-result v5
 
-    invoke-virtual {p0}, Lcom/android/keyguard/KeyguardSimPinView;->getResources()Landroid/content/res/Resources;
+    iput v5, v0, Lcom/android/keyguard/KeyguardSimPinView;->mSlotId:I
 
-    move-result-object v6
+    iget v5, v0, Lcom/android/keyguard/KeyguardSimPinView;->mSlotId:I
 
     const/4 v7, -0x1
 
-    const/4 v8, 0x2
+    if-ne v5, v7, :cond_4
 
-    const/4 v9, 0x0
+    const-string v5, "KeyguardSimPinView"
 
-    if-ge v5, v8, :cond_5
+    const-string v7, "get invalid slot index"
 
-    const v8, 0x7f110368
+    invoke-static {v5, v7}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-virtual {v6, v8}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+    iget-object v5, v0, Lcom/android/keyguard/KeyguardSimPinView;->mContext:Landroid/content/Context;
 
-    move-result-object v8
+    invoke-static {v5}, Lcom/android/keyguard/KeyguardUpdateMonitor;->getInstance(Landroid/content/Context;)Lcom/android/keyguard/KeyguardUpdateMonitor;
 
-    move-object v11, v8
+    move-result-object v5
 
-    goto :goto_1
+    iget v7, v0, Lcom/android/keyguard/KeyguardSimPinView;->mSubId:I
 
-    :cond_5
-    iget-object v8, p0, Lcom/android/keyguard/KeyguardSimPinView;->mContext:Landroid/content/Context;
+    invoke-virtual {v5, v7}, Lcom/android/keyguard/KeyguardUpdateMonitor;->getSimSlotId(I)I
 
-    invoke-static {v8}, Lcom/android/keyguard/KeyguardUpdateMonitor;->getInstance(Landroid/content/Context;)Lcom/android/keyguard/KeyguardUpdateMonitor;
+    move-result v5
 
-    move-result-object v8
+    iput v5, v0, Lcom/android/keyguard/KeyguardSimPinView;->mSlotId:I
 
-    iget v10, p0, Lcom/android/keyguard/KeyguardSimPinView;->mSubId:I
+    :cond_4
+    iget-object v5, v0, Lcom/android/keyguard/KeyguardSimPinView;->mContext:Landroid/content/Context;
 
-    invoke-virtual {v8, v10}, Lcom/android/keyguard/KeyguardUpdateMonitor;->getSubscriptionInfoForSubId(I)Landroid/telephony/SubscriptionInfo;
+    iget v7, v0, Lcom/android/keyguard/KeyguardSimPinView;->mSubId:I
 
-    move-result-object v8
+    invoke-static {v5, v7}, Lcom/android/keyguard/KeyguardEsimArea;->isEsimLocked(Landroid/content/Context;I)Z
 
-    if-eqz v8, :cond_6
+    move-result v5
 
-    invoke-virtual {v8}, Landroid/telephony/SubscriptionInfo;->getDisplayName()Ljava/lang/CharSequence;
+    invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
-    move-result-object v10
+    move-result-object v7
 
-    goto :goto_0
-
-    :cond_6
-    const-string v10, ""
-
-    :goto_0
-    const v11, 0x7f110369
-
-    new-array v12, v4, [Ljava/lang/Object;
-
-    aput-object v10, v12, v9
-
-    invoke-virtual {v6, v11, v12}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v11
-
-    if-eqz v8, :cond_7
-
-    invoke-virtual {v8}, Landroid/telephony/SubscriptionInfo;->getIconTint()I
+    invoke-virtual {v7}, Landroid/telephony/TelephonyManager;->getSimCount()I
 
     move-result v7
 
-    :cond_7
-    :goto_1
-    iget-object v8, p0, Lcom/android/keyguard/KeyguardSimPinView;->mContext:Landroid/content/Context;
-
-    const v10, 0x7f11036b
-
-    new-array v12, v4, [Ljava/lang/Object;
-
-    iget v13, p0, Lcom/android/keyguard/KeyguardSimPinView;->mSlotId:I
-
-    add-int/2addr v13, v4
-
-    invoke-static {v13}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    aput-object v4, v12, v9
-
-    invoke-virtual {v8, v10, v12}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v2, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    invoke-virtual {v2, v9}, Landroid/widget/TextView;->setVisibility(I)V
-
-    if-eqz v3, :cond_8
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v4, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v8, " "
-
-    invoke-virtual {v4, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const v8, 0x7f110367
-
-    invoke-virtual {v6, v8}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/keyguard/KeyguardSimPinView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v8
 
-    invoke-virtual {v4, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 v9, -0x1
 
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const/4 v10, 0x2
+
+    if-ge v7, v10, :cond_5
+
+    const v6, 0x7f11036e
+
+    invoke-virtual {v8, v6}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v6
+
+    const/4 v10, 0x4
+
+    invoke-virtual {v4, v10}, Landroid/widget/TextView;->setVisibility(I)V
+
+    move-object v12, v6
+
+    goto :goto_2
+
+    :cond_5
+    iget-object v10, v0, Lcom/android/keyguard/KeyguardSimPinView;->mContext:Landroid/content/Context;
+
+    invoke-static {v10}, Lcom/android/keyguard/KeyguardUpdateMonitor;->getInstance(Landroid/content/Context;)Lcom/android/keyguard/KeyguardUpdateMonitor;
+
+    move-result-object v10
+
+    iget v11, v0, Lcom/android/keyguard/KeyguardSimPinView;->mSubId:I
+
+    invoke-virtual {v10, v11}, Lcom/android/keyguard/KeyguardUpdateMonitor;->getSubscriptionInfoForSubId(I)Landroid/telephony/SubscriptionInfo;
+
+    move-result-object v10
+
+    if-eqz v10, :cond_6
+
+    invoke-virtual {v10}, Landroid/telephony/SubscriptionInfo;->getDisplayName()Ljava/lang/CharSequence;
 
     move-result-object v11
 
+    goto :goto_1
+
+    :cond_6
+    const-string v11, ""
+
+    :goto_1
+    const v12, 0x7f11036f
+
+    new-array v13, v6, [Ljava/lang/Object;
+
+    const/4 v14, 0x0
+
+    aput-object v11, v13, v14
+
+    invoke-virtual {v8, v12, v13}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v12
+
+    if-eqz v10, :cond_7
+
+    invoke-virtual {v10}, Landroid/telephony/SubscriptionInfo;->getIconTint()I
+
+    move-result v9
+
+    :cond_7
+    iget-object v13, v0, Lcom/android/keyguard/KeyguardSimPinView;->mContext:Landroid/content/Context;
+
+    new-array v15, v6, [Ljava/lang/Object;
+
+    iget v14, v0, Lcom/android/keyguard/KeyguardSimPinView;->mSlotId:I
+
+    add-int/2addr v14, v6
+
+    invoke-static {v14}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v6
+
+    const/4 v14, 0x0
+
+    aput-object v6, v15, v14
+
+    const v6, 0x7f110371
+
+    invoke-virtual {v13, v6, v15}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {v4, v6}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    invoke-virtual {v4, v14}, Landroid/widget/TextView;->setVisibility(I)V
+
+    :goto_2
+    if-eqz v5, :cond_8
+
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v6, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v10, " "
+
+    invoke-virtual {v6, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const v10, 0x7f11036d
+
+    invoke-virtual {v8, v10}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v10
+
+    invoke-virtual {v6, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v12
+
     :cond_8
-    iget-object v4, p0, Lcom/android/keyguard/KeyguardSimPinView;->mSecurityMessageDisplay:Lcom/android/keyguard/SecurityMessageDisplay;
+    iget-object v6, v0, Lcom/android/keyguard/KeyguardSimPinView;->mSecurityMessageDisplay:Lcom/android/keyguard/SecurityMessageDisplay;
 
-    invoke-interface {v4, v11}, Lcom/android/keyguard/SecurityMessageDisplay;->setMessage(Ljava/lang/CharSequence;)V
+    invoke-interface {v6, v12}, Lcom/android/keyguard/SecurityMessageDisplay;->setMessage(Ljava/lang/CharSequence;)V
 
-    iget-object v4, p0, Lcom/android/keyguard/KeyguardSimPinView;->mSimImageView:Landroid/widget/ImageView;
+    iget-object v6, v0, Lcom/android/keyguard/KeyguardSimPinView;->mSimImageView:Landroid/widget/ImageView;
 
-    invoke-static {v7}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
+    invoke-static {v9}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
 
-    move-result-object v8
+    move-result-object v10
 
-    invoke-virtual {v4, v8}, Landroid/widget/ImageView;->setImageTintList(Landroid/content/res/ColorStateList;)V
+    invoke-virtual {v6, v10}, Landroid/widget/ImageView;->setImageTintList(Landroid/content/res/ColorStateList;)V
 
-    const-string v4, "KeyguardSimPinView"
+    const-string v6, "KeyguardSimPinView"
 
-    new-instance v8, Ljava/lang/StringBuilder;
+    new-instance v10, Ljava/lang/StringBuilder;
 
-    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v9, "mSubId="
+    const-string v11, "mSubId="
 
-    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v9, p0, Lcom/android/keyguard/KeyguardSimPinView;->mSubId:I
+    iget v11, v0, Lcom/android/keyguard/KeyguardSimPinView;->mSubId:I
 
-    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const-string v9, " , slot="
+    const-string v11, " , slot="
 
-    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v9, p0, Lcom/android/keyguard/KeyguardSimPinView;->mSlotId:I
+    iget v11, v0, Lcom/android/keyguard/KeyguardSimPinView;->mSlotId:I
 
-    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const-string v9, ", esim:"
+    const-string v11, ", esim:"
 
-    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v8, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v10, v5}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v10}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v8
+    move-result-object v10
 
-    invoke-static {v4, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v6, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    new-instance v4, Lcom/android/keyguard/KeyguardSimPinView$2;
+    new-instance v6, Lcom/android/keyguard/KeyguardSimPinView$2;
 
-    const-string v8, ""
+    const-string v10, ""
 
-    iget v9, p0, Lcom/android/keyguard/KeyguardSimPinView;->mSubId:I
+    iget v11, v0, Lcom/android/keyguard/KeyguardSimPinView;->mSubId:I
 
-    invoke-direct {v4, p0, v8, v9}, Lcom/android/keyguard/KeyguardSimPinView$2;-><init>(Lcom/android/keyguard/KeyguardSimPinView;Ljava/lang/String;I)V
+    invoke-direct {v6, v0, v10, v11}, Lcom/android/keyguard/KeyguardSimPinView$2;-><init>(Lcom/android/keyguard/KeyguardSimPinView;Ljava/lang/String;I)V
 
-    invoke-virtual {v4}, Lcom/android/keyguard/KeyguardSimPinView$2;->start()V
+    invoke-virtual {v6}, Lcom/android/keyguard/KeyguardSimPinView$2;->start()V
 
     return-void
 .end method
@@ -1122,7 +1135,7 @@
 
     iget-object v1, p0, Lcom/android/keyguard/KeyguardSimPinView;->mSecurityMessageDisplay:Lcom/android/keyguard/SecurityMessageDisplay;
 
-    const v2, 0x7f11034c
+    const v2, 0x7f110352
 
     invoke-interface {v1, v2}, Lcom/android/keyguard/SecurityMessageDisplay;->setMessage(I)V
 

@@ -198,7 +198,7 @@
 
     iget-object v0, p0, Lcom/oneplus/aod/AodThreeKeyStatusView;->mTextView:Landroid/widget/TextView;
 
-    const v1, 0x7f110696
+    const v1, 0x7f11069c
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -211,7 +211,7 @@
 
     iget-object v0, p0, Lcom/oneplus/aod/AodThreeKeyStatusView;->mTextView:Landroid/widget/TextView;
 
-    const v1, 0x7f1106ac
+    const v1, 0x7f1106b2
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -220,7 +220,7 @@
     :cond_5
     iget-object v0, p0, Lcom/oneplus/aod/AodThreeKeyStatusView;->mTextView:Landroid/widget/TextView;
 
-    const v1, 0x7f110695
+    const v1, 0x7f11069b
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 

@@ -1027,7 +1027,7 @@ De asemenea, sunteți conectat(ă) la o rețea VPN care vă poate monitoriza act
     <string name="op_earphone_connected_success">Asociat. Apăsați pentru a seta mai multe.</string>
     <string name="op_earphone_device">APĂSAȚI PENTRU A ASOCIA</string>
     <string name="op_earphone_title">OnePlus Bullets Wireless</string>
-    <string name="op_emergency_indicator_hint_text">Alunecare cu degetele în jos</string>
+    <string name="op_emergency_indicator_hint_text">Glisați cu degetul în jos pentru a accesa serviciile de urgență</string>
     <string name="op_quick_settings_night_display_label">Mod noapte</string>
     <string name="op_quick_settings_night_display_summary_off">Modul noapte este dezactivat, atingeți pentru a îl activa</string>
     <string name="op_quick_settings_night_display_summary_on">Modul noapte este activat, atingeți pentru a îl dezactiva</string>
@@ -1043,18 +1043,18 @@ De asemenea, sunteți conectat(ă) la o rețea VPN care vă poate monitoriza act
     <string name="output_service_wifi">Wi-Fi</string>
     <string name="output_title">Ieșire media</string>
     <string name="overheat_dialog_orange_button">Execută acum</string>
-    <string name="overheat_dialog_orange_message">"Luați următoarele măsuri pentru a reduce temperatura
+    <string name="overheat_dialog_orange_message">"Operațiunile următoarele vor fi efectuate pentru a reduce temperatura
 1. Reduceți luminozitatea
-2. Dezactivați punctul de acces.
+2. Dezactivați punctul de acces
 3. Dezactivați lanterna"</string>
     <string name="overheat_dialog_purple_button">Oprire acum</string>
     <string name="overheat_dialog_purple_message">Telefonul va fi oprit după 5 secunde</string>
     <string name="overheat_dialog_red_message">Toate procesele aplicației vor fi eliminate pentru a scădea temperatura</string>
-    <string name="overheat_dialog_title">Temperatura telefonului este mare</string>
-    <string name="overheat_notification_alert">Temperatura telefonului este prea mare, iar funcția de consum mare de energie este dezactivată</string>
+    <string name="overheat_dialog_title">Temperatura telefonului dvs. este prea mare</string>
+    <string name="overheat_notification_alert">Temperatura telefonului dvs. este prea mare, iar funcțiile cu consum mare de energie sunt dezactivate pentru a reduce temperatura</string>
     <string name="overheat_notification_resume">Temperatura telefonului a fost restabilită, iar telefonul poate fi utilizat în mod normal</string>
     <string name="overheat_notification_title_resume">Temperatura telefonului a fost restabilită</string>
-    <string name="overheat_toast_content">Temperatura telefonului este prea mare, nu este recomandat să utilizați această caracteristică</string>
+    <string name="overheat_toast_content">Temperatura telefonului este mare, nu se recomandă utilizarea acestei funcții</string>
     <string name="overlay_display_devices_title">Simulați afișaje secundare</string>
     <string name="overview">Recente</string>
     <string name="phone_hint">Glisați dinspre telefon</string>

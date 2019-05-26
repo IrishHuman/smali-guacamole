@@ -17,3 +17,9 @@
 # virtual methods
 .method public abstract onHotspotChanged(ZI)V
 .end method
+
+.method public onOperatorHotspotChanged(Z)V
+    .locals 0
+
+    return-void
+.end method

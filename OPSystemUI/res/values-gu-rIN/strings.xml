@@ -76,24 +76,24 @@
     <string name="op_earphone_connected_success">પેઅર થઈ ગયું. વધુ સેટ કરવા માઅટે ટેપ કરો.</string>
     <string name="op_earphone_device">જોડવા માટે ટેપ કરો</string>
     <string name="op_earphone_title">OnePlus Bullets Wireless</string>
-    <string name="op_emergency_indicator_hint_text">નીચે સ્વાઇપ કરો</string>
+    <string name="op_emergency_indicator_hint_text">કટોકટીની સેવાઓ માટે નીચે સ્વાઇપ કરો</string>
     <string name="op_quick_settings_night_display_label">રાત્રી મોડ</string>
     <string name="op_quick_settings_night_display_summary_off">રાત્રિ મોડ ચાલુ છે, ચાલુ કરવા માટે ટેપ કરો</string>
     <string name="op_quick_settings_night_display_summary_on">રાત્રિ મોડ ચાલુ છે, બંધ કરવા માટે ટેપ કરો</string>
     <string name="output_chooser_empty_hint">કોઈ ડિવાઈસ કનેક્ટ કરવામાં આવી નથી</string>
     <string name="overheat_dialog_orange_button">હવે ચાલુ કરો</string>
-    <string name="overheat_dialog_orange_message">"તાપમાન ઓછું કરવા માટે આ પગલાંઓ લેશું
-1.તેજ ઘટાડો
-2.હૉટસ્પોટ બંધ કરો
-3.ફ્લેશલાઈટ બંધ કરો"</string>
+    <string name="overheat_dialog_orange_message">"તાપમાન ઓછું કરવા માટે નીચેના કાર્યો કરવામાં આવશે
+1.ચળકાટ ઘટાડો
+2.હૉટસ્પૉટ બંધ કરો
+3.ફ્લેશલાઇટ બંધ કરો"</string>
     <string name="overheat_dialog_purple_button">હવે બંધ કરો</string>
     <string name="overheat_dialog_purple_message">ફોન 5 સેકન્ડ પછી બંધ થઈ જશે</string>
     <string name="overheat_dialog_red_message">તાપમાન ઓછું કરવા બધી એપ્લિકેશનની પ્રક્રિયાઓ સાફ કરશે</string>
-    <string name="overheat_dialog_title">ફોનનું તાપમાન વધારે છે</string>
-    <string name="overheat_notification_alert">ફોનનું તાપમાન ખૂબ વધારે છે અને વધારે પાવર વપરાશનું કાર્ય બંધ છે</string>
+    <string name="overheat_dialog_title">તમારા ફોનનું તાપમાન ખૂબ જ વધારે છે</string>
+    <string name="overheat_notification_alert">તમારા ફોનનું તાપમાન ખૂબ વધારે છે અને તાપમાનને ઘટાડવા માટે ઉચ્ચ વપરાશના કાર્યો બંધ કરવામાં આવ્યા છે</string>
     <string name="overheat_notification_resume">ફોનનું તાપમાન પુનઃસ્થાપિત કરવામાં આવેલ છે અને ફોનનો સામાન્યની જેમ ઉપયોગ કરી શકાય છે</string>
     <string name="overheat_notification_title_resume">ફોનનું તાપમાન પુનઃસ્થાપિત કરવામાં આવેલ છે</string>
-    <string name="overheat_toast_content">ફોનનું તાપમાન ખૂબ જ વધારે છે, આ સુવિધાનો ઉપયોગ કરવાની ભલામણ કરવામાં આવતી નથી</string>
+    <string name="overheat_toast_content">ફોન ઉચ્ચ તાપમાનની સ્થિતિમાં છે, તેને આ સુવિધાનો ઉપયોગ કરવાની ભલામણ કરવામાં આવતી નથી</string>
     <string name="prevent_view_title">પોકેટ મોડ ઓન છે</string>
     <string name="prevent_view_title_cancel">તમારા ફોનને સક્રિય કરવા માટે:</string>
     <string name="prevent_view_top_tag_cancel">કૃપા કરી તમારા ફોનના બ્લુ ભાગને ઢાંકતા નહી, અને બ્લુ ભાગ પરની ધૂળ અને ગંદગીને સાફ કરતા રહો.</string>

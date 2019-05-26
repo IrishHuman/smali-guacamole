@@ -200,7 +200,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/qs/tiles/GameModeTile;->mContext:Landroid/content/Context;
 
-    const v1, 0x7f110514
+    const v1, 0x7f11051a
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -211,8 +211,6 @@
 
 .method protected handleClick()V
     .locals 3
-    
-    invoke-virtual {p0}, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->setVibrateTweak()V
 
     iget-object v0, p0, Lcom/android/systemui/qs/tiles/GameModeTile;->mState:Lcom/android/systemui/plugins/qs/QSTile$State;
 
@@ -288,7 +286,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/qs/tiles/GameModeTile;->mContext:Landroid/content/Context;
 
-    const v1, 0x7f110514
+    const v1, 0x7f11051a
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -306,7 +304,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/qs/tiles/GameModeTile;->mContext:Landroid/content/Context;
 
-    const v1, 0x50d0037
+    const v1, 0x50d0038
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -336,12 +334,12 @@
 
     if-eqz v1, :cond_2
 
-    const v1, 0x7f110516
+    const v1, 0x7f11051c
 
     goto :goto_1
 
     :cond_2
-    const v1, 0x7f110515
+    const v1, 0x7f11051b
 
     :goto_1
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;

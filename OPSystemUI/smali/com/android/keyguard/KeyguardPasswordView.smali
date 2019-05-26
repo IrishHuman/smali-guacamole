@@ -188,12 +188,12 @@
 
     if-eqz v0, :cond_0
 
-    const v0, 0x7f110348
+    const v0, 0x7f11034e
 
     goto :goto_0
 
     :cond_0
-    const v0, 0x7f11034f
+    const v0, 0x7f110355
 
     :goto_0
     iget-object v1, p0, Lcom/android/keyguard/KeyguardPasswordView;->mSecurityMessageDisplay:Lcom/android/keyguard/SecurityMessageDisplay;
@@ -654,19 +654,19 @@
 .method protected getPromptReasonStringRes(I)I
     .locals 1
 
-    const v0, 0x7f11035e
+    const v0, 0x7f110364
 
     packed-switch p1, :pswitch_data_0
 
     return v0
 
     :pswitch_0
-    const v0, 0x7f110361
+    const v0, 0x7f110367
 
     return v0
 
     :pswitch_1
-    const v0, 0x7f110357
+    const v0, 0x7f11035d
 
     return v0
 
@@ -674,7 +674,7 @@
     return v0
 
     :pswitch_3
-    const v0, 0x7f110358
+    const v0, 0x7f11035e
 
     return v0
 
@@ -732,7 +732,7 @@
 
     if-ne v2, v3, :cond_0
 
-    const v2, 0x7f110374
+    const v2, 0x7f11037a
 
     return v2
 
@@ -743,12 +743,12 @@
 
     if-ne v2, v3, :cond_1
 
-    const v2, 0x7f110375
+    const v2, 0x7f11037b
 
     return v2
 
     :cond_1
-    const v2, 0x7f11036f
+    const v2, 0x7f110375
 
     return v2
 .end method

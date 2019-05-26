@@ -713,7 +713,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/qs/QSSecurityFooter;->mContext:Landroid/content/Context;
 
-    const v1, 0x7f110436
+    const v1, 0x7f11043c
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -727,7 +727,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/qs/QSSecurityFooter;->mContext:Landroid/content/Context;
 
-    const v1, 0x7f1103d1
+    const v1, 0x7f1103d7
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -1030,7 +1030,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/qs/QSSecurityFooter;->mContext:Landroid/content/Context;
 
-    const v1, 0x7f1103e2
+    const v1, 0x7f1103e8
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -1043,7 +1043,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/qs/QSSecurityFooter;->mContext:Landroid/content/Context;
 
-    const v1, 0x7f1103df
+    const v1, 0x7f1103e5
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -1054,7 +1054,7 @@
     :cond_2
     iget-object v0, p0, Lcom/android/systemui/qs/QSSecurityFooter;->mContext:Landroid/content/Context;
 
-    const v1, 0x7f1103d8
+    const v1, 0x7f1103de
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -1089,7 +1089,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/qs/QSSecurityFooter;->mContext:Landroid/content/Context;
 
-    const v1, 0x7f1104fd
+    const v1, 0x7f110503
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -1100,7 +1100,7 @@
     :cond_1
     iget-object v2, p0, Lcom/android/systemui/qs/QSSecurityFooter;->mContext:Landroid/content/Context;
 
-    const v3, 0x7f110503
+    const v3, 0x7f110509
 
     new-array v1, v1, [Ljava/lang/Object;
 
@@ -1124,7 +1124,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/qs/QSSecurityFooter;->mContext:Landroid/content/Context;
 
-    const v1, 0x7f1104fa
+    const v1, 0x7f110500
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -1135,7 +1135,7 @@
     :cond_4
     iget-object v2, p0, Lcom/android/systemui/qs/QSSecurityFooter;->mContext:Landroid/content/Context;
 
-    const v3, 0x7f110500
+    const v3, 0x7f110506
 
     new-array v1, v1, [Ljava/lang/Object;
 
@@ -1153,7 +1153,7 @@
 
     iget-object v2, p0, Lcom/android/systemui/qs/QSSecurityFooter;->mContext:Landroid/content/Context;
 
-    const v3, 0x7f1104fc
+    const v3, 0x7f110502
 
     new-array v1, v1, [Ljava/lang/Object;
 
@@ -1178,7 +1178,7 @@
     :cond_7
     iget-object v2, p0, Lcom/android/systemui/qs/QSSecurityFooter;->mContext:Landroid/content/Context;
 
-    const v3, 0x7f110502
+    const v3, 0x7f110508
 
     const/4 v4, 0x2
 
@@ -1210,7 +1210,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/qs/QSSecurityFooter;->mContext:Landroid/content/Context;
 
-    const v1, 0x7f1104fb
+    const v1, 0x7f110501
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -1221,7 +1221,7 @@
     :cond_a
     iget-object v2, p0, Lcom/android/systemui/qs/QSSecurityFooter;->mContext:Landroid/content/Context;
 
-    const v3, 0x7f110501
+    const v3, 0x7f110507
 
     new-array v1, v1, [Ljava/lang/Object;
 
@@ -1240,7 +1240,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/qs/QSSecurityFooter;->mContext:Landroid/content/Context;
 
-    const v1, 0x7f1104f8
+    const v1, 0x7f1104fe
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -1251,7 +1251,7 @@
     :cond_c
     iget-object v2, p0, Lcom/android/systemui/qs/QSSecurityFooter;->mContext:Landroid/content/Context;
 
-    const v3, 0x7f1104ff
+    const v3, 0x7f110505
 
     new-array v1, v1, [Ljava/lang/Object;
 
@@ -1268,7 +1268,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/qs/QSSecurityFooter;->mContext:Landroid/content/Context;
 
-    const v1, 0x7f1104fe
+    const v1, 0x7f110504
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -1283,7 +1283,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/qs/QSSecurityFooter;->mContext:Landroid/content/Context;
 
-    const v1, 0x7f110506
+    const v1, 0x7f11050c
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -1296,7 +1296,7 @@
 
     iget-object v2, p0, Lcom/android/systemui/qs/QSSecurityFooter;->mContext:Landroid/content/Context;
 
-    const v3, 0x7f1104f9
+    const v3, 0x7f1104ff
 
     new-array v1, v1, [Ljava/lang/Object;
 
@@ -1315,7 +1315,7 @@
 
     iget-object v2, p0, Lcom/android/systemui/qs/QSSecurityFooter;->mContext:Landroid/content/Context;
 
-    const v3, 0x7f110505
+    const v3, 0x7f11050b
 
     new-array v1, v1, [Ljava/lang/Object;
 
@@ -1330,7 +1330,7 @@
     :cond_11
     iget-object v2, p0, Lcom/android/systemui/qs/QSSecurityFooter;->mContext:Landroid/content/Context;
 
-    const v3, 0x7f110504
+    const v3, 0x7f11050a
 
     new-array v1, v1, [Ljava/lang/Object;
 
@@ -1362,7 +1362,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/qs/QSSecurityFooter;->mContext:Landroid/content/Context;
 
-    const v1, 0x7f1103e4
+    const v1, 0x7f1103ea
 
     const/4 v2, 0x1
 
@@ -1381,7 +1381,7 @@
     :cond_1
     iget-object v0, p0, Lcom/android/systemui/qs/QSSecurityFooter;->mContext:Landroid/content/Context;
 
-    const v1, 0x7f1103e1
+    const v1, 0x7f1103e7
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -1402,7 +1402,7 @@
     :cond_0
     iget-object v0, p0, Lcom/android/systemui/qs/QSSecurityFooter;->mContext:Landroid/content/Context;
 
-    const v1, 0x7f1103e3
+    const v1, 0x7f1103e9
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -1435,11 +1435,11 @@
 
     invoke-direct {v0}, Landroid/text/SpannableStringBuilder;-><init>()V
 
-    const v1, 0x7f1103e5
+    const v1, 0x7f1103eb
 
     const/4 v2, 0x2
 
-    const v3, 0x7f1103e8
+    const v3, 0x7f1103ee
 
     const/4 v4, 0x1
 
@@ -1518,7 +1518,7 @@
 
     iget-object v1, p0, Lcom/android/systemui/qs/QSSecurityFooter;->mContext:Landroid/content/Context;
 
-    const v2, 0x7f1103e0
+    const v2, 0x7f1103e6
 
     new-array v3, v4, [Ljava/lang/Object;
 
@@ -1537,7 +1537,7 @@
 
     iget-object v1, p0, Lcom/android/systemui/qs/QSSecurityFooter;->mContext:Landroid/content/Context;
 
-    const v2, 0x7f1103e7
+    const v2, 0x7f1103ed
 
     new-array v3, v4, [Ljava/lang/Object;
 
@@ -1567,7 +1567,7 @@
     :goto_1
     iget-object v1, p0, Lcom/android/systemui/qs/QSSecurityFooter;->mContext:Landroid/content/Context;
 
-    const v2, 0x7f1103ec
+    const v2, 0x7f1103f2
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -1577,7 +1577,7 @@
 
     iget-object v1, p0, Lcom/android/systemui/qs/QSSecurityFooter;->mContext:Landroid/content/Context;
 
-    const v2, 0x7f1103eb
+    const v2, 0x7f1103f1
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

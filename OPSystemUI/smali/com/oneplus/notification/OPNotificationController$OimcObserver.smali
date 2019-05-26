@@ -118,9 +118,9 @@
 
     move-result-object v0
 
-    const/4 v1, 0x1
+    const/4 v1, 0x0
 
-    const/4 v2, 0x0
+    const/4 v2, 0x1
 
     if-eqz p1, :cond_0
 
@@ -133,22 +133,22 @@
     if-eqz v3, :cond_2
 
     :cond_0
-    const-string v3, "op_oimc_func_disable_headsup"
+    const-string v3, "HeadsUpNotification"
 
-    invoke-static {v0, v3, v2}, Landroid/provider/Settings$Global;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+    invoke-static {v3}, Lcom/oneplus/oimc/OIMCManager;->getRemoteFuncStatus(Ljava/lang/String;)I
 
     move-result v3
 
     iget-object v4, p0, Lcom/oneplus/notification/OPNotificationController$OimcObserver;->this$0:Lcom/oneplus/notification/OPNotificationController;
 
-    if-ne v3, v1, :cond_1
+    if-ne v3, v2, :cond_1
 
-    move v5, v1
+    move v5, v2
 
     goto :goto_0
 
     :cond_1
-    move v5, v2
+    move v5, v1
 
     :goto_0
     invoke-static {v4, v5}, Lcom/oneplus/notification/OPNotificationController;->access$1302(Lcom/oneplus/notification/OPNotificationController;Z)Z
@@ -165,22 +165,22 @@
     if-eqz v3, :cond_5
 
     :cond_3
-    const-string v3, "op_oimc_func_disable_headsup_breath"
+    const-string v3, "HeadsUpNotificationBreath"
 
-    invoke-static {v0, v3, v2}, Landroid/provider/Settings$Global;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+    invoke-static {v3}, Lcom/oneplus/oimc/OIMCManager;->getRemoteFuncStatus(Ljava/lang/String;)I
 
     move-result v3
 
     iget-object v4, p0, Lcom/oneplus/notification/OPNotificationController$OimcObserver;->this$0:Lcom/oneplus/notification/OPNotificationController;
 
-    if-ne v3, v1, :cond_4
+    if-ne v3, v2, :cond_4
 
-    move v5, v1
+    move v5, v2
 
     goto :goto_1
 
     :cond_4
-    move v5, v2
+    move v5, v1
 
     :goto_1
     invoke-static {v4, v5}, Lcom/oneplus/notification/OPNotificationController;->access$1402(Lcom/oneplus/notification/OPNotificationController;Z)Z
@@ -197,22 +197,21 @@
     if-eqz v3, :cond_8
 
     :cond_6
-    const-string v3, "op_oimc_func_disable_headsup_car"
+    const-string v3, "HeadsUpNotificationCar"
 
-    invoke-static {v0, v3, v2}, Landroid/provider/Settings$Global;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+    invoke-static {v3}, Lcom/oneplus/oimc/OIMCManager;->getRemoteFuncStatus(Ljava/lang/String;)I
 
     move-result v3
 
     iget-object v4, p0, Lcom/oneplus/notification/OPNotificationController$OimcObserver;->this$0:Lcom/oneplus/notification/OPNotificationController;
 
-    if-ne v3, v1, :cond_7
+    if-ne v3, v2, :cond_7
 
-    goto :goto_2
-
-    :cond_7
     move v1, v2
 
-    :goto_2
+    nop
+
+    :cond_7
     invoke-static {v4, v1}, Lcom/oneplus/notification/OPNotificationController;->access$1502(Lcom/oneplus/notification/OPNotificationController;Z)Z
 
     :cond_8

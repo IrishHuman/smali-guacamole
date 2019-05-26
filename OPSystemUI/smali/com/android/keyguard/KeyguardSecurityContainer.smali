@@ -621,7 +621,7 @@
     :pswitch_0
     iget-object v4, p0, Lcom/android/keyguard/KeyguardSecurityContainer;->mContext:Landroid/content/Context;
 
-    const v5, 0x7f11033e
+    const v5, 0x7f110344
 
     new-array v3, v3, [Ljava/lang/Object;
 
@@ -646,7 +646,7 @@
     :pswitch_1
     iget-object v4, p0, Lcom/android/keyguard/KeyguardSecurityContainer;->mContext:Landroid/content/Context;
 
-    const v5, 0x7f11033d
+    const v5, 0x7f110343
 
     new-array v3, v3, [Ljava/lang/Object;
 
@@ -671,7 +671,7 @@
     :pswitch_2
     iget-object v4, p0, Lcom/android/keyguard/KeyguardSecurityContainer;->mContext:Landroid/content/Context;
 
-    const v5, 0x7f110340
+    const v5, 0x7f110346
 
     new-array v3, v3, [Ljava/lang/Object;
 
@@ -760,7 +760,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f110436
+    const v3, 0x7f11043c
 
     const/4 v4, 0x0
 
@@ -982,17 +982,17 @@
     goto :goto_0
 
     :pswitch_0
-    const v1, 0x7f11036c
+    const v1, 0x7f110372
 
     goto :goto_0
 
     :pswitch_1
-    const v1, 0x7f11036e
+    const v1, 0x7f110374
 
     goto :goto_0
 
     :pswitch_2
-    const v1, 0x7f11036d
+    const v1, 0x7f110373
 
     nop
 
@@ -1068,7 +1068,7 @@
     :pswitch_0
     iget-object v3, p0, Lcom/android/keyguard/KeyguardSecurityContainer;->mContext:Landroid/content/Context;
 
-    const v4, 0x7f110342
+    const v4, 0x7f110348
 
     new-array v2, v2, [Ljava/lang/Object;
 
@@ -1087,7 +1087,7 @@
     :pswitch_1
     iget-object v3, p0, Lcom/android/keyguard/KeyguardSecurityContainer;->mContext:Landroid/content/Context;
 
-    const v4, 0x7f110341
+    const v4, 0x7f110347
 
     new-array v2, v2, [Ljava/lang/Object;
 
@@ -1106,7 +1106,7 @@
     :pswitch_2
     iget-object v3, p0, Lcom/android/keyguard/KeyguardSecurityContainer;->mContext:Landroid/content/Context;
 
-    const v4, 0x7f110343
+    const v4, 0x7f110349
 
     new-array v2, v2, [Ljava/lang/Object;
 

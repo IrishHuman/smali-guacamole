@@ -1553,13 +1553,13 @@
 
     iget-object v1, p0, Lcom/android/systemui/power/OverHeatProtector;->mDialog:Lcom/android/systemui/power/OverHeatAlertDialog;
 
-    const v2, 0x7f11047b
+    const v2, 0x7f110481
 
     invoke-virtual {v1, v2}, Lcom/android/systemui/power/OverHeatAlertDialog;->setTitle(I)V
 
     const/4 v1, 0x1
 
-    const v2, 0x7f110476
+    const v2, 0x7f11047c
 
     if-ne p1, v1, :cond_1
 
@@ -1577,7 +1577,7 @@
 
     iget-object v2, p0, Lcom/android/systemui/power/OverHeatProtector;->mDialog:Lcom/android/systemui/power/OverHeatAlertDialog;
 
-    const v3, 0x7f110477
+    const v3, 0x7f11047d
 
     invoke-virtual {v2, v3}, Lcom/android/systemui/power/OverHeatAlertDialog;->setMessage(I)V
 
@@ -1622,7 +1622,7 @@
 
     iget-object v2, p0, Lcom/android/systemui/power/OverHeatProtector;->mDialog:Lcom/android/systemui/power/OverHeatAlertDialog;
 
-    const v3, 0x7f11047a
+    const v3, 0x7f110480
 
     invoke-virtual {v2, v3}, Lcom/android/systemui/power/OverHeatAlertDialog;->setMessage(I)V
 
@@ -1655,7 +1655,7 @@
 
     iget-object v1, p0, Lcom/android/systemui/power/OverHeatProtector;->mContext:Landroid/content/Context;
 
-    const v2, 0x7f110479
+    const v2, 0x7f11047f
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
@@ -1669,7 +1669,7 @@
 
     iget-object v2, p0, Lcom/android/systemui/power/OverHeatProtector;->mDialog:Lcom/android/systemui/power/OverHeatAlertDialog;
 
-    const v3, 0x7f110478
+    const v3, 0x7f11047e
 
     invoke-virtual {v2, v3, v0}, Lcom/android/systemui/power/OverHeatAlertDialog;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)V
 
@@ -1751,7 +1751,7 @@
 
     iget-object v5, p0, Lcom/android/systemui/power/OverHeatProtector;->mContext:Landroid/content/Context;
 
-    const v6, 0x7f11047d
+    const v6, 0x7f110483
 
     invoke-virtual {v5, v6}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
@@ -1764,7 +1764,7 @@
     :cond_0
     iget-object v5, p0, Lcom/android/systemui/power/OverHeatProtector;->mContext:Landroid/content/Context;
 
-    const v6, 0x7f11047c
+    const v6, 0x7f110482
 
     invoke-virtual {v5, v6}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
