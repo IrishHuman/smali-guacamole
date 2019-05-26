@@ -111,6 +111,7 @@
     <string-array name="higher_list_activity">
         <item>com.google.android.talk/com.google.android.apps.hangouts.phone.ConversationActivity</item>
         <item>com.android.dialer/com.oneplus.contacts.activities.OPDialtactsActivity</item>
+        <item>com.qq.reader/com.qq.reader.activity.MainActivity</item>
     </string-array>
     <string-array name="page_list_activity">
         <item>com.android.contacts/com.android.contacts.activities.PeopleActivity</item>
@@ -176,6 +177,8 @@
     <string-array name="forbid_stitch_by_distance_list">
         <item>com.facebook.katana</item>
         <item>com.ss.android.article.news</item>
+        <item>com.snapchat.android/com.snap.mushroom.MainActivity</item>
+        <item>com.microsoft.teams/com.microsoft.skype.teams.views.activities.ChatsActivity</item>
     </string-array>
     <array name="ignore_full_match_list_activity" />
     <string-array name="special_scroll_activity">
@@ -183,6 +186,9 @@
     </string-array>
     <string-array name="display_compatible_level_2_threshold_match_activity">
         <item>com.tencent.mm/com.tencent.mm.ui.LauncherUI</item>
+        <item>com.twitter.android/com.twitter.app.main.MainActivity</item>
+        <item>com.twitter.android/com.twitter.android.ProfileActivity</item>
+        <item>com.instagram.android/com.instagram.modal.ModalActivity</item>
     </string-array>
     <string-array name="config_line_sample_list">
         <item>10|20|1</item>
