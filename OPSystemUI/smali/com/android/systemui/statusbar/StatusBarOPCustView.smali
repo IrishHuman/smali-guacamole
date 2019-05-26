@@ -460,7 +460,23 @@
 .method public getLockscreenIconColors()I
     .locals 2
     
-    const v0, 0x1
+    iget-object v0, p0, Lcom/android/systemui/statusbar/StatusBarOPCustView;->mSlot:Ljava/lang/String;
     
+    invoke-static {v0}, Lcom/android/mwilky/Renovate;->getStatusbarColorFromSlotNameOP(Ljava/lang/String;)I
+    
+    move-result v0
+
+    return v0
+.end method
+
+.method public getQsIconColors()I
+    .locals 2
+    
+    iget-object v0, p0, Lcom/android/systemui/statusbar/StatusBarOPCustView;->mSlot:Ljava/lang/String;
+    
+    invoke-static {v0}, Lcom/android/mwilky/Renovate;->getQsColorFromSlotNameOP(Ljava/lang/String;)I
+    
+    move-result v0
+
     return v0
 .end method
