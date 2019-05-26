@@ -1061,13 +1061,13 @@
 
     iget-object v0, p0, Lcom/oneplus/settings/better/OPSuwScreenColorMode;->mScreenColorModeDefaultSettings:Lcom/android/settings/ui/RadioButtonPreference;
 
-    const v1, 0x7f121009
+    const v1, 0x7f121010
 
     invoke-virtual {v0, v1}, Lcom/android/settings/ui/RadioButtonPreference;->setTitle(I)V
 
     iget-object v0, p0, Lcom/oneplus/settings/better/OPSuwScreenColorMode;->mScreenColorModeDefinedSettings:Lcom/android/settings/ui/RadioButtonPreference;
 
-    const v1, 0x7f121007
+    const v1, 0x7f12100e
 
     invoke-virtual {v0, v1}, Lcom/android/settings/ui/RadioButtonPreference;->setTitle(I)V
 

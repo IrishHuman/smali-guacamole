@@ -98,7 +98,64 @@
 
     invoke-static {v1}, Lcom/android/settings/wifi/tether/WifiTetherSwitchBarController;->access$100(Lcom/android/settings/wifi/tether/WifiTetherSwitchBarController;)V
 
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isSupportUss()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    iget-object v1, p0, Lcom/android/settings/wifi/tether/WifiTetherSwitchBarController$2;->this$0:Lcom/android/settings/wifi/tether/WifiTetherSwitchBarController;
+
+    invoke-static {p1}, Lcom/android/settings/wifi/tether/utils/TetherUtils;->isSimStatusChange(Landroid/content/Context;)Z
+
+    move-result v2
+
+    invoke-static {v1, v2}, Lcom/android/settings/wifi/tether/WifiTetherSwitchBarController;->access$500(Lcom/android/settings/wifi/tether/WifiTetherSwitchBarController;Z)V
+
+    goto :goto_0
+
     :cond_2
+    const-string v1, "android.intent.action.setupDataError_tether"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    const-string v1, "WifiTetherSwitchBarController"
+
+    const-string v2, "onReceive tether error braodcast"
+
+    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    const-string v1, "data_call_error"
+
+    const/4 v2, 0x0
+
+    invoke-virtual {p2, v1, v2}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    const-string v1, "data_call_code"
+
+    invoke-virtual {p2, v1, v2}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
+
+    move-result v1
+
+    const/16 v2, 0x43
+
+    if-ne v1, v2, :cond_3
+
+    iget-object v1, p0, Lcom/android/settings/wifi/tether/WifiTetherSwitchBarController$2;->this$0:Lcom/android/settings/wifi/tether/WifiTetherSwitchBarController;
+
+    const/4 v2, 0x2
+
+    invoke-static {v1, v2}, Lcom/android/settings/wifi/tether/WifiTetherSwitchBarController;->access$600(Lcom/android/settings/wifi/tether/WifiTetherSwitchBarController;I)V
+
+    :cond_3
     :goto_0
     return-void
 .end method

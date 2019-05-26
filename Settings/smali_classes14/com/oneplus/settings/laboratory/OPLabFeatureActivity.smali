@@ -951,7 +951,7 @@
 
     invoke-virtual {p0, v0}, Lcom/oneplus/settings/laboratory/OPLabFeatureActivity;->setContentView(I)V
 
-    const v0, 0x7f0a03d4
+    const v0, 0x7f0a03d8
 
     invoke-virtual {p0, v0}, Lcom/oneplus/settings/laboratory/OPLabFeatureActivity;->findViewById(I)Landroid/view/View;
 
@@ -961,7 +961,7 @@
 
     iput-object v0, p0, Lcom/oneplus/settings/laboratory/OPLabFeatureActivity;->mPluginHeadImageView:Landroid/widget/ImageView;
 
-    const v0, 0x7f0a03d5
+    const v0, 0x7f0a03d9
 
     invoke-virtual {p0, v0}, Lcom/oneplus/settings/laboratory/OPLabFeatureActivity;->findViewById(I)Landroid/view/View;
 

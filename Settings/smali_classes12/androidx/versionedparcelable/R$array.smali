@@ -263,267 +263,271 @@
 
 .field public static final oneplus_bluetooth_audio_codec_values:I = 0x7f03007b
 
-.field public static final oneplus_font_style_support_language:I = 0x7f03007c
+.field public static final oneplus_cannot_disable_package:I = 0x7f03007c
 
-.field public static final oneplus_gaming_mode_game_battery_saver_entries:I = 0x7f03007d
+.field public static final oneplus_font_style_support_language:I = 0x7f03007d
 
-.field public static final oneplus_gaming_mode_game_battery_saver_value:I = 0x7f03007e
+.field public static final oneplus_gaming_mode_game_battery_saver_entries:I = 0x7f03007e
 
-.field public static final oneplus_guacamole_lift_camera_project:I = 0x7f03007f
+.field public static final oneplus_gaming_mode_game_battery_saver_value:I = 0x7f03007f
 
-.field public static final oneplus_guacamole_project:I = 0x7f030080
+.field public static final oneplus_guacamole_lift_camera_project:I = 0x7f030080
 
-.field public static final oneplus_h2_pre_installed_app_company:I = 0x7f030081
+.field public static final oneplus_guacamole_project:I = 0x7f030081
 
-.field public static final oneplus_h2_pre_installed_app_company_5_5T:I = 0x7f030082
+.field public static final oneplus_h2_pre_installed_app_company:I = 0x7f030082
 
-.field public static final oneplus_h2_pre_installed_app_company_fat:I = 0x7f030083
+.field public static final oneplus_h2_pre_installed_app_company_5_5T:I = 0x7f030083
 
-.field public static final oneplus_h2_pre_installed_app_company_gua:I = 0x7f030084
+.field public static final oneplus_h2_pre_installed_app_company_fat:I = 0x7f030084
 
-.field public static final oneplus_h2_pre_installed_app_company_new:I = 0x7f030085
+.field public static final oneplus_h2_pre_installed_app_company_gua:I = 0x7f030085
 
-.field public static final oneplus_h2_pre_installed_app_function:I = 0x7f030086
+.field public static final oneplus_h2_pre_installed_app_company_new:I = 0x7f030086
 
-.field public static final oneplus_h2_pre_installed_app_function_5_5T:I = 0x7f030087
+.field public static final oneplus_h2_pre_installed_app_function:I = 0x7f030087
 
-.field public static final oneplus_h2_pre_installed_app_function_fat:I = 0x7f030088
+.field public static final oneplus_h2_pre_installed_app_function_5_5T:I = 0x7f030088
 
-.field public static final oneplus_h2_pre_installed_app_function_gua:I = 0x7f030089
+.field public static final oneplus_h2_pre_installed_app_function_fat:I = 0x7f030089
 
-.field public static final oneplus_h2_pre_installed_app_function_new:I = 0x7f03008a
+.field public static final oneplus_h2_pre_installed_app_function_gua:I = 0x7f03008a
 
-.field public static final oneplus_h2_pre_installed_app_name:I = 0x7f03008b
+.field public static final oneplus_h2_pre_installed_app_function_new:I = 0x7f03008b
 
-.field public static final oneplus_h2_pre_installed_app_name_5_5T:I = 0x7f03008c
+.field public static final oneplus_h2_pre_installed_app_name:I = 0x7f03008c
 
-.field public static final oneplus_h2_pre_installed_app_name_fat:I = 0x7f03008d
+.field public static final oneplus_h2_pre_installed_app_name_5_5T:I = 0x7f03008d
 
-.field public static final oneplus_h2_pre_installed_app_name_gua:I = 0x7f03008e
+.field public static final oneplus_h2_pre_installed_app_name_fat:I = 0x7f03008e
 
-.field public static final oneplus_h2_pre_installed_app_name_new:I = 0x7f03008f
+.field public static final oneplus_h2_pre_installed_app_name_gua:I = 0x7f03008f
 
-.field public static final oneplus_no_display_sar_value_project:I = 0x7f030090
+.field public static final oneplus_h2_pre_installed_app_name_new:I = 0x7f030090
 
-.field public static final oneplus_notification_ringtone:I = 0x7f030091
+.field public static final oneplus_no_display_sar_value_project:I = 0x7f030091
 
-.field public static final oneplus_notification_ringtone_summary:I = 0x7f030092
+.field public static final oneplus_notification_ringtone:I = 0x7f030092
 
-.field public static final oneplus_notification_ringtone_values:I = 0x7f030093
+.field public static final oneplus_notification_ringtone_summary:I = 0x7f030093
 
-.field public static final oneplus_quickpay_ways_key:I = 0x7f030094
+.field public static final oneplus_notification_ringtone_values:I = 0x7f030094
 
-.field public static final oneplus_quickpay_ways_name:I = 0x7f030095
+.field public static final oneplus_quickpay_ways_key:I = 0x7f030095
 
-.field public static final oneplus_quickpay_ways_value:I = 0x7f030096
+.field public static final oneplus_quickpay_ways_name:I = 0x7f030096
 
-.field public static final oneplus_screen_dpi_values:I = 0x7f030097
+.field public static final oneplus_quickpay_ways_value:I = 0x7f030097
 
-.field public static final oneplus_select_items:I = 0x7f030098
+.field public static final oneplus_screen_dpi_values:I = 0x7f030098
 
-.field public static final oneplus_theme_2__values:I = 0x7f030099
+.field public static final oneplus_select_items:I = 0x7f030099
 
-.field public static final oneplus_theme_2_entries:I = 0x7f03009a
+.field public static final oneplus_theme_2__values:I = 0x7f03009a
 
-.field public static final oneplus_theme_3_entries:I = 0x7f03009b
+.field public static final oneplus_theme_2_entries:I = 0x7f03009b
 
-.field public static final oneplus_theme_3_values:I = 0x7f03009c
+.field public static final oneplus_theme_3_entries:I = 0x7f03009c
 
-.field public static final oneplus_theme_mode_entries:I = 0x7f03009d
+.field public static final oneplus_theme_3_values:I = 0x7f03009d
 
-.field public static final oneplus_theme_mode_starwar_entries:I = 0x7f03009e
+.field public static final oneplus_theme_mode_entries:I = 0x7f03009e
 
-.field public static final oneplus_theme_mode_starwar_values:I = 0x7f03009f
+.field public static final oneplus_theme_mode_starwar_entries:I = 0x7f03009f
 
-.field public static final oneplus_theme_mode_values:I = 0x7f0300a0
+.field public static final oneplus_theme_mode_starwar_values:I = 0x7f0300a0
 
-.field public static final oneplus_uninstallation_app_list_H2:I = 0x7f0300a1
+.field public static final oneplus_theme_mode_values:I = 0x7f0300a1
 
-.field public static final oneplus_uninstallation_app_list_O2:I = 0x7f0300a2
+.field public static final oneplus_uninstallation_app_list_H2:I = 0x7f0300a2
 
-.field public static final op_car_mode_recommended_apps:I = 0x7f0300a3
+.field public static final oneplus_uninstallation_app_list_O2:I = 0x7f0300a3
 
-.field public static final op_haptic_feedback_apps:I = 0x7f0300a4
+.field public static final op_car_mode_recommended_apps:I = 0x7f0300a4
 
-.field public static final op_locale_carrier_names:I = 0x7f0300a5
+.field public static final op_haptic_feedback_apps:I = 0x7f0300a5
 
-.field public static final op_multiapp_white_list:I = 0x7f0300a6
+.field public static final op_locale_carrier_names:I = 0x7f0300a6
 
-.field public static final op_origin_carrier_names:I = 0x7f0300a7
+.field public static final op_multiapp_white_list:I = 0x7f0300a7
 
-.field public static final op_tcp_timestamps_randomization_titles:I = 0x7f0300a8
+.field public static final op_origin_carrier_names:I = 0x7f0300a8
 
-.field public static final op_tcp_timestamps_randomization_values:I = 0x7f0300a9
+.field public static final op_tcp_timestamps_randomization_titles:I = 0x7f0300a9
 
-.field public static final op_tcp_timestamps_summaries:I = 0x7f0300aa
+.field public static final op_tcp_timestamps_randomization_values:I = 0x7f0300aa
 
-.field public static final overlay_display_devices_entries:I = 0x7f0300ab
+.field public static final op_tcp_timestamps_summaries:I = 0x7f0300ab
 
-.field public static final overlay_display_devices_values:I = 0x7f0300ac
+.field public static final overlay_display_devices_entries:I = 0x7f0300ac
 
-.field public static final proc_stats_memory_states:I = 0x7f0300ad
+.field public static final overlay_display_devices_values:I = 0x7f0300ad
 
-.field public static final proc_stats_process_states:I = 0x7f0300ae
+.field public static final proc_stats_memory_states:I = 0x7f0300ae
 
-.field public static final ram_states:I = 0x7f0300af
+.field public static final proc_stats_process_states:I = 0x7f0300af
 
-.field public static final required_apps_managed_profile:I = 0x7f0300b0
+.field public static final ram_states:I = 0x7f0300b0
 
-.field public static final screen_timeout_entries:I = 0x7f0300b1
+.field public static final required_apps_managed_profile:I = 0x7f0300b1
 
-.field public static final screen_timeout_values:I = 0x7f0300b2
+.field public static final restrict_background_values:I = 0x7f0300b2
 
-.field public static final security_settings_premium_sms_values:I = 0x7f0300b3
+.field public static final screen_timeout_entries:I = 0x7f0300b3
 
-.field public static final select_logd_size_lowram_titles:I = 0x7f0300b4
+.field public static final screen_timeout_values:I = 0x7f0300b4
 
-.field public static final select_logd_size_summaries:I = 0x7f0300b5
+.field public static final security_settings_premium_sms_values:I = 0x7f0300b5
 
-.field public static final select_logd_size_titles:I = 0x7f0300b6
+.field public static final select_logd_size_lowram_titles:I = 0x7f0300b6
 
-.field public static final select_logd_size_values:I = 0x7f0300b7
+.field public static final select_logd_size_summaries:I = 0x7f0300b7
 
-.field public static final select_logpersist_summaries:I = 0x7f0300b8
+.field public static final select_logd_size_titles:I = 0x7f0300b8
 
-.field public static final select_logpersist_titles:I = 0x7f0300b9
+.field public static final select_logd_size_values:I = 0x7f0300b9
 
-.field public static final select_logpersist_values:I = 0x7f0300ba
+.field public static final select_logpersist_summaries:I = 0x7f0300ba
 
-.field public static final show_non_rect_clip_entries:I = 0x7f0300bb
+.field public static final select_logpersist_titles:I = 0x7f0300bb
 
-.field public static final show_non_rect_clip_values:I = 0x7f0300bc
+.field public static final select_logpersist_values:I = 0x7f0300bc
 
-.field public static final simulate_color_space_entries:I = 0x7f0300bd
+.field public static final show_non_rect_clip_entries:I = 0x7f0300bd
 
-.field public static final simulate_color_space_values:I = 0x7f0300be
+.field public static final show_non_rect_clip_values:I = 0x7f0300be
 
-.field public static final status_bar_settings_clock_options:I = 0x7f0300bf
+.field public static final simulate_color_space_entries:I = 0x7f0300bf
 
-.field public static final systemui_theme_entries:I = 0x7f0300c0
+.field public static final simulate_color_space_values:I = 0x7f0300c0
 
-.field public static final systemui_theme_values:I = 0x7f0300c1
+.field public static final status_bar_settings_clock_options:I = 0x7f0300c1
 
-.field public static final timezone_filters:I = 0x7f0300c2
+.field public static final systemui_theme_entries:I = 0x7f0300c2
 
-.field public static final track_frame_time_entries:I = 0x7f0300c3
+.field public static final systemui_theme_values:I = 0x7f0300c3
 
-.field public static final track_frame_time_values:I = 0x7f0300c4
+.field public static final timezone_filters:I = 0x7f0300c4
 
-.field public static final transition_animation_scale_entries:I = 0x7f0300c5
+.field public static final track_frame_time_entries:I = 0x7f0300c5
 
-.field public static final transition_animation_scale_values:I = 0x7f0300c6
+.field public static final track_frame_time_values:I = 0x7f0300c6
 
-.field public static final tts_demo_string_langs:I = 0x7f0300c7
+.field public static final transition_animation_scale_entries:I = 0x7f0300c7
 
-.field public static final tts_demo_strings:I = 0x7f0300c8
+.field public static final transition_animation_scale_values:I = 0x7f0300c8
 
-.field public static final tts_rate_entries:I = 0x7f0300c9
+.field public static final tts_demo_string_langs:I = 0x7f0300c9
 
-.field public static final tts_rate_values:I = 0x7f0300ca
+.field public static final tts_demo_strings:I = 0x7f0300ca
 
-.field public static final usage_stats_display_order_types:I = 0x7f0300cb
+.field public static final tts_rate_entries:I = 0x7f0300cb
 
-.field public static final usb_configuration_titles:I = 0x7f0300cc
+.field public static final tts_rate_values:I = 0x7f0300cc
 
-.field public static final usb_configuration_values:I = 0x7f0300cd
+.field public static final usage_stats_display_order_types:I = 0x7f0300cd
 
-.field public static final user_content_ratings_entries:I = 0x7f0300ce
+.field public static final usb_configuration_titles:I = 0x7f0300ce
 
-.field public static final user_content_ratings_values:I = 0x7f0300cf
+.field public static final usb_configuration_values:I = 0x7f0300cf
 
-.field public static final vibrate_intensity:I = 0x7f0300d0
+.field public static final user_content_ratings_entries:I = 0x7f0300d0
 
-.field public static final vibrate_intensity_values:I = 0x7f0300d1
+.field public static final user_content_ratings_values:I = 0x7f0300d1
 
-.field public static final volume_keys_adjust:I = 0x7f0300d2
+.field public static final vibrate_intensity:I = 0x7f0300d2
 
-.field public static final volume_keys_adjust_value:I = 0x7f0300d3
+.field public static final vibrate_intensity_values:I = 0x7f0300d3
 
-.field public static final vpn_states:I = 0x7f0300d4
+.field public static final volume_keys_adjust:I = 0x7f0300d4
 
-.field public static final vpn_types:I = 0x7f0300d5
+.field public static final volume_keys_adjust_value:I = 0x7f0300d5
 
-.field public static final vpn_types_long:I = 0x7f0300d6
+.field public static final vpn_states:I = 0x7f0300d6
 
-.field public static final wapi_psk_type:I = 0x7f0300d7
+.field public static final vpn_types:I = 0x7f0300d7
 
-.field public static final when_to_start_screensaver_entries:I = 0x7f0300d8
+.field public static final vpn_types_long:I = 0x7f0300d8
 
-.field public static final when_to_start_screensaver_values:I = 0x7f0300d9
+.field public static final wapi_psk_type:I = 0x7f0300d9
 
-.field public static final wifi_ap_band_config_2G_only:I = 0x7f0300da
+.field public static final when_to_start_screensaver_entries:I = 0x7f0300da
 
-.field public static final wifi_ap_band_config_full:I = 0x7f0300db
+.field public static final when_to_start_screensaver_values:I = 0x7f0300db
 
-.field public static final wifi_ap_band_summary_full:I = 0x7f0300dc
+.field public static final wifi_ap_band_config_2G_only:I = 0x7f0300dc
 
-.field public static final wifi_calling_mode_choices:I = 0x7f0300dd
+.field public static final wifi_ap_band_config_full:I = 0x7f0300dd
 
-.field public static final wifi_calling_mode_choices_v2:I = 0x7f0300de
+.field public static final wifi_ap_band_summary_full:I = 0x7f0300de
 
-.field public static final wifi_calling_mode_choices_v2_without_wifi_only:I = 0x7f0300df
+.field public static final wifi_calling_mode_choices:I = 0x7f0300df
 
-.field public static final wifi_calling_mode_choices_without_wifi_only:I = 0x7f0300e0
+.field public static final wifi_calling_mode_choices_v2:I = 0x7f0300e0
 
-.field public static final wifi_calling_mode_values:I = 0x7f0300e1
+.field public static final wifi_calling_mode_choices_v2_without_wifi_only:I = 0x7f0300e1
 
-.field public static final wifi_calling_mode_values_without_wifi_only:I = 0x7f0300e2
+.field public static final wifi_calling_mode_choices_without_wifi_only:I = 0x7f0300e2
 
-.field public static final wifi_eap_entries:I = 0x7f0300e3
+.field public static final wifi_calling_mode_values:I = 0x7f0300e3
 
-.field public static final wifi_eap_method:I = 0x7f0300e4
+.field public static final wifi_calling_mode_values_without_wifi_only:I = 0x7f0300e4
 
-.field public static final wifi_frequency_band_entries:I = 0x7f0300e5
+.field public static final wifi_eap_entries:I = 0x7f0300e5
 
-.field public static final wifi_frequency_band_values:I = 0x7f0300e6
+.field public static final wifi_eap_method:I = 0x7f0300e6
 
-.field public static final wifi_hidden_entries:I = 0x7f0300e7
+.field public static final wifi_frequency_band_entries:I = 0x7f0300e7
 
-.field public static final wifi_ip_settings:I = 0x7f0300e8
+.field public static final wifi_frequency_band_values:I = 0x7f0300e8
 
-.field public static final wifi_metered_entries:I = 0x7f0300e9
+.field public static final wifi_hidden_entries:I = 0x7f0300e9
 
-.field public static final wifi_metered_values:I = 0x7f0300ea
+.field public static final wifi_ip_settings:I = 0x7f0300ea
 
-.field public static final wifi_p2p_status:I = 0x7f0300eb
+.field public static final wifi_metered_entries:I = 0x7f0300eb
 
-.field public static final wifi_p2p_wps_setup:I = 0x7f0300ec
+.field public static final wifi_metered_values:I = 0x7f0300ec
 
-.field public static final wifi_peap_phase2_entries:I = 0x7f0300ed
+.field public static final wifi_p2p_status:I = 0x7f0300ed
 
-.field public static final wifi_peap_phase2_entries_with_sim_auth:I = 0x7f0300ee
+.field public static final wifi_p2p_wps_setup:I = 0x7f0300ee
 
-.field public static final wifi_phase2_entries:I = 0x7f0300ef
+.field public static final wifi_peap_phase2_entries:I = 0x7f0300ef
 
-.field public static final wifi_proxy_settings:I = 0x7f0300f0
+.field public static final wifi_peap_phase2_entries_with_sim_auth:I = 0x7f0300f0
 
-.field public static final wifi_security:I = 0x7f0300f1
+.field public static final wifi_phase2_entries:I = 0x7f0300f1
 
-.field public static final wifi_security_no_eap:I = 0x7f0300f2
+.field public static final wifi_proxy_settings:I = 0x7f0300f2
 
-.field public static final wifi_signal:I = 0x7f0300f3
+.field public static final wifi_security:I = 0x7f0300f3
 
-.field public static final wifi_status:I = 0x7f0300f4
+.field public static final wifi_security_no_eap:I = 0x7f0300f4
 
-.field public static final wifi_status_with_ssid:I = 0x7f0300f5
+.field public static final wifi_signal:I = 0x7f0300f5
 
-.field public static final wifi_tether_custom_auto_turn_off_summary:I = 0x7f0300f6
+.field public static final wifi_status:I = 0x7f0300f6
 
-.field public static final wifi_tether_custom_auto_turn_off_values:I = 0x7f0300f7
+.field public static final wifi_status_with_ssid:I = 0x7f0300f7
 
-.field public static final wifi_tether_security:I = 0x7f0300f8
+.field public static final wifi_tether_custom_auto_turn_off_summary:I = 0x7f0300f8
 
-.field public static final wifi_tether_security_values:I = 0x7f0300f9
+.field public static final wifi_tether_custom_auto_turn_off_values:I = 0x7f0300f9
 
-.field public static final wifi_wapi_key_type:I = 0x7f0300fa
+.field public static final wifi_tether_security:I = 0x7f0300fa
 
-.field public static final window_animation_scale_entries:I = 0x7f0300fb
+.field public static final wifi_tether_security_values:I = 0x7f0300fb
 
-.field public static final window_animation_scale_values:I = 0x7f0300fc
+.field public static final wifi_wapi_key_type:I = 0x7f0300fc
 
-.field public static final zen_mode_contacts_entries:I = 0x7f0300fd
+.field public static final window_animation_scale_entries:I = 0x7f0300fd
 
-.field public static final zen_mode_contacts_values:I = 0x7f0300fe
+.field public static final window_animation_scale_values:I = 0x7f0300fe
+
+.field public static final zen_mode_contacts_entries:I = 0x7f0300ff
+
+.field public static final zen_mode_contacts_values:I = 0x7f030100
 
 
 # direct methods

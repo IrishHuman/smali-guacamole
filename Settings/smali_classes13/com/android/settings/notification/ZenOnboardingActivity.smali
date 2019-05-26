@@ -421,7 +421,7 @@
 
     invoke-virtual {p0, v0}, Lcom/android/settings/notification/ZenOnboardingActivity;->setContentView(I)V
 
-    const v0, 0x7f0a062e
+    const v0, 0x7f0a0632
 
     invoke-virtual {p0, v0}, Lcom/android/settings/notification/ZenOnboardingActivity;->findViewById(I)Landroid/view/View;
 
@@ -429,7 +429,7 @@
 
     iput-object v0, p0, Lcom/android/settings/notification/ZenOnboardingActivity;->mNewSetting:Landroid/view/View;
 
-    const v0, 0x7f0a062a
+    const v0, 0x7f0a062e
 
     invoke-virtual {p0, v0}, Lcom/android/settings/notification/ZenOnboardingActivity;->findViewById(I)Landroid/view/View;
 
@@ -437,7 +437,7 @@
 
     iput-object v0, p0, Lcom/android/settings/notification/ZenOnboardingActivity;->mKeepCurrentSetting:Landroid/view/View;
 
-    const v0, 0x7f0a062f
+    const v0, 0x7f0a0633
 
     invoke-virtual {p0, v0}, Lcom/android/settings/notification/ZenOnboardingActivity;->findViewById(I)Landroid/view/View;
 
@@ -447,7 +447,7 @@
 
     iput-object v0, p0, Lcom/android/settings/notification/ZenOnboardingActivity;->mNewSettingButton:Landroid/widget/RadioButton;
 
-    const v0, 0x7f0a062b
+    const v0, 0x7f0a062f
 
     invoke-virtual {p0, v0}, Lcom/android/settings/notification/ZenOnboardingActivity;->findViewById(I)Landroid/view/View;
 

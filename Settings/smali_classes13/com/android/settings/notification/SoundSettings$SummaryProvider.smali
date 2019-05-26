@@ -51,9 +51,9 @@
 
     move-result v0
 
-    const v1, 0x7f120e33
+    const v1, 0x7f120e36
 
-    const v2, 0x7f120b22
+    const v2, 0x7f120b24
 
     const/4 v3, 0x1
 
@@ -61,7 +61,7 @@
 
     const/4 v5, 0x2
 
-    const v6, 0x7f120789
+    const v6, 0x7f12078a
 
     if-eqz v0, :cond_0
 
@@ -106,7 +106,7 @@
 
     move-result v0
 
-    const v7, 0x7f120e68
+    const v7, 0x7f120e6b
 
     if-eqz v0, :cond_1
 

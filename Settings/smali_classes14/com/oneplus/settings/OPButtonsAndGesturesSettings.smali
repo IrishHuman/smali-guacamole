@@ -244,7 +244,7 @@
 
     iget-object v4, p0, Lcom/oneplus/settings/OPButtonsAndGesturesSettings;->mCameraDoubleTapPowerGesturePreference:Landroid/support/v14/preference/SwitchPreference;
 
-    const v5, 0x7f120b25
+    const v5, 0x7f120b27
 
     invoke-virtual {v4, v5}, Landroid/support/v14/preference/SwitchPreference;->setSummary(I)V
 

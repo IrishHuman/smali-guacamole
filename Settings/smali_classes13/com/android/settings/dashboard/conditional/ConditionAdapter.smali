@@ -234,7 +234,7 @@
     goto :goto_2
 
     :cond_2
-    const v6, 0x7f0a04d1
+    const v6, 0x7f0a04d5
 
     :goto_2
     invoke-virtual {v5, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;

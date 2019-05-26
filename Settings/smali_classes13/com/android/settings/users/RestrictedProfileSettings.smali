@@ -236,7 +236,7 @@
 
     move-result-object v4
 
-    const v5, 0x7f120f37
+    const v5, 0x7f120f3a
 
     iget-object v7, p0, Lcom/android/settings/users/RestrictedProfileSettings;->mUser:Landroid/os/UserHandle;
 

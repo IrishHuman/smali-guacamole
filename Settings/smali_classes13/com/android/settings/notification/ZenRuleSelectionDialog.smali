@@ -189,7 +189,7 @@
 
     check-cast v3, Landroid/widget/ImageView;
 
-    const v4, 0x7f0a059c
+    const v4, 0x7f0a05a0
 
     invoke-virtual {v1, v4}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
 
@@ -217,7 +217,7 @@
 
     invoke-virtual {v4, v5}, Lcom/android/settings/notification/ZenRuleSelectionDialog$LoadIconTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    const v5, 0x7f0a0543
+    const v5, 0x7f0a0547
 
     invoke-virtual {v1, v5}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
 
@@ -325,7 +325,7 @@
 
     sget-object v2, Lcom/android/settings/notification/ZenRuleSelectionDialog;->mContext:Landroid/content/Context;
 
-    const v3, 0x7f121636
+    const v3, 0x7f121644
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -391,7 +391,7 @@
 
     sget-object v2, Lcom/android/settings/notification/ZenRuleSelectionDialog;->mContext:Landroid/content/Context;
 
-    const v3, 0x7f1216e1
+    const v3, 0x7f1216ef
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -507,7 +507,7 @@
 
     move-result-object v0
 
-    const v2, 0x7f0a04ae
+    const v2, 0x7f0a04b2
 
     invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -552,7 +552,7 @@
 
     invoke-direct {v2, v3}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const v3, 0x7f121667
+    const v3, 0x7f121675
 
     invoke-virtual {v2, v3}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
 

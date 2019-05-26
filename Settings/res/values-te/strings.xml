@@ -2549,8 +2549,8 @@
     <string name="one_userkey">ఒక వినియోగదారు కీ</string>
     <string name="oneplus_adaptive_model">ఎడాప్టివ్ మోడల్</string>
     <string name="oneplus_add">జోడించండి</string>
-    <string name="oneplus_add_bluetooth_car_kit">బ్లూటూత్ కారు కిట్ జోడించండి</string>
-    <string name="oneplus_add_bluetooth_car_kit_summary">బ్లూటూత్ కార్ కిట్ అనేది ఆటోమేటిక్‌గా మీ ఇదివరకటి డివైజులతో ఆటోమేటిక్‌గా కనెక్ట్ అవుతుంది, మీరు కొత్త కనెక్షన్లని కూడా ఆటోమేటిక్‌గా జోడించవచ్చు</string>
+    <string name="oneplus_add_bluetooth_car_kit">వాహనం బ్లూటూత్ జోడించండి</string>
+    <string name="oneplus_add_bluetooth_car_kit_summary">వాహనం బ్లూటూత్ స్వయంచాలకంగా మీ గత పరికరాలకు కనెక్ట్ అవుతుంది, మీరు మాన్యువల్‌గా కొత్త పరికరాలను కూడా జోడించవచ్చు</string>
     <string name="oneplus_add_fingerprint_list">వేలిముద్రలు జోడించడం</string>
     <string name="oneplus_adjust_effect">ఎఫెక్ట్ సామర్థ్యం</string>
     <string name="oneplus_advanced_display_settings">అధునాతన డిస్‌ప్లే సెట్టింగ్‌లు</string>
@@ -2786,7 +2786,7 @@
     <string name="oneplus_fnatic_mode_add_to_wallpapers">వాల్‌పేపర్‌లకు జోడించు</string>
     <string name="oneplus_fnatic_mode_background_introduction_summary">పనితీరు ప్రధానంగా గేమ్ ఆడే పద్దతి ఆధారంగా లెక్కించబడుతుంది. దీని వలన కొన్ని అప్లికేషన్‌ల్లో సమస్యలు రావచ్చు.</string>
     <string name="oneplus_fnatic_mode_background_introduction_title">ప్రాసెస్ రెగ్యులేటర్‌ను మెరుగుపరచండి</string>
-    <string name="oneplus_fnatic_mode_disturb_introduction_summary">అన్ని నోటిఫికేషన్‌లు మరియు కాల్‌లు (తక్కువ బ్యాటరీ నోటిఫికేషన్, అలారం మరియు టైమర్ మినహా) బ్లాక్ చేయండి. మీరు కాల్ చరిత్రలో సమాధానమివ్వని కాల్‌లు మాత్రమే చూడగలరు.</string>
+    <string name="oneplus_fnatic_mode_disturb_introduction_summary">అన్ని నోటిఫికేషన్‌లు మరియు కాల్‌లు (తక్కువ బ్యాటరీ నోటిఫికేషన్, అలారం మరియు టైమర్ మినహా) బ్లాక్ చేయండి.</string>
     <string name="oneplus_fnatic_mode_disturb_introduction_title">అధునాతన DND</string>
     <string name="oneplus_fnatic_mode_enable_introduction_title">ఎస్పోర్ట్స్ మోడ్ ఉపయోగించడానికి ముందుగా Fnatic మోడ్ ప్రారంభించాలి</string>
     <string name="oneplus_fnatic_mode_network_introduction_dual4g_summary">మంచి పనితీరు గేమ్ ప్లే కోసం అవాంతరాలను తగ్గించడానికి ప్రాథమిక SIM కార్డ్ సిగ్నల్ బలానికి ప్రాధాన్యత ఇవ్వబడుతుంది. ఫలితంగా, రెండవ SIM కార్డ్ నిలిపివేయబడుతుంది మరియు కాల్‌లు లేదా సందేశాలు స్వీకరించబడవు.</string>
@@ -2878,6 +2878,7 @@
     <string name="oneplus_haptic_feedback_tips">నిర్థిష్ట గేమ్ దృశ్యాలకి స్పర్శ ఫీడ్‌బ్యాక్ అందిస్తుంది, మద్దతిచ్చే గేమ్స్‌కి మాత్రమే ఇది వర్తిస్తుంది</string>
     <string name="oneplus_haptic_feedback_title">స్పర్శ ఫీడ్‌బ్యాక్ సంవృద్ధం</string>
     <string name="oneplus_hardware_keys_action_split_screen">స్ల్పిట్ స్క్రీన్ ఓపెన్/క్లోజ్ చేయబడింది</string>
+    <string name="oneplus_health_safety_information">ఆరోగ్యం &amp; సురక్షిత సమాచారం</string>
     <string name="oneplus_hearing_aid">వినికిడి ఉపకరణం అనుకూలత</string>
     <string name="oneplus_hide_navigation_bar">నావిగేషన్ బార్ దాచు</string>
     <string name="oneplus_hide_navkeys">నావిగేషన్ బార్ దాచిపెట్టు</string>
@@ -3092,8 +3093,8 @@
     <string name="oneplus_receive_notifications">OnePlus నోటిఫికేషన్‌లు</string>
     <string name="oneplus_receive_notifications_agree">OnePlus నుంచి న్యూస్ అందుకోండి</string>
     <string name="oneplus_receive_notifications_summary">OnePlus అధికారిక వార్తలు, ఉత్పత్తి సమాచారం, ప్రశ్నావళి ఇంటరాక్షన్ మరియు కొనుగోలు సిఫారసు/కూపన్ సమాచారం అందుకోవడానికి ఆమోదించండి</string>
-    <string name="oneplus_recognized_bluetooth_car_kits">బ్లూటూత్ కార్ కిట్లు గుర్తించబడ్డాయి</string>
-    <string name="oneplus_recognized_bluetooth_car_kits_no_devices">బ్లూటూత్ కార్ కిట్ లేదు, మీరు మ్యూనువల్‌గా కింద కొత్త కనెక్షన్లు జోడించవచ్చు</string>
+    <string name="oneplus_recognized_bluetooth_car_kits">గుర్తించిన వాహనం బ్లూటూత్</string>
+    <string name="oneplus_recognized_bluetooth_car_kits_no_devices">వాహనం బ్లూటూత్ లేదు, మీరు దిగువన మాన్యువల్‌గా కొత్త పరికరాలను జోడించవచ్చు</string>
     <string name="oneplus_recommended_opening">సిఫారసు చేయబడింది</string>
     <string name="oneplus_reenroll_fingerprint_tips">వేలిముద్ర ఖచ్చితత్వాన్ని నిర్ధారించడానికి మొబైల్ ఫోన్ యొక్క సంరక్షణ పొరను మార్చిన తర్వాత మీ వేలిముద్రను మళ్లీ నమోదు చేయండి</string>
     <string name="oneplus_regulatory_information">ధృవీకరణ</string>
@@ -3116,6 +3117,7 @@
     <string name="oneplus_screen_color_mode_basic">sRGB</string>
     <string name="oneplus_screen_color_mode_default">డిఫాల్ట్</string>
     <string name="oneplus_screen_color_mode_defined">కస్టమ్ రంగు</string>
+    <string name="oneplus_screen_color_mode_ntsc">AMOLED వైడ్ గాముట్</string>
     <string name="oneplus_screen_color_mode_reading_mode_on_summary">రీడింగ్ మోడ్ ఆన్ చేయబడింది కనుక లభ్యం కావడం లేదు</string>
     <string name="oneplus_screen_color_mode_soft">సాఫ్ట్</string>
     <string name="oneplus_screen_color_mode_title">స్క్రీన్ క్రమాంకనం</string>
@@ -3705,6 +3707,10 @@ UT ఇంటర్‌ఫేస్: %5$s"</string>
     <string name="restore_default_apn_completed">డిఫాల్ట్ APN సెట్టింగ్‌లను రీసెట్ చేయడం పూర్తయింది.</string>
     <string name="restr_pin_enter_admin_pin">నిర్వాహకుల పిన్‌ని నమోదు చేయండి</string>
     <string name="restrict_background_blacklisted">నేపథ్య డేటా ఆఫ్ చేయబడింది</string>
+    <string name="restrict_background_uss_always">ఎల్లప్పుడూ</string>
+    <string name="restrict_background_uss_never">ఎన్నడూ వద్దు</string>
+    <string name="restrict_background_uss_roaming">రోమింగ్‌లో ఉన్నప్పుడు మాత్రమే</string>
+    <string name="restrict_background_uss_title">నేపథ్య డేటాను పరిమితం చేయి</string>
     <string name="restricted_app_detail_footer">ఈ యాప్‌లు నేపథ్యంలో బ్యాటరీని ఉపయోగిస్తున్నాయి. పరిమితం చేయబడిన యాప్‌లు సరిగా పనిచేయకపోవచ్చు మరియు నోటిఫికేషన్‌లు రావడానికి ఆలస్యం కావచ్చు.</string>
     <string name="restricted_app_title">నియంత్రించబడిన యాప్‌లు</string>
     <string name="restricted_false_label">యాప్ నేపథ్యంలో బ్యాటరీని ఉపయోగించవచ్చు</string>
@@ -4406,6 +4412,7 @@ UT ఇంటర్‌ఫేస్: %5$s"</string>
     <string name="summary_divider_text">", "</string>
     <string name="summary_range_symbol_combination">%1$s - %2$s</string>
     <string name="summary_range_verbal_combination">%1$s నుండి %2$s వరకు</string>
+    <string name="summary_voice_network">VoLTE, Wi-Fi కాలింగ్</string>
     <string name="support_country_format">%1$s - %2$s</string>
     <string name="support_summary">సహాయక కథనాలు, ఫోన్ &amp; చాట్, ప్రారంభించండి</string>
     <string name="suw_back_button_label">వెనుకకు</string>
@@ -4458,6 +4465,11 @@ UT ఇంటర్‌ఫేస్: %5$s"</string>
     <string name="testing">పరీక్షించడం</string>
     <string name="testing_phone_info">ఫోన్ సమాచారం</string>
     <string name="testing_usage_stats">వినియోగ గణాంకాలు</string>
+    <string name="tether_error_item_default">టీథరింగ్</string>
+    <string name="tether_error_message">మీరు %1$sకు సభ్యత్వం పొందలేదు.</string>
+    <string name="tether_error_title">%1$s లోపం</string>
+    <string name="tether_no_sim_message">మొబైల్ హాట్‌స్పాట్ మరియు ఇతర టీథరింగ్ ఎంపికలను ఉపయోగించడానికి SIM కార్డ్ చొప్పించండి</string>
+    <string name="tether_no_sim_title">SIM కార్డ్ లేదు</string>
     <string name="tether_settings_disabled_on_data_saver">డేటా సేవర్ ఆన్‌లో ఉన్నప్పుడు టీథర్ చేయలేరు లేదా పోర్టబుల్ హాట్‌స్పాట్‌లను ఉపయోగించలేరు</string>
     <string name="tether_settings_summary_hotspot_off_tether_on">టెథెరింగ్</string>
     <string name="tether_settings_summary_hotspot_on_tether_off">హాట్‌స్పాట్ ఆన్</string>
@@ -4863,6 +4875,7 @@ UT ఇంటర్‌ఫేస్: %5$s"</string>
     <string name="voice_input_settings_title">వాయిస్ ఇన్‌పుట్</string>
     <string name="voice_interaction_security_warning">ఈ వాయిస్ ఇన్‌పుట్ సేవ ఎల్లప్పుడూ ఆన్‌లో ఉండే వాయిస్ పర్యవేక్షణని అమలు చేయగలదు మరియు మీ తరపున వాయిస్ ప్రారంభిత యాప్‌లను నియంత్రించగలదు. ఇది %s యాప్ నుండి అందించబడుతుంది. ఈ సేవ వినియోగాన్ని ప్రారంభించాలా?</string>
     <string name="voice_interactor_preference_summary">పూర్తి హాట్‌వర్డ్ మరియు పరస్పర చర్య</string>
+    <string name="voice_network_title">వాయిస్ నెట్‌వర్క్‌లు</string>
     <string name="voice_recognizer_preference_summary">సరళ ప్రసంగ-వచన రూపం</string>
     <string name="voice_search_settings_title">వాయిస్ శోధన</string>
     <string name="voice_service_preference_section_title">వాయిస్ ఇన్‌పుట్ సేవలు</string>

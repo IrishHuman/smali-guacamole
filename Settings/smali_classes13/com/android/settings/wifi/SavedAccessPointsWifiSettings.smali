@@ -274,7 +274,7 @@
 
     iget-object v1, p0, Lcom/android/settings/wifi/SavedAccessPointsWifiSettings;->mAddNetworkPreference:Landroid/support/v7/preference/Preference;
 
-    const v2, 0x7f121496
+    const v2, 0x7f1214a4
 
     invoke-virtual {v1, v2}, Landroid/support/v7/preference/Preference;->setTitle(I)V
 

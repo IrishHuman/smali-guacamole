@@ -371,7 +371,7 @@
 
     iget v2, v2, Landroid/content/pm/UserInfo;->id:I
 
-    const v3, 0x7f120c0d
+    const v3, 0x7f120c10
 
     invoke-virtual {p0, v3}, Lcom/oneplus/settings/multiapp/OPMultiAppListSettings;->getString(I)Ljava/lang/String;
 
@@ -531,7 +531,7 @@
 
     iput-object v0, p0, Lcom/oneplus/settings/multiapp/OPMultiAppListSettings;->mProgressDialog:Landroid/app/ProgressDialog;
 
-    const v0, 0x7f0a03a4
+    const v0, 0x7f0a03a8
 
     invoke-virtual {p0, v0}, Lcom/oneplus/settings/multiapp/OPMultiAppListSettings;->findViewById(I)Landroid/view/View;
 
@@ -571,7 +571,7 @@
 
     invoke-virtual {v0, p0}, Landroid/widget/ListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
-    const v0, 0x7f0a0318
+    const v0, 0x7f0a031a
 
     invoke-virtual {p0, v0}, Lcom/oneplus/settings/multiapp/OPMultiAppListSettings;->findViewById(I)Landroid/view/View;
 
@@ -581,7 +581,7 @@
 
     iget-object v0, p0, Lcom/oneplus/settings/multiapp/OPMultiAppListSettings;->mLoadingContainer:Landroid/view/View;
 
-    const v1, 0x7f0a0319
+    const v1, 0x7f0a031b
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1283,13 +1283,13 @@
 
     invoke-direct {v0, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const v1, 0x7f120c0f
+    const v1, 0x7f120c12
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
 
     move-result-object v0
 
-    const v1, 0x7f120a3f
+    const v1, 0x7f120a41
 
     new-instance v2, Lcom/oneplus/settings/multiapp/OPMultiAppListSettings$6;
 
@@ -1374,7 +1374,7 @@
 .method public getEnabledString(Lcom/oneplus/settings/better/OPAppModel;)Ljava/lang/String;
     .locals 4
 
-    const v0, 0x7f120c14
+    const v0, 0x7f120c17
 
     invoke-virtual {p0, v0}, Lcom/oneplus/settings/multiapp/OPMultiAppListSettings;->getString(I)Ljava/lang/String;
 
@@ -1635,7 +1635,7 @@
 
     const/4 v2, 0x0
 
-    const v3, 0x7f120c0d
+    const v3, 0x7f120c10
 
     invoke-virtual {p0, v3}, Lcom/oneplus/settings/multiapp/OPMultiAppListSettings;->getString(I)Ljava/lang/String;
 

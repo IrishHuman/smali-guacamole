@@ -210,7 +210,7 @@
 
     iget-object v3, p0, Lcom/android/settings/enterprise/EnterprisePrivacyFeatureProviderImpl;->mResources:Landroid/content/res/Resources;
 
-    const v4, 0x7f120825
+    const v4, 0x7f120826
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 

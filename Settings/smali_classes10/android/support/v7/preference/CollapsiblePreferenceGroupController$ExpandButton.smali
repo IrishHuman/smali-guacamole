@@ -150,7 +150,7 @@
 
     move-result-object v7
 
-    const v8, 0x7f121245
+    const v8, 0x7f12124c
 
     const/4 v9, 0x2
 

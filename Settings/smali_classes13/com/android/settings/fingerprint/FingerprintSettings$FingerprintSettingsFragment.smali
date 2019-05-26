@@ -233,7 +233,7 @@
 
     invoke-virtual {v0, v1}, Landroid/support/v7/preference/Preference;->setKey(Ljava/lang/String;)V
 
-    const v1, 0x7f120b4c
+    const v1, 0x7f120b4e
 
     invoke-virtual {v0, v1}, Landroid/support/v7/preference/Preference;->setTitle(I)V
 
@@ -261,7 +261,7 @@
 
     invoke-direct {v0, v1}, Landroid/support/v7/preference/PreferenceCategory;-><init>(Landroid/content/Context;)V
 
-    const v1, 0x7f120d51
+    const v1, 0x7f120d54
 
     invoke-virtual {v0, v1}, Landroid/support/v7/preference/PreferenceCategory;->setTitle(I)V
 
@@ -277,7 +277,7 @@
 
     invoke-virtual {v1, v2}, Landroid/support/v14/preference/SwitchPreference;->setKey(Ljava/lang/String;)V
 
-    const v2, 0x7f120bbd
+    const v2, 0x7f120bbf
 
     invoke-virtual {v1, v2}, Landroid/support/v14/preference/SwitchPreference;->setTitle(I)V
 
@@ -327,7 +327,7 @@
 
     invoke-virtual {v2, v4}, Landroid/support/v14/preference/SwitchPreference;->setKey(Ljava/lang/String;)V
 
-    const v4, 0x7f120d53
+    const v4, 0x7f120d56
 
     invoke-virtual {v2, v4}, Landroid/support/v14/preference/SwitchPreference;->setTitle(I)V
 
@@ -605,11 +605,11 @@
 
     move-result v1
 
-    const v2, 0x7f120d5a
+    const v2, 0x7f120d5d
 
-    const v3, 0x7f120e81
+    const v3, 0x7f120e84
 
-    const v4, 0x7f120d58
+    const v4, 0x7f120d5b
 
     if-eqz v1, :cond_1
 
@@ -628,7 +628,7 @@
     return v2
 
     :pswitch_2
-    const v1, 0x7f120d5b
+    const v1, 0x7f120d5e
 
     return v1
 
@@ -636,7 +636,7 @@
     return v4
 
     :cond_0
-    const v1, 0x7f120d5c
+    const v1, 0x7f120d5f
 
     return v1
 
@@ -652,7 +652,7 @@
     return v2
 
     :pswitch_6
-    const v1, 0x7f120d59
+    const v1, 0x7f120d5c
 
     return v1
 
@@ -803,7 +803,7 @@
 
     nop
 
-    const v1, 0x7f12108d
+    const v1, 0x7f121094
 
     invoke-virtual {p0, v1}, Lcom/android/settings/fingerprint/FingerprintSettings$FingerprintSettingsFragment;->getString(I)Ljava/lang/String;
 
@@ -1823,12 +1823,12 @@
 
     if-eqz v5, :cond_5
 
-    const v9, 0x7f12106c
+    const v9, 0x7f121073
 
     goto :goto_0
 
     :cond_5
-    const v9, 0x7f12106b
+    const v9, 0x7f121072
 
     :goto_0
     invoke-virtual {p0, v9}, Lcom/android/settings/fingerprint/FingerprintSettings$FingerprintSettingsFragment;->getText(I)Ljava/lang/CharSequence;
@@ -2271,7 +2271,7 @@
 
     move-result-object v9
 
-    const v10, 0x7f120d55
+    const v10, 0x7f120d58
 
     invoke-static {v9, v10, v5}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
 

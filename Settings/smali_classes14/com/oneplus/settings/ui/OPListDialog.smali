@@ -158,7 +158,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0a047f
+    const v1, 0x7f0a0483
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -192,7 +192,7 @@
 
     invoke-direct {v3, p0}, Lcom/oneplus/settings/ui/OPListDialog$2;-><init>(Lcom/oneplus/settings/ui/OPListDialog;)V
 
-    const v4, 0x7f120a3f
+    const v4, 0x7f120a41
 
     invoke-virtual {v1, v4, v3}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 

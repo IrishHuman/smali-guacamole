@@ -243,7 +243,7 @@
 
     move-result v8
 
-    const v9, 0x7f12095f
+    const v9, 0x7f120961
 
     if-eqz v8, :cond_4
 
@@ -259,7 +259,7 @@
 
     if-eqz v8, :cond_3
 
-    const v4, 0x7f120960
+    const v4, 0x7f120962
 
     invoke-virtual {v0, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -305,7 +305,7 @@
 
     if-nez v2, :cond_6
 
-    const v2, 0x7f12095e
+    const v2, 0x7f120960
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -316,7 +316,7 @@
     goto :goto_2
 
     :cond_6
-    const v2, 0x7f12095b
+    const v2, 0x7f12095d
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 

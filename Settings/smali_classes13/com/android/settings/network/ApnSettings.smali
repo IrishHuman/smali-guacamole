@@ -18,6 +18,8 @@
 # static fields
 .field private static final ACTION_RESTORE_DEFAULT_APN:Ljava/lang/String; = "android.intent.action.restoreDefaultAPN"
 
+.field private static final ACTIVE_STATE:I = 0x1
+
 .field private static final APN_HIDE_RULE_STRINGS_ARRAY:Ljava/lang/String; = "apn_hide_rule_strings_array"
 
 .field private static final APN_HIDE_RULE_STRINGS_WITH_ICCIDS_ARRAY:Ljava/lang/String; = "apn_hide_rule_strings_with_iccids_array"
@@ -41,6 +43,8 @@
 .field public static final EXTRA_POSITION:Ljava/lang/String; = "position"
 
 .field private static final ID_INDEX:I = 0x0
+
+.field private static final INACTIVE_STATE:I = 0x0
 
 .field private static final INCLUDE_COMMON_RULES:Ljava/lang/String; = "include_common_rules"
 
@@ -82,6 +86,10 @@
 
 .field private mAllowAddingApns:Z
 
+.field private mApnEditable:Z
+
+.field private mCarrierActived:Z
+
 .field private mHideApnsGroupByIccid:Landroid/os/PersistableBundle;
 
 .field private mHideApnsWithIccidRule:[Ljava/lang/String;
@@ -105,6 +113,8 @@
 .field private mRestoreDefaultApnThread:Landroid/os/HandlerThread;
 
 .field private mSelectedKey:Ljava/lang/String;
+
+.field private mSimLocked:Z
 
 .field private mSubscriptionInfo:Landroid/telephony/SubscriptionInfo;
 
@@ -155,6 +165,14 @@
 
     invoke-direct {p0, v0}, Lcom/android/settings/RestrictedSettingsFragment;-><init>(Ljava/lang/String;)V
 
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/android/settings/network/ApnSettings;->mCarrierActived:Z
+
+    iput-boolean v0, p0, Lcom/android/settings/network/ApnSettings;->mSimLocked:Z
+
+    iput-boolean v0, p0, Lcom/android/settings/network/ApnSettings;->mApnEditable:Z
+
     new-instance v0, Lcom/android/settings/network/ApnSettings$1;
 
     invoke-direct {v0, p0}, Lcom/android/settings/network/ApnSettings$1;-><init>(Lcom/android/settings/network/ApnSettings;)V
@@ -188,14 +206,14 @@
     return v0
 .end method
 
-.method static synthetic access$1000(Lcom/android/settings/network/ApnSettings;)Landroid/content/ContentResolver;
+.method static synthetic access$1000(Lcom/android/settings/network/ApnSettings;Ljava/lang/String;)Z
     .locals 1
 
-    invoke-virtual {p0}, Lcom/android/settings/network/ApnSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-direct {p0, p1}, Lcom/android/settings/network/ApnSettings;->isSprintMccMnc(Ljava/lang/String;)Z
 
-    move-result-object v0
+    move-result v0
 
-    return-object v0
+    return v0
 .end method
 
 .method static synthetic access$102(Z)Z
@@ -206,7 +224,17 @@
     return p0
 .end method
 
-.method static synthetic access$1100()Landroid/net/Uri;
+.method static synthetic access$1100(Lcom/android/settings/network/ApnSettings;)Landroid/content/ContentResolver;
+    .locals 1
+
+    invoke-virtual {p0}, Lcom/android/settings/network/ApnSettings;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method static synthetic access$1200()Landroid/net/Uri;
     .locals 1
 
     sget-object v0, Lcom/android/settings/network/ApnSettings;->DEFAULTAPN_URI:Landroid/net/Uri;
@@ -214,7 +242,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$1200(Lcom/android/settings/network/ApnSettings;Landroid/net/Uri;)Landroid/net/Uri;
+.method static synthetic access$1300(Lcom/android/settings/network/ApnSettings;Landroid/net/Uri;)Landroid/net/Uri;
     .locals 1
 
     invoke-direct {p0, p1}, Lcom/android/settings/network/ApnSettings;->getUriForCurrSubId(Landroid/net/Uri;)Landroid/net/Uri;
@@ -627,7 +655,7 @@
 .end method
 
 .method private fillList()V
-    .locals 37
+    .locals 41
 
     move-object/from16 v14, p0
 
@@ -636,6 +664,12 @@
     const-string v1, "phone"
 
     invoke-virtual {v14, v1}, Lcom/android/settings/network/ApnSettings;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    move-object v15, v1
+
+    check-cast v15, Landroid/telephony/TelephonyManager;
 
     iget-object v1, v14, Lcom/android/settings/network/ApnSettings;->mSubscriptionInfo:Landroid/telephony/SubscriptionInfo;
 
@@ -653,7 +687,7 @@
     const/4 v1, -0x1
 
     :goto_0
-    move v15, v1
+    move v13, v1
 
     iget-object v1, v14, Lcom/android/settings/network/ApnSettings;->mSubscriptionInfo:Landroid/telephony/SubscriptionInfo;
 
@@ -679,7 +713,24 @@
     move-result-object v1
 
     :goto_1
-    move-object v13, v1
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isSupportUss()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    invoke-direct {v14, v1}, Lcom/android/settings/network/ApnSettings;->isSprintMccMnc(Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    invoke-virtual {v15}, Landroid/telephony/TelephonyManager;->getSimOperator()Ljava/lang/String;
+
+    move-result-object v1
+
+    :cond_2
+    move-object v12, v1
 
     const-string v1, "ApnSettings"
 
@@ -691,7 +742,7 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -709,7 +760,7 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v3, "\" AND NOT (type=\'ia\' AND (apn=\"\" OR apn IS NULL)) AND user_visible!=0"
 
@@ -721,7 +772,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-object v12, v1
+    move-object v11, v1
 
     const-string v1, "ApnSettings"
 
@@ -733,7 +784,7 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v12}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v11}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v3
 
@@ -773,7 +824,7 @@
 
     move-result-object v5
 
-    invoke-virtual {v12}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v11}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v6
 
@@ -783,33 +834,33 @@
 
     invoke-virtual/range {v3 .. v8}, Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
 
-    move-result-object v11
+    move-result-object v8
 
-    if-eqz v11, :cond_13
+    if-eqz v8, :cond_17
 
     const/4 v1, 0x0
 
     iget-object v2, v14, Lcom/android/settings/network/ApnSettings;->mUiccController:Lcom/android/internal/telephony/uicc/UiccController;
 
-    const/4 v8, 0x1
+    const/4 v7, 0x1
 
-    if-eqz v2, :cond_2
+    if-eqz v2, :cond_3
 
     iget-object v2, v14, Lcom/android/settings/network/ApnSettings;->mSubscriptionInfo:Landroid/telephony/SubscriptionInfo;
 
-    if-eqz v2, :cond_2
+    if-eqz v2, :cond_3
 
     iget-object v2, v14, Lcom/android/settings/network/ApnSettings;->mUiccController:Lcom/android/internal/telephony/uicc/UiccController;
 
-    invoke-static {v15}, Landroid/telephony/SubscriptionManager;->getPhoneId(I)I
+    invoke-static {v13}, Landroid/telephony/SubscriptionManager;->getPhoneId(I)I
 
     move-result v3
 
-    invoke-virtual {v2, v3, v8}, Lcom/android/internal/telephony/uicc/UiccController;->getIccRecords(II)Lcom/android/internal/telephony/uicc/IccRecords;
+    invoke-virtual {v2, v3, v7}, Lcom/android/internal/telephony/uicc/UiccController;->getIccRecords(II)Lcom/android/internal/telephony/uicc/IccRecords;
 
     move-result-object v1
 
-    :cond_2
+    :cond_3
     move-object/from16 v16, v1
 
     const-string v1, "apn_list"
@@ -818,11 +869,11 @@
 
     move-result-object v1
 
-    move-object v7, v1
+    move-object v6, v1
 
-    check-cast v7, Landroid/support/v7/preference/PreferenceGroup;
+    check-cast v6, Landroid/support/v7/preference/PreferenceGroup;
 
-    invoke-virtual {v7}, Landroid/support/v7/preference/PreferenceGroup;->removeAll()V
+    invoke-virtual {v6}, Landroid/support/v7/preference/PreferenceGroup;->removeAll()V
 
     new-instance v2, Ljava/util/ArrayList;
 
@@ -832,7 +883,7 @@
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    move-object v6, v1
+    move-object v5, v1
 
     new-instance v9, Ljava/util/ArrayList;
 
@@ -868,630 +919,762 @@
 
     invoke-static {v1, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-interface {v11}, Landroid/database/Cursor;->moveToFirst()Z
+    invoke-interface {v8}, Landroid/database/Cursor;->moveToFirst()Z
 
     :goto_2
-    invoke-interface {v11}, Landroid/database/Cursor;->isAfterLast()Z
+    invoke-interface {v8}, Landroid/database/Cursor;->isAfterLast()Z
 
     move-result v1
 
     const/4 v3, 0x0
 
-    if-nez v1, :cond_f
+    if-nez v1, :cond_12
 
-    invoke-interface {v11, v8}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+    invoke-interface {v8, v7}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
     const/4 v4, 0x2
 
-    invoke-interface {v11, v4}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-interface {v11, v3}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+    invoke-interface {v8, v4}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v4
 
-    const/4 v3, 0x3
-
-    invoke-interface {v11, v3}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
-
-    move-result-object v3
-
-    const/4 v8, 0x4
-
-    invoke-interface {v11, v8}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
-
-    move-result-object v17
-
-    const/4 v8, 0x5
-
-    invoke-interface {v11, v8}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
-
-    move-result-object v18
-
-    const/4 v8, 0x6
-
-    invoke-interface {v11, v8}, Landroid/database/Cursor;->getInt(I)I
-
-    move-result v8
-
-    move-object/from16 v27, v1
-
-    const/4 v1, 0x1
-
-    if-ne v8, v1, :cond_3
-
-    move v8, v1
-
-    goto :goto_3
-
-    :cond_3
-    const/4 v8, 0x0
-
-    :goto_3
-    move-object/from16 v28, v7
-
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/network/ApnSettings;->getActivity()Landroid/app/Activity;
+    invoke-interface {v8, v3}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v7
 
-    move-object/from16 v29, v12
+    const/4 v3, 0x3
 
-    invoke-interface {v11, v1}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+    invoke-interface {v8, v3}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
-    move-result-object v12
+    move-result-object v3
 
-    invoke-static {v7, v12}, Lcom/android/settings/Utils;->getLocalizedName(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+    move-object/from16 v27, v6
 
-    move-result-object v12
+    const/4 v6, 0x4
 
-    invoke-static {v12}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    invoke-interface {v8, v6}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v17
+
+    const/4 v6, 0x5
+
+    invoke-interface {v8, v6}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v18
+
+    const/4 v6, 0x6
+
+    invoke-interface {v8, v6}, Landroid/database/Cursor;->getInt(I)I
+
+    move-result v6
+
+    move-object/from16 v28, v11
+
+    const/4 v11, 0x1
+
+    if-ne v6, v11, :cond_4
+
+    const/4 v6, 0x1
+
+    goto :goto_3
+
+    :cond_4
+    const/4 v6, 0x0
+
+    :goto_3
+    move v11, v6
+
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isSupportUss()Z
+
+    move-result v6
+
+    if-eqz v6, :cond_5
+
+    invoke-direct {v14, v12}, Lcom/android/settings/network/ApnSettings;->isSprintMccMnc(Ljava/lang/String;)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_5
+
+    const-string v6, "3G_APN"
+
+    invoke-virtual {v6, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_5
+
+    const-string v6, "ApnSettings"
+
+    move-object/from16 v29, v1
+
+    const-string v1, "skip 3G_APN!"
+
+    invoke-static {v6, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-interface {v8}, Landroid/database/Cursor;->moveToNext()Z
+
+    nop
+
+    move/from16 v33, v0
+
+    move-object/from16 v32, v9
+
+    move-object/from16 v30, v15
+
+    goto/16 :goto_7
+
+    :cond_5
+    move-object/from16 v29, v1
+
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/network/ApnSettings;->getActivity()Landroid/app/Activity;
+
+    move-result-object v1
+
+    move-object/from16 v30, v15
+
+    const/4 v6, 0x1
+
+    invoke-interface {v8, v6}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v15
+
+    invoke-static {v1, v15}, Lcom/android/settings/Utils;->getLocalizedName(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v15
+
+    invoke-static {v15}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
-    if-nez v1, :cond_4
+    if-nez v1, :cond_6
 
-    move-object v1, v12
+    move-object v1, v15
 
-    move-object v7, v1
+    move-object v6, v1
 
     goto :goto_4
 
-    :cond_4
-    move-object/from16 v7, v27
+    :cond_6
+    move-object/from16 v6, v29
 
     :goto_4
     const/4 v1, 0x7
 
-    invoke-interface {v11, v1}, Landroid/database/Cursor;->getInt(I)I
+    invoke-interface {v8, v1}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v1
 
-    move-object/from16 v30, v12
+    move-object/from16 v31, v15
 
-    const/16 v12, 0x8
+    const/16 v15, 0x8
 
-    invoke-interface {v11, v12}, Landroid/database/Cursor;->getInt(I)I
+    invoke-interface {v8, v15}, Landroid/database/Cursor;->getInt(I)I
 
-    move-result v19
+    move-result v15
 
     invoke-static {v1}, Landroid/telephony/ServiceState;->getBitmaskForTech(I)I
 
-    move-result v12
+    move-result v19
 
-    or-int v12, v12, v19
+    move-object/from16 v32, v9
 
-    move-object/from16 v31, v13
+    or-int v9, v19, v15
+
+    move/from16 v33, v0
 
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
-    move-result-object v13
+    move-result-object v0
 
-    invoke-virtual {v13, v15}, Landroid/telephony/TelephonyManager;->getDataNetworkType(I)I
+    invoke-virtual {v0, v13}, Landroid/telephony/TelephonyManager;->getDataNetworkType(I)I
 
-    move-result v13
+    move-result v0
 
-    invoke-direct {v14, v13}, Lcom/android/settings/network/ApnSettings;->networkTypeToRilRidioTechnology(I)I
+    invoke-direct {v14, v0}, Lcom/android/settings/network/ApnSettings;->networkTypeToRilRidioTechnology(I)I
 
-    move-result v13
+    move-result v0
 
-    invoke-static {v12, v13}, Landroid/telephony/ServiceState;->bitmaskHasTech(II)Z
+    invoke-static {v9, v0}, Landroid/telephony/ServiceState;->bitmaskHasTech(II)Z
 
-    move-result v20
+    move-result v19
 
-    if-nez v20, :cond_9
+    if-nez v19, :cond_b
 
-    if-nez v1, :cond_6
+    if-nez v1, :cond_8
 
-    if-eqz v19, :cond_5
+    if-eqz v15, :cond_7
 
     goto :goto_5
 
-    :cond_5
-    move/from16 v32, v1
+    :cond_7
+    move/from16 v34, v0
 
-    move/from16 v33, v12
+    move/from16 v35, v1
 
-    goto :goto_7
+    goto :goto_8
 
-    :cond_6
+    :cond_8
     :goto_5
-    sget-boolean v20, Lcom/android/settings/network/ApnSettings;->isVzwSim:Z
+    sget-boolean v19, Lcom/android/settings/network/ApnSettings;->isVzwSim:Z
 
-    if-nez v20, :cond_9
+    if-nez v19, :cond_b
 
-    if-nez v13, :cond_8
+    invoke-direct {v14, v12}, Lcom/android/settings/network/ApnSettings;->isSprintMccMnc(Ljava/lang/String;)Z
 
-    if-nez v1, :cond_7
+    move-result v19
 
-    if-nez v13, :cond_7
+    if-nez v19, :cond_b
 
-    move/from16 v32, v1
+    if-nez v0, :cond_a
 
-    move/from16 v33, v12
+    if-nez v1, :cond_9
+
+    if-nez v0, :cond_9
+
+    move/from16 v34, v0
+
+    move/from16 v35, v1
 
     goto :goto_6
 
-    :cond_7
-    move/from16 v32, v1
-
-    const-string v1, "ApnSettings"
-
-    move/from16 v33, v12
-
-    const-string v12, "Do not remove apn when it has bearer and in no service surrounding"
-
-    invoke-static {v1, v12}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    goto :goto_7
-
-    :cond_8
-    move/from16 v32, v1
-
-    move/from16 v33, v12
-
-    :goto_6
-    invoke-interface {v11}, Landroid/database/Cursor;->moveToNext()Z
-
-    nop
-
-    move-object/from16 v7, v28
-
-    move-object/from16 v12, v29
-
-    move-object/from16 v13, v31
-
-    const/4 v8, 0x1
-
-    goto/16 :goto_2
-
     :cond_9
-    move/from16 v32, v1
+    move/from16 v34, v0
 
-    move/from16 v33, v12
+    const-string v0, "ApnSettings"
 
-    :goto_7
-    new-instance v1, Lcom/android/settings/network/ApnPreference;
+    move/from16 v35, v1
 
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/network/ApnSettings;->getPrefContext()Landroid/content/Context;
+    const-string v1, "Do not remove apn when it has bearer and in no service surrounding"
 
-    move-result-object v12
-
-    invoke-direct {v1, v12}, Lcom/android/settings/network/ApnPreference;-><init>(Landroid/content/Context;)V
-
-    move-object v12, v1
-
-    invoke-virtual {v12, v4}, Lcom/android/settings/network/ApnPreference;->setKey(Ljava/lang/String;)V
-
-    invoke-virtual {v12, v7}, Lcom/android/settings/network/ApnPreference;->setTitle(Ljava/lang/CharSequence;)V
-
-    invoke-virtual {v12, v5}, Lcom/android/settings/network/ApnPreference;->setSummary(Ljava/lang/CharSequence;)V
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v12, v1}, Lcom/android/settings/network/ApnPreference;->setPersistent(Z)V
-
-    invoke-virtual {v12, v14}, Lcom/android/settings/network/ApnPreference;->setOnPreferenceChangeListener(Landroid/support/v7/preference/Preference$OnPreferenceChangeListener;)V
-
-    invoke-virtual {v12, v15}, Lcom/android/settings/network/ApnPreference;->setSubId(I)V
-
-    if-eqz v3, :cond_b
-
-    const-string v1, "default"
-
-    invoke-direct {v14, v3, v1}, Lcom/android/settings/network/ApnSettings;->isApnType(Ljava/lang/String;Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_a
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_8
 
     :cond_a
-    const/16 v25, 0x0
+    move/from16 v34, v0
+
+    move/from16 v35, v1
+
+    :goto_6
+    invoke-interface {v8}, Landroid/database/Cursor;->moveToNext()Z
+
+    nop
+
+    :goto_7
+    move-object/from16 v6, v27
+
+    move-object/from16 v11, v28
+
+    move-object/from16 v15, v30
+
+    move-object/from16 v9, v32
+
+    move/from16 v0, v33
+
+    const/4 v7, 0x1
+
+    goto/16 :goto_2
+
+    :cond_b
+    move/from16 v34, v0
+
+    move/from16 v35, v1
+
+    :goto_8
+    new-instance v0, Lcom/android/settings/network/ApnPreference;
+
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/network/ApnSettings;->getPrefContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lcom/android/settings/network/ApnPreference;-><init>(Landroid/content/Context;)V
+
+    move-object v1, v0
+
+    invoke-virtual {v1, v7}, Lcom/android/settings/network/ApnPreference;->setKey(Ljava/lang/String;)V
+
+    invoke-virtual {v1, v6}, Lcom/android/settings/network/ApnPreference;->setTitle(Ljava/lang/CharSequence;)V
+
+    invoke-virtual {v1, v4}, Lcom/android/settings/network/ApnPreference;->setSummary(Ljava/lang/CharSequence;)V
+
+    const/4 v0, 0x0
+
+    invoke-virtual {v1, v0}, Lcom/android/settings/network/ApnPreference;->setPersistent(Z)V
+
+    invoke-virtual {v1, v14}, Lcom/android/settings/network/ApnPreference;->setOnPreferenceChangeListener(Landroid/support/v7/preference/Preference$OnPreferenceChangeListener;)V
+
+    invoke-virtual {v1, v13}, Lcom/android/settings/network/ApnPreference;->setSubId(I)V
+
+    if-eqz v3, :cond_d
+
+    const-string v0, "default"
+
+    invoke-direct {v14, v3, v0}, Lcom/android/settings/network/ApnSettings;->isApnType(Ljava/lang/String;Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_c
 
     goto :goto_9
 
-    :cond_b
-    :goto_8
-    const/16 v25, 0x1
+    :cond_c
+    const/4 v0, 0x0
 
+    goto :goto_a
+
+    :cond_d
     :goto_9
-    move/from16 v1, v25
+    const/4 v0, 0x1
 
-    invoke-virtual {v12, v1}, Lcom/android/settings/network/ApnPreference;->setSelectable(Z)V
+    :goto_a
+    invoke-virtual {v1, v0}, Lcom/android/settings/network/ApnPreference;->setSelectable(Z)V
 
-    move-object/from16 v34, v11
+    if-eqz v0, :cond_e
 
-    const/4 v11, 0x1
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isSupportUss()Z
 
-    if-ne v8, v11, :cond_c
+    move-result v19
 
-    invoke-static {v5}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    if-eqz v19, :cond_e
 
-    move-result v20
+    invoke-direct/range {p0 .. p0}, Lcom/android/settings/network/ApnSettings;->isAllowEditApn()Z
 
-    if-eqz v20, :cond_c
+    move-result v19
 
-    const-string v11, "fota"
+    if-nez v19, :cond_e
 
-    invoke-virtual {v3, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    move-object/from16 v36, v8
 
-    move-result v11
+    const/4 v8, 0x0
 
-    if-eqz v11, :cond_c
+    invoke-virtual {v1, v8}, Lcom/android/settings/network/ApnPreference;->setRadioButtonEnable(Z)V
 
-    const-string v11, "ApnSettings"
+    goto :goto_b
 
-    move-object/from16 v35, v3
+    :cond_e
+    move-object/from16 v36, v8
+
+    :goto_b
+    const/4 v8, 0x1
+
+    if-ne v11, v8, :cond_f
+
+    invoke-static {v4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v19
+
+    if-eqz v19, :cond_f
+
+    const-string v8, "fota"
+
+    invoke-virtual {v3, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v8
+
+    if-eqz v8, :cond_f
+
+    const-string v8, "ApnSettings"
+
+    move-object/from16 v37, v3
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v3, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-object/from16 v36, v7
+    move-object/from16 v38, v6
 
-    const-string v7, " apn is null"
+    const-string v6, " apn is null"
 
-    invoke-virtual {v3, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-static {v11, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v8, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    move/from16 v21, v1
+    move/from16 v20, v0
 
-    move-object/from16 v23, v4
+    move-object/from16 v22, v1
 
-    move-object/from16 v24, v5
+    move-object/from16 v24, v4
 
-    move v3, v8
+    move-object v4, v5
 
-    move-object/from16 v1, v28
+    move-object v0, v7
 
-    move-object/from16 v26, v29
+    move/from16 v26, v9
 
-    move-object/from16 v25, v30
+    move v6, v11
 
-    move-object/from16 v30, v31
+    move-object/from16 v25, v12
 
-    move/from16 v20, v32
+    move/from16 v40, v15
 
-    move/from16 v28, v33
+    move-object/from16 v15, v27
 
-    move-object/from16 v5, v34
+    move-object/from16 v5, v28
 
-    move-object/from16 v22, v35
+    move-object/from16 v9, v32
 
-    goto/16 :goto_b
+    move/from16 v19, v34
 
-    :cond_c
-    move-object/from16 v35, v3
+    move/from16 v21, v35
 
-    move-object/from16 v36, v7
+    move-object/from16 v3, v36
 
-    if-eqz v1, :cond_e
+    move-object/from16 v23, v37
 
-    iget-object v3, v14, Lcom/android/settings/network/ApnSettings;->mSelectedKey:Ljava/lang/String;
+    move-object/from16 v29, v38
 
-    if-eqz v3, :cond_d
+    const/4 v1, 0x1
 
-    iget-object v3, v14, Lcom/android/settings/network/ApnSettings;->mSelectedKey:Ljava/lang/String;
+    move/from16 v27, v13
 
-    invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_d
-
-    invoke-virtual {v12}, Lcom/android/settings/network/ApnPreference;->setChecked()V
-
-    const/4 v0, 0x1
-
-    const-string v3, "ApnSettings"
-
-    new-instance v7, Ljava/lang/StringBuilder;
-
-    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v11, "find select key = "
-
-    invoke-virtual {v7, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v11, v14, Lcom/android/settings/network/ApnSettings;->mSelectedKey:Ljava/lang/String;
-
-    invoke-virtual {v7, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v11, " apn: "
-
-    invoke-virtual {v7, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v7, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v7
-
-    invoke-static {v3, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    goto :goto_a
-
-    :cond_d
-    invoke-virtual {v12}, Lcom/android/settings/network/ApnPreference;->unsetChecked()V
-
-    :goto_a
-    move v7, v0
-
-    move-object v0, v14
-
-    move/from16 v21, v1
-
-    move/from16 v20, v32
-
-    move-object v1, v12
-
-    move-object/from16 v22, v35
-
-    move-object v3, v6
-
-    move-object/from16 v23, v4
-
-    move-object/from16 v4, v16
-
-    move-object/from16 v24, v5
-
-    move-object/from16 v5, v17
-
-    move-object v11, v6
-
-    move-object/from16 v6, v18
-
-    invoke-direct/range {v0 .. v6}, Lcom/android/settings/network/ApnSettings;->addApnToList(Lcom/android/settings/network/ApnPreference;Ljava/util/ArrayList;Ljava/util/ArrayList;Lcom/android/internal/telephony/uicc/IccRecords;Ljava/lang/String;Ljava/lang/String;)V
-
-    move v0, v7
-
-    move v3, v8
-
-    move-object v6, v11
-
-    move-object/from16 v1, v28
-
-    move-object/from16 v26, v29
-
-    move-object/from16 v25, v30
-
-    move-object/from16 v30, v31
-
-    move/from16 v28, v33
-
-    move-object/from16 v5, v34
-
-    :goto_b
-    move-object/from16 v27, v36
-
-    const/4 v4, 0x1
-
-    move-object/from16 v29, v12
-
-    move/from16 v31, v13
-
-    goto :goto_c
-
-    :cond_e
-    move/from16 v21, v1
-
-    move-object/from16 v23, v4
-
-    move-object/from16 v24, v5
-
-    move-object v11, v6
-
-    move/from16 v20, v32
-
-    move-object/from16 v22, v35
-
-    move-object/from16 v1, v28
-
-    move-object/from16 v27, v36
-
-    move-object v7, v14
-
-    move v3, v8
-
-    const/4 v4, 0x1
-
-    move-object v8, v12
-
-    move-object/from16 v5, v34
-
-    move-object/from16 v11, v16
-
-    move-object/from16 v26, v29
-
-    move-object/from16 v25, v30
-
-    move/from16 v28, v33
-
-    move-object/from16 v29, v12
-
-    move-object/from16 v12, v17
-
-    move-object/from16 v30, v31
-
-    move/from16 v31, v13
-
-    move-object/from16 v13, v18
-
-    invoke-direct/range {v7 .. v13}, Lcom/android/settings/network/ApnSettings;->addApnToList(Lcom/android/settings/network/ApnPreference;Ljava/util/ArrayList;Ljava/util/ArrayList;Lcom/android/internal/telephony/uicc/IccRecords;Ljava/lang/String;Ljava/lang/String;)V
-
-    :goto_c
-    invoke-interface {v5}, Landroid/database/Cursor;->moveToNext()Z
-
-    nop
-
-    move-object v7, v1
-
-    move v8, v4
-
-    move-object v11, v5
-
-    move-object/from16 v12, v26
-
-    move-object/from16 v13, v30
-
-    goto/16 :goto_2
+    goto/16 :goto_d
 
     :cond_f
-    move-object v1, v7
+    move-object/from16 v37, v3
 
-    move-object v5, v11
+    move-object/from16 v38, v6
 
-    move-object/from16 v26, v12
+    if-eqz v0, :cond_11
 
-    move-object/from16 v30, v13
+    iget-object v3, v14, Lcom/android/settings/network/ApnSettings;->mSelectedKey:Ljava/lang/String;
 
-    invoke-interface {v5}, Landroid/database/Cursor;->close()V
+    if-eqz v3, :cond_10
 
-    invoke-virtual {v6}, Ljava/util/ArrayList;->isEmpty()Z
+    iget-object v3, v14, Lcom/android/settings/network/ApnSettings;->mSelectedKey:Ljava/lang/String;
+
+    invoke-virtual {v3, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
 
-    if-nez v3, :cond_10
+    if-eqz v3, :cond_10
 
-    move-object v2, v6
+    invoke-virtual {v1}, Lcom/android/settings/network/ApnPreference;->setChecked()V
 
-    move-object v3, v10
+    const/4 v3, 0x1
 
-    goto :goto_d
-
-    :cond_10
-    move-object v3, v9
-
-    :goto_d
-    invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v4
-
-    :goto_e
-    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v7
-
-    if-eqz v7, :cond_11
-
-    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v7
-
-    check-cast v7, Landroid/support/v7/preference/Preference;
-
-    invoke-virtual {v1, v7}, Landroid/support/v7/preference/PreferenceGroup;->addPreference(Landroid/support/v7/preference/Preference;)Z
-
-    goto :goto_e
-
-    :cond_11
-    if-nez v0, :cond_12
-
-    invoke-virtual {v1}, Landroid/support/v7/preference/PreferenceGroup;->getPreferenceCount()I
-
-    move-result v4
-
-    if-lez v4, :cond_12
-
-    const/4 v4, 0x0
-
-    invoke-virtual {v1, v4}, Landroid/support/v7/preference/PreferenceGroup;->getPreference(I)Landroid/support/v7/preference/Preference;
-
-    move-result-object v4
-
-    check-cast v4, Lcom/android/settings/network/ApnPreference;
-
-    invoke-virtual {v4}, Lcom/android/settings/network/ApnPreference;->setChecked()V
-
-    invoke-virtual {v4}, Lcom/android/settings/network/ApnPreference;->getKey()Ljava/lang/String;
-
-    move-result-object v7
-
-    invoke-direct {v14, v7}, Lcom/android/settings/network/ApnSettings;->setSelectedApnKey(Ljava/lang/String;)V
-
-    const-string v7, "ApnSettings"
+    const-string v6, "ApnSettings"
 
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v9, "set key to  "
+    move/from16 v39, v0
 
-    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v0, "find select key = "
 
-    invoke-virtual {v4}, Lcom/android/settings/network/ApnPreference;->getKey()Ljava/lang/String;
+    invoke-virtual {v8, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v9
+    iget-object v0, v14, Lcom/android/settings/network/ApnSettings;->mSelectedKey:Ljava/lang/String;
 
-    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, " apn: "
+
+    invoke-virtual {v8, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v8
+    move-result-object v0
 
-    invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v6, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    move/from16 v33, v3
+
+    goto :goto_c
+
+    :cond_10
+    move/from16 v39, v0
+
+    invoke-virtual {v1}, Lcom/android/settings/network/ApnPreference;->unsetChecked()V
+
+    :goto_c
+    move/from16 v19, v34
+
+    move/from16 v20, v39
+
+    move-object v0, v14
+
+    move-object/from16 v22, v1
+
+    move/from16 v21, v35
+
+    move-object/from16 v23, v37
+
+    move-object v3, v5
+
+    move-object/from16 v24, v4
+
+    move-object/from16 v4, v16
+
+    move-object v8, v5
+
+    move-object/from16 v5, v17
+
+    move/from16 v40, v15
+
+    move-object/from16 v15, v27
+
+    move-object/from16 v29, v38
+
+    move-object/from16 v6, v18
+
+    invoke-direct/range {v0 .. v6}, Lcom/android/settings/network/ApnSettings;->addApnToList(Lcom/android/settings/network/ApnPreference;Ljava/util/ArrayList;Ljava/util/ArrayList;Lcom/android/internal/telephony/uicc/IccRecords;Ljava/lang/String;Ljava/lang/String;)V
+
+    move-object v0, v7
+
+    move-object v4, v8
+
+    move/from16 v26, v9
+
+    move v6, v11
+
+    move-object/from16 v25, v12
+
+    move/from16 v27, v13
+
+    move-object/from16 v5, v28
+
+    move-object/from16 v9, v32
+
+    move-object/from16 v3, v36
+
+    const/4 v1, 0x1
+
+    goto :goto_d
+
+    :cond_11
+    move/from16 v20, v0
+
+    move-object/from16 v22, v1
+
+    move-object/from16 v24, v4
+
+    move-object v8, v5
+
+    move/from16 v40, v15
+
+    move-object/from16 v15, v27
+
+    move/from16 v19, v34
+
+    move/from16 v21, v35
+
+    move-object/from16 v23, v37
+
+    move-object/from16 v29, v38
+
+    move-object v0, v7
+
+    const/4 v1, 0x1
+
+    move-object v7, v14
+
+    move-object v4, v8
+
+    move-object/from16 v3, v36
+
+    move-object/from16 v8, v22
+
+    move v6, v11
+
+    move-object/from16 v5, v28
+
+    move-object/from16 v11, v16
+
+    move-object/from16 v25, v12
+
+    move-object/from16 v12, v17
+
+    move/from16 v27, v13
+
+    move-object/from16 v13, v18
+
+    move/from16 v26, v9
+
+    move-object/from16 v9, v32
+
+    invoke-direct/range {v7 .. v13}, Lcom/android/settings/network/ApnSettings;->addApnToList(Lcom/android/settings/network/ApnPreference;Ljava/util/ArrayList;Ljava/util/ArrayList;Lcom/android/internal/telephony/uicc/IccRecords;Ljava/lang/String;Ljava/lang/String;)V
+
+    :goto_d
+    invoke-interface {v3}, Landroid/database/Cursor;->moveToNext()Z
+
+    nop
+
+    move v7, v1
+
+    move-object v8, v3
+
+    move-object v11, v5
+
+    move-object v6, v15
+
+    move-object/from16 v12, v25
+
+    move/from16 v13, v27
+
+    move-object/from16 v15, v30
+
+    move/from16 v0, v33
+
+    move-object v5, v4
+
+    goto/16 :goto_2
 
     :cond_12
-    invoke-virtual {v3}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    move/from16 v33, v0
 
-    move-result-object v4
+    move-object v4, v5
+
+    move-object v3, v8
+
+    move-object v5, v11
+
+    move-object/from16 v25, v12
+
+    move/from16 v27, v13
+
+    move-object/from16 v30, v15
+
+    move-object v15, v6
+
+    invoke-interface {v3}, Landroid/database/Cursor;->close()V
+
+    invoke-virtual {v4}, Ljava/util/ArrayList;->isEmpty()Z
+
+    move-result v0
+
+    if-nez v0, :cond_13
+
+    move-object v0, v4
+
+    move-object/from16 v32, v10
+
+    move-object/from16 v9, v32
+
+    goto :goto_e
+
+    :cond_13
+    move-object v0, v2
+
+    :goto_e
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
 
     :goto_f
-    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result v7
+    move-result v2
 
-    if-eqz v7, :cond_14
+    if-eqz v2, :cond_14
 
-    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result-object v7
+    move-result-object v2
 
-    check-cast v7, Landroid/support/v7/preference/Preference;
+    check-cast v2, Landroid/support/v7/preference/Preference;
 
-    invoke-virtual {v1, v7}, Landroid/support/v7/preference/PreferenceGroup;->addPreference(Landroid/support/v7/preference/Preference;)Z
+    invoke-virtual {v15, v2}, Landroid/support/v7/preference/PreferenceGroup;->addPreference(Landroid/support/v7/preference/Preference;)Z
 
     goto :goto_f
 
-    :cond_13
+    :cond_14
+    if-nez v33, :cond_15
+
+    invoke-virtual {v15}, Landroid/support/v7/preference/PreferenceGroup;->getPreferenceCount()I
+
+    move-result v1
+
+    if-lez v1, :cond_15
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v15, v1}, Landroid/support/v7/preference/PreferenceGroup;->getPreference(I)Landroid/support/v7/preference/Preference;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/android/settings/network/ApnPreference;
+
+    invoke-virtual {v1}, Lcom/android/settings/network/ApnPreference;->setChecked()V
+
+    invoke-virtual {v1}, Lcom/android/settings/network/ApnPreference;->getKey()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-direct {v14, v2}, Lcom/android/settings/network/ApnSettings;->setSelectedApnKey(Ljava/lang/String;)V
+
+    const-string v2, "ApnSettings"
+
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v7, "set key to  "
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Lcom/android/settings/network/ApnPreference;->getKey()Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-static {v2, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_15
+    invoke-virtual {v9}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :goto_10
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_16
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/support/v7/preference/Preference;
+
+    invoke-virtual {v15, v2}, Landroid/support/v7/preference/PreferenceGroup;->addPreference(Landroid/support/v7/preference/Preference;)Z
+
+    goto :goto_10
+
+    :cond_16
+    move/from16 v0, v33
+
+    goto :goto_11
+
+    :cond_17
+    move-object v3, v8
+
     move-object v5, v11
 
-    move-object/from16 v26, v12
+    move-object/from16 v25, v12
 
-    move-object/from16 v30, v13
+    move/from16 v27, v13
 
-    :cond_14
+    move-object/from16 v30, v15
+
+    :goto_11
     return-void
 .end method
 
@@ -1671,6 +1854,68 @@
     return-object v0
 .end method
 
+.method private getCarrierActiveState()I
+    .locals 5
+
+    const-string v0, ""
+
+    const-string v1, "subscriber_carrierid"
+
+    const-string v2, "value"
+
+    invoke-direct {p0, v1, v2}, Lcom/android/settings/network/ApnSettings;->queryParamstore(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    const-string v1, "Chameleon"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v1, 0x1
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    const/4 v1, 0x0
+
+    :goto_1
+    nop
+
+    const-string v2, "ApnSettings"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "getCarrierActiveState: "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    return v1
+.end method
+
 .method private static getMobileDataState(Landroid/content/Intent;)Lcom/android/internal/telephony/PhoneConstants$DataState;
     .locals 2
 
@@ -1749,6 +1994,85 @@
     return-object v0
 .end method
 
+.method private getSimLockState()I
+    .locals 6
+
+    const-string v0, "extphone"
+
+    invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lorg/codeaurora/internal/IExtTelephony$Stub;->asInterface(Landroid/os/IBinder;)Lorg/codeaurora/internal/IExtTelephony;
+
+    move-result-object v0
+
+    const/4 v1, -0x1
+
+    :try_start_0
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v2
+
+    const-string v3, "getSimLockStatus"
+
+    const/4 v4, 0x0
+
+    new-array v5, v4, [Ljava/lang/Class;
+
+    invoke-virtual {v2, v3, v5}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+
+    move-result-object v2
+
+    const/4 v3, 0x1
+
+    invoke-virtual {v2, v3}, Ljava/lang/reflect/Method;->setAccessible(Z)V
+
+    new-array v3, v4, [Ljava/lang/Object;
+
+    invoke-virtual {v2, v0, v3}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ljava/lang/Integer;
+
+    invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
+
+    move-result v3
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    move v1, v3
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v2
+
+    invoke-virtual {v2}, Ljava/lang/Exception;->printStackTrace()V
+
+    :goto_0
+    const-string v2, "ApnSettings"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "getSimLockState: "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    return v1
+.end method
+
 .method private getUriForCurrSubId(Landroid/net/Uri;)Landroid/net/Uri;
     .locals 3
 
@@ -1800,6 +2124,36 @@
 
     :cond_1
     return-object p1
+.end method
+
+.method private isAllowEditApn()Z
+    .locals 2
+
+    iget-boolean v0, p0, Lcom/android/settings/network/ApnSettings;->mApnEditable:Z
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_0
+
+    :goto_0
+    goto :goto_1
+
+    :cond_0
+    iget-boolean v0, p0, Lcom/android/settings/network/ApnSettings;->mCarrierActived:Z
+
+    if-eqz v0, :cond_1
+
+    iget-boolean v0, p0, Lcom/android/settings/network/ApnSettings;->mSimLocked:Z
+
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v1, 0x0
+
+    :goto_1
+    return v1
 .end method
 
 .method private isApnType(Ljava/lang/String;Ljava/lang/String;)Z
@@ -1934,6 +2288,69 @@
     return v2
 .end method
 
+.method private isSprintMccMnc(Ljava/lang/String;)Z
+    .locals 2
+
+    const/4 v0, 0x0
+
+    if-eqz p1, :cond_2
+
+    const-string v1, "310120"
+
+    invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    const-string v1, "311870"
+
+    invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    const-string v1, "311490"
+
+    invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    const-string v1, "312530"
+
+    invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    const-string v1, "310000"
+
+    invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    const/4 v0, 0x1
+
+    :goto_1
+    return v0
+
+    :cond_2
+    return v0
+.end method
+
 .method private networkTypeToRilRidioTechnology(I)I
     .locals 1
 
@@ -2060,6 +2477,75 @@
     .end packed-switch
 .end method
 
+.method private queryParamstore(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    .locals 10
+
+    const-string v0, ""
+
+    const-string v1, "content://com.redbend.app.provider"
+
+    invoke-static {v1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Lcom/android/settings/network/ApnSettings;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v2
+
+    const/4 v3, 0x3
+
+    new-array v6, v3, [Ljava/lang/String;
+
+    const/4 v8, 0x0
+
+    aput-object p1, v6, v8
+
+    const/4 v9, 0x1
+
+    aput-object p2, v6, v9
+
+    const-string v3, "0"
+
+    const/4 v4, 0x2
+
+    aput-object v3, v6, v4
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    const/4 v7, 0x0
+
+    move-object v3, v1
+
+    invoke-virtual/range {v2 .. v7}, Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_0
+
+    invoke-interface {v2}, Landroid/database/Cursor;->getCount()I
+
+    move-result v3
+
+    if-ne v3, v9, :cond_0
+
+    invoke-interface {v2}, Landroid/database/Cursor;->moveToFirst()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    invoke-interface {v2, v8}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-interface {v2}, Landroid/database/Cursor;->close()V
+
+    :cond_0
+    return-object v0
+.end method
+
 .method private restoreDefaultApn()Z
     .locals 4
 
@@ -2155,6 +2641,57 @@
     const/4 v3, 0x0
 
     invoke-virtual {v0, v2, v1, v3, v3}, Landroid/content/ContentResolver;->update(Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
+
+    return-void
+.end method
+
+.method private updateApnEditState()V
+    .locals 3
+
+    invoke-direct {p0}, Lcom/android/settings/network/ApnSettings;->getCarrierActiveState()I
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x1
+
+    if-ne v0, v2, :cond_0
+
+    move v0, v2
+
+    goto :goto_0
+
+    :cond_0
+    move v0, v1
+
+    :goto_0
+    iput-boolean v0, p0, Lcom/android/settings/network/ApnSettings;->mCarrierActived:Z
+
+    invoke-direct {p0}, Lcom/android/settings/network/ApnSettings;->getSimLockState()I
+
+    move-result v0
+
+    if-ne v0, v2, :cond_1
+
+    move v1, v2
+
+    nop
+
+    :cond_1
+    iput-boolean v1, p0, Lcom/android/settings/network/ApnSettings;->mSimLocked:Z
+
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->getApnEditable()Z
+
+    move-result v0
+
+    iput-boolean v0, p0, Lcom/android/settings/network/ApnSettings;->mApnEditable:Z
+
+    invoke-direct {p0}, Lcom/android/settings/network/ApnSettings;->isAllowEditApn()Z
+
+    move-result v0
+
+    iput-boolean v0, p0, Lcom/android/settings/network/ApnSettings;->mAllowAddingApns:Z
 
     return-void
 .end method
@@ -2396,6 +2933,15 @@
 
     iput-boolean v5, p0, Lcom/android/settings/network/ApnSettings;->mAllowAddingApns:Z
 
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isSupportUss()Z
+
+    move-result v5
+
+    if-eqz v5, :cond_0
+
+    invoke-direct {p0}, Lcom/android/settings/network/ApnSettings;->updateApnEditState()V
+
+    :cond_0
     const-string v5, "apn_hide_rule_strings_array"
 
     invoke-virtual {v4, v5}, Landroid/os/PersistableBundle;->getStringArray(Ljava/lang/String;)[Ljava/lang/String;
@@ -2414,7 +2960,7 @@
 
     iget-object v5, p0, Lcom/android/settings/network/ApnSettings;->mSubscriptionInfo:Landroid/telephony/SubscriptionInfo;
 
-    if-eqz v5, :cond_0
+    if-eqz v5, :cond_1
 
     iget-object v5, p0, Lcom/android/settings/network/ApnSettings;->mSubscriptionInfo:Landroid/telephony/SubscriptionInfo;
 
@@ -2446,10 +2992,10 @@
 
     iput-object v6, p0, Lcom/android/settings/network/ApnSettings;->mHideApnsGroupByIccid:Landroid/os/PersistableBundle;
 
-    :cond_0
+    :cond_1
     iget-boolean v5, p0, Lcom/android/settings/network/ApnSettings;->mAllowAddingApns:Z
 
-    if-eqz v5, :cond_1
+    if-eqz v5, :cond_2
 
     const-string v5, "read_only_apn_types_string_array"
 
@@ -2461,7 +3007,7 @@
 
     move-result v6
 
-    if-eqz v6, :cond_1
+    if-eqz v6, :cond_2
 
     const-string v6, "ApnSettings"
 
@@ -2471,7 +3017,7 @@
 
     iput-boolean v1, p0, Lcom/android/settings/network/ApnSettings;->mAllowAddingApns:Z
 
-    :cond_1
+    :cond_2
     invoke-static {v0}, Landroid/os/UserManager;->get(Landroid/content/Context;)Landroid/os/UserManager;
 
     move-result-object v1
@@ -2500,7 +3046,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f120fc3
+    const v2, 0x7f120fc6
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -2543,7 +3089,7 @@
 
     move-result-object v0
 
-    const v2, 0x7f120949
+    const v2, 0x7f12094b
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -2570,7 +3116,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f12094f
+    const v3, 0x7f120951
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -2819,6 +3365,37 @@
     return v0
 .end method
 
+.method public onPrepareOptionsMenu(Landroid/view/Menu;)V
+    .locals 2
+
+    invoke-super {p0, p1}, Lcom/android/settings/RestrictedSettingsFragment;->onPrepareOptionsMenu(Landroid/view/Menu;)V
+
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isSupportUss()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-direct {p0}, Lcom/android/settings/network/ApnSettings;->isAllowEditApn()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x2
+
+    invoke-interface {p1, v0}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    invoke-interface {v0, v1}, Landroid/view/MenuItem;->setEnabled(Z)Landroid/view/MenuItem;
+
+    :cond_0
+    return-void
+.end method
+
 .method public onResume()V
     .locals 3
 
@@ -2867,5 +3444,14 @@
     invoke-direct {p0}, Lcom/android/settings/network/ApnSettings;->fillList()V
 
     :cond_2
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isSupportUss()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    invoke-direct {p0}, Lcom/android/settings/network/ApnSettings;->updateApnEditState()V
+
+    :cond_3
     return-void
 .end method

@@ -150,7 +150,7 @@
 
     const-string v2, ""
 
-    const v1, 0x7f120a89
+    const v1, 0x7f120a8b
 
     invoke-virtual {p0, v1}, Lcom/oneplus/settings/carcharger/OPCarChargerOpenApp;->getString(I)Ljava/lang/String;
 
@@ -174,7 +174,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0300a3
+    const v2, 0x7f0300a4
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
@@ -337,7 +337,7 @@
 .method private initView()V
     .locals 2
 
-    const v0, 0x7f0a03a6
+    const v0, 0x7f0a03aa
 
     invoke-virtual {p0, v0}, Lcom/oneplus/settings/carcharger/OPCarChargerOpenApp;->findViewById(I)Landroid/view/View;
 
@@ -371,7 +371,7 @@
 
     invoke-virtual {v0, v1}, Lcom/oneplus/settings/apploader/OPApplicationLoader;->setAppType(I)V
 
-    const v0, 0x7f0a0318
+    const v0, 0x7f0a031a
 
     invoke-virtual {p0, v0}, Lcom/oneplus/settings/carcharger/OPCarChargerOpenApp;->findViewById(I)Landroid/view/View;
 
@@ -451,7 +451,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f120a8c
+    const v1, 0x7f120a8e
 
     invoke-virtual {v0, v1}, Landroid/app/ActionBar;->setTitle(I)V
 

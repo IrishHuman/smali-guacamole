@@ -295,7 +295,7 @@
     goto :goto_3
 
     :cond_5
-    const v6, 0x7f120f1f
+    const v6, 0x7f120f22
 
     invoke-virtual {v0, v6}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -307,7 +307,7 @@
     :pswitch_1
     if-eqz v5, :cond_6
 
-    const v6, 0x7f12125a
+    const v6, 0x7f121262
 
     invoke-virtual {v0, v6}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -316,7 +316,7 @@
     goto :goto_4
 
     :cond_6
-    const v6, 0x7f120f1d
+    const v6, 0x7f120f20
 
     invoke-virtual {v0, v6}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -326,7 +326,7 @@
     return-object v6
 
     :pswitch_2
-    const v6, 0x7f120f1c
+    const v6, 0x7f120f1f
 
     invoke-virtual {v0, v6}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 

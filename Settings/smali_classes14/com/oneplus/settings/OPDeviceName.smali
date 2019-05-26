@@ -160,7 +160,7 @@
 
     move-result v0
 
-    const v1, 0x7f0a0384
+    const v1, 0x7f0a0388
 
     if-ne v0, v1, :cond_1
 
@@ -230,7 +230,7 @@
 .method public onCreateOptionsMenu(Landroid/view/Menu;Landroid/view/MenuInflater;)V
     .locals 3
 
-    const v0, 0x7f120af6
+    const v0, 0x7f120af8
 
     const/4 v1, 0x1
 
@@ -448,7 +448,7 @@
 
     sget-object v0, Lcom/oneplus/settings/OPDeviceName;->mView:Landroid/view/View;
 
-    const v3, 0x7f0a0384
+    const v3, 0x7f0a0388
 
     invoke-virtual {v0, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -524,7 +524,7 @@
 
     move-result v2
 
-    const v3, 0x7f121552
+    const v3, 0x7f121560
 
     const/4 v4, 0x0
 

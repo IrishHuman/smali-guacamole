@@ -175,7 +175,7 @@
 
     iget-object v1, p0, Lcom/android/settings/security/screenlock/PowerButtonInstantLockPreferenceController;->mContext:Landroid/content/Context;
 
-    const v2, 0x7f1208de
+    const v2, 0x7f1208df
 
     const/4 v3, 0x1
 
@@ -194,7 +194,7 @@
     goto :goto_0
 
     :cond_0
-    const v1, 0x7f121249
+    const v1, 0x7f121250
 
     invoke-virtual {p1, v1}, Landroid/support/v7/preference/Preference;->setSummary(I)V
 

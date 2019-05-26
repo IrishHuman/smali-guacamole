@@ -110,7 +110,7 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    const v1, 0x7f0a047b
+    const v1, 0x7f0a047f
 
     invoke-virtual {p2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -231,7 +231,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f1213b8
+    const v1, 0x7f1213c5
 
     const/4 v2, 0x1
 
@@ -284,7 +284,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f1213ba
+    const v1, 0x7f1213c7
 
     invoke-virtual {v0, v1}, Landroid/app/Activity;->setTitle(I)V
 

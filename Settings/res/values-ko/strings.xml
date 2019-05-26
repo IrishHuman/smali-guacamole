@@ -2549,8 +2549,8 @@
     <string name="one_userkey">사용자 키 1개</string>
     <string name="oneplus_adaptive_model">적응형 모델</string>
     <string name="oneplus_add">추가</string>
-    <string name="oneplus_add_bluetooth_car_kit">Bluetooth 차량 키트 추가</string>
-    <string name="oneplus_add_bluetooth_car_kit_summary">Bluetooth 차량 키트가 자동으로 이전 장치와 연결되며 수동으로 새 연결을 추가할 수도 있습니다</string>
+    <string name="oneplus_add_bluetooth_car_kit">차량 Bluetooth 추가</string>
+    <string name="oneplus_add_bluetooth_car_kit_summary">차량 Bluetooth가 자동으로 사용자의 이전 장치와 연결됩니다. 수동으로 새 장치를 추가할 수도 있습니다.</string>
     <string name="oneplus_add_fingerprint_list">지문 추가하기</string>
     <string name="oneplus_adjust_effect">효과 강도</string>
     <string name="oneplus_advanced_display_settings">고급 디스플레이 설정</string>
@@ -2786,7 +2786,7 @@
     <string name="oneplus_fnatic_mode_add_to_wallpapers">배경 화면에 추가</string>
     <string name="oneplus_fnatic_mode_background_introduction_summary">거의 모든 성능을 게임 플레이에 집중시킵니다. 이로 인해 일부 앱에서 결함이 발생할 수 있습니다.</string>
     <string name="oneplus_fnatic_mode_background_introduction_title">프로세스 조절기 향상</string>
-    <string name="oneplus_fnatic_mode_disturb_introduction_summary">모든 알림 및 전화를 차단합니다(배터리 부족 알림, 알람 및 타이머 제외). 통화 내역에서 부재 중 전화만 볼 수 있습니다.</string>
+    <string name="oneplus_fnatic_mode_disturb_introduction_summary">모든 알림 및 전화를 차단합니다(배터리 부족 알림, 알람 및 타이머 제외).</string>
     <string name="oneplus_fnatic_mode_disturb_introduction_title">고급 DND</string>
     <string name="oneplus_fnatic_mode_enable_introduction_title">Fnatic 모드를 사용하려면 먼저 게임 모드를 사용 설정해야 합니다</string>
     <string name="oneplus_fnatic_mode_network_introduction_dual4g_summary">기본 SIM 카드 신호 강도는 게임 플레이 시 대기 시간을 낮출 수 있도록 간섭을 최소화하기 위해 우선적으로 처리됩니다. 그 결과, 보조 SIM 카드가 사용 중지되며 전화 또는 메시지가 수신되지 않습니다.</string>
@@ -2878,6 +2878,7 @@
     <string name="oneplus_haptic_feedback_tips">특정 게임 장면에 대한 햅틱 피드백 제공, 지원되는 게임만 해당</string>
     <string name="oneplus_haptic_feedback_title">햅틱 피드백 향상</string>
     <string name="oneplus_hardware_keys_action_split_screen">화면 분할 열기/닫기</string>
+    <string name="oneplus_health_safety_information">보건 및 안전 정보</string>
     <string name="oneplus_hearing_aid">보청기 호환성</string>
     <string name="oneplus_hide_navigation_bar">탐색 표시줄 숨기기</string>
     <string name="oneplus_hide_navkeys">탐색 표시줄 숨기기</string>
@@ -3092,8 +3093,8 @@
     <string name="oneplus_receive_notifications">OnePlus 알림</string>
     <string name="oneplus_receive_notifications_agree">OnePlus에서 뉴스 수신</string>
     <string name="oneplus_receive_notifications_summary">OnePlus 공식 뉴스, 제품 정보, 설문 정보 및 구매 추천/쿠폰 정보 등을 받아보는 데 동의</string>
-    <string name="oneplus_recognized_bluetooth_car_kits">인식한 Bluetooth 차량 키트</string>
-    <string name="oneplus_recognized_bluetooth_car_kits_no_devices">Bluetooth 차량 키트가 없습니다. 아래에 새 연결을 수동으로 추가할 수 있습니다.</string>
+    <string name="oneplus_recognized_bluetooth_car_kits">인식된 차량 Bluetooth</string>
+    <string name="oneplus_recognized_bluetooth_car_kits_no_devices">차량 Bluetooth가 없습니다. 아래에서 새 장치를 수동으로 추가할 수 있습니다</string>
     <string name="oneplus_recommended_opening">권장</string>
     <string name="oneplus_reenroll_fingerprint_tips">지문의 정확성을 위해 휴대폰 보호 필름을 교체한 후 지문을 다시 입력하세요.</string>
     <string name="oneplus_regulatory_information">검증</string>
@@ -3116,6 +3117,7 @@
     <string name="oneplus_screen_color_mode_basic">sRGB</string>
     <string name="oneplus_screen_color_mode_default">기본</string>
     <string name="oneplus_screen_color_mode_defined">사용자 지정 색상</string>
+    <string name="oneplus_screen_color_mode_ntsc">AMOLED 광색역</string>
     <string name="oneplus_screen_color_mode_reading_mode_on_summary">읽기 모드가 켜져 있기 때문에 사용할 수 없음</string>
     <string name="oneplus_screen_color_mode_soft">소프트</string>
     <string name="oneplus_screen_color_mode_title">화면 조정</string>
@@ -3704,6 +3706,10 @@ UT 인터페이스: %5$s"</string>
     <string name="restore_default_apn_completed">기본 APN 설정을 초기화했습니다.</string>
     <string name="restr_pin_enter_admin_pin">관리자 PIN 입력</string>
     <string name="restrict_background_blacklisted">백그라운드 데이터 사용 중지됨</string>
+    <string name="restrict_background_uss_always">항상</string>
+    <string name="restrict_background_uss_never">안 함</string>
+    <string name="restrict_background_uss_roaming">로밍 중일때만</string>
+    <string name="restrict_background_uss_title">백그라운드 데이터 제한</string>
     <string name="restricted_app_detail_footer">이 앱은 백그라운드에서 배터리를 사용 중입니다. 제한된 앱이 제대로 작동하지 않을 수 있으며 알림이 지연될 수 있습니다.</string>
     <string name="restricted_app_title">제한된 앱</string>
     <string name="restricted_false_label">앱이 백그라운드에서 배터리를 사용할 수 있습니다.</string>
@@ -4405,6 +4411,7 @@ PIN이 잘못된 것 같습니다."</string>
     <string name="summary_divider_text">", "</string>
     <string name="summary_range_symbol_combination">%1$s~%2$s</string>
     <string name="summary_range_verbal_combination">%1$s부터 %2$s까지</string>
+    <string name="summary_voice_network">VoLTE, Wi-Fi 전화</string>
     <string name="support_country_format">%1$s - %2$s</string>
     <string name="support_summary">도움말, 전화 및 채팅, 시작하기</string>
     <string name="suw_back_button_label">뒤로</string>
@@ -4457,6 +4464,11 @@ Google 동기화는 사용자가 어디에서든지 연락처, 일정 등에 액
     <string name="testing">테스트 중</string>
     <string name="testing_phone_info">휴대전화 정보</string>
     <string name="testing_usage_stats">사용 통계</string>
+    <string name="tether_error_item_default">테더링</string>
+    <string name="tether_error_message">%1$s에 가입하지 않았습니다.</string>
+    <string name="tether_error_title">%1$s 오류</string>
+    <string name="tether_no_sim_message">모바일 핫스팟 및 기타 테더링 옵션을 사용하려면 SIM 카드를 삽입하세요</string>
+    <string name="tether_no_sim_title">SIM 카드 없음</string>
     <string name="tether_settings_disabled_on_data_saver">데이터 절약 모드가 켜져 있으면 테더링하거나 휴대용 핫스팟을 사용할 수 없습니다.</string>
     <string name="tether_settings_summary_hotspot_off_tether_on">테더링</string>
     <string name="tether_settings_summary_hotspot_on_tether_off">핫스팟 사용</string>
@@ -4862,6 +4874,7 @@ Google 동기화는 사용자가 어디에서든지 연락처, 일정 등에 액
     <string name="voice_input_settings_title">음성 입력</string>
     <string name="voice_interaction_security_warning">이 음성 입력 서비스는 항상 음성을 모니터링하고 사용자를 대신하여 음성 지원 애플리케이션을 제어할 수 있습니다. 이 서비스는 %s 애플리케이션에서 제공합니다. 서비스를 사용하도록 설정하시겠습니까?</string>
     <string name="voice_interactor_preference_summary">전체 핫워드 및 상호작용</string>
+    <string name="voice_network_title">음성 네트워크</string>
     <string name="voice_recognizer_preference_summary">간단한 STT(음성 텍스트 변환)</string>
     <string name="voice_search_settings_title">음성 검색</string>
     <string name="voice_service_preference_section_title">음성 입력 서비스</string>

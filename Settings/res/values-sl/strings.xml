@@ -2550,7 +2550,7 @@ S tem lahko aplikacija tudi vklopi ali izklopi način »ne moti« in spremeni po
     <string name="oneplus_adaptive_model">Prilagodljivi način</string>
     <string name="oneplus_add">Dodaj</string>
     <string name="oneplus_add_bluetooth_car_kit">Dodaj avtomobilski paket Bluetooth</string>
-    <string name="oneplus_add_bluetooth_car_kit_summary">Avtomobilski komplet Bluetooth se samodejno poveže s prejšnjimi napravami, nove povezave lahko dodate tudi ročno</string>
+    <string name="oneplus_add_bluetooth_car_kit_summary">Avtomobilski paket Bluetooth se samodejno poveže s prejšnjimi napravami, ročno lahko dodate tudi nove naprave</string>
     <string name="oneplus_add_fingerprint_list">Dodaj prstni odtis</string>
     <string name="oneplus_adjust_effect">Jakost učinka</string>
     <string name="oneplus_advanced_display_settings">Napredne nastavitve zaslona</string>
@@ -2786,7 +2786,7 @@ Varnostno opozorilo: Odklepanje z obrazom je manj varno kot odklepanje s prstnim
     <string name="oneplus_fnatic_mode_add_to_wallpapers">Dodaj med slike za ozadje</string>
     <string name="oneplus_fnatic_mode_background_introduction_summary">Osredotočenje skoraj vse zmogljivosti v igranje. To lahko v nekaterih aplikacijah povzroči napake.</string>
     <string name="oneplus_fnatic_mode_background_introduction_title">Izboljšanje regulatorja procesov</string>
-    <string name="oneplus_fnatic_mode_disturb_introduction_summary">Blokirajte vsa obvestila in klice (razen obvestil o prazni bateriji, budilke in časovnika). Zgrešene klice si lahko ogledate samo v zgodovini klicev.</string>
+    <string name="oneplus_fnatic_mode_disturb_introduction_summary">Blokirajte vsa obvestila in klice (razen obvestil o prazni bateriji, budilke in časovnika).</string>
     <string name="oneplus_fnatic_mode_disturb_introduction_title">Napredni DND</string>
     <string name="oneplus_fnatic_mode_enable_introduction_title">Najprej mora biti omogočen igralni način, da lahko uporabljate način Fnatic</string>
     <string name="oneplus_fnatic_mode_network_introduction_dual4g_summary">Moč signala primarne kartice SIM ima prednost, da se zmanjšajo motnje igranja z nizko zakasnitvijo. Zato bo sekundardna kartica SIM onemogočena, klicev in sporočil pa ne boste prejemali.</string>
@@ -2878,6 +2878,7 @@ Poteze lahko izklopite tako, da v nastavitvah omogočite vrstico za krmarjenje."
     <string name="oneplus_haptic_feedback_tips">Zagotavljanje haptične povratne informacije pri določenih prizorih v igrah, velja le pri podprtih igrah</string>
     <string name="oneplus_haptic_feedback_title">Izboljšanje haptične povratne informacije</string>
     <string name="oneplus_hardware_keys_action_split_screen">Odpri/zapri deljeni zaslon</string>
+    <string name="oneplus_health_safety_information">Zdravje &amp; varnostne informacije</string>
     <string name="oneplus_hearing_aid">Združljivost s slušnimi aparati</string>
     <string name="oneplus_hide_navigation_bar">Skrij vrstico za krmarjenje</string>
     <string name="oneplus_hide_navkeys">Skrij vrstico za krmarjenje</string>
@@ -3092,8 +3093,8 @@ Opomba: Vaš prstni odtis je morda manj varen od zapletenega vzorca ali kode PIN
     <string name="oneplus_receive_notifications">Obvestila OnePlus</string>
     <string name="oneplus_receive_notifications_agree">Prejemanje novic OnePlus</string>
     <string name="oneplus_receive_notifications_summary">Potrdite prejemanje uradnih novic OnePlus, informacij o izdelkih, vprašalnikov in priporočil za nakupe/kupone ...</string>
-    <string name="oneplus_recognized_bluetooth_car_kits">Prepoznani avtomobilski paketi Bluetooth</string>
-    <string name="oneplus_recognized_bluetooth_car_kits_no_devices">Ni avtomobilskega paketa Bluetooth, spodaj lahko ročno dodate nove povezave</string>
+    <string name="oneplus_recognized_bluetooth_car_kits">Prepoznani avtomobilski paket Bluetooth</string>
+    <string name="oneplus_recognized_bluetooth_car_kits_no_devices">Ni avtomobilskega paketa Bluetooth, spodaj lahko ročno dodate nove naprave</string>
     <string name="oneplus_recommended_opening">Priporočeno</string>
     <string name="oneplus_reenroll_fingerprint_tips">Ko zamenjate zaščitno folijo na mobilnem telefonu, znova vnesite svoj prstni odtis, da zagotovite pravilnost prstnega odtisa</string>
     <string name="oneplus_regulatory_information">Preverjanje</string>
@@ -3116,6 +3117,7 @@ Opomba: Vaš prstni odtis je morda manj varen od zapletenega vzorca ali kode PIN
     <string name="oneplus_screen_color_mode_basic">sRGB</string>
     <string name="oneplus_screen_color_mode_default">Privzeto</string>
     <string name="oneplus_screen_color_mode_defined">Barva po meri</string>
+    <string name="oneplus_screen_color_mode_ntsc">Šrioka barvna lestvica AMOLED</string>
     <string name="oneplus_screen_color_mode_reading_mode_on_summary">Ni na voljo, ker je vključen bralni način</string>
     <string name="oneplus_screen_color_mode_soft">Mehko</string>
     <string name="oneplus_screen_color_mode_title">Umerjanje zaslona</string>
@@ -3705,6 +3707,10 @@ Vmesnik UT: %5$s"</string>
     <string name="restore_default_apn_completed">Ponastavitev privzetih nastavitev APN-jev končana</string>
     <string name="restr_pin_enter_admin_pin">Vnos skrbniške kode PIN</string>
     <string name="restrict_background_blacklisted">Prenos podatkov v ozadju je izklopljen</string>
+    <string name="restrict_background_uss_always">Vedno</string>
+    <string name="restrict_background_uss_never">Nikoli</string>
+    <string name="restrict_background_uss_roaming">Samo med gostovanjem</string>
+    <string name="restrict_background_uss_title">Omejitev podatkov v ozadju</string>
     <string name="restricted_app_detail_footer">Te aplikacije so porabljale energijo akumulatorja v ozadju. Omejene aplikacije morda ne bodo delovale pravilno, obvestila pa bodo morda zakasnjena.</string>
     <string name="restricted_app_title">Omejene aplikacije</string>
     <string name="restricted_false_label">Aplik. brez omej. dejav. v ozadju</string>
@@ -4406,6 +4412,7 @@ Poskusite uporabiti hitrejši nosilec ^3 ali pa nosilec ^4 uporabite kot prenosn
     <string name="summary_divider_text">", "</string>
     <string name="summary_range_symbol_combination">%1$s–%2$s</string>
     <string name="summary_range_verbal_combination">Od %1$s do %2$s</string>
+    <string name="summary_voice_network">Klicanje VoLTE, Wi-Fi</string>
     <string name="support_country_format">%1$s – %2$s</string>
     <string name="support_summary">Članki s pomočjo, telefon in klepet, prvi koraki</string>
     <string name="suw_back_button_label">Nazaj</string>
@@ -4458,6 +4465,11 @@ Googlov pristop k sinhroniziranju podatkov, s katerim lahko dostopate do stikov,
     <string name="testing">Preizkušanje</string>
     <string name="testing_phone_info">Informacije o telefonu</string>
     <string name="testing_usage_stats">Statistika uporabe</string>
+    <string name="tether_error_item_default">Skupna raba interneta</string>
+    <string name="tether_error_message">Niste naročeni na %1$s.</string>
+    <string name="tether_error_title">Napaka %1$s</string>
+    <string name="tether_no_sim_message">Vstavite kartico SIM za uporabo mobilne dostopne točke in drugih možnosti skupne rabe interneta</string>
+    <string name="tether_no_sim_title">Ni kartice SIM</string>
     <string name="tether_settings_disabled_on_data_saver">Dokler je vklopljeno varčevanje s podatki, ni mogoče vzpostaviti povezave z internetom prek mobilnega telefona ali uporabljati prenosnih dostopnih točk.</string>
     <string name="tether_settings_summary_hotspot_off_tether_on">Internetna povezava prek telefona</string>
     <string name="tether_settings_summary_hotspot_on_tether_off">Dostopna točka je vklopljena</string>
@@ -4863,6 +4875,7 @@ Vsak uporabnik lahko posodobi aplikacije za vse druge uporabnike."</string>
     <string name="voice_input_settings_title">Glasovni vnos</string>
     <string name="voice_interaction_security_warning">Storitev glasovnega vnosa bo lahko izvajala stalno vklopljeno nadziranje glasu in v vašem imenu upravljala aplikacije, ki omogočajo glasovno upravljanje. Storitev izvira iz aplikacije %s. Želite omogočiti njeno uporabo?</string>
     <string name="voice_interactor_preference_summary">Polna uporaba sprožilnih besed in govora</string>
+    <string name="voice_network_title">Glasovna omrežja</string>
     <string name="voice_recognizer_preference_summary">Pretvorba preprostega govora v besedilo</string>
     <string name="voice_search_settings_title">Glasovno iskanje</string>
     <string name="voice_service_preference_section_title">Storitve glasovnega vnosa</string>

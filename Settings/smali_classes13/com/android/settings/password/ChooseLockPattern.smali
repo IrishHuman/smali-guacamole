@@ -117,12 +117,12 @@
 
     if-eqz v0, :cond_0
 
-    const v1, 0x7f120abf
+    const v1, 0x7f120ac1
 
     goto :goto_0
 
     :cond_0
-    const v1, 0x7f120898
+    const v1, 0x7f120899
 
     :goto_0
     invoke-virtual {p0, v1}, Lcom/android/settings/password/ChooseLockPattern;->setTitle(I)V

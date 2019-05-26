@@ -125,7 +125,7 @@
 
     move-result-object v9
 
-    const v10, 0x7f12146c
+    const v10, 0x7f12147a
 
     invoke-virtual {v9, v10}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -149,7 +149,7 @@
 
     iput-object v9, v8, Lcom/android/settings/search/SearchIndexableRaw;->intentTargetClass:Ljava/lang/String;
 
-    const v9, 0x7f1207de
+    const v9, 0x7f1207df
 
     invoke-virtual {p1, v9}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

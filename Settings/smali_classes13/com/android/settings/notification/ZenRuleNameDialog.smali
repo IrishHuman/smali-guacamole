@@ -51,20 +51,20 @@
 
     move-result v1
 
-    const v2, 0x7f1216a1
+    const v2, 0x7f1216af
 
     if-eqz p2, :cond_1
 
     if-eqz v0, :cond_0
 
-    const v2, 0x7f121639
+    const v2, 0x7f121647
 
     goto :goto_0
 
     :cond_0
     if-eqz v1, :cond_1
 
-    const v2, 0x7f12163b
+    const v2, 0x7f121649
 
     :cond_1
     :goto_0
@@ -202,7 +202,7 @@
 
     move-result-object v3
 
-    const v8, 0x7f0a0625
+    const v8, 0x7f0a0629
 
     invoke-virtual {v3, v8}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -245,12 +245,12 @@
 
     if-eqz v5, :cond_2
 
-    const v9, 0x7f121638
+    const v9, 0x7f121646
 
     goto :goto_1
 
     :cond_2
-    const v9, 0x7f120a3f
+    const v9, 0x7f120a41
 
     :goto_1
     new-instance v11, Lcom/android/settings/notification/ZenRuleNameDialog$1;

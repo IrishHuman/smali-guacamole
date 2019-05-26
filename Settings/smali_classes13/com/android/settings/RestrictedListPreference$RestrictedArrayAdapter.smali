@@ -36,7 +36,7 @@
 
     const v0, 0x7f0d0229
 
-    const v1, 0x7f0a0588
+    const v1, 0x7f0a058c
 
     invoke-direct {p0, p2, v0, v1, p3}, Landroid/widget/ArrayAdapter;-><init>(Landroid/content/Context;II[Ljava/lang/Object;)V
 
@@ -68,7 +68,7 @@
 
     check-cast v1, Ljava/lang/CharSequence;
 
-    const v2, 0x7f0a0588
+    const v2, 0x7f0a058c
 
     invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -76,7 +76,7 @@
 
     check-cast v2, Landroid/widget/CheckedTextView;
 
-    const v3, 0x7f0a049a
+    const v3, 0x7f0a049e
 
     invoke-virtual {v0, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

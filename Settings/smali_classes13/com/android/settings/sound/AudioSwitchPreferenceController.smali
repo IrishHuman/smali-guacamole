@@ -822,7 +822,7 @@
 
     iget-object v3, p0, Lcom/android/settings/sound/AudioSwitchPreferenceController;->mContext:Landroid/content/Context;
 
-    const v4, 0x7f12091c
+    const v4, 0x7f12091d
 
     invoke-virtual {v3, v4}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
@@ -1012,7 +1012,7 @@
 
     iget-object v1, p0, Lcom/android/settings/sound/AudioSwitchPreferenceController;->mContext:Landroid/content/Context;
 
-    const v2, 0x7f12091c
+    const v2, 0x7f12091d
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 

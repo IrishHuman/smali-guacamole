@@ -352,12 +352,12 @@
 
     if-eqz v1, :cond_0
 
-    const v1, 0x7f120abf
+    const v1, 0x7f120ac1
 
     goto :goto_0
 
     :cond_0
-    const v1, 0x7f1210ce
+    const v1, 0x7f1210d5
 
     :goto_0
     invoke-virtual {p0}, Lcom/android/settings/password/SetupChooseLockGeneric$SetupChooseLockGenericFragment;->getActivity()Landroid/app/Activity;

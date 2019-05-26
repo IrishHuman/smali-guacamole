@@ -26,5 +26,9 @@
         <TextView android:id="@id/esim_id_value" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/device_info_not_available" style="@style/device_info_dialog_value" />
         <TextView android:id="@id/ims_reg_state_label" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/ims_reg_title" style="@style/device_info_dialog_label" />
         <TextView android:id="@id/ims_reg_state_value" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/device_info_not_available" style="@style/device_info_dialog_value" />
+        <TextView android:id="@id/meid_label" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/meid_title" style="@style/device_info_dialog_label" />
+        <TextView android:id="@id/meid_value" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/device_info_not_available" style="@style/device_info_dialog_value" />
+        <TextView android:id="@id/imsi_label" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/imsi_title" style="@style/device_info_dialog_label" />
+        <TextView android:id="@id/imsi_value" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/device_info_not_available" style="@style/device_info_dialog_value" />
     </LinearLayout>
 </ScrollView>

@@ -2549,8 +2549,8 @@ Bu izin, uygulamaya, Rahatsız Etmeyin ayarını açma veya kapatma ve ilgili ay
     <string name="one_userkey">bir kullanıcı anahtarı</string>
     <string name="oneplus_adaptive_model">Uyarlama modu</string>
     <string name="oneplus_add">Ekle</string>
-    <string name="oneplus_add_bluetooth_car_kit">Bluetooth Araç Kiti Ekle</string>
-    <string name="oneplus_add_bluetooth_car_kit_summary">Bluetooth Araç Kiti önceki cihazlarınız ile otomatik olarak bağlantı kurar, ayrıca manuel olarak da yeni bağlantılar ekleyebilirsiniz</string>
+    <string name="oneplus_add_bluetooth_car_kit">"Araç Bluetooth'u ekle"</string>
+    <string name="oneplus_add_bluetooth_car_kit_summary">"Araç Bluetooth'u önceki cihazlarınıza otomatik olarak bağlanır, ayrıca manuel olarak yeni cihazlar da ekleyebilirsiniz"</string>
     <string name="oneplus_add_fingerprint_list">Parmak izi ekle</string>
     <string name="oneplus_adjust_effect">Etki Yoğunluğu</string>
     <string name="oneplus_advanced_display_settings">Gelişmiş ekran ayarları</string>
@@ -2786,7 +2786,7 @@ Risk ipucu: Yüz Kilidi, parmak izi ve parola kadar güvenli değildir"</string>
     <string name="oneplus_fnatic_mode_add_to_wallpapers">Duvar kağıtlarına ekle</string>
     <string name="oneplus_fnatic_mode_background_introduction_summary">Performansın neredeyse tamamını oyunlara odaklar. Bu durum bazı uygulamalarda hatalara neden olabilir.</string>
     <string name="oneplus_fnatic_mode_background_introduction_title">İyileştirilmiş işlem düzenleyiciyi</string>
-    <string name="oneplus_fnatic_mode_disturb_introduction_summary">Tüm bildirimleri ve aramaları engelleyin (düşük pil bildirimi, alarm ve zamanlayıcı hariç). Arama geçmişinde sadece cevapsız aramaları görüntüleyebilirsiniz.</string>
+    <string name="oneplus_fnatic_mode_disturb_introduction_summary">Tüm bildirimleri ve aramaları engelleyin (düşük pil bildirimi, alarm ve zamanlayıcı hariç).</string>
     <string name="oneplus_fnatic_mode_disturb_introduction_title">Gelişmiş DND</string>
     <string name="oneplus_fnatic_mode_enable_introduction_title">Fnatic modunun kullanılabilmesi için önce oyun modunun etkinleştirilmesi gerekir</string>
     <string name="oneplus_fnatic_mode_network_introduction_dual4g_summary">Oyunların düşük gecikmeyle oynanması amacıyla enterferansı minimuma indirmek için birinci SIM kartın sinyal gücüne öncelik verilir. Bunun sonucunda ikinci SIM kart devre dışı bırakılır ve arama veya mesaj alınamaz.</string>
@@ -2877,6 +2877,7 @@ Ekrana gitmek için, parmağınızı ekranın alt orta köşesinden yukarıya do
     <string name="oneplus_haptic_feedback_tips">Belirli oyun kareleri için dokunsal geri bildirim sağlayın, yalnızca desteklenen oyunlara uygulanabilir</string>
     <string name="oneplus_haptic_feedback_title">Dokunsal geri bildirimi iyileştirme</string>
     <string name="oneplus_hardware_keys_action_split_screen">Ekran bölme Açık/Kapalı</string>
+    <string name="oneplus_health_safety_information">Sağlık ve Güvenlik Bilgileri</string>
     <string name="oneplus_hearing_aid">İşitme Cihazı Uyumu</string>
     <string name="oneplus_hide_navigation_bar">Gezinme çubuğunu gizle</string>
     <string name="oneplus_hide_navkeys">Gezinme çubuğunu gizle</string>
@@ -3091,8 +3092,8 @@ Not: Parmak iziniz güçlü bir desen veya PIN'den daha az güvenli olabilir"</s
     <string name="oneplus_receive_notifications">OnePlus Bildirimleri</string>
     <string name="oneplus_receive_notifications_agree">"OnePlus'dan yeni bildirimler alın"</string>
     <string name="oneplus_receive_notifications_summary">"OnePlus'la ilgili haberleri, ürün bilgilerini, interaktif anketleri ve satın alma önerilerini/indirim kuponu bilgilerini almayı kabul edin"</string>
-    <string name="oneplus_recognized_bluetooth_car_kits">Tanınan Bluetooth araç kitleri</string>
-    <string name="oneplus_recognized_bluetooth_car_kits_no_devices">Bluetooth Araç Kiti yok, yeni bağlantıları aşağıda manuel olarak ekleyebilirsiniz</string>
+    <string name="oneplus_recognized_bluetooth_car_kits">"Tanınan Araç Bluetooth'u"</string>
+    <string name="oneplus_recognized_bluetooth_car_kits_no_devices">"Araç Bluetooth'u yok, aşağıda manuel olarak yeni cihazlar ekleyebilirsiniz"</string>
     <string name="oneplus_recommended_opening">Önerilen</string>
     <string name="oneplus_reenroll_fingerprint_tips">Parmak izinizin doğruluğundan emin olmak için cep telefonunuzun koruyucu filmini değiştirdikten sonra parmak izinizi tekrar girin</string>
     <string name="oneplus_regulatory_information">Doğrulama</string>
@@ -3115,6 +3116,7 @@ Not: Parmak iziniz güçlü bir desen veya PIN'den daha az güvenli olabilir"</s
     <string name="oneplus_screen_color_mode_basic">sRGB</string>
     <string name="oneplus_screen_color_mode_default">Varsayılan</string>
     <string name="oneplus_screen_color_mode_defined">Özel renk</string>
+    <string name="oneplus_screen_color_mode_ntsc">AMOLED Wide Gamut</string>
     <string name="oneplus_screen_color_mode_reading_mode_on_summary">Okuma modu etkin olduğundan kullanılamaz</string>
     <string name="oneplus_screen_color_mode_soft">Yumuşak</string>
     <string name="oneplus_screen_color_mode_title">Ekran ayarlama</string>
@@ -3704,6 +3706,10 @@ UT Arayüzü: %5$s"</string>
     <string name="restore_default_apn_completed">Varsayılan APN ayarlarına sıfırlama tamamlandı.</string>
     <string name="restr_pin_enter_admin_pin">"Yönetici PIN'ini girin"</string>
     <string name="restrict_background_blacklisted">Arka plan verisi kapalı</string>
+    <string name="restrict_background_uss_always">Her zaman</string>
+    <string name="restrict_background_uss_never">Hiçbir zaman</string>
+    <string name="restrict_background_uss_roaming">Yalnızca dolaşım halindeyken</string>
+    <string name="restrict_background_uss_title">Arka plan verilerini kısıtla</string>
     <string name="restricted_app_detail_footer">Bu uygulamalar arka planda pil kullanıyor. Kısıtlanmış uygulamalar düzgün çalışmayabilir ve bildirimlerde gecikme olabilir.</string>
     <string name="restricted_app_title">Kısıtlı uygulamalar</string>
     <string name="restricted_false_label">Uygulama arka planda pil kullanabilir</string>
@@ -4405,6 +4411,7 @@ Daha hızlı bir ^3 kullanmayı deneyin veya bunun yerine bu ^4 birimini taşın
     <string name="summary_divider_text">", "</string>
     <string name="summary_range_symbol_combination">%1$s - %2$s</string>
     <string name="summary_range_verbal_combination">%1$s ile %2$s arası</string>
+    <string name="summary_voice_network">VoLTE, Wi-Fi Araması</string>
     <string name="support_country_format">%1$s - %2$s</string>
     <string name="support_summary">Yardım makaleleri, telefon ve sohbet, başlarken</string>
     <string name="suw_back_button_label">Geri</string>
@@ -4457,6 +4464,11 @@ Google'ın, kişilerinize, randevularınıza ve diğer bilgilerinize istediğini
     <string name="testing">Test ediliyor</string>
     <string name="testing_phone_info">Telefon bilgileri</string>
     <string name="testing_usage_stats">Kullanım istatistikleri</string>
+    <string name="tether_error_item_default">İnternet paylaşımı</string>
+    <string name="tether_error_message">%1$s abonesi değilsiniz.</string>
+    <string name="tether_error_title">%1$s hatası</string>
+    <string name="tether_no_sim_message">Mobil Ortak Erişim Noktası ve diğer internet paylaşımı seçeneklerini kullanmak için bir SIM kart seçin</string>
+    <string name="tether_no_sim_title">SIM kart yok</string>
     <string name="tether_settings_disabled_on_data_saver">"Veri Tasarrufu açıkken taşınabilir hotspot'lara bağlanılamaz veya kullanılamaz"</string>
     <string name="tether_settings_summary_hotspot_off_tether_on">Tethering</string>
     <string name="tether_settings_summary_hotspot_on_tether_off">Hotspot açık</string>
@@ -4862,6 +4874,7 @@ Herhangi bir kullanıcı, diğer tüm kullanıcılar için uygulamaları güncel
     <string name="voice_input_settings_title">Ses girişi</string>
     <string name="voice_interaction_security_warning">Bu ses girişi hizmeti, her zaman açık olacak şekilde ses izleme işlemi gerçekleştirebilecek ve ses kullanan uygulamaları sizin adınıza kontrol edebilecektir. Bu hizmet %s uygulamasına aittir. Hizmetin kullanımı etkinleştirilsin mi?</string>
     <string name="voice_interactor_preference_summary">Tam özel kelime ve etkileşim</string>
+    <string name="voice_network_title">Sesli iletişim ağları</string>
     <string name="voice_recognizer_preference_summary">Basit konuşma-metin</string>
     <string name="voice_search_settings_title">Ses ile arama</string>
     <string name="voice_service_preference_section_title">Ses girişi hizmetleri</string>

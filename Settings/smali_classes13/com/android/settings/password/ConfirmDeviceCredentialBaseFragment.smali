@@ -173,17 +173,17 @@
     throw v0
 
     :pswitch_0
-    const v0, 0x7f120862
+    const v0, 0x7f120863
 
     return v0
 
     :pswitch_1
-    const v0, 0x7f120861
+    const v0, 0x7f120862
 
     return v0
 
     :pswitch_2
-    const v0, 0x7f12085f
+    const v0, 0x7f120860
 
     return v0
 
@@ -264,7 +264,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0a0327
+    const v1, 0x7f0a0329
 
     invoke-virtual {v0, v1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
@@ -1187,7 +1187,7 @@
 
     move-result-object v1
 
-    const v4, 0x7f12085e
+    const v4, 0x7f12085f
 
     const/4 v5, 0x2
 
@@ -1235,7 +1235,7 @@
 
     move-result-object v3
 
-    const v6, 0x7f120864
+    const v6, 0x7f120865
 
     invoke-virtual {v3, v6}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -1258,7 +1258,7 @@
 
     const/4 v6, 0x0
 
-    const v7, 0x7f120860
+    const v7, 0x7f120861
 
     invoke-static {v4, v6, v2, v7, v3}, Lcom/android/settings/password/ConfirmDeviceCredentialBaseFragment$LastTryDialog;->show(Landroid/app/FragmentManager;Ljava/lang/String;IIZ)Z
 

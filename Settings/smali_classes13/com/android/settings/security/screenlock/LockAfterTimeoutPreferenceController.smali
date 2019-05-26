@@ -258,7 +258,7 @@
 
     iget-object v7, p0, Lcom/android/settings/security/screenlock/LockAfterTimeoutPreferenceController;->mContext:Landroid/content/Context;
 
-    const v9, 0x7f120863
+    const v9, 0x7f120864
 
     new-array v8, v8, [Ljava/lang/Object;
 
@@ -276,7 +276,7 @@
     :cond_3
     iget-object v7, p0, Lcom/android/settings/security/screenlock/LockAfterTimeoutPreferenceController;->mContext:Landroid/content/Context;
 
-    const v9, 0x7f12085d
+    const v9, 0x7f12085e
 
     const/4 v10, 0x2
 
@@ -297,7 +297,7 @@
     :cond_4
     iget-object v7, p0, Lcom/android/settings/security/screenlock/LockAfterTimeoutPreferenceController;->mContext:Landroid/content/Context;
 
-    const v9, 0x7f12085c
+    const v9, 0x7f12085d
 
     new-array v8, v8, [Ljava/lang/Object;
 

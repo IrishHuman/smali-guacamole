@@ -11,6 +11,10 @@
 
 .field private static final KEY_FROM_SETTINGS:Ljava/lang/String; = "key_from_settings"
 
+.field private static final KEY_HEALTH_SAFETY_INFORMATION:Ljava/lang/String; = "health_safety_information"
+
+.field private static final KEY_HEALTH_SAFETY_INFORMATION_TYPE:I = 0xc
+
 .field private static final KEY_LEGAL_NOTICES:Ljava/lang/String; = "op_legal_notices"
 
 .field private static final KEY_LEGAL_NOTICES_TYPE:I = 0x1
@@ -222,7 +226,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f120dc8
+    const v3, 0x7f120dcb
 
     invoke-virtual {v2, v3}, Landroid/support/v7/preference/Preference;->setSummary(I)V
 
@@ -253,7 +257,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f120dca
+    const v3, 0x7f120dcd
 
     invoke-virtual {v2, v3}, Landroid/support/v7/preference/Preference;->setSummary(I)V
 
@@ -276,7 +280,7 @@
 
     move-result v2
 
-    const v3, 0x7f120dc7
+    const v3, 0x7f120dca
 
     if-nez v2, :cond_6
 
@@ -295,7 +299,7 @@
     :cond_3
     sget-object v2, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
-    const v4, 0x7f120c07
+    const v4, 0x7f120c0a
 
     invoke-virtual {v0, v4}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -309,7 +313,7 @@
 
     sget-object v2, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
-    const v4, 0x7f120c08
+    const v4, 0x7f120c0b
 
     invoke-virtual {v0, v4}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -336,7 +340,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f120dc9
+    const v3, 0x7f120dcc
 
     invoke-virtual {v2, v3}, Landroid/support/v7/preference/Preference;->setSummary(I)V
 
@@ -410,7 +414,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f120dcc
+    const v3, 0x7f120dcf
 
     invoke-virtual {v2, v3}, Landroid/support/v7/preference/Preference;->setSummary(I)V
 
@@ -435,7 +439,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f120dcb
+    const v3, 0x7f120dce
 
     invoke-virtual {v2, v3}, Landroid/support/v7/preference/Preference;->setSummary(I)V
 
@@ -449,6 +453,21 @@
 
     invoke-virtual {v1, v2}, Landroid/support/v7/preference/PreferenceGroup;->removePreference(Landroid/support/v7/preference/Preference;)Z
 
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isO2()Z
+
+    move-result v2
+
+    if-nez v2, :cond_a
+
+    const-string v2, "health_safety_information"
+
+    invoke-virtual {p0, v2}, Lcom/android/settings/LegalSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/support/v7/preference/Preference;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Landroid/support/v7/preference/PreferenceGroup;->removePreference(Landroid/support/v7/preference/Preference;)Z
+
+    :cond_a
     return-void
 .end method
 
@@ -567,10 +586,33 @@
     const/16 v1, 0x9
 
     invoke-static {v0, v1}, Lcom/android/settings/LegalSettings;->startLegalActivity(Landroid/content/Context;I)V
+
+    goto :goto_0
+
+    :cond_4
+    invoke-virtual {p1}, Landroid/support/v7/preference/Preference;->getKey()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "health_safety_information"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_5
+
+    invoke-virtual {p0}, Lcom/android/settings/LegalSettings;->getPrefContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    const/16 v1, 0xc
+
+    invoke-static {v0, v1}, Lcom/android/settings/LegalSettings;->startLegalActivity(Landroid/content/Context;I)V
     :try_end_0
     .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    :cond_4
+    :cond_5
     :goto_0
     goto :goto_1
 
@@ -588,11 +630,11 @@
 
     move-result v0
 
-    if-eqz v0, :cond_6
+    if-eqz v0, :cond_7
 
     iget-object v0, p0, Lcom/android/settings/LegalSettings;->mBoostFrameworkPer:Landroid/util/BoostFramework;
 
-    if-nez v0, :cond_5
+    if-nez v0, :cond_6
 
     new-instance v0, Landroid/util/BoostFramework;
 
@@ -600,7 +642,7 @@
 
     iput-object v0, p0, Lcom/android/settings/LegalSettings;->mBoostFrameworkPer:Landroid/util/BoostFramework;
 
-    :cond_5
+    :cond_6
     iget-object v0, p0, Lcom/android/settings/LegalSettings;->mBoostFrameworkPer:Landroid/util/BoostFramework;
 
     const/16 v1, 0x7530
@@ -609,7 +651,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/BoostFramework;->perfLockAcquire(I[I)I
 
-    :cond_6
+    :cond_7
     invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onPreferenceTreeClick(Landroid/support/v7/preference/Preference;)Z
 
     move-result v0

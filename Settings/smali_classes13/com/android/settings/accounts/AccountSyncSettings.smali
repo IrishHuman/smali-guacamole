@@ -844,7 +844,7 @@
     :goto_5
     if-nez v13, :cond_9
 
-    const v6, 0x7f12125f
+    const v6, 0x7f121267
 
     invoke-virtual {v9, v6}, Lcom/android/settings/accounts/SyncStateSwitchPreference;->setSummary(I)V
 
@@ -860,7 +860,7 @@
     :cond_9
     if-eqz v7, :cond_a
 
-    const v6, 0x7f121264
+    const v6, 0x7f12126c
 
     invoke-virtual {v9, v6}, Lcom/android/settings/accounts/SyncStateSwitchPreference;->setSummary(I)V
 
@@ -893,7 +893,7 @@
 
     aput-object v6, v4, v1
 
-    const v5, 0x7f1207eb
+    const v5, 0x7f1207ec
 
     invoke-virtual {v8, v5, v4}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -1359,7 +1359,7 @@
 .method protected initializeUi(Landroid/view/View;)V
     .locals 2
 
-    const v0, 0x7f0a0575
+    const v0, 0x7f0a0579
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1375,7 +1375,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
-    const v0, 0x7f0a05e2
+    const v0, 0x7f0a05e6
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1385,7 +1385,7 @@
 
     iput-object v0, p0, Lcom/android/settings/accounts/AccountSyncSettings;->mUserId:Landroid/widget/TextView;
 
-    const v0, 0x7f0a0470
+    const v0, 0x7f0a0474
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1395,7 +1395,7 @@
 
     iput-object v0, p0, Lcom/android/settings/accounts/AccountSyncSettings;->mProviderId:Landroid/widget/TextView;
 
-    const v0, 0x7f0a046f
+    const v0, 0x7f0a0473
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1722,7 +1722,7 @@
 
     nop
 
-    const v0, 0x7f121267
+    const v0, 0x7f12126f    # 1.94163E38f
 
     invoke-virtual {p0, v0}, Lcom/android/settings/accounts/AccountSyncSettings;->getString(I)Ljava/lang/String;
 
@@ -1744,7 +1744,7 @@
 
     nop
 
-    const v2, 0x7f121266
+    const v2, 0x7f12126e
 
     invoke-virtual {p0, v2}, Lcom/android/settings/accounts/AccountSyncSettings;->getString(I)Ljava/lang/String;
 
@@ -1784,7 +1784,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0a044a
+    const v2, 0x7f0a044e
 
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

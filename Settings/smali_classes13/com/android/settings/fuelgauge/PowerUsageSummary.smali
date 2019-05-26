@@ -222,7 +222,7 @@
     goto :goto_0
 
     :cond_0
-    const v1, 0x7f120edc
+    const v1, 0x7f120edf
 
     const/4 v2, 0x2
 
@@ -752,7 +752,7 @@
 
     iget-object v0, p0, Lcom/android/settings/fuelgauge/PowerUsageSummary;->mBatteryLayoutPref:Lcom/android/settings/applications/LayoutPreference;
 
-    const v1, 0x7f0a0547
+    const v1, 0x7f0a054b
 
     invoke-virtual {v0, v1}, Lcom/android/settings/applications/LayoutPreference;->findViewById(I)Landroid/view/View;
 
@@ -1070,7 +1070,7 @@
 
     iget-object v2, p0, Lcom/android/settings/fuelgauge/PowerUsageSummary;->mBatteryLayoutPref:Lcom/android/settings/applications/LayoutPreference;
 
-    const v3, 0x7f0a0547
+    const v3, 0x7f0a054b
 
     invoke-virtual {v2, v3}, Lcom/android/settings/applications/LayoutPreference;->findViewById(I)Landroid/view/View;
 
@@ -1080,7 +1080,7 @@
 
     iget-object v3, p0, Lcom/android/settings/fuelgauge/PowerUsageSummary;->mBatteryLayoutPref:Lcom/android/settings/applications/LayoutPreference;
 
-    const v4, 0x7f0a0548
+    const v4, 0x7f0a054c
 
     invoke-virtual {v3, v4}, Lcom/android/settings/applications/LayoutPreference;->findViewById(I)Landroid/view/View;
 

@@ -188,12 +188,12 @@
 
     if-eqz v0, :cond_0
 
-    const v2, 0x7f12160f
+    const v2, 0x7f12161d
 
     goto :goto_0
 
     :cond_0
-    const v2, 0x7f12160e
+    const v2, 0x7f12161c
 
     :goto_0
     invoke-virtual {v1, v2}, Landroid/support/v14/preference/SwitchPreference;->setSummary(I)V

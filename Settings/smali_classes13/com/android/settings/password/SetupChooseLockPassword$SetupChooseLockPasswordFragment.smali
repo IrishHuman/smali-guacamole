@@ -69,11 +69,11 @@
 
     move-result v0
 
-    const v1, 0x7f0a04b8
+    const v1, 0x7f0a04bc
 
     if-eq v0, v1, :cond_1
 
-    const v1, 0x7f0a0509
+    const v1, 0x7f0a050d
 
     if-eq v0, v1, :cond_0
 
@@ -177,7 +177,7 @@
 .end method
 
 .method public onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
-    .locals 8
+    .locals 9
 
     invoke-super {p0, p1, p2}, Lcom/android/settings/password/ChooseLockPassword$ChooseLockPasswordFragment;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
 
@@ -236,7 +236,7 @@
 
     if-eqz v3, :cond_2
 
-    const v5, 0x7f0a04b8
+    const v5, 0x7f0a04bc
 
     invoke-virtual {p1, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -255,46 +255,64 @@
     invoke-virtual {v2, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     :cond_2
-    const v2, 0x7f0a033e
+    move-object v2, p1
 
-    invoke-virtual {p1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    check-cast v2, Lcom/android/setupwizardlib/GlifLayout;
 
-    move-result-object v2
-
-    check-cast v2, Landroid/widget/TextView;
-
-    if-eqz v2, :cond_3
-
-    invoke-virtual {p0}, Lcom/android/settings/password/SetupChooseLockPassword$SetupChooseLockPasswordFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v2}, Lcom/android/setupwizardlib/GlifLayout;->getHeaderTextView()Landroid/widget/TextView;
 
     move-result-object v5
-
-    const v6, 0x7f0602ac
-
-    invoke-virtual {v5, v6}, Landroid/content/res/Resources;->getColor(I)I
-
-    move-result v5
-
-    invoke-virtual {v2, v5}, Landroid/widget/TextView;->setTextColor(I)V
-
-    :cond_3
-    iget-object v5, p0, Lcom/android/settings/password/SetupChooseLockPassword$SetupChooseLockPasswordFragment;->mAutoCheckPinLengthCheckBox:Landroid/widget/CheckBox;
-
-    if-eqz v5, :cond_4
-
-    iget-object v5, p0, Lcom/android/settings/password/SetupChooseLockPassword$SetupChooseLockPasswordFragment;->mAutoCheckPinLengthCheckBox:Landroid/widget/CheckBox;
 
     invoke-virtual {p0}, Lcom/android/settings/password/SetupChooseLockPassword$SetupChooseLockPasswordFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v6
 
-    const v7, 0x7f0602b0
+    const v7, 0x7f0602ac
 
     invoke-virtual {v6, v7}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result v6
 
-    invoke-virtual {v5, v6}, Landroid/widget/CheckBox;->setTextColor(I)V
+    invoke-virtual {v5, v6}, Landroid/widget/TextView;->setTextColor(I)V
+
+    const v5, 0x7f0a0342
+
+    invoke-virtual {p1, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v5
+
+    check-cast v5, Landroid/widget/TextView;
+
+    if-eqz v5, :cond_3
+
+    invoke-virtual {p0}, Lcom/android/settings/password/SetupChooseLockPassword$SetupChooseLockPasswordFragment;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v6
+
+    invoke-virtual {v6, v7}, Landroid/content/res/Resources;->getColor(I)I
+
+    move-result v6
+
+    invoke-virtual {v5, v6}, Landroid/widget/TextView;->setTextColor(I)V
+
+    :cond_3
+    iget-object v6, p0, Lcom/android/settings/password/SetupChooseLockPassword$SetupChooseLockPasswordFragment;->mAutoCheckPinLengthCheckBox:Landroid/widget/CheckBox;
+
+    if-eqz v6, :cond_4
+
+    iget-object v6, p0, Lcom/android/settings/password/SetupChooseLockPassword$SetupChooseLockPasswordFragment;->mAutoCheckPinLengthCheckBox:Landroid/widget/CheckBox;
+
+    invoke-virtual {p0}, Lcom/android/settings/password/SetupChooseLockPassword$SetupChooseLockPasswordFragment;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v7
+
+    const v8, 0x7f0602b0
+
+    invoke-virtual {v7, v8}, Landroid/content/res/Resources;->getColor(I)I
+
+    move-result v7
+
+    invoke-virtual {v6, v7}, Landroid/widget/CheckBox;->setTextColor(I)V
 
     :cond_4
     return-void

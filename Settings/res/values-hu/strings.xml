@@ -2549,8 +2549,8 @@ Ezzel az alkalmazás egyúttal képes lesz a „Ne zavarjanak” jelzés be- vag
     <string name="one_userkey">egy felhasználói kulcs</string>
     <string name="oneplus_adaptive_model">Adaptív mód</string>
     <string name="oneplus_add">Adja hozzá</string>
-    <string name="oneplus_add_bluetooth_car_kit">Bluetooth autóskészlet hozzáadása</string>
-    <string name="oneplus_add_bluetooth_car_kit_summary">A Bluetooth autóskészlet automatikusan kapcsolódik a korábban megadott eszközökhöz és manuálisan új kapcsolatokat is hozzáadhat</string>
+    <string name="oneplus_add_bluetooth_car_kit">Jármű Bluetooth hozzáadása</string>
+    <string name="oneplus_add_bluetooth_car_kit_summary">A Jármű Bluetooth automatikusan csatlakozik a korábbi készülékekhez, hozzáadhat új készülékeket is kézileg</string>
     <string name="oneplus_add_fingerprint_list">Ujjlenyomat hozzáadása</string>
     <string name="oneplus_adjust_effect">Az effektus intenzitása</string>
     <string name="oneplus_advanced_display_settings">Speciális kijelzőbeállítások</string>
@@ -2786,7 +2786,7 @@ Kockázati tipp: Az arcfelismerés kevésbé biztonságos, mint egy ujjlenyomat 
     <string name="oneplus_fnatic_mode_add_to_wallpapers">Hozzáadás a háttérképekhez</string>
     <string name="oneplus_fnatic_mode_background_introduction_summary">Szinte a teljes teljesítmény a játékélményt szolgálja. Ez fennakadásokat okozhat más alkalmazásoknál.</string>
     <string name="oneplus_fnatic_mode_background_introduction_title">Folyamatszabályozó javítása</string>
-    <string name="oneplus_fnatic_mode_disturb_introduction_summary">Minden értesítés és hívás letiltása (kivéve az alacsony akkumulátorszint értesítései, riasztás és időzítő értesítések). A nem fogadott hívásokat csak a híváselőzményekben tekintheti meg.</string>
+    <string name="oneplus_fnatic_mode_disturb_introduction_summary">Minden értesítés és hívás letiltása (kivéve az alacsony akkumulátorszint értesítései, riasztás és időzítő értesítések).</string>
     <string name="oneplus_fnatic_mode_disturb_introduction_title">Haladó szintű DND</string>
     <string name="oneplus_fnatic_mode_enable_introduction_title">A Fnatic mód használatához előbb engedélyezni kell a játék módot</string>
     <string name="oneplus_fnatic_mode_network_introduction_dual4g_summary">Az elsődleges SIM jelerősségének prioritási beállítása a játék közben tapasztalt interferencia csökkentése érdekében. Ennek eredményeként a másodlagos SIM-kártya le lesz tiltva és nem lehet hívásokat illetve üzeneteket fogadni.</string>
@@ -2878,6 +2878,7 @@ Ha bármikor a kezdőképernyőre kíván lépni, legyintsen felfelé a képerny
     <string name="oneplus_haptic_feedback_tips">Haptikus visszajelzést biztosít egyes játékbeli jelenetekhez，csak a támogatott játékokban elérhető</string>
     <string name="oneplus_haptic_feedback_title">Haptikus visszajelzés javítása</string>
     <string name="oneplus_hardware_keys_action_split_screen">Az osztott képernyő nyitása/csukása</string>
+    <string name="oneplus_health_safety_information">Egészségügyi és biztonsági információk</string>
     <string name="oneplus_hearing_aid">Kompatibilitás hallókészülékekkel</string>
     <string name="oneplus_hide_navigation_bar">A navigációs sáv elrejtése</string>
     <string name="oneplus_hide_navkeys">A navigációs sáv elrejtése</string>
@@ -3092,8 +3093,8 @@ Megjegyzés: Előfordulhat, hogy az ujjlenyomata kevésbé biztonságos, mint eg
     <string name="oneplus_receive_notifications">OnePlus értesítések</string>
     <string name="oneplus_receive_notifications_agree">Hírek fogadása a OnePlus-tól</string>
     <string name="oneplus_receive_notifications_summary">Beleegyezését adja, hogy hivatalos híreket, termékinformációkat, kérdőíveket és vásárlási tanácsokat/utalványokat kapjon az OnePlus-tól</string>
-    <string name="oneplus_recognized_bluetooth_car_kits">Felismert bluetooth autóskészletek</string>
-    <string name="oneplus_recognized_bluetooth_car_kits_no_devices">Nincs Bluetooth-autóskészlet, alább kézileg hozzáadhat új kapcsolatokat</string>
+    <string name="oneplus_recognized_bluetooth_car_kits">Felismert Jármű Bluetooth</string>
+    <string name="oneplus_recognized_bluetooth_car_kits_no_devices">Nincs Jármű Bluetooth, alább kézileg is hozzáadhat új készülékeket</string>
     <string name="oneplus_recommended_opening">Ajánlott</string>
     <string name="oneplus_reenroll_fingerprint_tips">Kérjük, adja meg újra az ujjlenyomatát, ha kicserélte a mobiltelefon védőfóliáját, hogy biztosítsa az ujjlenyomatának helyességét</string>
     <string name="oneplus_regulatory_information">Ellenőrzés</string>
@@ -3116,6 +3117,7 @@ Megjegyzés: Előfordulhat, hogy az ujjlenyomata kevésbé biztonságos, mint eg
     <string name="oneplus_screen_color_mode_basic">sRGB</string>
     <string name="oneplus_screen_color_mode_default">Alapértelmezett</string>
     <string name="oneplus_screen_color_mode_defined">Egyéni szín</string>
+    <string name="oneplus_screen_color_mode_ntsc">Tág tartományú AMOLED</string>
     <string name="oneplus_screen_color_mode_reading_mode_on_summary">Nem érhető el, mert az olvasási üzemmód aktív</string>
     <string name="oneplus_screen_color_mode_soft">Puha</string>
     <string name="oneplus_screen_color_mode_title">Képernyő kalibrálása</string>
@@ -3705,6 +3707,10 @@ UT-felület: %5$s"</string>
     <string name="restore_default_apn_completed">Az alapértelmezett APN-beállítások visszaállítása befejeződött.</string>
     <string name="restr_pin_enter_admin_pin">Adja meg a rendszergazdai PIN-kódot</string>
     <string name="restrict_background_blacklisted">Háttéradatok kikapcsolva</string>
+    <string name="restrict_background_uss_always">Mindig</string>
+    <string name="restrict_background_uss_never">Soha</string>
+    <string name="restrict_background_uss_roaming">Csak barangolás közben</string>
+    <string name="restrict_background_uss_title">Háttéradatok korlátozása</string>
     <string name="restricted_app_detail_footer">Ezek az alkalmazások akkumulátort használtak a háttérben. Előfordulhat, hogy a korlátozott alkalmazások ezután nem működnek megfelelően, és késnek az értesítéseik.</string>
     <string name="restricted_app_title">Korlátozott alkalmazások</string>
     <string name="restricted_false_label">Használhat háttérben</string>
@@ -4406,6 +4412,7 @@ Próbálkozzon gyorsabb ^3 vagy ezen ^4 használatával hordozható tárhelykén
     <string name="summary_divider_text">", "</string>
     <string name="summary_range_symbol_combination">%1$s–%2$s</string>
     <string name="summary_range_verbal_combination">%1$s–%2$s</string>
+    <string name="summary_voice_network">VoLTE, Wi-Fi hívás</string>
     <string name="support_country_format">%1$s – %2$s</string>
     <string name="support_summary">Súgócikkek, telefon és csevegő, kezdő lépések</string>
     <string name="suw_back_button_label">Vissza</string>
@@ -4458,6 +4465,11 @@ Az adatok Google-féle szinkronizálása lehetővé teszi, hogy bárhonnan hozz�
     <string name="testing">Tesztelés</string>
     <string name="testing_phone_info">Telefon adatai</string>
     <string name="testing_usage_stats">Használati statisztika</string>
+    <string name="tether_error_item_default">Pányvázás</string>
+    <string name="tether_error_message">Ön még nem iratkozott fel a következőre: %1$s.</string>
+    <string name="tether_error_title">%1$s hiba</string>
+    <string name="tether_no_sim_message">Helyezzen be SIM-kártyát a Mobil Hotspot és más pányvázási lehetőségek használatához</string>
+    <string name="tether_no_sim_title">Nincs SIM-kártya</string>
     <string name="tether_settings_disabled_on_data_saver">Ha az Adatforgalom-csökkentő be van kapcsolva, nem lehet használni az internetmegosztás és a hordozható hotspot funkciókat</string>
     <string name="tether_settings_summary_hotspot_off_tether_on">Internetmegosztás</string>
     <string name="tether_settings_summary_hotspot_on_tether_off">Hotspot bekapcsolva</string>
@@ -4863,6 +4875,7 @@ Bármely felhasználó frissítheti az alkalmazásokat valamennyi felhasználó 
     <string name="voice_input_settings_title">Hangbevitel</string>
     <string name="voice_interaction_security_warning">Ez a hangbeviteli szolgáltatás képes lesz a folyamatos beszédhangkeresésre, valamint a hangvezérelt alkalmazásoknak az Ön nevében történő irányítására. A(z) %s alkalmazás működteti. Engedélyezi a szolgáltatást?</string>
     <string name="voice_interactor_preference_summary">Parancsszó és hangvezérlés</string>
+    <string name="voice_network_title">Hanghálózatok</string>
     <string name="voice_recognizer_preference_summary">Egyszerű beszédfelismerés</string>
     <string name="voice_search_settings_title">Hangalapú keresés</string>
     <string name="voice_service_preference_section_title">Hangbeviteli szolgáltatások</string>

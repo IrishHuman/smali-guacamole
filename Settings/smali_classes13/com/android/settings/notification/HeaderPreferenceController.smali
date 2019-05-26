@@ -138,7 +138,7 @@
 
     iget-object v2, p0, Lcom/android/settings/notification/HeaderPreferenceController;->mContext:Landroid/content/Context;
 
-    const v3, 0x7f1209e1
+    const v3, 0x7f1209e3
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 

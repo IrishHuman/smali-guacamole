@@ -63,7 +63,7 @@
 
     if-eqz v0, :cond_0
 
-    const v1, 0x7f12084f
+    const v1, 0x7f120850
 
     invoke-virtual {p0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -72,7 +72,7 @@
     return-object v1
 
     :cond_0
-    const v1, 0x7f12084e
+    const v1, 0x7f12084f
 
     invoke-virtual {p0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -122,7 +122,7 @@
 
     iget-object v3, p0, Lcom/android/settings/location/LocationPreferenceController;->mContext:Landroid/content/Context;
 
-    const v4, 0x7f120857
+    const v4, 0x7f120858
 
     invoke-virtual {v3, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

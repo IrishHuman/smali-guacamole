@@ -2549,8 +2549,8 @@ This will also give the app the ability to turn Do Not Disturb on or off and cha
     <string name="one_userkey">one user key</string>
     <string name="oneplus_adaptive_model">Adaptive mode</string>
     <string name="oneplus_add">Add</string>
-    <string name="oneplus_add_bluetooth_car_kit">Add Bluetooth Car Kit</string>
-    <string name="oneplus_add_bluetooth_car_kit_summary">Bluetooth Car Kit automatically connects with your previous devices, and you can also add new connections manually</string>
+    <string name="oneplus_add_bluetooth_car_kit">Add Vehicle Bluetooth</string>
+    <string name="oneplus_add_bluetooth_car_kit_summary">Vehicle Bluetooth automatically connects to your previous devices. You can also add new devices manually</string>
     <string name="oneplus_add_fingerprint_list">Add fingerprint</string>
     <string name="oneplus_adjust_effect">Effect Strength</string>
     <string name="oneplus_advanced_display_settings">Advanced display settings</string>
@@ -2786,7 +2786,7 @@ Risk tip: Face Unlock is less secure than fingerprint and password"</string>
     <string name="oneplus_fnatic_mode_add_to_wallpapers">Add to wallpapers</string>
     <string name="oneplus_fnatic_mode_background_introduction_summary">Focusing performance almost entirely towards game play. This may result in glitches in some apps.</string>
     <string name="oneplus_fnatic_mode_background_introduction_title">Enhance process regulator</string>
-    <string name="oneplus_fnatic_mode_disturb_introduction_summary">Block all notifications and calls (except low battery notification, alarm and timer). You can only view missed calls in the call history.</string>
+    <string name="oneplus_fnatic_mode_disturb_introduction_summary">Block all notifications and calls (except low battery notification, alarm and timer). Missed calls may not been saved in call logs.</string>
     <string name="oneplus_fnatic_mode_disturb_introduction_title">Advanced DND</string>
     <string name="oneplus_fnatic_mode_enable_introduction_title">Gaming mode must be enabled first in order to use Fnatic mode</string>
     <string name="oneplus_fnatic_mode_network_introduction_dual4g_summary">Primary SIM card signal strength is prioritised to minimise interference for low latency game play. As a result the secondary SIM card will be disabled and calls or messages will not be received.</string>
@@ -2878,6 +2878,7 @@ To go to the home screen at any time, swipe up from the bottom center edge of th
     <string name="oneplus_haptic_feedback_tips">Provide haptic feedback for specific game scenes (only applicable to supported games)</string>
     <string name="oneplus_haptic_feedback_title">Haptic feedback enhancement</string>
     <string name="oneplus_hardware_keys_action_split_screen">Open/Close split screen</string>
+    <string name="oneplus_health_safety_information">Health &amp; Safety Information</string>
     <string name="oneplus_hearing_aid">Hearing Aid Compatibility</string>
     <string name="oneplus_hide_navigation_bar">Hide navigation bar</string>
     <string name="oneplus_hide_navkeys">Hide the navigation bar</string>
@@ -3092,8 +3093,8 @@ Note: Your fingerprint may be less secure than a strong pattern or PIN"</string>
     <string name="oneplus_receive_notifications">OnePlus Notifications</string>
     <string name="oneplus_receive_notifications_agree">Receive news from OnePlus</string>
     <string name="oneplus_receive_notifications_summary">Accept to receive OnePlus official news, product information, questionnaire interaction and purchase recommendation/coupon information</string>
-    <string name="oneplus_recognized_bluetooth_car_kits">Recognised Bluetooth car kits</string>
-    <string name="oneplus_recognized_bluetooth_car_kits_no_devices">No Bluetooth Car Kit. You can manually add new connections below</string>
+    <string name="oneplus_recognized_bluetooth_car_kits">Recognised Vehicle Bluetooth</string>
+    <string name="oneplus_recognized_bluetooth_car_kits_no_devices">No Vehicle Bluetooth. You can manually add new devices below</string>
     <string name="oneplus_recommended_opening">Recommended</string>
     <string name="oneplus_reenroll_fingerprint_tips">Please re-enter your fingerprint after replacing the screen protector of the mobile phone to ensure the correctness of the fingerprint</string>
     <string name="oneplus_regulatory_information">Verification</string>
@@ -3116,6 +3117,7 @@ Note: Your fingerprint may be less secure than a strong pattern or PIN"</string>
     <string name="oneplus_screen_color_mode_basic">sRGB</string>
     <string name="oneplus_screen_color_mode_default">Default</string>
     <string name="oneplus_screen_color_mode_defined">Custom colour</string>
+    <string name="oneplus_screen_color_mode_ntsc">AMOLED Wide Gamut</string>
     <string name="oneplus_screen_color_mode_reading_mode_on_summary">Unavailable because reading mode is on</string>
     <string name="oneplus_screen_color_mode_soft">Soft</string>
     <string name="oneplus_screen_color_mode_title">Screen calibration</string>
@@ -3703,6 +3705,10 @@ UT Interface: %5$s"</string>
     <string name="restore_default_apn_completed">Reset default APN settings completed</string>
     <string name="restr_pin_enter_admin_pin">Enter admin PIN</string>
     <string name="restrict_background_blacklisted">Background data is turned off</string>
+    <string name="restrict_background_uss_always">Always</string>
+    <string name="restrict_background_uss_never">Never</string>
+    <string name="restrict_background_uss_roaming">While roaming only</string>
+    <string name="restrict_background_uss_title">Restrict background data</string>
     <string name="restricted_app_detail_footer">These apps have been using battery in the background. Restricted apps may not work properly and notifications may be delayed.</string>
     <string name="restricted_app_title">Restricted apps</string>
     <string name="restricted_false_label">App can use battery in background</string>
@@ -4404,6 +4410,7 @@ Try using a faster ^3, or use this ^4 for portable storage instead."</string>
     <string name="summary_divider_text">", "</string>
     <string name="summary_range_symbol_combination">%1$s - %2$s</string>
     <string name="summary_range_verbal_combination">%1$s to %2$s</string>
+    <string name="summary_voice_network">VoLTE, Wi-Fi Calling</string>
     <string name="support_country_format">%1$s - %2$s</string>
     <string name="support_summary">Help articles, phone &amp; chat, getting started</string>
     <string name="suw_back_button_label">Back</string>
@@ -4456,6 +4463,11 @@ A Google approach to syncing data to allow access to your contacts, appointments
     <string name="testing">Testing</string>
     <string name="testing_phone_info">Phone information</string>
     <string name="testing_usage_stats">Usage statistics</string>
+    <string name="tether_error_item_default">Tethering</string>
+    <string name="tether_error_message">You have not subscribed to %1$s.</string>
+    <string name="tether_error_title">%1$s error</string>
+    <string name="tether_no_sim_message">Insert a SIM card to use Mobile Hotspot and other tethering options</string>
+    <string name="tether_no_sim_title">No SIM card</string>
     <string name="tether_settings_disabled_on_data_saver">Can’t tether or use portable hotspots while Data Saver is on</string>
     <string name="tether_settings_summary_hotspot_off_tether_on">Tethering</string>
     <string name="tether_settings_summary_hotspot_on_tether_off">Hotspot on</string>
@@ -4861,6 +4873,7 @@ Any user can update apps for all other users."</string>
     <string name="voice_input_settings_title">Voice input</string>
     <string name="voice_interaction_security_warning">This voice input service will be able to perform always-on voice monitoring, and control voice enabled applications on your behalf. It comes from the %s application. Enable the use of this service?</string>
     <string name="voice_interactor_preference_summary">Full hotword and interaction</string>
+    <string name="voice_network_title">Voice networks</string>
     <string name="voice_recognizer_preference_summary">Simple speech to text</string>
     <string name="voice_search_settings_title">Voice search</string>
     <string name="voice_service_preference_section_title">Voice input services</string>

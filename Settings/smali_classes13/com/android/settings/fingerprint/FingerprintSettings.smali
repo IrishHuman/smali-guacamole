@@ -93,7 +93,7 @@
 
     invoke-super {p0, p1}, Lcom/android/settings/SubSettings;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f12108d
+    const v0, 0x7f121094
 
     invoke-virtual {p0, v0}, Lcom/android/settings/fingerprint/FingerprintSettings;->getText(I)Ljava/lang/CharSequence;
 

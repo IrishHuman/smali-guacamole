@@ -94,7 +94,7 @@
 .method protected applyActionBarTitle()I
     .locals 1
 
-    const v0, 0x7f120c73
+    const v0, 0x7f120c76
 
     return v0
 .end method
@@ -208,11 +208,11 @@
 
     move-result v0
 
-    const v2, 0x7f121076
+    const v2, 0x7f12107d
 
     if-eqz v0, :cond_4
 
-    const v0, 0x7f0a033e
+    const v0, 0x7f0a0342
 
     invoke-virtual {p0, v0}, Lcom/android/settings/fingerprint/FingerprintEnrollFinish;->findViewById(I)Landroid/view/View;
 
@@ -230,7 +230,7 @@
 
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setTextColor(I)V
 
-    const v3, 0x7f0a0341
+    const v3, 0x7f0a0345
 
     invoke-virtual {p0, v3}, Lcom/android/settings/fingerprint/FingerprintEnrollFinish;->findViewById(I)Landroid/view/View;
 
@@ -238,7 +238,7 @@
 
     check-cast v3, Landroid/widget/TextView;
 
-    const v4, 0x7f120cd9
+    const v4, 0x7f120cdc
 
     invoke-virtual {v3, v4}, Landroid/widget/TextView;->setText(I)V
 

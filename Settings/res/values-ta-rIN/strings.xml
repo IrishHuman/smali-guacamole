@@ -168,8 +168,8 @@
     <string name="nxp_non_std_card_summary">சில இயல்பற்ற NFC டேக்குகளை படிப்பதற்கான ஆதரவு</string>
     <string name="oneplus_adaptive_model">அடாப்டிவ் மாடல்</string>
     <string name="oneplus_add">சேர்</string>
-    <string name="oneplus_add_bluetooth_car_kit">ப்ளூடூத் கார் கிட்டைச் சேர்</string>
-    <string name="oneplus_add_bluetooth_car_kit_summary">புளூடூத் கார் கிட் உங்களுடைய முந்தைய சாதனங்களுடன் தானாக இணைக்கும், புதிய இணைப்புகளையும் கைமுறையாகச் சேர்க்கலாம்</string>
+    <string name="oneplus_add_bluetooth_car_kit">வாகன ப்ளூடூத்தைச் சேர்</string>
+    <string name="oneplus_add_bluetooth_car_kit_summary">வாகன ப்ளூடூத் உங்கள் முந்தைய சாதனங்களுடன் தானாகவே இணையும், புதிய சாதனங்களை நீங்கள் கைமுறையாகவும் சேர்க்கலாம்</string>
     <string name="oneplus_add_fingerprint_list">கைரேகையைச் சேர்க்கவும்</string>
     <string name="oneplus_adjust_effect">விளைவின் பலம்</string>
     <string name="oneplus_advanced_display_settings">மேம்பட்ட காட்சி அமைப்புகள்</string>
@@ -405,7 +405,7 @@
     <string name="oneplus_fnatic_mode_add_to_wallpapers">வால்பேப்பர்களில் சேர்</string>
     <string name="oneplus_fnatic_mode_background_introduction_summary">செயல்திறனை கிட்டத்தட்ட முழுக்க முழுக்க கேம் விளையாடுவதற்கு ஏற்பவே மாற்றியமைக்கும். இதனால் சில பயன்பாடுகளில் கோளாறுகள் ஏற்படலாம்.</string>
     <string name="oneplus_fnatic_mode_background_introduction_title">செயல்முறை சீராக்கியை மேம்படுத்தும்</string>
-    <string name="oneplus_fnatic_mode_disturb_introduction_summary">எல்லா அறிவிப்புகள் மற்றும் அழைப்புகளைத் (பேட்டரி குறைவு அறிவிப்பு, அலாரம் மற்றும் டைமர் ஆகியவை தவிர) தடுக்கும். தவறிய அழைப்புகளை அழைப்பு வரலாற்றில் மட்டுமே பார்ப்பீர்கள்.</string>
+    <string name="oneplus_fnatic_mode_disturb_introduction_summary">எல்லா அறிவிப்புகள் மற்றும் அழைப்புகளைத் (பேட்டரி குறைவு அறிவிப்பு, அலாரம் மற்றும் டைமர் ஆகியவை தவிர) தடுக்கும்.</string>
     <string name="oneplus_fnatic_mode_disturb_introduction_title">மேம்பட்ட DND</string>
     <string name="oneplus_fnatic_mode_enable_introduction_title">Fnatic பயன்முறையைப் பயன்படுத்த, முதலில் கேமிங் பயன்முறைச் செயல்படுத்தப்பட வேண்டும்</string>
     <string name="oneplus_fnatic_mode_network_introduction_dual4g_summary">கேம் விளையாடும்போது லேட்டன்சி குறைவாக இருப்பதற்காக, குறுக்கீட்டைக் குறைக்கும் நோக்கத்தில் முதன்மை SIM கார்டின் சிக்னல் வலிமைக்கு முன்னுரிமை அளிக்கப்படுகிறது. இதன் விளைவாக இரண்டாம் SIM கார்டு முடக்கப்படும், மேலும் அழைப்புகள் அல்லது செய்திகள் பெறப்படாது.</string>
@@ -497,6 +497,7 @@
     <string name="oneplus_haptic_feedback_tips">குறிப்பிட்ட கேம் சீன்களுக்கு ஹேப்டிக் கருத்தை வழங்கும், இது ஆதரிக்கப்படும் கேம்களுக்கு மட்டுமே பொருந்தும்</string>
     <string name="oneplus_haptic_feedback_title">ஹேப்டிக் கருத்து மேம்பாடு</string>
     <string name="oneplus_hardware_keys_action_split_screen">ஸ்பிளிட் திரையைத் திறக்கவும்/மூடவும்</string>
+    <string name="oneplus_health_safety_information">ஆரோக்கியம் &amp; பாதுகாப்பு தகவல்</string>
     <string name="oneplus_hearing_aid">செவித்திறன் உதவி இணக்கத்தன்மை</string>
     <string name="oneplus_hide_navigation_bar">நேவிகேஷன் பட்டியை மறைக்கவும்</string>
     <string name="oneplus_hide_navkeys">ஊடாடுதல் பட்டியை மறைக்கவும்</string>
@@ -711,8 +712,8 @@
     <string name="oneplus_receive_notifications">OnePlus அறிவிப்புகள்</string>
     <string name="oneplus_receive_notifications_agree">OnePlus இல் இருந்து செய்திகளைப் பெறுக</string>
     <string name="oneplus_receive_notifications_summary">OnePlus இன் அதிகாரப்பூர்வச் செய்திகள், தயாரிப்புத் தகவல், கேள்வி பதில் ஊடாடல் மற்றும் வாங்குதல் பரிந்துரை/கூப்பன் தகவல் ஆகியவற்றைப் பெற ஏற்றுக்கொள்ளவும்</string>
-    <string name="oneplus_recognized_bluetooth_car_kits">அங்கீகரிக்கப்பட்ட ப்ளூடூத் கார் கிட்ஸ்</string>
-    <string name="oneplus_recognized_bluetooth_car_kits_no_devices">ப்ளூடூத் கார் கிட் இல்லை, நீங்கள் கைமுறையாக புதிய இணைப்புகளைக் கீழே சேர்க்கலாம்</string>
+    <string name="oneplus_recognized_bluetooth_car_kits">அங்கீகரிக்கப்பட்ட வாகன ப்ளூடூத்</string>
+    <string name="oneplus_recognized_bluetooth_car_kits_no_devices">வாகன ப்ளூடூத் இல்லை, கீழே புதிய சாதனங்களை நீங்கள் கைமுறையாக சேர்க்கலாம்</string>
     <string name="oneplus_recommended_opening">பரிந்துரைக்கப்பட்டது</string>
     <string name="oneplus_reenroll_fingerprint_tips">கைரேகையின் நம்பகத்தன்மையை உறுதிசெய்ய, மொபைல் ஃபோனின் புரொடெக்டிவ் ஃபிலிமை மாற்றிய பின்னர் உங்கள் கைரேகையை மீண்டும் உள்ளிடவும்</string>
     <string name="oneplus_regulatory_information">சரிபார்த்தல்</string>
@@ -735,6 +736,7 @@
     <string name="oneplus_screen_color_mode_basic">sRGB</string>
     <string name="oneplus_screen_color_mode_default">இயல்புநிலை</string>
     <string name="oneplus_screen_color_mode_defined">தனிப்பயன் நிறம்</string>
+    <string name="oneplus_screen_color_mode_ntsc">AMOLED வைடு கேமட்</string>
     <string name="oneplus_screen_color_mode_reading_mode_on_summary">கிடைக்கப் பெறவில்லை, ஏனெனில் வாசித்தல் முறை ஆன் ஆக உள்ளது</string>
     <string name="oneplus_screen_color_mode_soft">மென்</string>
     <string name="oneplus_screen_color_mode_title">திரை மதிப்பாராய்வு</string>
@@ -1019,6 +1021,10 @@
     <string name="quick_unlock_title">துரித பூட்டுநீக்கு</string>
     <string name="reset_collect_diagnostics_summary">சிக்கல் தீர்த்தலுக்கான பகுப்பாய்வு தரவை சேகரி</string>
     <string name="reset_collect_diagnostics_title">பகுப்பாய்வை சேகரி</string>
+    <string name="restrict_background_uss_always">எப்போதும்</string>
+    <string name="restrict_background_uss_never">ஒருபோதும் வேண்டாம்</string>
+    <string name="restrict_background_uss_roaming">ரோமிங்கின்போது மட்டும்</string>
+    <string name="restrict_background_uss_title">பின்னணி தரவைக் கட்டுப்படுத்து</string>
     <string name="saturation_option_title">வண்ண சமநிலை</string>
     <string name="schedule_reminders">நிகழ்வு நினைவூட்டல்கள்</string>
     <string name="screen_color_mode_advanced">மேம்பட்டது</string>
@@ -1076,7 +1082,13 @@
     <string name="sub_deactivate_not_supported">செயல்நீக்குதல் ஆதரிக்கப்படவில்லை</string>
     <string name="sub_deactivate_success">வெற்றிகரமாக செயல்நீக்கப்பட்டது.</string>
     <string name="subs_settings">SIMகள் நிலை</string>
+    <string name="summary_voice_network">VoLTE, Wi-Fi அழைப்பு</string>
     <string name="system_update_uss_title">பதிவிறக்கி நிறுவு</string>
+    <string name="tether_error_item_default">டெதரிங்</string>
+    <string name="tether_error_message">%1$s-இல் நீங்கள் குழு சேரவில்லை.</string>
+    <string name="tether_error_title">%1$s பிழை</string>
+    <string name="tether_no_sim_message">மொபைல் ஹாட்ஸ்பாட் மற்றும் பிற டெதரிங் விருப்பங்களைப் பயன்படுத்த SIM அட்டையைச் செருகவும்</string>
+    <string name="tether_no_sim_title">SIM அட்டை இல்லை</string>
     <string name="theme_accent_color_title">அழுத்த வண்ணம்</string>
     <string name="theme_switch_dark">இருள்</string>
     <string name="theme_switch_dark_mode_summary">முறைமையில் பரவலான இருள் தீமை செயல்படுத்தவும்</string>
@@ -1139,6 +1151,7 @@
     <string name="user_experience_description">தயாரிப்பு வடிவமைப்பு மற்றும் பயனர் அனுபவத்தை மேம்படுத்த எங்களுக்கு உதவும் பொருட்டு, நீங்கள் உங்கள் ஃபோனை எப்படி பயன்படுத்துகிறீர்கள் என்பது குறித்த பொதுவான புள்ளிவிவரத் தரவை பகுப்பாய்வு செய்ய OnePlus-ஐ அனுமதிக்கவும்</string>
     <string name="user_is_not_allowed_dlg_text">இந்த நிறுவல் நீக்கம் செய்ய தற்போதைய பயனருக்கு அனுமதி இல்லை.</string>
     <string name="user_is_not_allowed_dlg_title">அனுமதி இல்லை</string>
+    <string name="voice_network_title">குரல் நெட்வொர்க்குகள்</string>
     <string name="volume_adjust_sound_title">வால்யூம் ஸ்லைடர் ஒலி</string>
     <string name="wifi_certificate">சான்றிதழ்</string>
     <string name="wifi_context_menu_change_password">கடவுச்சொல்லை மாற்றவும்</string>

@@ -2547,8 +2547,8 @@ T馬などの動物はいないようでした。荷物は小さな緑色の手�
     <string name="one_userkey">ユーザーキー1個</string>
     <string name="oneplus_adaptive_model">適応モード</string>
     <string name="oneplus_add">追加</string>
-    <string name="oneplus_add_bluetooth_car_kit">Bluetooth カーキットを追加</string>
-    <string name="oneplus_add_bluetooth_car_kit_summary">Bluetooth カーキットは以前接続したデバイスに自動的に接続します。また、手動で新しい接続を追加することもできます</string>
+    <string name="oneplus_add_bluetooth_car_kit">車載 Bluetooth を追加</string>
+    <string name="oneplus_add_bluetooth_car_kit_summary">車載 Bluetooth は以前接続したデバイスに自動的に接続します。また、手動で新しいデバイスを追加することもできます</string>
     <string name="oneplus_add_fingerprint_list">指紋を追加</string>
     <string name="oneplus_adjust_effect">効果の強さ</string>
     <string name="oneplus_advanced_display_settings">詳細表示設定</string>
@@ -2784,7 +2784,7 @@ T馬などの動物はいないようでした。荷物は小さな緑色の手�
     <string name="oneplus_fnatic_mode_add_to_wallpapers">壁紙に追加</string>
     <string name="oneplus_fnatic_mode_background_introduction_summary">ほぼゲームプレイのみを優先したパフォーマンスに切り替わります。一部のアプリで異常が発生することがあります。</string>
     <string name="oneplus_fnatic_mode_background_introduction_title">プロセスレギュレーターを向上</string>
-    <string name="oneplus_fnatic_mode_disturb_introduction_summary">すべての通知と着信（低バッテリー通知、アラーム、タイマーを除く）をブロックします。不在着信は通話履歴でのみ確認できます。</string>
+    <string name="oneplus_fnatic_mode_disturb_introduction_summary">すべての通知と着信（低バッテリー通知、アラーム、タイマーを除く）をブロックします。</string>
     <string name="oneplus_fnatic_mode_disturb_introduction_title">高度な妨害禁止モード</string>
     <string name="oneplus_fnatic_mode_enable_introduction_title">Fnatic モードを使用するには、まずゲームモードを有効にする必要があります</string>
     <string name="oneplus_fnatic_mode_network_introduction_dual4g_summary">中断を最小限に抑えて、低レーテンシーのゲームプレイを可能にするため、プライマリ SIM カードの電波強度が優先されます。その結果、セカンダリ SIM カードが無効になり、通話やメッセージを受けることができなくなります。</string>
@@ -2876,6 +2876,7 @@ T馬などの動物はいないようでした。荷物は小さな緑色の手�
     <string name="oneplus_haptic_feedback_tips">特定のゲームシーンで触覚フィードバックを提供します。サポート対象のゲームのみで適用されます</string>
     <string name="oneplus_haptic_feedback_title">触覚フィードバックの向上</string>
     <string name="oneplus_hardware_keys_action_split_screen">分割画面を開く/閉じる</string>
+    <string name="oneplus_health_safety_information">安全衛生に関する情報</string>
     <string name="oneplus_hearing_aid">補聴器の互換性</string>
     <string name="oneplus_hide_navigation_bar">ナビゲーションバーを非表示にする</string>
     <string name="oneplus_hide_navkeys">ナビゲーションバーを非表示</string>
@@ -3090,8 +3091,8 @@ T馬などの動物はいないようでした。荷物は小さな緑色の手�
     <string name="oneplus_receive_notifications">OnePlus 通知</string>
     <string name="oneplus_receive_notifications_agree">OnePlus からのニュースを受信する</string>
     <string name="oneplus_receive_notifications_summary">OnePlus の公式ニュース、製品情報、アンケートの案内、おすすめの製品/クーポン情報の受信を許可する</string>
-    <string name="oneplus_recognized_bluetooth_car_kits">認識された Bluetooth カーキット</string>
-    <string name="oneplus_recognized_bluetooth_car_kits_no_devices">Bluetooth カーキットがありません。以下で新しい接続を手動で追加できます</string>
+    <string name="oneplus_recognized_bluetooth_car_kits">車載 Bluetooth が認識されました</string>
+    <string name="oneplus_recognized_bluetooth_car_kits_no_devices">車載 Bluetooth がありません。以下で新しいデバイスを手動で追加できます</string>
     <string name="oneplus_recommended_opening">おすすめ</string>
     <string name="oneplus_reenroll_fingerprint_tips">指紋を正しく登録できるように、携帯電話の保護フィルムをはがしてから指紋を再度入力してください</string>
     <string name="oneplus_regulatory_information">検証</string>
@@ -3114,6 +3115,7 @@ T馬などの動物はいないようでした。荷物は小さな緑色の手�
     <string name="oneplus_screen_color_mode_basic">sRGB</string>
     <string name="oneplus_screen_color_mode_default">既定</string>
     <string name="oneplus_screen_color_mode_defined">カスタムカラー</string>
+    <string name="oneplus_screen_color_mode_ntsc">AMOLED 広色域</string>
     <string name="oneplus_screen_color_mode_reading_mode_on_summary">閲覧モードがオンのため使用できません。</string>
     <string name="oneplus_screen_color_mode_soft">ソフト</string>
     <string name="oneplus_screen_color_mode_title">画面のキャリブレーション</string>
@@ -3703,6 +3705,10 @@ UT インターフェース: %5$s"</string>
     <string name="restore_default_apn_completed">APN設定をリセットしました。</string>
     <string name="restr_pin_enter_admin_pin">管理者 PIN の入力</string>
     <string name="restrict_background_blacklisted">バックグラウンド データは無効になっています</string>
+    <string name="restrict_background_uss_always">常時</string>
+    <string name="restrict_background_uss_never">なし</string>
+    <string name="restrict_background_uss_roaming">ローミング中のみ</string>
+    <string name="restrict_background_uss_title">バックグラウンドデータを制限</string>
     <string name="restricted_app_detail_footer">このアプリがバックグラウンドで電池を使用していました。制限したアプリは正常に動作しないことがあります。また、通知が遅れる可能性もあります。</string>
     <string name="restricted_app_title">制限されたアプリ</string>
     <string name="restricted_false_label">アプリのバックグラウンドでの電池使用可</string>
@@ -4404,6 +4410,7 @@ PINが正しくない可能性があります。"</string>
     <string name="summary_divider_text">"、 "</string>
     <string name="summary_range_symbol_combination">%1$s～%2$s</string>
     <string name="summary_range_verbal_combination">%1$s～%2$s</string>
+    <string name="summary_voice_network">VoLTE、Wi-Fi Calling</string>
     <string name="support_country_format">%1$s - %2$s</string>
     <string name="support_summary">ヘルプ記事、電話とチャット、使ってみる</string>
     <string name="suw_back_button_label">戻る</string>
@@ -4456,6 +4463,11 @@ PINが正しくない可能性があります。"</string>
     <string name="testing">テスト中</string>
     <string name="testing_phone_info">携帯電話情報</string>
     <string name="testing_usage_stats">使用統計情報</string>
+    <string name="tether_error_item_default">テザリング</string>
+    <string name="tether_error_message">%1$s をサブスクライブしていません。</string>
+    <string name="tether_error_title">%1$s エラー</string>
+    <string name="tether_no_sim_message">モバイルホットスポットや他のテザリングオプションを使用するには、SIM カードを挿入してください</string>
+    <string name="tether_no_sim_title">SIM カードはありません</string>
     <string name="tether_settings_disabled_on_data_saver">データセーバーが ON のときは、テザリングやポータブル アクセス ポイントを使用できません</string>
     <string name="tether_settings_summary_hotspot_off_tether_on">テザリング</string>
     <string name="tether_settings_summary_hotspot_on_tether_off">アクセス ポイント ON</string>
@@ -4861,6 +4873,7 @@ PINが正しくない可能性があります。"</string>
     <string name="voice_input_settings_title">音声入力</string>
     <string name="voice_interaction_security_warning">この音声入力サービスを使用すると、常時音声監視を実行し、音声対応アプリの管理をユーザーに代わって行えるようになります。これは%sの一部です。このサービスの使用を有効にしますか？</string>
     <string name="voice_interactor_preference_summary">完全な起動ワードと対話</string>
+    <string name="voice_network_title">音声ネットワーク</string>
     <string name="voice_recognizer_preference_summary">シンプルな音声認識</string>
     <string name="voice_search_settings_title">音声検索</string>
     <string name="voice_service_preference_section_title">音声入力サービス</string>

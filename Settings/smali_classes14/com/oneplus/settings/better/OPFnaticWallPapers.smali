@@ -416,7 +416,7 @@
     invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_1
-    const v1, 0x7f0a05f5
+    const v1, 0x7f0a05f9
 
     invoke-virtual {p0, v1}, Lcom/oneplus/settings/better/OPFnaticWallPapers;->findViewById(I)Landroid/view/View;
 
@@ -424,7 +424,7 @@
 
     check-cast v1, Landroid/view/TextureView;
 
-    const v2, 0x7f0a05f2
+    const v2, 0x7f0a05f6
 
     invoke-virtual {p0, v2}, Lcom/oneplus/settings/better/OPFnaticWallPapers;->findViewById(I)Landroid/view/View;
 
@@ -434,7 +434,7 @@
 
     iput-object v2, p0, Lcom/oneplus/settings/better/OPFnaticWallPapers;->imageView:Landroid/widget/ImageView;
 
-    const v2, 0x7f0a05ee
+    const v2, 0x7f0a05f2
 
     invoke-virtual {p0, v2}, Lcom/oneplus/settings/better/OPFnaticWallPapers;->findViewById(I)Landroid/view/View;
 
@@ -498,7 +498,7 @@
 
     aput-object v2, v1, v3
 
-    const v2, 0x7f120b74
+    const v2, 0x7f120b76
 
     invoke-virtual {p0, v2, v1}, Lcom/oneplus/settings/better/OPFnaticWallPapers;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -506,7 +506,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    const v0, 0x7f0a0367
+    const v0, 0x7f0a036b
 
     invoke-virtual {p0, v0}, Lcom/oneplus/settings/better/OPFnaticWallPapers;->findViewById(I)Landroid/view/View;
 
@@ -680,7 +680,7 @@
 
     iget-object v1, p0, Lcom/oneplus/settings/better/OPFnaticWallPapers;->mNextButton:Landroid/widget/Button;
 
-    const v2, 0x7f120b75
+    const v2, 0x7f120b77
 
     invoke-virtual {v1, v2}, Landroid/widget/Button;->setText(I)V
 
@@ -689,7 +689,7 @@
     :cond_1
     iget-object v3, p0, Lcom/oneplus/settings/better/OPFnaticWallPapers;->mNextButton:Landroid/widget/Button;
 
-    const v4, 0x7f120b68
+    const v4, 0x7f120b6a
 
     new-array v2, v2, [Ljava/lang/Object;
 

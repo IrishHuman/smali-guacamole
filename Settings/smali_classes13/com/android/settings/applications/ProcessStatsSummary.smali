@@ -194,7 +194,7 @@
 
     move-result-object v1
 
-    const v3, 0x7f12093f
+    const v3, 0x7f120941
 
     invoke-virtual {v1, v3}, Lcom/android/settings/core/SubSettingLauncher;->setTitle(I)Lcom/android/settings/core/SubSettingLauncher;
 
@@ -271,7 +271,7 @@
 
     move-result-object v13
 
-    const v14, 0x7f0300af
+    const v14, 0x7f0300b0
 
     invoke-virtual {v13, v14}, Landroid/content/res/Resources;->getTextArray(I)[Ljava/lang/CharSequence;
 

@@ -456,7 +456,7 @@
 
     iget-object v8, p0, Lcom/android/settings/applications/AppStorageSettings;->mButtonsPref:Lcom/android/settings/widget/ActionButtonPreference;
 
-    const v9, 0x7f1208f8
+    const v9, 0x7f1208f9
 
     invoke-virtual {v8, v9}, Lcom/android/settings/widget/ActionButtonPreference;->setButton1Text(I)Lcom/android/settings/widget/ActionButtonPreference;
 
@@ -749,7 +749,7 @@
     :cond_1
     iget-object v2, p0, Lcom/android/settings/applications/AppStorageSettings;->mButtonsPref:Lcom/android/settings/widget/ActionButtonPreference;
 
-    const v4, 0x7f120fa4
+    const v4, 0x7f120fa7
 
     invoke-virtual {v2, v4}, Lcom/android/settings/widget/ActionButtonPreference;->setButton1Text(I)Lcom/android/settings/widget/ActionButtonPreference;
 
@@ -1216,7 +1216,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f120785
+    const v1, 0x7f120786
 
     invoke-virtual {v0, v1}, Lcom/android/settings/applications/AppStorageSizesController$Builder;->setErrorString(I)Lcom/android/settings/applications/AppStorageSizesController$Builder;
 

@@ -46,7 +46,7 @@
 
     iput-object v0, p0, Lcom/android/settings/widget/OPCustomFingeprintAnimVideoPreference$VH;->imageView:Landroid/widget/ImageView;
 
-    const v0, 0x7f0a05be
+    const v0, 0x7f0a05c2
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -56,7 +56,7 @@
 
     iput-object v0, p0, Lcom/android/settings/widget/OPCustomFingeprintAnimVideoPreference$VH;->textView:Landroid/widget/TextView;
 
-    const v0, 0x7f0a05f6
+    const v0, 0x7f0a05fa
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -64,7 +64,7 @@
 
     iput-object v0, p0, Lcom/android/settings/widget/OPCustomFingeprintAnimVideoPreference$VH;->viewBorder:Landroid/view/View;
 
-    const v0, 0x7f0a05f7
+    const v0, 0x7f0a05fb
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -72,7 +72,7 @@
 
     iput-object v0, p0, Lcom/android/settings/widget/OPCustomFingeprintAnimVideoPreference$VH;->viewShadow:Landroid/view/View;
 
-    const v0, 0x7f0a02df
+    const v0, 0x7f0a02e1
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

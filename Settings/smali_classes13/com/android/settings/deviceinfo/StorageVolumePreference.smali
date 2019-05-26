@@ -231,7 +231,7 @@
 
     move-result-object v15
 
-    const v11, 0x7f1211ee
+    const v11, 0x7f1211f5
 
     const/4 v12, 0x2
 
@@ -350,7 +350,7 @@
 .method public onBindViewHolder(Landroid/support/v7/preference/PreferenceViewHolder;)V
     .locals 4
 
-    const v0, 0x7f0a05cf
+    const v0, 0x7f0a05d3
 
     invoke-virtual {p1, v0}, Landroid/support/v7/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 

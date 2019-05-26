@@ -46,7 +46,7 @@
 
     const-string v1, "Retry"
 
-    const v2, 0x7f1208d4
+    const v2, 0x7f1208d5
 
     const/4 v3, 0x1
 

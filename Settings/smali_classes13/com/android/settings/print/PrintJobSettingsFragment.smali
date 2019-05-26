@@ -172,7 +172,7 @@
 
     if-eq v2, v3, :cond_4
 
-    const v6, 0x7f120f01
+    const v6, 0x7f120f04
 
     packed-switch v2, :pswitch_data_0
 
@@ -191,7 +191,7 @@
 
     iget-object v2, p0, Lcom/android/settings/print/PrintJobSettingsFragment;->mPrintJobPreference:Landroid/support/v7/preference/Preference;
 
-    const v6, 0x7f120eff
+    const v6, 0x7f120f02
 
     new-array v7, v4, [Ljava/lang/Object;
 
@@ -241,7 +241,7 @@
 
     iget-object v2, p0, Lcom/android/settings/print/PrintJobSettingsFragment;->mPrintJobPreference:Landroid/support/v7/preference/Preference;
 
-    const v6, 0x7f120f10
+    const v6, 0x7f120f13
 
     new-array v7, v4, [Ljava/lang/Object;
 
@@ -281,7 +281,7 @@
     :pswitch_2
     iget-object v2, p0, Lcom/android/settings/print/PrintJobSettingsFragment;->mPrintJobPreference:Landroid/support/v7/preference/Preference;
 
-    const v6, 0x7f120f02
+    const v6, 0x7f120f05
 
     new-array v7, v4, [Ljava/lang/Object;
 
@@ -302,7 +302,7 @@
     :cond_4
     iget-object v2, p0, Lcom/android/settings/print/PrintJobSettingsFragment;->mPrintJobPreference:Landroid/support/v7/preference/Preference;
 
-    const v6, 0x7f120f03
+    const v6, 0x7f120f06
 
     new-array v7, v4, [Ljava/lang/Object;
 
@@ -323,7 +323,7 @@
     :goto_0
     iget-object v2, p0, Lcom/android/settings/print/PrintJobSettingsFragment;->mPrintJobPreference:Landroid/support/v7/preference/Preference;
 
-    const v6, 0x7f120f06
+    const v6, 0x7f120f09
 
     const/4 v7, 0x2
 
@@ -548,7 +548,7 @@
 
     if-nez v1, :cond_1
 
-    const v1, 0x7f120f00
+    const v1, 0x7f120f03
 
     invoke-virtual {p0, v1}, Lcom/android/settings/print/PrintJobSettingsFragment;->getString(I)Ljava/lang/String;
 
@@ -569,7 +569,7 @@
 
     const/4 v1, 0x2
 
-    const v4, 0x7f120f11
+    const v4, 0x7f120f14
 
     invoke-virtual {p0, v4}, Lcom/android/settings/print/PrintJobSettingsFragment;->getString(I)Ljava/lang/String;
 
@@ -646,7 +646,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f120f0e
+    const v2, 0x7f120f11
 
     invoke-virtual {v1, v2}, Landroid/app/ActionBar;->setTitle(I)V
 

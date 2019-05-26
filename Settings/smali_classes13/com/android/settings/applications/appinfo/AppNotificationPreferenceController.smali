@@ -40,7 +40,7 @@
     :cond_0
     iget-boolean v0, p0, Lcom/android/settings/notification/NotificationBackend$AppRow;->banned:Z
 
-    const v1, 0x7f120a24
+    const v1, 0x7f120a26
 
     if-eqz v0, :cond_1
 
@@ -53,7 +53,7 @@
     :cond_1
     iget v0, p0, Lcom/android/settings/notification/NotificationBackend$AppRow;->channelCount:I
 
-    const v2, 0x7f120a25
+    const v2, 0x7f120a27
 
     if-nez v0, :cond_2
 
@@ -88,7 +88,7 @@
     return-object v0
 
     :cond_4
-    const v0, 0x7f120a26
+    const v0, 0x7f120a28
 
     const/4 v1, 0x1
 

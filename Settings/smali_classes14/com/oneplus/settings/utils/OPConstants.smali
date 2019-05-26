@@ -4,6 +4,8 @@
 
 
 # static fields
+.field public static final ACTION_TETHER_ERROR:Ljava/lang/String; = "android.intent.action.setupDataError_tether"
+
 .field public static final ADAPTIVE_BRIGHTNESS_CLICK_AUTO_OPEN:Ljava/lang/String; = "adaptive_brightness_click_auto_open"
 
 .field public static final ADAPTIVE_BRIGHTNESS_MANUAL_SLIDER:Ljava/lang/String; = "adaptive_brightness_manual_slider"
@@ -25,6 +27,10 @@
 .field public static final DEFAULT_APP_ASSIST_VOICE_INPUT:Ljava/lang/String; = "default_app_assist&voice input"
 
 .field public static final DEFAULT_APP_HOME_APP:Ljava/lang/String; = "default_app_home_app"
+
+.field public static final EXTRA_TETHER_ERROR:Ljava/lang/String; = "data_call_error"
+
+.field public static final EXTRA_TETHER_ERROR_CODE:Ljava/lang/String; = "data_call_code"
 
 .field public static final FACELOCK_PACKAGE_NAME:Ljava/lang/String; = "com.android.facelock"
 
@@ -358,15 +364,29 @@
 
 .field public static final SWAP_BUTTON:Ljava/lang/String; = "swap_button"
 
+.field public static final TABLE_BACKGROUND:Ljava/lang/String; = "background_data"
+
 .field public static final TAP_SCREEN_SHOW:Ljava/lang/String; = "tap_screen_show"
 
+.field public static final TETHER_CONNECT_ERROR:I = 0x2
+
+.field public static final TETHER_ERROR_CODE:I = 0x43
+
+.field public static final TETHER_NO_SIM:I = 0x1
+
 .field public static final THREE_SWIPE_SCREEN_SHOT:Ljava/lang/String; = "three_swipe_screen_shot"
+
+.field public static final TYPE_ALWAYS:I = 0x1
 
 .field public static final TYPE_ALWAYS_SHOW_NAVIGATION_BAR:I = 0x1
 
 .field public static final TYPE_BACK_HOME:I = 0x2
 
 .field public static final TYPE_GESTURE_NAVIGATION_BAR:I = 0x3
+
+.field public static final TYPE_NEVER:I = 0x0
+
+.field public static final TYPE_ROAMING_ONLY:I = 0x2
 
 .field public static final WECHAT_QRCODE_TYPE:I = 0x0
 

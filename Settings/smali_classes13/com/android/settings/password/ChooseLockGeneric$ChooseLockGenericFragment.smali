@@ -448,7 +448,7 @@
 
     if-eqz v1, :cond_1
 
-    const v2, 0x7f12132a
+    const v2, 0x7f121337
 
     return v2
 
@@ -457,19 +457,19 @@
 
     if-nez v1, :cond_2
 
-    const v2, 0x7f121329
+    const v2, 0x7f121336
 
     return v2
 
     :cond_2
     if-eqz v1, :cond_3
 
-    const v2, 0x7f12132b
+    const v2, 0x7f121338
 
     return v2
 
     :cond_3
-    const v2, 0x7f121328
+    const v2, 0x7f121335
 
     return v2
 
@@ -478,7 +478,7 @@
 
     if-eqz v1, :cond_5
 
-    const v2, 0x7f12131e
+    const v2, 0x7f12132b
 
     return v2
 
@@ -487,19 +487,19 @@
 
     if-nez v1, :cond_6
 
-    const v2, 0x7f12131d
+    const v2, 0x7f12132a
 
     return v2
 
     :cond_6
     if-eqz v1, :cond_7
 
-    const v2, 0x7f12131f
+    const v2, 0x7f12132c
 
     return v2
 
     :cond_7
-    const v2, 0x7f12131c
+    const v2, 0x7f121329
 
     return v2
 
@@ -508,7 +508,7 @@
 
     if-eqz v1, :cond_9
 
-    const v2, 0x7f121326
+    const v2, 0x7f121333
 
     return v2
 
@@ -517,19 +517,19 @@
 
     if-nez v1, :cond_a
 
-    const v2, 0x7f121325
+    const v2, 0x7f121332
 
     return v2
 
     :cond_a
     if-eqz v1, :cond_b
 
-    const v2, 0x7f121327
+    const v2, 0x7f121334
 
     return v2
 
     :cond_b
-    const v2, 0x7f121324
+    const v2, 0x7f121331
 
     return v2
 
@@ -538,7 +538,7 @@
 
     if-eqz v1, :cond_d
 
-    const v2, 0x7f121322
+    const v2, 0x7f12132f
 
     return v2
 
@@ -547,19 +547,19 @@
 
     if-nez v1, :cond_e
 
-    const v2, 0x7f121321
+    const v2, 0x7f12132e
 
     return v2
 
     :cond_e
     if-eqz v1, :cond_f
 
-    const v2, 0x7f121323
+    const v2, 0x7f121330
 
     return v2
 
     :cond_f
-    const v2, 0x7f121320
+    const v2, 0x7f12132d
 
     return v2
 .end method
@@ -583,12 +583,12 @@
 
     if-eqz v0, :cond_0
 
-    const v1, 0x7f12132e
+    const v1, 0x7f12133b
 
     goto :goto_0
 
     :cond_0
-    const v1, 0x7f12132d
+    const v1, 0x7f12133a
 
     :goto_0
     return v1
@@ -1223,7 +1223,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f120d8f
+    const v3, 0x7f120d92
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1369,7 +1369,7 @@
     :cond_2
     sget-object v0, Lcom/android/settings/password/ScreenLockType;->PATTERN:Lcom/android/settings/password/ScreenLockType;
 
-    const v1, 0x7f12105e
+    const v1, 0x7f121065
 
     invoke-direct {p0, v0, v1}, Lcom/android/settings/password/ChooseLockGeneric$ChooseLockGenericFragment;->setPreferenceSummary(Lcom/android/settings/password/ScreenLockType;I)V
 
@@ -1397,19 +1397,19 @@
 
     sget-object v0, Lcom/android/settings/password/ScreenLockType;->PATTERN:Lcom/android/settings/password/ScreenLockType;
 
-    const v1, 0x7f121346
+    const v1, 0x7f121353
 
     invoke-direct {p0, v0, v1}, Lcom/android/settings/password/ChooseLockGeneric$ChooseLockGenericFragment;->setPreferenceTitle(Lcom/android/settings/password/ScreenLockType;I)V
 
     sget-object v0, Lcom/android/settings/password/ScreenLockType;->PIN:Lcom/android/settings/password/ScreenLockType;
 
-    const v1, 0x7f121348
+    const v1, 0x7f121355
 
     invoke-direct {p0, v0, v1}, Lcom/android/settings/password/ChooseLockGeneric$ChooseLockGenericFragment;->setPreferenceTitle(Lcom/android/settings/password/ScreenLockType;I)V
 
     sget-object v0, Lcom/android/settings/password/ScreenLockType;->PASSWORD:Lcom/android/settings/password/ScreenLockType;
 
-    const v1, 0x7f121344
+    const v1, 0x7f121351
 
     invoke-direct {p0, v0, v1}, Lcom/android/settings/password/ChooseLockGeneric$ChooseLockGenericFragment;->setPreferenceTitle(Lcom/android/settings/password/ScreenLockType;I)V
 
@@ -1641,7 +1641,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0a031d
+    const v1, 0x7f0a031f
 
     invoke-virtual {v0, v1}, Landroid/support/v7/preference/Preference;->setViewId(I)V
 
@@ -1661,7 +1661,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0a031f
+    const v1, 0x7f0a0321
 
     invoke-virtual {v0, v1}, Landroid/support/v7/preference/Preference;->setViewId(I)V
 
@@ -1673,7 +1673,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0a031e
+    const v1, 0x7f0a0320
 
     invoke-virtual {v0, v1}, Landroid/support/v7/preference/Preference;->setViewId(I)V
 
@@ -1815,7 +1815,7 @@
 
     invoke-virtual {v7, v4}, Lcom/android/settingslib/RestrictedPreference;->setDisabledByAdmin(Lcom/android/settingslib/RestrictedLockUtils$EnforcedAdmin;)V
 
-    const v7, 0x7f121332
+    const v7, 0x7f12133f
 
     invoke-virtual {v11, v7}, Landroid/support/v7/preference/Preference;->setSummary(I)V
 
@@ -2693,7 +2693,7 @@
 
     move-result-object v5
 
-    const v6, 0x7f12087e
+    const v6, 0x7f12087f
 
     invoke-virtual {v5, v6}, Landroid/app/Activity;->setTitle(I)V
 
@@ -2807,7 +2807,7 @@
 
     const/16 v8, 0x64
 
-    const v9, 0x7f121338
+    const v9, 0x7f121345
 
     invoke-virtual {p0, v9}, Lcom/android/settings/password/ChooseLockGeneric$ChooseLockGenericFragment;->getString(I)Ljava/lang/String;
 

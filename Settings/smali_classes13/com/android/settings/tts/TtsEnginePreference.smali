@@ -139,7 +139,7 @@
 
     aput-object v5, v4, v6
 
-    const v5, 0x7f1212de
+    const v5, 0x7f1212eb
 
     invoke-virtual {v2, v5, v4}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -290,7 +290,7 @@
 
     if-eqz v0, :cond_1
 
-    const v0, 0x7f0a05bc
+    const v0, 0x7f0a05c0
 
     invoke-virtual {p1, v0}, Landroid/support/v7/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 

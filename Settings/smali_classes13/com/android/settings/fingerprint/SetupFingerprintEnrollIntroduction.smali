@@ -228,23 +228,25 @@
 
     if-eqz v1, :cond_0
 
-    const v1, 0x7f120bcd
+    const v1, 0x7f120bd0
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
     goto :goto_0
 
     :cond_0
-    const v1, 0x7f12107b
+    const v1, 0x7f121082    # 1.94153E38f
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
     :goto_0
+    invoke-virtual {p0, v2}, Lcom/android/settings/fingerprint/SetupFingerprintEnrollIntroduction;->setHeaderTextColor(I)V
+
     invoke-virtual {p0}, Lcom/android/settings/fingerprint/SetupFingerprintEnrollIntroduction;->getNextButton()Landroid/widget/Button;
 
     move-result-object v1
 
-    const v2, 0x7f12107a
+    const v2, 0x7f121081
 
     invoke-virtual {v1, v2}, Landroid/widget/Button;->setText(I)V
 
@@ -258,7 +260,7 @@
 
     invoke-virtual {v2, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v3, 0x7f121078
+    const v3, 0x7f12107f    # 1.9415294E38f
 
     invoke-virtual {v2, v3}, Landroid/widget/Button;->setText(I)V
 
@@ -625,11 +627,11 @@
 
     invoke-virtual {p0, v1}, Lcom/android/settings/fingerprint/SetupFingerprintEnrollIntroduction;->setContentView(I)V
 
-    const v1, 0x7f120b54
+    const v1, 0x7f120b56
 
     invoke-virtual {p0, v1}, Lcom/android/settings/fingerprint/SetupFingerprintEnrollIntroduction;->setHeaderText(I)V
 
-    const v1, 0x7f0a03c7
+    const v1, 0x7f0a03cb
 
     invoke-virtual {p0, v1}, Lcom/android/settings/fingerprint/SetupFingerprintEnrollIntroduction;->findViewById(I)Landroid/view/View;
 

@@ -2766,7 +2766,7 @@
     <string name="oneplus_fnatic_mode_add_to_wallpapers">添加到壁纸</string>
     <string name="oneplus_fnatic_mode_background_introduction_summary">最大化保证前台游戏性能。这可能导致部分应用运行异常。</string>
     <string name="oneplus_fnatic_mode_background_introduction_title">性能增强</string>
-    <string name="oneplus_fnatic_mode_disturb_introduction_summary">屏蔽所有通知和来电（低电通知、闹钟和倒计时除外）。你可以在通话记录里查看未接来电。</string>
+    <string name="oneplus_fnatic_mode_disturb_introduction_summary">屏蔽所有通知和来电（低电通知、闹钟和倒计时除外）。未接来电可能不会保存在通话记录中。</string>
     <string name="oneplus_fnatic_mode_disturb_introduction_title">深度免打扰</string>
     <string name="oneplus_fnatic_mode_enable_introduction_title">请在游戏模式下使用 Fnatic 电竞模式</string>
     <string name="oneplus_fnatic_mode_network_introduction_dual4g_summary">屏蔽副卡，优先保证主卡的信号强度，以获得更好的网络体验。你将因此不会收到副卡的来电和信息。</string>
@@ -2859,6 +2859,7 @@
     <string name="oneplus_haptic_feedback_tips">@string/oneplus_haptic_feedback_summary</string>
     <string name="oneplus_haptic_feedback_title">振动反馈增强</string>
     <string name="oneplus_hardware_keys_action_split_screen">开启/关闭 分屏</string>
+    <string name="oneplus_health_safety_information">健康与安全信息</string>
     <string name="oneplus_hearing_aid">助听器兼容模式</string>
     <string name="oneplus_hide_navkeys">一键隐藏</string>
     <string name="oneplus_hide_navkeys_summary">在虚拟按键左侧增加按钮，用来隐藏虚拟按键</string>
@@ -3825,6 +3826,10 @@ UT 接口：%5$s"</string>
     <string name="restore_default_apn_completed">已重置默认APN设置。</string>
     <string name="restr_pin_enter_admin_pin">输入管理员数字密码</string>
     <string name="restrict_background_blacklisted">后台数据已关闭</string>
+    <string name="restrict_background_uss_always">总是</string>
+    <string name="restrict_background_uss_never">从不</string>
+    <string name="restrict_background_uss_roaming">仅在漫游时</string>
+    <string name="restrict_background_uss_title">限制后台数据</string>
     <string name="restricted_app_detail_footer">这些应用一直在后台消耗电量。受限应用可能无法正常运行，且相关通知可能也会有所延迟。</string>
     <string name="restricted_app_title">受限应用</string>
     <string name="restricted_false_label">应用可以在后台使用电量</string>
@@ -4503,6 +4508,7 @@ PIN 码可能不正确。"</string>
     <string name="summary_divider_text">"， "</string>
     <string name="summary_range_symbol_combination">%1$s - %2$s</string>
     <string name="summary_range_verbal_combination">%1$s到%2$s</string>
+    <string name="summary_voice_network">VoLTE, WLAN 通话</string>
     <string name="support_country_format">%1$s - %2$s</string>
     <string name="support_summary">帮助文章、电话与聊天支持、使用入门</string>
     <string name="suw_back_button_label">返回</string>
@@ -4555,6 +4561,11 @@ PIN 码可能不正确。"</string>
     <string name="testing">测试</string>
     <string name="testing_phone_info">手机信息</string>
     <string name="testing_usage_stats">使用情况统计数据</string>
+    <string name="tether_error_item_default">网络共享</string>
+    <string name="tether_error_message">未成功开启%1$s.</string>
+    <string name="tether_error_title">%1$s错误</string>
+    <string name="tether_no_sim_message">插入 SIM 卡以使用 WLAN 热点和其他网络共享选项</string>
+    <string name="tether_no_sim_title">无 SIM 卡</string>
     <string name="tether_settings_disabled_on_data_saver">当流量节省程序开启时，无法使用网络共享功能或便携式热点</string>
     <string name="tether_settings_summary_hotspot_off_tether_on">网络共享</string>
     <string name="tether_settings_summary_hotspot_on_tether_off">已开启热点</string>
@@ -4950,6 +4961,7 @@ PIN 码可能不正确。"</string>
     <string name="voice_input_settings_title">语音输入</string>
     <string name="voice_interaction_security_warning">此语音输入服务能够始终进行语音监测，并能替您控制所有支持语音功能的应用。该服务由“%s”提供。要启用此服务吗？</string>
     <string name="voice_interactor_preference_summary">全语音启动指令和互动</string>
+    <string name="voice_network_title">语音通话</string>
     <string name="voice_recognizer_preference_summary">简单的语音转文字</string>
     <string name="voice_search_settings_title">语音搜索</string>
     <string name="voice_service_preference_section_title">语音输入服务</string>

@@ -2003,7 +2003,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0300d2
+    const v1, 0x7f0300d4
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
@@ -2960,6 +2960,31 @@
     invoke-virtual {v6, v4}, Landroid/support/v7/preference/Preference;->setVisible(Z)V
 
     :cond_e
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isSupportUss()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_f
+
+    const-string v4, "ringtone_category"
+
+    invoke-virtual {p0, v4}, Lcom/android/settings/notification/SoundSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/support/v7/preference/Preference;
+
+    move-result-object v4
+
+    check-cast v4, Landroid/support/v7/preference/PreferenceCategory;
+
+    if-eqz v4, :cond_f
+
+    iget-object v6, p0, Lcom/android/settings/notification/SoundSettings;->mSmsRingtonePreference:Landroid/support/v7/preference/Preference;
+
+    if-eqz v6, :cond_f
+
+    iget-object v6, p0, Lcom/android/settings/notification/SoundSettings;->mSmsRingtonePreference:Landroid/support/v7/preference/Preference;
+
+    invoke-virtual {v4, v6}, Landroid/support/v7/preference/PreferenceCategory;->removePreference(Landroid/support/v7/preference/Preference;)Z
+
+    :cond_f
     return-void
 .end method
 

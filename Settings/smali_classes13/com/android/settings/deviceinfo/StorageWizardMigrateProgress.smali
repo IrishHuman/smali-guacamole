@@ -74,7 +74,7 @@
 
     invoke-virtual {p0, v0}, Lcom/android/settings/deviceinfo/StorageWizardMigrateProgress;->setIcon(I)V
 
-    const v0, 0x7f121212
+    const v0, 0x7f121219
 
     const/4 v1, 0x0
 

@@ -41,7 +41,7 @@
 
     if-eq v1, v2, :cond_2
 
-    const v2, 0x7f1209e9
+    const v2, 0x7f1209eb
 
     packed-switch v1, :pswitch_data_0
 
@@ -58,7 +58,7 @@
 
     iget-object v2, p0, Lcom/android/settings/notification/ImportancePreferenceController;->mContext:Landroid/content/Context;
 
-    const v3, 0x7f1209e6
+    const v3, 0x7f1209e8
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -69,7 +69,7 @@
     :cond_0
     iget-object v2, p0, Lcom/android/settings/notification/ImportancePreferenceController;->mContext:Landroid/content/Context;
 
-    const v3, 0x7f1209e7
+    const v3, 0x7f1209e9
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -86,7 +86,7 @@
 
     iget-object v2, p0, Lcom/android/settings/notification/ImportancePreferenceController;->mContext:Landroid/content/Context;
 
-    const v3, 0x7f1209e3
+    const v3, 0x7f1209e5
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -115,7 +115,7 @@
     :pswitch_3
     iget-object v2, p0, Lcom/android/settings/notification/ImportancePreferenceController;->mContext:Landroid/content/Context;
 
-    const v3, 0x7f1209eb
+    const v3, 0x7f1209ed
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -126,7 +126,7 @@
     :cond_2
     iget-object v2, p0, Lcom/android/settings/notification/ImportancePreferenceController;->mContext:Landroid/content/Context;
 
-    const v3, 0x7f1209ee
+    const v3, 0x7f1209f0
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

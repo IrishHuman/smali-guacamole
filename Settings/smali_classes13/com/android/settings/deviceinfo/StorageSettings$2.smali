@@ -46,7 +46,7 @@
 
     invoke-direct {v1, p1}, Lcom/android/settings/search/SearchIndexableRaw;-><init>(Landroid/content/Context;)V
 
-    const v2, 0x7f1211df
+    const v2, 0x7f1211e6
 
     invoke-virtual {p1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -64,7 +64,7 @@
 
     iput-object v3, v1, Lcom/android/settings/search/SearchIndexableRaw;->screenTitle:Ljava/lang/String;
 
-    const v3, 0x7f1207d5
+    const v3, 0x7f1207d6
 
     invoke-virtual {p1, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -80,7 +80,7 @@
 
     move-object v1, v3
 
-    const v3, 0x7f120782
+    const v3, 0x7f120783
 
     invoke-virtual {p1, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -183,7 +183,7 @@
 
     move-object v1, v5
 
-    const v5, 0x7f12093c
+    const v5, 0x7f12093e
 
     invoke-virtual {p1, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -209,7 +209,7 @@
 
     move-object v1, v5
 
-    const v5, 0x7f120927
+    const v5, 0x7f120929
 
     invoke-virtual {p1, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -235,7 +235,7 @@
 
     move-object v1, v5
 
-    const v5, 0x7f120926
+    const v5, 0x7f120928
 
     invoke-virtual {p1, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -261,7 +261,7 @@
 
     move-object v1, v5
 
-    const v5, 0x7f12092f
+    const v5, 0x7f120931
 
     invoke-virtual {p1, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -287,7 +287,7 @@
 
     move-object v1, v5
 
-    const v5, 0x7f120939
+    const v5, 0x7f12093b
 
     invoke-virtual {p1, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -313,7 +313,7 @@
 
     move-object v1, v5
 
-    const v5, 0x7f120937
+    const v5, 0x7f120939
 
     invoke-virtual {p1, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -339,7 +339,7 @@
 
     move-object v1, v2
 
-    const v2, 0x7f1211cf
+    const v2, 0x7f1211d6
 
     invoke-virtual {p1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

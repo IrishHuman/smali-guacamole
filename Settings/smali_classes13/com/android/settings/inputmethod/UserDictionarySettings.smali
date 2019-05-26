@@ -281,7 +281,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f1213c1
+    const v2, 0x7f1213ce
 
     invoke-virtual {v1, v2}, Lcom/android/settings/core/SubSettingLauncher;->setTitle(I)Lcom/android/settings/core/SubSettingLauncher;
 
@@ -447,7 +447,7 @@
 
     const/4 v1, 0x1
 
-    const v2, 0x7f1213c3
+    const v2, 0x7f1213d0
 
     invoke-interface {p1, v0, v1, v0, v2}, Landroid/view/Menu;->add(IIII)Landroid/view/MenuItem;
 
@@ -479,7 +479,7 @@
 
     if-eqz v0, :cond_0
 
-    const v1, 0x7f1213d0
+    const v1, 0x7f1213dd
 
     invoke-virtual {v0, v1}, Landroid/app/ActionBar;->setTitle(I)V
 
@@ -656,7 +656,7 @@
 
     if-eqz v0, :cond_0
 
-    const v1, 0x7f1213cd
+    const v1, 0x7f1213da
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 

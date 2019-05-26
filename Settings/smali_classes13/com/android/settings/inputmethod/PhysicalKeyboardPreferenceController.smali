@@ -99,7 +99,7 @@
     :cond_2
     iget-object v4, p0, Lcom/android/settings/inputmethod/PhysicalKeyboardPreferenceController;->mContext:Landroid/content/Context;
 
-    const v5, 0x7f120789
+    const v5, 0x7f12078a
 
     const/4 v6, 0x2
 

@@ -542,7 +542,7 @@
 
     iget-object v0, p0, Lcom/android/settings/bluetooth/DeviceProfilesSettings;->mRootView:Landroid/view/View;
 
-    const v1, 0x7f0a035a
+    const v1, 0x7f0a035e
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1034,7 +1034,7 @@
     :cond_0
     iget-object v0, p0, Lcom/android/settings/bluetooth/DeviceProfilesSettings;->mRootView:Landroid/view/View;
 
-    const v1, 0x7f0a035a
+    const v1, 0x7f0a035e
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1202,7 +1202,7 @@
 
     iget-object v0, p0, Lcom/android/settings/bluetooth/DeviceProfilesSettings;->mRootView:Landroid/view/View;
 
-    const v1, 0x7f0a0462
+    const v1, 0x7f0a0466
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1214,7 +1214,7 @@
 
     iget-object v0, p0, Lcom/android/settings/bluetooth/DeviceProfilesSettings;->mRootView:Landroid/view/View;
 
-    const v1, 0x7f0a0461
+    const v1, 0x7f0a0465
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1226,7 +1226,7 @@
 
     iget-object v0, p0, Lcom/android/settings/bluetooth/DeviceProfilesSettings;->mRootView:Landroid/view/View;
 
-    const v1, 0x7f0a035a
+    const v1, 0x7f0a035e
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1264,7 +1264,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f120a3f
+    const v2, 0x7f120a41
 
     invoke-virtual {v1, v2, p0}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 

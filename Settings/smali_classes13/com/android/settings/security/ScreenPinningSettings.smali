@@ -102,12 +102,12 @@
     goto :goto_0
 
     :cond_0
-    const v1, 0x7f121010
+    const v1, 0x7f121017
 
     return v1
 
     :cond_1
-    const v1, 0x7f121012
+    const v1, 0x7f121019
 
     return v1
 
@@ -124,13 +124,13 @@
 
     if-eqz v1, :cond_3
 
-    const v1, 0x7f121011
+    const v1, 0x7f121018
 
     return v1
 
     :cond_3
     :goto_0
-    const v1, 0x7f12100f
+    const v1, 0x7f121016
 
     return v1
 .end method
@@ -171,7 +171,7 @@
 
     const/4 v2, 0x1
 
-    const v3, 0x7f12100f
+    const v3, 0x7f121016
 
     if-eq v0, v3, :cond_0
 
@@ -326,7 +326,7 @@
 
     check-cast v0, Lcom/android/settings/SettingsActivity;
 
-    const v1, 0x7f12100e
+    const v1, 0x7f121015
 
     invoke-virtual {v0, v1}, Lcom/android/settings/SettingsActivity;->setTitle(I)V
 

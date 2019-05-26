@@ -18,6 +18,8 @@
 # instance fields
 .field private mProtectFromCheckedChange:Z
 
+.field private mRadioEnable:Z
+
 .field private mSelectable:Z
 
 .field private mSubId:I
@@ -72,6 +74,8 @@
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/settings/network/ApnPreference;->mSelectable:Z
+
+    iput-boolean v0, p0, Lcom/android/settings/network/ApnPreference;->mRadioEnable:Z
 
     return-void
 .end method
@@ -162,6 +166,10 @@
 
     invoke-virtual {v1, v3}, Landroid/widget/RadioButton;->setVisibility(I)V
 
+    iget-boolean v3, p0, Lcom/android/settings/network/ApnPreference;->mRadioEnable:Z
+
+    invoke-virtual {v1, v3}, Landroid/widget/RadioButton;->setEnabled(Z)V
+
     goto :goto_0
 
     :cond_1
@@ -171,7 +179,7 @@
 
     :cond_2
     :goto_0
-    const v1, 0x7f0a058d
+    const v1, 0x7f0a0591
 
     invoke-virtual {p1, v1}, Landroid/support/v7/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 
@@ -270,7 +278,7 @@
 
     if-eqz p1, :cond_0
 
-    const v0, 0x7f0a058d
+    const v0, 0x7f0a0591
 
     invoke-virtual {p1}, Landroid/view/View;->getId()I
 
@@ -326,6 +334,14 @@
     move-result-object v0
 
     sput-object v0, Lcom/android/settings/network/ApnPreference;->mSelectedKey:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public setRadioButtonEnable(Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/android/settings/network/ApnPreference;->mRadioEnable:Z
 
     return-void
 .end method

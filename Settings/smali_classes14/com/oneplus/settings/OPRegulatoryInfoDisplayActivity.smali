@@ -41,7 +41,7 @@
 
     move-result v0
 
-    const v1, 0x7f120c65
+    const v1, 0x7f120c68
 
     if-nez v0, :cond_0
 
@@ -79,7 +79,7 @@
 
     invoke-virtual {p0, v0}, Lcom/oneplus/settings/OPRegulatoryInfoDisplayActivity;->setContentView(I)V
 
-    const v0, 0x7f0a048d
+    const v0, 0x7f0a0491
 
     invoke-virtual {p0, v0}, Lcom/oneplus/settings/OPRegulatoryInfoDisplayActivity;->findViewById(I)Landroid/view/View;
 
@@ -186,7 +186,7 @@
     :cond_6
     sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
-    const v3, 0x7f120c07
+    const v3, 0x7f120c0a
 
     invoke-virtual {p0, v3}, Lcom/oneplus/settings/OPRegulatoryInfoDisplayActivity;->getString(I)Ljava/lang/String;
 
@@ -209,7 +209,7 @@
     :cond_7
     sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
-    const v3, 0x7f120c08
+    const v3, 0x7f120c0b
 
     invoke-virtual {p0, v3}, Lcom/oneplus/settings/OPRegulatoryInfoDisplayActivity;->getString(I)Ljava/lang/String;
 
@@ -288,20 +288,6 @@
     :cond_a
     sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
-    const v2, 0x7f120c67
-
-    invoke-virtual {p0, v2}, Lcom/oneplus/settings/OPRegulatoryInfoDisplayActivity;->getString(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_d
-
-    sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
-
     const v2, 0x7f120c6a
 
     invoke-virtual {p0, v2}, Lcom/oneplus/settings/OPRegulatoryInfoDisplayActivity;->getString(I)Ljava/lang/String;
@@ -316,7 +302,7 @@
 
     sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
-    const v2, 0x7f120c6e
+    const v2, 0x7f120c6d
 
     invoke-virtual {p0, v2}, Lcom/oneplus/settings/OPRegulatoryInfoDisplayActivity;->getString(I)Ljava/lang/String;
 
@@ -330,7 +316,21 @@
 
     sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
-    const v2, 0x7f120c68
+    const v2, 0x7f120c71
+
+    invoke-virtual {p0, v2}, Lcom/oneplus/settings/OPRegulatoryInfoDisplayActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_d
+
+    sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
+
+    const v2, 0x7f120c6b
 
     invoke-virtual {p0, v2}, Lcom/oneplus/settings/OPRegulatoryInfoDisplayActivity;->getString(I)Ljava/lang/String;
 

@@ -248,7 +248,7 @@
 
     aput-object v0, v3, v4
 
-    const v5, 0x7f1209f3
+    const v5, 0x7f1209f5
 
     invoke-virtual {p0, v5, v3}, Lcom/android/settings/notification/NotificationAccessConfirmationActivity;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -260,7 +260,7 @@
 
     aput-object v0, v2, v4
 
-    const v3, 0x7f1209f2
+    const v3, 0x7f1209f4
 
     invoke-virtual {p0, v3, v2}, Lcom/android/settings/notification/NotificationAccessConfirmationActivity;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 

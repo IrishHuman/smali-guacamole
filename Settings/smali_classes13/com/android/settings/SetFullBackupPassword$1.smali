@@ -95,7 +95,7 @@
 
     iget-object v3, p0, Lcom/android/settings/SetFullBackupPassword$1;->this$0:Lcom/android/settings/SetFullBackupPassword;
 
-    const v5, 0x7f12083c
+    const v5, 0x7f12083d
 
     invoke-static {v3, v5, v4}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
 
@@ -122,7 +122,7 @@
 
     iget-object v3, p0, Lcom/android/settings/SetFullBackupPassword$1;->this$0:Lcom/android/settings/SetFullBackupPassword;
 
-    const v5, 0x7f12083d
+    const v5, 0x7f12083e
 
     invoke-static {v3, v5, v4}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
 
@@ -145,7 +145,7 @@
 
     iget-object v3, p0, Lcom/android/settings/SetFullBackupPassword$1;->this$0:Lcom/android/settings/SetFullBackupPassword;
 
-    const v5, 0x7f12083e
+    const v5, 0x7f12083f
 
     invoke-static {v3, v5, v4}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
 

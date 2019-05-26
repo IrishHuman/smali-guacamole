@@ -182,7 +182,7 @@
 
     iget-object v0, p0, Lcom/android/settings/applications/appinfo/PictureInPictureDetails;->mSwitchPref:Landroid/support/v14/preference/SwitchPreference;
 
-    const v1, 0x7f120eb4
+    const v1, 0x7f120eb7
 
     invoke-virtual {v0, v1}, Landroid/support/v14/preference/SwitchPreference;->setTitle(I)V
 

@@ -27,7 +27,7 @@
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    const v1, 0x7f0a0367
+    const v1, 0x7f0a036b
 
     invoke-virtual {p0, v1}, Lcom/oneplus/settings/OPScreenColorModeForSetupWizard;->findViewById(I)Landroid/view/View;
 

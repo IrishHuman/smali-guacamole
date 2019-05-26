@@ -18,6 +18,7 @@
     <Preference android:title="@string/oneplus_user_agreement" android:key="op_user_agreements" />
     <Preference android:title="@string/oneplus_privacy_policy" android:key="op_privacy_policy" />
     <Preference android:title="@string/oneplus_permission_agreement" android:key="op_permission_agreement" />
+    <Preference android:title="@string/oneplus_health_safety_information" android:key="health_safety_information" />
     <Preference android:title="@string/wallpaper_attributions" android:key="wallpaper_attributions" android:summary="@string/oneplus_wallpaper_attributions_values" />
     <Preference android:title="@string/icon_attributions" android:key="icon_attributions" android:summary="@string/icon_attributions_values" />
 </PreferenceScreen>

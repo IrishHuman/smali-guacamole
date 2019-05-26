@@ -52,7 +52,7 @@
 
     invoke-super {p0, p1}, Lcom/android/settingslib/wifi/AccessPointPreference;->onBindViewHolder(Landroid/support/v7/preference/PreferenceViewHolder;)V
 
-    const v0, 0x7f0a04ee
+    const v0, 0x7f0a04f2
 
     invoke-virtual {p1, v0}, Landroid/support/v7/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 
@@ -60,7 +60,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v1, 0x7f0a04ef
+    const v1, 0x7f0a04f3
 
     invoke-virtual {p1, v1}, Landroid/support/v7/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 
@@ -127,7 +127,7 @@
 
     move-result v0
 
-    const v1, 0x7f0a04ee
+    const v1, 0x7f0a04f2
 
     if-ne v0, v1, :cond_0
 
@@ -156,7 +156,7 @@
 
     if-eqz v0, :cond_0
 
-    const v0, 0x7f1215d0
+    const v0, 0x7f1215de
 
     invoke-virtual {p0, v0}, Lcom/android/settings/wifi/ConnectedAccessPointPreference;->setSummary(I)V
 

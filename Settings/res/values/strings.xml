@@ -1983,6 +1983,7 @@ You can change this later from Settings > Apps &amp; notifications."</string>
     <string name="ims_reg_status_not_registered">Not registered</string>
     <string name="ims_reg_status_registered">Registered</string>
     <string name="ims_reg_title">IMS registration state</string>
+    <string name="imsi_title">IMSI</string>
     <string name="inactive_app_active_summary">Active. Tap to toggle.</string>
     <string name="inactive_app_inactive_summary">Inactive. Tap to toggle.</string>
     <string name="inactive_apps_title">Standby apps</string>
@@ -2455,6 +2456,7 @@ There are other users present on this device.
     <string name="media_volume_summary">Set volume for music and videos</string>
     <string name="media_volume_title">Media</string>
     <string name="meid_multi_sim">MEID (sim slot %1$d)</string>
+    <string name="meid_title">MEID</string>
     <string name="mem_details_title">Memory details</string>
     <string name="memory">RAM</string>
     <string name="memory_apps_usage">Apps &amp; app data</string>
@@ -3039,7 +3041,7 @@ Caution: Face Unlock is less secure than using Fingerprint or a password"</strin
     <string name="oneplus_fnatic_mode_add_to_wallpapers">Add to wallpapers</string>
     <string name="oneplus_fnatic_mode_background_introduction_summary">Focusing performance almost entirely towards game play. This may result in glitches in some apps.</string>
     <string name="oneplus_fnatic_mode_background_introduction_title">Enhance process regulator</string>
-    <string name="oneplus_fnatic_mode_disturb_introduction_summary">Block all notifications and calls (except low battery notification, alarm and timer). You can only view missed calls in the call history.</string>
+    <string name="oneplus_fnatic_mode_disturb_introduction_summary">Block all notifications and calls (except low battery notification, alarm and timer).Missed calls may not be saved in call logs.</string>
     <string name="oneplus_fnatic_mode_disturb_introduction_title">Advanced DND</string>
     <string name="oneplus_fnatic_mode_enable_introduction_title">Gaming mode must be enabled first in order to use Fnatic mode</string>
     <string name="oneplus_fnatic_mode_network_introduction_dual4g_summary">Primary SIM card signal strength is prioritized to minimize interference for low latency game play. As a result the secondary SIM card will be disabled, and calls or messages will not be received.</string>
@@ -3133,6 +3135,7 @@ To go to the home screen at any time, swipe up from the bottom center edge of th
     <string name="oneplus_haptic_feedback_tips">Provide haptic feedback for specific game scenes，only applicable to supported games</string>
     <string name="oneplus_haptic_feedback_title">Haptic feedback enhancement</string>
     <string name="oneplus_hardware_keys_action_split_screen">Open/Close split screen</string>
+    <string name="oneplus_health_safety_information">Health &amp; Safety Information</string>
     <string name="oneplus_hearing_aid">Hearing Aid Compatibility</string>
     <string name="oneplus_hide_navigation_bar">Hide navigation bar</string>
     <string name="oneplus_hide_navkeys">Hide the navigation bar</string>
@@ -4198,6 +4201,10 @@ UT Interface: %5$s"</string>
     <string name="restore_default_apn_completed">Reset default APN settings completed.</string>
     <string name="restr_pin_enter_admin_pin">Enter admin PIN</string>
     <string name="restrict_background_blacklisted">Background data is turned off</string>
+    <string name="restrict_background_uss_always">Always</string>
+    <string name="restrict_background_uss_never">Never</string>
+    <string name="restrict_background_uss_roaming">While roaming only</string>
+    <string name="restrict_background_uss_title">Restrict background data</string>
     <string name="restricted_app_detail_footer">These apps have been using battery in the background. Restricted apps may not work properly and notifications may be delayed.</string>
     <string name="restricted_app_title">Restricted apps</string>
     <string name="restricted_false_label">App can use battery in background</string>
@@ -4926,6 +4933,7 @@ Try using a faster ^3, or use this ^4 for portable storage instead."</string>
     <string name="summary_range_verbal_combination">%1$s to %2$s</string>
     <string name="summary_two_lines_placeholder">" 
  "</string>
+    <string name="summary_voice_network">VoLTE, Wi-Fi Calling</string>
     <string name="supplicant_state_label">Supplicant state:</string>
     <string name="support_country_format">%1$s - %2$s</string>
     <string name="support_summary">Help articles, phone &amp; chat, getting started</string>
@@ -4983,6 +4991,11 @@ A Google approach to syncing data to allow access to your contacts, appointments
     <string name="testing_sim_toolkit">SIM toolkit</string>
     <string name="testing_usage_stats">Usage statistics</string>
     <string name="testing_wifi_info">Wi-Fi information</string>
+    <string name="tether_error_item_default">Tethering</string>
+    <string name="tether_error_message">You are not subscribed to %1$s.</string>
+    <string name="tether_error_title">%1$s error</string>
+    <string name="tether_no_sim_message">Insert a SIM card to use Mobile Hotspot and other tethering options</string>
+    <string name="tether_no_sim_title">No SIM card</string>
     <string name="tether_settings_disabled_on_data_saver">Can’t tether or use portable hotspots while Data Saver is on</string>
     <string name="tether_settings_summary_hotspot_off_tether_on">Tethering</string>
     <string name="tether_settings_summary_hotspot_on_tether_off">Hotspot on</string>
@@ -5405,6 +5418,7 @@ Any user can update apps for all other users."</string>
     <string name="voice_input_settings_title">Voice input</string>
     <string name="voice_interaction_security_warning">This voice input service will be able to perform always-on voice monitoring and control voice enabled applications on your behalf. It comes from the %s application. Enable the use of this service?</string>
     <string name="voice_interactor_preference_summary">Full hotword and interaction</string>
+    <string name="voice_network_title">Voice networks</string>
     <string name="voice_recognizer_preference_summary">Simple speech to text</string>
     <string name="voice_search_settings_title">Voice search</string>
     <string name="voice_service_preference_section_title">Voice input services</string>
@@ -6167,27 +6181,21 @@ Update settings to:
     <string name="zone_time_type_dst">Daylight savings time</string>
     <string name="zone_time_type_standard">Standard time</string>
     <item type="string" name="APKTOOL_DUMMY_658">false</item>
-    <item type="string" name="APKTOOL_DUMMY_a48">false</item>
-    <item type="string" name="APKTOOL_DUMMY_a49">false</item>
     <item type="string" name="APKTOOL_DUMMY_a4a">false</item>
     <item type="string" name="APKTOOL_DUMMY_a4b">false</item>
-    <item type="string" name="APKTOOL_DUMMY_a73">false</item>
-    <item type="string" name="APKTOOL_DUMMY_a74">false</item>
-    <item type="string" name="APKTOOL_DUMMY_aeb">false</item>
-    <item type="string" name="APKTOOL_DUMMY_bf2">false</item>
-    <item type="string" name="APKTOOL_DUMMY_bf4">false</item>
-    <item type="string" name="APKTOOL_DUMMY_bf6">false</item>
-    <item type="string" name="APKTOOL_DUMMY_c18">false</item>
-    <item type="string" name="APKTOOL_DUMMY_c19">false</item>
-    <item type="string" name="APKTOOL_DUMMY_c61">false</item>
-    <item type="string" name="APKTOOL_DUMMY_c62">false</item>
-    <item type="string" name="APKTOOL_DUMMY_d9d">false</item>
-    <item type="string" name="APKTOOL_DUMMY_d9e">false</item>
-    <item type="string" name="APKTOOL_DUMMY_130e">false</item>
-    <string name="hardware_keys_action_kill">Kill foreground app</string>
-    <string name="hardware_keys_action_screenshot">Full screenshot</string>
-    <string name="hardware_keys_action_screenshot2">Croppable screenshot</string>
-    <string name="hardware_keys_action_app">Launch custom app (select app in RiCE)</string>
-    <string name="hardware_keys_action_previous_app">Switch to previous app</string>
-    <string name="hardware_keys_action_default_double_recents">Nothing (Switch to previous app)</string>
+    <item type="string" name="APKTOOL_DUMMY_a4c">false</item>
+    <item type="string" name="APKTOOL_DUMMY_a4d">false</item>
+    <item type="string" name="APKTOOL_DUMMY_a75">false</item>
+    <item type="string" name="APKTOOL_DUMMY_a76">false</item>
+    <item type="string" name="APKTOOL_DUMMY_aed">false</item>
+    <item type="string" name="APKTOOL_DUMMY_bf5">false</item>
+    <item type="string" name="APKTOOL_DUMMY_bf7">false</item>
+    <item type="string" name="APKTOOL_DUMMY_bf9">false</item>
+    <item type="string" name="APKTOOL_DUMMY_c1b">false</item>
+    <item type="string" name="APKTOOL_DUMMY_c1c">false</item>
+    <item type="string" name="APKTOOL_DUMMY_c64">false</item>
+    <item type="string" name="APKTOOL_DUMMY_c65">false</item>
+    <item type="string" name="APKTOOL_DUMMY_da0">false</item>
+    <item type="string" name="APKTOOL_DUMMY_da1">false</item>
+    <item type="string" name="APKTOOL_DUMMY_131b">false</item>
 </resources>

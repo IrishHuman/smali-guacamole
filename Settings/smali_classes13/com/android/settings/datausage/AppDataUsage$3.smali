@@ -20,9 +20,8 @@
     value = {
         "Ljava/lang/Object;",
         "Landroid/app/LoaderManager$LoaderCallbacks<",
-        "Landroid/util/ArraySet<",
-        "Landroid/support/v7/preference/Preference;",
-        ">;>;"
+        "Lcom/android/settingslib/net/ChartData;",
+        ">;"
     }
 .end annotation
 
@@ -45,106 +44,87 @@
 
 # virtual methods
 .method public onCreateLoader(ILandroid/os/Bundle;)Landroid/content/Loader;
-    .locals 4
+    .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
             "Landroid/os/Bundle;",
             ")",
             "Landroid/content/Loader<",
-            "Landroid/util/ArraySet<",
-            "Landroid/support/v7/preference/Preference;",
-            ">;>;"
+            "Lcom/android/settingslib/net/ChartData;",
+            ">;"
         }
     .end annotation
 
-    new-instance v0, Lcom/android/settings/datausage/AppPrefLoader;
+    new-instance v0, Lcom/android/settingslib/net/ChartDataLoader;
 
     iget-object v1, p0, Lcom/android/settings/datausage/AppDataUsage$3;->this$0:Lcom/android/settings/datausage/AppDataUsage;
 
-    invoke-static {v1}, Lcom/android/settings/datausage/AppDataUsage;->access$600(Lcom/android/settings/datausage/AppDataUsage;)Landroid/content/Context;
+    invoke-virtual {v1}, Lcom/android/settings/datausage/AppDataUsage;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
     iget-object v2, p0, Lcom/android/settings/datausage/AppDataUsage$3;->this$0:Lcom/android/settings/datausage/AppDataUsage;
 
-    invoke-static {v2}, Lcom/android/settings/datausage/AppDataUsage;->access$700(Lcom/android/settings/datausage/AppDataUsage;)Landroid/util/ArraySet;
+    invoke-static {v2}, Lcom/android/settings/datausage/AppDataUsage;->access$200(Lcom/android/settings/datausage/AppDataUsage;)Landroid/net/INetworkStatsSession;
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/android/settings/datausage/AppDataUsage$3;->this$0:Lcom/android/settings/datausage/AppDataUsage;
-
-    invoke-static {v3}, Lcom/android/settings/datausage/AppDataUsage;->access$800(Lcom/android/settings/datausage/AppDataUsage;)Landroid/content/pm/PackageManager;
-
-    move-result-object v3
-
-    invoke-direct {v0, v1, v2, v3}, Lcom/android/settings/datausage/AppPrefLoader;-><init>(Landroid/content/Context;Landroid/util/ArraySet;Landroid/content/pm/PackageManager;)V
+    invoke-direct {v0, v1, v2, p2}, Lcom/android/settingslib/net/ChartDataLoader;-><init>(Landroid/content/Context;Landroid/net/INetworkStatsSession;Landroid/os/Bundle;)V
 
     return-object v0
 .end method
 
-.method public onLoadFinished(Landroid/content/Loader;Landroid/util/ArraySet;)V
+.method public onLoadFinished(Landroid/content/Loader;Lcom/android/settingslib/net/ChartData;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/content/Loader<",
-            "Landroid/util/ArraySet<",
-            "Landroid/support/v7/preference/Preference;",
-            ">;>;",
-            "Landroid/util/ArraySet<",
-            "Landroid/support/v7/preference/Preference;",
-            ">;)V"
+            "Lcom/android/settingslib/net/ChartData;",
+            ">;",
+            "Lcom/android/settingslib/net/ChartData;",
+            ")V"
         }
     .end annotation
 
-    if-eqz p2, :cond_0
+    iget-object v0, p0, Lcom/android/settings/datausage/AppDataUsage$3;->this$0:Lcom/android/settings/datausage/AppDataUsage;
+
+    invoke-static {v0, p2}, Lcom/android/settings/datausage/AppDataUsage;->access$302(Lcom/android/settings/datausage/AppDataUsage;Lcom/android/settingslib/net/ChartData;)Lcom/android/settingslib/net/ChartData;
 
     iget-object v0, p0, Lcom/android/settings/datausage/AppDataUsage$3;->this$0:Lcom/android/settings/datausage/AppDataUsage;
 
-    invoke-static {v0}, Lcom/android/settings/datausage/AppDataUsage;->access$900(Lcom/android/settings/datausage/AppDataUsage;)Landroid/support/v7/preference/PreferenceCategory;
+    invoke-static {v0}, Lcom/android/settings/datausage/AppDataUsage;->access$500(Lcom/android/settings/datausage/AppDataUsage;)Lcom/android/settings/datausage/CycleAdapter;
 
     move-result-object v0
 
-    if-eqz v0, :cond_0
+    iget-object v1, p0, Lcom/android/settings/datausage/AppDataUsage$3;->this$0:Lcom/android/settings/datausage/AppDataUsage;
 
-    invoke-virtual {p2}, Landroid/util/ArraySet;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-static {v1}, Lcom/android/settings/datausage/AppDataUsage;->access$400(Lcom/android/settings/datausage/AppDataUsage;)Landroid/net/NetworkPolicy;
 
     move-result-object v1
 
-    check-cast v1, Landroid/support/v7/preference/Preference;
-
     iget-object v2, p0, Lcom/android/settings/datausage/AppDataUsage$3;->this$0:Lcom/android/settings/datausage/AppDataUsage;
 
-    invoke-static {v2}, Lcom/android/settings/datausage/AppDataUsage;->access$900(Lcom/android/settings/datausage/AppDataUsage;)Landroid/support/v7/preference/PreferenceCategory;
+    invoke-static {v2}, Lcom/android/settings/datausage/AppDataUsage;->access$300(Lcom/android/settings/datausage/AppDataUsage;)Lcom/android/settingslib/net/ChartData;
 
     move-result-object v2
 
-    invoke-virtual {v2, v1}, Landroid/support/v7/preference/PreferenceCategory;->addPreference(Landroid/support/v7/preference/Preference;)Z
+    invoke-virtual {v0, v1, v2}, Lcom/android/settings/datausage/CycleAdapter;->updateCycleList(Landroid/net/NetworkPolicy;Lcom/android/settingslib/net/ChartData;)Z
 
-    goto :goto_0
+    iget-object v0, p0, Lcom/android/settings/datausage/AppDataUsage$3;->this$0:Lcom/android/settings/datausage/AppDataUsage;
 
-    :cond_0
+    invoke-static {v0}, Lcom/android/settings/datausage/AppDataUsage;->access$100(Lcom/android/settings/datausage/AppDataUsage;)V
+
     return-void
 .end method
 
 .method public bridge synthetic onLoadFinished(Landroid/content/Loader;Ljava/lang/Object;)V
     .locals 0
 
-    check-cast p2, Landroid/util/ArraySet;
+    check-cast p2, Lcom/android/settingslib/net/ChartData;
 
-    invoke-virtual {p0, p1, p2}, Lcom/android/settings/datausage/AppDataUsage$3;->onLoadFinished(Landroid/content/Loader;Landroid/util/ArraySet;)V
+    invoke-virtual {p0, p1, p2}, Lcom/android/settings/datausage/AppDataUsage$3;->onLoadFinished(Landroid/content/Loader;Lcom/android/settingslib/net/ChartData;)V
 
     return-void
 .end method
@@ -155,9 +135,8 @@
         value = {
             "(",
             "Landroid/content/Loader<",
-            "Landroid/util/ArraySet<",
-            "Landroid/support/v7/preference/Preference;",
-            ">;>;)V"
+            "Lcom/android/settingslib/net/ChartData;",
+            ">;)V"
         }
     .end annotation
 

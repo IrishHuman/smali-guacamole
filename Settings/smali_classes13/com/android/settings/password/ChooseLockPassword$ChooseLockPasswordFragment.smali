@@ -835,7 +835,7 @@
 
     iput-object v2, p0, Lcom/android/settings/password/ChooseLockPassword$ChooseLockPasswordFragment;->mPasswordRequirements:[I
 
-    const v2, 0x7f0a042a
+    const v2, 0x7f0a042e
 
     invoke-virtual {p1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1276,7 +1276,7 @@
 
     if-lez v1, :cond_0
 
-    const v1, 0x7f1208ae
+    const v1, 0x7f1208af
 
     invoke-virtual {p0, v1}, Lcom/android/settings/password/ChooseLockPassword$ChooseLockPasswordFragment;->getString(I)Ljava/lang/String;
 
@@ -1289,7 +1289,7 @@
 
     if-lez v1, :cond_1
 
-    const v1, 0x7f1208bb
+    const v1, 0x7f1208bc
 
     invoke-virtual {p0, v1}, Lcom/android/settings/password/ChooseLockPassword$ChooseLockPasswordFragment;->getString(I)Ljava/lang/String;
 
@@ -1484,12 +1484,12 @@
 
     if-eqz v1, :cond_8
 
-    const v1, 0x7f1208b8
+    const v1, 0x7f1208b9
 
     goto :goto_0
 
     :cond_8
-    const v1, 0x7f1208c0
+    const v1, 0x7f1208c1
 
     :goto_0
     new-array v4, v3, [Ljava/lang/Object;
@@ -1517,12 +1517,12 @@
 
     if-eqz v1, :cond_a
 
-    const v1, 0x7f1208b7
+    const v1, 0x7f1208b8
 
     goto :goto_1
 
     :cond_a
-    const v1, 0x7f1208bf
+    const v1, 0x7f1208c0
 
     :goto_1
     new-array v4, v3, [Ljava/lang/Object;
@@ -1548,7 +1548,7 @@
 
     if-lez v1, :cond_c
 
-    const v1, 0x7f1208bc
+    const v1, 0x7f1208bd
 
     invoke-virtual {p0, v1}, Lcom/android/settings/password/ChooseLockPassword$ChooseLockPasswordFragment;->getString(I)Ljava/lang/String;
 
@@ -1565,12 +1565,12 @@
 
     if-eqz v1, :cond_d
 
-    const v1, 0x7f1208b2
+    const v1, 0x7f1208b3
 
     goto :goto_2
 
     :cond_d
-    const v1, 0x7f1208bd
+    const v1, 0x7f1208be
 
     :goto_2
     invoke-virtual {p0, v1}, Lcom/android/settings/password/ChooseLockPassword$ChooseLockPasswordFragment;->getString(I)Ljava/lang/String;
@@ -1863,7 +1863,7 @@
 
     if-eq v0, v1, :cond_1
 
-    const v1, 0x7f0a0367
+    const v1, 0x7f0a036b
 
     if-eq v0, v1, :cond_0
 
@@ -2204,7 +2204,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/TextView;->setTextAppearance(Landroid/content/Context;I)V
 
-    const v0, 0x7f0a0426
+    const v0, 0x7f0a042a
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2216,7 +2216,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->setOpticalInsets(Landroid/graphics/Insets;)V
 
-    const v1, 0x7f0a0509
+    const v1, 0x7f0a050d
 
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2230,7 +2230,7 @@
 
     invoke-virtual {v1, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v1, 0x7f0a0367
+    const v1, 0x7f0a036b
 
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2303,7 +2303,7 @@
     invoke-virtual {v1, v4}, Landroid/widget/CheckBox;->setChecked(Z)V
 
     :cond_1
-    const v1, 0x7f0a033e
+    const v1, 0x7f0a0342
 
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2389,7 +2389,7 @@
 
     invoke-virtual {v1, v4}, Landroid/support/v7/widget/RecyclerView;->setLayoutManager(Landroid/support/v7/widget/RecyclerView$LayoutManager;)V
 
-    const v1, 0x7f0a0427
+    const v1, 0x7f0a042b
 
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2515,7 +2515,7 @@
 
     const/16 v7, 0x3a
 
-    const v8, 0x7f121338
+    const v8, 0x7f121345
 
     invoke-virtual {p0, v8}, Lcom/android/settings/password/ChooseLockPassword$ChooseLockPasswordFragment;->getString(I)Ljava/lang/String;
 
@@ -2602,7 +2602,7 @@
 
     move-result v3
 
-    const v7, 0x7f120abf
+    const v7, 0x7f120ac1
 
     invoke-virtual {v2, v7}, Lcom/android/settings/SettingsActivity;->setTitle(I)V
 

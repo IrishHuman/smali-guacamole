@@ -197,7 +197,7 @@
 
     const v2, 0x7f120243
 
-    const v3, 0x7f0a04ba
+    const v3, 0x7f0a04be
 
     invoke-direct {p0, v1, v2, v3}, Lcom/android/settings/fuelgauge/BatteryHistoryDetail;->bindData(Lcom/android/settings/fuelgauge/BatteryActiveView$BatteryActiveProvider;II)V
 
@@ -229,7 +229,7 @@
 
     const v2, 0x7f120245
 
-    const v3, 0x7f0a0611
+    const v3, 0x7f0a0615
 
     invoke-direct {p0, v1, v2, v3}, Lcom/android/settings/fuelgauge/BatteryHistoryDetail;->bindData(Lcom/android/settings/fuelgauge/BatteryActiveView$BatteryActiveProvider;II)V
 

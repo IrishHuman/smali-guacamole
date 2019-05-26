@@ -319,7 +319,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f1211d9
+    const v2, 0x7f1211e0
 
     invoke-virtual {v1, v2}, Lcom/android/settings/core/SubSettingLauncher;->setTitle(I)Lcom/android/settings/core/SubSettingLauncher;
 
@@ -465,7 +465,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f1211d8
+    const v2, 0x7f1211df
 
     invoke-virtual {v1, v2}, Lcom/android/settings/core/SubSettingLauncher;->setTitle(I)Lcom/android/settings/core/SubSettingLauncher;
 
@@ -535,7 +535,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f1211dd
+    const v2, 0x7f1211e4
 
     invoke-virtual {v1, v2}, Lcom/android/settings/core/SubSettingLauncher;->setTitle(I)Lcom/android/settings/core/SubSettingLauncher;
 

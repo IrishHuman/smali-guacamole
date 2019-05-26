@@ -434,7 +434,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_d
+    if-eqz v1, :cond_e
 
     invoke-static {p1}, Lcom/oneplus/settings/utils/OPUtils;->restoreBackupEntranceInLauncher(Landroid/content/Context;)V
 
@@ -522,6 +522,15 @@
     invoke-virtual {v1}, Ljava/lang/Thread;->start()V
 
     :cond_d
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isSupportUss()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_e
+
+    invoke-static {p1}, Lcom/android/settings/datausage/backgrounddata/utils/BackgroundDataUtils;->initAppBackgroundDataType(Landroid/content/Context;)V
+
+    :cond_e
     const-string v1, "oneplus.intent.action.otg_auto_shutdown"
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -532,7 +541,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_e
+    if-eqz v1, :cond_f
 
     const-string v1, "persist.sys.oem.otg_support"
 
@@ -560,7 +569,7 @@
 
     move-result v1
 
-    if-nez v1, :cond_e
+    if-nez v1, :cond_f
 
     new-instance v3, Landroid/app/NotificationChannel;
 
@@ -570,7 +579,7 @@
 
     move-result-object v6
 
-    const v7, 0x7f120c85
+    const v7, 0x7f120c88
 
     invoke-virtual {v6, v7}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -650,6 +659,6 @@
 
     invoke-static {v7, v9, v2}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    :cond_e
+    :cond_f
     return-void
 .end method

@@ -69,7 +69,7 @@
 
     iget-object v0, p0, Lcom/android/settings/network/NetworkDashboardFragment$SummaryProvider;->mContext:Landroid/content/Context;
 
-    const v1, 0x7f120d79
+    const v1, 0x7f120d7c
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -77,7 +77,7 @@
 
     iget-object v1, p0, Lcom/android/settings/network/NetworkDashboardFragment$SummaryProvider;->mContext:Landroid/content/Context;
 
-    const v2, 0x7f120982
+    const v2, 0x7f120984
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -101,7 +101,7 @@
 
     aput-object v1, v4, v6
 
-    const v7, 0x7f120789
+    const v7, 0x7f12078a
 
     invoke-virtual {v2, v7, v4}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -109,7 +109,7 @@
 
     iget-object v2, p0, Lcom/android/settings/network/NetworkDashboardFragment$SummaryProvider;->mContext:Landroid/content/Context;
 
-    const v4, 0x7f120976
+    const v4, 0x7f120978
 
     invoke-virtual {v2, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -137,7 +137,7 @@
 
     iget-object v4, p0, Lcom/android/settings/network/NetworkDashboardFragment$SummaryProvider;->mContext:Landroid/content/Context;
 
-    const v8, 0x7f120977
+    const v8, 0x7f120979
 
     invoke-virtual {v4, v8}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

@@ -2549,8 +2549,8 @@ Tämä myöntää sovellukselle lisäksi oikeuden ottaa Älä häiritse ‑tilan
     <string name="one_userkey">yhden käyttäjän näppäin</string>
     <string name="oneplus_adaptive_model">Mukautuva tila</string>
     <string name="oneplus_add">Lisää</string>
-    <string name="oneplus_add_bluetooth_car_kit">Lisää Bluetooth-autosarja</string>
-    <string name="oneplus_add_bluetooth_car_kit_summary">Bluetooth-autosarja muodostaa automaattisesti yhteyden aiempiin laitteisiin; voit myös lisätä uusia yhteyksiä manuaalisesti</string>
+    <string name="oneplus_add_bluetooth_car_kit">Lisää ajoneuvon Bluetooth</string>
+    <string name="oneplus_add_bluetooth_car_kit_summary">Ajoneuvon Bluetooth muodostaa automaattisesti yhteyden aiempiin laitteisiin; voit myös lisätä uusia laitteita manuaalisesti</string>
     <string name="oneplus_add_fingerprint_list">Lisää sormenjälki</string>
     <string name="oneplus_adjust_effect">Vaikutuksen teho</string>
     <string name="oneplus_advanced_display_settings">Näytön lisäasetukset</string>
@@ -2786,7 +2786,7 @@ Riskivinkki: Kasvojentunnistus on vähemmän turvallinen kuin sormenjälki ja sa
     <string name="oneplus_fnatic_mode_add_to_wallpapers">Lisää taustakuviin</string>
     <string name="oneplus_fnatic_mode_background_introduction_summary">Varaa suorituskyvyn lähes yksinomaan peleille. Tämä saattaa aiheuttaa virheitä joissain sovelluksissa.</string>
     <string name="oneplus_fnatic_mode_background_introduction_title">Paranna prosessin säädintä</string>
-    <string name="oneplus_fnatic_mode_disturb_introduction_summary">Estä kaikki ilmoitukset ja puhelut (paitsi akku vähissä -ilmoitus, hälytys ja ajastin). Vastaamatta jääneet puhelut näkyvät vain puheluhistoriassa.</string>
+    <string name="oneplus_fnatic_mode_disturb_introduction_summary">Estä kaikki ilmoitukset ja puhelut (paitsi akku vähissä -ilmoitus, hälytys ja ajastin).</string>
     <string name="oneplus_fnatic_mode_disturb_introduction_title">Edistynyt DND</string>
     <string name="oneplus_fnatic_mode_enable_introduction_title">Pelitila on otettava käyttöön, jotta Fnatic-tilaa voi käyttää</string>
     <string name="oneplus_fnatic_mode_network_introduction_dual4g_summary">Ensisijaisen SIM-kortin signaalinvoimakkuus on etusijalla, jotta minimoidaan häiriöt matalan latenssi peleille. Tällöin toissijainen SIM-kortti poistetaan käytöstä, eikä puheluita ja viestejä vastaanoteta.</string>
@@ -2878,6 +2878,7 @@ Voit siirtyä aloitusnäyttöön milloin vain pyyhkäisemällä näytön alareun
     <string name="oneplus_haptic_feedback_tips">Tarjoaa haptista palautetta tietyille pelinäkymille; koskee vain tuettuja pelejä</string>
     <string name="oneplus_haptic_feedback_title">Haptisen palautteen tehostus</string>
     <string name="oneplus_hardware_keys_action_split_screen">Avaa/sulje jaettu ruutu</string>
+    <string name="oneplus_health_safety_information">Terveys- ja turvallisuustiedot</string>
     <string name="oneplus_hearing_aid">Kuulokojeen yhteensopivuus</string>
     <string name="oneplus_hide_navigation_bar">Piilota navigointipalkki</string>
     <string name="oneplus_hide_navkeys">Piilota navigointipalkki</string>
@@ -3092,8 +3093,8 @@ Huomautus: Sormenjälki saattaa olla vähemmän turvallinen kuin vahva kuvio tai
     <string name="oneplus_receive_notifications">OnePlus-ilmoitukset</string>
     <string name="oneplus_receive_notifications_agree">Vastaanota uutisia OnePlusilta</string>
     <string name="oneplus_receive_notifications_summary">Haluat vastaanottaa virallisia OnePlus-uutisia, tuotetietoja, kyselyitä, ostosuosituksia/kuponkitietoja</string>
-    <string name="oneplus_recognized_bluetooth_car_kits">Tunnistetut Bluetooth-autosarjat</string>
-    <string name="oneplus_recognized_bluetooth_car_kits_no_devices">Bluetooth-autosarjaa ei löydy. Voit lisätä uusia yhteyksiä manuaalisesti alla</string>
+    <string name="oneplus_recognized_bluetooth_car_kits">Ajoneuvon Bluetooth tunnistettu</string>
+    <string name="oneplus_recognized_bluetooth_car_kits_no_devices">Ei ajoneuvon Bluetoothia, voit lisätä uusia laitteita manuaalisesti alla</string>
     <string name="oneplus_recommended_opening">Suositellaan</string>
     <string name="oneplus_reenroll_fingerprint_tips">Syötä sormenjälkesi uudelleen vaihettuasi matkapuhelimen suojakalvon varmistaaksesi, että sormenjälki on rekisteröity oikein</string>
     <string name="oneplus_regulatory_information">Vahvistus</string>
@@ -3116,6 +3117,7 @@ Huomautus: Sormenjälki saattaa olla vähemmän turvallinen kuin vahva kuvio tai
     <string name="oneplus_screen_color_mode_basic">sRGB</string>
     <string name="oneplus_screen_color_mode_default">Oletus</string>
     <string name="oneplus_screen_color_mode_defined">Mukautettu väri</string>
+    <string name="oneplus_screen_color_mode_ntsc">AMOLED Wide Gamut</string>
     <string name="oneplus_screen_color_mode_reading_mode_on_summary">Ei käytettävissä, sillä lukutila on päällä</string>
     <string name="oneplus_screen_color_mode_soft">Pehmeä</string>
     <string name="oneplus_screen_color_mode_title">Näytön kalibrointi</string>
@@ -3705,6 +3707,10 @@ UT-käyttöliittymä: %5$s"</string>
     <string name="restore_default_apn_completed">APN-oletusasetukset on palautettu.</string>
     <string name="restr_pin_enter_admin_pin">Anna järjestelmänvalvojan PIN-koodi</string>
     <string name="restrict_background_blacklisted">Taustatiedonsiirto ei käytössä</string>
+    <string name="restrict_background_uss_always">Aina</string>
+    <string name="restrict_background_uss_never">Ei koskaan</string>
+    <string name="restrict_background_uss_roaming">Vain verkkovierailun aikana</string>
+    <string name="restrict_background_uss_title">Rajoita taustadataa</string>
     <string name="restricted_app_detail_footer">Nämä sovellukset kuluttavat virtaa taustalla. Rajoitetut sovellukset eivät ehkä toimi oikein ja ilmoituksia voidaan näyttää viiveellä.</string>
     <string name="restricted_app_title">Rajoitetut sovellukset</string>
     <string name="restricted_false_label">Voi käyttää akkua taustalla</string>
@@ -4406,6 +4412,7 @@ Kokeile ottaa käyttöön nopeampi ^3 tai käytä laitetta ^4 siirrettävänä t
     <string name="summary_divider_text">", "</string>
     <string name="summary_range_symbol_combination">%1$s–%2$s</string>
     <string name="summary_range_verbal_combination">%1$s–%2$s</string>
+    <string name="summary_voice_network">VoLTE, Wi-Fi-puhelut</string>
     <string name="support_country_format">%1$s – %2$s</string>
     <string name="support_summary">Ohjeartikkelit, puhelin ja chat, aloitus</string>
     <string name="suw_back_button_label">Takaisin</string>
@@ -4458,6 +4465,11 @@ Se on Googlen tapa synkronoida tietoja, ja sen avulla voit käyttää yhteystiet
     <string name="testing">Testaus</string>
     <string name="testing_phone_info">Puhelimen tiedot</string>
     <string name="testing_usage_stats">Käyttötiedot</string>
+    <string name="tether_error_item_default">Internet-yhteyden jakaminen</string>
+    <string name="tether_error_message">Et ole tilannut palvelua %1$s.</string>
+    <string name="tether_error_title">%1$s-virhe</string>
+    <string name="tether_no_sim_message">Asenna SIM-kortti käyttääksesi mobiilihotspotia ja muita Internet-yhteyden jakamisvaihtoehtoja</string>
+    <string name="tether_no_sim_title">Ei SIM-korttia</string>
     <string name="tether_settings_disabled_on_data_saver">Kun Data Saver on käytössä, puhelinta ei voi käyttää modeemina eikä kannettavien hotspotien käyttäminen onnistu.</string>
     <string name="tether_settings_summary_hotspot_off_tether_on">Jaettu yhteys</string>
     <string name="tether_settings_summary_hotspot_on_tether_off">Hotspot käytössä</string>
@@ -4863,6 +4875,7 @@ Kaikki käyttäjät voivat päivittää sovelluksia muille käyttäjille."</stri
     <string name="voice_input_settings_title">Äänisyöte</string>
     <string name="voice_interaction_security_warning">Tämä puheohjauspalvelu huolehtii, että puheohjaus on aina päällä ja ohjaa puheohjausta käyttäviä sovelluksia automaattisesti puolestasi. Palvelu sisältyy sovellukseen %s. Otetaanko palvelu käyttöön?</string>
     <string name="voice_interactor_preference_summary">Toimintosanat ja vuorovaikutus</string>
+    <string name="voice_network_title">Puheverkot</string>
     <string name="voice_recognizer_preference_summary">Yksinkertainen puheesta tekstiksi -palvelu</string>
     <string name="voice_search_settings_title">Puhehaku</string>
     <string name="voice_service_preference_section_title">Äänisyötepalvelut</string>

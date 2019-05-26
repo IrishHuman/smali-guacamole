@@ -23,6 +23,8 @@
 
 
 # instance fields
+.field private isWifiHotspotClick:Z
+
 .field private final mConnectivityManager:Landroid/net/ConnectivityManager;
 
 .field private final mContext:Landroid/content/Context;
@@ -80,6 +82,19 @@
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isSupportUss()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    sget-object v0, Lcom/android/settings/wifi/tether/WifiTetherSwitchBarController;->WIFI_INTENT_FILTER:Landroid/content/IntentFilter;
+
+    const-string v1, "android.intent.action.setupDataError_tether"
+
+    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+
+    :cond_0
     return-void
 .end method
 
@@ -91,6 +106,8 @@
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/settings/wifi/tether/WifiTetherSwitchBarController;->mSoftSimPilotModeEnabled:Z
+
+    iput-boolean v0, p0, Lcom/android/settings/wifi/tether/WifiTetherSwitchBarController;->isWifiHotspotClick:Z
 
     new-instance v1, Lcom/android/settings/wifi/tether/WifiTetherSwitchBarController$1;
 
@@ -214,6 +231,22 @@
     move-result v0
 
     return v0
+.end method
+
+.method static synthetic access$500(Lcom/android/settings/wifi/tether/WifiTetherSwitchBarController;Z)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/android/settings/wifi/tether/WifiTetherSwitchBarController;->updateSimStatus(Z)V
+
+    return-void
+.end method
+
+.method static synthetic access$600(Lcom/android/settings/wifi/tether/WifiTetherSwitchBarController;I)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/android/settings/wifi/tether/WifiTetherSwitchBarController;->tetherError(I)V
+
+    return-void
 .end method
 
 .method private getPilotModeFromSim(Landroid/content/Context;I)Z
@@ -481,6 +514,238 @@
     return v1
 .end method
 
+.method private startUssTethering()V
+    .locals 6
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/android/settings/wifi/tether/WifiTetherSwitchBarController;->isWifiHotspotClick:Z
+
+    iget-object v1, p0, Lcom/android/settings/wifi/tether/WifiTetherSwitchBarController;->mContext:Landroid/content/Context;
+
+    invoke-static {v1}, Lcom/android/settings/wifi/tether/utils/TetherUtils;->isNoSimCard(Landroid/content/Context;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    iget-object v1, p0, Lcom/android/settings/wifi/tether/WifiTetherSwitchBarController;->mContext:Landroid/content/Context;
+
+    invoke-static {v1}, Lcom/android/settings/wifi/tether/utils/TetherUtils;->isHaveProfile(Landroid/content/Context;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    iget-object v1, p0, Lcom/android/settings/wifi/tether/WifiTetherSwitchBarController;->mConnectivityManager:Landroid/net/ConnectivityManager;
+
+    const/4 v2, 0x0
+
+    iget-object v3, p0, Lcom/android/settings/wifi/tether/WifiTetherSwitchBarController;->mOnStartTetheringCallback:Landroid/net/ConnectivityManager$OnStartTetheringCallback;
+
+    new-instance v4, Landroid/os/Handler;
+
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object v5
+
+    invoke-direct {v4, v5}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+
+    invoke-virtual {v1, v2, v0, v3, v4}, Landroid/net/ConnectivityManager;->startTethering(IZLandroid/net/ConnectivityManager$OnStartTetheringCallback;Landroid/os/Handler;)V
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x2
+
+    invoke-direct {p0, v0}, Lcom/android/settings/wifi/tether/WifiTetherSwitchBarController;->tetherError(I)V
+
+    goto :goto_0
+
+    :cond_1
+    invoke-direct {p0, v0}, Lcom/android/settings/wifi/tether/WifiTetherSwitchBarController;->tetherError(I)V
+
+    :goto_0
+    return-void
+.end method
+
+.method private stopUssTethering()V
+    .locals 3
+
+    iget-object v0, p0, Lcom/android/settings/wifi/tether/WifiTetherSwitchBarController;->mSwitchBar:Lcom/android/settings/widget/SwitchWidgetController;
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/android/settings/wifi/tether/WifiTetherSwitchBarController;->mSwitchBar:Lcom/android/settings/widget/SwitchWidgetController;
+
+    invoke-virtual {v0, v1}, Lcom/android/settings/widget/SwitchWidgetController;->setChecked(Z)V
+
+    iget-object v0, p0, Lcom/android/settings/wifi/tether/WifiTetherSwitchBarController;->mSwitchBar:Lcom/android/settings/widget/SwitchWidgetController;
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v0, v2}, Lcom/android/settings/widget/SwitchWidgetController;->setEnabled(Z)V
+
+    :cond_0
+    iget-object v0, p0, Lcom/android/settings/wifi/tether/WifiTetherSwitchBarController;->mConnectivityManager:Landroid/net/ConnectivityManager;
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/android/settings/wifi/tether/WifiTetherSwitchBarController;->mConnectivityManager:Landroid/net/ConnectivityManager;
+
+    invoke-virtual {v0, v1}, Landroid/net/ConnectivityManager;->stopTethering(I)V
+
+    :cond_1
+    return-void
+.end method
+
+.method private tetherError(I)V
+    .locals 7
+
+    const/4 v0, 0x0
+
+    packed-switch p1, :pswitch_data_0
+
+    goto :goto_0
+
+    :pswitch_0
+    iget-object v1, p0, Lcom/android/settings/wifi/tether/WifiTetherSwitchBarController;->mContext:Landroid/content/Context;
+
+    const v2, 0x7f121525
+
+    invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcom/android/settings/wifi/tether/WifiTetherSwitchBarController;->mContext:Landroid/content/Context;
+
+    iget-object v3, p0, Lcom/android/settings/wifi/tether/WifiTetherSwitchBarController;->mContext:Landroid/content/Context;
+
+    const v4, 0x7f12128e
+
+    const/4 v5, 0x1
+
+    new-array v6, v5, [Ljava/lang/Object;
+
+    aput-object v1, v6, v0
+
+    invoke-virtual {v3, v4, v6}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v3
+
+    iget-object v4, p0, Lcom/android/settings/wifi/tether/WifiTetherSwitchBarController;->mContext:Landroid/content/Context;
+
+    const v6, 0x7f12128d
+
+    new-array v5, v5, [Ljava/lang/Object;
+
+    aput-object v1, v5, v0
+
+    invoke-virtual {v4, v6, v5}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v2, v3, v0}, Lcom/android/settings/wifi/tether/utils/TetherUtils;->showTertheringErrorDialog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-direct {p0}, Lcom/android/settings/wifi/tether/WifiTetherSwitchBarController;->stopUssTethering()V
+
+    goto :goto_0
+
+    :pswitch_1
+    iget-object v1, p0, Lcom/android/settings/wifi/tether/WifiTetherSwitchBarController;->mContext:Landroid/content/Context;
+
+    iget-object v2, p0, Lcom/android/settings/wifi/tether/WifiTetherSwitchBarController;->mContext:Landroid/content/Context;
+
+    const v3, 0x7f121290
+
+    invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    iget-object v3, p0, Lcom/android/settings/wifi/tether/WifiTetherSwitchBarController;->mContext:Landroid/content/Context;
+
+    const v4, 0x7f12128f
+
+    invoke-virtual {v3, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v1, v2, v3}, Lcom/android/settings/wifi/tether/utils/TetherUtils;->showTertheringErrorDialog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v1, p0, Lcom/android/settings/wifi/tether/WifiTetherSwitchBarController;->mSwitchBar:Lcom/android/settings/widget/SwitchWidgetController;
+
+    if-eqz v1, :cond_0
+
+    iget-object v1, p0, Lcom/android/settings/wifi/tether/WifiTetherSwitchBarController;->mSwitchBar:Lcom/android/settings/widget/SwitchWidgetController;
+
+    invoke-virtual {v1, v0}, Lcom/android/settings/widget/SwitchWidgetController;->setChecked(Z)V
+
+    iget-object v1, p0, Lcom/android/settings/wifi/tether/WifiTetherSwitchBarController;->mSwitchBar:Lcom/android/settings/widget/SwitchWidgetController;
+
+    invoke-virtual {v1, v0}, Lcom/android/settings/widget/SwitchWidgetController;->setEnabled(Z)V
+
+    :cond_0
+    :goto_0
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method private updateSimStatus(Z)V
+    .locals 2
+
+    iget-boolean v0, p0, Lcom/android/settings/wifi/tether/WifiTetherSwitchBarController;->isWifiHotspotClick:Z
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    :cond_0
+    if-nez p1, :cond_2
+
+    iget-object v0, p0, Lcom/android/settings/wifi/tether/WifiTetherSwitchBarController;->mSwitchBar:Lcom/android/settings/widget/SwitchWidgetController;
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/android/settings/wifi/tether/WifiTetherSwitchBarController;->mSwitchBar:Lcom/android/settings/widget/SwitchWidgetController;
+
+    invoke-virtual {v0, v1}, Lcom/android/settings/widget/SwitchWidgetController;->setEnabled(Z)V
+
+    :cond_1
+    iget-object v0, p0, Lcom/android/settings/wifi/tether/WifiTetherSwitchBarController;->mConnectivityManager:Landroid/net/ConnectivityManager;
+
+    if-eqz v0, :cond_3
+
+    iget-object v0, p0, Lcom/android/settings/wifi/tether/WifiTetherSwitchBarController;->mConnectivityManager:Landroid/net/ConnectivityManager;
+
+    invoke-virtual {v0, v1}, Landroid/net/ConnectivityManager;->stopTethering(I)V
+
+    goto :goto_0
+
+    :cond_2
+    iget-object v0, p0, Lcom/android/settings/wifi/tether/WifiTetherSwitchBarController;->mSwitchBar:Lcom/android/settings/widget/SwitchWidgetController;
+
+    if-eqz v0, :cond_3
+
+    iget-object v0, p0, Lcom/android/settings/wifi/tether/WifiTetherSwitchBarController;->mSwitchBar:Lcom/android/settings/widget/SwitchWidgetController;
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Lcom/android/settings/widget/SwitchWidgetController;->setEnabled(Z)V
+
+    :cond_3
+    :goto_0
+    return-void
+.end method
+
 .method private updateWifiSwitch()V
     .locals 4
 
@@ -635,7 +900,7 @@
 
     iget-object v2, p0, Lcom/android/settings/wifi/tether/WifiTetherSwitchBarController;->mContext:Landroid/content/Context;
 
-    const v3, 0x7f120e98
+    const v3, 0x7f120e9b
 
     invoke-static {v2, v3, v0}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
 
@@ -658,7 +923,7 @@
 .end method
 
 .method startTether()V
-    .locals 5
+    .locals 6
 
     const-string v0, "WifiTetherSwitchBarController"
 
@@ -672,22 +937,34 @@
 
     invoke-virtual {v0, v1}, Lcom/android/settings/widget/SwitchWidgetController;->setEnabled(Z)V
 
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isSupportUss()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
     iget-object v0, p0, Lcom/android/settings/wifi/tether/WifiTetherSwitchBarController;->mConnectivityManager:Landroid/net/ConnectivityManager;
 
-    iget-object v2, p0, Lcom/android/settings/wifi/tether/WifiTetherSwitchBarController;->mOnStartTetheringCallback:Landroid/net/ConnectivityManager$OnStartTetheringCallback;
+    const/4 v2, 0x1
 
-    new-instance v3, Landroid/os/Handler;
+    iget-object v3, p0, Lcom/android/settings/wifi/tether/WifiTetherSwitchBarController;->mOnStartTetheringCallback:Landroid/net/ConnectivityManager$OnStartTetheringCallback;
+
+    new-instance v4, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
-    move-result-object v4
+    move-result-object v5
 
-    invoke-direct {v3, v4}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+    invoke-direct {v4, v5}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    const/4 v4, 0x1
+    invoke-virtual {v0, v1, v2, v3, v4}, Landroid/net/ConnectivityManager;->startTethering(IZLandroid/net/ConnectivityManager$OnStartTetheringCallback;Landroid/os/Handler;)V
 
-    invoke-virtual {v0, v1, v4, v2, v3}, Landroid/net/ConnectivityManager;->startTethering(IZLandroid/net/ConnectivityManager$OnStartTetheringCallback;Landroid/os/Handler;)V
+    goto :goto_0
 
+    :cond_0
+    invoke-direct {p0}, Lcom/android/settings/wifi/tether/WifiTetherSwitchBarController;->startUssTethering()V
+
+    :goto_0
     return-void
 .end method
 

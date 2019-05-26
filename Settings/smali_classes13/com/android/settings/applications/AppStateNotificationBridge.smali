@@ -383,7 +383,7 @@
 
     if-nez v1, :cond_0
 
-    const v0, 0x7f120a2d
+    const v0, 0x7f120a2f
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -417,7 +417,7 @@
 
     if-lez v1, :cond_2
 
-    const v1, 0x7f120a2e
+    const v1, 0x7f120a30
 
     new-array v0, v0, [Ljava/lang/Object;
 
@@ -436,7 +436,7 @@
     return-object v0
 
     :cond_2
-    const v1, 0x7f120a2c
+    const v1, 0x7f120a2e
 
     new-array v0, v0, [Ljava/lang/Object;
 
@@ -462,7 +462,7 @@
 
     check-cast v0, Landroid/view/ViewGroup;
 
-    const v1, 0x7f0a056c
+    const v1, 0x7f0a0570
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 

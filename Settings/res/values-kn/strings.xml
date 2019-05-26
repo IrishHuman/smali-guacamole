@@ -2549,8 +2549,8 @@
     <string name="one_userkey">ಒಂದು ಬಳಕೆದಾರ ಕೀಲಿಯಿದೆ</string>
     <string name="oneplus_adaptive_model">ಅಡಾಪ್ಟಿವ್ ಮೋಡ್</string>
     <string name="oneplus_add">ಸೇರಿಸಿ</string>
-    <string name="oneplus_add_bluetooth_car_kit">Bluetooth ಕಾರ್ ಕಿಟ್ ಸೇರಿಸಿ</string>
-    <string name="oneplus_add_bluetooth_car_kit_summary">ಬ್ಲೂಟೂತ್ ಕಾರ್ ಕಿಟ್, ನಿಮ್ಮ ಹಿಂದಿನ ಸಾಧನಗಳ ಜೊತೆಗೆ ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಸಂಪರ್ಕ ಹೊಂದುತ್ತದೆ, ನೀವು ಹೊಸ ಸಂಪರ್ಕಗಳನ್ನು ಹಸ್ತಚಾಲಿತವಾಗಿ ಸೇರಿಸಬಹುದು</string>
+    <string name="oneplus_add_bluetooth_car_kit">ವಾಹನದ ಬ್ಲೂಟೂತ್ ಸೇರಿಸಿ</string>
+    <string name="oneplus_add_bluetooth_car_kit_summary">ವಾಹನದ ಬ್ಲೂಟೂತ್ ನಿಮ್ಮ ಹಿಂದಿನ ಸಾಧನಗಳಿಗೆ ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಸಂಪರ್ಕ ಹೊಂದುತ್ತದೆ, ನೀವು ಹೊಸ ಸಾಧನಗಳನ್ನು ಹಸ್ತಚಾಲಿತವಾಗಿಯೂ ಸೇರಿಸಬಹುದು</string>
     <string name="oneplus_add_fingerprint_list">ಬೆರಳಮುದ್ರೆ ಸೇರಿಸಿ</string>
     <string name="oneplus_adjust_effect">ಪರಿಣಾಮ ಬಲಿಷ್ಠತೆ</string>
     <string name="oneplus_advanced_display_settings">ಸುಧಾರಿತ ಪ್ರದರ್ಶಕದ ಸೆಟ್ಟಿಂಗ್‌ಗಳು</string>
@@ -2786,7 +2786,7 @@
     <string name="oneplus_fnatic_mode_add_to_wallpapers">ವಾಲ್‌ಪೇಪರ್‌ಗಳಿಗೆ ಸೇರಿಸಿ</string>
     <string name="oneplus_fnatic_mode_background_introduction_summary">ಕಾರ್ಯಕ್ಷಮತೆಯನ್ನು ಗೇಮ್ ಪ್ಲೇ ಕಡೆಗೆ ಸಂಪೂರ್ಣವಾಗಿ ಕೇಂದ್ರೀಕರಿಸಲಾಗಿರುತ್ತದೆ. ಇದು ಕೆಲವು ಅಪ್ಲಿಕೇಶನ್‌ಗಳಲ್ಲಿ ತಾಂತ್ರಿಕ ತೊಂದರೆಗಳಿಗೆ ಕಾರಣವಾಗಬಹುದು.</string>
     <string name="oneplus_fnatic_mode_background_introduction_title">ಪ್ರಕ್ರಿಯೆ ನಿಯಂತ್ರಕವನ್ನು ವರ್ಧಿಸಿ</string>
-    <string name="oneplus_fnatic_mode_disturb_introduction_summary">ಎಲ್ಲಾ ಅಧಿಸೂಚನೆಗಳು ಮತ್ತು ಕರೆಗಳನ್ನು ನಿರ್ಬಂಧಿಸಿ (ಕಡಿಮೆ ಬ್ಯಾಟರಿ ಅಧಿಸೂಚನೆ, ಅಲಾರಂ ಮತ್ತು ಟೈಮರ್ ಹೊರತುಪಡಿಸಿ). ಕರೆ ಇತಿಹಾಸದಲ್ಲಿ ತಪ್ಪಿದ ಕರೆಗಳನ್ನು ಮಾತ್ರ ನೀವು ಕಾಣಬಹುದು.</string>
+    <string name="oneplus_fnatic_mode_disturb_introduction_summary">ಎಲ್ಲಾ ಅಧಿಸೂಚನೆಗಳು ಮತ್ತು ಕರೆಗಳನ್ನು ನಿರ್ಬಂಧಿಸಿ (ಕಡಿಮೆ ಬ್ಯಾಟರಿ ಅಧಿಸೂಚನೆ, ಅಲಾರಂ ಮತ್ತು ಟೈಮರ್ ಹೊರತುಪಡಿಸಿ).</string>
     <string name="oneplus_fnatic_mode_disturb_introduction_title">ಸುಧಾರಿತ DND</string>
     <string name="oneplus_fnatic_mode_enable_introduction_title">Fnatic ಮೋಡ್ ಬಳಸಲು, ಮೊದಲು ಗೇಮಿಂಗ್ ಮೋಡ್ ಅನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಿರಬೇಕು</string>
     <string name="oneplus_fnatic_mode_network_introduction_dual4g_summary">ಕಡಿಮೆ ಸುಪ್ತತೆಯ ಗೇಮ್ ಪ್ಲೇಗಾಗಿ ಹಸ್ತಕ್ಷೇಪವನ್ನು ಕಡಿಮೆ ಮಾಡಲು ಪ್ರಾಥಮಿಕ SIM ಕಾರ್ಡ್ ಸಿಗ್ನಲ್ ಸಾಮರ್ಥ್ಯಕ್ಕೆ ಆದ್ಯತೆ ನೀಡಲಾಗುತ್ತದೆ. ಇದರ ಫಲಿತಾಂಶವೆಂಬಂತೆ, ಎರಡನೇ SIM ಕಾರ್ಡ್ ಅನ್ನು ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಲಾಗುತ್ತದೆ ಮತ್ತು ಕರೆಗಳನ್ನಾಗಲೀ ಅಥವಾ ಸಂದೇಶಗಳನ್ನಾಗಲೀ ಸ್ವೀಕರಿಸಲು ಸಾಧ್ಯವಾಗುವುದಿಲ್ಲ.</string>
@@ -2878,6 +2878,7 @@
     <string name="oneplus_haptic_feedback_tips">ನಿರ್ದಿಷ್ಟ ಗೇಮ್ ದೃಶ್ಯಗಳಿಗೆ ಸ್ಪರ್ಶ ಪ್ರತಿಕ್ರಿಯೆಯನ್ನು ಒದಗಿಸಿ, ಬೆಂಬಲಿತ ಗೇಮ್‌ಗಳಿಗೆ ಮಾತ್ರವೇ ಅನ್ವಯವಾಗುತ್ತದೆ</string>
     <string name="oneplus_haptic_feedback_title">ಸ್ಪರ್ಶ ಪ್ರತಿಕ್ರಿಯೆ ಸುಧಾರಣೆ</string>
     <string name="oneplus_hardware_keys_action_split_screen">ತೆರೆ/ಮುಚ್ಚು ಬೇರ್ಪಡಿಸುವ ಸ್ಕ್ರೀನ್</string>
+    <string name="oneplus_health_safety_information">ಆರೋಗ್ಯ &amp; ಮತ್ತು ಸುರಕ್ಷತೆ ಮಾಹಿತಿ</string>
     <string name="oneplus_hearing_aid">ಶ್ರವಣ ಸಹಾಯಕದ ಹೊಂದಾಣಿಕೆ</string>
     <string name="oneplus_hide_navigation_bar">ನೇವಿಗೇಶನ್ ಬಾರ್ ಅಡಗಿಸು</string>
     <string name="oneplus_hide_navkeys">ನೇವಿಗೇಶನ್ ಬಾರ್ ಬಚ್ಚಿಡಿ</string>
@@ -3092,8 +3093,8 @@
     <string name="oneplus_receive_notifications">OnePlus ನೋಟಿಫಿಕೇಶನ್‌ಗಳು</string>
     <string name="oneplus_receive_notifications_agree">OnePlus ನಿಂದ ಸುದ್ದಿ ಸ್ವೀಕರಿಸಿ</string>
     <string name="oneplus_receive_notifications_summary">OnePlus ಅಧಿಕೃತ ಸುದ್ದಿ, ಉತ್ಪನ್ನ ಮಾಹಿತಿ, ಪ್ರಶ್ನಾವಳಿ ಮಾತುಕತೆ ಮತ್ತು ಖರೀದಿ ಶಿಫಾರಸು/ಕೂಪನ್ ಮಾಹಿತಿ ಸ್ವೀಕರಿಸಲು ಅನುಮತಿಸಿ</string>
-    <string name="oneplus_recognized_bluetooth_car_kits">ಗುರುತಿಸಲಾದ ಬ್ಲೂಟೂತ್ ಕಾರ್ ಕಿಟ್‌ಗಳು</string>
-    <string name="oneplus_recognized_bluetooth_car_kits_no_devices">ಯಾವುದೇ Bluetooth ಕಾರ್ ಕಿಟ್ ಇಲ್ಲ, ನೀವು ಹೊಸ ಸಂಪರ್ಕಗಳನ್ನು ಕೆಳಗೆ ಹಸ್ತಚಾಲಿತವಾಗಿ ಸೇರಿಸಬಹುದು</string>
+    <string name="oneplus_recognized_bluetooth_car_kits">ಗುರುತಿಸಲಾದ ವಾಹನದ ಬ್ಲೂಟೂತ್</string>
+    <string name="oneplus_recognized_bluetooth_car_kits_no_devices">ಯಾವುದೇ ವಾಹನದ ಬ್ಲೂಟೂತ್ ಇಲ್ಲ, ನೀವು ಕೆಳಗೆ ಹೊಸ ಸಾಧನಗಳನ್ನು ಹಸ್ತಚಾಲಿತವಾಗಿ ಸೇರಿಸಬಹುದು</string>
     <string name="oneplus_recommended_opening">ಶಿಫಾರಸು ಮಾಡಿದೆ</string>
     <string name="oneplus_reenroll_fingerprint_tips">ಮೊಬೈಲ್ ಫೋನ್‌ನ ಸಂರಕ್ಷಣಾತ್ಮಕ ಫಿಲ್ಮಂ ಬದಲಾಯಿಸಿದ ನಂತರ ನಿಮ್ಮ ಫಿಂಗರ್‌ಪ್ರಿಂಟ್ ಅನ್ನು ಮರು ನಮೂದಿಸಿ, ಈ ಮೂಲಕ ಫಿಂಗರ್‌ಪ್ರಿಂಟ್‌ನ ನಿಖರತೆಯನ್ನು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಿ</string>
     <string name="oneplus_regulatory_information">ಪರಿಶೀಲನೆ</string>
@@ -3116,6 +3117,7 @@
     <string name="oneplus_screen_color_mode_basic">sRGB</string>
     <string name="oneplus_screen_color_mode_default">ಡೀಫಾಲ್ಟ್</string>
     <string name="oneplus_screen_color_mode_defined">ಬಣ್ಣ ಗ್ರಾಹಕೀಯಗೊಳಿಸಿ</string>
+    <string name="oneplus_screen_color_mode_ntsc">AMOLED ವೈಡ್ ಗ್ಯಾಮಟ್</string>
     <string name="oneplus_screen_color_mode_reading_mode_on_summary">ಲಭ್ಯವಿಲ್ಲ ಏಕೆಂದರೆ ರೀಡಿಂಗ್ ಮೋಡ್ ಆನ್ ಆಗಿದೆ</string>
     <string name="oneplus_screen_color_mode_soft">ಮೃದು</string>
     <string name="oneplus_screen_color_mode_title">ಸ್ಕ್ರೀನ್ ಕ್ಯಾಲಿಬ್ರೇಶನ್</string>
@@ -3705,6 +3707,10 @@ UT ಇಂಟರ್ಫೇಸ್: %5$s"</string>
     <string name="restore_default_apn_completed">ಡಿಫಾಲ್ಟ್ APN ಸೆಟ್ಟಿಂಗ್‌ಗಳ ಮರುಹೊಂದಿಕೆಯು ಪೂರ್ಣಗೊಂಡಿದೆ.</string>
     <string name="restr_pin_enter_admin_pin">ನಿರ್ವಾಹಕರ ಪಿನ್ ನಮೂದಿಸಿ</string>
     <string name="restrict_background_blacklisted">ಹಿನ್ನೆಲೆ ಡೇಟಾವನ್ನು ಆಫ್ ಮಾಡಲಾಗಿದೆ</string>
+    <string name="restrict_background_uss_always">ಯಾವಾಗಲೂ</string>
+    <string name="restrict_background_uss_never">ಎಂದಿಗೂ ಇಲ್ಲ</string>
+    <string name="restrict_background_uss_roaming">ರೋಮಿಂಗ್‌ನಲ್ಲಿರುವಾಗ ಮಾತ್ರ</string>
+    <string name="restrict_background_uss_title">ಹಿನ್ನೆಲೆ ಡೇಟಾವನ್ನು ನಿರ್ಬಂಧಿಸಿ</string>
     <string name="restricted_app_detail_footer">ಈ ಅಪ್ಲಿಕೇಶನ್‌ಗಳು ಹಿನ್ನೆಲೆಯಲ್ಲಿ ಬ್ಯಾಟರಿಯನ್ನು ಬಳಸುತ್ತಿದೆ. ನಿರ್ಬಂಧಿತ ಅಪ್ಲಿಕೇಶನ್‌ಗಳು ಸರಿಯಾಗಿ ಕೆಲಸ ಮಾಡದಿರಬಹುದು ಮತ್ತು ಅಧಿಸೂಚನೆಗಳು ವಿಳಂಬವಾಗಬಹುದು.</string>
     <string name="restricted_app_title">ನಿರ್ಬಂಧಿತ ಅಪ್ಲಿಕೇಶನ್‌ಗಳು</string>
     <string name="restricted_false_label">ಅಪ್ಲಿಕೇಶನ್‌ಗಳು ಹಿನ್ನಲೆಯಲ್ಲಿ ಬ್ಯಾಟರಿಯನ್ನು ಬಳಸಬಹುದು</string>
@@ -4406,6 +4412,7 @@ UT ಇಂಟರ್ಫೇಸ್: %5$s"</string>
     <string name="summary_divider_text">", "</string>
     <string name="summary_range_symbol_combination">%1$s - %2$s</string>
     <string name="summary_range_verbal_combination">%1$s ರಿಂದ %2$s</string>
+    <string name="summary_voice_network">VoLTE, Wi-Fi ಕರೆ ಮಾಡುವಿಕೆ</string>
     <string name="support_country_format">%1$s - %2$s</string>
     <string name="support_summary">ಸಹಾಯ ಲೇಖನಗಳು, ಫೋನ್, ಚಾಟ್‌ ಪ್ರಾರಂಭಿಸಲಾಗುತ್ತಿದೆ</string>
     <string name="suw_back_button_label">ಹಿಂದೆ</string>
@@ -4458,6 +4465,11 @@ UT ಇಂಟರ್ಫೇಸ್: %5$s"</string>
     <string name="testing">ಪರೀಕ್ಷಿಸಲಾಗುತ್ತಿದೆ</string>
     <string name="testing_phone_info">ಫೋನ್ ಮಾಹಿತಿ</string>
     <string name="testing_usage_stats">ಬಳಕೆಯ ಅಂಕಿಅಂಶಗಳು</string>
+    <string name="tether_error_item_default">ಟೆಥರಿಂಗ್</string>
+    <string name="tether_error_message">ನೀವು %1$s ಗೆ ಚಂದಾದಾರರಾಗಿಲ್ಲ.</string>
+    <string name="tether_error_title">%1$s ದೋಷ</string>
+    <string name="tether_no_sim_message">ಮೊಬೈಲ್ ಹಾಟ್‌ಸ್ಪಾಟ್ ಮತ್ತು ಇತರೆ ಟೆಥರಿಂಗ್ ಆಯ್ಕೆಗಳನ್ನು ಬಳಸಲು SIM ಕಾರ್ಡ್ ಸೇರ್ಪಡಿಸಿ</string>
+    <string name="tether_no_sim_title">SIM ಕಾರ್ಡ್ ಇಲ್ಲ</string>
     <string name="tether_settings_disabled_on_data_saver">ಡೇಟಾ ಉಳಿಸುವಿಕೆಯನ್ನು ಆನ್ ಆಗಿರುವಾಗ ಪೋರ್ಟಬಲ್ ಹಾಟ್‌ಸ್ಪಾಟ್‌ಗಳನ್ನು ಟೆಥರ್ ಮಾಡಲಾಗುವುದಿಲ್ಲ ಅಥವಾ ಬಳಸಲಾಗುವುದಿಲ್ಲ</string>
     <string name="tether_settings_summary_hotspot_off_tether_on">ಟೆಥರಿಂಗ್‌</string>
     <string name="tether_settings_summary_hotspot_on_tether_off">ಹಾಟ್‌ಸ್ಪಾಟ್ ಆನ್ ಆಗಿದೆ</string>
@@ -4863,6 +4875,7 @@ UT ಇಂಟರ್ಫೇಸ್: %5$s"</string>
     <string name="voice_input_settings_title">ಧ್ವನಿ ಇನ್‌ಪುಟ್‌</string>
     <string name="voice_interaction_security_warning">ಈ ಧ್ವನಿ ಇನ್‌ಪುಟ್ ಸೇವೆ ನಿಮ್ಮ ಪರವಾಗಿ ಯಾವಾಗಲೂ ಆನ್ ಇರುವ ಧ್ವನಿ ಮೇಲ್ವಿಚಾರಣೆ ಮಾಡಲು ಮತ್ತು ಧ್ವನಿ ಸಕ್ರಿಯಗೊಳಿಸಿದ ಅಪ್ಲಿಕೇಶನ್‌ಗಳಿಗೆ ನಿಯಂತ್ರಿಸಲು ಸಾಧ್ಯವಾಗುತ್ತದೆ. ಅದು %s ಅಪ್ಲಿಕೇಶನ್‌ನಿಂದ ಬರುತ್ತದೆ. ಈ ಸೇವೆಯ ಬಳಕೆಯನ್ನು ಸಕ್ರಿಯಗೊಳಿಸುವುದೇ?</string>
     <string name="voice_interactor_preference_summary">ಪೂರ್ಣ ಹಾಟ್‌ವರ್ಡ್ ಮತ್ತು ಸಂವಹನ</string>
+    <string name="voice_network_title">ಧ್ವನಿ ನೆಟ್‌ವರ್ಕ್‌ಗಳು</string>
     <string name="voice_recognizer_preference_summary">ಸರಳ ಧ್ವನಿಯಿಂದ ಪಠ್ಯಕ್ಕೆ</string>
     <string name="voice_search_settings_title">ಧ್ವನಿ ಹುಡುಕಾಟ</string>
     <string name="voice_service_preference_section_title">ಧ್ವನಿ ಇನ್‌ಪುಟ್ ಸೇವೆಗಳು</string>

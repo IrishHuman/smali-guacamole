@@ -36,7 +36,7 @@
 
     invoke-super {p0, p1}, Landroid/support/v7/preference/Preference;->onBindViewHolder(Landroid/support/v7/preference/PreferenceViewHolder;)V
 
-    const v0, 0x7f0a0305
+    const v0, 0x7f0a0307
 
     invoke-virtual {p1, v0}, Landroid/support/v7/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 
@@ -44,7 +44,7 @@
 
     check-cast v0, Landroid/widget/Button;
 
-    const v1, 0x7f1214ed
+    const v1, 0x7f1214fb
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setText(I)V
 
@@ -54,7 +54,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v1, 0x7f0a049f
+    const v1, 0x7f0a04a3
 
     invoke-virtual {p1, v1}, Landroid/support/v7/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 
@@ -64,7 +64,7 @@
 
     check-cast v0, Landroid/widget/Button;
 
-    const v1, 0x7f1214ee
+    const v1, 0x7f1214fc
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setText(I)V
 

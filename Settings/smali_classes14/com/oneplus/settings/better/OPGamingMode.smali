@@ -323,7 +323,7 @@
 
     const/4 v1, 0x1
 
-    const v2, 0x7f120ba3
+    const v2, 0x7f120ba5
 
     if-eqz v0, :cond_0
 
@@ -464,7 +464,7 @@
 
     iget-object v1, p0, Lcom/oneplus/settings/better/OPGamingMode;->mNotificationWaysPreference:Landroid/support/v7/preference/Preference;
 
-    const v2, 0x7f120d8a
+    const v2, 0x7f120d8d
 
     invoke-virtual {v1, v2}, Landroid/support/v7/preference/Preference;->setSummary(I)V
 
@@ -477,7 +477,7 @@
 
     iget-object v1, p0, Lcom/oneplus/settings/better/OPGamingMode;->mNotificationWaysPreference:Landroid/support/v7/preference/Preference;
 
-    const v2, 0x7f120dd0
+    const v2, 0x7f120dd3
 
     invoke-virtual {v1, v2}, Landroid/support/v7/preference/Preference;->setSummary(I)V
 
@@ -490,7 +490,7 @@
 
     iget-object v1, p0, Lcom/oneplus/settings/better/OPGamingMode;->mNotificationWaysPreference:Landroid/support/v7/preference/Preference;
 
-    const v2, 0x7f120d68
+    const v2, 0x7f120d6b
 
     invoke-virtual {v1, v2}, Landroid/support/v7/preference/Preference;->setSummary(I)V
 

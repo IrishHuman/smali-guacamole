@@ -107,7 +107,7 @@
 
     invoke-virtual {v0, v1}, Landroid/app/ActionBar;->setDisplayHomeAsUpEnabled(Z)V
 
-    const v1, 0x7f12083b
+    const v1, 0x7f12083c
 
     invoke-virtual {v0, v1}, Landroid/app/ActionBar;->setTitle(I)V
 
@@ -144,7 +144,7 @@
 
     iput-object v1, p0, Lcom/android/settings/SetFullBackupPassword;->mCurrentPw:Landroid/widget/TextView;
 
-    const v1, 0x7f0a0364
+    const v1, 0x7f0a0368
 
     invoke-virtual {p0, v1}, Lcom/android/settings/SetFullBackupPassword;->findViewById(I)Landroid/view/View;
 

@@ -140,7 +140,7 @@
     return-void
 
     :cond_2
-    const v1, 0x7f121056
+    const v1, 0x7f12105d
 
     const/4 v2, 0x0
 

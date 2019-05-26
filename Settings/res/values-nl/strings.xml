@@ -2550,7 +2550,7 @@ Hierdoor kan de app ook 'Niet storen' in- of uitschakelen en gerelateerde instel
     <string name="oneplus_adaptive_model">Aanpasbare modus</string>
     <string name="oneplus_add">Toevoegen</string>
     <string name="oneplus_add_bluetooth_car_kit">Bluetooth-carkit toevoegen</string>
-    <string name="oneplus_add_bluetooth_car_kit_summary">De Bluetooth-carkit maakt automatisch verbinding met uw vorige apparaten. U kunt ook handmatig nieuwe verbindingen toevoegen</string>
+    <string name="oneplus_add_bluetooth_car_kit_summary">De Bluetooth-carkit maakt automatisch verbinding met apparaten waarmee eerder is gekoppeld. U kunt ook handmatig nieuwe apparaten toevoegen</string>
     <string name="oneplus_add_fingerprint_list">Vingerafdruk toevoegen</string>
     <string name="oneplus_adjust_effect">Sterkte Effect</string>
     <string name="oneplus_advanced_display_settings">Geavanceerde weergave-instellingen</string>
@@ -2786,7 +2786,7 @@ Tip: Face Unlock is minder veilig dan uw vingerafdruk en wachtwoord"</string>
     <string name="oneplus_fnatic_mode_add_to_wallpapers">Toevoegen aan achtergronden</string>
     <string name="oneplus_fnatic_mode_background_introduction_summary">De prestaties worden vrijwel volledig op het spelen van games gericht. Dit kan storingen in sommige apps tot gevolg hebben.</string>
     <string name="oneplus_fnatic_mode_background_introduction_title">Verbeter de procesregelaar</string>
-    <string name="oneplus_fnatic_mode_disturb_introduction_summary">Blokkeer alle meldingen en oproepen (met uitzondering van melding voor laag batterijniveau, alarm en timer). U kunt gemiste oproepen alleen bekijken in de oproepgeschiedenis.</string>
+    <string name="oneplus_fnatic_mode_disturb_introduction_summary">Blokkeer alle meldingen en oproepen (met uitzondering van melding voor laag batterijniveau, alarm en timer).</string>
     <string name="oneplus_fnatic_mode_disturb_introduction_title">Geavanceerd niet storen</string>
     <string name="oneplus_fnatic_mode_enable_introduction_title">Om Fnatic-modus te gebruiken, moet Gamingmodus eerst worden ingeschakeld</string>
     <string name="oneplus_fnatic_mode_network_introduction_dual4g_summary">De signaalsterkte van de primaire simkaart krijgt de prioriteit om interferentie te minimaliseren voor het spelen van games met lage latentie. Als gevolg hiervan wordt de secundaire simkaart uitgeschakeld en worden er geen oproepen of berichten ontvangen.</string>
@@ -2878,6 +2878,7 @@ Om op elk moment naar het Home-scherm te gaan, veeg omhoog vanaf de onderste cen
     <string name="oneplus_haptic_feedback_tips">Biedt tastfeedback bij specifieke gamescènes. Alleen van toepassing op ondersteunde games</string>
     <string name="oneplus_haptic_feedback_title">Verbetering van tastfeedback</string>
     <string name="oneplus_hardware_keys_action_split_screen">Gesplitst scherm openen/sluiten</string>
+    <string name="oneplus_health_safety_information">Gezondheids- en veiligheidsinformatie</string>
     <string name="oneplus_hearing_aid">Compatibiliteit Hoorapparaat</string>
     <string name="oneplus_hide_navigation_bar">Navigatiebalk altijd verbergen</string>
     <string name="oneplus_hide_navkeys">Navigatiebalk verbergen</string>
@@ -3092,8 +3093,8 @@ Opmerking: uw vingerafdruk kan minder veilig zijn dan een sterk patroon of een p
     <string name="oneplus_receive_notifications">OnePlus Notificaties</string>
     <string name="oneplus_receive_notifications_agree">Ontvang nieuws van OnePlus</string>
     <string name="oneplus_receive_notifications_summary">Ga akkoord met het ontvangen van OnePlus officieel nieuws, productinformatie, enquêtes en informatie over koopadvies/waardebonnen</string>
-    <string name="oneplus_recognized_bluetooth_car_kits">Herkende Bluetooth-carkits</string>
-    <string name="oneplus_recognized_bluetooth_car_kits_no_devices">Geen Bluetooth-carkit, u kunt hieronder handmatig nieuwe verbindingen toevoegen</string>
+    <string name="oneplus_recognized_bluetooth_car_kits">Bluetooth-carkit is herkend</string>
+    <string name="oneplus_recognized_bluetooth_car_kits_no_devices">Geen Bluetooth-carkit, u kunt hieronder handmatig nieuwe apparaten toevoegen</string>
     <string name="oneplus_recommended_opening">Aanbevolen</string>
     <string name="oneplus_reenroll_fingerprint_tips">Voer uw vingerafdruk opnieuw in nadat u het beschermfolie van de mobiele telefoon hebt vervangen om ervoor te zorgen dat de vingerafdruk juist is vastgelegd</string>
     <string name="oneplus_regulatory_information">Verificatie</string>
@@ -3116,6 +3117,7 @@ Opmerking: uw vingerafdruk kan minder veilig zijn dan een sterk patroon of een p
     <string name="oneplus_screen_color_mode_basic">sRGB</string>
     <string name="oneplus_screen_color_mode_default">Standaard</string>
     <string name="oneplus_screen_color_mode_defined">Aangepaste kleur</string>
+    <string name="oneplus_screen_color_mode_ntsc">AMOLED breed kleurengamma</string>
     <string name="oneplus_screen_color_mode_reading_mode_on_summary">Niet beschikbaar omdat leesmodus aan is</string>
     <string name="oneplus_screen_color_mode_soft">Zacht</string>
     <string name="oneplus_screen_color_mode_title">Schermkalibratie</string>
@@ -3705,6 +3707,10 @@ UT-interface: %5$s"</string>
     <string name="restore_default_apn_completed">Herstellen van standaard-APN-instellingen voltooid.</string>
     <string name="restr_pin_enter_admin_pin">Beheerderspincode invoeren</string>
     <string name="restrict_background_blacklisted">Achtergrondgegevens zijn uitgeschakeld</string>
+    <string name="restrict_background_uss_always">Altijd</string>
+    <string name="restrict_background_uss_never">Nooit</string>
+    <string name="restrict_background_uss_roaming">Alleen tijdens roamen</string>
+    <string name="restrict_background_uss_title">Achtergrondgegevens beperken</string>
     <string name="restricted_app_detail_footer">Deze apps hebben op de achtergrond batterijlading verbruikt. Beperkte apps werken mogelijk niet goed en meldingen kunnen worden vertraagd.</string>
     <string name="restricted_app_title">Beperkte apps</string>
     <string name="restricted_false_label">App kan de batterij op de achtergrond gebruiken</string>
@@ -4406,6 +4412,7 @@ Probeer het met een snellere ^3 of gebruik deze ^4 voor draagbare opslag."</stri
     <string name="summary_divider_text">", "</string>
     <string name="summary_range_symbol_combination">%1$s - %2$s</string>
     <string name="summary_range_verbal_combination">%1$s t/m %2$s</string>
+    <string name="summary_voice_network">VoLTE-, Wi-Fi-bellen</string>
     <string name="support_country_format">%1$s - %2$s</string>
     <string name="support_summary">Help-artikelen, bel- en chatondersteuning, aan de slag</string>
     <string name="suw_back_button_label">Terug</string>
@@ -4458,6 +4465,11 @@ Een benadering van Google voor de synchronisatie van gegevens, zodat je altijd e
     <string name="testing">Testen</string>
     <string name="testing_phone_info">Telefooninformatie</string>
     <string name="testing_usage_stats">Gebruiksstatistieken</string>
+    <string name="tether_error_item_default">Tethering</string>
+    <string name="tether_error_message">U bent niet geabonneerd op %1$s.</string>
+    <string name="tether_error_title">Fout met %1$s</string>
+    <string name="tether_no_sim_message">Plaats een simkaart om Mobiele Hotspot en andere tethering-opties te gebruiken</string>
+    <string name="tether_no_sim_title">Geen SIM-kaart</string>
     <string name="tether_settings_disabled_on_data_saver">Kan niet tetheren of draagbare hotspots gebruiken terwijl Databesparing is ingeschakeld</string>
     <string name="tether_settings_summary_hotspot_off_tether_on">Tethering</string>
     <string name="tether_settings_summary_hotspot_on_tether_off">Hotspot aan</string>
@@ -4863,6 +4875,7 @@ Elke gebruiker kan apps updaten voor alle andere gebruikers."</string>
     <string name="voice_input_settings_title">Spraakinvoer</string>
     <string name="voice_interaction_security_warning">Deze spraakinvoerservice kan doorlopend de spraakinvoer volgen en namens jou spraakgestuurde apps bedienen. De service wordt geleverd door de %s. Wil je het gebruik van deze service inschakelen?</string>
     <string name="voice_interactor_preference_summary">Volledige hotword- en interactieservice</string>
+    <string name="voice_network_title">Spraaknetwerken</string>
     <string name="voice_recognizer_preference_summary">Eenvoudige spraak-naar-tekst</string>
     <string name="voice_search_settings_title">Spraakgestuurd zoeken</string>
     <string name="voice_service_preference_section_title">Spraakinvoerservices</string>

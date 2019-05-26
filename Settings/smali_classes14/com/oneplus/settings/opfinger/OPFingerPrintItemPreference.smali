@@ -125,7 +125,7 @@
 
     nop
 
-    const v0, 0x7f0a040c
+    const v0, 0x7f0a0410
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -135,7 +135,7 @@
 
     nop
 
-    const v0, 0x7f0a040f
+    const v0, 0x7f0a0413
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -147,7 +147,7 @@
 
     nop
 
-    const v0, 0x7f0a040e
+    const v0, 0x7f0a0412
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

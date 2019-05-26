@@ -233,7 +233,7 @@
 
     if-eq v6, v7, :cond_5
 
-    const v9, 0x7f120f01
+    const v9, 0x7f120f04
 
     packed-switch v6, :pswitch_data_0
 
@@ -248,7 +248,7 @@
 
     iget-object v6, v0, Lcom/android/settings/print/PrintSettingsFragment$PrintJobsController;->this$0:Lcom/android/settings/print/PrintSettingsFragment;
 
-    const v9, 0x7f120eff
+    const v9, 0x7f120f02
 
     new-array v10, v8, [Ljava/lang/Object;
 
@@ -294,7 +294,7 @@
 
     iget-object v6, v0, Lcom/android/settings/print/PrintSettingsFragment$PrintJobsController;->this$0:Lcom/android/settings/print/PrintSettingsFragment;
 
-    const v9, 0x7f120f10
+    const v9, 0x7f120f13
 
     new-array v10, v8, [Ljava/lang/Object;
 
@@ -334,7 +334,7 @@
     :cond_5
     iget-object v6, v0, Lcom/android/settings/print/PrintSettingsFragment$PrintJobsController;->this$0:Lcom/android/settings/print/PrintSettingsFragment;
 
-    const v9, 0x7f120f03
+    const v9, 0x7f120f06
 
     new-array v10, v8, [Ljava/lang/Object;
 
@@ -355,7 +355,7 @@
     :goto_1
     iget-object v6, v0, Lcom/android/settings/print/PrintSettingsFragment$PrintJobsController;->this$0:Lcom/android/settings/print/PrintSettingsFragment;
 
-    const v9, 0x7f120f06
+    const v9, 0x7f120f09
 
     const/4 v10, 0x2
 

@@ -73,7 +73,7 @@
 
     move-result v0
 
-    const v1, 0x7f0a0529
+    const v1, 0x7f0a052d
 
     if-ne v0, v1, :cond_0
 

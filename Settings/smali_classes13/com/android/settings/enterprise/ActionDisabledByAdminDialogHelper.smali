@@ -190,7 +190,7 @@
 
     nop
 
-    const v1, 0x7f120a3f
+    const v1, 0x7f120a41
 
     invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -200,7 +200,7 @@
 
     invoke-direct {v2, p0}, Lcom/android/settings/enterprise/-$$Lambda$ActionDisabledByAdminDialogHelper$1vfAOqcacTgM-c2XJLB5Z1-4lQ4;-><init>(Lcom/android/settings/enterprise/ActionDisabledByAdminDialogHelper;)V
 
-    const v3, 0x7f120825
+    const v3, 0x7f120826
 
     invoke-virtual {v1, v3, v2}, Landroid/app/AlertDialog$Builder;->setNeutralButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 

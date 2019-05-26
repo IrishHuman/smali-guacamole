@@ -237,13 +237,13 @@
 
     invoke-direct {v2}, Landroid/text/SpannableStringBuilder;-><init>()V
 
-    const v3, 0x7f1209fb
+    const v3, 0x7f1209fd
 
     invoke-virtual {p0, v3}, Lcom/android/settings/notification/NotificationStation;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
-    const v4, 0x7f120a05
+    const v4, 0x7f120a07
 
     invoke-virtual {p0, v4}, Lcom/android/settings/notification/NotificationStation;->getString(I)Ljava/lang/String;
 
@@ -273,7 +273,7 @@
 
     move-result-object v4
 
-    const v5, 0x7f120a03
+    const v5, 0x7f120a05
 
     invoke-virtual {p0, v5}, Lcom/android/settings/notification/NotificationStation;->getString(I)Ljava/lang/String;
 
@@ -303,7 +303,7 @@
 
     move-result-object v4
 
-    const v5, 0x7f120a01
+    const v5, 0x7f120a03
 
     invoke-virtual {p0, v5}, Lcom/android/settings/notification/NotificationStation;->getString(I)Ljava/lang/String;
 
@@ -444,7 +444,7 @@
 
     move-result-object v4
 
-    const v5, 0x7f1209ff
+    const v5, 0x7f120a01
 
     invoke-virtual {p0, v5}, Lcom/android/settings/notification/NotificationStation;->getString(I)Ljava/lang/String;
 
@@ -478,7 +478,7 @@
 
     if-eqz v4, :cond_1
 
-    const v4, 0x7f120a00
+    const v4, 0x7f120a02
 
     invoke-virtual {p0, v4}, Lcom/android/settings/notification/NotificationStation;->getString(I)Ljava/lang/String;
 
@@ -497,7 +497,7 @@
 
     move-result-object v4
 
-    const v5, 0x7f120a0c
+    const v5, 0x7f120a0e
 
     invoke-virtual {p0, v5}, Lcom/android/settings/notification/NotificationStation;->getString(I)Ljava/lang/String;
 
@@ -517,9 +517,9 @@
 
     and-int/lit8 v4, v4, 0x1
 
-    const v5, 0x7f120a04
+    const v5, 0x7f120a06
 
-    const v6, 0x7f1209f9
+    const v6, 0x7f1209fb
 
     if-eqz v4, :cond_2
 
@@ -560,7 +560,7 @@
 
     move-result-object v4
 
-    const v7, 0x7f120a0e
+    const v7, 0x7f120a10
 
     invoke-virtual {p0, v7}, Lcom/android/settings/notification/NotificationStation;->getString(I)Ljava/lang/String;
 
@@ -642,7 +642,7 @@
 
     move-result-object v4
 
-    const v5, 0x7f120a0f
+    const v5, 0x7f120a11
 
     invoke-virtual {p0, v5}, Lcom/android/settings/notification/NotificationStation;->getString(I)Ljava/lang/String;
 
@@ -678,7 +678,7 @@
 
     move-result-object v4
 
-    const v5, 0x7f120a08
+    const v5, 0x7f120a0a
 
     invoke-virtual {p0, v5}, Lcom/android/settings/notification/NotificationStation;->getString(I)Ljava/lang/String;
 
@@ -711,7 +711,7 @@
 
     move-result-object v4
 
-    const v5, 0x7f120a07
+    const v5, 0x7f120a09
 
     invoke-virtual {p0, v5}, Lcom/android/settings/notification/NotificationStation;->getString(I)Ljava/lang/String;
 
@@ -763,7 +763,7 @@
 
     move-result-object v4
 
-    const v5, 0x7f120a02
+    const v5, 0x7f120a04
 
     invoke-virtual {p0, v5}, Lcom/android/settings/notification/NotificationStation;->getString(I)Ljava/lang/String;
 
@@ -803,7 +803,7 @@
 
     move-result-object v4
 
-    const v5, 0x7f1209fc
+    const v5, 0x7f1209fe
 
     invoke-virtual {p0, v5}, Lcom/android/settings/notification/NotificationStation;->getString(I)Ljava/lang/String;
 
@@ -834,7 +834,7 @@
 
     move-result-object v4
 
-    const v5, 0x7f1209f6
+    const v5, 0x7f1209f8
 
     invoke-virtual {p0, v5}, Lcom/android/settings/notification/NotificationStation;->getString(I)Ljava/lang/String;
 
@@ -875,7 +875,7 @@
 
     move-result-object v4
 
-    const v5, 0x7f120a0a
+    const v5, 0x7f120a0c
 
     invoke-virtual {p0, v5}, Lcom/android/settings/notification/NotificationStation;->getString(I)Ljava/lang/String;
 
@@ -896,7 +896,7 @@
 
     move-result-object v4
 
-    const v5, 0x7f120a09
+    const v5, 0x7f120a0b
 
     invoke-virtual {p0, v5}, Lcom/android/settings/notification/NotificationStation;->getString(I)Ljava/lang/String;
 
@@ -912,7 +912,7 @@
     :goto_3
     iget-object v4, v1, Landroid/app/Notification;->contentIntent:Landroid/app/PendingIntent;
 
-    const v5, 0x7f1209f7
+    const v5, 0x7f1209f9
 
     if-eqz v4, :cond_d
 
@@ -957,7 +957,7 @@
 
     move-result-object v4
 
-    const v6, 0x7f1209fa
+    const v6, 0x7f1209fc
 
     invoke-virtual {p0, v6}, Lcom/android/settings/notification/NotificationStation;->getString(I)Ljava/lang/String;
 
@@ -994,7 +994,7 @@
 
     move-result-object v4
 
-    const v6, 0x7f1209fe
+    const v6, 0x7f120a00
 
     invoke-virtual {p0, v6}, Lcom/android/settings/notification/NotificationStation;->getString(I)Ljava/lang/String;
 
@@ -1039,7 +1039,7 @@
 
     move-result-object v4
 
-    const v8, 0x7f1209f4
+    const v8, 0x7f1209f6
 
     invoke-virtual {p0, v8}, Lcom/android/settings/notification/NotificationStation;->getString(I)Ljava/lang/String;
 
@@ -1082,7 +1082,7 @@
 
     move-result-object v9
 
-    const v10, 0x7f120a0d
+    const v10, 0x7f120a0f
 
     invoke-virtual {p0, v10}, Lcom/android/settings/notification/NotificationStation;->getString(I)Ljava/lang/String;
 
@@ -1151,7 +1151,7 @@
 
     move-result-object v9
 
-    const v10, 0x7f120a0b
+    const v10, 0x7f120a0d
 
     invoke-virtual {p0, v10}, Lcom/android/settings/notification/NotificationStation;->getString(I)Ljava/lang/String;
 
@@ -1197,7 +1197,7 @@
 
     move-result-object v4
 
-    const v5, 0x7f1209f8
+    const v5, 0x7f1209fa
 
     invoke-virtual {p0, v5}, Lcom/android/settings/notification/NotificationStation;->getString(I)Ljava/lang/String;
 
@@ -1242,7 +1242,7 @@
 
     move-result-object v4
 
-    const v5, 0x7f1209fd
+    const v5, 0x7f1209ff
 
     invoke-virtual {p0, v5}, Lcom/android/settings/notification/NotificationStation;->getString(I)Ljava/lang/String;
 
@@ -1345,7 +1345,7 @@
 
     move-result-object v5
 
-    const v7, 0x7f120a06
+    const v7, 0x7f120a08
 
     invoke-virtual {p0, v7}, Lcom/android/settings/notification/NotificationStation;->getString(I)Ljava/lang/String;
 
@@ -1379,7 +1379,7 @@
 
     move-result-object v5
 
-    const v6, 0x7f1209f5
+    const v6, 0x7f1209f7
 
     invoke-virtual {p0, v6}, Lcom/android/settings/notification/NotificationStation;->getString(I)Ljava/lang/String;
 
@@ -1816,7 +1816,7 @@
 
     if-eqz v2, :cond_3
 
-    const v2, 0x7f120a10
+    const v2, 0x7f120a12
 
     invoke-virtual {v1, v2}, Lcom/android/settings/notification/NotificationStation;->getString(I)Ljava/lang/String;
 

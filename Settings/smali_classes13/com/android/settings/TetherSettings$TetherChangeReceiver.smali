@@ -112,7 +112,7 @@
 
     invoke-static {v4, v5, v6, v7}, Lcom/android/settings/TetherSettings;->access$000(Lcom/android/settings/TetherSettings;[Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;)V
 
-    goto/16 :goto_1
+    goto/16 :goto_2
 
     :cond_0
     const-string v1, "android.intent.action.MEDIA_SHARED"
@@ -133,7 +133,7 @@
 
     invoke-static {v1}, Lcom/android/settings/TetherSettings;->access$200(Lcom/android/settings/TetherSettings;)V
 
-    goto :goto_1
+    goto/16 :goto_2
 
     :cond_1
     const-string v1, "android.intent.action.MEDIA_UNSHARED"
@@ -154,7 +154,7 @@
 
     invoke-static {v1}, Lcom/android/settings/TetherSettings;->access$200(Lcom/android/settings/TetherSettings;)V
 
-    goto :goto_1
+    goto/16 :goto_2
 
     :cond_2
     const-string v1, "android.hardware.usb.action.USB_STATE"
@@ -179,7 +179,7 @@
 
     invoke-static {v1}, Lcom/android/settings/TetherSettings;->access$200(Lcom/android/settings/TetherSettings;)V
 
-    goto :goto_1
+    goto/16 :goto_2
 
     :cond_3
     const-string v1, "android.bluetooth.adapter.action.STATE_CHANGED"
@@ -188,7 +188,9 @@
 
     move-result v1
 
-    if-eqz v1, :cond_7
+    const/4 v3, 0x2
+
+    if-eqz v1, :cond_8
 
     iget-object v1, p0, Lcom/android/settings/TetherSettings$TetherChangeReceiver;->this$0:Lcom/android/settings/TetherSettings;
 
@@ -196,55 +198,135 @@
 
     move-result v1
 
-    if-eqz v1, :cond_6
+    if-eqz v1, :cond_7
 
     const-string v1, "android.bluetooth.adapter.extra.STATE"
 
-    const/high16 v3, -0x80000000
+    const/high16 v4, -0x80000000
 
-    invoke-virtual {p2, v1, v3}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
+    invoke-virtual {p2, v1, v4}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v1
 
-    if-eq v1, v3, :cond_5
+    if-eq v1, v4, :cond_6
 
-    const/16 v3, 0xa
+    const/16 v4, 0xa
 
-    if-eq v1, v3, :cond_5
+    if-eq v1, v4, :cond_6
 
-    const/16 v3, 0xc
+    const/16 v4, 0xc
 
-    if-eq v1, v3, :cond_4
+    if-eq v1, v4, :cond_4
 
-    goto :goto_0
+    goto :goto_1
 
     :cond_4
-    iget-object v1, p0, Lcom/android/settings/TetherSettings$TetherChangeReceiver;->this$0:Lcom/android/settings/TetherSettings;
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isSupportUss()Z
 
-    const/4 v3, 0x2
+    move-result v1
+
+    if-nez v1, :cond_5
+
+    iget-object v1, p0, Lcom/android/settings/TetherSettings$TetherChangeReceiver;->this$0:Lcom/android/settings/TetherSettings;
 
     invoke-static {v1, v3}, Lcom/android/settings/TetherSettings;->access$500(Lcom/android/settings/TetherSettings;I)V
-
-    iget-object v1, p0, Lcom/android/settings/TetherSettings$TetherChangeReceiver;->this$0:Lcom/android/settings/TetherSettings;
-
-    invoke-static {v1, v2}, Lcom/android/settings/TetherSettings;->access$402(Lcom/android/settings/TetherSettings;Z)Z
 
     goto :goto_0
 
     :cond_5
     iget-object v1, p0, Lcom/android/settings/TetherSettings$TetherChangeReceiver;->this$0:Lcom/android/settings/TetherSettings;
 
+    iget-object v4, p0, Lcom/android/settings/TetherSettings$TetherChangeReceiver;->this$0:Lcom/android/settings/TetherSettings;
+
+    invoke-static {v4}, Lcom/android/settings/TetherSettings;->access$600(Lcom/android/settings/TetherSettings;)Landroid/support/v14/preference/SwitchPreference;
+
+    move-result-object v4
+
+    invoke-static {v1, v4, v3}, Lcom/android/settings/TetherSettings;->access$700(Lcom/android/settings/TetherSettings;Landroid/support/v14/preference/SwitchPreference;I)V
+
+    :goto_0
+    iget-object v1, p0, Lcom/android/settings/TetherSettings$TetherChangeReceiver;->this$0:Lcom/android/settings/TetherSettings;
+
+    invoke-static {v1, v2}, Lcom/android/settings/TetherSettings;->access$402(Lcom/android/settings/TetherSettings;Z)Z
+
+    goto :goto_1
+
+    :cond_6
+    iget-object v1, p0, Lcom/android/settings/TetherSettings$TetherChangeReceiver;->this$0:Lcom/android/settings/TetherSettings;
+
     invoke-static {v1, v2}, Lcom/android/settings/TetherSettings;->access$402(Lcom/android/settings/TetherSettings;Z)Z
 
     nop
 
-    :cond_6
-    :goto_0
+    :cond_7
+    :goto_1
     iget-object v1, p0, Lcom/android/settings/TetherSettings$TetherChangeReceiver;->this$0:Lcom/android/settings/TetherSettings;
 
     invoke-static {v1}, Lcom/android/settings/TetherSettings;->access$200(Lcom/android/settings/TetherSettings;)V
 
-    :cond_7
-    :goto_1
+    goto :goto_2
+
+    :cond_8
+    const-string v1, "android.intent.action.setupDataError_tether"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_9
+
+    const-string v1, "TetheringSettings"
+
+    const-string v4, "onReceive tether error braodcast"
+
+    invoke-static {v1, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    const-string v1, "data_call_error"
+
+    invoke-virtual {p2, v1, v2}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_a
+
+    const-string v1, "data_call_code"
+
+    invoke-virtual {p2, v1, v2}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
+
+    move-result v1
+
+    const/16 v2, 0x43
+
+    if-ne v1, v2, :cond_a
+
+    iget-object v1, p0, Lcom/android/settings/TetherSettings$TetherChangeReceiver;->this$0:Lcom/android/settings/TetherSettings;
+
+    invoke-static {v1, v3}, Lcom/android/settings/TetherSettings;->access$800(Lcom/android/settings/TetherSettings;I)V
+
+    iget-object v1, p0, Lcom/android/settings/TetherSettings$TetherChangeReceiver;->this$0:Lcom/android/settings/TetherSettings;
+
+    invoke-static {v1}, Lcom/android/settings/TetherSettings;->access$900(Lcom/android/settings/TetherSettings;)V
+
+    goto :goto_2
+
+    :cond_9
+    const-string v1, "android.intent.action.SIM_STATE_CHANGED"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_a
+
+    iget-object v1, p0, Lcom/android/settings/TetherSettings$TetherChangeReceiver;->this$0:Lcom/android/settings/TetherSettings;
+
+    invoke-static {p1}, Lcom/android/settings/wifi/tether/utils/TetherUtils;->isSimStatusChange(Landroid/content/Context;)Z
+
+    move-result v2
+
+    invoke-static {v1, v2}, Lcom/android/settings/TetherSettings;->access$1000(Lcom/android/settings/TetherSettings;Z)V
+
+    :cond_a
+    :goto_2
     return-void
 .end method

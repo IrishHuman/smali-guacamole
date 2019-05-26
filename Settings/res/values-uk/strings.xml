@@ -2549,8 +2549,8 @@
     <string name="one_userkey">один ключ користувача</string>
     <string name="oneplus_adaptive_model">Адаптивний режим</string>
     <string name="oneplus_add">Додати</string>
-    <string name="oneplus_add_bluetooth_car_kit">Додати автомобільний комплект Bluetooth</string>
-    <string name="oneplus_add_bluetooth_car_kit_summary">Автомобільний комплект Bluetooth автоматично підключається до попередніх пристроїв. Ви також можете додавати нові підключення вручну.</string>
+    <string name="oneplus_add_bluetooth_car_kit">Додати Bluetooth автомобіля</string>
+    <string name="oneplus_add_bluetooth_car_kit_summary">Bluetooth автомобіля автоматично підключається до попередніх пристроїв. Ви також можете додавати нові пристрої вручну</string>
     <string name="oneplus_add_fingerprint_list">Додати відбиток пальця</string>
     <string name="oneplus_adjust_effect">Інтенсивність</string>
     <string name="oneplus_advanced_display_settings">Розширені налаштування дисплея</string>
@@ -2786,7 +2786,7 @@
     <string name="oneplus_fnatic_mode_add_to_wallpapers">Додати до шпалер</string>
     <string name="oneplus_fnatic_mode_background_introduction_summary">Максимальне покращення ігроладу за рахунок збільшення продуктивності. Це може призвести до неполадок у роботі деяких додатків.</string>
     <string name="oneplus_fnatic_mode_background_introduction_title">Покращене керування процесами</string>
-    <string name="oneplus_fnatic_mode_disturb_introduction_summary">Блокувати всі сповіщення й виклики (крім сповіщень про низький заряд акумулятора, сигналів будильника та таймера). Записи про пропущені виклики можна переглянути лише в історії викликів.</string>
+    <string name="oneplus_fnatic_mode_disturb_introduction_summary">Блокувати всі сповіщення й виклики (крім сповіщень про низький заряд акумулятора, сигналів будильника та таймера).</string>
     <string name="oneplus_fnatic_mode_disturb_introduction_title">Розширений режим \"Не турбувати\"</string>
     <string name="oneplus_fnatic_mode_enable_introduction_title">Щоб використовувати режим Fnatic, потрібно ввімкнути Ігровий режим</string>
     <string name="oneplus_fnatic_mode_network_introduction_dual4g_summary">Пріоритет надається основній SIM-карті, щоб зменшити перешкоди та затримки під час гри. У результаті другу SIM-карту буде вимкнено, і ви не отримуватимете викликів або повідомлень.</string>
@@ -2878,6 +2878,7 @@
     <string name="oneplus_haptic_feedback_tips">Забезпечувати тактильну віддачу в певних ігрових ситуаціях (лише в підтримуваних іграх)</string>
     <string name="oneplus_haptic_feedback_title">Покращення тактильної віддачі</string>
     <string name="oneplus_hardware_keys_action_split_screen">Відкрити/Закрити розділений екран</string>
+    <string name="oneplus_health_safety_information">Відомості про безпеку &amp; справність</string>
     <string name="oneplus_hearing_aid">Сумісність зі слуховим апаратом</string>
     <string name="oneplus_hide_navigation_bar">Приховати панель навігації</string>
     <string name="oneplus_hide_navkeys">Приховати панель навігації</string>
@@ -3092,8 +3093,8 @@
     <string name="oneplus_receive_notifications">Сповіщення OnePlus</string>
     <string name="oneplus_receive_notifications_agree">Отримувати новини від OnePlus</string>
     <string name="oneplus_receive_notifications_summary">Прийміть, щоб отримувати офіційні новини, інформацію про продукти, анкети щодо взаємодії, рекомендації про придбання та інформацію щодо купонів від компанії OnePlus</string>
-    <string name="oneplus_recognized_bluetooth_car_kits">Розпізнані автомобільні комплекти Bluetooth</string>
-    <string name="oneplus_recognized_bluetooth_car_kits_no_devices">Немає автомобільного комплекту Bluetooth. Додайте нові підключення вручну нижче.</string>
+    <string name="oneplus_recognized_bluetooth_car_kits">Розпізнаний Bluetooth автомобіля</string>
+    <string name="oneplus_recognized_bluetooth_car_kits_no_devices">Немає жодного Bluetooth автомобіля. Додайте вказані нижче пристрої</string>
     <string name="oneplus_recommended_opening">Рекомендовано</string>
     <string name="oneplus_reenroll_fingerprint_tips">Після заміни захисної плівки на мобільному телефоні зареєструйте відбиток пальця заново, щоб забезпечити його точне розпізнавання.</string>
     <string name="oneplus_regulatory_information">Перевірка</string>
@@ -3116,6 +3117,7 @@
     <string name="oneplus_screen_color_mode_basic">sRGB</string>
     <string name="oneplus_screen_color_mode_default">За замовчуванням</string>
     <string name="oneplus_screen_color_mode_defined">Користувацький колір</string>
+    <string name="oneplus_screen_color_mode_ntsc">Широка гама AMOLED</string>
     <string name="oneplus_screen_color_mode_reading_mode_on_summary">Недоступно, оскільки ввімкнено режим читання</string>
     <string name="oneplus_screen_color_mode_soft">"М'який"</string>
     <string name="oneplus_screen_color_mode_title">Калібрування екрану</string>
@@ -3705,6 +3707,10 @@
     <string name="restore_default_apn_completed">Налаштування за умовчанням відновлено.</string>
     <string name="restr_pin_enter_admin_pin">Введіть PIN-код адміністратора</string>
     <string name="restrict_background_blacklisted">Фоновий режим вимкнено</string>
+    <string name="restrict_background_uss_always">Завжди</string>
+    <string name="restrict_background_uss_never">Ніколи</string>
+    <string name="restrict_background_uss_roaming">Лише в роумінгу</string>
+    <string name="restrict_background_uss_title">Обмежити передачу фонових даних</string>
     <string name="restricted_app_detail_footer">Ці додатки споживали заряд акумулятора у фоновому режимі. Якщо ви їх обмежите, можливо, вони працюватимуть неналежним чином, а сповіщення надходитимуть із затримкою.</string>
     <string name="restricted_app_title">Обмежені додатки</string>
     <string name="restricted_false_label">Додаток може використовувати акумулятор у фоновому режимі</string>
@@ -4406,6 +4412,7 @@
     <string name="summary_divider_text">", "</string>
     <string name="summary_range_symbol_combination">%1$s – %2$s</string>
     <string name="summary_range_verbal_combination">%1$s – %2$s</string>
+    <string name="summary_voice_network">VoLTE, Виклики через Wi-Fi</string>
     <string name="support_country_format">%1$s – %2$s</string>
     <string name="support_summary">Довідкові статті, підтримка телефоном і в чаті, початок роботи</string>
     <string name="suw_back_button_label">Назад</string>
@@ -4458,6 +4465,11 @@
     <string name="testing">Тестування</string>
     <string name="testing_phone_info">Інф-я тел-ну</string>
     <string name="testing_usage_stats">Статистика викор.</string>
+    <string name="tether_error_item_default">Модем</string>
+    <string name="tether_error_message">Ви не підписані на %1$s.</string>
+    <string name="tether_error_title">Помилка %1$s</string>
+    <string name="tether_no_sim_message">Вставте SIM-картку, щоб скористатися мобільною точкою доступу та іншими функціями модема</string>
+    <string name="tether_no_sim_title">Відсутня SIM-карта</string>
     <string name="tether_settings_disabled_on_data_saver">Коли ввімкнено Заощадження трафіку, неможливо ввімкнути режим модема або використовувати портативні точки доступу</string>
     <string name="tether_settings_summary_hotspot_off_tether_on">Телефон використовується в режимі модема</string>
     <string name="tether_settings_summary_hotspot_on_tether_off">Точку доступу ввімкнено</string>
@@ -4863,6 +4875,7 @@
     <string name="voice_input_settings_title">Голосовий ввід</string>
     <string name="voice_interaction_security_warning">Ця служба голосового вводу зможе постійно відстежувати голос і контролювати додатки, у яких увімкнено голосовий ввід, від вашого імені. Вона походить із додатка %s. Увімкнути цю службу?</string>
     <string name="voice_interactor_preference_summary">Підтримка команд швидкого запуску та взаємодії</string>
+    <string name="voice_network_title">Мережі для голосового зв’язку</string>
     <string name="voice_recognizer_preference_summary">Просте перетворення мовлення на текст</string>
     <string name="voice_search_settings_title">Голос. пошук</string>
     <string name="voice_service_preference_section_title">Служби голосового вводу</string>

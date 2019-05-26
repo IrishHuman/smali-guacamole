@@ -2549,8 +2549,8 @@ Dette gør det også muligt for appen at slå Forstyr ikke til eller fra og ænd
     <string name="one_userkey">én brugernøgle</string>
     <string name="oneplus_adaptive_model">Adaptiv tilstand</string>
     <string name="oneplus_add">Tilføj</string>
-    <string name="oneplus_add_bluetooth_car_kit">Tilføj Bluetooth-bilsæt</string>
-    <string name="oneplus_add_bluetooth_car_kit_summary">Bluetooth-bilsættet opretter automatisk forbindelse til dine tidligere enheder, og du kan tilføje nye forbindelser manuelt</string>
+    <string name="oneplus_add_bluetooth_car_kit">Tilføj Bluetooth i køretøj</string>
+    <string name="oneplus_add_bluetooth_car_kit_summary">Bluetooth i køretøj opretter automatisk forbindelse til dine tidligere enheder, og du kan tilføje nye forbindelser manuelt</string>
     <string name="oneplus_add_fingerprint_list">Tilføj fingeraftryk</string>
     <string name="oneplus_adjust_effect">Effektens styrke</string>
     <string name="oneplus_advanced_display_settings">Avancerede visningsindstillinger</string>
@@ -2786,7 +2786,7 @@ Risikotip: Oplåsning med ansigtet er mindre sikkert end fingeraftryk og adgangs
     <string name="oneplus_fnatic_mode_add_to_wallpapers">Føj til baggrunde</string>
     <string name="oneplus_fnatic_mode_background_introduction_summary">Næsten totalt fokus af ydeevnen på spil. Dette kan medføre fejl i nogle apps.</string>
     <string name="oneplus_fnatic_mode_background_introduction_title">Optimer procesregulator</string>
-    <string name="oneplus_fnatic_mode_disturb_introduction_summary">Bloker alle meddelelser og opkald (undtagen meddelelser om lav batteristrøm, alarm og timer). Du kan kun få vist ubesvarede opkald i opkaldshistorikken.</string>
+    <string name="oneplus_fnatic_mode_disturb_introduction_summary">Bloker alle meddelelser og opkald (undtagen meddelelser om lav batteristrøm, alarm og timer).</string>
     <string name="oneplus_fnatic_mode_disturb_introduction_title">Avanceret DND</string>
     <string name="oneplus_fnatic_mode_enable_introduction_title">Spilletilstand skal aktiveres først, hvis du vil bruge Fnatic-tilstand</string>
     <string name="oneplus_fnatic_mode_network_introduction_dual4g_summary">Det primære SIM-korts signalstyrke er prioriteret, så det minimerer interferens for spil ved lav latens. Derfor deaktiveres det sekundære SIM-kort, og der modtages ikke opkald eller beskeder.</string>
@@ -2878,6 +2878,7 @@ For at gå til startskærmbilledet, kan du stryge op fra skærmenkantens nederst
     <string name="oneplus_haptic_feedback_tips">Få haptisk feedback til specifikke scener i spil，gælder kun for understøttede spil</string>
     <string name="oneplus_haptic_feedback_title">Bedre haptisk feedback</string>
     <string name="oneplus_hardware_keys_action_split_screen">Åbn/luk opdelt skærm</string>
+    <string name="oneplus_health_safety_information">Oplysninger om sundhed og sikkerhed</string>
     <string name="oneplus_hearing_aid">Kompatibilitet med høreapparat</string>
     <string name="oneplus_hide_navigation_bar">Skjul navigationslinje</string>
     <string name="oneplus_hide_navkeys">Skjul navigationslinjen</string>
@@ -3092,8 +3093,8 @@ Bemærk: Dit fingeraftryk er muligvis mindre sikkert end et stærkt mønster ell
     <string name="oneplus_receive_notifications">OnePlus-meddelelser</string>
     <string name="oneplus_receive_notifications_agree">Få nyheder fra OnePlus</string>
     <string name="oneplus_receive_notifications_summary">Acceptér at modtage officielle nyheder, oplysninger om produkter, spørgeskemaer og anbefalinger/kuponer til indkøb fra OnePlus</string>
-    <string name="oneplus_recognized_bluetooth_car_kits">Genkendte Bluetooth-bilsæt</string>
-    <string name="oneplus_recognized_bluetooth_car_kits_no_devices">Intet Bluetooth-bilsæt, du kan manuelt tilføje nye forbindelser nedenfor</string>
+    <string name="oneplus_recognized_bluetooth_car_kits">Genkendte Bluetooth i køretøj</string>
+    <string name="oneplus_recognized_bluetooth_car_kits_no_devices">Ingen Bluetooth i køretøj, du kan manuelt tilføje nye enheder nedenfor</string>
     <string name="oneplus_recommended_opening">Anbefalet</string>
     <string name="oneplus_reenroll_fingerprint_tips">Du bedes registrere dit fingeraftryk igen, når du har genmonteret den beskyttende film på mobiltelefonen for at sikre, at fingeraftrykket er korrekt</string>
     <string name="oneplus_regulatory_information">Bekræftelse</string>
@@ -3116,6 +3117,7 @@ Bemærk: Dit fingeraftryk er muligvis mindre sikkert end et stærkt mønster ell
     <string name="oneplus_screen_color_mode_basic">sRGB</string>
     <string name="oneplus_screen_color_mode_default">Standard</string>
     <string name="oneplus_screen_color_mode_defined">Brugerdefineret farve</string>
+    <string name="oneplus_screen_color_mode_ntsc">AMOLED med bredt spektrum</string>
     <string name="oneplus_screen_color_mode_reading_mode_on_summary">Ikke tilgængelig, fordi læsetilstand er slået til</string>
     <string name="oneplus_screen_color_mode_soft">Blød</string>
     <string name="oneplus_screen_color_mode_title">Skærmkalibrering</string>
@@ -3705,6 +3707,10 @@ UT-grænseflade: %5$s"</string>
     <string name="restore_default_apn_completed">Standardindstillingerne for adgangspunktet er nulstillet.</string>
     <string name="restr_pin_enter_admin_pin">Angiv administratorpinkoden</string>
     <string name="restrict_background_blacklisted">Baggrundsdata er slået fra</string>
+    <string name="restrict_background_uss_always">Altid</string>
+    <string name="restrict_background_uss_never">Aldrig</string>
+    <string name="restrict_background_uss_roaming">Kun under roaming</string>
+    <string name="restrict_background_uss_title">Begræns baggrundsdata</string>
     <string name="restricted_app_detail_footer">Disse apps har brugt batteri i baggrunden. Begrænsede apps fungerer muligvis ikke korrekt, og underretninger kan være forsinkede.</string>
     <string name="restricted_app_title">Begrænsede apps</string>
     <string name="restricted_false_label">Appen kan bruge batteri i baggrunden</string>
@@ -4406,6 +4412,7 @@ Prøv at bruge et hurtigere ^3, eller brug dette ^4 som ekstern lagerplads i ste
     <string name="summary_divider_text">", "</string>
     <string name="summary_range_symbol_combination">%1$s-%2$s</string>
     <string name="summary_range_verbal_combination">%1$s til %2$s</string>
+    <string name="summary_voice_network">VoLTE, Wi-Fi-opkald</string>
     <string name="support_country_format">%1$s – %2$s</string>
     <string name="support_summary">Artikler i Hjælp, telefon- og chatsupport, kom godt i gang</string>
     <string name="suw_back_button_label">Tilbage</string>
@@ -4458,6 +4465,11 @@ Googles tilgang til synkronisering af data giver dig adgang til dine kontaktpers
     <string name="testing">Tester</string>
     <string name="testing_phone_info">Telefonoplysninger</string>
     <string name="testing_usage_stats">Brugerstatistikker</string>
+    <string name="tether_error_item_default">Internetdeling</string>
+    <string name="tether_error_message">Du har ikke abonnement på %1$s.</string>
+    <string name="tether_error_title">%1$s fejl</string>
+    <string name="tether_no_sim_message">Indsæt et SIM-kort for at bruge mobilt hotspot og andre indstillinger for internetdeling</string>
+    <string name="tether_no_sim_title">Intet SIM-kort</string>
     <string name="tether_settings_disabled_on_data_saver">Der kan ikke bruges netdeling eller hotspots, når Datasparefunktion er aktiveret</string>
     <string name="tether_settings_summary_hotspot_off_tether_on">Netdeling</string>
     <string name="tether_settings_summary_hotspot_on_tether_off">Hotspot er slået til</string>
@@ -4863,6 +4875,7 @@ Enhver bruger kan opdatere apps for alle andre brugere."</string>
     <string name="voice_input_settings_title">Indtaling</string>
     <string name="voice_interaction_security_warning">Denne indtalingstjeneste vil kunne foretage lydovervågning, der altid er slået til, og styre taleaktiverede apps på dine vegne. Den kommer fra appen %s. Vil du aktivere brugen af denne tjeneste?</string>
     <string name="voice_interactor_preference_summary">Komplet kommandoord og handling</string>
+    <string name="voice_network_title">Stemmenetværk</string>
     <string name="voice_recognizer_preference_summary">Enkel oplæsning</string>
     <string name="voice_search_settings_title">Talesøgning</string>
     <string name="voice_service_preference_section_title">Indtalingstjenester</string>

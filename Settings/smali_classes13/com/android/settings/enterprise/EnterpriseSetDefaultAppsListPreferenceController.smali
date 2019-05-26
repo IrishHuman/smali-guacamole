@@ -675,14 +675,14 @@
 
     if-eqz v5, :cond_2
 
-    const v5, 0x7f1208ff
+    const v5, 0x7f120900
 
     invoke-virtual {v4, v5}, Landroid/support/v7/preference/PreferenceCategory;->setTitle(I)V
 
     goto :goto_1
 
     :cond_2
-    const v5, 0x7f120eac
+    const v5, 0x7f120eaf
 
     invoke-virtual {v4, v5}, Landroid/support/v7/preference/PreferenceCategory;->setTitle(I)V
 

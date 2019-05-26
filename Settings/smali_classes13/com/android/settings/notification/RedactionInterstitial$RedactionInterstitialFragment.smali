@@ -142,7 +142,7 @@
 
     if-nez v4, :cond_3
 
-    const v2, 0x7f0a04fc
+    const v2, 0x7f0a0500
 
     goto :goto_3
 
@@ -155,7 +155,7 @@
 
     if-nez v4, :cond_4
 
-    const v2, 0x7f0a0489
+    const v2, 0x7f0a048d
 
     :cond_4
     :goto_3
@@ -183,7 +183,7 @@
 
     const/4 v1, 0x1
 
-    const v2, 0x7f0a04fc
+    const v2, 0x7f0a0500
 
     if-ne p2, v2, :cond_0
 
@@ -292,7 +292,7 @@
 
     move-result v0
 
-    const v1, 0x7f0a048a
+    const v1, 0x7f0a048e
 
     if-ne v0, v1, :cond_0
 
@@ -381,7 +381,7 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/widget/TextView;->setTextAppearance(Landroid/content/Context;I)V
 
-    const v1, 0x7f0a0484
+    const v1, 0x7f0a0488
 
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -391,7 +391,7 @@
 
     iput-object v1, p0, Lcom/android/settings/notification/RedactionInterstitial$RedactionInterstitialFragment;->mRadioGroup:Landroid/widget/RadioGroup;
 
-    const v1, 0x7f0a04fc
+    const v1, 0x7f0a0500
 
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -403,7 +403,7 @@
 
     nop
 
-    const v1, 0x7f0a0489
+    const v1, 0x7f0a048d
 
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -457,7 +457,7 @@
 
     if-eqz v1, :cond_0
 
-    const v1, 0x7f0a033e
+    const v1, 0x7f0a0342
 
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -465,19 +465,19 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    const v2, 0x7f120872
+    const v2, 0x7f120873
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(I)V
 
     iget-object v1, p0, Lcom/android/settings/notification/RedactionInterstitial$RedactionInterstitialFragment;->mShowAllButton:Lcom/android/settings/RestrictedRadioButton;
 
-    const v2, 0x7f120879
+    const v2, 0x7f12087a
 
     invoke-virtual {v1, v2}, Lcom/android/settings/RestrictedRadioButton;->setText(I)V
 
     iget-object v1, p0, Lcom/android/settings/notification/RedactionInterstitial$RedactionInterstitialFragment;->mRedactSensitiveButton:Lcom/android/settings/RestrictedRadioButton;
 
-    const v2, 0x7f120877
+    const v2, 0x7f120878
 
     invoke-virtual {v1, v2}, Lcom/android/settings/RestrictedRadioButton;->setText(I)V
 
@@ -494,7 +494,7 @@
     invoke-virtual {v1, v2}, Landroid/widget/RadioButton;->setVisibility(I)V
 
     :cond_0
-    const v1, 0x7f0a048a
+    const v1, 0x7f0a048e
 
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

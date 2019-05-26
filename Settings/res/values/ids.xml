@@ -608,6 +608,8 @@
     <item type="id" name="ims_reg_state_label" />
     <item type="id" name="ims_reg_state_value" />
     <item type="id" name="imsi" />
+    <item type="id" name="imsi_label" />
+    <item type="id" name="imsi_value" />
     <item type="id" name="increment" />
     <item type="id" name="ind_bluetooth" />
     <item type="id" name="ind_brightness" />
@@ -777,8 +779,10 @@
     <item type="id" name="mediaRowSelector" />
     <item type="id" name="mediaRowSeparator" />
     <item type="id" name="media_actions" />
+    <item type="id" name="meid_label" />
     <item type="id" name="meid_number_label" />
     <item type="id" name="meid_number_value" />
+    <item type="id" name="meid_value" />
     <item type="id" name="menu_share" />
     <item type="id" name="message" />
     <item type="id" name="message_below_pin" />

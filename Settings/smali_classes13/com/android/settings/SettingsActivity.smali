@@ -1816,7 +1816,7 @@
 .method private switchToFragment(Ljava/lang/String;Landroid/os/Bundle;ZZILjava/lang/CharSequence;Z)Landroid/app/Fragment;
     .locals 5
 
-    const v0, 0x7f120f53
+    const v0, 0x7f120f56
 
     invoke-virtual {p0, v0}, Lcom/android/settings/SettingsActivity;->getString(I)Ljava/lang/String;
 
@@ -1997,7 +1997,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f0a0327
+    const v3, 0x7f0a0329
 
     invoke-virtual {v2, v3, v1}, Landroid/app/FragmentTransaction;->replace(ILandroid/app/Fragment;)Landroid/app/FragmentTransaction;
 
@@ -2631,7 +2631,7 @@
     :goto_3
     invoke-virtual {v1, v12}, Lcom/android/settings/SettingsActivity;->setContentView(I)V
 
-    const v12, 0x7f0a0327
+    const v12, 0x7f0a0329
 
     invoke-virtual {v1, v12}, Lcom/android/settings/SettingsActivity;->findViewById(I)Landroid/view/View;
 
@@ -2676,7 +2676,7 @@
     invoke-virtual {v1, v0, v10, v6}, Lcom/android/settings/SettingsActivity;->launchSettingFragment(Ljava/lang/String;ZLandroid/content/Intent;)V
 
     :goto_4
-    const v12, 0x7f0a04c5
+    const v12, 0x7f0a04c9
 
     invoke-virtual {v1, v12}, Lcom/android/settings/SettingsActivity;->findViewById(I)Landroid/view/View;
 
@@ -2737,7 +2737,7 @@
     invoke-virtual {v14, v13}, Landroid/app/ActionBar;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
     :cond_b
-    const v11, 0x7f0a056d
+    const v11, 0x7f0a0571
 
     invoke-virtual {v1, v11}, Lcom/android/settings/SettingsActivity;->findViewById(I)Landroid/view/View;
 
@@ -2792,7 +2792,7 @@
 
     invoke-virtual {v13, v15}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v15, 0x7f0a0509
+    const v15, 0x7f0a050d
 
     invoke-virtual {v1, v15}, Lcom/android/settings/SettingsActivity;->findViewById(I)Landroid/view/View;
 
@@ -2806,7 +2806,7 @@
 
     invoke-virtual {v15, v7}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v7, 0x7f0a0367
+    const v7, 0x7f0a036b
 
     invoke-virtual {v1, v7}, Lcom/android/settings/SettingsActivity;->findViewById(I)Landroid/view/View;
 

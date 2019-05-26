@@ -53,7 +53,7 @@
 
     iget-object v1, p0, Lcom/oneplus/settings/better/OPFnaticWallPapers$1;->this$0:Lcom/oneplus/settings/better/OPFnaticWallPapers;
 
-    const v2, 0x7f120b76
+    const v2, 0x7f120b78
 
     const/4 v3, 0x1
 

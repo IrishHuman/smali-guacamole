@@ -43,13 +43,13 @@
 .method protected onBindListItem(Landroid/view/View;I)V
     .locals 6
 
-    const v0, 0x7f0a0452
+    const v0, 0x7f0a0456
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    const v1, 0x7f0a044e
+    const v1, 0x7f0a0452
 
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -91,7 +91,7 @@
 
     if-eqz v4, :cond_0
 
-    const v5, 0x7f0a0546
+    const v5, 0x7f0a054a
 
     invoke-virtual {p1, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

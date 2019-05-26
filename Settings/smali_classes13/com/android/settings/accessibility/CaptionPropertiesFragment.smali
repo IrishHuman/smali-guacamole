@@ -1138,7 +1138,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f0a046e
+    const v4, 0x7f0a0472
 
     invoke-virtual {v2, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1387,7 +1387,7 @@
 
     move-result v0
 
-    const v1, 0x7f0a0450
+    const v1, 0x7f0a0454
 
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1411,7 +1411,7 @@
     :goto_0
     invoke-virtual {v1, v2}, Lcom/android/internal/widget/SubtitleView;->setVisibility(I)V
 
-    const v1, 0x7f0a0453
+    const v1, 0x7f0a0457
 
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1419,7 +1419,7 @@
 
     iput-object v1, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mPreviewWindow:Landroid/view/View;
 
-    const v1, 0x7f0a0452
+    const v1, 0x7f0a0456
 
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

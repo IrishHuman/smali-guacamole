@@ -2549,8 +2549,8 @@
     <string name="one_userkey">คีย์ผู้ใช้ 1 คีย์</string>
     <string name="oneplus_adaptive_model">โหมดปรับตัว</string>
     <string name="oneplus_add">เพิ่ม</string>
-    <string name="oneplus_add_bluetooth_car_kit">เพิ่มชุดอุปกรณ์ติดรถยนต์แบบบลูทูธ</string>
-    <string name="oneplus_add_bluetooth_car_kit_summary">ชุดอุปกรณ์ติดรถยนต์แบบบลูทูธจะเชื่อมต่อกับอุปกรณ์ก่อนหน้าของคุณโดยอัตโนมัติ นอกจากนี้ คุณยังสามารถเพิ่มการเชื่อมต่อใหม่ได้ด้วยตนเอง</string>
+    <string name="oneplus_add_bluetooth_car_kit">เพิ่มบลูทูธบนยานพาหนะ</string>
+    <string name="oneplus_add_bluetooth_car_kit_summary">บลูทูธบนยานพาหนะจะเชื่อมต่อกับอุปกรณ์ของคุณก่อนหน้านี้โดยอัตโนมัติ นอกจากนี้ คุณยังสามารถเพิ่มอุปกรณ์ใหม่ได้ด้วยตนเอง</string>
     <string name="oneplus_add_fingerprint_list">เพิ่มลายนิ้วมือ</string>
     <string name="oneplus_adjust_effect">ความแรงของเอฟเฟกต์</string>
     <string name="oneplus_advanced_display_settings">การตั้งค่าการแสดงผลขั้นสูง</string>
@@ -2786,7 +2786,7 @@
     <string name="oneplus_fnatic_mode_add_to_wallpapers">เพิ่มไปยังภาพพื้นหลัง</string>
     <string name="oneplus_fnatic_mode_background_introduction_summary">กำลังใช้งานประสิทธิภาพเกือบทั้งหมดไปกับการเล่นเกม ซึ่งอาจส่งผลให้เกิดข้อบกพร่องในแอปบางแอป</string>
     <string name="oneplus_fnatic_mode_background_introduction_title">เพิ่มประสิทธิภาพตัวควบคุมการประมวลผล</string>
-    <string name="oneplus_fnatic_mode_disturb_introduction_summary">ปิดกั้นการแจ้งเตือนและการโทรทั้งหมด (ยกเว้นการแจ้งเตือนแบตเตอรี่ต่ำ นาฬิกาปลุก และตัวจับเวลา) คุณสามารถดูสายที่ไม่ได้รับได้ในประวัติการโทรเท่านั้น</string>
+    <string name="oneplus_fnatic_mode_disturb_introduction_summary">ปิดกั้นการแจ้งเตือนและการโทรทั้งหมด (ยกเว้นการแจ้งเตือนแบตเตอรี่ต่ำ นาฬิกาปลุก และตัวจับเวลา)</string>
     <string name="oneplus_fnatic_mode_disturb_introduction_title">DND ขั้นสูง</string>
     <string name="oneplus_fnatic_mode_enable_introduction_title">ต้องเปิดใช้งานโหมดเกมเป็นอันดับแรกเพื่อที่จะใช้โหมด Fnatic</string>
     <string name="oneplus_fnatic_mode_network_introduction_dual4g_summary">ให้ความสำคัญกับความแรงของสัญญาณซิมการ์ดเป็นหลักเพื่อลดการรบกวนให้น้อยที่สุดและทำให้เกิดความล่าช้าต่ำในการเล่นเกม ผลก็คือ ซิมการ์ดรองจะถูกปิดใช้งาน และจะไม่ได้รับสายหรือข้อความ</string>
@@ -2878,6 +2878,7 @@
     <string name="oneplus_haptic_feedback_tips">ให้การตอบสนองการสัมผัสสำหรับฉากบางฉากในเกม ใช้งานได้เฉพาะเกมที่รองรับเท่านั้น</string>
     <string name="oneplus_haptic_feedback_title">การเพิ่มการตอบระสนองการสัมผัส</string>
     <string name="oneplus_hardware_keys_action_split_screen">ปิด/เปิด การแยกหน้าจอ</string>
+    <string name="oneplus_health_safety_information">ข้อมูลสุขภาพ &amp; ความปลอดภัย</string>
     <string name="oneplus_hearing_aid">ความเข้ากันได้กับการช่วยฟัง</string>
     <string name="oneplus_hide_navigation_bar">ซ่อนแถบนำทาง</string>
     <string name="oneplus_hide_navkeys">ซ่อนแถบนำทาง</string>
@@ -3092,8 +3093,8 @@
     <string name="oneplus_receive_notifications">การแจ้งเตือน OnePlus</string>
     <string name="oneplus_receive_notifications_agree">รับข่าวสารจาก OnePlus</string>
     <string name="oneplus_receive_notifications_summary">ตกลงรับข่าวสารอย่างเป็นทางการจาก OnePlus, ข้อมูลผลิตภัณฑ์, การโต้ตอบด้วยแบบสอบถาม และคำแนะนำการซื้อ/ข้อมูลคูปอง</string>
-    <string name="oneplus_recognized_bluetooth_car_kits">รู้จักชุดอุปกรณ์ติดรถยนต์แบบบลูทูธแล้ว</string>
-    <string name="oneplus_recognized_bluetooth_car_kits_no_devices">ไม่มีชุดอุปกรณ์ติดรถยนต์แบบบลูทูธ คุณสามารถเพิ่มการเชื่อมต่อใหม่ได้ด้วยตนเองที่ด้านล่าง</string>
+    <string name="oneplus_recognized_bluetooth_car_kits">รู้จักบลูทูธบนยานพาหนะ</string>
+    <string name="oneplus_recognized_bluetooth_car_kits_no_devices">ไม่มีบลูทูธบนยานพาหนะ คุณสามารถเพิ่มอุปกรณ์ใหม่ได้ด้วยตนเองจากด้านล่าง</string>
     <string name="oneplus_recommended_opening">แนะนำ</string>
     <string name="oneplus_reenroll_fingerprint_tips">กรุณาป้อนลายนิ้วมือของคุณอีกครั้งหลังเปลี่ยนฟิล์มป้องกันโทรศัพท์มือถือ เพื่อรับประกันความถูกต้องของลายนิ้วมือ</string>
     <string name="oneplus_regulatory_information">การตรวจสอบ</string>
@@ -3116,6 +3117,7 @@
     <string name="oneplus_screen_color_mode_basic">sRGB</string>
     <string name="oneplus_screen_color_mode_default">ค่าเริ่มต้น</string>
     <string name="oneplus_screen_color_mode_defined">สีกำหนดเอง</string>
+    <string name="oneplus_screen_color_mode_ntsc">จอ AMOLED ขอบเขตของสีกว้าง</string>
     <string name="oneplus_screen_color_mode_reading_mode_on_summary">ไม่พร้อมใช้งานเนื่องจากโหมดการอ่านเปิดอยู่</string>
     <string name="oneplus_screen_color_mode_soft">นุ่มนวล</string>
     <string name="oneplus_screen_color_mode_title">การคาลิเบรทหน้าจอ</string>
@@ -3705,6 +3707,10 @@
     <string name="restore_default_apn_completed">รีเซ็ตการตั้งค่า APN กลับเป็นค่าเริ่มต้นเรียบร้อยแล้ว</string>
     <string name="restr_pin_enter_admin_pin">ป้อน PIN ผู้ดูแลระบบ</string>
     <string name="restrict_background_blacklisted">ปิดใช้ข้อมูลแบ็กกราวด์</string>
+    <string name="restrict_background_uss_always">ตลอดเวลา</string>
+    <string name="restrict_background_uss_never">ไม่เลย</string>
+    <string name="restrict_background_uss_roaming">ขณะโรมมิ่งเท่านั้น</string>
+    <string name="restrict_background_uss_title">จำกัดข้อมูลในเบื้องหลัง</string>
     <string name="restricted_app_detail_footer">แอปเหล่านี้ใช้งานแบตเตอรี่ในพื้นหลัง แอปที่ถูกจำกัดอาจไม่ทำงานตามปกติและการแจ้งเตือนอาจล่าช้า</string>
     <string name="restricted_app_title">แอปที่ถูกจำกัด</string>
     <string name="restricted_false_label">แอปใช้แบตเตอรี่ในพื้นหลังได้</string>
@@ -4406,6 +4412,7 @@ PIN อาจไม่ถูกต้อง"</string>
     <string name="summary_divider_text">", "</string>
     <string name="summary_range_symbol_combination">%1$s - %2$s</string>
     <string name="summary_range_verbal_combination">%1$s ถึง %2$s</string>
+    <string name="summary_voice_network">VoLTE, การโทรผ่าน Wi-Fi</string>
     <string name="support_country_format">%1$s - %2$s</string>
     <string name="support_summary">บทความช่วยเหลือ โทรศัพท์และแชท การเริ่มต้นใช้งาน</string>
     <string name="suw_back_button_label">กลับ</string>
@@ -4458,6 +4465,11 @@ PIN อาจไม่ถูกต้อง"</string>
     <string name="testing">กำลังทดสอบ</string>
     <string name="testing_phone_info">ข้อมูลโทรศัพท์</string>
     <string name="testing_usage_stats">สถิติการใช้งาน</string>
+    <string name="tether_error_item_default">กำลังกระจายสัญญาณ</string>
+    <string name="tether_error_message">คุณไม่ได้สมัครใช้งานกับ %1$s</string>
+    <string name="tether_error_title">ข้อผิดพลาด %1$s</string>
+    <string name="tether_no_sim_message">เสียบซิมการ์ดเพื่อใช้ฮอตสปอตมือถือและตัวเลือกการกระจายสัญญาณอื่นๆ</string>
+    <string name="tether_no_sim_title">ไม่มีซิมการ์ด</string>
     <string name="tether_settings_disabled_on_data_saver">ไม่สามารถเชื่อมต่ออินเทอร์เน็ตผ่านมือถือหรือใช้โหมดฮอตสปอตแบบพกพาขณะที่การประหยัดอินเทอร์เน็ตเปิดอยู่</string>
     <string name="tether_settings_summary_hotspot_off_tether_on">การเชื่อมต่ออินเทอร์เน็ตผ่านมือถือ</string>
     <string name="tether_settings_summary_hotspot_on_tether_off">ฮอตสปอตเปิดอยู่</string>
@@ -4863,6 +4875,7 @@ PIN อาจไม่ถูกต้อง"</string>
     <string name="voice_input_settings_title">การป้อนข้อมูลด้วยเสียง</string>
     <string name="voice_interaction_security_warning">บริการป้อนข้อมูลด้วยเสียงนี้สามารถคอยตรวจสอบเสียงอยู่ตลอดเวลาและควบคุมแอปพลิเคชันที่สามารถใช้เสียงในนามของคุณได้ บริการนี้มาจากแอปพลิเคชัน %s เปิดใช้การทำงานของบริการนี้ไหม</string>
     <string name="voice_interactor_preference_summary">คำที่นิยมและการโต้ตอบเต็มรูปแบบ</string>
+    <string name="voice_network_title">เครือข่ายเสียง</string>
     <string name="voice_recognizer_preference_summary">เขียนตามคำบอกแบบง่ายๆ</string>
     <string name="voice_search_settings_title">ค้นหาด้วยเสียง</string>
     <string name="voice_service_preference_section_title">บริการป้อนข้อมูลด้วยเสียง</string>

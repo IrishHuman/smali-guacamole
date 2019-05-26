@@ -24,19 +24,19 @@
     .end annotation
 .end field
 
-.field static final ID_MEID_NUMBER_VALUE:I = 0x7f0a033c
+.field static final ID_MEID_NUMBER_VALUE:I = 0x7f0a033f
     .annotation build Landroid/support/annotation/VisibleForTesting;
     .end annotation
 .end field
 
-.field private static final ID_MIN_NUMBER_LABEL:I = 0x7f0a034b
+.field private static final ID_MIN_NUMBER_LABEL:I = 0x7f0a034f
 
-.field static final ID_MIN_NUMBER_VALUE:I = 0x7f0a034c
+.field static final ID_MIN_NUMBER_VALUE:I = 0x7f0a0350
     .annotation build Landroid/support/annotation/VisibleForTesting;
     .end annotation
 .end field
 
-.field static final ID_PRL_VERSION_VALUE:I = 0x7f0a045e
+.field static final ID_PRL_VERSION_VALUE:I = 0x7f0a0462
     .annotation build Landroid/support/annotation/VisibleForTesting;
     .end annotation
 .end field
@@ -199,7 +199,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f0a033c
+    const v3, 0x7f0a033f
 
     invoke-virtual {v1, v3, v2}, Lcom/android/settings/deviceinfo/imei/ImeiInfoDialogFragment;->setText(ILjava/lang/CharSequence;)V
 
@@ -227,7 +227,7 @@
     const-string v2, ""
 
     :goto_0
-    const v3, 0x7f0a034c
+    const v3, 0x7f0a0350
 
     invoke-virtual {v1, v3, v2}, Lcom/android/settings/deviceinfo/imei/ImeiInfoDialogFragment;->setText(ILjava/lang/CharSequence;)V
 
@@ -241,9 +241,9 @@
 
     iget-object v1, p0, Lcom/android/settings/deviceinfo/imei/ImeiInfoDialogController;->mDialog:Lcom/android/settings/deviceinfo/imei/ImeiInfoDialogFragment;
 
-    const v2, 0x7f0a034b
+    const v2, 0x7f0a034f
 
-    const v3, 0x7f12119a
+    const v3, 0x7f1211a1
 
     invoke-virtual {v0, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -254,7 +254,7 @@
     :cond_1
     iget-object v1, p0, Lcom/android/settings/deviceinfo/imei/ImeiInfoDialogController;->mDialog:Lcom/android/settings/deviceinfo/imei/ImeiInfoDialogFragment;
 
-    const v2, 0x7f0a045e
+    const v2, 0x7f0a0462
 
     invoke-virtual {p0}, Lcom/android/settings/deviceinfo/imei/ImeiInfoDialogController;->getCdmaPrlVersion()Ljava/lang/String;
 

@@ -62,7 +62,7 @@
 
     iput-object v0, p0, Lcom/android/settings/applications/manageapplications/ApplicationViewHolder;->mAppIcon:Landroid/widget/ImageView;
 
-    const v0, 0x7f0a0549
+    const v0, 0x7f0a054d
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -92,7 +92,7 @@
 
     iput-boolean p2, p0, Lcom/android/settings/applications/manageapplications/ApplicationViewHolder;->mKeepStableHeight:Z
 
-    const v0, 0x7f0a056c
+    const v0, 0x7f0a0570
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -299,7 +299,7 @@
 
     iget-object v0, p0, Lcom/android/settings/applications/manageapplications/ApplicationViewHolder;->mDisabled:Landroid/widget/TextView;
 
-    const v1, 0x7f1209cf
+    const v1, 0x7f1209d1
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 

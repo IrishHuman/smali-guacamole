@@ -48,7 +48,7 @@
 
     nop
 
-    const v1, 0x7f121438
+    const v1, 0x7f121446
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -60,7 +60,7 @@
 
     nop
 
-    const v1, 0x7f121435
+    const v1, 0x7f121443
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -121,7 +121,7 @@
 
     aput-object v2, v1, v3
 
-    const v2, 0x7f121463
+    const v2, 0x7f121471
 
     invoke-virtual {v0, v2, v1}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 

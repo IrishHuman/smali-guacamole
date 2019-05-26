@@ -259,7 +259,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f1214b9
+    const v1, 0x7f1214c7
 
     invoke-virtual {p2, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -458,9 +458,9 @@
 
     const/4 v3, 0x1
 
-    const v4, 0x7f1214b1
+    const v4, 0x7f1214bf
 
-    const v5, 0x7f1214b9
+    const v5, 0x7f1214c7
 
     const/4 v6, -0x1
 
@@ -549,7 +549,7 @@
 
     iget-object v7, p0, Lcom/android/settings/wifi/calling/WifiCallingSliceHelper;->mContext:Landroid/content/Context;
 
-    const v8, 0x7f1214b8
+    const v8, 0x7f1214c6
 
     invoke-virtual {v7, v8}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -597,7 +597,7 @@
 
     iget-object v4, p0, Lcom/android/settings/wifi/calling/WifiCallingSliceHelper;->mContext:Landroid/content/Context;
 
-    const v5, 0x7f1214bc
+    const v5, 0x7f1214ca
 
     invoke-virtual {v4, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

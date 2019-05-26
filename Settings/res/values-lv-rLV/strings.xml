@@ -168,8 +168,8 @@ Vai tiešām vēlaties iespējot šo funkciju?"</string>
     <string name="nxp_non_std_card_summary">Atbalsts dažu nestandarta NFC atzīmju nolasīšanai</string>
     <string name="oneplus_adaptive_model">Adaptīvais režīms</string>
     <string name="oneplus_add">Pievienot</string>
-    <string name="oneplus_add_bluetooth_car_kit">Pievienot Bluetooth automašīnas komplektu</string>
-    <string name="oneplus_add_bluetooth_car_kit_summary">Bluetooth automašīnas komplekts automātiski savienojas ar iepriekšējām ierīcēm, lai jūs varētu manuāli izveidot jaunus savienojumus</string>
+    <string name="oneplus_add_bluetooth_car_kit">Pievienot transportlīdzekļa Bluetooth</string>
+    <string name="oneplus_add_bluetooth_car_kit_summary">Transportlīdzeklis automātiski izveido Bluetooth savienojumu ar iepriekšējām ierīcēm, kā arī ļauj manuāli pievienot jaunas ierīces</string>
     <string name="oneplus_add_fingerprint_list">Pievienot pirksta nospiedumu</string>
     <string name="oneplus_adjust_effect">Ekrāna efekta pielāgošana</string>
     <string name="oneplus_advanced_display_settings">Papildu displeja iestatījumi</string>
@@ -403,7 +403,7 @@ Uzmanību! Atbloķēšana ar seju nav tik droša metode kā pirkstu nospiedumi v
     <string name="oneplus_fnatic_mode_add_to_wallpapers">Pievienot pie fona tapetēm</string>
     <string name="oneplus_fnatic_mode_background_introduction_summary">Koncentrē gandrīz visu veiktspēju uz spēli. Tā rezultātā dažām lietotnēm var rasties darbības traucējumi.</string>
     <string name="oneplus_fnatic_mode_background_introduction_title">Uzlabot procesu regulatoru</string>
-    <string name="oneplus_fnatic_mode_disturb_introduction_summary">Bloķēt visus paziņojumus un zvanus (izņemot paziņojumu par zemu akumulatora enerģijas līmeni, modinātāju un taimeri). Nokavētos zvanus varat aplūkot tikai zvanu vēsturē.</string>
+    <string name="oneplus_fnatic_mode_disturb_introduction_summary">Bloķēt visus paziņojumus un zvanus (izņemot paziņojumu par zemu akumulatora enerģijas līmeni, modinātāju un taimeri).</string>
     <string name="oneplus_fnatic_mode_disturb_introduction_title">Uzlabots režīms Netraucēt</string>
     <string name="oneplus_fnatic_mode_enable_introduction_title">Lai izmantotu Fnatic režīmu, jābūt iespējotam spēļu režīmam</string>
     <string name="oneplus_fnatic_mode_network_introduction_dual4g_summary">Pirmās SIM kartes signālam tiek piešķirta prioritāte, lai samazinātu traucējumus spēlēm ar zemu latentumu. Tādēļ otra SIM karte tiks atspējota, kā arī nevarēsiet saņemt zvanus vai īsziņas.</string>
@@ -495,6 +495,7 @@ Jebkurā laikā ejiet uz sākuma ekrānu un pavelciet uz augšu no ekrāna apak�
     <string name="oneplus_haptic_feedback_tips">Sniedz haptisko atgriezenisko saiti noteiktās spēļu ainās, piemērojams tikai atbalstītām spēlēm</string>
     <string name="oneplus_haptic_feedback_title">Haptiskās atgriezeniskās saites uzlabošana</string>
     <string name="oneplus_hardware_keys_action_split_screen">Atvērt/aizvērt dalīto ekrānu</string>
+    <string name="oneplus_health_safety_information">Veselības un drošības informācija</string>
     <string name="oneplus_hearing_aid">Saderība ar dzirdes aparātiem</string>
     <string name="oneplus_hide_navigation_bar">Slēpt navigācijas joslu</string>
     <string name="oneplus_hide_navkeys">Paslēpt navigācijas joslu</string>
@@ -708,8 +709,8 @@ Atlikuši %d mēģinājumi."</string>
     <string name="oneplus_receive_notifications">OnePlus paziņojumi</string>
     <string name="oneplus_receive_notifications_agree">Saņemt jaunumus no OnePlus</string>
     <string name="oneplus_receive_notifications_summary">Es vēlos saņemt OnePlus oficiālos jaunumus, informāciju par produktiem, aptaujas, kā arī preču iegādes piedāvājumus/kuponu informāciju</string>
-    <string name="oneplus_recognized_bluetooth_car_kits">Atpazītie Bluetooth automašīnu komplekti</string>
-    <string name="oneplus_recognized_bluetooth_car_kits_no_devices">Nav neviena Bluetooth automašīnas komplekta, jūs zemāk varat manuāli izveidot jaunus savienojumus</string>
+    <string name="oneplus_recognized_bluetooth_car_kits">Atpazītais transportlīdzekļa Bluetooth</string>
+    <string name="oneplus_recognized_bluetooth_car_kits_no_devices">Nav uztverts neviena transportlīdzekļa Bluetooth. Jūs varat manuāli pievienot jaunas ierīces zemāk</string>
     <string name="oneplus_recommended_opening">Ieteiktie</string>
     <string name="oneplus_reenroll_fingerprint_tips">Lūdzu, vēlreiz ievadiet savu pirkstu nospiedumu pēc mobilā tālruņa aizsargplēves maiņas, lai nodrošinātu pirkstu nospiedumu informācijas pareizību</string>
     <string name="oneplus_regulatory_information">Verifikācija</string>
@@ -731,6 +732,7 @@ Atlikuši %d mēģinājumi."</string>
     <string name="oneplus_screen_color_mode_auto">Adaptīvie krāsu profili</string>
     <string name="oneplus_screen_color_mode_default">Display-P3 (pēc noklusējuma)</string>
     <string name="oneplus_screen_color_mode_defined">Individuāla krāsa</string>
+    <string name="oneplus_screen_color_mode_ntsc">AMOLED plašas krāsu gammas displejs</string>
     <string name="oneplus_screen_color_mode_reading_mode_on_summary">Nav pieejams, jo aktivizēts lasīšanas režīms</string>
     <string name="oneplus_screen_color_mode_soft">Maiga</string>
     <string name="oneplus_screen_color_mode_title">Ekrāna kalibrēšana</string>
@@ -1015,6 +1017,10 @@ Iestatot tīkla paslēpšanu, netiks mainīti jūsu maršrutētāja iestatījumi
     <string name="quick_unlock_title">Ātrā atbloķēšana</string>
     <string name="reset_collect_diagnostics_summary">Apkopot diagnostikas datus traucējummeklēšanai</string>
     <string name="reset_collect_diagnostics_title">Apkopot diagnostikas datus</string>
+    <string name="restrict_background_uss_always">Vienmēr</string>
+    <string name="restrict_background_uss_never">Nekad</string>
+    <string name="restrict_background_uss_roaming">Tikai kad aktivizēta viesabonēšana</string>
+    <string name="restrict_background_uss_title">Ierobežot fona datus</string>
     <string name="saturation_option_title">Krāsu balanss</string>
     <string name="schedule_reminders">Atgādinājumi par pasākumiem</string>
     <string name="screen_color_mode_advanced">Papildus</string>
@@ -1072,7 +1078,13 @@ Iestatot tīkla paslēpšanu, netiks mainīti jūsu maršrutētāja iestatījumi
     <string name="sub_deactivate_not_supported">Deaktivizēšana nav atbalstīta</string>
     <string name="sub_deactivate_success">Deaktivizēšana pabeigta.</string>
     <string name="subs_settings">SIM karšu statuss</string>
+    <string name="summary_voice_network">VoLTE, Wi-Fi zvanīšana</string>
     <string name="system_update_uss_title">Lejupielādēt un instalēt</string>
+    <string name="tether_error_item_default">Sasaiste</string>
+    <string name="tether_error_message">Jūs neabonējat %1$s.</string>
+    <string name="tether_error_title">%1$s kļūda</string>
+    <string name="tether_no_sim_message">Ievietojiet SIM karti, lai izmantotu mobilo tīklāju un citas sasaistes iespējas</string>
+    <string name="tether_no_sim_title">Nav SIM kartes</string>
     <string name="theme_accent_color_title">Nianšu krāsa</string>
     <string name="theme_switch_dark">tumša</string>
     <string name="theme_switch_dark_mode_summary">Iespējot tumšo tēmu visā sistēmā</string>
@@ -1135,6 +1147,7 @@ Iestatot tīkla paslēpšanu, netiks mainīti jūsu maršrutētāja iestatījumi
     <string name="user_experience_description">Ļaujiet OnePlus anonīmā veidā analizēt vispārīgus statistikas datus par to, kā izmantojat tālruni, lai palīdzētu mums uzlabot produkta dizainu un lietotāju pieredzi</string>
     <string name="user_is_not_allowed_dlg_text">Šim lietotājam nav atļauts veikt atinstalēšanu.</string>
     <string name="user_is_not_allowed_dlg_title">Nav atļauts</string>
+    <string name="voice_network_title">Balss tīkli</string>
     <string name="volume_adjust_sound_title">Skaļuma līmeņa slīdņa skaņa</string>
     <string name="wifi_certificate">Sertifikāts</string>
     <string name="wifi_context_menu_change_password">Mainīt paroli</string>

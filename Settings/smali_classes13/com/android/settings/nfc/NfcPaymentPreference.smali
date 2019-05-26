@@ -51,7 +51,7 @@
 
     iput-object v0, p0, Lcom/android/settings/nfc/NfcPaymentPreference;->mAdapter:Lcom/android/settings/nfc/NfcPaymentPreference$NfcPaymentAdapter;
 
-    const v0, 0x7f120998
+    const v0, 0x7f12099a
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -101,7 +101,7 @@
 
     invoke-super {p0, p1}, Lcom/android/settingslib/CustomDialogPreference;->onBindViewHolder(Landroid/support/v7/preference/PreferenceViewHolder;)V
 
-    const v0, 0x7f0a04ee
+    const v0, 0x7f0a04f2
 
     invoke-virtual {p1, v0}, Landroid/support/v7/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 
@@ -228,7 +228,7 @@
     invoke-virtual {v3, v2, v1}, Lcom/android/settings/nfc/NfcPaymentPreference$NfcPaymentAdapter;->updateApps([Lcom/android/settings/nfc/PaymentBackend$PaymentAppInfo;Lcom/android/settings/nfc/PaymentBackend$PaymentAppInfo;)V
 
     :cond_0
-    const v2, 0x7f120992
+    const v2, 0x7f120994
 
     invoke-virtual {p0, v2}, Lcom/android/settings/nfc/NfcPaymentPreference;->setTitle(I)V
 
@@ -243,7 +243,7 @@
     :cond_1
     iget-object v2, p0, Lcom/android/settings/nfc/NfcPaymentPreference;->mContext:Landroid/content/Context;
 
-    const v3, 0x7f120993
+    const v3, 0x7f120995
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

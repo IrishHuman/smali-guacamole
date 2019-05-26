@@ -129,7 +129,7 @@
 
     move-result v1
 
-    const v2, 0x7f0a05c4
+    const v2, 0x7f0a05c8
 
     invoke-virtual {p1, v2}, Landroid/support/v7/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 
@@ -139,7 +139,7 @@
 
     iput-object v2, p0, Lcom/oneplus/settings/ui/OPNightModeLevelPreferenceCategory;->mTVColorTitle:Landroid/widget/TextView;
 
-    const v2, 0x7f0a05c3
+    const v2, 0x7f0a05c7
 
     invoke-virtual {p1, v2}, Landroid/support/v7/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 
@@ -149,7 +149,7 @@
 
     iput-object v2, p0, Lcom/oneplus/settings/ui/OPNightModeLevelPreferenceCategory;->mTVBrightnessTitle:Landroid/widget/TextView;
 
-    const v2, 0x7f0a05c0
+    const v2, 0x7f0a05c4
 
     invoke-virtual {p1, v2}, Landroid/support/v7/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 
@@ -159,7 +159,7 @@
 
     iput-object v2, p0, Lcom/oneplus/settings/ui/OPNightModeLevelPreferenceCategory;->mTVColorStrong:Landroid/widget/TextView;
 
-    const v2, 0x7f0a05bf
+    const v2, 0x7f0a05c3
 
     invoke-virtual {p1, v2}, Landroid/support/v7/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 
@@ -169,7 +169,7 @@
 
     iput-object v2, p0, Lcom/oneplus/settings/ui/OPNightModeLevelPreferenceCategory;->mTVBrightnessStrong:Landroid/widget/TextView;
 
-    const v2, 0x7f0a05b3
+    const v2, 0x7f0a05b7
 
     invoke-virtual {p1, v2}, Landroid/support/v7/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 
@@ -179,7 +179,7 @@
 
     iput-object v2, p0, Lcom/oneplus/settings/ui/OPNightModeLevelPreferenceCategory;->mTRColor:Landroid/widget/TableRow;
 
-    const v2, 0x7f0a05b1
+    const v2, 0x7f0a05b5
 
     invoke-virtual {p1, v2}, Landroid/support/v7/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 
@@ -189,7 +189,7 @@
 
     iput-object v2, p0, Lcom/oneplus/settings/ui/OPNightModeLevelPreferenceCategory;->mTRBrightness:Landroid/widget/TableRow;
 
-    const v2, 0x7f0a05b2
+    const v2, 0x7f0a05b6
 
     invoke-virtual {p1, v2}, Landroid/support/v7/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 
@@ -199,7 +199,7 @@
 
     iput-object v2, p0, Lcom/oneplus/settings/ui/OPNightModeLevelPreferenceCategory;->mTRBrightnessTitle:Landroid/widget/TableRow;
 
-    const v2, 0x7f0a04dc
+    const v2, 0x7f0a04e0
 
     invoke-virtual {p1, v2}, Landroid/support/v7/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 
@@ -235,7 +235,7 @@
 
     invoke-virtual {v2, v0}, Lcom/oneplus/settings/widget/OPSeekBar2;->setProgress(I)V
 
-    const v2, 0x7f0a04db
+    const v2, 0x7f0a04df
 
     invoke-virtual {p1, v2}, Landroid/support/v7/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 
@@ -467,7 +467,7 @@
 
     iget-object v2, p0, Lcom/oneplus/settings/ui/OPNightModeLevelPreferenceCategory;->mContext:Landroid/content/Context;
 
-    const v3, 0x7f120dd2
+    const v3, 0x7f120dd5
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -486,7 +486,7 @@
 
     iget-object v2, p0, Lcom/oneplus/settings/ui/OPNightModeLevelPreferenceCategory;->mContext:Landroid/content/Context;
 
-    const v3, 0x7f120c33
+    const v3, 0x7f120c36
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

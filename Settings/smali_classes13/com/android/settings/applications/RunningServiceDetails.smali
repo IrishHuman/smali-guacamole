@@ -591,7 +591,7 @@
     :cond_0
     if-eqz p2, :cond_1
 
-    const v3, 0x7f1208f1
+    const v3, 0x7f1208f2
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(I)V
 
@@ -613,7 +613,7 @@
     goto :goto_1
 
     :pswitch_0
-    const v4, 0x7f120f26
+    const v4, 0x7f120f29
 
     iget-object v8, v6, Landroid/app/ActivityManager$RunningAppProcessInfo;->importanceReasonComponent:Landroid/content/ComponentName;
 
@@ -660,7 +660,7 @@
     goto :goto_1
 
     :pswitch_1
-    const v4, 0x7f120f25
+    const v4, 0x7f120f28
 
     iget-object v8, v6, Landroid/app/ActivityManager$RunningAppProcessInfo;->importanceReasonComponent:Landroid/content/ComponentName;
 
@@ -769,7 +769,7 @@
 
     iget-object v0, p0, Lcom/android/settings/applications/RunningServiceDetails;->mProcessesHeader:Landroid/widget/TextView;
 
-    const v1, 0x7f120ff8
+    const v1, 0x7f120fff
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -867,7 +867,7 @@
 
     if-nez p4, :cond_3
 
-    const v4, 0x7f0a04ea
+    const v4, 0x7f0a04ee
 
     invoke-virtual {v2, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -905,7 +905,7 @@
 
     check-cast v4, Landroid/widget/TextView;
 
-    const v6, 0x7f0a0305
+    const v6, 0x7f0a0307
 
     invoke-virtual {v2, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -915,7 +915,7 @@
 
     iput-object v6, v1, Lcom/android/settings/applications/RunningServiceDetails$ActiveDetail;->mStopButton:Landroid/widget/Button;
 
-    const v6, 0x7f0a049f
+    const v6, 0x7f0a04a3
 
     invoke-virtual {v2, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1031,7 +1031,7 @@
 
     move-result-object v8
 
-    const v9, 0x7f1210ad
+    const v9, 0x7f1210b4
 
     new-array v10, v3, [Ljava/lang/Object;
 
@@ -1060,7 +1060,7 @@
 
     if-eqz p1, :cond_9
 
-    const v7, 0x7f1210b2
+    const v7, 0x7f1210b9
 
     goto :goto_3
 
@@ -1089,12 +1089,12 @@
 
     if-eqz v8, :cond_a
 
-    const v8, 0x7f1210ac
+    const v8, 0x7f1210b3
 
     goto :goto_5
 
     :cond_a
-    const v8, 0x7f1210b1
+    const v8, 0x7f1210b8
 
     :goto_5
     invoke-virtual {v7, v8}, Landroid/app/Activity;->getText(I)Ljava/lang/CharSequence;
@@ -1207,7 +1207,7 @@
 
     iget-object v0, p0, Lcom/android/settings/applications/RunningServiceDetails;->mServicesHeader:Landroid/widget/TextView;
 
-    const v1, 0x7f120ff9
+    const v1, 0x7f121000
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -1510,7 +1510,7 @@
 
     iput-object v0, p0, Lcom/android/settings/applications/RunningServiceDetails;->mAllDetails:Landroid/view/ViewGroup;
 
-    const v0, 0x7f0a0514
+    const v0, 0x7f0a0518
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1674,7 +1674,7 @@
 
     iget-object v0, v0, Lcom/android/settings/applications/RunningProcessesView$ViewHolder;->description:Landroid/widget/TextView;
 
-    const v1, 0x7f1209cb
+    const v1, 0x7f1209cd
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 

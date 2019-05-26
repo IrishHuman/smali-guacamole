@@ -191,19 +191,19 @@
 
     move-result-object v1
 
-    const v2, 0x7f121352
+    const v2, 0x7f12135f
 
     invoke-virtual {v1, v2}, Landroid/support/v7/preference/PreferenceScreen;->setTitle(I)V
 
     iget-object v1, p0, Lcom/android/settings/applications/UsageAccessDetails;->mSwitchPref:Landroid/support/v14/preference/SwitchPreference;
 
-    const v2, 0x7f120ea9
+    const v2, 0x7f120eac
 
     invoke-virtual {v1, v2}, Landroid/support/v14/preference/SwitchPreference;->setTitle(I)V
 
     iget-object v1, p0, Lcom/android/settings/applications/UsageAccessDetails;->mUsageDesc:Landroid/support/v7/preference/Preference;
 
-    const v2, 0x7f121353
+    const v2, 0x7f121360
 
     invoke-virtual {v1, v2}, Landroid/support/v7/preference/Preference;->setSummary(I)V
 
@@ -301,13 +301,13 @@
 
     move-result-object v0
 
-    const v2, 0x7f121614
+    const v2, 0x7f121622
 
     invoke-virtual {v0, v2}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
 
     move-result-object v0
 
-    const v2, 0x7f120a3f
+    const v2, 0x7f120a41
 
     const/4 v3, 0x0
 

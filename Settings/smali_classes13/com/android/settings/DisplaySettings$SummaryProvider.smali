@@ -81,7 +81,7 @@
 
     iget-object v3, p0, Lcom/android/settings/DisplaySettings$SummaryProvider;->mContext:Landroid/content/Context;
 
-    const v4, 0x7f12118c
+    const v4, 0x7f121193
 
     invoke-virtual {v3, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -89,7 +89,7 @@
 
     iget-object v4, p0, Lcom/android/settings/DisplaySettings$SummaryProvider;->mContext:Landroid/content/Context;
 
-    const v5, 0x7f120b0e
+    const v5, 0x7f120b10
 
     invoke-virtual {v4, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -101,7 +101,7 @@
 
     iget-object v5, p0, Lcom/android/settings/DisplaySettings$SummaryProvider;->mContext:Landroid/content/Context;
 
-    const v6, 0x7f120789
+    const v6, 0x7f12078a
 
     const/4 v7, 0x2
 
@@ -126,7 +126,7 @@
 
     iget-object v2, p0, Lcom/android/settings/DisplaySettings$SummaryProvider;->mContext:Landroid/content/Context;
 
-    const v3, 0x7f120afb
+    const v3, 0x7f120afd
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -144,7 +144,7 @@
 
     iget-object v2, p0, Lcom/android/settings/DisplaySettings$SummaryProvider;->mContext:Landroid/content/Context;
 
-    const v3, 0x7f120afc
+    const v3, 0x7f120afe
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

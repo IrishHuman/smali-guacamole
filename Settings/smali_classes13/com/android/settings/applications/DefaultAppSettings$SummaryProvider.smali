@@ -89,7 +89,7 @@
     :cond_1
     iget-object v0, p0, Lcom/android/settings/applications/DefaultAppSettings$SummaryProvider;->mContext:Landroid/content/Context;
 
-    const v1, 0x7f120789
+    const v1, 0x7f12078a
 
     const/4 v2, 0x2
 
@@ -124,7 +124,7 @@
 
     iget-object v1, p0, Lcom/android/settings/applications/DefaultAppSettings$SummaryProvider;->mContext:Landroid/content/Context;
 
-    const v2, 0x7f120e31
+    const v2, 0x7f120e34
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

@@ -2549,8 +2549,8 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="one_userkey">ഒരു ഉപയോക്തൃ കീ</string>
     <string name="oneplus_adaptive_model">അഡാപ്റ്റീവ് മോഡ്</string>
     <string name="oneplus_add">ചേര്‍ക്കുക</string>
-    <string name="oneplus_add_bluetooth_car_kit">ബ്ലൂടൂത്ത് കാർ കിറ്റ് ചേർക്കുക</string>
-    <string name="oneplus_add_bluetooth_car_kit_summary">നിങ്ങളുടെ മുമ്പത്തെ ഉപകരണങ്ങളുമായി Bluetooth കാർ കിറ്റ് സ്വയമേവ കണക്റ്റുചെയ്യുന്നു, നിങ്ങൾക്ക് മാനുവലായി പുതിയ കണക്ഷനുകൾ ചേർക്കാൻ കഴിയും</string>
+    <string name="oneplus_add_bluetooth_car_kit">വാഹന ബ്ലൂടൂത്ത് ചേർക്കുക</string>
+    <string name="oneplus_add_bluetooth_car_kit_summary">വാഹന ബ്ലൂടൂത്ത് നിങ്ങളുടെ മുമ്പുള്ള ഉപകരണങ്ങളുമായി സ്വയം കണക്റ്റുചെയ്യുന്നു, നിങ്ങൾക്ക് പുതിയ ഉപകരണങ്ങൾ നേരിട്ട് ചേർക്കുകയും ചെയ്യാം</string>
     <string name="oneplus_add_fingerprint_list">വിരലടയാളം ചേര്‍ക്കുക</string>
     <string name="oneplus_adjust_effect">ഇഫക്ടിന്‍റെ കരുത്ത്</string>
     <string name="oneplus_advanced_display_settings">വിപുലമായ ഡിസ്പ്ലേ ക്രമീകരണം</string>
@@ -2786,7 +2786,7 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="oneplus_fnatic_mode_add_to_wallpapers">വാൾപേപ്പറുകളിലേക്ക് ചേർക്കുക</string>
     <string name="oneplus_fnatic_mode_background_introduction_summary">ഗെയിം പ്ലേയിൽ പൂർണ്ണമായും പ്രകടനം ശ്രദ്ധ കേന്ദ്രീകരിക്കുന്നു. ഇത് ചില ആപ്പുകളിൽ പിശകുകൾക്ക് കാരണമാകാം.</string>
     <string name="oneplus_fnatic_mode_background_introduction_title">പ്രോസസ്സ് റെഗുലേറ്റർ മെച്ചപ്പെടുത്തുക</string>
-    <string name="oneplus_fnatic_mode_disturb_introduction_summary">എല്ലാ അറിയിപ്പുകളും കോളുകളും (ബാറ്ററി കുറവാണെന്ന അറിയിപ്പ്, അലാറം, ടൈമർ എന്നിവ ഒഴികെ) തടയുക. നിങ്ങൾക്ക് കോൾ ചരിത്രത്തിൽ മിസ്ഡ് കോളുകൾ മാത്രമേ കാണാൻ കഴിയൂ.</string>
+    <string name="oneplus_fnatic_mode_disturb_introduction_summary">എല്ലാ അറിയിപ്പുകളും കോളുകളും (ബാറ്ററി കുറവാണെന്ന അറിയിപ്പ്, അലാറം, ടൈമർ എന്നിവ ഒഴികെ) തടയുക.</string>
     <string name="oneplus_fnatic_mode_disturb_introduction_title">വിപുലമായ DND</string>
     <string name="oneplus_fnatic_mode_enable_introduction_title">Fnatic മോഡ് ഉപയോഗിക്കാൻ ആദ്യം ഗെയിമിംഗ് മോഡ് പ്രാപ്തമാക്കിയിരിക്കണം</string>
     <string name="oneplus_fnatic_mode_network_introduction_dual4g_summary">കുറഞ്ഞ ലേറ്റൻസി ഗെയിം പ്ലേയ്ക്കായി ഇടപെടൽ കുറയ്ക്കുന്നതിന് പ്രാഥമിക SIM കാർഡ് സിഗ്നൽ ശക്തി മുൻഗണന നൽകുന്നു. തൽഫലമായി സെക്കൻഡറി SIM കാർഡ് അപ്രാപ്തമാകുകയും കോളുകളോ സന്ദേശങ്ങളോ സ്വീകരിക്കുകയുമില്ല.</string>
@@ -2878,6 +2878,7 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="oneplus_haptic_feedback_tips">നിർദ്ദിഷ്ട ഗെയിം സീനുകൾക്ക് ഹാപ്റ്റിക് ഫീഡ്ബാക്ക് നൽകുക, പിന്തുണയ്ക്കുന്ന ഗെയിമുകൾക്ക് മാത്രം ബാധകമാണ്</string>
     <string name="oneplus_haptic_feedback_title">ഹാപ്റ്റിക് ഫീഡ്ബാക്ക് മെച്ചപ്പെടുത്തൽ</string>
     <string name="oneplus_hardware_keys_action_split_screen">സ്‍പ്ലിറ്റ് സ്ക്രീന്‍ തുറക്കുക/അടയ്ക്കുക</string>
+    <string name="oneplus_health_safety_information">ആരോഗ്യവും സുരക്ഷാ വിവരങ്ങളും</string>
     <string name="oneplus_hearing_aid">ശ്രവണസഹായി അനുയോജ്യത</string>
     <string name="oneplus_hide_navigation_bar">നാവിഗേഷൻ ബാർ മറയ്ക്കുക</string>
     <string name="oneplus_hide_navkeys">നാവിഗേഷന്‍ ബാര്‍ മറയ്ക്കുക</string>
@@ -3092,8 +3093,8 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="oneplus_receive_notifications">OnePlus അറിയിപ്പുകള്‍</string>
     <string name="oneplus_receive_notifications_agree">OnePlus ല്‍ നിന്നുള്ള വാര്‍ത്തകള്‍ സ്വീകരിക്കുക</string>
     <string name="oneplus_receive_notifications_summary">OnePlus ഔദ്യോഗിക വാര്‍ത്തകള്‍, ഉത്പന്നങ്ങളുടെ വിവരങ്ങള്‍, ചോദ്യാവലി സമ്പര്‍ക്കം, വാങ്ങലിനുള്ള ശുപാര്‍ശകള്‍/കൂപ്പണ്‍ വിവരങ്ങള്‍ എന്നിവ സ്വീകരിക്കാന്‍ സമ്മതിക്കുക</string>
-    <string name="oneplus_recognized_bluetooth_car_kits">തിരിച്ചറിഞ്ഞ ബ്ലൂടൂത്ത് കാർ കിറ്റുകൾ</string>
-    <string name="oneplus_recognized_bluetooth_car_kits_no_devices">ബ്ലൂടൂത്ത് കാർ കിറ്റ് ഇല്ല, ചുവടെ പുതിയ കണക്ഷനുകൾ നിങ്ങൾക്ക് നേരിട്ട് ചേർക്കാം</string>
+    <string name="oneplus_recognized_bluetooth_car_kits">തിരിച്ചറിഞ്ഞ വാഹന ബ്ലൂടൂത്ത്</string>
+    <string name="oneplus_recognized_bluetooth_car_kits_no_devices">വാഹന ബ്ലൂടൂത്ത് ഇല്ല, നിങ്ങൾക്ക് താഴെ പുതിയ ഉപകരണങ്ങൾ നേരിട്ട് ചേർക്കാം</string>
     <string name="oneplus_recommended_opening">ശുപാര്‍ശ ചെയ്തത്</string>
     <string name="oneplus_reenroll_fingerprint_tips">വിരലടയാളത്തിന്റെ കൃത്യത ഉറപ്പുവരുത്തുന്നതിനായി മൊബൈൽ ഫോണിന്റെ പരിരക്ഷണ ഫിലിം മാറ്റി പകരം വച്ചതിനുശേഷം നിങ്ങളുടെ വിരലടയാളം വീണ്ടും നൽകുക</string>
     <string name="oneplus_regulatory_information">സ്ഥിരീകരണം</string>
@@ -3116,6 +3117,7 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="oneplus_screen_color_mode_basic">sRGB</string>
     <string name="oneplus_screen_color_mode_default">ഡിഫോള്‍ട്ട്</string>
     <string name="oneplus_screen_color_mode_defined">ഇച്ഛാനുസൃതമായ നിറം</string>
+    <string name="oneplus_screen_color_mode_ntsc">AMOLED വൈഡ് ഗമുട്ട്</string>
     <string name="oneplus_screen_color_mode_reading_mode_on_summary">വായന മോഡ് ഓണ്‍ ആയതിനാല്‍ ലഭ്യമല്ല</string>
     <string name="oneplus_screen_color_mode_soft">സോഫ്റ്റ്</string>
     <string name="oneplus_screen_color_mode_title">സ്ക്രീന്‍ താരതമ്യം</string>
@@ -3705,6 +3707,10 @@ UT ഇന്റര്‍ഫേസ്: %5$s"</string>
     <string name="restore_default_apn_completed">സ്ഥിര APN ക്രമീകരണങ്ങൾ പുനഃസജ്ജീകരിക്കൽ പൂർത്തിയാക്കി.</string>
     <string name="restr_pin_enter_admin_pin">അഡ്‌മിൻ പിൻ നൽകുക</string>
     <string name="restrict_background_blacklisted">പശ്ചാത്തല ഡാറ്റ ഓഫാക്കി</string>
+    <string name="restrict_background_uss_always">എല്ലായ്‌പ്പോഴും</string>
+    <string name="restrict_background_uss_never">ഒരിക്കലുമില്ല</string>
+    <string name="restrict_background_uss_roaming">റോമിംഗിൽ മാത്രം</string>
+    <string name="restrict_background_uss_title">പശ്ചാത്തല ഡാറ്റ നിയന്ത്രിക്കുക</string>
     <string name="restricted_app_detail_footer">ഈ ആപ്പുകൾ പശ്ചാത്തലത്തിൽ ബാറ്ററി ഉപയോഗിച്ച് കൊണ്ടിരിക്കുന്നു. നിയന്ത്രിത ആപ്പുകൾ ശരിയായ രീതിയിൽ പ്രവർത്തിക്കാതിരിക്കുകയും അറിയിപ്പുകൾ വൈകുകയും ചെയ്‌തേക്കാം.</string>
     <string name="restricted_app_title">നിയന്ത്രിത ആപ്പുകൾ</string>
     <string name="restricted_false_label">ആപ്പിന് പശ്ചാത്തലത്തിൽ ബാറ്ററി ഉപയോഗിക്കാനാവും</string>
@@ -4406,6 +4412,7 @@ UT ഇന്റര്‍ഫേസ്: %5$s"</string>
     <string name="summary_divider_text">", "</string>
     <string name="summary_range_symbol_combination">%1$s - %2$s</string>
     <string name="summary_range_verbal_combination">%1$s മുതൽ %2$s വരെ</string>
+    <string name="summary_voice_network">VoLTE, Wi-Fi കോളിംഗ്</string>
     <string name="support_country_format">%1$s - %2$s</string>
     <string name="support_summary">സഹായ ലേഖനങ്ങൾ, ഫോൺ, ചാറ്റ് എന്നിവ ആരംഭിക്കുക</string>
     <string name="suw_back_button_label">മടങ്ങുക</string>
@@ -4458,6 +4465,11 @@ UT ഇന്റര്‍ഫേസ്: %5$s"</string>
     <string name="testing">പരിശോധിക്കുന്നു</string>
     <string name="testing_phone_info">ഫോൺ വിവരം</string>
     <string name="testing_usage_stats">ഉപയോഗ സ്ഥിതിവിവരക്കണക്ക്</string>
+    <string name="tether_error_item_default">ടെതറിംഗ്</string>
+    <string name="tether_error_message">നിങ്ങൾ %1$s-ലേക്ക് സബ്‌സ്ക്രൈബ് ചെയ്തിട്ടില്ല.</string>
+    <string name="tether_error_title">%1$s പിശക്</string>
+    <string name="tether_no_sim_message">മൊബൈൽ ഹോട്ട്‌സ്പോട്ടും മറ്റ് ടെതറിംഗ് ഓപ്ഷനുകളും ഉപയോഗിക്കുന്നതിനായി ഒരു SIM കാർഡ് ചേർക്കുക</string>
+    <string name="tether_no_sim_title">SIM കാര്‍ഡ് ഇല്ല</string>
     <string name="tether_settings_disabled_on_data_saver">ഡാറ്റ സേവർ ഓണായിരിക്കുന്ന സമയത്ത് പോർട്ടബിൾ ഹോട്ട്സ്പോട്ടുകൾ ടെതർ ചെയ്യാനോ ഉപയോഗിക്കാനോ കഴിയില്ല</string>
     <string name="tether_settings_summary_hotspot_off_tether_on">ടെതറിംഗ്</string>
     <string name="tether_settings_summary_hotspot_on_tether_off">ഹോട്ട്‌സ്‌പോട്ട് ഓണാണ്</string>
@@ -4863,6 +4875,7 @@ UT ഇന്റര്‍ഫേസ്: %5$s"</string>
     <string name="voice_input_settings_title">വോയ്‌സ് ഇൻപുട്ട്</string>
     <string name="voice_interaction_security_warning">ഈ വോയ്‌സ് ഇൻപുട്ട് സേവനത്തിന് നിങ്ങൾക്കായി എപ്പോഴും വോയ്‌സ് നിരീക്ഷിക്കാനും വോയ്‌സ് പ്രവർത്തനക്ഷമമാക്കിയ അപ്ലിക്കേഷനുകളെ നിയന്ത്രിക്കാനുമാകും. ഇത് %s അപ്‌ലിക്കേഷനിൽ നിന്നുള്ളതാണ്. ഈ സേവനത്തിന്റ ഉപയോഗം പ്രവർത്തനക്ഷമമാക്കണോ?</string>
     <string name="voice_interactor_preference_summary">മുഴുവൻ ഹോട്ട്‌വേഡും ആശയവിനിമയവും</string>
+    <string name="voice_network_title">ശബ്ദ നെറ്റ്‌വര്‍ക്കുകൾ</string>
     <string name="voice_recognizer_preference_summary">ലളിതമായ സ്‌പീച്ച് ടു ടെക്‌സ്റ്റ്</string>
     <string name="voice_search_settings_title">ശബ്ദതിരയൽ</string>
     <string name="voice_service_preference_section_title">വോയ്‌സ് ഇൻപുട്ട് സേവനങ്ങൾ</string>

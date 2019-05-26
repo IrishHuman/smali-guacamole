@@ -198,7 +198,7 @@
 .method protected getLayout()Lcom/android/setupwizardlib/GlifLayout;
     .locals 1
 
-    const v0, 0x7f0a04f3
+    const v0, 0x7f0a04f7
 
     invoke-virtual {p0, v0}, Lcom/android/settings/fingerprint/FingerprintEnrollBase;->findViewById(I)Landroid/view/View;
 
@@ -212,7 +212,7 @@
 .method protected getNextButton()Landroid/widget/Button;
     .locals 1
 
-    const v0, 0x7f0a0367
+    const v0, 0x7f0a036b
 
     invoke-virtual {p0, v0}, Lcom/android/settings/fingerprint/FingerprintEnrollBase;->findViewById(I)Landroid/view/View;
 
@@ -435,5 +435,29 @@
     invoke-virtual {p0, v2}, Lcom/android/settings/fingerprint/FingerprintEnrollBase;->setTitle(Ljava/lang/CharSequence;)V
 
     :cond_2
+    return-void
+.end method
+
+.method protected setHeaderTextColor(I)V
+    .locals 2
+
+    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintEnrollBase;->getLayout()Lcom/android/setupwizardlib/GlifLayout;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/android/setupwizardlib/GlifLayout;->getHeaderTextView()Landroid/widget/TextView;
+
+    move-result-object v0
+
+    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintEnrollBase;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p1}, Landroid/content/res/Resources;->getColor(I)I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
+
     return-void
 .end method

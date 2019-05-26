@@ -2549,8 +2549,8 @@ Aplikacija će također moći uključiti ili isključiti značajku Ne ometaj i p
     <string name="one_userkey">jedan korisnički ključ</string>
     <string name="oneplus_adaptive_model">Adaptivni način</string>
     <string name="oneplus_add">Dodaj</string>
-    <string name="oneplus_add_bluetooth_car_kit">Dodaj Bluetooth auto-komplet</string>
-    <string name="oneplus_add_bluetooth_car_kit_summary">Bluetooth auto-komplet automatski se povezuje s ranijim uređajima; nova povezivanja možete ručno dodati</string>
+    <string name="oneplus_add_bluetooth_car_kit">Dodaj Bluetooth u vozilu</string>
+    <string name="oneplus_add_bluetooth_car_kit_summary">Bluetooth u vozilu automatski se povezuje s prethodnim uređajima, a ručno možete dodati nove uređaje</string>
     <string name="oneplus_add_fingerprint_list">Dodaj otisak prsta</string>
     <string name="oneplus_adjust_effect">Intenzitet efekta</string>
     <string name="oneplus_advanced_display_settings">Napredne postavke zaslona</string>
@@ -2786,7 +2786,7 @@ Sigurnosni savjet: otključavanje licem manje je sigurno od otiska prsta i lozin
     <string name="oneplus_fnatic_mode_add_to_wallpapers">Dodaj u pozadine</string>
     <string name="oneplus_fnatic_mode_background_introduction_summary">Usmjeravanje radnih svojstava u cijelosti na igranje igre. To može rezultirati manjim zastojima u nekim aplikacijama.</string>
     <string name="oneplus_fnatic_mode_background_introduction_title">Poboljšanje regulatora obrade</string>
-    <string name="oneplus_fnatic_mode_disturb_introduction_summary">Blokira sve obavijesti i pozive (osim obavijesti za praznu bateriju, alarm i timer). Propuštene pozive možete vidjeti u povijesti poziva.</string>
+    <string name="oneplus_fnatic_mode_disturb_introduction_summary">Blokira sve obavijesti i pozive (osim obavijesti za praznu bateriju, alarm i timer).</string>
     <string name="oneplus_fnatic_mode_disturb_introduction_title">Napredna značajka Ne ometaj</string>
     <string name="oneplus_fnatic_mode_enable_introduction_title">Kako biste upotrebljavali Fnatik način, prvo morate omogućiti način za igranje</string>
     <string name="oneplus_fnatic_mode_network_introduction_dual4g_summary">Prioritizira se jačina signala primarne SIM kartice kako bi se smanjile smetnje u igranju igara s malim kašnjenjem. Sekundarna SIM kartica će se onemogućiti te se neće primati njezini pozivi i poruke.</string>
@@ -2878,6 +2878,7 @@ Za prijelaz na početni zaslon u bilo kojem trenutku, prijeđite prstom od sredi
     <string name="oneplus_haptic_feedback_tips">Pruža odgovor na dodir za scene iz određenih igara; primjenjivo samo na podržane igre</string>
     <string name="oneplus_haptic_feedback_title">Poboljšanje odgovora na dodir</string>
     <string name="oneplus_hardware_keys_action_split_screen">Otvaranje/zatvaranje podijeljenog ekrana</string>
+    <string name="oneplus_health_safety_information">Informacije o zdravlju i sigurnosti</string>
     <string name="oneplus_hearing_aid">Kompatibilnost sa slušnim aparatom</string>
     <string name="oneplus_hide_navigation_bar">Sakrij navigacijsku traku</string>
     <string name="oneplus_hide_navkeys">Sakrij navigacijsku traku</string>
@@ -3092,8 +3093,8 @@ Napomena: Otisak prsta može biti manje siguran od snažnog obrasca ili PIN-a"</
     <string name="oneplus_receive_notifications">OnePlus obavijesti</string>
     <string name="oneplus_receive_notifications_agree">Primajte vijesti iz OnePlus-a</string>
     <string name="oneplus_receive_notifications_summary">Prihvatite primanje službenih vijesti tvrtke OnePlus, informacija o proizvodu, interakcija putem upitnika i preporuke za kupnju/kuponske informacije</string>
-    <string name="oneplus_recognized_bluetooth_car_kits">Prepoznati Bluetooth auto-kompleti</string>
-    <string name="oneplus_recognized_bluetooth_car_kits_no_devices">Nema Bluetooth auto-kompleta, u nastavku možete ručno dodati nove veze</string>
+    <string name="oneplus_recognized_bluetooth_car_kits">Priznati Bluetooth u vozilu</string>
+    <string name="oneplus_recognized_bluetooth_car_kits_no_devices">Nema Bluetootha u vozilu, u nastavku ručno možete dodati nove uređaje</string>
     <string name="oneplus_recommended_opening">Preporučeno</string>
     <string name="oneplus_reenroll_fingerprint_tips">Ponovo unesite otisak prsta nakon zamjene zaštitne folije na mobitelu kako biste bili sigurni u ispravnost otiska prsta</string>
     <string name="oneplus_regulatory_information">Provjera</string>
@@ -3116,6 +3117,7 @@ Napomena: Otisak prsta može biti manje siguran od snažnog obrasca ili PIN-a"</
     <string name="oneplus_screen_color_mode_basic">sRGB</string>
     <string name="oneplus_screen_color_mode_default">Zadano</string>
     <string name="oneplus_screen_color_mode_defined">Prilagođena boja</string>
+    <string name="oneplus_screen_color_mode_ntsc">AMOLED širokog gamuta</string>
     <string name="oneplus_screen_color_mode_reading_mode_on_summary">Nije dostupno jer je uključen mod čitanja</string>
     <string name="oneplus_screen_color_mode_soft">Mekan</string>
     <string name="oneplus_screen_color_mode_title">Kalibracija ekrana</string>
@@ -3705,6 +3707,10 @@ UT sučelje: %5$s"</string>
     <string name="restore_default_apn_completed">Poništavanje zadanih postavki APN-a dovršeno.</string>
     <string name="restr_pin_enter_admin_pin">Unesite PIN administratora</string>
     <string name="restrict_background_blacklisted">Pozadinski su podaci isključeni</string>
+    <string name="restrict_background_uss_always">Uvijek</string>
+    <string name="restrict_background_uss_never">Nikada</string>
+    <string name="restrict_background_uss_roaming">Samo u roamingu</string>
+    <string name="restrict_background_uss_title">Ograničite pozadinske podatke</string>
     <string name="restricted_app_detail_footer">Te su aplikacije trošile bateriju u pozadini. Ograničene aplikacije možda neće funkcionirati pravilno i obavijesti mogu kasniti.</string>
     <string name="restricted_app_title">Ograničene aplikacije</string>
     <string name="restricted_false_label">Može trošiti bateriju u pozadini</string>
@@ -4406,6 +4412,7 @@ Pokušajte upotrijebiti brži medij ^3 ili upotrebljavajte ovaj medij ^4 za prij
     <string name="summary_divider_text">", "</string>
     <string name="summary_range_symbol_combination">%1$s – %2$s</string>
     <string name="summary_range_verbal_combination">%1$s – %2$s</string>
+    <string name="summary_voice_network">VoLTE, Wi-Fi pozivanje</string>
     <string name="support_country_format">%1$s – %2$s</string>
     <string name="support_summary">Članci pomoći, telefoniranje i chat, početak</string>
     <string name="suw_back_button_label">Natrag</string>
@@ -4458,6 +4465,11 @@ Googleov pristup sinkronizaciji podataka za mogućnost pristupa kontaktima, sast
     <string name="testing">Testiranje</string>
     <string name="testing_phone_info">Telefonske informacije</string>
     <string name="testing_usage_stats">Korisnička statistika</string>
+    <string name="tether_error_item_default">Dijeljenje internetske veze</string>
+    <string name="tether_error_message">Niste pretplaćeni na %1$s.</string>
+    <string name="tether_error_title">Pogreška %1$s</string>
+    <string name="tether_no_sim_message">Umetnite SIM karticu za korištenje mobilne žarišne točke i mogućnosti dijeljenja internetske veze</string>
+    <string name="tether_no_sim_title">Bez SIM kartice</string>
     <string name="tether_settings_disabled_on_data_saver">Dok je Štednja podatkovnog prometa uključena, ne možete upotrebljavati modemsko povezivanje ni prijenosne žarišne točke</string>
     <string name="tether_settings_summary_hotspot_off_tether_on">Modemsko povezivanje</string>
     <string name="tether_settings_summary_hotspot_on_tether_off">Žarišna točka uključena</string>
@@ -4863,6 +4875,7 @@ Bilo koji korisnik može ažurirati aplikacije za sve ostale korisnike."</string
     <string name="voice_input_settings_title">Glasovni unos</string>
     <string name="voice_interaction_security_warning">Usluga glasovnog unosa moći će u vaše ime neprekidno nadzirati glasovne unose i kontrolirati aplikacije s omogućenom glasovnom interakcijom. Pruža je %s. Želite li omogućiti tu uslugu?</string>
     <string name="voice_interactor_preference_summary">Potpuni pokretač značajki i interakcija</string>
+    <string name="voice_network_title">Govorna mreža</string>
     <string name="voice_recognizer_preference_summary">Jednostavno pretvaranje govora u tekst</string>
     <string name="voice_search_settings_title">Glasovno pretraživanje</string>
     <string name="voice_service_preference_section_title">Usluge glasovnog unosa</string>

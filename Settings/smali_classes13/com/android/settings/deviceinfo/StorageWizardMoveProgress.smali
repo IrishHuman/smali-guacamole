@@ -49,7 +49,7 @@
 
     if-eq p1, v0, :cond_0
 
-    const v0, 0x7f120779
+    const v0, 0x7f12077a
 
     packed-switch p1, :pswitch_data_0
 
@@ -76,7 +76,7 @@
     return-object v0
 
     :pswitch_2
-    const v0, 0x7f121271
+    const v0, 0x7f121279
 
     invoke-virtual {p0, v0}, Lcom/android/settings/deviceinfo/StorageWizardMoveProgress;->getString(I)Ljava/lang/String;
 
@@ -94,7 +94,7 @@
     return-object v0
 
     :pswitch_4
-    const v0, 0x7f120784
+    const v0, 0x7f120785
 
     invoke-virtual {p0, v0}, Lcom/android/settings/deviceinfo/StorageWizardMoveProgress;->getString(I)Ljava/lang/String;
 
@@ -103,7 +103,7 @@
     return-object v0
 
     :cond_0
-    const v0, 0x7f12096b
+    const v0, 0x7f12096d
 
     invoke-virtual {p0, v0}, Lcom/android/settings/deviceinfo/StorageWizardMoveProgress;->getString(I)Ljava/lang/String;
 
@@ -179,7 +179,7 @@
 
     invoke-virtual {p0, v2}, Lcom/android/settings/deviceinfo/StorageWizardMoveProgress;->setIcon(I)V
 
-    const v2, 0x7f121220
+    const v2, 0x7f121227
 
     const/4 v3, 0x1
 
@@ -191,7 +191,7 @@
 
     invoke-virtual {p0, v2, v4}, Lcom/android/settings/deviceinfo/StorageWizardMoveProgress;->setHeaderText(I[Ljava/lang/CharSequence;)V
 
-    const v2, 0x7f12121e
+    const v2, 0x7f121225
 
     const/4 v4, 0x2
 

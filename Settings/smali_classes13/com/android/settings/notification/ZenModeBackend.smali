@@ -341,7 +341,7 @@
 
     const/4 v0, -0x1
 
-    const v1, 0x7f121681
+    const v1, 0x7f12168f
 
     const/4 v2, -0x1
 
@@ -388,17 +388,17 @@
     return v1
 
     :pswitch_0
-    const v1, 0x7f121682
+    const v1, 0x7f121690
 
     return v1
 
     :pswitch_1
-    const v1, 0x7f121680
+    const v1, 0x7f12168e
 
     return v1
 
     :pswitch_2
-    const v1, 0x7f12167f
+    const v1, 0x7f12168d
 
     return v1
 

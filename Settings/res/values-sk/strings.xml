@@ -2549,8 +2549,8 @@ Aplikácia tým získa aj možnosť vypnúť alebo zapnúť nastavenie Nerušiť
     <string name="one_userkey">jeden kľúč používateľa</string>
     <string name="oneplus_adaptive_model">Adaptívny režim</string>
     <string name="oneplus_add">Pridať</string>
-    <string name="oneplus_add_bluetooth_car_kit">Pridať autosúpravu Bluetooth</string>
-    <string name="oneplus_add_bluetooth_car_kit_summary">Autosúprava Bluetooth sa automaticky pripojí k predchádzajúcim zariadeniam, ručne tiež môžete pridať nové pripojenia</string>
+    <string name="oneplus_add_bluetooth_car_kit">Pridať Bluetooth vozidla</string>
+    <string name="oneplus_add_bluetooth_car_kit_summary">Bluetooth vozidla sa automaticky pripojí k predchádzajúcim zariadeniam, nové zariadenia môžete tiež pridať manuálne</string>
     <string name="oneplus_add_fingerprint_list">Pridať odtlačok prsta</string>
     <string name="oneplus_adjust_effect">Intenzita efektu</string>
     <string name="oneplus_advanced_display_settings">Rozšírené nastavenia obrazovky</string>
@@ -2786,7 +2786,7 @@ Tip na predchádzanie rizík: odomknutie tvárou je menej zabezpečené ako odtl
     <string name="oneplus_fnatic_mode_add_to_wallpapers">Pridať do tapiet</string>
     <string name="oneplus_fnatic_mode_background_introduction_summary">Výkon sa sústredí skoro len pre hru. Toto môže spôsobiť problémy v niektorých aplikáciách.</string>
     <string name="oneplus_fnatic_mode_background_introduction_title">Vylepšiť reguláciu procesov</string>
-    <string name="oneplus_fnatic_mode_disturb_introduction_summary">Blokovať všetky oznámenia a hovory (okrem oznámenia o nízkej úrovni batérie, budíka a časovača). Zmeškané hovory si môžete zobraziť len v histórii hovorov.</string>
+    <string name="oneplus_fnatic_mode_disturb_introduction_summary">Blokovať všetky oznámenia a hovory (okrem oznámenia o nízkej úrovni batérie, budíka a časovača).</string>
     <string name="oneplus_fnatic_mode_disturb_introduction_title">Rozšírený režim Nerušiť</string>
     <string name="oneplus_fnatic_mode_enable_introduction_title">Ak chcete použiť režim Fnatic, musíte najprv zapnúť herný režim</string>
     <string name="oneplus_fnatic_mode_network_introduction_dual4g_summary">Pre čo najnižšiu latenciu hry sa na obmedzenie rušenia uprednostní signál hlavnej karty SIM. Týmto sa vypne druhá karta SIM na ktorej sa nebudú prijímať hovory ani správy.</string>
@@ -2878,6 +2878,7 @@ Ak chcete kedykoľvek prejsť na úvodnú obrazovku, potiahnite prstom nahor od 
     <string name="oneplus_haptic_feedback_tips">Poskytuje vibračnú spätnú väzbu v konkrétnych herných situáciách, použiteľné len v podporovaných hrách</string>
     <string name="oneplus_haptic_feedback_title">Vylepšenie vibračnej spätnej väzby</string>
     <string name="oneplus_hardware_keys_action_split_screen">Otvorenie/zatvorenie rozdelenej obrazovky</string>
+    <string name="oneplus_health_safety_information">Informácie o zdraví a bezpečnosti</string>
     <string name="oneplus_hearing_aid">Kompatibilita s načúvacím prístrojom</string>
     <string name="oneplus_hide_navigation_bar">Skryť navigačný panel</string>
     <string name="oneplus_hide_navkeys">Skryť navigačný panel</string>
@@ -3092,8 +3093,8 @@ Počet zostávajúcich pokusov: %d."</string>
     <string name="oneplus_receive_notifications">Oznámenia OnePlus</string>
     <string name="oneplus_receive_notifications_agree">Dostávať novinky od OnePlus</string>
     <string name="oneplus_receive_notifications_summary">Súhlasíte s prijímaním oficiálnych správ, informácií o produktoch, dotazníkov a nákupných odporúčaní/informácií o kupónoch od spoločnosti OnePlus</string>
-    <string name="oneplus_recognized_bluetooth_car_kits">Rozpoznané autosúpravy Bluetooth</string>
-    <string name="oneplus_recognized_bluetooth_car_kits_no_devices">Žiadna autosúprava Bluetooth. Nové pripojenia môžete pridať manuálne nižšie</string>
+    <string name="oneplus_recognized_bluetooth_car_kits">Rozpoznaný Bluetooth vozidla</string>
+    <string name="oneplus_recognized_bluetooth_car_kits_no_devices">Žiadny Bluetooth vozidla, nové zariadenia môžete pridať manuálne nižšie</string>
     <string name="oneplus_recommended_opening">Odporúčané</string>
     <string name="oneplus_reenroll_fingerprint_tips">Po zmene ochrannej fólie mobilného telefónu zaregistrujte váš odtlačok prsta znova na zaistenie presnosti odtlačku prsta</string>
     <string name="oneplus_regulatory_information">Overenie</string>
@@ -3116,6 +3117,7 @@ Počet zostávajúcich pokusov: %d."</string>
     <string name="oneplus_screen_color_mode_basic">sRGB</string>
     <string name="oneplus_screen_color_mode_default">Predvolené</string>
     <string name="oneplus_screen_color_mode_defined">Vlastná farba</string>
+    <string name="oneplus_screen_color_mode_ntsc">Široký farebný rozsah AMOLED</string>
     <string name="oneplus_screen_color_mode_reading_mode_on_summary">Nie je k dispozícii, pretože režim čítania je aktívny</string>
     <string name="oneplus_screen_color_mode_soft">Mäkké</string>
     <string name="oneplus_screen_color_mode_title">Kalibrácia displeja</string>
@@ -3705,6 +3707,10 @@ Rozhranie UT: %5$s"</string>
     <string name="restore_default_apn_completed">Predvolené nastavenia prístupových bodov boli obnovené</string>
     <string name="restr_pin_enter_admin_pin">Zadajte PIN správcu</string>
     <string name="restrict_background_blacklisted">Dátové prenosy na pozadí sú vypnuté</string>
+    <string name="restrict_background_uss_always">Vždy</string>
+    <string name="restrict_background_uss_never">Nikdy</string>
+    <string name="restrict_background_uss_roaming">Len v roamingu</string>
+    <string name="restrict_background_uss_title">Obmedziť dáta na pozadí</string>
     <string name="restricted_app_detail_footer">Tieto aplikácie používali batériu na pozadí. Obmedzené aplikácie nemusia správne fungovať a upozornenia môžu byť oneskorené.</string>
     <string name="restricted_app_title">Obmedzené aplikácie</string>
     <string name="restricted_false_label">Aplikácia môže využívať batériu na pozadí</string>
@@ -4406,6 +4412,7 @@ Zvážte použitie rýchlejšieho úložiska ^3 alebo využite namiesto toho jed
     <string name="summary_divider_text">", "</string>
     <string name="summary_range_symbol_combination">%1$s – %2$s</string>
     <string name="summary_range_verbal_combination">Od %1$s do %2$s</string>
+    <string name="summary_voice_network">Volanie prostredníctvom Wi-Fi, VoLTE</string>
     <string name="support_country_format">%1$s – %2$s</string>
     <string name="support_summary">Články pomocníka, telefón a čet, začíname</string>
     <string name="suw_back_button_label">Späť</string>
@@ -4458,6 +4465,11 @@ Spoločnosť Google pomocou nej synchronizuje údaje a umožňuje vám tak prist
     <string name="testing">Testovanie</string>
     <string name="testing_phone_info">Informácie o telefóne</string>
     <string name="testing_usage_stats">Štatistiky používania</string>
+    <string name="tether_error_item_default">Zdieľanie internetu</string>
+    <string name="tether_error_message">Neodoberáte %1$s.</string>
+    <string name="tether_error_title">Chyba %1$s</string>
+    <string name="tether_no_sim_message">Na použitie mobilného hotspotu a iných možností zdieľania internetu vložte kartu SIM</string>
+    <string name="tether_no_sim_title">Bez karty SIM</string>
     <string name="tether_settings_disabled_on_data_saver">Keď je šetrič dát zapnutý, nie je možné zdieľať dátové pripojenie ani používať prenosné hotspoty</string>
     <string name="tether_settings_summary_hotspot_off_tether_on">Zdieľané pripojenie</string>
     <string name="tether_settings_summary_hotspot_on_tether_off">Hotspot je zapnutý</string>
@@ -4863,6 +4875,7 @@ Akýkoľvek používateľ môže aktualizovať aplikácie všetkých ostatných 
     <string name="voice_input_settings_title">Hlasový vstup</string>
     <string name="voice_interaction_security_warning">Táto služba hlasového vstupu bude môcť neustále monitorovať hlas a ovládať za vás aplikácie so zapnutým hlasovým vstupom. Pochádza z aplikácie %s. Chcete povoliť používanie tejto služby?</string>
     <string name="voice_interactor_preference_summary">Úplná aktivácia kľúčových slov a interakcia</string>
+    <string name="voice_network_title">Hlasové siete</string>
     <string name="voice_recognizer_preference_summary">Jednoduchý prevod reči na text</string>
     <string name="voice_search_settings_title">Hlasové vyhľadávanie</string>
     <string name="voice_service_preference_section_title">Služby hlasového vstupu</string>

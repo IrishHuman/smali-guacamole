@@ -50,7 +50,7 @@
 
     const/4 v0, 0x0
 
-    const v1, 0x7f1212d1
+    const v1, 0x7f1212de
 
     invoke-virtual {p0, v1, v0}, Lcom/android/settings/TrustedCredentialsDialogBuilder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 

@@ -2548,8 +2548,8 @@
     <string name="one_userkey">מקש משתמש אחד</string>
     <string name="oneplus_adaptive_model">מצב הסתגלות</string>
     <string name="oneplus_add">הוסף</string>
-    <string name="oneplus_add_bluetooth_car_kit">הוסף ערכת Bluetooth לרכב</string>
-    <string name="oneplus_add_bluetooth_car_kit_summary">"ערכת בלוטות' לרכב מתחברת אוטומטית להתקנים הקודמים שלך, באפשרותך גם להוסיף חיבורים חדשים ידנית."</string>
+    <string name="oneplus_add_bluetooth_car_kit">הוסף מערכת בלוטוס לרכב</string>
+    <string name="oneplus_add_bluetooth_car_kit_summary">מערכת הבלוטוס ברכב מתחברת אוטומטית להתקנים הקודמים שלך. באפשרותך להוסיף התקנים חדשים באופן ידני</string>
     <string name="oneplus_add_fingerprint_list">הוסף טביעת אצבע</string>
     <string name="oneplus_adjust_effect">עוצמת האפקט</string>
     <string name="oneplus_advanced_display_settings">הגדרות תצוגה מתקדמות</string>
@@ -2784,7 +2784,7 @@ Battery נכבה אוטומטית כאשר המכשיר במצב טעינה."</s
     <string name="oneplus_fnatic_mode_add_to_wallpapers">הוסף רקעים</string>
     <string name="oneplus_fnatic_mode_background_introduction_summary">התמקדות כמעט מוחלטת במשחק. מצב זה עלול לגרום תקלות ביישומים מסוימים.</string>
     <string name="oneplus_fnatic_mode_background_introduction_title">שפר וסת תהליך</string>
-    <string name="oneplus_fnatic_mode_disturb_introduction_summary">חסום את כל כל ההתראות והשיחות (מלבד התראת סוללה חלשה, שעון מעורר וטיימר). באפשרותך להציג את השיחות שלא נענו בהיסטוריית השיחות בלבד.</string>
+    <string name="oneplus_fnatic_mode_disturb_introduction_summary">חסום את כל כל ההתראות והשיחות (מלבד התראת סוללה חלשה, שעון מעורר וטיימר)</string>
     <string name="oneplus_fnatic_mode_disturb_introduction_title">DND מתקדם</string>
     <string name="oneplus_fnatic_mode_enable_introduction_title">כדי להשתמש במצב Fnatic יש להפעיל תחילה מצב משחק</string>
     <string name="oneplus_fnatic_mode_network_introduction_dual4g_summary">עוצמת השידור של כרטיס ה-SIM הראשי מקבל עדיפות על מנת לצמצם הפרעות במהלך השהיות במשחק. כתוצאה מכך, כרטיס ה-SIM המשני יושבת, ולא יתקבלו שיחות הוא הודעות.</string>
@@ -2876,6 +2876,7 @@ Battery נכבה אוטומטית כאשר המכשיר במצב טעינה."</s
     <string name="oneplus_haptic_feedback_tips">מספק משוב מגע משופר עבור סצנות משחק ספציפיות , חל רק על משחקים נתמכים</string>
     <string name="oneplus_haptic_feedback_title">שיפור משוב מגע</string>
     <string name="oneplus_hardware_keys_action_split_screen">פתח/סגור מסך מפוצל</string>
+    <string name="oneplus_health_safety_information">בריאות &amp; מידע בטיחות</string>
     <string name="oneplus_hearing_aid">תאימות למכשיר שמיעה</string>
     <string name="oneplus_hide_navigation_bar">הסתר את סרגל ניווט</string>
     <string name="oneplus_hide_navkeys">הסתר את סרגל הניווט</string>
@@ -3090,8 +3091,8 @@ Battery נכבה אוטומטית כאשר המכשיר במצב טעינה."</s
     <string name="oneplus_receive_notifications">הודעות OnePlus</string>
     <string name="oneplus_receive_notifications_agree">קבלת חדשות מ-OnePlus</string>
     <string name="oneplus_receive_notifications_summary">אשר כדי לקבל את החדשות הרשמיות של OnePlus, מידע על מוצרים, שאלון אינטראקציה ומידע על המלצות רכישה/קופונים</string>
-    <string name="oneplus_recognized_bluetooth_car_kits">ערכות Bluetooth מזוהות לרכב</string>
-    <string name="oneplus_recognized_bluetooth_car_kits_no_devices">אין ערכת Bluetooth לרכב, באפשרותך להוסיף חיבורים חדשים למטה</string>
+    <string name="oneplus_recognized_bluetooth_car_kits">זוהה בלוטוס לרכב</string>
+    <string name="oneplus_recognized_bluetooth_car_kits_no_devices">אין בלוטוס לרכב. באפשרותך להוסיף התקנים חדשים להלן באופן ידני</string>
     <string name="oneplus_recommended_opening">מומלץ</string>
     <string name="oneplus_reenroll_fingerprint_tips">הזן את טביעת האצבע לאחר שתחזיר את קרום המגן של הטלפון הנייד כדי להבטיח שטביעת האצבעות נכונה</string>
     <string name="oneplus_regulatory_information">אימות</string>
@@ -3114,6 +3115,7 @@ Battery נכבה אוטומטית כאשר המכשיר במצב טעינה."</s
     <string name="oneplus_screen_color_mode_basic">sRGB</string>
     <string name="oneplus_screen_color_mode_default">ברירת מחדל</string>
     <string name="oneplus_screen_color_mode_defined">צבע מותאם אישית</string>
+    <string name="oneplus_screen_color_mode_ntsc">סולם צבעים רחב AMOLED</string>
     <string name="oneplus_screen_color_mode_reading_mode_on_summary">לא זמין מפני שמצב קריאה מופעל</string>
     <string name="oneplus_screen_color_mode_soft">רך</string>
     <string name="oneplus_screen_color_mode_title">כיול מסך</string>
@@ -3701,6 +3703,10 @@ Voice over Wi-Fi:‏ %3$s
     <string name="restore_default_apn_completed">‏איפוס הגדרות ברירת המחדל של APN הושלם.</string>
     <string name="restr_pin_enter_admin_pin">הזן את קוד הגישה של מנהל המכשיר</string>
     <string name="restrict_background_blacklisted">נתוני הרקע כבויים</string>
+    <string name="restrict_background_uss_always">תמיד</string>
+    <string name="restrict_background_uss_never">לעולם לא</string>
+    <string name="restrict_background_uss_roaming">בעת נדידה בלבד</string>
+    <string name="restrict_background_uss_title">הגבלת נתוני רקע</string>
     <string name="restricted_app_detail_footer">אפליקציות אלה השתמשו בסוללה ברקע. ייתכן שאפליקציות מוגבלות לא יפעלו כראוי ושיהיה עיכוב בקבלת הודעות.</string>
     <string name="restricted_app_title">אפליקציות בשימוש מוגבל</string>
     <string name="restricted_false_label">האפליקציה יכולה להשתמש בסוללה ברקע</string>
@@ -4402,6 +4408,7 @@ Voice over Wi-Fi:‏ %3$s
     <string name="summary_divider_text">", "</string>
     <string name="summary_range_symbol_combination">%1$s - %2$s</string>
     <string name="summary_range_verbal_combination">%1$s עד %2$s</string>
+    <string name="summary_voice_network">VoLTE, שיחת Wi-Fi</string>
     <string name="support_country_format">%1$s - %2$s</string>
     <string name="support_summary">"מאמרי עזרה, תמיכה טלפונית ותמיכה בצ'אט, תחילת העבודה"</string>
     <string name="suw_back_button_label">חזרה</string>
@@ -4454,6 +4461,11 @@ Voice over Wi-Fi:‏ %3$s
     <string name="testing">בדיקה</string>
     <string name="testing_phone_info">מידע על הטלפון</string>
     <string name="testing_usage_stats">סטטיסטיקת שימוש</string>
+    <string name="tether_error_item_default">קשירה</string>
+    <string name="tether_error_message">אינך רשום כמנוי ל- %1$s.</string>
+    <string name="tether_error_title">שגיאה %1$s</string>
+    <string name="tether_no_sim_message">הכנס כרטיס SIM לשימוש בנקודה חמה ניידת ובאפשרויות קשירה אחרות</string>
+    <string name="tether_no_sim_title">אין כרטיס SIM</string>
     <string name="tether_settings_disabled_on_data_saver">‏לא ניתן לשתף אינטרנט בין ניידים או להשתמש בנקודה ניידת לשיתוף אינטרנט כשחוסך הנתונים (Data Saver) פועל.</string>
     <string name="tether_settings_summary_hotspot_off_tether_on">שיתוף אינטרנט בין ניידים</string>
     <string name="tether_settings_summary_hotspot_on_tether_off">נקודה לשיתוף אינטרנט פועלת</string>
@@ -4859,6 +4871,7 @@ Voice over Wi-Fi:‏ %3$s
     <string name="voice_input_settings_title">קלט קולי</string>
     <string name="voice_interaction_security_warning">שירות הקלט הקולי הזה יוכל לקיים ניטור תמידי של קול ולשלוט בשמך באפליקציות בעלות תכונות הפעלה קולית. מקורו באפליקציה %s. האם להפעיל את השימוש בשירות הזה?</string>
     <string name="voice_interactor_preference_summary">שירות מלא של אינטראקציה ומילות הפעלה</string>
+    <string name="voice_network_title">רשתות קול</string>
     <string name="voice_recognizer_preference_summary">שירות פשוט של דיבור לטקסט</string>
     <string name="voice_search_settings_title">חיפוש קולי</string>
     <string name="voice_service_preference_section_title">שירותי קלט קולי</string>

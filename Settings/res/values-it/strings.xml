@@ -2549,8 +2549,8 @@ L'app potrà anche attivare o disattivare la funzione Non disturbare e modificar
     <string name="one_userkey">una chiave utente</string>
     <string name="oneplus_adaptive_model">Modalità adattiva</string>
     <string name="oneplus_add">Aggiungi</string>
-    <string name="oneplus_add_bluetooth_car_kit">Aggiungi kit auto Bluetooth</string>
-    <string name="oneplus_add_bluetooth_car_kit_summary">Il kit auto Bluetooth si connette automaticamente ai dispositivi precedenti, puoi anche aggiungere nuove connessioni manualmente</string>
+    <string name="oneplus_add_bluetooth_car_kit">Aggiungi Bluetooth veicolo</string>
+    <string name="oneplus_add_bluetooth_car_kit_summary">Il Bluetooth del veicolo si connette automaticamente ai dispositivi precedenti e consente anche di aggiungerne manualmente di nuovi</string>
     <string name="oneplus_add_fingerprint_list">Aggiungi impronta digitale</string>
     <string name="oneplus_adjust_effect">Potenza effetto</string>
     <string name="oneplus_advanced_display_settings">Impostazioni schermo avanzate</string>
@@ -2786,7 +2786,7 @@ Consiglio rischio: lo sblocco tramite riconoscimento facciale è meno sicuro del
     <string name="oneplus_fnatic_mode_add_to_wallpapers">Aggiungi agli sfondi</string>
     <string name="oneplus_fnatic_mode_background_introduction_summary">Prestazioni incentrate quasi interamente sul gioco. Possibili problemi in alcune app.</string>
     <string name="oneplus_fnatic_mode_background_introduction_title">Migliora il regolatore di processo</string>
-    <string name="oneplus_fnatic_mode_disturb_introduction_summary">Blocca tutte le notifiche e le chiamate (eccetto la notifica di batteria scarica, allarmi e timer). Potrai visualizzare solo le chiamate perse nella cronologia delle chiamate.</string>
+    <string name="oneplus_fnatic_mode_disturb_introduction_summary">Blocca tutte le notifiche e le chiamate (eccetto la notifica di batteria scarica, allarmi e timer).</string>
     <string name="oneplus_fnatic_mode_disturb_introduction_title">DND avanzato</string>
     <string name="oneplus_fnatic_mode_enable_introduction_title">Per poter utilizzare la modalità Fnatic, è necessario dapprima abilitare la modalità gioco</string>
     <string name="oneplus_fnatic_mode_network_introduction_dual4g_summary">Si prioritizza la potenza del segnale della scheda SIM primaria allo scopo di minimizzare le interferenze durante i giochi a bassa latenza. Di conseguenza, la scheda SIM secondaria verrà disabilitata e non si potranno ricevere chiamate o messaggi.</string>
@@ -2878,6 +2878,7 @@ Per andare alla schermata home in qualsiasi momento, scorri verso l'alto dal bor
     <string name="oneplus_haptic_feedback_tips">Fornisci un feedback aptico per scene di gioco specifiche, valido solo per i giochi supportati</string>
     <string name="oneplus_haptic_feedback_title">Miglioramento del feedback aptico</string>
     <string name="oneplus_hardware_keys_action_split_screen">Apri/Chiudi schermo diviso</string>
+    <string name="oneplus_health_safety_information">Informazioni su salute e sicurezza</string>
     <string name="oneplus_hearing_aid">Compatibilità con apparecchi acustici</string>
     <string name="oneplus_hide_navigation_bar">Nascondi la barra di navigazione</string>
     <string name="oneplus_hide_navkeys">Nascondi la barra di navigazione</string>
@@ -3092,8 +3093,8 @@ Nota: l'impronta digitale potrebbe risultare meno sicura di un pattern o del PIN
     <string name="oneplus_receive_notifications">Notifiche OnePlus</string>
     <string name="oneplus_receive_notifications_agree">Ricevi notizie da OnePlus</string>
     <string name="oneplus_receive_notifications_summary">Accettare la ricezione delle notizie ufficiali di OnePlus, le informazioni sui prodotti, la partecipazione ai sondaggi, ai consigli/coupon di acquisto</string>
-    <string name="oneplus_recognized_bluetooth_car_kits">Kit auto Bluetooth riconosciuti</string>
-    <string name="oneplus_recognized_bluetooth_car_kits_no_devices">Nessun kit auto Bluetooth, puoi aggiungere manualmente nuove connessioni in basso</string>
+    <string name="oneplus_recognized_bluetooth_car_kits">Bluetooth veicolo riconosciuto</string>
+    <string name="oneplus_recognized_bluetooth_car_kits_no_devices">Nessun Bluetooth veicolo, puoi aggiungere manualmente nuovi dispositivi qui sotto</string>
     <string name="oneplus_recommended_opening">Consigliato</string>
     <string name="oneplus_reenroll_fingerprint_tips">"Per garantire la correttezza dell'impronta digitale, inseriscila nuovamente dopo aver riposizionato la pellicola protettiva del telefono cellulare"</string>
     <string name="oneplus_regulatory_information">Verifica</string>
@@ -3116,6 +3117,7 @@ Nota: l'impronta digitale potrebbe risultare meno sicura di un pattern o del PIN
     <string name="oneplus_screen_color_mode_basic">sRGB</string>
     <string name="oneplus_screen_color_mode_default">Predefinito</string>
     <string name="oneplus_screen_color_mode_defined">Colore personalizzato</string>
+    <string name="oneplus_screen_color_mode_ntsc">Ampia gamma di colori AMOLED</string>
     <string name="oneplus_screen_color_mode_reading_mode_on_summary">Non disponibile perché la modalità di lettura è attivata</string>
     <string name="oneplus_screen_color_mode_soft">Soft</string>
     <string name="oneplus_screen_color_mode_title">Calibrazione schermo</string>
@@ -3704,6 +3706,10 @@ Interfaccia UT: %5$s"</string>
     <string name="restore_default_apn_completed">Ripristino delle impostazioni APN predefinite completato.</string>
     <string name="restr_pin_enter_admin_pin">Inserisci PIN amministratore</string>
     <string name="restrict_background_blacklisted">I dati in background sono disattivati</string>
+    <string name="restrict_background_uss_always">Sempre</string>
+    <string name="restrict_background_uss_never">Mai</string>
+    <string name="restrict_background_uss_roaming">Solo durante il roaming</string>
+    <string name="restrict_background_uss_title">Limita dati in background</string>
     <string name="restricted_app_detail_footer">Queste app stanno usando batteria in background. Le app con limitazioni potrebbero non funzionare correttamente e potresti ricevere le relative notifiche in ritardo.</string>
     <string name="restricted_app_title">App con limitazioni</string>
     <string name="restricted_false_label">"L'app può utilizzare la batteria in background"</string>
@@ -4405,6 +4411,7 @@ Prova a usare un dispositivo ^3 più veloce oppure usa ^4 come memoria portatile
     <string name="summary_divider_text">", "</string>
     <string name="summary_range_symbol_combination">%1$s - %2$s</string>
     <string name="summary_range_verbal_combination">Dalle %1$s alle %2$s</string>
+    <string name="summary_voice_network">VoLTE, chiamata Wi-Fi</string>
     <string name="support_country_format">%1$s - %2$s</string>
     <string name="support_summary">Articoli della guida, assistenza telefonica e chat, guida introduttiva</string>
     <string name="suw_back_button_label">Indietro</string>
@@ -4457,6 +4464,11 @@ L'approccio di Google alla sincronizzazione di dati per consentirti l'accesso ai
     <string name="testing">Verifica...</string>
     <string name="testing_phone_info">Informazioni telefono</string>
     <string name="testing_usage_stats">Statistiche di utilizzo</string>
+    <string name="tether_error_item_default">Tethering</string>
+    <string name="tether_error_message">Non sei abbonato a %1$s.</string>
+    <string name="tether_error_title">Errore %1$s</string>
+    <string name="tether_no_sim_message">Inserisci una scheda SIM per utilizzare Mobile Hotspot e altre opzioni di tethering</string>
+    <string name="tether_no_sim_title">Nessuna scheda SIM</string>
     <string name="tether_settings_disabled_on_data_saver">Impossibile eseguire il tethering o utilizzare hotspot portatili con Risparmio dati attivo</string>
     <string name="tether_settings_summary_hotspot_off_tether_on">Tethering</string>
     <string name="tether_settings_summary_hotspot_on_tether_off">Hotspot attivo</string>
@@ -4862,6 +4874,7 @@ Qualsiasi utente può aggiornare le app per tutti gli altri."</string>
     <string name="voice_input_settings_title">Input vocale</string>
     <string name="voice_interaction_security_warning">"Questo servizio di input vocale potrà eseguire sempre il monitoraggio della voce e controllare le applicazioni vocali per tuo conto. Deriva dall'applicazione %s. Attivare l'utilizzo del servizio?"</string>
     <string name="voice_interactor_preference_summary">Interazione e hotword completa</string>
+    <string name="voice_network_title">Reti vocali</string>
     <string name="voice_recognizer_preference_summary">Semplice immissione vocale</string>
     <string name="voice_search_settings_title">Ricerca vocale</string>
     <string name="voice_service_preference_section_title">Servizi di input vocale</string>

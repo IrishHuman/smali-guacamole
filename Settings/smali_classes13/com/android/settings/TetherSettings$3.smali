@@ -56,13 +56,13 @@
 
     iget-object v0, p0, Lcom/android/settings/TetherSettings$3;->this$0:Lcom/android/settings/TetherSettings;
 
-    invoke-static {v0}, Lcom/android/settings/TetherSettings;->access$900(Lcom/android/settings/TetherSettings;)V
+    invoke-static {v0}, Lcom/android/settings/TetherSettings;->access$1400(Lcom/android/settings/TetherSettings;)V
 
     iget-object v0, p0, Lcom/android/settings/TetherSettings$3;->this$0:Lcom/android/settings/TetherSettings;
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcom/android/settings/TetherSettings;->access$1000(Lcom/android/settings/TetherSettings;Z)V
+    invoke-static {v0, v1}, Lcom/android/settings/TetherSettings;->access$1500(Lcom/android/settings/TetherSettings;Z)V
 
     :cond_0
     return-void

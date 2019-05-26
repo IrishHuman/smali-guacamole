@@ -2549,8 +2549,8 @@
     <string name="one_userkey">एक उपयोगकर्ता कुंजी</string>
     <string name="oneplus_adaptive_model">अनुकूलन योग्य मोड</string>
     <string name="oneplus_add">जोड़ें</string>
-    <string name="oneplus_add_bluetooth_car_kit">ब्लूटूथ कार किट जोड़ें</string>
-    <string name="oneplus_add_bluetooth_car_kit_summary">ब्लूटूथ कार किट आपके पिछले डिवाइसेस के साथ स्वचालित रूप से कनेक्ट होती है, आप मैन्युअल रूप से नए कनेक्शन भी जोड़ सकते हैं</string>
+    <string name="oneplus_add_bluetooth_car_kit">वाहन का ब्लूटूथ जोड़ें</string>
+    <string name="oneplus_add_bluetooth_car_kit_summary">वाहन का ब्लूटूथ आपके पिछले डिवाइस से स्वतः कनेक्ट हो जाता है, आप नए डिवाइसेस को मैनुअल रूप से भी जोड़ सकते हैं</string>
     <string name="oneplus_add_fingerprint_list">फिंगरप्रिंट जोड़ें</string>
     <string name="oneplus_adjust_effect">प्रभाव की ताकत</string>
     <string name="oneplus_advanced_display_settings">उन्नत प्रदर्शन सेटिंग्स</string>
@@ -2786,7 +2786,7 @@
     <string name="oneplus_fnatic_mode_add_to_wallpapers">वॉलपेपर में जोड़ें</string>
     <string name="oneplus_fnatic_mode_background_introduction_summary">प्रदर्शन पर ध्यान केंद्रित करना लगभग पूर्ण रूप से गेम खेलने के लिए है। इसके कारण कुछ ऐप्स में कुछ त्रुटि आ सकती है।</string>
     <string name="oneplus_fnatic_mode_background_introduction_title">प्रक्रिया नियामक में सुधार करें</string>
-    <string name="oneplus_fnatic_mode_disturb_introduction_summary">सभी नोटिफिकेशंस और कॉल ब्लॉक करें (कम बैटरी नोटिफ़िकेशन, अलार्म और टाइमर के सिवाय)। आप कॉल इतिहास में केवल छूटी हुई कॉल देख सकते हैं।</string>
+    <string name="oneplus_fnatic_mode_disturb_introduction_summary">सभी नोटिफिकेशंस और कॉल ब्लॉक करें (कम बैटरी नोटिफ़िकेशन, अलार्म और टाइमर के सिवाय)।</string>
     <string name="oneplus_fnatic_mode_disturb_introduction_title">उन्नत DND</string>
     <string name="oneplus_fnatic_mode_enable_introduction_title">Fnatic मोड का उपयोग करने के लिए, सबसे पहले गेमिंग मोड को सक्षम किया जाना चाहिए।</string>
     <string name="oneplus_fnatic_mode_network_introduction_dual4g_summary">प्राथमिक सिम कार्ड की सिग्नल क्षमता को निम्न लैटेंसी गेम प्ले के लिए अवरोधन को कम करने के लिए प्राथमिकता दी गई है। परिणामस्वरूप सिम कार्ड को अक्षम कर दिया जाएगा और कॉल और संदेश प्राप्त नहीं होंगे।</string>
@@ -2878,6 +2878,7 @@
     <string name="oneplus_haptic_feedback_tips">विशिष्ट गेम दृश्यों के लिए हैप्टिक प्रतिक्रिया प्रदान कररें, केवल समर्थित गेम्स के लिए लागू</string>
     <string name="oneplus_haptic_feedback_title">हैप्टिक प्रतिक्रिया सुधार</string>
     <string name="oneplus_hardware_keys_action_split_screen">विभाजित स्क्रीन खोलें/बंद करें</string>
+    <string name="oneplus_health_safety_information">स्वास्थ्य &amp; सुरक्षा जानकारी</string>
     <string name="oneplus_hearing_aid">सुनने संबंधी अनुकूलता</string>
     <string name="oneplus_hide_navigation_bar">नेविगेशन पट्टी छिपाएं</string>
     <string name="oneplus_hide_navkeys">नेविगेशन पट्टी छिपाएँ</string>
@@ -3092,8 +3093,8 @@
     <string name="oneplus_receive_notifications">OnePlus नोटिफिकेशंस</string>
     <string name="oneplus_receive_notifications_agree">OnePlus से समाचार प्राप्त करें</string>
     <string name="oneplus_receive_notifications_summary">OnePlus आधिकारिक समाचार, उत्पाद जानकारी, प्रश्नावली संवाद और खरीद सिफारिश/कूपन जानकारी प्राप्त करना स्वीकार करें</string>
-    <string name="oneplus_recognized_bluetooth_car_kits">मान्यता प्राप्त ब्लूटूथ कार किट</string>
-    <string name="oneplus_recognized_bluetooth_car_kits_no_devices">कोई भी ब्लूटूथ कार किट नहीं, आप मैन्युअल रूप से नीचे कनेक्शन जोड़ सकते हैं</string>
+    <string name="oneplus_recognized_bluetooth_car_kits">पहचाना गया वाहन का ब्लूटूथ</string>
+    <string name="oneplus_recognized_bluetooth_car_kits_no_devices">वाहन का कोई ब्लूटूथ नहीं, आप नीचे नए डिवाइसेस को मैनुअल रूप से जोड़ सकते हैं</string>
     <string name="oneplus_recommended_opening">अनुशंसित</string>
     <string name="oneplus_reenroll_fingerprint_tips">फिंगरप्रिंट की शुद्धता सुनिश्चित करने के लिए मोबाइल फ़ोन की सुरक्षात्मक फ़िल्म को बदलने के बाद अपना फिंगरप्रिंट फिर से दर्ज करें</string>
     <string name="oneplus_regulatory_information">सत्यापन</string>
@@ -3116,6 +3117,7 @@
     <string name="oneplus_screen_color_mode_basic">sRGB</string>
     <string name="oneplus_screen_color_mode_default">डिफ़ॉल्ट</string>
     <string name="oneplus_screen_color_mode_defined">रंग अपने अनुकूल करें</string>
+    <string name="oneplus_screen_color_mode_ntsc">AMOLED वाइड गैमट</string>
     <string name="oneplus_screen_color_mode_reading_mode_on_summary">अनुपलब्ध क्योंकि पठन मोड ऑन है</string>
     <string name="oneplus_screen_color_mode_soft">सॉफ्ट</string>
     <string name="oneplus_screen_color_mode_title">स्क्रीन कैलीब्रेशन</string>
@@ -3705,6 +3707,10 @@ UT इंटरफ़ेस: %5$s"</string>
     <string name="restore_default_apn_completed">डिफ़ॉल्‍ट APN सेटिंग रीसेट करना पूर्ण हुआ.</string>
     <string name="restr_pin_enter_admin_pin">व्यवस्थापक पिन डालें</string>
     <string name="restrict_background_blacklisted">पृष्ठभूमि डेटा बंद है</string>
+    <string name="restrict_background_uss_always">हमेशा</string>
+    <string name="restrict_background_uss_never">कभी नहीं</string>
+    <string name="restrict_background_uss_roaming">केवल रोमिंग के दौरान</string>
+    <string name="restrict_background_uss_title">पृष्ठभूमि डेटा प्रतिबंधित करें</string>
     <string name="restricted_app_detail_footer">ये ऐप्लिकेशन बैकग्राउंड में बैटरी इस्तेमाल करते रहे हैं. जिन ऐप्लिकेशन पर रोक लगाई गई है, हो सकता है कि वे ठीक तरह से काम न करें और उनके बारे में सूचनाएं देर से मिलें.</string>
     <string name="restricted_app_title">पाबंदी वाले ऐप्लिकेशन</string>
     <string name="restricted_false_label">ऐप्लिकेशन बैकग्राउंड में बैटरी का इस्तेमाल कर सकता है</string>
@@ -4406,6 +4412,7 @@ UT इंटरफ़ेस: %5$s"</string>
     <string name="summary_divider_text">", "</string>
     <string name="summary_range_symbol_combination">%1$s - %2$s</string>
     <string name="summary_range_verbal_combination">%1$s से %2$s</string>
+    <string name="summary_voice_network">VoLTE, वाईफ़ाई कॉलिंग</string>
     <string name="support_country_format">%1$s - %2$s</string>
     <string name="support_summary">सहायता लेख, फ़ोन और चैट, शुरू करना</string>
     <string name="suw_back_button_label">पीछे</string>
@@ -4458,6 +4465,11 @@ UT इंटरफ़ेस: %5$s"</string>
     <string name="testing">परीक्षण</string>
     <string name="testing_phone_info">फ़ोन से जुड़ी जानकारी</string>
     <string name="testing_usage_stats">उपयोग के आंकड़े</string>
+    <string name="tether_error_item_default">टेदरिंग</string>
+    <string name="tether_error_message">आपने %1$s की सदस्यता नहीं ली है।</string>
+    <string name="tether_error_title">%1$s त्रुटि</string>
+    <string name="tether_no_sim_message">मोबाइल हॉटस्पॉट और अन्य टेदरिंग विकल्पों का उपयोग करने के लिए सिम कार्ड डालें</string>
+    <string name="tether_no_sim_title">कोई सिम कार्ड नहीं</string>
     <string name="tether_settings_disabled_on_data_saver">डेटा बचाने की सेटिंग चालू होने पर इंटरनेट शेयर नहीं किया जा सकता या पोर्टेबल हॉटस्पॉट का इस्तेमाल नहीं किया जा सकता</string>
     <string name="tether_settings_summary_hotspot_off_tether_on">टेदर हो रहा है</string>
     <string name="tether_settings_summary_hotspot_on_tether_off">हॉटस्पॉट चालू है</string>
@@ -4863,6 +4875,7 @@ UT इंटरफ़ेस: %5$s"</string>
     <string name="voice_input_settings_title">बोलकर फ़ोन को निर्देश</string>
     <string name="voice_interaction_security_warning">बोलकर फ़ोन को निर्देश देने की यह सेवा, आपकी ओर से हमेशा आवाज़ की निगरानी और ऐसी ऐप जिसमें आवाज़ का इस्तेमाल होता है, को नियंत्रित करने में मदद करेगी. यह %s एेप से आता है. इस सेवा को चालू करें?</string>
     <string name="voice_interactor_preference_summary">पूर्ण हॉटवर्ड और इंटरैक्शन</string>
+    <string name="voice_network_title">वॉयस नेटवर्क</string>
     <string name="voice_recognizer_preference_summary">आसान वाक् से लेख</string>
     <string name="voice_search_settings_title">बोलकर सर्च करें</string>
     <string name="voice_service_preference_section_title">बोलकर फ़ोन को निर्देश सेवाएं</string>

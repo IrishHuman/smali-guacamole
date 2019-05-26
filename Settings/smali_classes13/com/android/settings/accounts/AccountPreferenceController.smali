@@ -585,7 +585,7 @@
 
     iget-object v3, p0, Lcom/android/settings/accounts/AccountPreferenceController;->mContext:Landroid/content/Context;
 
-    const v4, 0x7f120906
+    const v4, 0x7f120907
 
     const/4 v5, 0x1
 
@@ -811,7 +811,7 @@
 
     invoke-direct {v0, v1}, Landroid/support/v7/preference/Preference;-><init>(Landroid/content/Context;)V
 
-    const v1, 0x7f120904
+    const v1, 0x7f120905
 
     invoke-virtual {v0, v1}, Landroid/support/v7/preference/Preference;->setTitle(I)V
 
@@ -845,7 +845,7 @@
 
     invoke-direct {v0, v1}, Lcom/android/settingslib/RestrictedPreference;-><init>(Landroid/content/Context;)V
 
-    const v1, 0x7f120fac
+    const v1, 0x7f120faf
 
     invoke-virtual {v0, v1}, Lcom/android/settingslib/RestrictedPreference;->setTitle(I)V
 
@@ -1126,7 +1126,7 @@
 
     iget-object v0, p0, Lcom/android/settings/accounts/AccountPreferenceController;->mProfileNotAvailablePreference:Landroid/support/v7/preference/Preference;
 
-    const v1, 0x7f120903
+    const v1, 0x7f120904
 
     invoke-virtual {v0, v1}, Landroid/support/v7/preference/Preference;->setSummary(I)V
 
@@ -1893,7 +1893,7 @@
 
     move-result-object v4
 
-    const v6, 0x7f120904
+    const v6, 0x7f120905
 
     invoke-virtual {v4, v6}, Lcom/android/settings/core/SubSettingLauncher;->setTitle(I)Lcom/android/settings/core/SubSettingLauncher;
 
@@ -2058,7 +2058,7 @@
 
     invoke-direct {v6, v7}, Lcom/android/settings/search/SearchIndexableRaw;-><init>(Landroid/content/Context;)V
 
-    const v7, 0x7f120fac
+    const v7, 0x7f120faf
 
     invoke-virtual {v0, v7}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -2077,7 +2077,7 @@
 
     invoke-direct {v6, v7}, Lcom/android/settings/search/SearchIndexableRaw;-><init>(Landroid/content/Context;)V
 
-    const v7, 0x7f120904
+    const v7, 0x7f120905
 
     invoke-virtual {v0, v7}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 

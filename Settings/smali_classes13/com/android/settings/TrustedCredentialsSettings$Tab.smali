@@ -56,13 +56,13 @@
 
     const/4 v2, 0x0
 
-    const v4, 0x7f1212d0
+    const v4, 0x7f1212dd
 
-    const v5, 0x7f0a057f
+    const v5, 0x7f0a0583
 
-    const v6, 0x7f0a057e
+    const v6, 0x7f0a0582
 
-    const v7, 0x7f0a0578
+    const v7, 0x7f0a057c
 
     const/4 v8, 0x1
 
@@ -80,13 +80,13 @@
 
     const/4 v12, 0x1
 
-    const v14, 0x7f1212d2
+    const v14, 0x7f1212df
 
-    const v15, 0x7f0a05e7
+    const v15, 0x7f0a05eb
 
-    const v16, 0x7f0a05e6
+    const v16, 0x7f0a05ea
 
-    const v17, 0x7f0a05db
+    const v17, 0x7f0a05df
 
     const/16 v18, 0x0
 

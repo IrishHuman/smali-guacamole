@@ -681,7 +681,7 @@
 
     iget-object v3, p0, Lcom/oneplus/settings/ringtone/OPRingtonePickerActivity;->mSim1Layout:Landroid/preference/Preference;
 
-    const v4, 0x7f120c3d
+    const v4, 0x7f120c40
 
     if-eqz v3, :cond_4
 
@@ -980,7 +980,7 @@
 
     move-result v2
 
-    const v4, 0x7f120c3a
+    const v4, 0x7f120c3d
 
     const/4 v5, 0x0
 
@@ -1323,7 +1323,7 @@
 
     const/4 v2, 0x0
 
-    const v3, 0x7f120c3a
+    const v3, 0x7f120c3d
 
     const/4 v4, 0x0
 

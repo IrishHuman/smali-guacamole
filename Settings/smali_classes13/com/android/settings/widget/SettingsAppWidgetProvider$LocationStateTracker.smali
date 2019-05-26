@@ -130,7 +130,7 @@
 .method public getIndicatorId()I
     .locals 1
 
-    const v0, 0x7f0a028a
+    const v0, 0x7f0a028c
 
     return v0
 .end method

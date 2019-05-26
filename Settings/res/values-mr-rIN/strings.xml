@@ -168,8 +168,8 @@
     <string name="nxp_non_std_card_summary">काही मानक- नसलेल्या NFC टॅग्ज वाचण्यासाठी समर्थन</string>
     <string name="oneplus_adaptive_model">जुळवून घेणारे स्वरूप</string>
     <string name="oneplus_add">जोडा</string>
-    <string name="oneplus_add_bluetooth_car_kit">ब्‍लुटूथ कार किट जोडा</string>
-    <string name="oneplus_add_bluetooth_car_kit_summary">ब्लूटुथ कार किट स्वयंचलितपणे आपल्या मागील उपकरणांशी कनेक्ट होते, आपण मॅन्युअली नवीन कनेक्शन देखील जोडू शकता</string>
+    <string name="oneplus_add_bluetooth_car_kit">वाहन ब्लुटूथ जोडा</string>
+    <string name="oneplus_add_bluetooth_car_kit_summary">वाहन ब्लुटूथ स्‍वयंचलितपणे तुमच्‍या मागील उपकरणांशी कनेक्‍ट करते, तुम्‍ही व्‍यक्तिचलितपणे नवीन उपकरणे देखील जोडू शकता</string>
     <string name="oneplus_add_fingerprint_list">बोटाचा ठसा जोडा</string>
     <string name="oneplus_adjust_effect">परिणामाची मजबूती</string>
     <string name="oneplus_advanced_display_settings">प्रदर्शनाच्या प्रगत सेटिंग्ज</string>
@@ -400,7 +400,7 @@
     <string name="oneplus_fnatic_mode_add_to_wallpapers">वॉलपेपर्समध्ये जोडा</string>
     <string name="oneplus_fnatic_mode_background_introduction_summary">जवळपास पूर्णपणे गेम प्ले करण्याकडे लक्ष केंद्रित करत आहे. यामुळे काही अॅप्समध्ये खराबी होऊ शकते.</string>
     <string name="oneplus_fnatic_mode_background_introduction_title">प्रक्रिया नियामक विस्तृत करा</string>
-    <string name="oneplus_fnatic_mode_disturb_introduction_summary">सर्व सूचना आणि कॉल्‍स (कमी बॅटरीची सूचना, गजर आणि टायमर व्‍यतिरिक्‍त) अवरोधित करा. आपण कॉल इतिहासात फक्‍त सुटलेले कॉल्‍स पाहू शकता.</string>
+    <string name="oneplus_fnatic_mode_disturb_introduction_summary">सर्व सूचना आणि कॉल्‍स (कमी बॅटरीची सूचना, गजर आणि टायमर व्‍यतिरिक्‍त) अवरोधित करा.</string>
     <string name="oneplus_fnatic_mode_disturb_introduction_title">प्रगत DND</string>
     <string name="oneplus_fnatic_mode_enable_introduction_title">Fnatic मोड वापरण्‍यासाठी सर्वांत अगोदर गेमिंग मोड सक्षम करण्‍याची आवश्‍यकता आहे</string>
     <string name="oneplus_fnatic_mode_network_introduction_dual4g_summary">कमी विलंब गेम प्ले करण्यासाठी हस्तक्षेप कमी करण्याकरिता प्राथमिक SIM कार्ड सिग्नल क्षमतेला प्राधान्य दिले जाते. परिणामी दुय्यम SIM कार्ड अक्षम केले जाईल आणि कॉल किंवा संदेश प्राप्त होणार नाहीत.</string>
@@ -492,6 +492,7 @@
     <string name="oneplus_haptic_feedback_tips">विशिष्ट गेम दृश्यांसाठी हॅप्टीक अभिप्राय प्रदान करा，केवळ समर्थित गेम्सवर लागू</string>
     <string name="oneplus_haptic_feedback_title">हॅप्टीक अभिप्रायामध्ये सुधारणा</string>
     <string name="oneplus_hardware_keys_action_split_screen">स्प्लिट स्क्रीन उघडा/बंद करा</string>
+    <string name="oneplus_health_safety_information">आरोग्‍य &amp; सुरक्षा माहिती</string>
     <string name="oneplus_hearing_aid">श्रवण सहाय्यकाची सुसंगतता</string>
     <string name="oneplus_hide_navigation_bar">नॅव्हिगेशन बार लपवा</string>
     <string name="oneplus_hide_navkeys">नॅविगेशन बार लपवा</string>
@@ -706,8 +707,8 @@
     <string name="oneplus_receive_notifications">OnePlus सूचना</string>
     <string name="oneplus_receive_notifications_agree">OnePlus कडून बातम्या प्राप्त करा</string>
     <string name="oneplus_receive_notifications_summary">OnePlus अधिकृत बातम्या, उत्पादन माहिती, प्रश्नावली संवाद आणि खरेदी शिफारस/कूपन माहिती प्राप्त करण्यासाठी स्वीकारा</string>
-    <string name="oneplus_recognized_bluetooth_car_kits">ओळखलेल्‍या ब्ल्युटुथ कार किट्स</string>
-    <string name="oneplus_recognized_bluetooth_car_kits_no_devices">ब्ल्युटुथ कार किट नाही, आपण व्यक्तिचलितपणे खाली नवीन कनेक्शन्स जोडू शकता</string>
+    <string name="oneplus_recognized_bluetooth_car_kits">अधिकृत वाहन ब्लुटूथ</string>
+    <string name="oneplus_recognized_bluetooth_car_kits_no_devices">कोणतेही वाहन ब्लुटूथ नाही, तुम्‍ही खाली नवीन उपकरणे व्‍यक्तिचलितपणे जोडू शकता</string>
     <string name="oneplus_recommended_opening">शिफारस केलेले</string>
     <string name="oneplus_reenroll_fingerprint_tips">बोटाच्या ठश्याची शुद्धता सुनिश्चित करण्यासाठी मोबाईल फोनची सुरक्षात्मक फिल्म बदलल्यानंतर कृपया आपला बोटाचा ठसा पुन्हा-प्रविष्ट करा</string>
     <string name="oneplus_regulatory_information">सत्यापन</string>
@@ -730,6 +731,7 @@
     <string name="oneplus_screen_color_mode_basic">sRGB</string>
     <string name="oneplus_screen_color_mode_default">डिफॉल्ट</string>
     <string name="oneplus_screen_color_mode_defined">सानुकूल रंग</string>
+    <string name="oneplus_screen_color_mode_ntsc">AMOLED वाइड गामूट</string>
     <string name="oneplus_screen_color_mode_reading_mode_on_summary">रात्र स्वरूप चालू असल्यामुळे अनुपलब्ध</string>
     <string name="oneplus_screen_color_mode_soft">सॉफ्ट</string>
     <string name="oneplus_screen_color_mode_title">स्क्रीन मोजणी</string>
@@ -1014,6 +1016,10 @@
     <string name="quick_unlock_title">त्वरित अनलॉक</string>
     <string name="reset_collect_diagnostics_summary">समस्या निवारणासाठी निदानात्मक डेटा संकलित करा</string>
     <string name="reset_collect_diagnostics_title">निदान संकलित करा</string>
+    <string name="restrict_background_uss_always">नेहमी</string>
+    <string name="restrict_background_uss_never">कधीही नाही</string>
+    <string name="restrict_background_uss_roaming">फक्‍त रोमिंगमध्‍ये असताना</string>
+    <string name="restrict_background_uss_title">पार्श्‍वभूमी डेटा प्रतिबंधित करा</string>
     <string name="saturation_option_title">रंगाचा समतोल</string>
     <string name="schedule_reminders">कार्यक्रम स्मरणक</string>
     <string name="screen_color_mode_advanced">प्रगत</string>
@@ -1071,7 +1077,13 @@
     <string name="sub_deactivate_not_supported">निष्क्रियकरण समर्थित नाही</string>
     <string name="sub_deactivate_success">यशस्वीरीत्या निष्क्रिय केले.</string>
     <string name="subs_settings">सिमची स्थिती</string>
+    <string name="summary_voice_network">VoLTE, Wi-Fi कॉलिंग</string>
     <string name="system_update_uss_title">डाउनलोड आणि स्‍थापित करा</string>
+    <string name="tether_error_item_default">टेथरिंग</string>
+    <string name="tether_error_message">तुम्‍ही %1$s ची सदस्‍यता घेतली नाही.</string>
+    <string name="tether_error_title">%1$s त्रुटी</string>
+    <string name="tether_no_sim_message">मोबाईल हॉटस्‍पॉट आणि इतर टेथरिंग पर्याय वापरण्‍यासाठी SIM कार्ड घाला</string>
+    <string name="tether_no_sim_title">सिम कार्ड नाही</string>
     <string name="theme_accent_color_title">असेंट रंग</string>
     <string name="theme_switch_dark">ठळक</string>
     <string name="theme_switch_dark_mode_summary">पूर्ण सिस्टिममध्ये ठळक थीम सक्रिय करा</string>
@@ -1134,6 +1146,7 @@
     <string name="user_experience_description">उत्पादन डिझाइन आणि वापरकर्ता अनुभव सुधारण्यास आम्हाला मदत करण्यासाठी, OnePlus ला अनामिकपणे आपण आपला फोन कसा वापरता याबद्दलच्या सामान्य सांख्यिकीय डेटाचे विश्लेषण करण्याची अनुमती द्या</string>
     <string name="user_is_not_allowed_dlg_text">वर्तमान वापरकर्त्यास हे विस्थापन करण्याची अनुमती नाही.</string>
     <string name="user_is_not_allowed_dlg_title">अनुमती नाही</string>
+    <string name="voice_network_title">आवाज नेटवर्क्स</string>
     <string name="volume_adjust_sound_title">वॉल्यूम स्लायडरचा आवाज</string>
     <string name="wifi_certificate">प्रमाणपत्र</string>
     <string name="wifi_context_menu_change_password">पासवर्ड बदला</string>

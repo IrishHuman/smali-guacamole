@@ -1066,7 +1066,7 @@
 .method private initFingerPrintEnrollView()V
     .locals 3
 
-    const v0, 0x7f0a03b6
+    const v0, 0x7f0a03ba
 
     invoke-virtual {p0, v0}, Lcom/android/settings/fingerprint/FingerprintEnrollEnrolling;->findViewById(I)Landroid/view/View;
 
@@ -1693,7 +1693,7 @@
 
     if-ne v0, v3, :cond_0
 
-    const v0, 0x7f121085
+    const v0, 0x7f12108c
 
     invoke-virtual {p0, v0}, Lcom/android/settings/fingerprint/FingerprintEnrollEnrolling;->setHeaderText(I)V
 
@@ -1708,7 +1708,7 @@
     goto :goto_0
 
     :cond_0
-    const v0, 0x7f121082    # 1.94153E38f
+    const v0, 0x7f121089
 
     const/4 v3, 0x1
 
@@ -2025,7 +2025,7 @@
 
     if-eq v0, v1, :cond_1
 
-    const v1, 0x7f0a0509
+    const v1, 0x7f0a050d
 
     if-eq v0, v1, :cond_0
 
@@ -2079,7 +2079,7 @@
 
     if-eqz v0, :cond_1
 
-    const v0, 0x7f120aba
+    const v0, 0x7f120abc
 
     invoke-static {p0, v0, v1}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
 
@@ -2135,7 +2135,7 @@
 
     invoke-virtual {v0, v2}, Landroid/app/ActionBar;->setDisplayHomeAsUpEnabled(Z)V
 
-    const v3, 0x7f120a50
+    const v3, 0x7f120a52
 
     invoke-virtual {v0, v3}, Landroid/app/ActionBar;->setTitle(I)V
 
@@ -2197,11 +2197,11 @@
     :goto_1
     invoke-virtual {p0, v3}, Lcom/android/settings/fingerprint/FingerprintEnrollEnrolling;->setContentView(I)V
 
-    const v5, 0x7f121082    # 1.94153E38f
+    const v5, 0x7f121089
 
     invoke-virtual {p0, v5}, Lcom/android/settings/fingerprint/FingerprintEnrollEnrolling;->setHeaderText(I)V
 
-    const v5, 0x7f0a0526
+    const v5, 0x7f0a052a
 
     invoke-virtual {p0, v5}, Lcom/android/settings/fingerprint/FingerprintEnrollEnrolling;->findViewById(I)Landroid/view/View;
 
@@ -2211,7 +2211,7 @@
 
     iput-object v5, p0, Lcom/android/settings/fingerprint/FingerprintEnrollEnrolling;->mStartMessage:Landroid/widget/TextView;
 
-    const v5, 0x7f0a0493
+    const v5, 0x7f0a0497
 
     invoke-virtual {p0, v5}, Lcom/android/settings/fingerprint/FingerprintEnrollEnrolling;->findViewById(I)Landroid/view/View;
 
@@ -2271,7 +2271,7 @@
 
     invoke-virtual {v4, v5}, Landroid/widget/Button;->setVisibility(I)V
 
-    const v4, 0x7f0a03b5
+    const v4, 0x7f0a03b9
 
     invoke-virtual {p0, v4}, Lcom/android/settings/fingerprint/FingerprintEnrollEnrolling;->findViewById(I)Landroid/view/View;
 
@@ -2286,7 +2286,7 @@
     invoke-virtual {v4, v2}, Lcom/airbnb/lottie/LottieAnimationView;->loop(Z)V
 
     :cond_9
-    const v4, 0x7f0a0509
+    const v4, 0x7f0a050d
 
     invoke-virtual {p0, v4}, Lcom/android/settings/fingerprint/FingerprintEnrollEnrolling;->findViewById(I)Landroid/view/View;
 
@@ -2454,12 +2454,12 @@
 
     if-eq p1, v0, :cond_0
 
-    const v0, 0x7f120b44
+    const v0, 0x7f120b46
 
     goto :goto_0
 
     :cond_0
-    const v0, 0x7f121071
+    const v0, 0x7f121078
 
     nop
 
@@ -2522,7 +2522,7 @@
 
     move-result v0
 
-    const v2, 0x7f120b4b
+    const v2, 0x7f120b4d
 
     const/16 v3, 0x44c
 
@@ -2539,7 +2539,7 @@
     goto/16 :goto_0
 
     :cond_0
-    const v0, 0x7f120d50
+    const v0, 0x7f120d53
 
     invoke-virtual {p0, v0}, Lcom/android/settings/fingerprint/FingerprintEnrollEnrolling;->getText(I)Ljava/lang/CharSequence;
 
@@ -2600,7 +2600,7 @@
     goto :goto_0
 
     :cond_3
-    const v0, 0x7f120d50
+    const v0, 0x7f120d53
 
     invoke-virtual {p0, v0}, Lcom/android/settings/fingerprint/FingerprintEnrollEnrolling;->getText(I)Ljava/lang/CharSequence;
 
@@ -2631,7 +2631,7 @@
     goto :goto_0
 
     :cond_6
-    const v0, 0x7f120b4a
+    const v0, 0x7f120b4c
 
     invoke-virtual {p0, v0}, Lcom/android/settings/fingerprint/FingerprintEnrollEnrolling;->getText(I)Ljava/lang/CharSequence;
 
@@ -2642,7 +2642,7 @@
     goto :goto_0
 
     :cond_7
-    const v0, 0x7f120b48
+    const v0, 0x7f120b4a
 
     invoke-virtual {p0, v0}, Lcom/android/settings/fingerprint/FingerprintEnrollEnrolling;->getText(I)Ljava/lang/CharSequence;
 
@@ -2653,7 +2653,7 @@
     goto :goto_0
 
     :cond_8
-    const v0, 0x7f120b49
+    const v0, 0x7f120b4b
 
     invoke-virtual {p0, v0}, Lcom/android/settings/fingerprint/FingerprintEnrollEnrolling;->getText(I)Ljava/lang/CharSequence;
 

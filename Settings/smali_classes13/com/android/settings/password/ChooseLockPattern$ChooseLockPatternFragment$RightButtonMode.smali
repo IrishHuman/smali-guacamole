@@ -50,7 +50,7 @@
 
     const-string v1, "Continue"
 
-    const v2, 0x7f12098a
+    const v2, 0x7f12098c
 
     const/4 v3, 0x0
 
@@ -72,7 +72,7 @@
 
     const-string v1, "Confirm"
 
-    const v2, 0x7f1208c9
+    const v2, 0x7f1208ca
 
     const/4 v5, 0x2
 

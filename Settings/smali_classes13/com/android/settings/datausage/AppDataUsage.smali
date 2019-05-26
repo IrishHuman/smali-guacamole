@@ -40,6 +40,8 @@
 
 .field private static final KEY_RESTRICT_BACKGROUND:Ljava/lang/String; = "restrict_background"
 
+.field private static final KEY_RESTRICT_BACKGROUND_USS:Ljava/lang/String; = "restrict_background_uss"
+
 .field private static final KEY_TOTAL_USAGE:Ljava/lang/String; = "total_usage"
 
 .field private static final KEY_UNRESTRICTED_DATA:Ljava/lang/String; = "unrestricted_data_saver"
@@ -56,6 +58,8 @@
 
 
 # instance fields
+.field private items:[Ljava/lang/String;
+
 .field private mAppItem:Lcom/android/settingslib/AppItem;
 
 .field private mAppList:Landroid/support/v7/preference/PreferenceCategory;
@@ -129,6 +133,8 @@
 
 .field private mRestrictBackground:Lcom/android/settingslib/RestrictedSwitchPreference;
 
+.field private mRestrictBackgroundUss:Lcom/android/settingslib/RestrictedPreference;
+
 .field private mStart:J
 
 .field private mStatsSession:Landroid/net/INetworkStatsSession;
@@ -140,6 +146,8 @@
 .field private mTotalUsage:Landroid/support/v7/preference/Preference;
 
 .field private mUnrestrictedData:Lcom/android/settingslib/RestrictedSwitchPreference;
+
+.field private restrictBackgroundChooseIndex:I
 
 
 # direct methods
@@ -154,7 +162,7 @@
 .end method
 
 .method public constructor <init>()V
-    .locals 1
+    .locals 2
 
     invoke-direct {p0}, Lcom/android/settings/datausage/DataUsageBase;-><init>()V
 
@@ -168,21 +176,27 @@
 
     iput v0, p0, Lcom/android/settings/datausage/AppDataUsage;->mSubId:I
 
-    new-instance v0, Lcom/android/settings/datausage/AppDataUsage$1;
+    new-array v1, v0, [Ljava/lang/String;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/datausage/AppDataUsage$1;-><init>(Lcom/android/settings/datausage/AppDataUsage;)V
+    iput-object v1, p0, Lcom/android/settings/datausage/AppDataUsage;->items:[Ljava/lang/String;
 
-    iput-object v0, p0, Lcom/android/settings/datausage/AppDataUsage;->mCycleListener:Landroid/widget/AdapterView$OnItemSelectedListener;
+    iput v0, p0, Lcom/android/settings/datausage/AppDataUsage;->restrictBackgroundChooseIndex:I
 
     new-instance v0, Lcom/android/settings/datausage/AppDataUsage$2;
 
     invoke-direct {v0, p0}, Lcom/android/settings/datausage/AppDataUsage$2;-><init>(Lcom/android/settings/datausage/AppDataUsage;)V
 
-    iput-object v0, p0, Lcom/android/settings/datausage/AppDataUsage;->mChartDataCallbacks:Landroid/app/LoaderManager$LoaderCallbacks;
+    iput-object v0, p0, Lcom/android/settings/datausage/AppDataUsage;->mCycleListener:Landroid/widget/AdapterView$OnItemSelectedListener;
 
     new-instance v0, Lcom/android/settings/datausage/AppDataUsage$3;
 
     invoke-direct {v0, p0}, Lcom/android/settings/datausage/AppDataUsage$3;-><init>(Lcom/android/settings/datausage/AppDataUsage;)V
+
+    iput-object v0, p0, Lcom/android/settings/datausage/AppDataUsage;->mChartDataCallbacks:Landroid/app/LoaderManager$LoaderCallbacks;
+
+    new-instance v0, Lcom/android/settings/datausage/AppDataUsage$4;
+
+    invoke-direct {v0, p0}, Lcom/android/settings/datausage/AppDataUsage$4;-><init>(Lcom/android/settings/datausage/AppDataUsage;)V
 
     iput-object v0, p0, Lcom/android/settings/datausage/AppDataUsage;->mAppPrefCallbacks:Landroid/app/LoaderManager$LoaderCallbacks;
 
@@ -217,6 +231,38 @@
     .locals 1
 
     iget-object v0, p0, Lcom/android/settings/datausage/AppDataUsage;->mDisabledWifi:Landroid/support/v14/preference/SwitchPreference;
+
+    return-object v0
+.end method
+
+.method static synthetic access$1200(Lcom/android/settings/datausage/AppDataUsage;)I
+    .locals 1
+
+    iget v0, p0, Lcom/android/settings/datausage/AppDataUsage;->restrictBackgroundChooseIndex:I
+
+    return v0
+.end method
+
+.method static synthetic access$1202(Lcom/android/settings/datausage/AppDataUsage;I)I
+    .locals 0
+
+    iput p1, p0, Lcom/android/settings/datausage/AppDataUsage;->restrictBackgroundChooseIndex:I
+
+    return p1
+.end method
+
+.method static synthetic access$1300(Lcom/android/settings/datausage/AppDataUsage;)Lcom/android/settingslib/RestrictedPreference;
+    .locals 1
+
+    iget-object v0, p0, Lcom/android/settings/datausage/AppDataUsage;->mRestrictBackgroundUss:Lcom/android/settingslib/RestrictedPreference;
+
+    return-object v0
+.end method
+
+.method static synthetic access$1400(Lcom/android/settings/datausage/AppDataUsage;)[Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/android/settings/datausage/AppDataUsage;->items:[Ljava/lang/String;
 
     return-object v0
 .end method
@@ -692,6 +738,24 @@
 
 
 # virtual methods
+.method public changeRestrictBackgroundType(I)V
+    .locals 3
+
+    invoke-virtual {p0}, Lcom/android/settings/datausage/AppDataUsage;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/android/settings/datausage/AppDataUsage;->mPackageName:Ljava/lang/String;
+
+    iget-object v2, p0, Lcom/android/settings/datausage/AppDataUsage;->mAppItem:Lcom/android/settingslib/AppItem;
+
+    iget v2, v2, Lcom/android/settingslib/AppItem;->key:I
+
+    invoke-static {v0, v1, v2, p1}, Lcom/android/settings/datausage/backgrounddata/utils/BackgroundDataUtils;->setAppBackgroundDataType(Landroid/content/Context;Ljava/lang/String;II)V
+
+    return-void
+.end method
+
 .method public getMetricsCategory()I
     .locals 1
 
@@ -1105,7 +1169,7 @@
 
     iget v7, v7, Lcom/android/settingslib/AppItem;->key:I
 
-    if-lez v7, :cond_10
+    if-lez v7, :cond_12
 
     iget-object v7, p0, Lcom/android/settings/datausage/AppDataUsage;->mPackages:Landroid/util/ArraySet;
 
@@ -1195,9 +1259,23 @@
 
     invoke-virtual {p0, v7}, Lcom/android/settings/datausage/AppDataUsage;->removePreference(Ljava/lang/String;)Z
 
-    goto :goto_9
+    const-string v7, "restrict_background_uss"
+
+    invoke-virtual {p0, v7}, Lcom/android/settings/datausage/AppDataUsage;->removePreference(Ljava/lang/String;)Z
+
+    goto/16 :goto_9
 
     :cond_b
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isSupportUss()Z
+
+    move-result v7
+
+    if-nez v7, :cond_c
+
+    const-string v7, "restrict_background_uss"
+
+    invoke-virtual {p0, v7}, Lcom/android/settings/datausage/AppDataUsage;->removePreference(Ljava/lang/String;)Z
+
     const-string v7, "restrict_background"
 
     invoke-virtual {p0, v7}, Lcom/android/settings/datausage/AppDataUsage;->findPreference(Ljava/lang/CharSequence;)Landroid/support/v7/preference/Preference;
@@ -1225,6 +1303,96 @@
     iget-object v7, p0, Lcom/android/settings/datausage/AppDataUsage;->mUnrestrictedData:Lcom/android/settingslib/RestrictedSwitchPreference;
 
     invoke-virtual {v7, p0}, Lcom/android/settingslib/RestrictedSwitchPreference;->setOnPreferenceChangeListener(Landroid/support/v7/preference/Preference$OnPreferenceChangeListener;)V
+
+    goto :goto_9
+
+    :cond_c
+    invoke-virtual {p0}, Lcom/android/settings/datausage/AppDataUsage;->getContext()Landroid/content/Context;
+
+    move-result-object v7
+
+    invoke-virtual {v7}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v7
+
+    const v8, 0x7f0300b2
+
+    invoke-virtual {v7, v8}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
+
+    move-result-object v7
+
+    iput-object v7, p0, Lcom/android/settings/datausage/AppDataUsage;->items:[Ljava/lang/String;
+
+    const-string v7, "restrict_background"
+
+    invoke-virtual {p0, v7}, Lcom/android/settings/datausage/AppDataUsage;->removePreference(Ljava/lang/String;)Z
+
+    const-string v7, "restrict_background_uss"
+
+    invoke-virtual {p0, v7}, Lcom/android/settings/datausage/AppDataUsage;->findPreference(Ljava/lang/CharSequence;)Landroid/support/v7/preference/Preference;
+
+    move-result-object v7
+
+    check-cast v7, Lcom/android/settingslib/RestrictedPreference;
+
+    iput-object v7, p0, Lcom/android/settings/datausage/AppDataUsage;->mRestrictBackgroundUss:Lcom/android/settingslib/RestrictedPreference;
+
+    const-string v7, "unrestricted_data_saver"
+
+    invoke-virtual {p0, v7}, Lcom/android/settings/datausage/AppDataUsage;->findPreference(Ljava/lang/CharSequence;)Landroid/support/v7/preference/Preference;
+
+    move-result-object v7
+
+    check-cast v7, Lcom/android/settingslib/RestrictedSwitchPreference;
+
+    iput-object v7, p0, Lcom/android/settings/datausage/AppDataUsage;->mUnrestrictedData:Lcom/android/settingslib/RestrictedSwitchPreference;
+
+    iget-object v7, p0, Lcom/android/settings/datausage/AppDataUsage;->mUnrestrictedData:Lcom/android/settingslib/RestrictedSwitchPreference;
+
+    invoke-virtual {v7, p0}, Lcom/android/settingslib/RestrictedSwitchPreference;->setOnPreferenceChangeListener(Landroid/support/v7/preference/Preference$OnPreferenceChangeListener;)V
+
+    invoke-virtual {p0}, Lcom/android/settings/datausage/AppDataUsage;->getContext()Landroid/content/Context;
+
+    move-result-object v7
+
+    iget-object v8, p0, Lcom/android/settings/datausage/AppDataUsage;->mPackageName:Ljava/lang/String;
+
+    iget-object v9, p0, Lcom/android/settings/datausage/AppDataUsage;->mAppItem:Lcom/android/settingslib/AppItem;
+
+    iget v9, v9, Lcom/android/settingslib/AppItem;->key:I
+
+    invoke-static {v7, v8, v9}, Lcom/android/settings/datausage/backgrounddata/utils/BackgroundDataUtils;->getAppType(Landroid/content/Context;Ljava/lang/String;I)I
+
+    move-result v7
+
+    iput v7, p0, Lcom/android/settings/datausage/AppDataUsage;->restrictBackgroundChooseIndex:I
+
+    iget-object v7, p0, Lcom/android/settings/datausage/AppDataUsage;->items:[Ljava/lang/String;
+
+    array-length v7, v7
+
+    iget v8, p0, Lcom/android/settings/datausage/AppDataUsage;->restrictBackgroundChooseIndex:I
+
+    if-le v7, v8, :cond_d
+
+    iget-object v7, p0, Lcom/android/settings/datausage/AppDataUsage;->mRestrictBackgroundUss:Lcom/android/settingslib/RestrictedPreference;
+
+    iget-object v8, p0, Lcom/android/settings/datausage/AppDataUsage;->items:[Ljava/lang/String;
+
+    iget v9, p0, Lcom/android/settings/datausage/AppDataUsage;->restrictBackgroundChooseIndex:I
+
+    aget-object v8, v8, v9
+
+    invoke-virtual {v7, v8}, Lcom/android/settingslib/RestrictedPreference;->setSummary(Ljava/lang/CharSequence;)V
+
+    :cond_d
+    iget-object v7, p0, Lcom/android/settings/datausage/AppDataUsage;->mRestrictBackgroundUss:Lcom/android/settingslib/RestrictedPreference;
+
+    new-instance v8, Lcom/android/settings/datausage/AppDataUsage$1;
+
+    invoke-direct {v8, p0}, Lcom/android/settings/datausage/AppDataUsage$1;-><init>(Lcom/android/settings/datausage/AppDataUsage;)V
+
+    invoke-virtual {v7, v8}, Lcom/android/settingslib/RestrictedPreference;->setOnPreferenceClickListener(Landroid/support/v7/preference/Preference$OnPreferenceClickListener;)V
 
     :goto_9
     new-instance v7, Lcom/android/settings/datausage/DataSaverBackend;
@@ -1276,7 +1444,7 @@
 
     move-result v10
 
-    if-eqz v10, :cond_d
+    if-eqz v10, :cond_f
 
     invoke-interface {v9}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -1294,18 +1462,18 @@
 
     move-result-object v11
 
-    if-eqz v11, :cond_c
+    if-eqz v11, :cond_e
 
     const/4 v8, 0x1
 
     goto :goto_b
 
-    :cond_c
+    :cond_e
     goto :goto_a
 
-    :cond_d
+    :cond_f
     :goto_b
-    if-nez v8, :cond_e
+    if-nez v8, :cond_10
 
     const-string v3, "app_settings"
 
@@ -1313,14 +1481,14 @@
 
     iput-object v1, p0, Lcom/android/settings/datausage/AppDataUsage;->mAppSettings:Landroid/support/v7/preference/Preference;
 
-    :cond_e
+    :cond_10
     iget-object v1, p0, Lcom/android/settings/datausage/AppDataUsage;->mPackages:Landroid/util/ArraySet;
 
     invoke-virtual {v1}, Landroid/util/ArraySet;->size()I
 
     move-result v1
 
-    if-le v1, v4, :cond_f
+    if-le v1, v4, :cond_11
 
     const-string v1, "app_list"
 
@@ -1346,7 +1514,7 @@
 
     goto :goto_c
 
-    :cond_f
+    :cond_11
     const-string v1, "app_list"
 
     invoke-virtual {p0, v1}, Lcom/android/settings/datausage/AppDataUsage;->removePreference(Ljava/lang/String;)Z
@@ -1354,7 +1522,7 @@
     :goto_c
     goto :goto_d
 
-    :cond_10
+    :cond_12
     invoke-virtual {p0}, Lcom/android/settings/datausage/AppDataUsage;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
@@ -1385,7 +1553,7 @@
 
     move-result v4
 
-    if-eqz v4, :cond_11
+    if-eqz v4, :cond_13
 
     invoke-virtual {p0}, Lcom/android/settings/datausage/AppDataUsage;->getActivity()Landroid/app/Activity;
 
@@ -1403,7 +1571,7 @@
 
     move-result-object v8
 
-    if-eqz v7, :cond_11
+    if-eqz v7, :cond_13
 
     invoke-virtual {p0}, Lcom/android/settings/datausage/AppDataUsage;->getActivity()Landroid/app/Activity;
 
@@ -1425,7 +1593,7 @@
 
     iput-object v9, p0, Lcom/android/settings/datausage/AppDataUsage;->mLabel:Ljava/lang/CharSequence;
 
-    :cond_11
+    :cond_13
     invoke-virtual {v1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object v4
@@ -1455,11 +1623,11 @@
 
     sget v3, Lcom/android/settings/datausage/AppDataUsage;->SYSTEM_UID:I
 
-    if-ne v1, v3, :cond_12
+    if-ne v1, v3, :cond_14
 
     sget-object v1, Lcom/android/settings/datausage/AppDataUsage;->OSUidDetail:Lcom/android/settingslib/net/UidDetail;
 
-    if-eqz v1, :cond_12
+    if-eqz v1, :cond_14
 
     sget-object v1, Lcom/android/settings/datausage/AppDataUsage;->OSUidDetail:Lcom/android/settingslib/net/UidDetail;
 
@@ -1473,7 +1641,7 @@
 
     iput-object v1, p0, Lcom/android/settings/datausage/AppDataUsage;->mLabel:Ljava/lang/CharSequence;
 
-    :cond_12
+    :cond_14
     return-void
 
     :catch_1
@@ -1961,6 +2129,40 @@
     return-void
 .end method
 
+.method public showRestrictBackgroundDialog()V
+    .locals 4
+
+    new-instance v0, Lcom/oneplus/lib/app/OPAlertDialog$Builder;
+
+    invoke-virtual {p0}, Lcom/android/settings/datausage/AppDataUsage;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lcom/oneplus/lib/app/OPAlertDialog$Builder;-><init>(Landroid/content/Context;)V
+
+    const v1, 0x7f120fcd
+
+    invoke-virtual {v0, v1}, Lcom/oneplus/lib/app/OPAlertDialog$Builder;->setTitle(I)Lcom/oneplus/lib/app/OPAlertDialog$Builder;
+
+    iget-object v1, p0, Lcom/android/settings/datausage/AppDataUsage;->items:[Ljava/lang/String;
+
+    iget v2, p0, Lcom/android/settings/datausage/AppDataUsage;->restrictBackgroundChooseIndex:I
+
+    new-instance v3, Lcom/android/settings/datausage/AppDataUsage$5;
+
+    invoke-direct {v3, p0}, Lcom/android/settings/datausage/AppDataUsage$5;-><init>(Lcom/android/settings/datausage/AppDataUsage;)V
+
+    invoke-virtual {v0, v1, v2, v3}, Lcom/oneplus/lib/app/OPAlertDialog$Builder;->setSingleChoiceItems([Ljava/lang/CharSequence;ILandroid/content/DialogInterface$OnClickListener;)Lcom/oneplus/lib/app/OPAlertDialog$Builder;
+
+    invoke-virtual {v0}, Lcom/oneplus/lib/app/OPAlertDialog$Builder;->create()Lcom/oneplus/lib/app/OPAlertDialog;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/oneplus/lib/app/OPAlertDialog;->show()V
+
+    return-void
+.end method
+
 .method updatePrefs()V
     .locals 2
     .annotation build Landroid/support/annotation/VisibleForTesting;
@@ -1976,5 +2178,86 @@
 
     invoke-direct {p0, v0, v1}, Lcom/android/settings/datausage/AppDataUsage;->updatePrefs(ZZ)V
 
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isSupportUss()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Lcom/android/settings/datausage/AppDataUsage;->updateUssPreference()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public updateUssPreference()V
+    .locals 3
+
+    nop
+
+    invoke-virtual {p0}, Lcom/android/settings/datausage/AppDataUsage;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/android/settings/datausage/AppDataUsage;->mPackageName:Ljava/lang/String;
+
+    iget-object v2, p0, Lcom/android/settings/datausage/AppDataUsage;->mAppItem:Lcom/android/settingslib/AppItem;
+
+    iget v2, v2, Lcom/android/settingslib/AppItem;->key:I
+
+    invoke-static {v2}, Landroid/os/UserHandle;->getUserId(I)I
+
+    move-result v2
+
+    invoke-static {v0, v1, v2}, Lcom/android/settingslib/RestrictedLockUtils;->checkIfMeteredDataRestricted(Landroid/content/Context;Ljava/lang/String;I)Lcom/android/settingslib/RestrictedLockUtils$EnforcedAdmin;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/android/settings/datausage/AppDataUsage;->mRestrictBackgroundUss:Lcom/android/settingslib/RestrictedPreference;
+
+    if-eqz v1, :cond_0
+
+    iget-object v1, p0, Lcom/android/settings/datausage/AppDataUsage;->mRestrictBackgroundUss:Lcom/android/settingslib/RestrictedPreference;
+
+    invoke-virtual {v1, v0}, Lcom/android/settingslib/RestrictedPreference;->setDisabledByAdmin(Lcom/android/settingslib/RestrictedLockUtils$EnforcedAdmin;)V
+
+    :cond_0
+    iget-object v1, p0, Lcom/android/settings/datausage/AppDataUsage;->mUnrestrictedData:Lcom/android/settingslib/RestrictedSwitchPreference;
+
+    if-eqz v1, :cond_2
+
+    iget v1, p0, Lcom/android/settings/datausage/AppDataUsage;->restrictBackgroundChooseIndex:I
+
+    const/4 v2, 0x1
+
+    if-ne v1, v2, :cond_1
+
+    iget-object v1, p0, Lcom/android/settings/datausage/AppDataUsage;->mUnrestrictedData:Lcom/android/settingslib/RestrictedSwitchPreference;
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, v2}, Lcom/android/settingslib/RestrictedSwitchPreference;->setVisible(Z)V
+
+    goto :goto_0
+
+    :cond_1
+    iget-object v1, p0, Lcom/android/settings/datausage/AppDataUsage;->mUnrestrictedData:Lcom/android/settingslib/RestrictedSwitchPreference;
+
+    invoke-virtual {v1, v2}, Lcom/android/settingslib/RestrictedSwitchPreference;->setVisible(Z)V
+
+    iget-object v1, p0, Lcom/android/settings/datausage/AppDataUsage;->mUnrestrictedData:Lcom/android/settingslib/RestrictedSwitchPreference;
+
+    invoke-direct {p0}, Lcom/android/settings/datausage/AppDataUsage;->getUnrestrictData()Z
+
+    move-result v2
+
+    invoke-virtual {v1, v2}, Lcom/android/settingslib/RestrictedSwitchPreference;->setChecked(Z)V
+
+    iget-object v1, p0, Lcom/android/settings/datausage/AppDataUsage;->mUnrestrictedData:Lcom/android/settingslib/RestrictedSwitchPreference;
+
+    invoke-virtual {v1, v0}, Lcom/android/settingslib/RestrictedSwitchPreference;->setDisabledByAdmin(Lcom/android/settingslib/RestrictedLockUtils$EnforcedAdmin;)V
+
+    :cond_2
+    :goto_0
     return-void
 .end method

@@ -191,7 +191,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0a0436
+    const v1, 0x7f0a043a
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -199,7 +199,7 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    const v2, 0x7f0a033f
+    const v2, 0x7f0a0343
 
     invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -215,7 +215,7 @@
 
     check-cast v3, Landroid/widget/CheckBox;
 
-    const v4, 0x7f0a0432
+    const v4, 0x7f0a0436
 
     invoke-virtual {v0, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -245,7 +245,7 @@
 
     invoke-virtual {v4, v6}, Landroid/widget/CheckBox;->setText(Ljava/lang/CharSequence;)V
 
-    const v6, 0x7f0a0587
+    const v6, 0x7f0a058b
 
     invoke-virtual {v0, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -471,7 +471,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0a041f
+    const v1, 0x7f0a0423
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -479,7 +479,7 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    const v2, 0x7f0a0421
+    const v2, 0x7f0a0425
 
     invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -487,7 +487,7 @@
 
     check-cast v2, Landroid/widget/TextView;
 
-    const v3, 0x7f0a0420
+    const v3, 0x7f0a0424
 
     invoke-virtual {v0, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -495,7 +495,7 @@
 
     check-cast v3, Landroid/widget/TextView;
 
-    const v4, 0x7f0a0431
+    const v4, 0x7f0a0435
 
     invoke-virtual {v0, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

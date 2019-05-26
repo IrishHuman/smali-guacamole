@@ -90,7 +90,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f121247
+    const v1, 0x7f12124e
 
     if-nez v0, :cond_0
 
@@ -216,7 +216,7 @@
     :cond_6
     iget-object v9, p0, Lcom/android/settings/inputmethod/VirtualKeyboardPreferenceController;->mContext:Landroid/content/Context;
 
-    const v10, 0x7f120789
+    const v10, 0x7f12078a
 
     const/4 v11, 0x2
 

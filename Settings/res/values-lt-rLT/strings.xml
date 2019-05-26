@@ -168,8 +168,8 @@ Ar tikrai norite įjungti šią funkciją?"</string>
     <string name="nxp_non_std_card_summary">Kai kurių nestandartinių NFC žymų nuskaitymo palaikymas</string>
     <string name="oneplus_adaptive_model">Adaptyvusis režimas</string>
     <string name="oneplus_add">Pridėti</string>
-    <string name="oneplus_add_bluetooth_car_kit">Pridėti „Bluetooth“ automobilinį rinkinį</string>
-    <string name="oneplus_add_bluetooth_car_kit_summary">„Bluetooth“ automobilinis rinkinys prisijungia prie ankstesnių įrenginių; taip pat galite patys įkelti naujų jungčių</string>
+    <string name="oneplus_add_bluetooth_car_kit">Pridėti automobilio „Bluetooth“ įrenginį</string>
+    <string name="oneplus_add_bluetooth_car_kit_summary">Automobilio „Bluetooth“ įrenginys prie ankstesnių įrenginių prisijungia automatiškai, o naujų įrenginių galite pridėti rankiniu būdu</string>
     <string name="oneplus_add_fingerprint_list">Įkelti piršto antspaudą</string>
     <string name="oneplus_adjust_effect">Ekranas efekto reguliavimas</string>
     <string name="oneplus_advanced_display_settings">Išplėstiniai ekrano parametrai</string>
@@ -403,7 +403,7 @@ Dėmesio. Atrakinimo pagal veidą funkcija neužtikrina tokio saugumo kaip pirš
     <string name="oneplus_fnatic_mode_add_to_wallpapers">Pridėti prie ekrano fonų</string>
     <string name="oneplus_fnatic_mode_background_introduction_summary">Veikimo charakteristikos koncentruojamas beveik vien tik į žaidimą. Dėl to kai kuriose programose gali atsirasti netikėtų trikčių.</string>
     <string name="oneplus_fnatic_mode_background_introduction_title">Pagerinti procesų reguliatorių</string>
-    <string name="oneplus_fnatic_mode_disturb_introduction_summary">Blokuoti visus pranešimus ir skambučius (išskyrus pranešimus apie senkantį akumuliatorių, signalus ir laikmatį). Galite peržiūrėti tik praleistus skambučius skambučių istorijoje.</string>
+    <string name="oneplus_fnatic_mode_disturb_introduction_summary">Blokuoti visus pranešimus ir skambučius (išskyrus pranešimus apie senkantį akumuliatorių, signalus ir laikmatį).</string>
     <string name="oneplus_fnatic_mode_disturb_introduction_title">Išplėstinis DND</string>
     <string name="oneplus_fnatic_mode_enable_introduction_title">Kad galėtumėte naudotis „Fnatic“ režimą, pirmiausia būtina įjungti žaidimų režimą</string>
     <string name="oneplus_fnatic_mode_network_introduction_dual4g_summary">Pagrindinės SIM kortelės signalo stiprumui teikiama pirmenybė, kad būtų sumažinta trukdžių žaidžiant sparčius žaidimus. Dėl to pagalbinė SIM kortelė bus išjungta, o skambučiai ar žinutės nebus priimami.</string>
@@ -495,6 +495,7 @@ Kad bet kuriuo metu grįžtumėte į pagrindinį ekraną, perbraukite nuo ekrano
     <string name="oneplus_haptic_feedback_tips">Suteikti lietimo grįžtamąjį ryšį konkrečioms žaidimo scenoms (veikia tik su palaikomais žaidimais)</string>
     <string name="oneplus_haptic_feedback_title">Lietimo grįžtamojo ryšio pagerinimas</string>
     <string name="oneplus_hardware_keys_action_split_screen">Atidaryti / uždaryti skaidytą ekraną</string>
+    <string name="oneplus_health_safety_information">Sveikatos ir saugumo informacija</string>
     <string name="oneplus_hearing_aid">Suderinamumas su pagalbinėmis klausos priemonėmis</string>
     <string name="oneplus_hide_navigation_bar">Slėpti naršymo juostą</string>
     <string name="oneplus_hide_navkeys">Slėpti naršymo juostą</string>
@@ -708,8 +709,8 @@ Pastaba. Jūsų piršto atspaudas gali būti ne toks saugus kaip sudėtinga taš
     <string name="oneplus_receive_notifications">„OnePlus“ pranešimai</string>
     <string name="oneplus_receive_notifications_agree">Gauti naujienas iš „OnePlus“</string>
     <string name="oneplus_receive_notifications_summary">Norite gauti „OnePlus“ oficialias naujienas, produkto informaciją, apklausas ir pirkinių rekomendacijas / kuponų informaciją</string>
-    <string name="oneplus_recognized_bluetooth_car_kits">Atpažinti „Bluetooth“ automobiliniai rinkiniai</string>
-    <string name="oneplus_recognized_bluetooth_car_kits_no_devices">„Bluetooth“ automobilinių rinkinių nėra, naujų ryšių galite pridėti rankiniu būdu apačioje</string>
+    <string name="oneplus_recognized_bluetooth_car_kits">Atpažintas automobilio „Bluetooth“ įrenginys</string>
+    <string name="oneplus_recognized_bluetooth_car_kits_no_devices">Automobilio „Bluetooth“ įrenginių nėra, naujų įrenginių galite pridėti rankiniu būdu toliau</string>
     <string name="oneplus_recommended_opening">Rekomenduojamas</string>
     <string name="oneplus_reenroll_fingerprint_tips">Pakeitę mobiliojo telefono apsauginę plėvelę pakartotinai įveskite piršto atspaudą, kad užtikrintumėte piršto atspaudo teisingumą</string>
     <string name="oneplus_regulatory_information">TIKRINIMAS</string>
@@ -731,6 +732,7 @@ Pastaba. Jūsų piršto atspaudas gali būti ne toks saugus kaip sudėtinga taš
     <string name="oneplus_screen_color_mode_auto">Prisitaikantys spalvų profiliai</string>
     <string name="oneplus_screen_color_mode_default">„Display-P3“ (numatytasis)</string>
     <string name="oneplus_screen_color_mode_defined">Pasirinktinė spalva</string>
+    <string name="oneplus_screen_color_mode_ntsc">AMOLED plačioji gama</string>
     <string name="oneplus_screen_color_mode_reading_mode_on_summary">Nepasiekiama, nes įjungtas skaitymo režimas</string>
     <string name="oneplus_screen_color_mode_soft">Švelni</string>
     <string name="oneplus_screen_color_mode_title">Ekrano kalibravimas</string>
@@ -1015,6 +1017,10 @@ Nustačius tinklą kaip paslėptą, jūsų nustatyti maršrutizatoriaus parametr
     <string name="quick_unlock_title">Greitas atrakinimas</string>
     <string name="reset_collect_diagnostics_summary">Surinkti diagnostikos duomenis, reikalingus triktims diagnozuoti</string>
     <string name="reset_collect_diagnostics_title">Surinkti diagnostiką</string>
+    <string name="restrict_background_uss_always">Visada</string>
+    <string name="restrict_background_uss_never">Niekada</string>
+    <string name="restrict_background_uss_roaming">Tik naudojantis tarptinkliniu ryšiu</string>
+    <string name="restrict_background_uss_title">Riboti foninius duomenis</string>
     <string name="saturation_option_title">Spalvų balansas</string>
     <string name="schedule_reminders">Įvykių priminimai</string>
     <string name="screen_color_mode_advanced">Išplėstinis</string>
@@ -1072,7 +1078,13 @@ Nustačius tinklą kaip paslėptą, jūsų nustatyti maršrutizatoriaus parametr
     <string name="sub_deactivate_not_supported">Išaktyvinimas nepalaikomas</string>
     <string name="sub_deactivate_success">Sėkmingai išaktyvinta.</string>
     <string name="subs_settings">SIM būsena</string>
+    <string name="summary_voice_network">VoLTE, „Wi-Fi“ skambučiai</string>
     <string name="system_update_uss_title">Atsisiųsti ir įdiegti</string>
+    <string name="tether_error_item_default">Siejimas</string>
+    <string name="tether_error_message">Neužsiprenumeravote %1$s.</string>
+    <string name="tether_error_title">%1$s klaida</string>
+    <string name="tether_no_sim_message">Įstatykite SIM kortelę, kad galėtumėte naudotis mobiliąja saitviete ir kitomis siejimo parinktimis</string>
+    <string name="tether_no_sim_title">SIM kortelės nėra</string>
     <string name="theme_accent_color_title">Pagrindinė spalva</string>
     <string name="theme_switch_dark">tamsi</string>
     <string name="theme_switch_dark_mode_summary">Įjungti sistemos plačią juodą temą</string>
@@ -1135,6 +1147,7 @@ Nustačius tinklą kaip paslėptą, jūsų nustatyti maršrutizatoriaus parametr
     <string name="user_experience_description">Kad padėtumėte pagerinti produkto dizainą ir naudotojo patirtį, leiskite „OnePlus“ anonimiškai analizuoti bendruosius statistinius duomenis apie tai, kaip naudojate savo telefoną</string>
     <string name="user_is_not_allowed_dlg_text">Šiam naudotojui neleidžiama atlikti šio įdiegties pašalinimo.</string>
     <string name="user_is_not_allowed_dlg_title">Neleidžiama</string>
+    <string name="voice_network_title">Balso ryšio tinklai</string>
     <string name="volume_adjust_sound_title">Garsumo reguliavimo slankiklio garsas</string>
     <string name="wifi_certificate">Sertifikatas</string>
     <string name="wifi_context_menu_change_password">Keisti slaptažodį</string>

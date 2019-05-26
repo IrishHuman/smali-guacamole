@@ -84,7 +84,7 @@
     :cond_0
     iget-object v1, p0, Lcom/android/settings/applications/AppPermissionsPreferenceController;->mContext:Landroid/content/Context;
 
-    const v2, 0x7f120789
+    const v2, 0x7f12078a
 
     const/4 v3, 0x2
 

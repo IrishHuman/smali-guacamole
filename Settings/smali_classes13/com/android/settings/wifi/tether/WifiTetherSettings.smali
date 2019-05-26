@@ -4,6 +4,7 @@
 
 # interfaces
 .implements Lcom/android/settings/wifi/tether/WifiTetherBasePreferenceController$OnTetherConfigUpdateListener;
+.implements Lcom/android/settings/wifi/tether/TetherDataObserver$OnTetherDataChangeCallback;
 
 
 # annotations
@@ -27,6 +28,8 @@
 
 
 # instance fields
+.field private lastTetherData:I
+
 .field private mApBandPreferenceController:Lcom/android/settings/wifi/tether/WifiTetherApBandPreferenceController;
 
 .field private mConnectedDeviceManagerController:Lcom/android/settings/wifi/tether/OPWifiTetherDeviceManagerController;
@@ -51,6 +54,8 @@
     .annotation build Landroid/support/annotation/VisibleForTesting;
     .end annotation
 .end field
+
+.field private mTetherDataObserver:Lcom/android/settings/wifi/tether/TetherDataObserver;
 
 .field private mWifiManager:Landroid/net/wifi/WifiManager;
 
@@ -88,6 +93,10 @@
     const-string v0, "no_config_tethering"
 
     invoke-direct {p0, v0}, Lcom/android/settings/dashboard/RestrictedDashboardFragment;-><init>(Ljava/lang/String;)V
+
+    const/4 v0, 0x3
+
+    iput v0, p0, Lcom/android/settings/wifi/tether/WifiTetherSettings;->lastTetherData:I
 
     new-instance v0, Lcom/android/settings/wifi/tether/WifiTetherSettings$1;
 
@@ -279,6 +288,45 @@
     :cond_3
     :goto_2
     return-object v0
+.end method
+
+.method private checkTetherData()V
+    .locals 2
+
+    invoke-virtual {p0}, Lcom/android/settings/wifi/tether/WifiTetherSettings;->getPrefContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/android/settings/wifi/tether/utils/TetherUtils;->getTetherData(Landroid/content/Context;)I
+
+    move-result v0
+
+    iget v1, p0, Lcom/android/settings/wifi/tether/WifiTetherSettings;->lastTetherData:I
+
+    if-ne v1, v0, :cond_0
+
+    return-void
+
+    :cond_0
+    iput v0, p0, Lcom/android/settings/wifi/tether/WifiTetherSettings;->lastTetherData:I
+
+    const/4 v1, 0x1
+
+    if-ne v0, v1, :cond_2
+
+    iget-object v1, p0, Lcom/android/settings/wifi/tether/WifiTetherSettings;->mSwitchBarController:Lcom/android/settings/wifi/tether/WifiTetherSwitchBarController;
+
+    if-eqz v1, :cond_1
+
+    iget-object v1, p0, Lcom/android/settings/wifi/tether/WifiTetherSettings;->mSwitchBarController:Lcom/android/settings/wifi/tether/WifiTetherSwitchBarController;
+
+    invoke-virtual {v1}, Lcom/android/settings/wifi/tether/WifiTetherSwitchBarController;->stopTether()V
+
+    :cond_1
+    invoke-virtual {p0}, Lcom/android/settings/wifi/tether/WifiTetherSettings;->finish()V
+
+    :cond_2
+    return-void
 .end method
 
 .method private startTether()V
@@ -534,7 +582,7 @@
 .end method
 
 .method public onStart()V
-    .locals 3
+    .locals 5
 
     invoke-super {p0}, Lcom/android/settings/dashboard/RestrictedDashboardFragment;->onStart()V
 
@@ -551,6 +599,37 @@
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     :cond_0
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isSupportUss()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    invoke-direct {p0}, Lcom/android/settings/wifi/tether/WifiTetherSettings;->checkTetherData()V
+
+    new-instance v1, Lcom/android/settings/wifi/tether/TetherDataObserver;
+
+    invoke-direct {v1, p0}, Lcom/android/settings/wifi/tether/TetherDataObserver;-><init>(Lcom/android/settings/wifi/tether/TetherDataObserver$OnTetherDataChangeCallback;)V
+
+    iput-object v1, p0, Lcom/android/settings/wifi/tether/WifiTetherSettings;->mTetherDataObserver:Lcom/android/settings/wifi/tether/TetherDataObserver;
+
+    invoke-virtual {p0}, Lcom/android/settings/wifi/tether/WifiTetherSettings;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v1
+
+    const-string v2, "TetheredData"
+
+    invoke-static {v2}, Landroid/provider/Settings$Global;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v2
+
+    const/4 v3, 0x1
+
+    iget-object v4, p0, Lcom/android/settings/wifi/tether/WifiTetherSettings;->mTetherDataObserver:Lcom/android/settings/wifi/tether/TetherDataObserver;
+
+    invoke-virtual {v1, v2, v3, v4}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
+
+    :cond_1
     return-void
 .end method
 
@@ -576,6 +655,29 @@
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->removeMessages(I)V
 
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isSupportUss()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    iget-object v1, p0, Lcom/android/settings/wifi/tether/WifiTetherSettings;->mTetherDataObserver:Lcom/android/settings/wifi/tether/TetherDataObserver;
+
+    if-eqz v1, :cond_1
+
+    invoke-virtual {p0}, Lcom/android/settings/wifi/tether/WifiTetherSettings;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcom/android/settings/wifi/tether/WifiTetherSettings;->mTetherDataObserver:Lcom/android/settings/wifi/tether/TetherDataObserver;
+
+    invoke-virtual {v1, v2}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
+
+    const/4 v1, 0x0
+
+    iput-object v1, p0, Lcom/android/settings/wifi/tether/WifiTetherSettings;->mTetherDataObserver:Lcom/android/settings/wifi/tether/TetherDataObserver;
+
+    :cond_1
     return-void
 .end method
 
@@ -603,6 +705,14 @@
     const-wide/16 v3, 0x64
 
     invoke-virtual {v1, v2, v3, v4}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+
+    return-void
+.end method
+
+.method public onTetherDataChange()V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/android/settings/wifi/tether/WifiTetherSettings;->checkTetherData()V
 
     return-void
 .end method

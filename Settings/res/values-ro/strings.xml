@@ -2549,8 +2549,8 @@ Astfel, aplicația va putea să activeze sau să dezactiveze starea Nu deranja �
     <string name="one_userkey">o cheie de utilizator</string>
     <string name="oneplus_adaptive_model">Mod adaptiv</string>
     <string name="oneplus_add">Adăugare</string>
-    <string name="oneplus_add_bluetooth_car_kit">Adăugarea unui set auto Bluetooth</string>
-    <string name="oneplus_add_bluetooth_car_kit_summary">Setul auto Bluetooth se conectează automat la dispozitivele anterioare, dar puteți adăuga manual conexiuni noi</string>
+    <string name="oneplus_add_bluetooth_car_kit">Adăugare Bluetooth vehicul</string>
+    <string name="oneplus_add_bluetooth_car_kit_summary">Bluetooth-ul vehiculului se conectează automat la dispozitivele dvs. anterioare, dar puteți adăuga manual și dispozitive noi</string>
     <string name="oneplus_add_fingerprint_list">Adăugare amprentă</string>
     <string name="oneplus_adjust_effect">Putere efect</string>
     <string name="oneplus_advanced_display_settings">Setări avansate de afișare</string>
@@ -2786,7 +2786,7 @@ Sfat de risc: Deblocarea facială este mai puțin sigură decât amprenta și pa
     <string name="oneplus_fnatic_mode_add_to_wallpapers">Adăugare wallpaper-uri</string>
     <string name="oneplus_fnatic_mode_background_introduction_summary">Performanța se concentrează în întregime asupra jocului. Acest lucru poate provoca erori în unele aplicații.</string>
     <string name="oneplus_fnatic_mode_background_introduction_title">Îmbunătățiți controlul procesului</string>
-    <string name="oneplus_fnatic_mode_disturb_introduction_summary">Blochează toate apelurile și notificările (cu excepția notificărilor privind bateriile descărcate, a alarmei și a temporizatorului). Puteți vedea numai apelurile nepreluate în istoricul apelurilor.</string>
+    <string name="oneplus_fnatic_mode_disturb_introduction_summary">Blochează toate apelurile și notificările (cu excepția notificărilor privind bateriile descărcate, a alarmei și a temporizatorului).</string>
     <string name="oneplus_fnatic_mode_disturb_introduction_title">DND avansat</string>
     <string name="oneplus_fnatic_mode_enable_introduction_title">Pentru a utiliza modul jocuri, trebuie mai întâi să activați modul Fnatic</string>
     <string name="oneplus_fnatic_mode_network_introduction_dual4g_summary">Pentru a minimiza latența scăzută a jocului, este preferat semnalul principal al cartelei SIM pentru a reduce interferențele. Prin urmare, SIM-ul secundar va fi dezactivat și nu se vor primi apeluri sau mesaje.</string>
@@ -2878,6 +2878,7 @@ Pentru a accesa ecranul principal în orice moment, glosați cu degetul în sus 
     <string name="oneplus_haptic_feedback_tips">Asigură feedback tactil în anumite scene de joc, numai în jocurile compatibile</string>
     <string name="oneplus_haptic_feedback_title">Îmbunătățire feedback tactil</string>
     <string name="oneplus_hardware_keys_action_split_screen">Închide/Deschide ecran divizat</string>
+    <string name="oneplus_health_safety_information">Informații despre Sănătate &amp; Siguranță</string>
     <string name="oneplus_hearing_aid">Compatibilitate aparat auditiv</string>
     <string name="oneplus_hide_navigation_bar">Ascunde bara de navigare</string>
     <string name="oneplus_hide_navkeys">Ascundere bară de navigare</string>
@@ -3092,8 +3093,8 @@ Notă: Amprenta dvs. poate fi mai puțin sigură decât un model dificil sau PIN
     <string name="oneplus_receive_notifications">Notificări OnePlus</string>
     <string name="oneplus_receive_notifications_agree">Primiți știri de la OnePlus</string>
     <string name="oneplus_receive_notifications_summary">Acceptați să primiți știrile oficiale OnePlus, informații despre produse, interacțiune prin chestionare și recomandări de achiziții/informații despre cupoane</string>
-    <string name="oneplus_recognized_bluetooth_car_kits">Seturi auto Bluetooth recunoscute</string>
-    <string name="oneplus_recognized_bluetooth_car_kits_no_devices">Niciun set auto Bluetooth, puteți adăuga manual noi conexiuni mai jos</string>
+    <string name="oneplus_recognized_bluetooth_car_kits">Bluetooth vehicul recunoscut</string>
+    <string name="oneplus_recognized_bluetooth_car_kits_no_devices">Nu există Bluetooth al vehiculului, mai jos puteți adăuga manual dispozitive noi</string>
     <string name="oneplus_recommended_opening">Recomandat</string>
     <string name="oneplus_reenroll_fingerprint_tips">După ce ați înlocuit folia de protecție de pe telefonul mobil, reintroduceți-vă amprenta pentru a asigura precizia amprentei digitale</string>
     <string name="oneplus_regulatory_information">Verificare</string>
@@ -3116,6 +3117,7 @@ Notă: Amprenta dvs. poate fi mai puțin sigură decât un model dificil sau PIN
     <string name="oneplus_screen_color_mode_basic">sRGB</string>
     <string name="oneplus_screen_color_mode_default">Implicit</string>
     <string name="oneplus_screen_color_mode_defined">Culoare personalizată</string>
+    <string name="oneplus_screen_color_mode_ntsc">Gamă largă de culori AMOLED</string>
     <string name="oneplus_screen_color_mode_reading_mode_on_summary">Indisponibil pentru că modul citire este activat</string>
     <string name="oneplus_screen_color_mode_soft">Moale</string>
     <string name="oneplus_screen_color_mode_title">Calibrare ecran</string>
@@ -3705,6 +3707,10 @@ Interfață UT: %5$s"</string>
     <string name="restore_default_apn_completed">Resetarea setărilor APN prestabilite a fost finalizată.</string>
     <string name="restr_pin_enter_admin_pin">Introduceți codul PIN de administrator</string>
     <string name="restrict_background_blacklisted">Datele de fundal sunt dezactivate</string>
+    <string name="restrict_background_uss_always">Întotdeauna</string>
+    <string name="restrict_background_uss_never">Niciodată</string>
+    <string name="restrict_background_uss_roaming">Numai în roaming</string>
+    <string name="restrict_background_uss_title">Restricționarea datelor de fundal</string>
     <string name="restricted_app_detail_footer">Aceste aplicații folosesc bateria în fundal. Este posibil ca aplicațiile restricționate să nu funcționeze corespunzător și ca notificările să fie primite cu întârziere.</string>
     <string name="restricted_app_title">Aplicații restricționate</string>
     <string name="restricted_false_label">Aplicația poate folosi bateria în fundal</string>
@@ -4406,6 +4412,7 @@ Este posibil ca aplicațiile stocate pe ^2 să nu ruleze corect și transferul c
     <string name="summary_divider_text">", "</string>
     <string name="summary_range_symbol_combination">%1$s – %2$s</string>
     <string name="summary_range_verbal_combination">Între %1$s și %2$s</string>
+    <string name="summary_voice_network">Apelare VoLTE, Wi-Fi</string>
     <string name="support_country_format">%1$s – %2$s</string>
     <string name="support_summary">Articole de ajutor, telefon și chat, noțiuni introductive</string>
     <string name="suw_back_button_label">Înapoi</string>
@@ -4458,6 +4465,11 @@ O abordare Google asupra sincronizării datelor, care vă permite accesul la age
     <string name="testing">Testare</string>
     <string name="testing_phone_info">Informații telefon</string>
     <string name="testing_usage_stats">Statistici de utilizare</string>
+    <string name="tether_error_item_default">Tethering</string>
+    <string name="tether_error_message">Nu sunteți abonat(ă) la %1$s.</string>
+    <string name="tether_error_title">%1$s eroare</string>
+    <string name="tether_no_sim_message">Introduceți o cartelă SIM pentru a utiliza punctul de acces mobil și alte opțiuni de conexiune</string>
+    <string name="tether_no_sim_title">Absență cartelă SIM</string>
     <string name="tether_settings_disabled_on_data_saver">Nu se poate face tethering și nu se pot folosi hotspoturile portabile în timp ce Economizorul de date este activat</string>
     <string name="tether_settings_summary_hotspot_off_tether_on">Tethering</string>
     <string name="tether_settings_summary_hotspot_on_tether_off">Hotspot activat</string>
@@ -4863,6 +4875,7 @@ Orice utilizator poate actualiza aplicațiile pentru toți ceilalți utilizatori
     <string name="voice_input_settings_title">Intrare vocală</string>
     <string name="voice_interaction_security_warning">Acest serviciu de introducere vocală va putea să asigure în permanență monitorizarea vocală și să controleze aplicațiile cu comenzi vocale în locul dvs. Acesta provine din aplicația %s. Activați utilizarea acestui serviciu?</string>
     <string name="voice_interactor_preference_summary">Expresie de activare și interacțiune complete</string>
+    <string name="voice_network_title">Rețea de voce</string>
     <string name="voice_recognizer_preference_summary">Transformare simplă a vorbirii în text</string>
     <string name="voice_search_settings_title">Căutare vocală</string>
     <string name="voice_service_preference_section_title">Servicii de intrare vocală</string>

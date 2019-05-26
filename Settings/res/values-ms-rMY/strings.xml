@@ -168,8 +168,8 @@ Adakah anda benar-benar mahu membolehkan fungsi ini?"</string>
     <string name="nxp_non_std_card_summary">Sokongan untuk membaca sesetengah tag NFC bukan standard</string>
     <string name="oneplus_adaptive_model">Model mudah suai</string>
     <string name="oneplus_add">Tambah</string>
-    <string name="oneplus_add_bluetooth_car_kit">Tambah Kit Kereta Bluetooth</string>
-    <string name="oneplus_add_bluetooth_car_kit_summary">Kit Kereta Bluetooth menyambung secara automatik dengan peranti anda yang sebelumnya, anda boleh juga menambah sambungan baru secara manual</string>
+    <string name="oneplus_add_bluetooth_car_kit">Tambah Bluetooth Kenderaan</string>
+    <string name="oneplus_add_bluetooth_car_kit_summary">Bluetooth Kenderaan akan menyambung peranti sebelumnya secara automatik, anda juga boleh menambah peranti baru secara manual</string>
     <string name="oneplus_add_fingerprint_list">Tambah cap jari</string>
     <string name="oneplus_adjust_effect">Kekuatan Kesan</string>
     <string name="oneplus_advanced_display_settings">Tetapan paparan lanjutan</string>
@@ -400,7 +400,7 @@ Petua risiko: Buka Kunci Muka adalah kurang selamat berbanding cap jari dan kata
     <string name="oneplus_fnatic_mode_add_to_wallpapers">Tambah ke kertas dinding</string>
     <string name="oneplus_fnatic_mode_background_introduction_summary">Memfokuskan hampir sepenuhnya kepada prestasi untuk bermain permainan. Ini mungkin akan menyebabkan glic dalam sesetengah aplikasi.</string>
     <string name="oneplus_fnatic_mode_background_introduction_title">Meningkatkan pengawal selia proses</string>
-    <string name="oneplus_fnatic_mode_disturb_introduction_summary">Sekat semua pemberitahuan dan panggilan (kecuali pemberitahuan bateri rendah, penggera dan pemasa). Anda hanya boleh melihat panggilan yang tidak dijawab dalam sejarah panggilan.</string>
+    <string name="oneplus_fnatic_mode_disturb_introduction_summary">Sekat semua pemberitahuan dan panggilan (kecuali pemberitahuan bateri rendah, penggera dan pemasa).</string>
     <string name="oneplus_fnatic_mode_disturb_introduction_title">DND Lanjutan</string>
     <string name="oneplus_fnatic_mode_enable_introduction_title">Mod Permainan hendaklah didayakan terlebih dahulu untuk menggunakan mod Fnatic</string>
     <string name="oneplus_fnatic_mode_network_introduction_dual4g_summary">Kekuatan isyarat kad SIM utama diberi keutamaan untuk mengurangkan gangguan kependaman rendah semasa bermain permainan. Oleh itu kad SIM kedua akan dinyahdayakan dan panggilan atau mesej tidak akan diterima.</string>
@@ -492,6 +492,7 @@ Untuk pergi ke skrin utama pada bila-bila masa, leret ke atas dari pinggir tenga
     <string name="oneplus_haptic_feedback_tips">Memberikan maklum balas haptik untuk adegan permainan yang tertentu，hanya berkenaan untuk permainan yang disokong</string>
     <string name="oneplus_haptic_feedback_title">Peningkatan maklum balas haptik</string>
     <string name="oneplus_hardware_keys_action_split_screen">Buka/tutup skrin pisah</string>
+    <string name="oneplus_health_safety_information">Maklumat Kesihatan &amp; Keselamatan</string>
     <string name="oneplus_hearing_aid">Keserasian Alat Pendengaran</string>
     <string name="oneplus_hide_navigation_bar">Sembunyikan bar navigasi</string>
     <string name="oneplus_hide_navkeys">Sembunyikan palang navigasi</string>
@@ -706,8 +707,8 @@ Perhatian: Cap jari anda mungkin kurang selamat berbanding corak atau PIN yang k
     <string name="oneplus_receive_notifications">Pemberitahuan OnePlus</string>
     <string name="oneplus_receive_notifications_agree">Terima Berita dari OnePlus</string>
     <string name="oneplus_receive_notifications_summary">Bersetuju untuk menerima berita rasmi OnePlus, maklumat produk, interaksi soal selidik maklumat dan cadangan/kupon pembelian</string>
-    <string name="oneplus_recognized_bluetooth_car_kits">Kit kereta Bluetooth dikenali</string>
-    <string name="oneplus_recognized_bluetooth_car_kits_no_devices">Tiada Kit Kereta Bluetooth, anda boleh menambah sambungan baharu secara manual di bawah</string>
+    <string name="oneplus_recognized_bluetooth_car_kits">Mengiktiraf Bluetooth Kenderaan</string>
+    <string name="oneplus_recognized_bluetooth_car_kits_no_devices">Tiada peranti diiktiraf oleh Bluetooth Kenderaan, anda boleh menambah peranti baru di bawah</string>
     <string name="oneplus_recommended_opening">Disyorkan</string>
     <string name="oneplus_reenroll_fingerprint_tips">Sila daftarkan semula cap jari anda selepas menukar pelindung skrin telefon untuk memastikan ketepatan cap jari</string>
     <string name="oneplus_regulatory_information">Pengesahan</string>
@@ -730,6 +731,7 @@ Perhatian: Cap jari anda mungkin kurang selamat berbanding corak atau PIN yang k
     <string name="oneplus_screen_color_mode_basic">sRGB</string>
     <string name="oneplus_screen_color_mode_default">Lalai</string>
     <string name="oneplus_screen_color_mode_defined">Warna tersuai</string>
+    <string name="oneplus_screen_color_mode_ntsc">AMOLED Gamut Lebar</string>
     <string name="oneplus_screen_color_mode_reading_mode_on_summary">Tidak tersedia kerana mod malam dihidupkan</string>
     <string name="oneplus_screen_color_mode_soft">Lembut</string>
     <string name="oneplus_screen_color_mode_title">Kalibrasi skrin</string>
@@ -1014,6 +1016,10 @@ Menetapkan rangkaian sebagai tersembunyi tidak akan mengubah tetapan penghala an
     <string name="quick_unlock_title">Buka kunci cepat</string>
     <string name="reset_collect_diagnostics_summary">Kumpul data diagnostik untuk penyelesaian masalah</string>
     <string name="reset_collect_diagnostics_title">Kumpul diagnostik</string>
+    <string name="restrict_background_uss_always">Sentiasa</string>
+    <string name="restrict_background_uss_never">Jangan sekali-kali</string>
+    <string name="restrict_background_uss_roaming">Semasa perayauan sahaja</string>
+    <string name="restrict_background_uss_title">Hadkan data latar belakang</string>
     <string name="saturation_option_title">Baki warna</string>
     <string name="schedule_reminders">Peringatan acara</string>
     <string name="screen_color_mode_advanced">Lanjutan</string>
@@ -1071,7 +1077,13 @@ Menetapkan rangkaian sebagai tersembunyi tidak akan mengubah tetapan penghala an
     <string name="sub_deactivate_not_supported">Penyahaktifan tidak disokong</string>
     <string name="sub_deactivate_success">Berjaya Dinyahaktifkan.</string>
     <string name="subs_settings">Status SIM</string>
+    <string name="summary_voice_network">VoLTE, Panggilan Wi-Fi</string>
     <string name="system_update_uss_title">Muat turun dan pasang</string>
+    <string name="tether_error_item_default">Tambatan</string>
+    <string name="tether_error_message">Anda tidak melanggan dengan %1$s.</string>
+    <string name="tether_error_title">Ralat %1$s</string>
+    <string name="tether_no_sim_message">Masukkan kad SIM untuk menggunakan Hotspot Mudah Alih dan pilihan tambatan lain</string>
+    <string name="tether_no_sim_title">Tiada kad SIM</string>
     <string name="theme_accent_color_title">Warna serlah</string>
     <string name="theme_switch_dark">gelap</string>
     <string name="theme_switch_dark_mode_summary">Mengaktifkan tema gelap luas sistem</string>
@@ -1134,6 +1146,7 @@ Menetapkan rangkaian sebagai tersembunyi tidak akan mengubah tetapan penghala an
     <string name="user_experience_description">Benarkan OnePlus menganalisis data statistik umum secara tanpa nama mengenai cara anda menggunakan telefon anda, untuk membantu kami meningkatkan reka bentuk produk dan pengalaman pengguna</string>
     <string name="user_is_not_allowed_dlg_text">Pengguna semasa tidak dibenarkan untuk melakukan penyahpasangan ini.</string>
     <string name="user_is_not_allowed_dlg_title">Tidak dibenarkan</string>
+    <string name="voice_network_title">Rangkaian panggilan suara</string>
     <string name="volume_adjust_sound_title">Gelongsor kekuatan bunyi</string>
     <string name="wifi_certificate">Sijil</string>
     <string name="wifi_context_menu_change_password">Tukar kata laluan</string>

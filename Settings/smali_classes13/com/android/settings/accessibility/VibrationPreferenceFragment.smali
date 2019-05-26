@@ -167,7 +167,7 @@
 
     const-string v5, "intensity_off"
 
-    const v6, 0x7f121259
+    const v6, 0x7f121261
 
     invoke-direct {v4, p0, v5, v6, v1}, Lcom/android/settings/accessibility/VibrationPreferenceFragment$VibrationIntensityCandidateInfo;-><init>(Lcom/android/settings/accessibility/VibrationPreferenceFragment;Ljava/lang/String;II)V
 
@@ -181,7 +181,7 @@
 
     const-string v4, "intensity_on"
 
-    const v5, 0x7f12125a
+    const v5, 0x7f121262
 
     invoke-virtual {p0}, Lcom/android/settings/accessibility/VibrationPreferenceFragment;->getDefaultVibrationIntensity()I
 

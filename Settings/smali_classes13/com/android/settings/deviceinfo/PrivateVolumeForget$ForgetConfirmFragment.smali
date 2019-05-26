@@ -100,7 +100,7 @@
 
     nop
 
-    const v5, 0x7f1211bf
+    const v5, 0x7f1211c6
 
     invoke-virtual {p0, v5}, Lcom/android/settings/deviceinfo/PrivateVolumeForget$ForgetConfirmFragment;->getText(I)Ljava/lang/CharSequence;
 
@@ -126,7 +126,7 @@
 
     nop
 
-    const v5, 0x7f1211be
+    const v5, 0x7f1211c5
 
     invoke-virtual {p0, v5}, Lcom/android/settings/deviceinfo/PrivateVolumeForget$ForgetConfirmFragment;->getText(I)Ljava/lang/CharSequence;
 
@@ -150,7 +150,7 @@
 
     invoke-direct {v5, p0, v1, v2}, Lcom/android/settings/deviceinfo/PrivateVolumeForget$ForgetConfirmFragment$1;-><init>(Lcom/android/settings/deviceinfo/PrivateVolumeForget$ForgetConfirmFragment;Landroid/os/storage/StorageManager;Ljava/lang/String;)V
 
-    const v6, 0x7f1211cb
+    const v6, 0x7f1211d2
 
     invoke-virtual {v4, v6, v5}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 

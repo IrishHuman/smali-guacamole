@@ -710,7 +710,7 @@
 
     move-result-object v11
 
-    const v12, 0x7f120940
+    const v12, 0x7f120942
 
     new-array v4, v4, [Ljava/lang/Object;
 
@@ -1213,13 +1213,13 @@
 
     invoke-direct {v0, v1}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const v1, 0x7f120ffc
+    const v1, 0x7f121003
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
 
     move-result-object v0
 
-    const v1, 0x7f120ffb
+    const v1, 0x7f121002
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
 

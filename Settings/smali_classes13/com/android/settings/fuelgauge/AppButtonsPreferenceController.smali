@@ -612,7 +612,7 @@
 
     check-cast v0, Lcom/android/settings/widget/ActionButtonPreference;
 
-    const v1, 0x7f121310
+    const v1, 0x7f12131d
 
     invoke-virtual {v0, v1}, Lcom/android/settings/widget/ActionButtonPreference;->setButton1Text(I)Lcom/android/settings/widget/ActionButtonPreference;
 
@@ -1672,7 +1672,7 @@
 .end method
 
 .method updateUninstallButton()V
-    .locals 7
+    .locals 8
     .annotation build Landroid/support/annotation/VisibleForTesting;
     .end annotation
 
@@ -1859,19 +1859,19 @@
     goto :goto_3
 
     :cond_9
-    iget-object v2, p0, Lcom/android/settings/fuelgauge/AppButtonsPreferenceController;->mPackageInfo:Landroid/content/pm/PackageInfo;
+    iget-object v6, p0, Lcom/android/settings/fuelgauge/AppButtonsPreferenceController;->mPackageInfo:Landroid/content/pm/PackageInfo;
 
-    iget-object v2, v2, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
+    iget-object v6, v6, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
 
     invoke-virtual {v5}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
-    move-result-object v6
+    move-result-object v7
 
-    invoke-virtual {v2, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v6, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v2
+    move-result v6
 
-    xor-int/2addr v1, v2
+    xor-int/2addr v1, v6
 
     move v3, v1
 
@@ -1899,6 +1899,55 @@
     const/4 v3, 0x0
 
     :cond_c
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isSupportUss()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_e
+
+    iget-object v1, p0, Lcom/android/settings/fuelgauge/AppButtonsPreferenceController;->mContext:Landroid/content/Context;
+
+    if-eqz v1, :cond_e
+
+    iget-object v1, p0, Lcom/android/settings/fuelgauge/AppButtonsPreferenceController;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    const v4, 0x7f03007c
+
+    invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
+
+    move-result-object v1
+
+    array-length v4, v1
+
+    :goto_4
+    if-ge v2, v4, :cond_e
+
+    aget-object v5, v1, v2
+
+    iget-object v6, p0, Lcom/android/settings/fuelgauge/AppButtonsPreferenceController;->mAppEntry:Lcom/android/settingslib/applications/ApplicationsState$AppEntry;
+
+    iget-object v6, v6, Lcom/android/settingslib/applications/ApplicationsState$AppEntry;->info:Landroid/content/pm/ApplicationInfo;
+
+    iget-object v6, v6, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
+
+    invoke-virtual {v5, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_d
+
+    const/4 v3, 0x0
+
+    :cond_d
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_4
+
+    :cond_e
     iget-object v1, p0, Lcom/android/settings/fuelgauge/AppButtonsPreferenceController;->mButtonsPref:Lcom/android/settings/widget/ActionButtonPreference;
 
     invoke-virtual {v1, v3}, Lcom/android/settings/widget/ActionButtonPreference;->setButton1Enabled(Z)Lcom/android/settings/widget/ActionButtonPreference;

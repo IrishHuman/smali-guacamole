@@ -406,7 +406,7 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    const v1, 0x7f12107c
+    const v1, 0x7f121083
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -418,17 +418,17 @@
 
     move-result v2
 
-    const v3, 0x7f120b2f
+    const v3, 0x7f120b31
 
     if-eqz v2, :cond_0
 
     invoke-virtual {p0, v3}, Lcom/android/settings/fingerprint/FaceUnlockEnrollIntroduction;->setHeaderText(I)V
 
-    const v2, 0x7f120b41
+    const v2, 0x7f120b43
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(I)V
 
-    const v2, 0x7f0a049c
+    const v2, 0x7f0a04a0
 
     invoke-virtual {p0, v2}, Lcom/android/settings/fingerprint/FaceUnlockEnrollIntroduction;->findViewById(I)Landroid/view/View;
 
@@ -447,22 +447,22 @@
 
     if-eqz v2, :cond_1
 
-    const v2, 0x7f120db4
+    const v2, 0x7f120db7
 
     invoke-virtual {p0, v2}, Lcom/android/settings/fingerprint/FaceUnlockEnrollIntroduction;->setHeaderText(I)V
 
-    const v2, 0x7f120db3
+    const v2, 0x7f120db6
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(I)V
 
     goto :goto_0
 
     :cond_1
-    const v2, 0x7f120b2e
+    const v2, 0x7f120b30
 
     invoke-virtual {p0, v2}, Lcom/android/settings/fingerprint/FaceUnlockEnrollIntroduction;->setHeaderText(I)V
 
-    const v2, 0x7f120b2d
+    const v2, 0x7f120b2f
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(I)V
 
@@ -479,7 +479,7 @@
 
     invoke-virtual {v2, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v3, 0x7f120c8b
+    const v3, 0x7f120c8e
 
     invoke-virtual {v2, v3}, Landroid/widget/Button;->setText(I)V
 
@@ -646,7 +646,7 @@
 
     invoke-virtual {v0, v1}, Landroid/app/ActionBar;->setDisplayHomeAsUpEnabled(Z)V
 
-    const v1, 0x7f120b2f
+    const v1, 0x7f120b31
 
     invoke-virtual {v0, v1}, Landroid/app/ActionBar;->setTitle(I)V
 

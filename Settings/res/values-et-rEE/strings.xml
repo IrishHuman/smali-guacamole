@@ -168,8 +168,8 @@ Kas soovite selle funktsiooni lubada?"</string>
     <string name="nxp_non_std_card_summary">Mõnede mittestandardsete NFC-siltide lugemise tugi</string>
     <string name="oneplus_adaptive_model">Kohanduv režiim</string>
     <string name="oneplus_add">Lisa</string>
-    <string name="oneplus_add_bluetooth_car_kit">Lisa Bluetoothi autokomplekt</string>
-    <string name="oneplus_add_bluetooth_car_kit_summary">Bluetoothi autokomplekt loob automaatselt ühenduse kõigi varem ühendatud seadmetega, uusi seadmeid saate ühendada ka käsitsi</string>
+    <string name="oneplus_add_bluetooth_car_kit">Lisage sõiduki Bluetooth</string>
+    <string name="oneplus_add_bluetooth_car_kit_summary">Sõiduki Bluetooth loob automaatselt ühenduse kõigi varem ühendatud seadmetega, uusi seadmeid saate ühendada ka käsitsi</string>
     <string name="oneplus_add_fingerprint_list">Lisa sõrmejälg</string>
     <string name="oneplus_adjust_effect">Ekraani efektide kohandamine</string>
     <string name="oneplus_advanced_display_settings">Täpsemad ekraanisätted</string>
@@ -403,7 +403,7 @@ Tähelepanu: näotuvastusfunktsioon on ebaturvalisem kui sõrmejälg või parool
     <string name="oneplus_fnatic_mode_add_to_wallpapers">Lisa taustapiltidesse</string>
     <string name="oneplus_fnatic_mode_background_introduction_summary">Jõudlus on peaaegu täiesti mängule suunatud. See võib mõne rakenduse töös häireid põhjustada.</string>
     <string name="oneplus_fnatic_mode_background_introduction_title">Täiusta protsessiregulaatorit</string>
-    <string name="oneplus_fnatic_mode_disturb_introduction_summary">Blokeeri kõik teavitused ja kõned (v.a tühjeneva aku teavitus, äratuskell ja taimer). Vastamata kõnesid saab vaadata ainult kõneajaloos.</string>
+    <string name="oneplus_fnatic_mode_disturb_introduction_summary">Blokeeri kõik teavitused ja kõned (v.a tühjeneva aku teavitus, äratuskell ja taimer).</string>
     <string name="oneplus_fnatic_mode_disturb_introduction_title">Täiustatud DND</string>
     <string name="oneplus_fnatic_mode_enable_introduction_title">Fnatic-režiimi kasutamiseks tuleb esmalt mängurežiim lubada</string>
     <string name="oneplus_fnatic_mode_network_introduction_dual4g_summary">Peamise SIM-kaardi signaalitugevus on prioriteetne, et vähendada häireid ja muuta mäng kiiremaks. Selle tulemusel teisene SIM-kaart keelatakse ning kõnesid ega sõnumeid vastu ei võeta.</string>
@@ -495,6 +495,7 @@ Suvalisel hetkel avakuva avamiseks nipsake ekraani alumisest servast keskelt ül
     <string name="oneplus_haptic_feedback_tips">Paku teatud mängustseenide puhul värintagasisidet, rakendatav ainult toetatud mängude puhul</string>
     <string name="oneplus_haptic_feedback_title">Värintagasiside täiustamine</string>
     <string name="oneplus_hardware_keys_action_split_screen">Ava/sulge poolitatud ekraan</string>
+    <string name="oneplus_health_safety_information">Tervishoiu- ja ohutusteave</string>
     <string name="oneplus_hearing_aid">Ühilduvus kuulmisaparaadiga</string>
     <string name="oneplus_hide_navigation_bar">Peida navigatsiooniriba</string>
     <string name="oneplus_hide_navkeys">Peida navigatsiooniriba</string>
@@ -708,8 +709,8 @@ Märkus. Sõrmejälg ei pruugi olla nii turvaline kui tugev muster või PIN-kood
     <string name="oneplus_receive_notifications">OnePlus teavitused</string>
     <string name="oneplus_receive_notifications_agree">Võta OnePlus uudised vastu</string>
     <string name="oneplus_receive_notifications_summary">Nõus võtma vastu OnePlus ametlikke uudiseid, tooteteavet, küsitlusi ja ostusoovitusi/kupongiteavet</string>
-    <string name="oneplus_recognized_bluetooth_car_kits">Tuvastatud Bluetooth-autokomplektid</string>
-    <string name="oneplus_recognized_bluetooth_car_kits_no_devices">Uus Bluetooth-autokomplekt, saate allpool käsitsi uusi ühendusi lisada</string>
+    <string name="oneplus_recognized_bluetooth_car_kits">Tuvastati sõiduki Bluetooth</string>
+    <string name="oneplus_recognized_bluetooth_car_kits_no_devices">Sõiduki Bluetooth puudub, allpool saab uusi seadmeid käsitsi lisada</string>
     <string name="oneplus_recommended_opening">Soovitatud</string>
     <string name="oneplus_reenroll_fingerprint_tips">Pärast mobiiltelefoni kaitsekile vahetamist sisestage sõrmejälg uuesti, et see oleks kindlasti õige</string>
     <string name="oneplus_regulatory_information">Kinnitamine</string>
@@ -731,6 +732,7 @@ Märkus. Sõrmejälg ei pruugi olla nii turvaline kui tugev muster või PIN-kood
     <string name="oneplus_screen_color_mode_auto">Kohanduvad värviprofiilid</string>
     <string name="oneplus_screen_color_mode_default">Kuva-P3（vaikeseade）</string>
     <string name="oneplus_screen_color_mode_defined">Kohandatud värv</string>
+    <string name="oneplus_screen_color_mode_ntsc">Lai värvigamma AMOLED</string>
     <string name="oneplus_screen_color_mode_reading_mode_on_summary">Pole kasutatav, sest lugemisrežiim on sees</string>
     <string name="oneplus_screen_color_mode_soft">Pehme</string>
     <string name="oneplus_screen_color_mode_title">Ekraani kalibreerimine</string>
@@ -1015,6 +1017,10 @@ Kui võrgu peidate, ei muuda see ruuteri sätteid."</string>
     <string name="quick_unlock_title">Kiiravamine</string>
     <string name="reset_collect_diagnostics_summary">Tõrkeotsingu kogumisdiagnostika andmed</string>
     <string name="reset_collect_diagnostics_title">Kogumisdiagnostika</string>
+    <string name="restrict_background_uss_always">Alati</string>
+    <string name="restrict_background_uss_never">Mitte kunagi</string>
+    <string name="restrict_background_uss_roaming">Ainult rändluse ajal</string>
+    <string name="restrict_background_uss_title">Taustaandmete piiramine</string>
     <string name="saturation_option_title">Värvitasakaal</string>
     <string name="schedule_reminders">Sündmuste meeldetuletused</string>
     <string name="screen_color_mode_advanced">Täpsem</string>
@@ -1072,7 +1078,13 @@ Kui võrgu peidate, ei muuda see ruuteri sätteid."</string>
     <string name="sub_deactivate_not_supported">Deaktiveerimist ei toetata</string>
     <string name="sub_deactivate_success">Desaktiveerimine õnnestus.</string>
     <string name="subs_settings">SIM-kaartide olekud</string>
+    <string name="summary_voice_network">VoLTE, Wi-Fi kõned</string>
     <string name="system_update_uss_title">Laadi alla ja installi</string>
+    <string name="tether_error_item_default">Sidumine</string>
+    <string name="tether_error_message">Te ei ole tellinud järgmist: %1$s.</string>
+    <string name="tether_error_title">Viga %1$s</string>
+    <string name="tether_no_sim_message">Sisestage SIM-kaart, et kasutada Mobile Hotspoti ja muid sidumisvalikuid</string>
+    <string name="tether_no_sim_title">SIM-kaarti pole</string>
     <string name="theme_accent_color_title">Rõhutav värv</string>
     <string name="theme_switch_dark">tume</string>
     <string name="theme_switch_dark_mode_summary">Luba süsteemi tume teema</string>
@@ -1135,6 +1147,7 @@ Kui võrgu peidate, ei muuda see ruuteri sätteid."</string>
     <string name="user_experience_description">Andke OnePlusile luba telefoni kasutusandmeid anonüümselt analüüsida, et täiustada tootedisaini ja parandada kasutuskogemust</string>
     <string name="user_is_not_allowed_dlg_text">Kehtival kasutajal pole õigusi seda maha installida.</string>
     <string name="user_is_not_allowed_dlg_title">Pole lubatud</string>
+    <string name="voice_network_title">Kõnevõrgud</string>
     <string name="volume_adjust_sound_title">Helitugevuse liugur</string>
     <string name="wifi_certificate">Sertifikaat</string>
     <string name="wifi_context_menu_change_password">Muuda parooli</string>

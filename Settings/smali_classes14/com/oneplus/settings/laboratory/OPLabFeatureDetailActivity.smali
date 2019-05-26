@@ -286,7 +286,7 @@
 
     iput-object v0, p0, Lcom/oneplus/settings/laboratory/OPLabFeatureDetailActivity;->mSharedPreferences:Landroid/content/SharedPreferences;
 
-    const v0, 0x7f0a03d1
+    const v0, 0x7f0a03d5
 
     invoke-virtual {p0, v0}, Lcom/oneplus/settings/laboratory/OPLabFeatureDetailActivity;->findViewById(I)Landroid/view/View;
 
@@ -296,7 +296,7 @@
 
     iput-object v0, p0, Lcom/oneplus/settings/laboratory/OPLabFeatureDetailActivity;->mDescriptionSummary:Landroid/widget/TextView;
 
-    const v0, 0x7f0a03d0
+    const v0, 0x7f0a03d4
 
     invoke-virtual {p0, v0}, Lcom/oneplus/settings/laboratory/OPLabFeatureDetailActivity;->findViewById(I)Landroid/view/View;
 
@@ -306,7 +306,7 @@
 
     iput-object v0, p0, Lcom/oneplus/settings/laboratory/OPLabFeatureDetailActivity;->mCommuniryTitle:Landroid/widget/TextView;
 
-    const v0, 0x7f0a03cf
+    const v0, 0x7f0a03d3
 
     invoke-virtual {p0, v0}, Lcom/oneplus/settings/laboratory/OPLabFeatureDetailActivity;->findViewById(I)Landroid/view/View;
 
@@ -316,7 +316,7 @@
 
     iput-object v0, p0, Lcom/oneplus/settings/laboratory/OPLabFeatureDetailActivity;->mCommunirySummary:Landroid/widget/TextView;
 
-    const v0, 0x7f0a03d8
+    const v0, 0x7f0a03dc
 
     invoke-virtual {p0, v0}, Lcom/oneplus/settings/laboratory/OPLabFeatureDetailActivity;->findViewById(I)Landroid/view/View;
 
@@ -324,7 +324,7 @@
 
     iput-object v0, p0, Lcom/oneplus/settings/laboratory/OPLabFeatureDetailActivity;->mActiviteFeatureToggle:Landroid/view/View;
 
-    const v0, 0x7f0a03d7
+    const v0, 0x7f0a03db
 
     invoke-virtual {p0, v0}, Lcom/oneplus/settings/laboratory/OPLabFeatureDetailActivity;->findViewById(I)Landroid/view/View;
 
@@ -396,7 +396,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/Switch;->setChecked(Z)V
 
     :goto_2
-    const v0, 0x7f0a03d2
+    const v0, 0x7f0a03d6
 
     invoke-virtual {p0, v0}, Lcom/oneplus/settings/laboratory/OPLabFeatureDetailActivity;->findViewById(I)Landroid/view/View;
 
@@ -452,7 +452,7 @@
     invoke-virtual {v0, v1}, Lcom/oneplus/settings/laboratory/OPRadioButtinGroup;->setVisibility(I)V
 
     :goto_3
-    const v0, 0x7f0a03cb
+    const v0, 0x7f0a03cf
 
     invoke-virtual {p0, v0}, Lcom/oneplus/settings/laboratory/OPLabFeatureDetailActivity;->findViewById(I)Landroid/view/View;
 
@@ -462,7 +462,7 @@
 
     iput-object v0, p0, Lcom/oneplus/settings/laboratory/OPLabFeatureDetailActivity;->mLikeImageButton:Landroid/widget/ImageButton;
 
-    const v0, 0x7f0a03c9
+    const v0, 0x7f0a03cd
 
     invoke-virtual {p0, v0}, Lcom/oneplus/settings/laboratory/OPLabFeatureDetailActivity;->findViewById(I)Landroid/view/View;
 
@@ -627,7 +627,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f120bda
+    const v1, 0x7f120bdd
 
     const/16 v2, 0xbb8
 
@@ -691,17 +691,17 @@
 
     move-result v0
 
-    const v1, 0x7f0a03c9
+    const v1, 0x7f0a03cd
 
     if-eq v0, v1, :cond_7
 
-    const v1, 0x7f0a03cb
+    const v1, 0x7f0a03cf
 
     const/4 v2, 0x1
 
     if-eq v0, v1, :cond_6
 
-    const v1, 0x7f0a03d8
+    const v1, 0x7f0a03dc
 
     if-eq v0, v1, :cond_0
 

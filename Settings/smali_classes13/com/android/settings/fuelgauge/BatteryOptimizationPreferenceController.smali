@@ -159,7 +159,7 @@
 .end method
 
 .method public updateState(Landroid/support/v7/preference/Preference;)V
-    .locals 3
+    .locals 5
 
     iget-object v0, p0, Lcom/android/settings/fuelgauge/BatteryOptimizationPreferenceController;->mContext:Landroid/content/Context;
 
@@ -187,17 +187,40 @@
     :goto_0
     move v0, v1
 
+    const v1, 0x7f120744
+
     if-eqz v0, :cond_1
 
-    const v1, 0x7f120744
+    move v3, v1
 
     goto :goto_1
 
     :cond_1
-    const v1, 0x7f120743
+    const v3, 0x7f120743
 
     :goto_1
+    invoke-virtual {p1, v3}, Landroid/support/v7/preference/Preference;->setSummary(I)V
+
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isSupportUss()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_2
+
+    const-string v3, "com.sprint.ecid"
+
+    iget-object v4, p0, Lcom/android/settings/fuelgauge/BatteryOptimizationPreferenceController;->mPackageName:Ljava/lang/String;
+
+    invoke-static {v3, v4}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_2
+
     invoke-virtual {p1, v1}, Landroid/support/v7/preference/Preference;->setSummary(I)V
 
+    invoke-virtual {p1, v2}, Landroid/support/v7/preference/Preference;->setEnabled(Z)V
+
+    :cond_2
     return-void
 .end method

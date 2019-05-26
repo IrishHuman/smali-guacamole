@@ -491,7 +491,7 @@
 
     move-result-object v1
 
-    const v3, 0x7f120ac4
+    const v3, 0x7f120ac6
 
     invoke-virtual {v1, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -538,7 +538,7 @@
 
     move-result-object v1
 
-    const v3, 0x7f120e75
+    const v3, 0x7f120e78
 
     invoke-virtual {v1, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -585,7 +585,7 @@
 
     move-result-object v1
 
-    const v3, 0x7f120e7e
+    const v3, 0x7f120e81
 
     invoke-virtual {v1, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -632,7 +632,7 @@
 
     move-result-object v1
 
-    const v3, 0x7f120e80
+    const v3, 0x7f120e83
 
     invoke-virtual {v1, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -655,7 +655,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f120e50
+    const v2, 0x7f120e53
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -999,7 +999,7 @@
     goto/16 :goto_0
 
     :cond_6
-    const v2, 0x7f0a033e
+    const v2, 0x7f0a0342
 
     invoke-virtual {p1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1059,7 +1059,7 @@
 
     nop
 
-    const v1, 0x7f0a04d3
+    const v1, 0x7f0a04d7
 
     invoke-virtual {p1, v1}, Landroid/support/v7/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 

@@ -77,12 +77,12 @@
 
     if-eqz p2, :cond_1
 
-    const v1, 0x7f1211e8
+    const v1, 0x7f1211ef
 
     goto :goto_0
 
     :cond_1
-    const v1, 0x7f1211e9
+    const v1, 0x7f1211f0
 
     :goto_0
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -91,7 +91,7 @@
 
     iget-object v1, p0, Lcom/android/settings/applications/appinfo/AppStoragePreferenceController;->mContext:Landroid/content/Context;
 
-    const v2, 0x7f1211e5
+    const v2, 0x7f1211ec
 
     const/4 v3, 0x2
 

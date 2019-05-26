@@ -45,7 +45,7 @@
 
     invoke-virtual {p0, v0}, Lcom/oneplus/settings/OPSecurityDetectionActivity;->setContentView(I)V
 
-    const v0, 0x7f0a0586
+    const v0, 0x7f0a058a
 
     invoke-virtual {p0, v0}, Lcom/oneplus/settings/OPSecurityDetectionActivity;->findViewById(I)Landroid/view/View;
 
@@ -53,7 +53,7 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    const v1, 0x7f0a0410
+    const v1, 0x7f0a0414
 
     invoke-virtual {p0, v1}, Lcom/oneplus/settings/OPSecurityDetectionActivity;->findViewById(I)Landroid/view/View;
 
@@ -61,7 +61,7 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    const v2, 0x7f120df3
+    const v2, 0x7f120df6
 
     invoke-virtual {p0, v2}, Lcom/oneplus/settings/OPSecurityDetectionActivity;->getString(I)Ljava/lang/String;
 
@@ -69,7 +69,7 @@
 
     const-string v3, "http://www.qq.com/privacy.htm"
 
-    const v4, 0x7f120df4
+    const v4, 0x7f120df7
 
     invoke-virtual {p0, v4}, Lcom/oneplus/settings/OPSecurityDetectionActivity;->getString(I)Ljava/lang/String;
 
@@ -89,7 +89,7 @@
 
     invoke-virtual {v0, v5}, Landroid/widget/TextView;->setMovementMethod(Landroid/text/method/MovementMethod;)V
 
-    const v5, 0x7f120df1
+    const v5, 0x7f120df4
 
     invoke-virtual {p0, v5}, Lcom/oneplus/settings/OPSecurityDetectionActivity;->getString(I)Ljava/lang/String;
 
@@ -97,7 +97,7 @@
 
     const-string v6, "https://www.oppo.com/cn/service/help/640?id=640&name=%E6%9C%8D%E5%8A%A1%E6%94%BF%E7%AD%96&hdscreen=1"
 
-    const v7, 0x7f120df2
+    const v7, 0x7f120df5
 
     invoke-virtual {p0, v7}, Lcom/oneplus/settings/OPSecurityDetectionActivity;->getString(I)Ljava/lang/String;
 

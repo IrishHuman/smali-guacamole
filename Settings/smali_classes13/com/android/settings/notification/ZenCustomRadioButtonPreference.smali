@@ -157,7 +157,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0a05c7
+    const v2, 0x7f0a05cb
 
     invoke-virtual {p1, v2}, Landroid/support/v7/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 

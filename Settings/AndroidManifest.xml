@@ -2482,5 +2482,11 @@
                 <action android:name="com.oneplus.action.APP_SECURITY_RECOMMEND_SETTINGS"/>
             </intent-filter>
         </activity>
+        <receiver android:name="com.android.settings.datausage.backgrounddata.receiver.RoamingStatusReceiver">
+            <intent-filter>
+                <action android:name="com.oneplus.action.RoamingState"/>
+            </intent-filter>
+        </receiver>
+        <provider android:authorities="com.android.settings.app.datausage" android:enabled="true" android:exported="true" android:name="com.android.settings.datausage.backgrounddata.db.AppDataUsageProvider"/>
     </application>
 </manifest>

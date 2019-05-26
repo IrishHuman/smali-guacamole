@@ -317,7 +317,7 @@
     return-void
 
     :cond_0
-    const v0, 0x7f0a05f5
+    const v0, 0x7f0a05f9
 
     invoke-virtual {p1, v0}, Landroid/support/v7/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 
@@ -325,7 +325,7 @@
 
     check-cast v0, Landroid/view/TextureView;
 
-    const v1, 0x7f0a05f2
+    const v1, 0x7f0a05f6
 
     invoke-virtual {p1, v1}, Landroid/support/v7/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 
@@ -333,7 +333,7 @@
 
     check-cast v1, Landroid/widget/ImageView;
 
-    const v2, 0x7f0a05f1
+    const v2, 0x7f0a05f5
 
     invoke-virtual {p1, v2}, Landroid/support/v7/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 
@@ -341,7 +341,7 @@
 
     check-cast v2, Landroid/widget/ImageView;
 
-    const v3, 0x7f0a05ee
+    const v3, 0x7f0a05f2
 
     invoke-virtual {p1, v3}, Landroid/support/v7/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 

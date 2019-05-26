@@ -25,7 +25,7 @@
 
     invoke-virtual {v0, v1, p0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
-    const v0, 0x7f0a05d5
+    const v0, 0x7f0a05d9
 
     invoke-virtual {p0, v0}, Lcom/android/settings/graph/UsageView;->findViewById(I)Landroid/view/View;
 
@@ -39,7 +39,7 @@
 
     new-array v1, v0, [Landroid/widget/TextView;
 
-    const v2, 0x7f0a02cc
+    const v2, 0x7f0a02ce
 
     invoke-virtual {p0, v2}, Lcom/android/settings/graph/UsageView;->findViewById(I)Landroid/view/View;
 
@@ -51,7 +51,7 @@
 
     aput-object v2, v1, v3
 
-    const v2, 0x7f0a02d1
+    const v2, 0x7f0a02d3
 
     invoke-virtual {p0, v2}, Lcom/android/settings/graph/UsageView;->findViewById(I)Landroid/view/View;
 
@@ -63,7 +63,7 @@
 
     aput-object v2, v1, v4
 
-    const v2, 0x7f0a02d4
+    const v2, 0x7f0a02d6
 
     invoke-virtual {p0, v2}, Lcom/android/settings/graph/UsageView;->findViewById(I)Landroid/view/View;
 
@@ -79,7 +79,7 @@
 
     new-array v1, v5, [Landroid/widget/TextView;
 
-    const v2, 0x7f0a02d3
+    const v2, 0x7f0a02d5
 
     invoke-virtual {p0, v2}, Lcom/android/settings/graph/UsageView;->findViewById(I)Landroid/view/View;
 
@@ -89,7 +89,7 @@
 
     aput-object v2, v1, v3
 
-    const v2, 0x7f0a02cd
+    const v2, 0x7f0a02cf
 
     invoke-virtual {p0, v2}, Lcom/android/settings/graph/UsageView;->findViewById(I)Landroid/view/View;
 
@@ -203,7 +203,7 @@
 
     check-cast v5, Landroid/widget/LinearLayout;
 
-    const v6, 0x7f0a02cf
+    const v6, 0x7f0a02d1
 
     invoke-virtual {p0, v6}, Lcom/android/settings/graph/UsageView;->findViewById(I)Landroid/view/View;
 
@@ -420,11 +420,11 @@
 .method public setSideLabelWeights(FF)V
     .locals 1
 
-    const v0, 0x7f0a0519
+    const v0, 0x7f0a051d
 
     invoke-direct {p0, v0, p1}, Lcom/android/settings/graph/UsageView;->setWeight(IF)V
 
-    const v0, 0x7f0a051a
+    const v0, 0x7f0a051e
 
     invoke-direct {p0, v0, p2}, Lcom/android/settings/graph/UsageView;->setWeight(IF)V
 

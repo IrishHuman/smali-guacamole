@@ -468,7 +468,7 @@
 
     const/4 v1, 0x2
 
-    const v2, 0x7f120841
+    const v2, 0x7f120842
 
     invoke-interface {p1, v0, v1, v0, v2}, Landroid/view/Menu;->add(IIII)Landroid/view/MenuItem;
 
@@ -602,7 +602,7 @@
 
     if-nez v0, :cond_0
 
-    const v2, 0x7f1207e3
+    const v2, 0x7f1207e4
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(I)V
 

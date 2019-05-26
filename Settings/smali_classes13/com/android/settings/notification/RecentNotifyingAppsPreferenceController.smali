@@ -381,7 +381,7 @@
 
     iget-object v0, p0, Lcom/android/settings/notification/RecentNotifyingAppsPreferenceController;->mSeeAllPref:Landroid/support/v7/preference/Preference;
 
-    const v2, 0x7f120a31
+    const v2, 0x7f120a33
 
     invoke-virtual {v0, v2}, Landroid/support/v7/preference/Preference;->setTitle(I)V
 
@@ -447,7 +447,7 @@
 
     iget-object v1, v0, Lcom/android/settings/notification/RecentNotifyingAppsPreferenceController;->mCategory:Landroid/support/v7/preference/PreferenceCategory;
 
-    const v2, 0x7f120fa2
+    const v2, 0x7f120fa5
 
     invoke-virtual {v1, v2}, Landroid/support/v7/preference/PreferenceCategory;->setTitle(I)V
 
@@ -701,7 +701,7 @@
 
     move-result-object v5
 
-    const v13, 0x7f120a31
+    const v13, 0x7f120a33
 
     invoke-virtual {v5, v13}, Lcom/android/settings/core/SubSettingLauncher;->setTitle(I)Lcom/android/settings/core/SubSettingLauncher;
 
@@ -1552,7 +1552,7 @@
 
     iget-object v1, p0, Lcom/android/settings/notification/RecentNotifyingAppsPreferenceController;->mContext:Landroid/content/Context;
 
-    const v2, 0x7f120fa3
+    const v2, 0x7f120fa6
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

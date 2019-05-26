@@ -1042,7 +1042,7 @@
 
     move-result-object v5
 
-    const v6, 0x7f1212b5
+    const v6, 0x7f1212c2
 
     invoke-virtual {p0, v6}, Lcom/oneplus/settings/timer/timepower/TimepowerSettingsFragment;->getString(I)Ljava/lang/String;
 
@@ -1333,7 +1333,7 @@
 
     iput-object v0, v7, Lcom/oneplus/settings/timer/timepower/TimepowerSettingsFragment;->mTimePicker:Lcom/oneplus/lib/widget/TimePicker;
 
-    const v0, 0x7f1212af
+    const v0, 0x7f1212bc
 
     invoke-virtual/range {p1 .. p1}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
@@ -1375,7 +1375,7 @@
 
     if-nez v13, :cond_2
 
-    const v0, 0x7f1212b3
+    const v0, 0x7f1212c0
 
     :cond_1
     :goto_0
@@ -1386,7 +1386,7 @@
     :cond_2
     if-ne v13, v14, :cond_1
 
-    const v0, 0x7f1212b1
+    const v0, 0x7f1212be
 
     goto :goto_0
 

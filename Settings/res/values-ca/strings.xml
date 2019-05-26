@@ -2549,8 +2549,8 @@ L'aplicació també podrà activar i desactivar el mode No molestis i canviar la
     <string name="one_userkey">"una clau d'usuari"</string>
     <string name="oneplus_adaptive_model">Mode adaptatiu</string>
     <string name="oneplus_add">Afegeix</string>
-    <string name="oneplus_add_bluetooth_car_kit">"Afegeix l'equip Bluetooth per a automàbils"</string>
-    <string name="oneplus_add_bluetooth_car_kit_summary">"L'equip Bluetooth per a automòbils es connecta automàticament als vostres dispositius anteriors, també podeu afegir noves connexions manualment."</string>
+    <string name="oneplus_add_bluetooth_car_kit">Afegeix el Bluetooth de vehicle</string>
+    <string name="oneplus_add_bluetooth_car_kit_summary">El Bluetooth de vehicle es connecta automàticament als dispositius anteriors, i també podeu afegir dispositius nous manualment</string>
     <string name="oneplus_add_fingerprint_list">Afegeix empremta digital</string>
     <string name="oneplus_adjust_effect">"Força de l'efecte"</string>
     <string name="oneplus_advanced_display_settings">Configuració de pantalla avançada</string>
@@ -2786,7 +2786,7 @@ Consell de seguretat: el desbloqueig facial és menys segur que l'empremta digit
     <string name="oneplus_fnatic_mode_add_to_wallpapers">Afegeix als fons de pantalla</string>
     <string name="oneplus_fnatic_mode_background_introduction_summary">Centrant el rendiment gairebé per complet cap al joc. Això pot provocar errors en algunes aplicacions.</string>
     <string name="oneplus_fnatic_mode_background_introduction_title">Millora el regulador de procés</string>
-    <string name="oneplus_fnatic_mode_disturb_introduction_summary">"Bloqueja totes les notificacions i trucades (excepte les notificacions de bateria baixa, alarmes i temporitzadors). Només podeu veure les trucades perdudes en l'historial de trucades."</string>
+    <string name="oneplus_fnatic_mode_disturb_introduction_summary">Bloqueja totes les notificacions i trucades (excepte les notificacions de bateria baixa, alarmes i temporitzadors).</string>
     <string name="oneplus_fnatic_mode_disturb_introduction_title">DND avançada</string>
     <string name="oneplus_fnatic_mode_enable_introduction_title">Primer és necessari habilitar el Mode de joc per utilitzar el Mode Fnatic</string>
     <string name="oneplus_fnatic_mode_network_introduction_dual4g_summary">"Es prioritza la força del senyal de la targeta SIM principal per minimitzar la interferència amb els jocs de baixa latència. Com a resultat, s'inhabilitarà la targeta SIM secundària, i no es rebran trucades o missatges."</string>
@@ -2878,6 +2878,7 @@ Per anar a la pantalla d'inici en qualsevol moment, feu lliscar el dit cap amunt
     <string name="oneplus_haptic_feedback_tips">Proporciona una millor resposta tàctil per a les escenes de joc, només aplicable als jocs compatibles</string>
     <string name="oneplus_haptic_feedback_title">Millora de la resposta tàctil</string>
     <string name="oneplus_hardware_keys_action_split_screen">Obre/tanca la pantalla dividida</string>
+    <string name="oneplus_health_safety_information">Informació de salut i seguretat</string>
     <string name="oneplus_hearing_aid">Compatibilitat audiòfon</string>
     <string name="oneplus_hide_navigation_bar">Oculta la barra de navegació</string>
     <string name="oneplus_hide_navkeys">Amaga la barra de navegació</string>
@@ -3092,8 +3093,8 @@ Nota: L'empremta digital pot ser menys segura que un patró o un PIN fort"</stri
     <string name="oneplus_receive_notifications">Notificacions OnePlus</string>
     <string name="oneplus_receive_notifications_agree">Rebre notícies de OnePlus</string>
     <string name="oneplus_receive_notifications_summary">Accepteu rebre notícies oficials de OnePlus, informació sobre productes, qüestionaris i recomanacions de compra/informació sobre cupons</string>
-    <string name="oneplus_recognized_bluetooth_car_kits">Equips Bluetooth per a automòbils reconeguts</string>
-    <string name="oneplus_recognized_bluetooth_car_kits_no_devices">No hi ha cap equip Bluetooth per a automòbils, podeu afegir les següents connexions noves manualment</string>
+    <string name="oneplus_recognized_bluetooth_car_kits">Bluetooth de vehicle reconegut</string>
+    <string name="oneplus_recognized_bluetooth_car_kits_no_devices">No hi ha cap Bluetooth de vehicle, podeu afegir nous dispositius manualment a continuació</string>
     <string name="oneplus_recommended_opening">Recomanat</string>
     <string name="oneplus_reenroll_fingerprint_tips">"Torneu a introduir la vostra empremta digital després de reemplaçar la pel·lícula protectora del telèfon mòbil per garantir l'exactitud de l'empremta digital"</string>
     <string name="oneplus_regulatory_information">Verificació</string>
@@ -3116,6 +3117,7 @@ Nota: L'empremta digital pot ser menys segura que un patró o un PIN fort"</stri
     <string name="oneplus_screen_color_mode_basic">sRGB</string>
     <string name="oneplus_screen_color_mode_default">Per defecte</string>
     <string name="oneplus_screen_color_mode_defined">Color personalitzat</string>
+    <string name="oneplus_screen_color_mode_ntsc">"Ampla varietat d'AMOLED"</string>
     <string name="oneplus_screen_color_mode_reading_mode_on_summary">No està disponible perquè el mode lectura està activat</string>
     <string name="oneplus_screen_color_mode_soft">Suau</string>
     <string name="oneplus_screen_color_mode_title">Calibratge de la pantalla</string>
@@ -3705,6 +3707,10 @@ Interfície d'UT: %5$s"</string>
     <string name="restore_default_apn_completed">"S'ha restablert la configuració predeterminada d'APN."</string>
     <string name="restr_pin_enter_admin_pin">"Introdueix el PIN d'administrador"</string>
     <string name="restrict_background_blacklisted">Les dades en segon pla estan desactivades</string>
+    <string name="restrict_background_uss_always">Sempre</string>
+    <string name="restrict_background_uss_never">Mai</string>
+    <string name="restrict_background_uss_roaming">Només en itinerància</string>
+    <string name="restrict_background_uss_title">Restringeix les dades en segon pla</string>
     <string name="restricted_app_detail_footer">Aquestes aplicacions han estat consumint bateria en segon pla. És possible que les aplicacions restringides no funcionin correctament i que en rebis les notificacions amb retard.</string>
     <string name="restricted_app_title">Aplicacions restringides</string>
     <string name="restricted_false_label">"L'aplicació pot consumir bateria en segon pla"</string>
@@ -4406,6 +4412,7 @@ Prova un altre suport (^3) més ràpid o fes servir aquest (^4) com a emmagatzem
     <string name="summary_divider_text">", "</string>
     <string name="summary_range_symbol_combination">%1$s - %2$s</string>
     <string name="summary_range_verbal_combination">%1$s a %2$s</string>
+    <string name="summary_voice_network">Trucades Wi-Fi, VoLTE</string>
     <string name="support_country_format">%1$s - %2$s</string>
     <string name="support_summary">"Articles d'ajuda, telèfon i xat, com començar"</string>
     <string name="suw_back_button_label">Enrere</string>
@@ -4458,6 +4465,11 @@ La sincronització de dades que ha ideat Google per permetre l'accés als contac
     <string name="testing">Proves</string>
     <string name="testing_phone_info">Informació del telèfon</string>
     <string name="testing_usage_stats">"Estadístiques d'ús"</string>
+    <string name="tether_error_item_default">Compartició de xarxa</string>
+    <string name="tether_error_message">No esteu subscrits a %1$s.</string>
+    <string name="tether_error_title">Error %1$s</string>
+    <string name="tether_no_sim_message">Inseriu una targeta SIM per utilitzar la zona Wi-Fi mòbil i altres opcions de compartició de xarxa</string>
+    <string name="tether_no_sim_title">No hi ha cap targeta SIM</string>
     <string name="tether_settings_disabled_on_data_saver">"No es pot compartir la xarxa ni utilitzar punts d'accés Wi-Fi mentre la funció Economitzador de dades està activada"</string>
     <string name="tether_settings_summary_hotspot_off_tether_on">Compartició de xarxa</string>
     <string name="tether_settings_summary_hotspot_on_tether_off">"Punt d'accés Wi-Fi activat"</string>
@@ -4863,6 +4875,7 @@ Qualsevol usuari pot actualitzar les aplicacions dels altres usuaris."</string>
     <string name="voice_input_settings_title">Entrada de veu</string>
     <string name="voice_interaction_security_warning">"Aquest servei d'entrada de veu podrà supervisar sempre la veu i controlar les aplicacions compatibles amb l'entrada de veu en nom teu. Procedeix de l'aplicació %s. Vols activar l'ús d'aquest servei?"</string>
     <string name="voice_interactor_preference_summary">Paraula activa i interacció completes</string>
+    <string name="voice_network_title">Xarxes de veu</string>
     <string name="voice_recognizer_preference_summary">Síntesi de veu simple</string>
     <string name="voice_search_settings_title">Cerca per veu</string>
     <string name="voice_service_preference_section_title">"Serveis d'entrada de veu"</string>

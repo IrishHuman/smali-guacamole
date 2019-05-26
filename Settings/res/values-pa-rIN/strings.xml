@@ -168,8 +168,8 @@
     <string name="nxp_non_std_card_summary">ਕੁਝ ਗ਼ੈਰ-ਮਿਆਰੀ NFC ਟੈਗਾਂ ਨੂੰ ਪੜ੍ਹਨ ਲਈ ਸਮਰਥਨ</string>
     <string name="oneplus_adaptive_model">ਢਲਨਹਾਰ ਮੋਡ</string>
     <string name="oneplus_add">ਜੋੜੋ</string>
-    <string name="oneplus_add_bluetooth_car_kit">ਬਲੂਟੁੱਥ ਕਾਰ ਕਿੱਟ ਜੋੜੋ</string>
-    <string name="oneplus_add_bluetooth_car_kit_summary">ਬਲੂਟੂਥ ਕਾਰ ਕਿਟ ਸਵੈਚਾਲਿਤ ਤਰੀਕੇ ਨਾਲ ਤੁਹਾਡੇ ਪੁਰਾਣੇ ਡਿਵਾਈਸਾਂ ਨੂੰ ਕਨੈਕਟ ਕਰਦਾ ਹੈ, ਤੁਸੀਂ ਮੈਨੂੰਅਲ ਤਰੀਕੇ ਨਾਲ ਪੁਰਾਣੇ ਕਨੈਕਸ਼ਨ ਵੀ ਜੋੜ ਸਕਦੇ ਹੋ</string>
+    <string name="oneplus_add_bluetooth_car_kit">ਵਾਹਨ ਬਲੂਟੁੱਥ ਜੋੜੋ</string>
+    <string name="oneplus_add_bluetooth_car_kit_summary">ਵਾਹਨ ਬਲੂਟੁੱਥ ਆਪਣੇ-ਆਪ ਤੁਹਾਡੀਆਂ ਪਹਿਲਾਂ ਦੀਆਂ ਡਿਵਾਈਸਾਂ ਨਾਲ ਕਨੈਕਟ ਕਰਦਾ ਹੈ, ਤੁਸੀਂ ਨਵੀਆਂ ਡਿਵਾਈਸਾਂ ਨੂੰ ਹੱਥੀਂ ਵੀ ਜੋੜ ਸਕਦੇ ਹੋ</string>
     <string name="oneplus_add_fingerprint_list">ਫਿੰਗਰਪ੍ਰਿੰਟ ਜੋੜੋ</string>
     <string name="oneplus_adjust_effect">ਪ੍ਰਭਾਵ ਦੀ ਮਜ਼ਬੂਤੀ</string>
     <string name="oneplus_advanced_display_settings">ਆਧੁਨਿਕ ਡਿਸਪਲੇ ਸੈਟਿੰਗਾਂ</string>
@@ -405,7 +405,7 @@
     <string name="oneplus_fnatic_mode_add_to_wallpapers">ਵਾਲਪੇਪਰਾਂ ਵਿੱਚ ਜੋੜੋ</string>
     <string name="oneplus_fnatic_mode_background_introduction_summary">"ਲਗਭਗ ਗੇਮ ਖੇਡਣ 'ਤੇ ਧਿਆਨ ਕੇਂਦਰਿਤ ਕਰਨਾ। ਇਸ ਦੇ ਨਤੀਜੇ ਵਜੋਂ ਕੁਝ ਐਪਾਂ ਵਿੱਚ ਖਰਾਬੀਆਂ ਹੋ ਸਕਦੀਆਂ ਹਨ।"</string>
     <string name="oneplus_fnatic_mode_background_introduction_title">ਪ੍ਰਕਿਰਿਆ ਰੈਗੂਲੇਟਰ ਨੂੰ ਵਧਾਓ</string>
-    <string name="oneplus_fnatic_mode_disturb_introduction_summary">ਸਾਰੀਆਂ ਸੂਚਨਾਵਾਂ ਅਤੇ ਕਾਲਾਂ (ਬੈਟਰੀ ਘੱਟ ਹੋਣ ਦੀ ਸੂਚਨਾ, ਅਲਾਰਮ ਅਤੇ ਟਾਈਮਰ ਨੂੰ ਛੱਡ ਕੇ) ਨੂੰ ਬਲੌਕ ਕਰੋ। ਤੁਸੀਂ ਮਿੱਸਡ ਕਾਲਾਂ ਨੂੰ ਕਾਲ ਇਤਿਹਾਸ ਵਿੱਚ ਹੀ ਦੇਖ ਸਕਦੇ ਹੋ।</string>
+    <string name="oneplus_fnatic_mode_disturb_introduction_summary">ਸਾਰੀਆਂ ਸੂਚਨਾਵਾਂ ਅਤੇ ਕਾਲਾਂ (ਬੈਟਰੀ ਘੱਟ ਹੋਣ ਦੀ ਸੂਚਨਾ, ਅਲਾਰਮ ਅਤੇ ਟਾਈਮਰ ਨੂੰ ਛੱਡ ਕੇ)</string>
     <string name="oneplus_fnatic_mode_disturb_introduction_title">ਆਧੁਨਿਕ DND</string>
     <string name="oneplus_fnatic_mode_enable_introduction_title">Fnatic ਮੋਡ ਦੀ ਵਰਤੋਂ ਕਰਨ ਲਈ ਪਹਿਲਾਂ ਗੇਮਿੰਗ ਮੋਡ ਨੂੰ ਸਮਰੱਥ ਕੀਤਾ ਹੋਣਾ ਲਾਜ਼ਮੀ ਹੈ।</string>
     <string name="oneplus_fnatic_mode_network_introduction_dual4g_summary">ਘੱਟ ਵਿਲੰਬਤਾ ਨਾਲ ਗੇਮ ਖੇਡਣ ਲਈ ਦਖਲ ਨੂੰ ਘੱਟ ਤੋਂ ਘੱਟ ਕਰਨ ਵਾਸਤੇ ਪ੍ਰਾਇਮਰੀ SIM ਕਾਰਡ ਸਿਗਨਲ ਦੀ ਮਜ਼ਬੂਤੀ ਨੂੰ ਤਰਜੀਹ ਦਿੱਤੀ ਜਾਂਦੀ ਹੈ। ਨਤੀਜੇ ਵਜੋਂ ਸੈਕੰਡਰੀ SIM ਕਾਰਡ ਅਸਮਰਥਿਤ ਹੋ ਜਾਵੇਗਾ ਅਤੇ ਕਾਲਾਂ ਜਾਂ ਸੁਨੇਹੇ ਪ੍ਰਾਪਤ ਨਹੀਂ ਹੋਣਗੇ।</string>
@@ -497,6 +497,7 @@
     <string name="oneplus_haptic_feedback_tips">ਵਿਸ਼ੇਸ਼ ਗੇਮ ਦ੍ਰਿਸ਼ਾਂ ਦੇ ਲਈ ਹੈਪਟਿਕ ਫੀਡਬੈਕ ਪ੍ਰਦਾਨ ਕਰਦਾ ਹੈ, ਸਿਰਫ ਸਪੋਰਟੇਡ ਗੇਮਾਂ ਵਿੱਚ ਹੀ ਲਾਗੂ</string>
     <string name="oneplus_haptic_feedback_title">ਹੈਪਟਿਕ ਫੀਡਬੈਕ ਇਨਹਾਂਸਮੈਂਟ</string>
     <string name="oneplus_hardware_keys_action_split_screen">ਸਪਲਿੱਟ ਸਕ੍ਰੀਨ ਖੋਲ੍ਹੋ/ਬੰਦ ਕਰੋ</string>
+    <string name="oneplus_health_safety_information">ਸਿਹਤ &amp; ਸੁਰੱਖਿਆ ਜਾਣਕਾਰੀ</string>
     <string name="oneplus_hearing_aid">ਸੁਣਨ ਵਿੱਚ ਮਦਦ ਕਰਨ ਵਾਲੀ ਮਸ਼ੀਨ ਦੀ ਅਨੁਕੂਲਤਾ</string>
     <string name="oneplus_hide_navigation_bar">ਨੈਵੀਗੇਸ਼ਨ ਪੱਟੀ ਲੁਕਾਓ</string>
     <string name="oneplus_hide_navkeys">ਨੈਵੀਗੇਸ਼ਨ ਪੱਟੀ ਨੂੰ ਲੁਕਾਓ</string>
@@ -711,8 +712,8 @@
     <string name="oneplus_receive_notifications">OnePlus ਸੂਚਨਾਵਾਂ</string>
     <string name="oneplus_receive_notifications_agree">OnePlus ਤੋਂ ਖਬਰਾਂ ਹਾਸਲ ਕਰੋ</string>
     <string name="oneplus_receive_notifications_summary">OnePlus ਦੀਆਂ ਅਧਿਕਾਰਕ ਖਬਰਾਂ, ਉਤਪਾਦ ਸੰਬੰਧੀ ਜਾਣਕਾਰੀ, ਪ੍ਰਸ਼ਨਾਵਲੀ ਰਾਹੀਂ ਗੱਲਬਾਤ ਅਤੇ ਖਰੀਦਦਾਰੀ ਸੰਬੰਧੀ ਸਿਫ਼ਾਰਸ਼/ਕੂਪਨ ਸੰਬੰਧੀ ਜਾਣਕਾਰੀ ਹਾਸਲ ਕਰਨ ਲਈ ਸਵੀਕਾਰ ਕਰੋ</string>
-    <string name="oneplus_recognized_bluetooth_car_kits">ਮਾਨਤਾ-ਪ੍ਰਾਪਤ ਬਲੂਟੁੱਥ ਕਾਰ ਕਿੱਟਾਂ</string>
-    <string name="oneplus_recognized_bluetooth_car_kits_no_devices">ਕੋਈ ਬਲੂਟੁੱਥ ਕਾਰ ਕਿੱਟ, ਤੁਸੀਂ ਹੇਠਾਂ ਮੈਨੂਅਲੀ ਨਵੇਂ ਕਨੈਕਸ਼ਨ ਜੋੜ ਸਕਦੇ ਹੋ</string>
+    <string name="oneplus_recognized_bluetooth_car_kits">ਮਾਨਤਾ-ਪ੍ਰਾਪਤ ਵਾਹਨ ਬਲੂਟੁੱਥ</string>
+    <string name="oneplus_recognized_bluetooth_car_kits_no_devices">ਕੋਈ ਵਾਹਨ ਬਲੂਟੁੱਥ ਨਹੀਂ ਹੈ, ਤੁਸੀਂ ਨਵੀਆਂ ਡਿਵਾਈਸਾਂ ਨੂੰ ਹੇਠਾਂ ਹੱਥੀਂ ਜੋੜ ਸਕਦੇ ਹੋ</string>
     <string name="oneplus_recommended_opening">ਸਿਫ਼ਾਰਸ਼ ਕੀਤਾ ਗਿਆ</string>
     <string name="oneplus_reenroll_fingerprint_tips">ਮੋਬਾਈਲ ਫ਼ੋਨ ਦੀ ਪ੍ਰੋਟੈਕਟਿਵ ਫ਼ਿਲਮ ਬਦਲਣ ਤੋਂ ਬਾਅਦ ਫਿੰਗਰਪ੍ਰਿੰਟ ਦੀ ਸਟੀਕਤਾ ਨੂੰ ਯਕੀਨੀ ਬਣਾਉਣ ਲਈ ਕਿਰਪਾ ਕਰਕੇ ਆਪਣਾ ਫਿੰਗਰਪ੍ਰਿੰਟ ਮੁਖ-ਦਾਖ਼ਲ ਕਰੋ</string>
     <string name="oneplus_regulatory_information">ਪੁਸ਼ਟੀਕਰਨ</string>
@@ -735,6 +736,7 @@
     <string name="oneplus_screen_color_mode_basic">sRGB</string>
     <string name="oneplus_screen_color_mode_default">ਪੂਰਵ-ਨਿਰਧਾਰਤ</string>
     <string name="oneplus_screen_color_mode_defined">ਵਿਸ਼ੇਸ਼-ਵਿਉਂਤਬੱਧ ਰੰਗ</string>
+    <string name="oneplus_screen_color_mode_ntsc">AMOLED ਵਿਆਪਕ ਗੈਮਟ</string>
     <string name="oneplus_screen_color_mode_reading_mode_on_summary">ਪੜ੍ਹਣ ਮੋਡ ਚਾਲੂ ਹੋਣ ਕਾਰਨ ਅਣਉਪਲਬਧ ਹੈ</string>
     <string name="oneplus_screen_color_mode_soft">ਹਲਕਾ</string>
     <string name="oneplus_screen_color_mode_title">ਸਕ੍ਰੀਨ ਕੈਲੀਬ੍ਰੇਸ਼ਨ</string>
@@ -1019,6 +1021,10 @@
     <string name="quick_unlock_title">ਤੁਰੰਤ ਅਨਲੌਕ</string>
     <string name="reset_collect_diagnostics_summary">ਸਮੱਸਿਆ ਦਾ ਹੱਲ ਕਰਨ ਲਈ ਨਿਦਾਨਕ ਡੇਟਾ ਨੂੰ ਇਕੱਤਰ ਕਰੋ</string>
     <string name="reset_collect_diagnostics_title">ਨਿਦਾਨਕ ਡੇਟਾ ਨੂੰ ਇਕੱਤਰ ਕਰੋ</string>
+    <string name="restrict_background_uss_always">ਹਮੇਸ਼ਾ</string>
+    <string name="restrict_background_uss_never">ਕਦੇ ਨਹੀਂ</string>
+    <string name="restrict_background_uss_roaming">ਸਿਰਫ਼ ਰੋਮਿੰਗ ਦੌਰਾਨ</string>
+    <string name="restrict_background_uss_title">"ਬੈਕਗ੍ਰਾਊਂਡ ਡੇਟਾ 'ਤੇ ਪਾਬੰਦੀ ਲਗਾਓ"</string>
     <string name="saturation_option_title">ਰੰਗ ਸੰਤੁਲਨ</string>
     <string name="schedule_reminders">ਈਵੈਂਟ ਯਾਦ-ਦਹਾਨੀਆਂ</string>
     <string name="screen_color_mode_advanced">ਉੱਨਤ</string>
@@ -1076,7 +1082,13 @@
     <string name="sub_deactivate_not_supported">ਅਕਿਰਿਆਸ਼ੀਲ ਕਰਨਾ ਸਮਰਥਿਤ ਨਹੀਂ ਹੈ</string>
     <string name="sub_deactivate_success">ਸਫ਼ਲਤਾਪੂਰਵਕ ਅਕਿਰਿਆਸ਼ੀਲ ਕੀਤਾ ਗਿਆ।</string>
     <string name="subs_settings">SIMਆਂ ਦੀ ਸਥਿਤੀ</string>
+    <string name="summary_voice_network">VoLTE, Wi-Fi ਕਾਲਿੰਗ</string>
     <string name="system_update_uss_title">ਡਾਊਨਲੋਡ ਕਰਕੇ ਇੰਸਟਾਲ ਕਰੋ</string>
+    <string name="tether_error_item_default">ਟੈਦਰਿੰਗ</string>
+    <string name="tether_error_message">ਤੁਸੀਂ %1$s ਲਈ ਸਬਸਕ੍ਰਾਈਬ ਨਹੀਂ ਕੀਤਾ ਹੈ।</string>
+    <string name="tether_error_title">%1$s ਤਰੁੱਟੀ</string>
+    <string name="tether_no_sim_message">ਮੋਬਾਈਲ ਹੌਟਸਪੌਟ ਅਤੇ ਹੋਰ ਟੈਦਰਿੰਗ ਵਿਕਲਪਾਂ ਨੂੰ ਵਰਤਣ ਲਈ SIM ਕਾਰਡ ਪਾਓ</string>
+    <string name="tether_no_sim_title">ਕੋਈ SIM ਕਾਰਡ ਨਹੀਂ</string>
     <string name="theme_accent_color_title">ਐਕਸੈਂਟ ਰੰਗ</string>
     <string name="theme_switch_dark">ਹਨੇਰਾ</string>
     <string name="theme_switch_dark_mode_summary">ਪੂਰੇ ਸਿਸਟਮ ਵਿੱਚ ਹਨੇਰਾ ਥੀਮ ਸਮਰੱਥ ਕਰੋ</string>
@@ -1139,6 +1151,7 @@
     <string name="user_experience_description">ਉਤਪਾਦ ਡਿਜ਼ਾਈਨ ਅਤੇ ਵਰਤੋਂਕਾਰ ਅਨੁਭਵ ਨੂੰ ਬਿਹਤਰ ਬਣਾਉਣ ਲਈ, ਤੁਸੀਂ ਆਪਣੇ ਫ਼ੋਨ ਨੂੰ ਕਿਵੇਂ ਵਰਤਦੇ ਹੋ ਇਸ ਬਾਰੇ OnePlus ਨੂੰ ਗੁਮਨਾਮ ਤਰੀਕੇ ਨਾਲ ਆਮ ਅੰਕੜਾ ਡੇਟਾ ਦਾ ਮੁਲਾਂਕਣ ਕਰਨ ਦੀ ਇਜਾਜ਼ਤ ਦਿਓ।</string>
     <string name="user_is_not_allowed_dlg_text">ਵਰਤਮਾਨ ਉਪਭੋਗਤਾ ਨੂੰ ਇਸ ਅਣਸਥਾਪਨਾ ਨੂੰ ਕਰਨ ਲਈ ਇਜਾਜ਼ਤ ਨਹੀਂ ਹੈ।</string>
     <string name="user_is_not_allowed_dlg_title">ਇਜਾਜ਼ਤ ਨਹੀਂ ਹੈ</string>
+    <string name="voice_network_title">ਵੌਇਸ ਨੈੱਟਵਰਕ</string>
     <string name="volume_adjust_sound_title">ਵਾਲਿਊਮ ਸਲਾਈਡਰ ਆਵਾਜ਼</string>
     <string name="wifi_certificate">ਪ੍ਰਮਾਣਪੱਤਰ</string>
     <string name="wifi_context_menu_change_password">ਪਾਸਵਰਡ ਬਦਲੋ</string>

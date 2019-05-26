@@ -445,7 +445,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0300d0
+    const v2, 0x7f0300d2
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
@@ -573,6 +573,8 @@
 
     :cond_2
     :goto_0
+    iput p1, p0, Lcom/oneplus/settings/OPVibrateIntensity;->mTempTouchTapIntensity:I
+
     iget-object v0, p0, Lcom/oneplus/settings/OPVibrateIntensity;->mVibrator:Landroid/os/Vibrator;
 
     if-eqz v0, :cond_3
@@ -1031,7 +1033,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0300d1
+    const v2, 0x7f0300d3
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
@@ -1043,7 +1045,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f0300d0
+    const v3, 0x7f0300d2
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 

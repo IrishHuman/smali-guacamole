@@ -117,7 +117,7 @@
 .end method
 
 .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
-    .locals 5
+    .locals 6
 
     const/4 v0, 0x0
 
@@ -139,6 +139,22 @@
 
     invoke-virtual {v1, v2}, Lcom/android/setupwizardlib/GlifLayout;->setHeaderText(Ljava/lang/CharSequence;)V
 
+    invoke-virtual {v1}, Lcom/android/setupwizardlib/GlifLayout;->getHeaderTextView()Landroid/widget/TextView;
+
+    move-result-object v2
+
+    invoke-virtual {p0}, Lcom/android/settings/password/SetupChooseLockPattern$SetupChooseLockPatternFragment;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    const v4, 0x7f0602ac
+
+    invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getColor(I)I
+
+    move-result v3
+
+    invoke-virtual {v2, v3}, Landroid/widget/TextView;->setTextColor(I)V
+
     invoke-virtual {p0}, Lcom/android/settings/password/SetupChooseLockPattern$SetupChooseLockPatternFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
@@ -151,7 +167,7 @@
 
     if-eqz v2, :cond_1
 
-    const v2, 0x7f0a055c
+    const v2, 0x7f0a0560
 
     invoke-virtual {v1, v2}, Lcom/android/setupwizardlib/GlifLayout;->findViewById(I)Landroid/view/View;
 
@@ -159,9 +175,9 @@
 
     if-eqz v2, :cond_0
 
-    const/16 v4, 0x8
+    const/16 v5, 0x8
 
-    invoke-virtual {v2, v4}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v2, v5}, Landroid/view/View;->setVisibility(I)V
 
     :cond_0
     goto :goto_0
@@ -175,9 +191,9 @@
 
     move-result-object v2
 
-    const v4, 0x7f08033a
+    const v5, 0x7f08033a
 
-    invoke-virtual {v2, v4}, Landroid/app/Activity;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v2, v5}, Landroid/app/Activity;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v2
 
@@ -195,7 +211,7 @@
 
     if-nez v2, :cond_3
 
-    const v2, 0x7f0a04b8
+    const v2, 0x7f0a04bc
 
     invoke-virtual {v1, v2}, Lcom/android/setupwizardlib/GlifLayout;->findViewById(I)Landroid/view/View;
 
@@ -218,7 +234,7 @@
 
     if-nez v2, :cond_4
 
-    const v2, 0x7f0a0509
+    const v2, 0x7f0a050d
 
     invoke-virtual {v1, v2}, Lcom/android/setupwizardlib/GlifLayout;->findViewById(I)Landroid/view/View;
 
@@ -235,7 +251,7 @@
     invoke-virtual {v2, v0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     :cond_4
-    const v0, 0x7f0a033e
+    const v0, 0x7f0a0342
 
     invoke-virtual {v1, v0}, Lcom/android/setupwizardlib/GlifLayout;->findViewById(I)Landroid/view/View;
 
@@ -249,9 +265,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f0602ac
-
-    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getColor(I)I
+    invoke-virtual {v2, v4}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result v2
 
@@ -277,6 +291,45 @@
 
     invoke-virtual {p0, p1, v0}, Lcom/android/settings/password/SetupChooseLockPattern$SetupChooseLockPatternFragment;->startChooseLockActivity(Lcom/android/settings/password/ScreenLockType;Landroid/app/Activity;)V
 
+    return-void
+.end method
+
+.method public onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
+    .locals 3
+
+    invoke-super {p0, p1, p2}, Lcom/android/settings/password/ChooseLockPattern$ChooseLockPatternFragment;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
+
+    move-object v0, p1
+
+    check-cast v0, Lcom/android/setupwizardlib/GlifLayout;
+
+    invoke-virtual {v0}, Lcom/android/setupwizardlib/GlifLayout;->getHeaderTextView()Landroid/widget/TextView;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    move-object v0, p1
+
+    check-cast v0, Lcom/android/setupwizardlib/GlifLayout;
+
+    invoke-virtual {v0}, Lcom/android/setupwizardlib/GlifLayout;->getHeaderTextView()Landroid/widget/TextView;
+
+    move-result-object v0
+
+    invoke-virtual {p0}, Lcom/android/settings/password/SetupChooseLockPattern$SetupChooseLockPatternFragment;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    const v2, 0x7f0602ac
+
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
+
+    :cond_0
     return-void
 .end method
 

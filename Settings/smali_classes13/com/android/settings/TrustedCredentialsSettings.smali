@@ -868,7 +868,7 @@
 
     invoke-virtual {v0, v2, v1}, Landroid/app/Activity;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    const v2, 0x7f1212c8
+    const v2, 0x7f1212d5
 
     invoke-virtual {v0, v2}, Landroid/app/Activity;->setTitle(I)V
 

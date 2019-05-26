@@ -2549,8 +2549,8 @@ Có người dùng khác trên thiết bị này.
     <string name="one_userkey">một khóa người dùng</string>
     <string name="oneplus_adaptive_model">Chế độ Thích ứng</string>
     <string name="oneplus_add">Thêm</string>
-    <string name="oneplus_add_bluetooth_car_kit">Thêm Bộ công cụ Bluetooth Xe hơi</string>
-    <string name="oneplus_add_bluetooth_car_kit_summary">Bộ công cụ Bluetooth xe hơi tự động kết nối với các thiết bị trước của bạn, bạn cũng có thể thêm kết nối mới bằng phương pháp thủ công</string>
+    <string name="oneplus_add_bluetooth_car_kit">Thêm Bluetooth của xe</string>
+    <string name="oneplus_add_bluetooth_car_kit_summary">Bluetooth của xe tự động kết nối với các thiết bị trước của bạn, bạn cũng có thể thêm thiết bị mới bằng phương pháp thủ công</string>
     <string name="oneplus_add_fingerprint_list">Thêm dấu vân tay</string>
     <string name="oneplus_adjust_effect">Cường độ hiệu ứng</string>
     <string name="oneplus_advanced_display_settings">Cài đặt hiển thị nâng cao</string>
@@ -2786,7 +2786,7 @@ Lời khuyên về rủi ro: Mở khóa bằng khuôn mặt kém an toàn hơn s
     <string name="oneplus_fnatic_mode_add_to_wallpapers">Thêm vào hình nền</string>
     <string name="oneplus_fnatic_mode_background_introduction_summary">Tập trung gần như toàn bộ hiệu suất vào chơi game. Điều này có thể gây trục trặc cho một số ứng dụng.</string>
     <string name="oneplus_fnatic_mode_background_introduction_title">Tăng cường điều chỉnh quy trình</string>
-    <string name="oneplus_fnatic_mode_disturb_introduction_summary">Chặn tất cả thông báo và cuộc gọi (ngoại trừ thông báo pin yếu, báo thức và hẹn giờ). Bạn chỉ có thể xem các cuộc gọi nhỡ trong lịch sử cuộc gọi.</string>
+    <string name="oneplus_fnatic_mode_disturb_introduction_summary">Chặn tất cả thông báo và cuộc gọi (ngoại trừ thông báo pin yếu, báo thức và hẹn giờ).</string>
     <string name="oneplus_fnatic_mode_disturb_introduction_title">DND nâng cao</string>
     <string name="oneplus_fnatic_mode_enable_introduction_title">Chế độ chơi game phải được bật trước để sử dụng chế độ Fnatic</string>
     <string name="oneplus_fnatic_mode_network_introduction_dual4g_summary">Cường độ tín hiệu thẻ SIM chính được tối ưu nhằm giảm thiểu nhiễu giúp chơi game với độ trễ thấp. Kết quả là thẻ SIM phụ sẽ bị vô hiệu hóa và bạn sẽ không nhận được các cuộc gọi hoặc tin nhắn.</string>
@@ -2878,6 +2878,7 @@ Bạn có thể tắt chúng bằng cách bật lại thanh điều hướng tro
     <string name="oneplus_haptic_feedback_tips">Cung cấp phản hồi xúc giác cho một số cảnh trò chơi cụ thể, chỉ áp dụng cho những trò chơi được hỗ trợ</string>
     <string name="oneplus_haptic_feedback_title">Tăng cường phản hồi xúc giác</string>
     <string name="oneplus_hardware_keys_action_split_screen">Mở/Đóng chia màn hình</string>
+    <string name="oneplus_health_safety_information">Thông tin Sức khỏe &amp; An toàn</string>
     <string name="oneplus_hearing_aid">Tương thích với Trợ thính</string>
     <string name="oneplus_hide_navigation_bar">Ẩn thanh điều hướng</string>
     <string name="oneplus_hide_navkeys">Ẩn thanh điều hướng</string>
@@ -3092,8 +3093,8 @@ Còn %d lượt."</string>
     <string name="oneplus_receive_notifications">Thông báo OnePlus</string>
     <string name="oneplus_receive_notifications_agree">Nhận tin tức từ OnePlus</string>
     <string name="oneplus_receive_notifications_summary">Chấp nhận để nhận tin tức chính thức từ OnePlus, thông tin sản phẩm, câu hỏi khảo sát và khuyến nghị mua/thông tin phiếu giảm giá</string>
-    <string name="oneplus_recognized_bluetooth_car_kits">Đã phát hiện thấy bộ công cụ bluetooth xe hơi</string>
-    <string name="oneplus_recognized_bluetooth_car_kits_no_devices">Không có Bộ công cụ Bluetooth Xe hơi, bạn có thể thêm kết nối mới bằng phương pháp thủ công dưới đây</string>
+    <string name="oneplus_recognized_bluetooth_car_kits">Bluetooth của xe đã được nhận diện</string>
+    <string name="oneplus_recognized_bluetooth_car_kits_no_devices">Không có Bluetooth của xe, bạn có thể thêm thiết mới bằng phương pháp thủ công ở bên dưới</string>
     <string name="oneplus_recommended_opening">Khuyến nghị</string>
     <string name="oneplus_reenroll_fingerprint_tips">Vui lòng nhập lại vân tay của bạn sau khi thay tấm bảo vệ của điện thoại di động để đảm bảo sự chính xác của vân tay</string>
     <string name="oneplus_regulatory_information">Xác minh</string>
@@ -3116,6 +3117,7 @@ Còn %d lượt."</string>
     <string name="oneplus_screen_color_mode_basic">sRGB</string>
     <string name="oneplus_screen_color_mode_default">Mặc định</string>
     <string name="oneplus_screen_color_mode_defined">Màu tùy chỉnh</string>
+    <string name="oneplus_screen_color_mode_ntsc">Gam màu rộng AMOLED</string>
     <string name="oneplus_screen_color_mode_reading_mode_on_summary">Không khả dụng bởi chế độ đọc đang bật</string>
     <string name="oneplus_screen_color_mode_soft">Mềm</string>
     <string name="oneplus_screen_color_mode_title">Hiệu chuẩn màn hình</string>
@@ -3703,6 +3705,10 @@ Giao diện UT: %5$s"</string>
     <string name="restore_default_apn_completed">Đặt lại cài đặt APN mặc định đã hoàn tất.</string>
     <string name="restr_pin_enter_admin_pin">Nhập mã PIN quản trị</string>
     <string name="restrict_background_blacklisted">Dữ liệu nền bị tắt</string>
+    <string name="restrict_background_uss_always">Luôn luôn</string>
+    <string name="restrict_background_uss_never">Không bao giờ</string>
+    <string name="restrict_background_uss_roaming">Chỉ khi chuyển vùng</string>
+    <string name="restrict_background_uss_title">Hạn chế dữ liệu nền</string>
     <string name="restricted_app_detail_footer">Các ứng dụng này vẫn đang sử dụng pin trong nền. Những ứng dụng bị hạn chế có thể hoạt động không bình thường và thông báo có thể bị chậm trễ.</string>
     <string name="restricted_app_title">Ứng dụng bị giới hạn</string>
     <string name="restricted_false_label">Ứng dụng có thể sử dụng pin trong nền</string>
@@ -4404,6 +4410,7 @@ Hãy thử dùng một ^3 nhanh hơn hoặc dùng ^4 này làm bộ nhớ di đ�
     <string name="summary_divider_text">", "</string>
     <string name="summary_range_symbol_combination">%1$s - %2$s</string>
     <string name="summary_range_verbal_combination">%1$s đến %2$s</string>
+    <string name="summary_voice_network">VoLTE, Gọi qua Wi-Fi</string>
     <string name="support_country_format">%1$s - %2$s</string>
     <string name="support_summary">Bài viết trợ giúp, điện thoại và trò chuyện, bắt đầu</string>
     <string name="suw_back_button_label">Quay lại</string>
@@ -4456,6 +4463,11 @@ Một giải pháp đồng bộ hóa dữ liệu của Google cho phép quyền 
     <string name="testing">Đang kiểm tra</string>
     <string name="testing_phone_info">Thông tin điện thoại</string>
     <string name="testing_usage_stats">Thống kê sử dụng</string>
+    <string name="tether_error_item_default">Chia sẻ kết nối</string>
+    <string name="tether_error_message">Bạn không được đăng ký với %1$s.</string>
+    <string name="tether_error_title">Lỗi %1$s</string>
+    <string name="tether_no_sim_message">Lắp thẻ SIM để sử dụng Điểm truy cập Di động và các tùy chọn chia sẻ kết nối khác</string>
+    <string name="tether_no_sim_title">Không có thẻ SIM</string>
     <string name="tether_settings_disabled_on_data_saver">Không thể chia sẻ kết nối hoặc sử dụng điểm phát sóng di động khi Trình tiết kiệm dữ liệu đang bật</string>
     <string name="tether_settings_summary_hotspot_off_tether_on">Chia sẻ kết nối</string>
     <string name="tether_settings_summary_hotspot_on_tether_off">Điểm phát sóng bật</string>
@@ -4861,6 +4873,7 @@ Mọi người dùng đều có thể cập nhật ứng dụng cho tất cả n
     <string name="voice_input_settings_title">Nhập bằng giọng nói</string>
     <string name="voice_interaction_security_warning">Dịch vụ nhập bằng giọng nói này có thể thực hiện theo dõi bằng giọng nói luôn bật và kiểm soát các ứng dụng hỗ trợ giọng nói thay mặt cho bạn. Dịch vụ này đến từ %s. Cho phép sử dụng dịch vụ này?</string>
     <string name="voice_interactor_preference_summary">Tương tác và từ nóng đầy đủ</string>
+    <string name="voice_network_title">Mạng thoại</string>
     <string name="voice_recognizer_preference_summary">Ngôn từ đơn giản dễ nhắn tin</string>
     <string name="voice_search_settings_title">Tìm kiếm bằng giọng nói</string>
     <string name="voice_service_preference_section_title">Dịch vụ nhập bằng giọng nói</string>

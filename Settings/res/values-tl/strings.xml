@@ -2549,8 +2549,8 @@ Dahil dito, mabibigyan din ng kakayahan ang app na i-on o i-off ang Huwag Istorb
     <string name="one_userkey">isang key ng user</string>
     <string name="oneplus_adaptive_model">Adaptive na mode</string>
     <string name="oneplus_add">Idagdag</string>
-    <string name="oneplus_add_bluetooth_car_kit">Magdagdag ng Bluetooth Car Kit</string>
-    <string name="oneplus_add_bluetooth_car_kit_summary">Ang Bluetooth Car Kit ay awtomatikong kumokonekta sa mga nakaraan mong device, maaari ka ring magdagdag ng mga bagong koneksyon nang manu-mano</string>
+    <string name="oneplus_add_bluetooth_car_kit">Idagdag ang Vehicle Bluetooth</string>
+    <string name="oneplus_add_bluetooth_car_kit_summary">Awtomatikong kokonekta ang Vehicle Bluetooth sa mga nauna mong device, mano-mano ka rin na makadaragdag ng mga bagong device</string>
     <string name="oneplus_add_fingerprint_list">Idagdag ang tatak ng daliri</string>
     <string name="oneplus_adjust_effect">Lakas ng epekto</string>
     <string name="oneplus_advanced_display_settings">Mga advanced na setting ng display</string>
@@ -2786,7 +2786,7 @@ Tip sa panganib: Hindi gaanong secure ang Face Unlock tulad ng fingerprint at pa
     <string name="oneplus_fnatic_mode_add_to_wallpapers">Idagdag sa mga wallpaper</string>
     <string name="oneplus_fnatic_mode_background_introduction_summary">Itinutuon ang paggana nang halos sa paglalaro lang lahat. Maaari itong magresulta sa mga pagpalya sa ilang app.</string>
     <string name="oneplus_fnatic_mode_background_introduction_title">Pahusayin ang process regulator</string>
-    <string name="oneplus_fnatic_mode_disturb_introduction_summary">I-block ang lahat ng notification at tawag (maliban sa notification sa paubos nang baterya, alarma at timer). Makikita mo lang ang mga hindi nasagot na tawag sa history ng tawag.</string>
+    <string name="oneplus_fnatic_mode_disturb_introduction_summary">I-block ang lahat ng notification at tawag (maliban sa notification sa paubos nang baterya, alarma at timer).</string>
     <string name="oneplus_fnatic_mode_disturb_introduction_title">Advanced DND</string>
     <string name="oneplus_fnatic_mode_enable_introduction_title">Dapat munang paganahin ang gaming mode para magamit ang Fnatic mode</string>
     <string name="oneplus_fnatic_mode_network_introduction_dual4g_summary">Inuuna ang lakas ng signal ng pangunahing SIM card para mapababa ang interference sa low latency na paglalaro. Bilang resulta, hindi papaganahin ang ikalawang SIM card, at hindi makatatanggap ng mga tawag at mensahe.</string>
@@ -2826,7 +2826,7 @@ Upang pumunta sa home screen kahit anu mang oras, i-swipe pataas mula sa ibabang
     <string name="oneplus_fullscreen_recent_guide_summary">Mag-swipe pataas mula sa gitna ng screen sa ibaba at i-pause</string>
     <string name="oneplus_fullscreen_recent_guide_title">Mga kamakailang app</string>
     <string name="oneplus_functional_terms">MGA TUNTUNIN AT KUNDISYON</string>
-    <string name="oneplus_game_haptic_feedback_summary">Maglagay ng haptic feedback para gawing mas claro ang karanasan mo sa paglalaro. Hindi pa suportado ang mga Bluetooth headphones.</string>
+    <string name="oneplus_game_haptic_feedback_summary">Maglagay ng haptic feedback para gawing mas klaro ang karanasan mo sa paglalaro. Hindi pa suportado ang mga Bluetooth headphone.</string>
     <string name="oneplus_game_mode_ad_summary">Pagbutihin ang mga detalye ng mga bahaging maliwanag at madilim sa display ng gaming</string>
     <string name="oneplus_game_mode_ad_title">Pagpapahusay ng display para sa gaming</string>
     <string name="oneplus_game_mode_app_list">Listahan ng App ng Gaming Mode</string>
@@ -2878,6 +2878,7 @@ Upang pumunta sa home screen kahit anu mang oras, i-swipe pataas mula sa ibabang
     <string name="oneplus_haptic_feedback_tips">Magdulot ng haptic feedback para sa mga payak na eksena ng laro, mailalapat lamang sa mga suportadong laro</string>
     <string name="oneplus_haptic_feedback_title">Pagpapabuti ng haptic feedback</string>
     <string name="oneplus_hardware_keys_action_split_screen">Magbukas/magsara ng split screen</string>
+    <string name="oneplus_health_safety_information">Impormasyon sa Kalusugan at Kaligtasan</string>
     <string name="oneplus_hearing_aid">Compatibility sa Hearing Aid</string>
     <string name="oneplus_hide_navigation_bar">Itago ang navigation bar</string>
     <string name="oneplus_hide_navkeys">Itago ang navigation na bar</string>
@@ -3092,8 +3093,8 @@ Paalala: Maaaring hindi gaanong secure ang iyong fingerprint kumpara sa isang ma
     <string name="oneplus_receive_notifications">Mga Notipikasyon ng OnePlus</string>
     <string name="oneplus_receive_notifications_agree">Makatanggap ng balita mula sa OnePlus</string>
     <string name="oneplus_receive_notifications_summary">Tanggapin upang matanggap ang opisyal na balita ng OnePlus, impormasyon sa produkto, pakikipag-ugnayan sa palatanungan at rekomendasyon sa pagbili/impormasyon sa kupon</string>
-    <string name="oneplus_recognized_bluetooth_car_kits">Mga nakikilalang bluetooth car kit</string>
-    <string name="oneplus_recognized_bluetooth_car_kits_no_devices">Walang Bluetooth Car Kit, maaari kang manual na magdagdag ng mga bagong koneksyon sa ibaba</string>
+    <string name="oneplus_recognized_bluetooth_car_kits">Kilalanin ang Vehicle Bluetooth</string>
+    <string name="oneplus_recognized_bluetooth_car_kits_no_devices">Walang Vehicle Bluetooth, mano-mano kang makadaragdag ng mga bagong device sa ibaba</string>
     <string name="oneplus_recommended_opening">Inirerekumenda</string>
     <string name="oneplus_reenroll_fingerprint_tips">Pakilagay muli ang iyong fingerprint pagkatapos na palitan ang protective film ng mobile phone para matiyak ang pagiging tama ng fingerprint</string>
     <string name="oneplus_regulatory_information">Pag-verify</string>
@@ -3116,6 +3117,7 @@ Paalala: Maaaring hindi gaanong secure ang iyong fingerprint kumpara sa isang ma
     <string name="oneplus_screen_color_mode_basic">sRGB</string>
     <string name="oneplus_screen_color_mode_default">Panimula</string>
     <string name="oneplus_screen_color_mode_defined">Custom na kulay</string>
+    <string name="oneplus_screen_color_mode_ntsc">AMOLED Wide Gamut</string>
     <string name="oneplus_screen_color_mode_reading_mode_on_summary">Hindi magagamit dahil bukas ang reading mode</string>
     <string name="oneplus_screen_color_mode_soft">Malumanay</string>
     <string name="oneplus_screen_color_mode_title">Kalibrasyon ng screen</string>
@@ -3369,7 +3371,7 @@ Kahit gawing nakatago ang network, hindi nito mababago ang mga setting ng iyong 
     <string name="op_storage">Imbakan &amp; memorya</string>
     <string name="op_system_dashboard_summary">Mga wika, oras, pag-reset, mga update</string>
     <string name="op_tcp_timestamps_randomization_dialog_title">Piliin ang tcp random timestamps flag</string>
-    <string name="op_tcp_timestamps_randomization_title">TCP random timestamps flag</string>
+    <string name="op_tcp_timestamps_randomization_title">Flag sa mga random na timestamp ng TCP</string>
     <string name="op_theme_2__cannot_change_color_accent">Magagamit lang ng temang The Avengers ang tema ng kulay ng system</string>
     <string name="op_theme_2__title">The Avengers</string>
     <string name="op_theme_3_cannot_change_color_accent">Ang tema ng kulay ng system lang ang magagamit ng temang McLaren</string>
@@ -3703,6 +3705,10 @@ UT Interface: %5$s"</string>
     <string name="restore_default_apn_completed">Nakumpleto ang pag-reset sa default na mga setting ng APN.</string>
     <string name="restr_pin_enter_admin_pin">Ilagay ang PIN ng admin</string>
     <string name="restrict_background_blacklisted">Naka-off ang data ng background</string>
+    <string name="restrict_background_uss_always">Palagi</string>
+    <string name="restrict_background_uss_never">Hindi kailanman</string>
+    <string name="restrict_background_uss_roaming">Habang naka-roaming lang</string>
+    <string name="restrict_background_uss_title">Ipagbawal ang background data</string>
     <string name="restricted_app_detail_footer">Ginagamit ng mga app na ito ang baterya sa background. Maaaring hindi gumana nang maayos ang mga pinaghihigpitang app at maaaring maantala ang mga notification.</string>
     <string name="restricted_app_title">Mga pinaghihigpitang app</string>
     <string name="restricted_false_label">App: makakagamit ng baterya sa background</string>
@@ -4404,6 +4410,7 @@ Subukang gumamit ng mas mabilis na ^3, o gamitin na lang ang ^4 na ito para sa p
     <string name="summary_divider_text">", "</string>
     <string name="summary_range_symbol_combination">%1$s - %2$s</string>
     <string name="summary_range_verbal_combination">%1$s hanggang %2$s</string>
+    <string name="summary_voice_network">VoLTE, Wi-Fi Calling</string>
     <string name="support_country_format">%1$s - %2$s</string>
     <string name="support_summary">Mga artikulo ng tulong, telepono at pakikipag-chat, pagsisimula</string>
     <string name="suw_back_button_label">Bumalik</string>
@@ -4456,6 +4463,11 @@ Isang paraan ng Google sa pag-sync ng data upang payagan ang access sa iyong mga
     <string name="testing">Pagsubok</string>
     <string name="testing_phone_info">Impormasyon ng telepono</string>
     <string name="testing_usage_stats">Mga istatistika sa paggamit</string>
+    <string name="tether_error_item_default">Pag-tether</string>
+    <string name="tether_error_message">Hindi ka naka-subscribe sa %1$s.</string>
+    <string name="tether_error_title">%1$s error</string>
+    <string name="tether_no_sim_message">Magkabit ng isang SIM card para magamit ang Mobile Hotspot at iba pang opsyon sa pag-tether</string>
+    <string name="tether_no_sim_title">Walang kard na SIM</string>
     <string name="tether_settings_disabled_on_data_saver">Hindi makapag-tether o makagamit ng mga portable hotspot habang naka-on ang Data Saver</string>
     <string name="tether_settings_summary_hotspot_off_tether_on">Pag-tether</string>
     <string name="tether_settings_summary_hotspot_on_tether_off">Naka-on ang hotspot</string>
@@ -4861,6 +4873,7 @@ Ang sinumang user ay maaaring mag-update ng mga app para sa lahat ng iba pang us
     <string name="voice_input_settings_title">Input na boses</string>
     <string name="voice_interaction_security_warning">Magagawa ng serbisyo ng input na boses na ito na magsagawa ng palaging naka-on na pagsubaybay sa boses at kontrolin ang mga application na ine-enable ng boses para sa iyo. Mula ito sa application na %s. Ie-enable ba ang paggamit ng serbisyong ito?</string>
     <string name="voice_interactor_preference_summary">Ganap na hotword at pakikipag-ugnay</string>
+    <string name="voice_network_title">Mga voice network</string>
     <string name="voice_recognizer_preference_summary">Simpleng speech to text</string>
     <string name="voice_search_settings_title">Paghahanap gamit ang boses</string>
     <string name="voice_service_preference_section_title">Mga serbisyo ng input na boses</string>

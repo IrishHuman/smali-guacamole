@@ -273,7 +273,7 @@
     goto :goto_0
 
     :cond_0
-    const v0, 0x7f120fbb
+    const v0, 0x7f120fbe
 
     invoke-static {p1, v0, v1}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
 
@@ -431,7 +431,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f120ce2
+    const v4, 0x7f120ce5
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 

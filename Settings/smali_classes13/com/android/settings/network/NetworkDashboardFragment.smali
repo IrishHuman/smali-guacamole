@@ -4,6 +4,7 @@
 
 # interfaces
 .implements Lcom/android/settings/network/MobilePlanPreferenceController$MobilePlanPreferenceHost;
+.implements Lcom/android/settings/wifi/tether/TetherDataObserver$OnTetherDataChangeCallback;
 
 
 # annotations
@@ -20,6 +21,16 @@
 .field public static final SUMMARY_PROVIDER_FACTORY:Lcom/android/settings/dashboard/SummaryLoader$SummaryProviderFactory;
 
 .field private static final TAG:Ljava/lang/String; = "NetworkDashboardFrag"
+
+.field private static mTetherController:Lcom/android/settings/network/TetherPreferenceController;
+
+
+# instance fields
+.field private lastTetherData:I
+
+.field private mTetherDataObserver:Lcom/android/settings/wifi/tether/TetherDataObserver;
+
+.field private mTetherSettings:Lcom/android/settingslib/RestrictedPreference;
 
 
 # direct methods
@@ -42,9 +53,13 @@
 .end method
 
 .method public constructor <init>()V
-    .locals 0
+    .locals 1
 
     invoke-direct {p0}, Lcom/android/settings/dashboard/DashboardFragment;-><init>()V
+
+    const/4 v0, 0x3
+
+    iput v0, p0, Lcom/android/settings/network/NetworkDashboardFragment;->lastTetherData:I
 
     return-void
 .end method
@@ -153,6 +168,77 @@
 
     invoke-virtual {p0, v0}, Lcom/android/settings/network/MobilePlanPreferenceController;->setMobilePlanDialogMessage(Ljava/lang/String;)V
 
+    return-void
+.end method
+
+.method private updateUssWifiTetheringPreference()V
+    .locals 3
+
+    invoke-virtual {p0}, Lcom/android/settings/network/NetworkDashboardFragment;->getPrefContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/android/settings/wifi/tether/utils/TetherUtils;->getTetherData(Landroid/content/Context;)I
+
+    move-result v0
+
+    iget v1, p0, Lcom/android/settings/network/NetworkDashboardFragment;->lastTetherData:I
+
+    if-ne v1, v0, :cond_0
+
+    return-void
+
+    :cond_0
+    iput v0, p0, Lcom/android/settings/network/NetworkDashboardFragment;->lastTetherData:I
+
+    iget-object v1, p0, Lcom/android/settings/network/NetworkDashboardFragment;->mTetherSettings:Lcom/android/settingslib/RestrictedPreference;
+
+    if-nez v1, :cond_1
+
+    const-string v1, "tether_settings"
+
+    invoke-virtual {p0, v1}, Lcom/android/settings/network/NetworkDashboardFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/support/v7/preference/Preference;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/android/settingslib/RestrictedPreference;
+
+    iput-object v1, p0, Lcom/android/settings/network/NetworkDashboardFragment;->mTetherSettings:Lcom/android/settingslib/RestrictedPreference;
+
+    :cond_1
+    iget-object v1, p0, Lcom/android/settings/network/NetworkDashboardFragment;->mTetherSettings:Lcom/android/settingslib/RestrictedPreference;
+
+    if-eqz v1, :cond_4
+
+    const/4 v1, 0x3
+
+    if-eq v0, v1, :cond_3
+
+    const/4 v1, 0x2
+
+    if-ne v0, v1, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget-object v1, p0, Lcom/android/settings/network/NetworkDashboardFragment;->mTetherSettings:Lcom/android/settingslib/RestrictedPreference;
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, v2}, Lcom/android/settingslib/RestrictedPreference;->setVisible(Z)V
+
+    goto :goto_1
+
+    :cond_3
+    :goto_0
+    iget-object v1, p0, Lcom/android/settings/network/NetworkDashboardFragment;->mTetherSettings:Lcom/android/settingslib/RestrictedPreference;
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v1, v2}, Lcom/android/settingslib/RestrictedPreference;->setVisible(Z)V
+
+    :cond_4
+    :goto_1
     return-void
 .end method
 
@@ -328,6 +414,84 @@
     move-result-object v1
 
     return-object v1
+.end method
+
+.method public onStart()V
+    .locals 4
+
+    invoke-super {p0}, Lcom/android/settings/dashboard/DashboardFragment;->onStart()V
+
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isSupportUss()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-direct {p0}, Lcom/android/settings/network/NetworkDashboardFragment;->updateUssWifiTetheringPreference()V
+
+    new-instance v0, Lcom/android/settings/wifi/tether/TetherDataObserver;
+
+    invoke-direct {v0, p0}, Lcom/android/settings/wifi/tether/TetherDataObserver;-><init>(Lcom/android/settings/wifi/tether/TetherDataObserver$OnTetherDataChangeCallback;)V
+
+    iput-object v0, p0, Lcom/android/settings/network/NetworkDashboardFragment;->mTetherDataObserver:Lcom/android/settings/wifi/tether/TetherDataObserver;
+
+    invoke-virtual {p0}, Lcom/android/settings/network/NetworkDashboardFragment;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v0
+
+    const-string v1, "TetheredData"
+
+    invoke-static {v1}, Landroid/provider/Settings$Global;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v1
+
+    const/4 v2, 0x1
+
+    iget-object v3, p0, Lcom/android/settings/network/NetworkDashboardFragment;->mTetherDataObserver:Lcom/android/settings/wifi/tether/TetherDataObserver;
+
+    invoke-virtual {v0, v1, v2, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public onStop()V
+    .locals 2
+
+    invoke-super {p0}, Lcom/android/settings/dashboard/DashboardFragment;->onStop()V
+
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isSupportUss()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/android/settings/network/NetworkDashboardFragment;->mTetherDataObserver:Lcom/android/settings/wifi/tether/TetherDataObserver;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Lcom/android/settings/network/NetworkDashboardFragment;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/android/settings/network/NetworkDashboardFragment;->mTetherDataObserver:Lcom/android/settings/wifi/tether/TetherDataObserver;
+
+    invoke-virtual {v0, v1}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/android/settings/network/NetworkDashboardFragment;->mTetherDataObserver:Lcom/android/settings/wifi/tether/TetherDataObserver;
+
+    :cond_0
+    return-void
+.end method
+
+.method public onTetherDataChange()V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/android/settings/network/NetworkDashboardFragment;->updateUssWifiTetheringPreference()V
+
+    return-void
 .end method
 
 .method public showMobilePlanMessageDialog()V

@@ -241,7 +241,7 @@
 
     iget-object v1, p0, Lcom/android/settings/wifi/WifiWakeupPreferenceController;->mContext:Landroid/content/Context;
 
-    const v2, 0x7f1215e5
+    const v2, 0x7f1215f3
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
@@ -497,7 +497,7 @@
     goto :goto_1
 
     :cond_2
-    const v1, 0x7f1215e4    # 1.9418095E38f
+    const v1, 0x7f1215f2
 
     invoke-virtual {p1, v1}, Landroid/support/v7/preference/Preference;->setSummary(I)V
 

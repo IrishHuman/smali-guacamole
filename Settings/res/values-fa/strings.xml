@@ -2547,8 +2547,8 @@
     <string name="one_userkey">یک کلید کاربری</string>
     <string name="oneplus_adaptive_model">حالت تطبیقی</string>
     <string name="oneplus_add">افزودن</string>
-    <string name="oneplus_add_bluetooth_car_kit">افزودن کیت بلوتوث خودرو</string>
-    <string name="oneplus_add_bluetooth_car_kit_summary">«کیت بلوتوث خودرو» به صورت خودکار به دستگاه‌های قبلی شما متصل می‌شود؛ اتصال‌های جدید را نیز می‌توانید به صورت دستی اضافه کنید</string>
+    <string name="oneplus_add_bluetooth_car_kit">اضافه کردن بلوتوث وسیلۀ نقلیه</string>
+    <string name="oneplus_add_bluetooth_car_kit_summary">بلوتوث وسیلۀ نقلیه به طور خودکار به دستگاه‌های پیشین شما متصل می‌شود، همچنین می‌توانید دستگاه‌های جدید را به صورت دستی اضافه کنید</string>
     <string name="oneplus_add_fingerprint_list">اثر انگشت اضافه کنید</string>
     <string name="oneplus_adjust_effect">قدرت افکت</string>
     <string name="oneplus_advanced_display_settings">تنظیمات نمایش پیشرفته</string>
@@ -2784,7 +2784,7 @@
     <string name="oneplus_fnatic_mode_add_to_wallpapers">افزودن به تصاویر زمینه</string>
     <string name="oneplus_fnatic_mode_background_introduction_summary">عملکرد دستگاه عمدتاً بر اجرای بازی متمرکز می‌شود. این کار ممکن است باعث بروز اشکال در برخی برنامه‌ها شود.</string>
     <string name="oneplus_fnatic_mode_background_introduction_title">بهبود تنظیم‌کنندۀ فرآیند</string>
-    <string name="oneplus_fnatic_mode_disturb_introduction_summary">مسدود کردن تمام اعلان‌ها و تماس‌ها (به جز اعلان پایین بودن شارژ باتری، زنگ هشدار و زمان‌سنج). مشاهدۀ تماس‌های بی‌پاسخ فقط در تاریخچۀ تماس امکان‌پذیر است.</string>
+    <string name="oneplus_fnatic_mode_disturb_introduction_summary">مسدود کردن تمام اعلان‌ها و تماس‌ها (به جز اعلان پایین بودن شارژ باتری، زنگ هشدار و</string>
     <string name="oneplus_fnatic_mode_disturb_introduction_title">DND پیشرفته</string>
     <string name="oneplus_fnatic_mode_enable_introduction_title">برای استفاده از «حالت Fnatic»، باید ابتدا «حالت بازی» فعال شود</string>
     <string name="oneplus_fnatic_mode_network_introduction_dual4g_summary">قدرت سیگنال سیم‌کارت اول در اولویت قرار می‌گیرد تا میزان تداخل به حداقل برسد و اجرای بازی با نهفتگی کم انحام شود. در نتیجه، سیم‌کارت دوم غیرفعال می‌شود و تماس‌ها یا پیام‌ها دریافت نخواهد شد.</string>
@@ -2876,6 +2876,7 @@
     <string name="oneplus_haptic_feedback_tips">ارائۀ بازخورد لمسی برای برخی صحنه‌های بازی؛ فقط به بازی‌های پشتیبانی‌شده مربوط می‌شود</string>
     <string name="oneplus_haptic_feedback_title">بهبود بازخورد لمسی</string>
     <string name="oneplus_hardware_keys_action_split_screen">باز کردن/بستن صفحه نمایش دوبخشی</string>
+    <string name="oneplus_health_safety_information">اطلاعات ایمنی و تندرستی</string>
     <string name="oneplus_hearing_aid">سازگاری با سمعک</string>
     <string name="oneplus_hide_navigation_bar">پنهان کردن نوار پیمایش</string>
     <string name="oneplus_hide_navkeys">پنهان کردن نوار ناوبری</string>
@@ -3090,8 +3091,8 @@
     <string name="oneplus_receive_notifications">اعلان‌های OnePlus</string>
     <string name="oneplus_receive_notifications_agree">دریافت اخبار از OnePlus</string>
     <string name="oneplus_receive_notifications_summary">در صورت پذیرش، اخبار رسمی OnePlus، اطلاعات مربوط به محصولات، تعاملات مربوط به پرسشنامه‌ها و اطلاعات مربوط به کوپن‌ها/توصیه‌های خرید را دریافت خواهید کرد</string>
-    <string name="oneplus_recognized_bluetooth_car_kits">کیت‌های بلوتوث خودرویی شناسایی‌شده</string>
-    <string name="oneplus_recognized_bluetooth_car_kits_no_devices">کیت بلوتوث خودرویی وجود ندارد؛ می‌توانید اتصالات جدید را به صورت دستی در ذیل اضافه کنید</string>
+    <string name="oneplus_recognized_bluetooth_car_kits">بلوتوث وسیلۀ نقلیه شناسایی شد</string>
+    <string name="oneplus_recognized_bluetooth_car_kits_no_devices">بلوتوث وسیلۀ نقلیه وجود ندارد، در پایین می‌توانید دستگاه‌های جدید را به صورت دستی اضافه کنید</string>
     <string name="oneplus_recommended_opening">توصیه شده</string>
     <string name="oneplus_reenroll_fingerprint_tips">لطفاً پس از تعویض روکش محافظ تلفن همراه، اثر انگشت خود را دوباره وارد کنید تا از صحت عملکرد اثر انگشت اطمینان حاصل شود</string>
     <string name="oneplus_regulatory_information">تأیید</string>
@@ -3114,6 +3115,7 @@
     <string name="oneplus_screen_color_mode_basic">sRGB</string>
     <string name="oneplus_screen_color_mode_default">پیش فرض</string>
     <string name="oneplus_screen_color_mode_defined">رنگ سفارشی</string>
+    <string name="oneplus_screen_color_mode_ntsc">گسترۀ باز AMOLED</string>
     <string name="oneplus_screen_color_mode_reading_mode_on_summary">چون حالت مطالعه روشن است، در دسترس نیست</string>
     <string name="oneplus_screen_color_mode_soft">نرم</string>
     <string name="oneplus_screen_color_mode_title">تنظیم صفحه نمایش</string>
@@ -3703,6 +3705,10 @@
     <string name="restore_default_apn_completed">بازنشانی تنظیمات پیش‌فرض نام نقطه دستیابی انجام شد.</string>
     <string name="restr_pin_enter_admin_pin">پین سرپرست را وارد کنید</string>
     <string name="restrict_background_blacklisted">داده‌های پس‌زمینه خاموش است</string>
+    <string name="restrict_background_uss_always">همیشه</string>
+    <string name="restrict_background_uss_never">هرگز</string>
+    <string name="restrict_background_uss_roaming">تنها در حالت رومینگ</string>
+    <string name="restrict_background_uss_title">محدود کردن داده‌های پس‌زمینه</string>
     <string name="restricted_app_detail_footer">این برنامه‌ها در پس‌زمینه از باتری استفاده می‌کند. ممکن است برنامه‌های محدودشده درست کار نکند و اعلان‌هایشان با تأخیر همراه باشد.</string>
     <string name="restricted_app_title">برنامه‌های محدودشده</string>
     <string name="restricted_false_label">برنامه می‌تواند در پس‌زمینه از باتری استفاده کند</string>
@@ -4404,6 +4410,7 @@
     <string name="summary_divider_text">"، "</string>
     <string name="summary_range_symbol_combination">%1$s ‏- %2$s</string>
     <string name="summary_range_verbal_combination">%1$s تا %2$s</string>
+    <string name="summary_voice_network">VoLTE، تماس Wi-Fi</string>
     <string name="support_country_format">%1$s - %2$s</string>
     <string name="support_summary">مقاله‌های راهنما، تلفن و گپ، شروع‌به‌کار</string>
     <string name="suw_back_button_label">برگشت</string>
@@ -4456,6 +4463,11 @@
     <string name="testing">تست کردن</string>
     <string name="testing_phone_info">اطلاعات تلفن</string>
     <string name="testing_usage_stats">آمار کاربرد</string>
+    <string name="tether_error_item_default">به اشتراک گذاشتن اتصال اینترنت</string>
+    <string name="tether_error_message">شما مشترک %1$s نشده‌اید.</string>
+    <string name="tether_error_title">خطای %1$s</string>
+    <string name="tether_no_sim_message">برای استفاده از نقطۀ دسترسی تلفن همراه و دیگر گزینه‌های به اشتراک گذاشتن اتصال اینترنت، یک سیم‌کارت وارد کنید</string>
+    <string name="tether_no_sim_title">بدون سیم کارت</string>
     <string name="tether_settings_disabled_on_data_saver">هنگامی که محافظ صفحه روشن است نمی‌توانید از نقاط اتصال قابل حمل یا اتصال به اینترنت با تلفن همراه استفاده کنید</string>
     <string name="tether_settings_summary_hotspot_off_tether_on">اتصال به اینترنت با تلفن همراه</string>
     <string name="tether_settings_summary_hotspot_on_tether_off">نقطه اتصال روشن</string>
@@ -4861,6 +4873,7 @@
     <string name="voice_input_settings_title">ورودی گفتار</string>
     <string name="voice_interaction_security_warning">این سرویس ورودی گفتاری می‌تواند کنترل صوتی همیشه فعال را اجرا کند و از طرف شما برنامه‌هایی را کنترل کند که صدا در آنها فعال است. از %s است. استفاده از این سرویس فعال شود؟</string>
     <string name="voice_interactor_preference_summary">کلیدگفته کامل و تعامل</string>
+    <string name="voice_network_title">شبکه‌های صوتی</string>
     <string name="voice_recognizer_preference_summary">ویژگی ساده گفتار به نوشتار</string>
     <string name="voice_search_settings_title">جستجوی گفتاری</string>
     <string name="voice_service_preference_section_title">سرویس‌های ورودی گفتاری</string>

@@ -222,7 +222,7 @@
 .method private initView()V
     .locals 5
 
-    const v0, 0x7f0a03c2
+    const v0, 0x7f0a03c6
 
     invoke-virtual {p0, v0}, Lcom/oneplus/settings/gestures/OPGestureShortCutListSettings;->findViewById(I)Landroid/view/View;
 

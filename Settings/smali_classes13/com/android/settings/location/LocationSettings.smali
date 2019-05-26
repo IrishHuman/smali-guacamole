@@ -242,7 +242,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f120856
+    const v2, 0x7f120857
 
     invoke-virtual {v1, v2, v2}, Lcom/android/settings/widget/SwitchBar;->setSwitchBarText(II)V
 

@@ -957,13 +957,13 @@
     goto :goto_0
 
     :cond_0
-    const v1, 0x7f121249
+    const v1, 0x7f121250
 
     invoke-virtual {p0, v1}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
     move-result-object v1
 
-    const v2, 0x7f12124c
+    const v2, 0x7f121253
 
     invoke-virtual {p0, v2}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 

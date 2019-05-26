@@ -2549,8 +2549,8 @@
     <string name="one_userkey">مفتاح مستخدم واحد</string>
     <string name="oneplus_adaptive_model">وضع تكييفي</string>
     <string name="oneplus_add">إضافة</string>
-    <string name="oneplus_add_bluetooth_car_kit">إضافة طقم أدوات السيارة البلوتوث</string>
-    <string name="oneplus_add_bluetooth_car_kit_summary">يتصل طقم السيارة الذي يعمل بتقنية البلوتوث تلقائيًا بأجهزتك السابقة، ويمكنك أيضًا إضافة اتصالات جديدة يدويًا</string>
+    <string name="oneplus_add_bluetooth_car_kit">إضافة بلوتوث السيارة</string>
+    <string name="oneplus_add_bluetooth_car_kit_summary">يتصل بلوتوث السيارة تلقائيًا بأجهزتك السابقة، كما يمكنك إضافة أجهزة جديدة يدويًا</string>
     <string name="oneplus_add_fingerprint_list">إضافة بصمة إصبع</string>
     <string name="oneplus_adjust_effect">قوة التأثير</string>
     <string name="oneplus_advanced_display_settings">إعدادات العرض المتقدمة</string>
@@ -2786,7 +2786,7 @@
     <string name="oneplus_fnatic_mode_add_to_wallpapers">إضافة إلى الخلفيات</string>
     <string name="oneplus_fnatic_mode_background_introduction_summary">تركيز الأداء بالكامل تقريبًا على اللعب. قد ينتج عن ذلك بعض الأخطاء في بعض التطبيقات.</string>
     <string name="oneplus_fnatic_mode_background_introduction_title">تعزيز منظم العملية</string>
-    <string name="oneplus_fnatic_mode_disturb_introduction_summary">حظر جميع الاشعارات والمكالمات (عدا الإشعارات بانخفاض البطارية والتنبيهات والمؤقتات). يمكنك عرض المكالمات الفائتة في سجل المكالمات فقط.</string>
+    <string name="oneplus_fnatic_mode_disturb_introduction_summary">حظر جميع الاشعارات والمكالمات (عدا الإشعارات بانخفاض البطارية والتنبيهات والمؤقتات).</string>
     <string name="oneplus_fnatic_mode_disturb_introduction_title">DND متقدمة</string>
     <string name="oneplus_fnatic_mode_enable_introduction_title">يجب تمكين وضع الألعاب أولاً لاستخدام وضع Fnatic</string>
     <string name="oneplus_fnatic_mode_network_introduction_dual4g_summary">يتم إعطاء الأولوية لقوة إشارة بطاقة SIM الأساسية لتقليل التداخل من أجل لعب بزمن انتقال منخفض. نتيجة لذلك، سيتم تعطيل بطاقة SIM الثانوية، ولن يتم تلقي المكالمات أو الرسائل.</string>
@@ -2878,6 +2878,7 @@
     <string name="oneplus_haptic_feedback_tips">تقديم استجابة لمسية لمشاهد ألعاب محددة، لا تنطبق إلا على الألعاب المدعومة</string>
     <string name="oneplus_haptic_feedback_title">تحسين الاستجابة اللمسية</string>
     <string name="oneplus_hardware_keys_action_split_screen">فتح/إغلاق تقسيم الشاشة</string>
+    <string name="oneplus_health_safety_information">&amp; الخاص بالصحة؛ المعلومات المتعلقة بالسلامة</string>
     <string name="oneplus_hearing_aid">توافق المساعدة السماعية</string>
     <string name="oneplus_hide_navigation_bar">إخفاء شريط التنقل</string>
     <string name="oneplus_hide_navkeys">إخفاء شريط التنقل</string>
@@ -3092,8 +3093,8 @@
     <string name="oneplus_receive_notifications">إخطارات OnePlus</string>
     <string name="oneplus_receive_notifications_agree">تلقي الأخبار من OnePlus</string>
     <string name="oneplus_receive_notifications_summary">قبول استلام الأخبار الرسمية من OnePlus ومعلومات المنتج وتفاعلات الاستبيان وتوصية الشراء/معلومات الكوبون</string>
-    <string name="oneplus_recognized_bluetooth_car_kits">أطقم أدوات السيارة البلوتوث التي تم التعرّف عليها</string>
-    <string name="oneplus_recognized_bluetooth_car_kits_no_devices">لا يوجد طقم أدوات سيارة بلوتوث، يمكنك إضافة اتصالات جديدة يدويًا أدناه</string>
+    <string name="oneplus_recognized_bluetooth_car_kits">تم التعرف علي بلوتوث السيارة</string>
+    <string name="oneplus_recognized_bluetooth_car_kits_no_devices">لا يوجد بلوتوث سيارة، يمكنك إضافة أجهزة جديدة أدناه يدويًا</string>
     <string name="oneplus_recommended_opening">موصى به</string>
     <string name="oneplus_reenroll_fingerprint_tips">يُرجى إعادة إدخال بصمتك بعد استبدال فيلم الحماية للهاتف الجوال لضمان صحة بصمة الإصبع</string>
     <string name="oneplus_regulatory_information">التحقق</string>
@@ -3116,6 +3117,7 @@
     <string name="oneplus_screen_color_mode_basic">sRGB</string>
     <string name="oneplus_screen_color_mode_default">افتراضي</string>
     <string name="oneplus_screen_color_mode_defined">لون مخصص</string>
+    <string name="oneplus_screen_color_mode_ntsc">سلسلة واسعة AMOLED</string>
     <string name="oneplus_screen_color_mode_reading_mode_on_summary">غير متوفر لأن وضع القراءة قيد التشغيل</string>
     <string name="oneplus_screen_color_mode_soft">مرن</string>
     <string name="oneplus_screen_color_mode_title">معايرة الشاشة</string>
@@ -3705,6 +3707,10 @@
     <string name="restore_default_apn_completed">‏اكتملت إعادة تعيين إعدادات APN التلقائية.</string>
     <string name="restr_pin_enter_admin_pin">إدخال رقم التعريف الشخصي للمشرف</string>
     <string name="restrict_background_blacklisted">تم إيقاف بيانات الخلفية.</string>
+    <string name="restrict_background_uss_always">دائمًا</string>
+    <string name="restrict_background_uss_never">مطلقًا</string>
+    <string name="restrict_background_uss_roaming">أثناء التجوال فقط</string>
+    <string name="restrict_background_uss_title">تقييد بيانات الخلفية</string>
     <string name="restricted_app_detail_footer">تستهلك هذه التطبيقات شحن البطارية في الخلفية. علمًا بأن التطبيقات المقيدة قد لا تعمل على نحو صحيح وقد تتأخر الإشعارات.</string>
     <string name="restricted_app_title">التطبيقات المقيّدة</string>
     <string name="restricted_false_label">للتطبيق أن يستخدم البطارية في الخلفية</string>
@@ -4406,6 +4412,7 @@
     <string name="summary_divider_text">"، "</string>
     <string name="summary_range_symbol_combination">%1$s - %2$s</string>
     <string name="summary_range_verbal_combination">%1$s إلى %2$s</string>
+    <string name="summary_voice_network">VoLTE، اتصال Wi-Fi</string>
     <string name="support_country_format">%1$s - %2$s</string>
     <string name="support_summary">مقالات المساعدة، الهاتف والمحادثة، البدء</string>
     <string name="suw_back_button_label">رجوع</string>
@@ -4458,6 +4465,11 @@
     <string name="testing">الاختبار</string>
     <string name="testing_phone_info">معلومات الهاتف</string>
     <string name="testing_usage_stats">إحصاءات الاستخدام</string>
+    <string name="tether_error_item_default">جارٍ الربط</string>
+    <string name="tether_error_message">أنت غير مشترك في %1$s.</string>
+    <string name="tether_error_title">خطأ %1$s</string>
+    <string name="tether_no_sim_message">أدخل بطاقة SIM لاستخدام نقطة اتصال الجوال وخيارات الربط الأخرى</string>
+    <string name="tether_no_sim_title">لا توجد بطاقة SIM</string>
     <string name="tether_settings_disabled_on_data_saver">يتعذر توصيل نقاط الاتصال المحمولة أو استخدامها أثناء تشغيل توفير البيانات</string>
     <string name="tether_settings_summary_hotspot_off_tether_on">تم تفعيل إعداد التوصيل</string>
     <string name="tether_settings_summary_hotspot_on_tether_off">تم تفعيل نقطة الاتصال</string>
@@ -4863,6 +4875,7 @@
     <string name="voice_input_settings_title">الإدخال الصوتي</string>
     <string name="voice_interaction_security_warning">سيكون بمقدور خدمة الإدخال الصوتي هذه أداء مراقبة صوتية دائمة، علاوة على التحكم في التطبيقات الممكن بها ميزة الصوت نيابة عنك. وتتبع هذه الخدمة تطبيق %s. هل ترغب في تفعيل استخدام هذه الخدمة؟</string>
     <string name="voice_interactor_preference_summary">كلمات مهمة وتفاعل كامل</string>
+    <string name="voice_network_title">شبكات الصوت</string>
     <string name="voice_recognizer_preference_summary">تحويل النص إلى كلام ببساطة</string>
     <string name="voice_search_settings_title">البحث الصوتي</string>
     <string name="voice_service_preference_section_title">خدمات الإدخال الصوتي</string>

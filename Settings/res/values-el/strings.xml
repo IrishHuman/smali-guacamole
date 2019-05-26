@@ -2549,8 +2549,8 @@
     <string name="one_userkey">κλειδί για ένα χρήστη</string>
     <string name="oneplus_adaptive_model">Λειτουργία προσαρμογής</string>
     <string name="oneplus_add">Προσθήκη</string>
-    <string name="oneplus_add_bluetooth_car_kit">Προσθήκη κιτ αυτοκινήτου Bluetooth</string>
-    <string name="oneplus_add_bluetooth_car_kit_summary">Το κιτ αυτοκινήτου Bluetooth συνδέεται αυτόματα με τις προηγούμενες συσκευές σας ενώ μπορείτε επίσης να προσθέσετε νέες συνδέσεις μη αυτόματα.</string>
+    <string name="oneplus_add_bluetooth_car_kit">Προσθήκη συστήματος Bluetooth οχήματος</string>
+    <string name="oneplus_add_bluetooth_car_kit_summary">Το σύστημα Bluetooth του οχήματος συνδέεται αυτόματα με τις προηγούμενες συσκευές σας. Μπορείτε επίσης να προσθέσετε εσείς μη αυτόματα νέες συσκευές.</string>
     <string name="oneplus_add_fingerprint_list">Προσθήκη δακτυλικού αποτυπώματος</string>
     <string name="oneplus_adjust_effect">Ένταση εφέ</string>
     <string name="oneplus_advanced_display_settings">Ρυθμίσεις οθόνης για προχωρημένους</string>
@@ -2786,7 +2786,7 @@ Risk tip: Το «Ξεκλείδωμα με το πρόσωπο» είναι λι
     <string name="oneplus_fnatic_mode_add_to_wallpapers">Προσθήκη στις ταπετσαρίες</string>
     <string name="oneplus_fnatic_mode_background_introduction_summary">Οι επιδόσεις εστιάζονται σχεδόν αποκλειστικά στα παιχνίδια. Αυτό ίσως επιφέρει προβλήματα σε ορισμένες εφαρμογές.</string>
     <string name="oneplus_fnatic_mode_background_introduction_title">Βελτίωση ρυθμιστή διαδικασιών</string>
-    <string name="oneplus_fnatic_mode_disturb_introduction_summary">Αποκλείστε όλες τις ειδοποιήσεις και τις κλήσεις (εκτός από την ειδοποίηση για χαμηλή ισχύ της μπαταρίας, τα ξυπνητήρια και τον χρονοδιακόπτη). Θα μπορείτε να δείτε τις αναπάντητες κλήσεις μόνο στο ιστορικό κλήσεων.</string>
+    <string name="oneplus_fnatic_mode_disturb_introduction_summary">Αποκλείστε όλες τις ειδοποιήσεις και τις κλήσεις (εκτός από την ειδοποίηση για χαμηλή ισχύ της μπαταρίας, τα ξυπνητήρια και τον χρονοδιακόπτη).</string>
     <string name="oneplus_fnatic_mode_disturb_introduction_title">Προηγμένη λειτουργία «Μην ενοχλείτε»</string>
     <string name="oneplus_fnatic_mode_enable_introduction_title">Για να χρησιμοποιήσετε τη λειτουργία Fnatic, πρέπει πρώτα να ενεργοποιήσετε τη λειτουργία «Παιχνίδια».</string>
     <string name="oneplus_fnatic_mode_network_introduction_dual4g_summary">Η ισχύς του σήματος της κύριας κάρτας SIM έχει προτεραιότητα προκειμένου να ελαχιστοποιούνται οι παρεμβολές για παιχνίδια με χαμηλή λανθάνουσα καθυστέρηση. Κατά συνέπεια, η δευτερεύουσα κάρτα SIM θα είναι απενεργοποιημένη και δεν θα λαμβάνει κλήσεις ή μηνύματα.</string>
@@ -2878,6 +2878,7 @@ Risk tip: Το «Ξεκλείδωμα με το πρόσωπο» είναι λι
     <string name="oneplus_haptic_feedback_tips">Παροχή απτικής ανάδρασης για συγκεκριμένες σκηνές παιχνιδιών, η οποία ισχύει μόνο για τα υποστηριζόμενα παιχνίδια</string>
     <string name="oneplus_haptic_feedback_title">Βελτίωση απτικής ανάδρασης</string>
     <string name="oneplus_hardware_keys_action_split_screen">Άνοιγμα/κλείσιμο διαίρεσης της οθόνης</string>
+    <string name="oneplus_health_safety_information">Πληροφορίες για την υγεία και την ασφάλεια</string>
     <string name="oneplus_hearing_aid">Συμβατότητα με βοηθήματα ακοής</string>
     <string name="oneplus_hide_navigation_bar">Απόκρυψη γραμμής πλοήγησης</string>
     <string name="oneplus_hide_navkeys">Απόκρυψη γραμμής περιήγησης</string>
@@ -3092,8 +3093,8 @@ Risk tip: Το «Ξεκλείδωμα με το πρόσωπο» είναι λι
     <string name="oneplus_receive_notifications">Ειδοποιήσεις OnePlus</string>
     <string name="oneplus_receive_notifications_agree">Λήψη νέων από το OnePlus</string>
     <string name="oneplus_receive_notifications_summary">Αποδεχτείτε να λαμβάνετε επίσημα νέα του OnePlus, πληροφορίες προϊοντος, διαδραστικά ερωτηματολόγια και προτεινόμενες αγορές/πληροφορίες για κουπόνια</string>
-    <string name="oneplus_recognized_bluetooth_car_kits">Αναγνωρισμένα κιτ αυτοκινήτου Bluetooth</string>
-    <string name="oneplus_recognized_bluetooth_car_kits_no_devices">Κανένα κιτ αυτοκινήτου Bluetooth. Μπορείτε να προσθέσετε εσείς μη αυτόματα νέες συνδέσεις παρακάτω.</string>
+    <string name="oneplus_recognized_bluetooth_car_kits">Αναγνωρισμένο σύστημα Bluetooth οχήματος</string>
+    <string name="oneplus_recognized_bluetooth_car_kits_no_devices">Δεν υπάρχει σύστημα Bluetooth οχήματος. Μπορείτε να προσθέσετε εσείς μη αυτόματα νέες συσκευές παρακάτω.</string>
     <string name="oneplus_recommended_opening">Προτεινόμενο</string>
     <string name="oneplus_reenroll_fingerprint_tips">Για να διασφαλιστεί η ορθότητα του δακτυλικού αποτυπώματος, καταχωρίστε το ξανά αφού αφαιρέσετε την προστατευτική μεμβράνη του κινητού τηλεφώνου.</string>
     <string name="oneplus_regulatory_information">Επαλήθευση</string>
@@ -3116,6 +3117,7 @@ Risk tip: Το «Ξεκλείδωμα με το πρόσωπο» είναι λι
     <string name="oneplus_screen_color_mode_basic">sRGB</string>
     <string name="oneplus_screen_color_mode_default">Προεπιλογή</string>
     <string name="oneplus_screen_color_mode_defined">Προσαρμοσμένο χρώμα</string>
+    <string name="oneplus_screen_color_mode_ntsc">AMOLED ευρείας χρωματικής γκάμας</string>
     <string name="oneplus_screen_color_mode_reading_mode_on_summary">Δεν είναι διαθέσιμη επειδή είναι ενεργοποιημένη η λειτουργία ανάγνωσης</string>
     <string name="oneplus_screen_color_mode_soft">Απαλό</string>
     <string name="oneplus_screen_color_mode_title">Βαθμονόμηση οθόνης</string>
@@ -3705,6 +3707,10 @@ Risk tip: Το «Ξεκλείδωμα με το πρόσωπο» είναι λι
     <string name="restore_default_apn_completed">Η επαναφορά των προεπιλογών APN ολοκληρώθηκε.</string>
     <string name="restr_pin_enter_admin_pin">Εισαγωγή PIN διαχειριστή</string>
     <string name="restrict_background_blacklisted">Τα δεδομένα παρασκηνίου είναι απενεργοποιημένα</string>
+    <string name="restrict_background_uss_always">Πάντα</string>
+    <string name="restrict_background_uss_never">Ποτέ</string>
+    <string name="restrict_background_uss_roaming">Μόνο κατά την περιαγωγή</string>
+    <string name="restrict_background_uss_title">Περιορισμός δεδομένων παρασκηνίου</string>
     <string name="restricted_app_detail_footer">Αυτές οι εφαρμογές χρησιμοποιούν μπαταρία στο παρασκήνιο. Οι εφαρμογές περιορισμένης πρόσβασης πιθανώς να μην λειτουργούν σωστά και οι ειδοποιήσεις ενδέχεται να εμφανίζονται με καθυστέρηση.</string>
     <string name="restricted_app_title">Περιορισμένες εφαρμογές</string>
     <string name="restricted_false_label">Χρήση μπαταρίας στο παρασκήνιο</string>
@@ -4406,6 +4412,7 @@ Risk tip: Το «Ξεκλείδωμα με το πρόσωπο» είναι λι
     <string name="summary_divider_text">", "</string>
     <string name="summary_range_symbol_combination">%1$s - %2$s</string>
     <string name="summary_range_verbal_combination">%1$s έως %2$s</string>
+    <string name="summary_voice_network">Κλήσεις μέσω VoLTE, Wi-Fi</string>
     <string name="support_country_format">%1$s - %2$s</string>
     <string name="support_summary">Άρθρα βοήθειας, τηλέφωνο και συζήτηση, έναρξη</string>
     <string name="suw_back_button_label">Πίσω</string>
@@ -4458,6 +4465,11 @@ Risk tip: Το «Ξεκλείδωμα με το πρόσωπο» είναι λι
     <string name="testing">Δοκιμή</string>
     <string name="testing_phone_info">Πληροφορίες τηλεφώνου</string>
     <string name="testing_usage_stats">Στατιστικά χρήσης</string>
+    <string name="tether_error_item_default">Πρόσδεση</string>
+    <string name="tether_error_message">Δεν έχετε συνδρομή για την υπηρεσία %1$s.</string>
+    <string name="tether_error_title">Σφάλμα %1$s</string>
+    <string name="tether_no_sim_message">Τοποθετήστε μια κάρτα SIM για να χρησιμοποιήσετε τη δυνατότητα «Κινητό ενεργό σημείο πρόσβασης» και άλλες επιλογές πρόσδεσης.</string>
+    <string name="tether_no_sim_title">Δεν υπάρχει κάρτα SIM</string>
     <string name="tether_settings_disabled_on_data_saver">Δεν είναι δυνατή η σύνδεση σε φορητό σημείο πρόσβασης Wi-Fi, ενώ είναι ενεργοποιημένη η Εξοικονόμηση δεδομένων</string>
     <string name="tether_settings_summary_hotspot_off_tether_on">Σύνδεση</string>
     <string name="tether_settings_summary_hotspot_on_tether_off">Το σημείο πρόσβασης είναι ενεργό</string>
@@ -4863,6 +4875,7 @@ Risk tip: Το «Ξεκλείδωμα με το πρόσωπο» είναι λι
     <string name="voice_input_settings_title">Φωνητικές εντολές</string>
     <string name="voice_interaction_security_warning">Αυτή η υπηρεσία φωνητικής εισαγωγής θα έχει τη δυνατότητα να εκτελεί διαρκώς ενεργή παρακολούθηση φωνητικών εντολών και να ελέγχει τις εφαρμογές με ενεργοποιημένες τις φωνητικές εντολές εκ μέρους σας. Προέρχεται από την εφαρμογή %s. Ενεργοποίηση της χρήσης αυτής της υπηρεσίας;</string>
     <string name="voice_interactor_preference_summary">Πλήρης λέξη-κλειδί και αλληλεπίδραση</string>
+    <string name="voice_network_title">Φωνητικά δίκτυα</string>
     <string name="voice_recognizer_preference_summary">Μετατροπή απλής ομιλίας σε κείμενο</string>
     <string name="voice_search_settings_title">Φωνητική αναζήτηση</string>
     <string name="voice_service_preference_section_title">Υπηρεσίες φωνητικών εντολών</string>
