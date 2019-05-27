@@ -10,6 +10,8 @@
 
 .field private mMin:Landroid/widget/ImageView;
 
+.field private mMiddle:Landroid/widget/ImageView;
+
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
@@ -116,6 +118,16 @@
     check-cast v0, Landroid/widget/ImageView;
 
     iput-object v0, p0, Lcom/oneplus/aod/OPMinimalismClock;->mMin:Landroid/widget/ImageView;
+    
+    const v0, 0x7f0a0264
+
+    invoke-virtual {p0, v0}, Lcom/oneplus/aod/OPMinimalismClock;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/ImageView;
+
+    iput-object v0, p0, Lcom/oneplus/aod/OPMinimalismClock;->mMiddle:Landroid/widget/ImageView;
 
     return-void
 .end method
@@ -361,14 +373,14 @@
 .method public updateClockColors()V
     .registers 12
 
-    .line 293
+    .line 294
     iget-object v0, p0, Lcom/oneplus/aod/OPMinimalismClock;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 294
+    .line 295
     .local v0, "ContentResolver":Landroid/content/ContentResolver;
     const-string v1, "tweaks_unlock_aod_colors"
 
@@ -378,7 +390,7 @@
 
     move-result v1
 
-    .line 295
+    .line 296
     .local v1, "isCustomClock":I
     const-string v3, "tweaks_unlock_aod_accent_colors"
 
@@ -386,7 +398,7 @@
 
     move-result v3
 
-    .line 296
+    .line 297
     .local v3, "isCustomClockAccent":I
     const-string v4, "tweaks_aod_text_color_system_accent"
 
@@ -394,7 +406,7 @@
 
     move-result v4
 
-    .line 297
+    .line 298
     .local v4, "isCustomClockSystemAccent":I
     const-string v5, "tweaks_aod_accent_text_color_system_accent"
 
@@ -402,7 +414,7 @@
 
     move-result v2
 
-    .line 298
+    .line 299
     .local v2, "isCustomClockAccentSystemAccent":I
     const-string v5, "tweaks_aod_text_color"
 
@@ -422,7 +434,7 @@
 
     move-result v5
 
-    .line 299
+    .line 300
     .local v5, "minColor":I
     const-string v6, "tweaks_aod_accent_text_color"
 
@@ -442,7 +454,7 @@
 
     move-result v6
 
-    .line 300
+    .line 301
     .local v6, "hourColor":I
     iget-object v7, p0, Lcom/oneplus/aod/OPMinimalismClock;->mContext:Landroid/content/Context;
 
@@ -450,16 +462,16 @@
 
     move-result v7
 
-    .line 301
+    .line 302
     .local v7, "accentColor":I
     const/4 v8, 0x1
 
     if-ne v1, v8, :cond_60
 
-    .line 302
+    .line 303
     if-ne v4, v8, :cond_58
 
-    .line 303
+    .line 304
     iget-object v9, p0, Lcom/oneplus/aod/OPMinimalismClock;->mMin:Landroid/widget/ImageView;
 
     sget-object v10, Landroid/graphics/PorterDuff$Mode;->SRC_ATOP:Landroid/graphics/PorterDuff$Mode;
@@ -468,7 +480,7 @@
 
     goto :goto_61
 
-    .line 305
+    .line 306
     :cond_58
     iget-object v9, p0, Lcom/oneplus/aod/OPMinimalismClock;->mMin:Landroid/widget/ImageView;
 
@@ -478,71 +490,85 @@
 
     goto :goto_61
 
-    .line 301
+    .line 302
     :cond_60
     nop
 
-    .line 308
+    .line 309
     :goto_61
     if-nez v1, :cond_69
 
-    .line 309
+    .line 310
     iget-object v9, p0, Lcom/oneplus/aod/OPMinimalismClock;->mMin:Landroid/widget/ImageView;
 
     invoke-virtual {v9}, Landroid/widget/ImageView;->clearColorFilter()V
 
     goto :goto_6a
 
-    .line 308
+    .line 309
     :cond_69
     nop
 
-    .line 311
-    :goto_6a
-    if-ne v3, v8, :cond_7e
-
     .line 312
-    if-ne v2, v8, :cond_76
+    :goto_6a
+    if-ne v3, v8, :cond_8c
 
     .line 313
+    if-ne v2, v8, :cond_7d
+
+    .line 314
     iget-object v8, p0, Lcom/oneplus/aod/OPMinimalismClock;->mHour:Landroid/widget/ImageView;
 
     sget-object v9, Landroid/graphics/PorterDuff$Mode;->SRC_ATOP:Landroid/graphics/PorterDuff$Mode;
 
     invoke-virtual {v8, v7, v9}, Landroid/widget/ImageView;->setColorFilter(ILandroid/graphics/PorterDuff$Mode;)V
 
-    goto :goto_7f
-
     .line 315
-    :cond_76
+    iget-object v8, p0, Lcom/oneplus/aod/OPMinimalismClock;->mMiddle:Landroid/widget/ImageView;
+
+    sget-object v9, Landroid/graphics/PorterDuff$Mode;->SRC_ATOP:Landroid/graphics/PorterDuff$Mode;
+
+    invoke-virtual {v8, v7, v9}, Landroid/widget/ImageView;->setColorFilter(ILandroid/graphics/PorterDuff$Mode;)V
+
+    goto :goto_8d
+
+    .line 317
+    :cond_7d
     iget-object v8, p0, Lcom/oneplus/aod/OPMinimalismClock;->mHour:Landroid/widget/ImageView;
 
     sget-object v9, Landroid/graphics/PorterDuff$Mode;->SRC_ATOP:Landroid/graphics/PorterDuff$Mode;
 
     invoke-virtual {v8, v6, v9}, Landroid/widget/ImageView;->setColorFilter(ILandroid/graphics/PorterDuff$Mode;)V
 
-    goto :goto_7f
+    .line 318
+    iget-object v8, p0, Lcom/oneplus/aod/OPMinimalismClock;->mMiddle:Landroid/widget/ImageView;
 
-    .line 311
-    :cond_7e
+    sget-object v9, Landroid/graphics/PorterDuff$Mode;->SRC_ATOP:Landroid/graphics/PorterDuff$Mode;
+
+    invoke-virtual {v8, v6, v9}, Landroid/widget/ImageView;->setColorFilter(ILandroid/graphics/PorterDuff$Mode;)V
+
+    goto :goto_8d
+
+    .line 312
+    :cond_8c
     nop
 
-    .line 318
-    :goto_7f
-    if-nez v3, :cond_87
+    .line 321
+    :goto_8d
+    if-nez v3, :cond_95
 
-    .line 319
+    .line 322
     iget-object v8, p0, Lcom/oneplus/aod/OPMinimalismClock;->mHour:Landroid/widget/ImageView;
 
     invoke-virtual {v8}, Landroid/widget/ImageView;->clearColorFilter()V
 
-    goto :goto_88
-
-    .line 318
-    :cond_87
-    nop
+    goto :goto_96
 
     .line 321
-    :goto_88
+    :cond_95
+    nop
+
+    .line 324
+    :goto_96
     return-void
 .end method
