@@ -1680,6 +1680,10 @@
 
     invoke-direct {p0}, Lcom/android/systemui/qs/QuickStatusBarHeader;->updateThemeColor()V
     
+    iget-object v0, p0, Lcom/android/systemui/qs/QuickStatusBarHeader;->mContext:Landroid/content/Context;
+    
+    invoke-static {v0}, Lcom/android/mwilky/Renovate;->setQsIconColors(Landroid/content/Context;)V
+    
     invoke-virtual {p0}, Lcom/android/systemui/qs/QuickStatusBarHeader;->setIconColors()V
 
     return-void
@@ -2069,16 +2073,12 @@
 
 .method public setIconColors()V
     .locals 2
-    
-    iget-object v0, p0, Lcom/android/systemui/qs/QuickStatusBarHeader;->mContext:Landroid/content/Context;
-    
-    invoke-static {v0}, Lcom/android/mwilky/Renovate;->setQsIconColors(Landroid/content/Context;)V
 
     iget-object v0, p0, Lcom/android/systemui/qs/QuickStatusBarHeader;->mClockView:Lcom/android/systemui/statusbar/policy/Clock;
     
     if-eqz v0, :cond_exit
     
-    sget v1, Lcom/android/mwilky/Renovate;->mClockColorOP:I
+    sget v1, Lcom/android/mwilky/Renovate;->mQsClockColorOP:I
     
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
@@ -2087,7 +2087,7 @@
     
     if-eqz v0, :cond_exit4
     
-    sget v1, Lcom/android/mwilky/Renovate;->mClockColorOP:I
+    sget v1, Lcom/android/mwilky/Renovate;->mQsClockColorOP:I
     
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
