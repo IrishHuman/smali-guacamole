@@ -14794,10 +14794,6 @@
 
     move-object/from16 v7, p0
     
-    sget-boolean v0, Lcom/android/server/power/PowerManagerService;->mTorchPowerScreenOff:Z
-    
-    if-eqz v0, :cond_stock
-    
     sget-boolean v0, Lcom/android/server/power/PowerManagerService;->mTorchAutoOff:Z
     
     if-eqz v0, :cond_stock
