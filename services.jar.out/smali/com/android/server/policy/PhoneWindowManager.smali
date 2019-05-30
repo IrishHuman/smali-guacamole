@@ -22,6 +22,8 @@
 
 
 # static fields
+.field public static mBlockPowerInPocket:Z
+
 .field public static mSensorCovered:Z
 
 .field public static mTorchPowerScreenOff:Z
@@ -13081,7 +13083,18 @@
 
 .method private wakeUpFromPowerKey(J)V
     .locals 2
+    
+    sget-boolean v0, Lcom/android/server/policy/PhoneWindowManager;->mBlockPowerInPocket:Z
+    
+    if-eqz v0, :cond_stock
+    
+    sget-boolean v0, Lcom/android/server/policy/PhoneWindowManager;->mSensorCovered:Z
+    
+    if-eqz v0, :cond_stock
+    
+    return-void
 
+    :cond_stock
     iget-boolean v0, p0, Lcom/android/server/policy/PhoneWindowManager;->mIsNotifyWakeUpToSensor:Z
 
     if-eqz v0, :cond_0
@@ -33220,6 +33233,8 @@
     
     invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManager;->setTorchPower()V
     
+    invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManager;->setBlockPowerInPocket()V
+    
     invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManager;->allowNavBarHeightTweak()V
     
     invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManager;->getNavBarHeightTweak()V
@@ -34310,4 +34325,26 @@
     const/4 v0, 0x0
 
     return v0
+.end method
+
+.method public setBlockPowerInPocket()V
+    .locals 2
+
+    iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManager;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v1
+
+    const-string/jumbo p0, "tweaks_block_power_pocket"
+
+    const/4 v0, 0x0
+
+    invoke-static {v1, p0, v0}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+
+    move-result v0
+    
+    sput-boolean v0, Lcom/android/server/policy/PhoneWindowManager;->mBlockPowerInPocket:Z
+
+    return-void
 .end method
